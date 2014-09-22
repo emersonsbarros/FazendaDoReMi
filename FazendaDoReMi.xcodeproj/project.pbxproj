@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A824717919D0AB0E00168026 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A824717819D0AB0E00168026 /* Foundation.framework */; };
+		A824717B19D0AB0E00168026 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A824717A19D0AB0E00168026 /* CoreGraphics.framework */; };
+		A824717D19D0AB0E00168026 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A824717C19D0AB0E00168026 /* UIKit.framework */; };
+		A824717F19D0AB0E00168026 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A824717E19D0AB0E00168026 /* CoreData.framework */; };
+		A824718519D0AB0E00168026 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A824718319D0AB0E00168026 /* InfoPlist.strings */; };
+		A824718719D0AB0E00168026 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A824718619D0AB0E00168026 /* main.m */; };
+		A824718B19D0AB0E00168026 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A824718A19D0AB0E00168026 /* AppDelegate.m */; };
+		A824718E19D0AB0E00168026 /* FazendaDoReMi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A824718C19D0AB0E00168026 /* FazendaDoReMi.xcdatamodeld */; };
+		A824719019D0AB0E00168026 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A824718F19D0AB0E00168026 /* Images.xcassets */; };
+		A824719719D0AB0E00168026 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A824719619D0AB0E00168026 /* XCTest.framework */; };
+		A824719819D0AB0E00168026 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A824717819D0AB0E00168026 /* Foundation.framework */; };
+		A824719919D0AB0E00168026 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A824717C19D0AB0E00168026 /* UIKit.framework */; };
+		A824719A19D0AB0E00168026 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A824717E19D0AB0E00168026 /* CoreData.framework */; };
+		A82471A219D0AB0E00168026 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A82471A019D0AB0E00168026 /* InfoPlist.strings */; };
+		A82471A419D0AB0E00168026 /* FazendaDoReMiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A82471A319D0AB0E00168026 /* FazendaDoReMiTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A824719B19D0AB0E00168026 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A824716D19D0AB0E00168026 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A824717419D0AB0E00168026;
+			remoteInfo = FazendaDoReMi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A824717519D0AB0E00168026 /* FazendaDoReMi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FazendaDoReMi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A824717819D0AB0E00168026 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A824717A19D0AB0E00168026 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A824717C19D0AB0E00168026 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A824717E19D0AB0E00168026 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A824718219D0AB0E00168026 /* FazendaDoReMi-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FazendaDoReMi-Info.plist"; sourceTree = "<group>"; };
+		A824718419D0AB0E00168026 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A824718619D0AB0E00168026 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A824718819D0AB0E00168026 /* FazendaDoReMi-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FazendaDoReMi-Prefix.pch"; sourceTree = "<group>"; };
+		A824718919D0AB0E00168026 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A824718A19D0AB0E00168026 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A824718D19D0AB0E00168026 /* FazendaDoReMi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FazendaDoReMi.xcdatamodel; sourceTree = "<group>"; };
+		A824718F19D0AB0E00168026 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A824719519D0AB0E00168026 /* FazendaDoReMiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FazendaDoReMiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A824719619D0AB0E00168026 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A824719F19D0AB0E00168026 /* FazendaDoReMiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FazendaDoReMiTests-Info.plist"; sourceTree = "<group>"; };
+		A82471A119D0AB0E00168026 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A82471A319D0AB0E00168026 /* FazendaDoReMiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FazendaDoReMiTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A824717219D0AB0E00168026 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A824717B19D0AB0E00168026 /* CoreGraphics.framework in Frameworks */,
+				A824717F19D0AB0E00168026 /* CoreData.framework in Frameworks */,
+				A824717D19D0AB0E00168026 /* UIKit.framework in Frameworks */,
+				A824717919D0AB0E00168026 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A824719219D0AB0E00168026 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A824719719D0AB0E00168026 /* XCTest.framework in Frameworks */,
+				A824719A19D0AB0E00168026 /* CoreData.framework in Frameworks */,
+				A824719919D0AB0E00168026 /* UIKit.framework in Frameworks */,
+				A824719819D0AB0E00168026 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A824716C19D0AB0E00168026 = {
+			isa = PBXGroup;
+			children = (
+				A824718019D0AB0E00168026 /* FazendaDoReMi */,
+				A824719D19D0AB0E00168026 /* FazendaDoReMiTests */,
+				A824717719D0AB0E00168026 /* Frameworks */,
+				A824717619D0AB0E00168026 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A824717619D0AB0E00168026 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A824717519D0AB0E00168026 /* FazendaDoReMi.app */,
+				A824719519D0AB0E00168026 /* FazendaDoReMiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A824717719D0AB0E00168026 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A824717819D0AB0E00168026 /* Foundation.framework */,
+				A824717A19D0AB0E00168026 /* CoreGraphics.framework */,
+				A824717C19D0AB0E00168026 /* UIKit.framework */,
+				A824717E19D0AB0E00168026 /* CoreData.framework */,
+				A824719619D0AB0E00168026 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A824718019D0AB0E00168026 /* FazendaDoReMi */ = {
+			isa = PBXGroup;
+			children = (
+				A824718919D0AB0E00168026 /* AppDelegate.h */,
+				A824718A19D0AB0E00168026 /* AppDelegate.m */,
+				A824718F19D0AB0E00168026 /* Images.xcassets */,
+				A824718C19D0AB0E00168026 /* FazendaDoReMi.xcdatamodeld */,
+				A824718119D0AB0E00168026 /* Supporting Files */,
+			);
+			path = FazendaDoReMi;
+			sourceTree = "<group>";
+		};
+		A824718119D0AB0E00168026 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A824718219D0AB0E00168026 /* FazendaDoReMi-Info.plist */,
+				A824718319D0AB0E00168026 /* InfoPlist.strings */,
+				A824718619D0AB0E00168026 /* main.m */,
+				A824718819D0AB0E00168026 /* FazendaDoReMi-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A824719D19D0AB0E00168026 /* FazendaDoReMiTests */ = {
+			isa = PBXGroup;
+			children = (
+				A82471A319D0AB0E00168026 /* FazendaDoReMiTests.m */,
+				A824719E19D0AB0E00168026 /* Supporting Files */,
+			);
+			path = FazendaDoReMiTests;
+			sourceTree = "<group>";
+		};
+		A824719E19D0AB0E00168026 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A824719F19D0AB0E00168026 /* FazendaDoReMiTests-Info.plist */,
+				A82471A019D0AB0E00168026 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A824717419D0AB0E00168026 /* FazendaDoReMi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A82471A719D0AB0E00168026 /* Build configuration list for PBXNativeTarget "FazendaDoReMi" */;
+			buildPhases = (
+				A824717119D0AB0E00168026 /* Sources */,
+				A824717219D0AB0E00168026 /* Frameworks */,
+				A824717319D0AB0E00168026 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FazendaDoReMi;
+			productName = FazendaDoReMi;
+			productReference = A824717519D0AB0E00168026 /* FazendaDoReMi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A824719419D0AB0E00168026 /* FazendaDoReMiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A82471AA19D0AB0E00168026 /* Build configuration list for PBXNativeTarget "FazendaDoReMiTests" */;
+			buildPhases = (
+				A824719119D0AB0E00168026 /* Sources */,
+				A824719219D0AB0E00168026 /* Frameworks */,
+				A824719319D0AB0E00168026 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A824719C19D0AB0E00168026 /* PBXTargetDependency */,
+			);
+			name = FazendaDoReMiTests;
+			productName = FazendaDoReMiTests;
+			productReference = A824719519D0AB0E00168026 /* FazendaDoReMiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A824716D19D0AB0E00168026 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "EMERSON BARROS | VINICIUS RESENDE";
+				TargetAttributes = {
+					A824719419D0AB0E00168026 = {
+						TestTargetID = A824717419D0AB0E00168026;
+					};
+				};
+			};
+			buildConfigurationList = A824717019D0AB0E00168026 /* Build configuration list for PBXProject "FazendaDoReMi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A824716C19D0AB0E00168026;
+			productRefGroup = A824717619D0AB0E00168026 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A824717419D0AB0E00168026 /* FazendaDoReMi */,
+				A824719419D0AB0E00168026 /* FazendaDoReMiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A824717319D0AB0E00168026 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A824718519D0AB0E00168026 /* InfoPlist.strings in Resources */,
+				A824719019D0AB0E00168026 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A824719319D0AB0E00168026 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A82471A219D0AB0E00168026 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A824717119D0AB0E00168026 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A824718B19D0AB0E00168026 /* AppDelegate.m in Sources */,
+				A824718719D0AB0E00168026 /* main.m in Sources */,
+				A824718E19D0AB0E00168026 /* FazendaDoReMi.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A824719119D0AB0E00168026 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A82471A419D0AB0E00168026 /* FazendaDoReMiTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A824719C19D0AB0E00168026 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A824717419D0AB0E00168026 /* FazendaDoReMi */;
+			targetProxy = A824719B19D0AB0E00168026 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A824718319D0AB0E00168026 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A824718419D0AB0E00168026 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A82471A019D0AB0E00168026 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A82471A119D0AB0E00168026 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A82471A519D0AB0E00168026 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		A82471A619D0AB0E00168026 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A82471A819D0AB0E00168026 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FazendaDoReMi/FazendaDoReMi-Prefix.pch";
+				INFOPLIST_FILE = "FazendaDoReMi/FazendaDoReMi-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A82471A919D0AB0E00168026 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FazendaDoReMi/FazendaDoReMi-Prefix.pch";
+				INFOPLIST_FILE = "FazendaDoReMi/FazendaDoReMi-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A82471AB19D0AB0E00168026 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FazendaDoReMi.app/FazendaDoReMi";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FazendaDoReMi/FazendaDoReMi-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FazendaDoReMiTests/FazendaDoReMiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A82471AC19D0AB0E00168026 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FazendaDoReMi.app/FazendaDoReMi";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FazendaDoReMi/FazendaDoReMi-Prefix.pch";
+				INFOPLIST_FILE = "FazendaDoReMiTests/FazendaDoReMiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A824717019D0AB0E00168026 /* Build configuration list for PBXProject "FazendaDoReMi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A82471A519D0AB0E00168026 /* Debug */,
+				A82471A619D0AB0E00168026 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A82471A719D0AB0E00168026 /* Build configuration list for PBXNativeTarget "FazendaDoReMi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A82471A819D0AB0E00168026 /* Debug */,
+				A82471A919D0AB0E00168026 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A82471AA19D0AB0E00168026 /* Build configuration list for PBXNativeTarget "FazendaDoReMiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A82471AB19D0AB0E00168026 /* Debug */,
+				A82471AC19D0AB0E00168026 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A824718C19D0AB0E00168026 /* FazendaDoReMi.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A824718D19D0AB0E00168026 /* FazendaDoReMi.xcdatamodel */,
+			);
+			currentVersion = A824718D19D0AB0E00168026 /* FazendaDoReMi.xcdatamodel */;
+			path = FazendaDoReMi.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A824716D19D0AB0E00168026 /* Project object */;
+}
