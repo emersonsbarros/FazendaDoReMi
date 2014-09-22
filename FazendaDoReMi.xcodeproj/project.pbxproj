@@ -22,6 +22,7 @@
 		A824719A19D0AB0E00168026 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A824717E19D0AB0E00168026 /* CoreData.framework */; };
 		A82471A219D0AB0E00168026 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A82471A019D0AB0E00168026 /* InfoPlist.strings */; };
 		A82471A419D0AB0E00168026 /* FazendaDoReMiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A82471A319D0AB0E00168026 /* FazendaDoReMiTests.m */; };
+		A82471B219D0AE2600168026 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A82471B419D0AE2600168026 /* iPad.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		A824719F19D0AB0E00168026 /* FazendaDoReMiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FazendaDoReMiTests-Info.plist"; sourceTree = "<group>"; };
 		A82471A119D0AB0E00168026 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A82471A319D0AB0E00168026 /* FazendaDoReMiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FazendaDoReMiTests.m; sourceTree = "<group>"; };
+		A82471B319D0AE2600168026 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				A824718A19D0AB0E00168026 /* AppDelegate.m */,
 				A824718F19D0AB0E00168026 /* Images.xcassets */,
 				A824718C19D0AB0E00168026 /* FazendaDoReMi.xcdatamodeld */,
+				A82471B119D0AB6E00168026 /* Storyboard */,
 				A824718119D0AB0E00168026 /* Supporting Files */,
 			);
 			path = FazendaDoReMi;
@@ -151,6 +154,14 @@
 				A82471A019D0AB0E00168026 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A82471B119D0AB6E00168026 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				A82471B419D0AE2600168026 /* iPad.storyboard */,
+			);
+			name = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A824718519D0AB0E00168026 /* InfoPlist.strings in Resources */,
+				A82471B219D0AE2600168026 /* iPad.storyboard in Resources */,
 				A824719019D0AB0E00168026 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +299,15 @@
 				A82471A119D0AB0E00168026 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A82471B419D0AE2600168026 /* iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A82471B319D0AE2600168026 /* en */,
+			);
+			name = iPad.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
