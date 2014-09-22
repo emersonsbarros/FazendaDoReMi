@@ -117,10 +117,10 @@
 		A824718019D0AB0E00168026 /* FazendaDoReMi */ = {
 			isa = PBXGroup;
 			children = (
-				A824718919D0AB0E00168026 /* AppDelegate.h */,
-				A824718A19D0AB0E00168026 /* AppDelegate.m */,
 				A824718F19D0AB0E00168026 /* Images.xcassets */,
 				A824718C19D0AB0E00168026 /* FazendaDoReMi.xcdatamodeld */,
+				A824718919D0AB0E00168026 /* AppDelegate.h */,
+				A824718A19D0AB0E00168026 /* AppDelegate.m */,
 				A82471B119D0AB6E00168026 /* Storyboard */,
 				A824718119D0AB0E00168026 /* Supporting Files */,
 			);
