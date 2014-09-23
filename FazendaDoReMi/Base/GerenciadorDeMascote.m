@@ -19,6 +19,19 @@
     return self;
 }
 
++(id)allocWithZone:(struct _NSZone *)zone{
+    return [self sharedManager];
+}
+
+//Singleton
++(GerenciadorDeMascote*)sharedManager{
+    static GerenciadorDeMascote *gerenciadorDeMascote = nil;
+    
+    if(!gerenciadorDeMascote){
+        gerenciadorDeMascote = [[super allocWithZone: nil] init];
+    }
+    return gerenciadorDeMascote;
+}
 
 -(Mascote*)retornaMascote: (NSString*)nomeMascote{
     

@@ -1,19 +1,23 @@
 //
-//  Exercicio.h
+//  Item.h
 //  FazendaDoReMi
 //
 //  Created by EMERSON DE SOUZA BARROS on 23/09/14.
 //  Copyright (c) 2014 EMERSON BARROS | VINICIUS RESENDE. All rights reserved.
 //
-#import "Mascote.h"
+
+#import <AVFoundation/AVFoundation.h>
 #import <Foundation/Foundation.h>
 
-@interface Exercicio : NSObject
+@interface Item : NSObject
 
 //Atributos
 @property NSString *nome;
-@property NSString *tema;
-@property Mascote *mascote;
-@property BOOL estado;
+@property NSMutableArray *listaSprites;
+@property AVAudioPlayer *player;
+@property UIImage *imagem;
+
+//Metodos
+-(void)retornaAudio: (NSString*)nome;
 
 @end

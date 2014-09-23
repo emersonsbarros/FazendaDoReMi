@@ -15,6 +15,7 @@
 @property NSMutableArray *listaDeMascotes;
 
 //Métodos
++(GerenciadorDeMascote*)sharedManager;
 -(Mascote*)retornaMascote: (NSString*)nomeMascote;
 
 

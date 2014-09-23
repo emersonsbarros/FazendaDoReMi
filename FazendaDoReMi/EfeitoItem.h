@@ -1,20 +1,22 @@
 //
-//  Aula.h
+//  EfeitoItem.h
 //  FazendaDoReMi
 //
 //  Created by EMERSON DE SOUZA BARROS on 23/09/14.
 //  Copyright (c) 2014 EMERSON BARROS | VINICIUS RESENDE. All rights reserved.
 //
 
-#import "Exercicio.h"
 #import <Foundation/Foundation.h>
 
-@interface Aula : NSObject
+@interface EfeitoItem : NSObject
 
-//Atributos
-@property NSMutableArray *listaDeExercicios;
-@property NSString *nomeDoLugar;
-@property UIImage *imagemDoBotao;
+//Metodos
+-(void)desaparece;
+-(void)aparece;
+-(void)aumenta;
+-(void)diminui;
+-(void)balanca;
 
+-(void)trocaSprite: (NSString*)nome;
 
 @end

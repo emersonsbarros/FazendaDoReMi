@@ -11,6 +11,7 @@
 
 @interface Conversa : NSObject
 
+//Atributos
 @property NSMutableArray *listaDeFalas;
 
 @end
