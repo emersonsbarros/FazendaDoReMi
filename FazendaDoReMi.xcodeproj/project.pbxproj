@@ -23,6 +23,15 @@
 		A82471A219D0AB0E00168026 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A82471A019D0AB0E00168026 /* InfoPlist.strings */; };
 		A82471A419D0AB0E00168026 /* FazendaDoReMiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A82471A319D0AB0E00168026 /* FazendaDoReMiTests.m */; };
 		A82471B219D0AE2600168026 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A82471B419D0AE2600168026 /* iPad.storyboard */; };
+		A8F1C4B219D1F8AD001850E4 /* EstudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F1C4B119D1F8AD001850E4 /* EstudioViewController.m */; };
+		A8F1C4B519D20502001850E4 /* Exercicio.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F1C4B419D20502001850E4 /* Exercicio.m */; };
+		A8F1C4B819D205D6001850E4 /* Aula.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F1C4B719D205D6001850E4 /* Aula.m */; };
+		A8F1C4BB19D206CC001850E4 /* GerenciadorDeAula.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F1C4BA19D206CC001850E4 /* GerenciadorDeAula.m */; };
+		A8F1C4C319D207CE001850E4 /* Mascote.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F1C4BE19D207CE001850E4 /* Mascote.m */; };
+		A8F1C4C419D207CE001850E4 /* Conversa.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F1C4C019D207CE001850E4 /* Conversa.m */; };
+		A8F1C4C519D207CE001850E4 /* Fala.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F1C4C219D207CE001850E4 /* Fala.m */; };
+		A8F1C4C919D21129001850E4 /* GerenciadorDeMascote.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F1C4C819D21129001850E4 /* GerenciadorDeMascote.m */; };
+		A8F1C4CC19D21236001850E4 /* SpriteMascote.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F1C4CB19D21236001850E4 /* SpriteMascote.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,16 +54,34 @@
 		A824718419D0AB0E00168026 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A824718619D0AB0E00168026 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A824718819D0AB0E00168026 /* FazendaDoReMi-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FazendaDoReMi-Prefix.pch"; sourceTree = "<group>"; };
-		A824718919D0AB0E00168026 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A824718A19D0AB0E00168026 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A824718919D0AB0E00168026 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = FazendaDoReMi/AppDelegate.h; sourceTree = "<group>"; };
+		A824718A19D0AB0E00168026 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = FazendaDoReMi/AppDelegate.m; sourceTree = "<group>"; };
 		A824718D19D0AB0E00168026 /* FazendaDoReMi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FazendaDoReMi.xcdatamodel; sourceTree = "<group>"; };
-		A824718F19D0AB0E00168026 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A824718F19D0AB0E00168026 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = FazendaDoReMi/Images.xcassets; sourceTree = "<group>"; };
 		A824719519D0AB0E00168026 /* FazendaDoReMiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FazendaDoReMiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A824719619D0AB0E00168026 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A824719F19D0AB0E00168026 /* FazendaDoReMiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FazendaDoReMiTests-Info.plist"; sourceTree = "<group>"; };
 		A82471A119D0AB0E00168026 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A82471A319D0AB0E00168026 /* FazendaDoReMiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FazendaDoReMiTests.m; sourceTree = "<group>"; };
 		A82471B319D0AE2600168026 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/iPad.storyboard; sourceTree = "<group>"; };
+		A8F1C4B019D1F8AD001850E4 /* EstudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EstudioViewController.h; sourceTree = "<group>"; };
+		A8F1C4B119D1F8AD001850E4 /* EstudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EstudioViewController.m; sourceTree = "<group>"; };
+		A8F1C4B319D20502001850E4 /* Exercicio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercicio.h; sourceTree = "<group>"; };
+		A8F1C4B419D20502001850E4 /* Exercicio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercicio.m; sourceTree = "<group>"; };
+		A8F1C4B619D205D6001850E4 /* Aula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aula.h; sourceTree = "<group>"; };
+		A8F1C4B719D205D6001850E4 /* Aula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aula.m; sourceTree = "<group>"; };
+		A8F1C4B919D206CC001850E4 /* GerenciadorDeAula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GerenciadorDeAula.h; sourceTree = "<group>"; };
+		A8F1C4BA19D206CC001850E4 /* GerenciadorDeAula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GerenciadorDeAula.m; sourceTree = "<group>"; };
+		A8F1C4BD19D207CE001850E4 /* Mascote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mascote.h; sourceTree = "<group>"; };
+		A8F1C4BE19D207CE001850E4 /* Mascote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mascote.m; sourceTree = "<group>"; };
+		A8F1C4BF19D207CE001850E4 /* Conversa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conversa.h; sourceTree = "<group>"; };
+		A8F1C4C019D207CE001850E4 /* Conversa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Conversa.m; sourceTree = "<group>"; };
+		A8F1C4C119D207CE001850E4 /* Fala.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fala.h; sourceTree = "<group>"; };
+		A8F1C4C219D207CE001850E4 /* Fala.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fala.m; sourceTree = "<group>"; };
+		A8F1C4C719D21129001850E4 /* GerenciadorDeMascote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GerenciadorDeMascote.h; sourceTree = "<group>"; };
+		A8F1C4C819D21129001850E4 /* GerenciadorDeMascote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GerenciadorDeMascote.m; sourceTree = "<group>"; };
+		A8F1C4CA19D21236001850E4 /* SpriteMascote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteMascote.h; sourceTree = "<group>"; };
+		A8F1C4CB19D21236001850E4 /* SpriteMascote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteMascote.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +114,10 @@
 			isa = PBXGroup;
 			children = (
 				A824718019D0AB0E00168026 /* FazendaDoReMi */,
+				A824718919D0AB0E00168026 /* AppDelegate.h */,
+				A824718A19D0AB0E00168026 /* AppDelegate.m */,
+				A824718F19D0AB0E00168026 /* Images.xcassets */,
+				A824718C19D0AB0E00168026 /* FazendaDoReMi.xcdatamodeld */,
 				A824719D19D0AB0E00168026 /* FazendaDoReMiTests */,
 				A824717719D0AB0E00168026 /* Frameworks */,
 				A824717619D0AB0E00168026 /* Products */,
@@ -117,10 +148,9 @@
 		A824718019D0AB0E00168026 /* FazendaDoReMi */ = {
 			isa = PBXGroup;
 			children = (
-				A824718F19D0AB0E00168026 /* Images.xcassets */,
-				A824718C19D0AB0E00168026 /* FazendaDoReMi.xcdatamodeld */,
-				A824718919D0AB0E00168026 /* AppDelegate.h */,
-				A824718A19D0AB0E00168026 /* AppDelegate.m */,
+				A8F1C4A519D1EA2F001850E4 /* Base */,
+				A8F1C4AF19D1F89B001850E4 /* Controlador */,
+				A8F1C4A719D1EA2F001850E4 /* Midia */,
 				A82471B119D0AB6E00168026 /* Storyboard */,
 				A824718119D0AB0E00168026 /* Supporting Files */,
 			);
@@ -162,6 +192,69 @@
 				A82471B419D0AE2600168026 /* iPad.storyboard */,
 			);
 			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		A8F1C4A519D1EA2F001850E4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A8F1C4C619D2110C001850E4 /* Mascote */,
+				A8F1C4B319D20502001850E4 /* Exercicio.h */,
+				A8F1C4B419D20502001850E4 /* Exercicio.m */,
+				A8F1C4B619D205D6001850E4 /* Aula.h */,
+				A8F1C4B719D205D6001850E4 /* Aula.m */,
+				A8F1C4B919D206CC001850E4 /* GerenciadorDeAula.h */,
+				A8F1C4BA19D206CC001850E4 /* GerenciadorDeAula.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A8F1C4A719D1EA2F001850E4 /* Midia */ = {
+			isa = PBXGroup;
+			children = (
+				A8F1C4A819D1EA2F001850E4 /* Audio */,
+				A8F1C4A919D1EA2F001850E4 /* Imagem */,
+			);
+			path = Midia;
+			sourceTree = "<group>";
+		};
+		A8F1C4A819D1EA2F001850E4 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		A8F1C4A919D1EA2F001850E4 /* Imagem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Imagem;
+			sourceTree = "<group>";
+		};
+		A8F1C4AF19D1F89B001850E4 /* Controlador */ = {
+			isa = PBXGroup;
+			children = (
+				A8F1C4B019D1F8AD001850E4 /* EstudioViewController.h */,
+				A8F1C4B119D1F8AD001850E4 /* EstudioViewController.m */,
+			);
+			path = Controlador;
+			sourceTree = "<group>";
+		};
+		A8F1C4C619D2110C001850E4 /* Mascote */ = {
+			isa = PBXGroup;
+			children = (
+				A8F1C4BD19D207CE001850E4 /* Mascote.h */,
+				A8F1C4BE19D207CE001850E4 /* Mascote.m */,
+				A8F1C4BF19D207CE001850E4 /* Conversa.h */,
+				A8F1C4C019D207CE001850E4 /* Conversa.m */,
+				A8F1C4C119D207CE001850E4 /* Fala.h */,
+				A8F1C4C219D207CE001850E4 /* Fala.m */,
+				A8F1C4C719D21129001850E4 /* GerenciadorDeMascote.h */,
+				A8F1C4C819D21129001850E4 /* GerenciadorDeMascote.m */,
+				A8F1C4CA19D21236001850E4 /* SpriteMascote.h */,
+				A8F1C4CB19D21236001850E4 /* SpriteMascote.m */,
+			);
+			name = Mascote;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,9 +353,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8F1C4C319D207CE001850E4 /* Mascote.m in Sources */,
+				A8F1C4CC19D21236001850E4 /* SpriteMascote.m in Sources */,
+				A8F1C4B519D20502001850E4 /* Exercicio.m in Sources */,
 				A824718B19D0AB0E00168026 /* AppDelegate.m in Sources */,
 				A824718719D0AB0E00168026 /* main.m in Sources */,
+				A8F1C4B219D1F8AD001850E4 /* EstudioViewController.m in Sources */,
+				A8F1C4C519D207CE001850E4 /* Fala.m in Sources */,
+				A8F1C4C919D21129001850E4 /* GerenciadorDeMascote.m in Sources */,
+				A8F1C4B819D205D6001850E4 /* Aula.m in Sources */,
 				A824718E19D0AB0E00168026 /* FazendaDoReMi.xcdatamodeld in Sources */,
+				A8F1C4BB19D206CC001850E4 /* GerenciadorDeAula.m in Sources */,
+				A8F1C4C419D207CE001850E4 /* Conversa.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +572,7 @@
 				A82471A919D0AB0E00168026 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A82471AA19D0AB0E00168026 /* Build configuration list for PBXNativeTarget "FazendaDoReMiTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +581,7 @@
 				A82471AC19D0AB0E00168026 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -488,7 +592,8 @@
 				A824718D19D0AB0E00168026 /* FazendaDoReMi.xcdatamodel */,
 			);
 			currentVersion = A824718D19D0AB0E00168026 /* FazendaDoReMi.xcdatamodel */;
-			path = FazendaDoReMi.xcdatamodeld;
+			name = FazendaDoReMi.xcdatamodeld;
+			path = FazendaDoReMi/FazendaDoReMi.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
