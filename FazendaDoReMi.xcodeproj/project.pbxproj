@@ -197,13 +197,8 @@
 		A8F1C4A519D1EA2F001850E4 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				A8F1C4CD19D214E0001850E4 /* Exercicio */,
 				A8F1C4C619D2110C001850E4 /* Mascote */,
-				A8F1C4B319D20502001850E4 /* Exercicio.h */,
-				A8F1C4B419D20502001850E4 /* Exercicio.m */,
-				A8F1C4B619D205D6001850E4 /* Aula.h */,
-				A8F1C4B719D205D6001850E4 /* Aula.m */,
-				A8F1C4B919D206CC001850E4 /* GerenciadorDeAula.h */,
-				A8F1C4BA19D206CC001850E4 /* GerenciadorDeAula.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -243,18 +238,31 @@
 		A8F1C4C619D2110C001850E4 /* Mascote */ = {
 			isa = PBXGroup;
 			children = (
+				A8F1C4C719D21129001850E4 /* GerenciadorDeMascote.h */,
+				A8F1C4C819D21129001850E4 /* GerenciadorDeMascote.m */,
 				A8F1C4BD19D207CE001850E4 /* Mascote.h */,
 				A8F1C4BE19D207CE001850E4 /* Mascote.m */,
+				A8F1C4CA19D21236001850E4 /* SpriteMascote.h */,
+				A8F1C4CB19D21236001850E4 /* SpriteMascote.m */,
 				A8F1C4BF19D207CE001850E4 /* Conversa.h */,
 				A8F1C4C019D207CE001850E4 /* Conversa.m */,
 				A8F1C4C119D207CE001850E4 /* Fala.h */,
 				A8F1C4C219D207CE001850E4 /* Fala.m */,
-				A8F1C4C719D21129001850E4 /* GerenciadorDeMascote.h */,
-				A8F1C4C819D21129001850E4 /* GerenciadorDeMascote.m */,
-				A8F1C4CA19D21236001850E4 /* SpriteMascote.h */,
-				A8F1C4CB19D21236001850E4 /* SpriteMascote.m */,
 			);
 			name = Mascote;
+			sourceTree = "<group>";
+		};
+		A8F1C4CD19D214E0001850E4 /* Exercicio */ = {
+			isa = PBXGroup;
+			children = (
+				A8F1C4B919D206CC001850E4 /* GerenciadorDeAula.h */,
+				A8F1C4BA19D206CC001850E4 /* GerenciadorDeAula.m */,
+				A8F1C4B619D205D6001850E4 /* Aula.h */,
+				A8F1C4B719D205D6001850E4 /* Aula.m */,
+				A8F1C4B319D20502001850E4 /* Exercicio.h */,
+				A8F1C4B419D20502001850E4 /* Exercicio.m */,
+			);
+			name = Exercicio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -11,7 +11,11 @@
 
 @interface GerenciadorDeAula : NSObject
 
+//Atributos
 @property NSMutableArray *listaDeAulas;
 @property NSMutableArray *listaDeViewControllers;
+
+//Métodos
++(GerenciadorDeAula*)sharedManager;
 
 @end

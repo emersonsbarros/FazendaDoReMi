@@ -1,9 +1,9 @@
 //
 //  Fala.m
-//  ProjetoFinal
+//  FazendaDoReMi
 //
-//  Created by EMERSON DE SOUZA BARROS on 27/05/14.
-//  Copyright (c) 2014 EMERSON DE SOUZA BARROS. All rights reserved.
+//  Created by EMERSON DE SOUZA BARROS on 23/09/14.
+//  Copyright (c) 2014 EMERSON BARROS | VINICIUS RESENDE. All rights reserved.
 //
 
 #import "Fala.h"

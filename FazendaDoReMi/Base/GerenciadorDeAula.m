@@ -10,4 +10,28 @@
 
 @implementation GerenciadorDeAula
 
+-(id)init{
+    self = [super init];
+    
+    if(self){
+        self.listaDeAulas = [[NSMutableArray alloc] init];
+        self.listaDeViewControllers = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
++(id)allocWithZone:(struct _NSZone *)zone{
+    return [self sharedManager];
+}
+
+//Singleton
++(GerenciadorDeAula*)sharedManager{
+    static GerenciadorDeAula *gerenciadorDeAula = nil;
+    
+    if(!gerenciadorDeAula){
+        gerenciadorDeAula = [[super allocWithZone: nil] init];
+    }
+    return gerenciadorDeAula;
+}
+
 @end
