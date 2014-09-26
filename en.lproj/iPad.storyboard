@@ -46,10 +46,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="TopLeft" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Fry-vF-hsH">
-                                <rect key="frame" x="284" y="619" width="168" height="96"/>
+                                <rect key="frame" x="298" y="573" width="107" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
-                                <state key="normal" title="Jornada" image="botao-jornada.png">
+                                <inset key="titleEdgeInsets" minX="-160" minY="0.0" maxX="0.0" maxY="-115"/>
+                                <state key="normal" backgroundImage="botao-jornada.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -58,12 +59,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="TopLeft" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="k5s-RW-py3">
-                                <rect key="frame" x="487" y="566" width="151" height="174"/>
+                                <rect key="frame" x="459" y="575" width="107" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                <inset key="titleEdgeInsets" minX="-137" minY="0.0" maxX="0.0" maxY="-115"/>
+                                <inset key="titleEdgeInsets" minX="-140" minY="0.0" maxX="0.0" maxY="-115"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="15"/>
-                                <state key="normal" title="Estúdio" image="botao-estudio.png">
+                                <state key="normal" backgroundImage="botao-estudio.png">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -72,9 +73,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKg-cb-Zzr">
-                                <rect key="frame" x="661" y="619" width="190" height="96"/>
+                                <rect key="frame" x="618" y="574" width="107" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Jogos" image="botao-jogos.png">
+                                <inset key="titleEdgeInsets" minX="-140" minY="0.0" maxX="0.0" maxY="-115"/>
+                                <state key="normal" backgroundImage="botao-jogos.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -185,9 +187,9 @@
     <resources>
         <image name="background-arvore.png" width="1024" height="768"/>
         <image name="background-ceu.png" width="1024" height="768"/>
-        <image name="botao-estudio.png" width="96" height="96"/>
-        <image name="botao-jogos.png" width="96" height="96"/>
-        <image name="botao-jornada.png" width="96" height="96"/>
+        <image name="botao-estudio.png" width="101" height="120"/>
+        <image name="botao-jogos.png" width="96" height="122"/>
+        <image name="botao-jornada.png" width="107" height="121"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

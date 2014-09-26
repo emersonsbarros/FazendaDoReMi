@@ -34,14 +34,14 @@
 		A8B2C26519D5FACC00B3D892 /* Vanilla.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C26419D5FACC00B3D892 /* Vanilla.otf */; };
 		A8B2C27019D6060700B3D892 /* background-arvore.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C26619D6060700B3D892 /* background-arvore.png */; };
 		A8B2C27119D6060700B3D892 /* background-ceu.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C26719D6060700B3D892 /* background-ceu.png */; };
-		A8B2C27219D6060700B3D892 /* botao-estudio.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C26819D6060700B3D892 /* botao-estudio.png */; };
-		A8B2C27319D6060700B3D892 /* botao-jogos.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C26919D6060700B3D892 /* botao-jogos.png */; };
-		A8B2C27419D6060700B3D892 /* botao-jornada.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C26A19D6060700B3D892 /* botao-jornada.png */; };
 		A8B2C27519D6060700B3D892 /* cerca.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C26B19D6060700B3D892 /* cerca.png */; };
 		A8B2C27619D6060700B3D892 /* nuvem1.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C26C19D6060700B3D892 /* nuvem1.png */; };
 		A8B2C27719D6060700B3D892 /* nuvem2.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C26D19D6060700B3D892 /* nuvem2.png */; };
 		A8B2C27819D6060700B3D892 /* porteira-aberta.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C26E19D6060700B3D892 /* porteira-aberta.png */; };
 		A8B2C27919D6060700B3D892 /* porteira-fechada.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C26F19D6060700B3D892 /* porteira-fechada.png */; };
+		A8B2C27D19D60B0F00B3D892 /* botao-estudio.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C27A19D60B0F00B3D892 /* botao-estudio.png */; };
+		A8B2C27E19D60B0F00B3D892 /* botao-jogos.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C27B19D60B0F00B3D892 /* botao-jogos.png */; };
+		A8B2C27F19D60B0F00B3D892 /* botao-jornada.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C27C19D60B0F00B3D892 /* botao-jornada.png */; };
 		A8F1C4B219D1F8AD001850E4 /* EstudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F1C4B119D1F8AD001850E4 /* EstudioViewController.m */; };
 		A8F1C4B519D20502001850E4 /* Exercicio.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F1C4B419D20502001850E4 /* Exercicio.m */; };
 		A8F1C4B819D205D6001850E4 /* Aula.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F1C4B719D205D6001850E4 /* Aula.m */; };
@@ -101,14 +101,14 @@
 		A8B2C26419D5FACC00B3D892 /* Vanilla.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Vanilla.otf; sourceTree = "<group>"; };
 		A8B2C26619D6060700B3D892 /* background-arvore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-arvore.png"; sourceTree = SOURCE_ROOT; };
 		A8B2C26719D6060700B3D892 /* background-ceu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-ceu.png"; sourceTree = SOURCE_ROOT; };
-		A8B2C26819D6060700B3D892 /* botao-estudio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "botao-estudio.png"; sourceTree = SOURCE_ROOT; };
-		A8B2C26919D6060700B3D892 /* botao-jogos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "botao-jogos.png"; sourceTree = SOURCE_ROOT; };
-		A8B2C26A19D6060700B3D892 /* botao-jornada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "botao-jornada.png"; sourceTree = SOURCE_ROOT; };
 		A8B2C26B19D6060700B3D892 /* cerca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cerca.png; sourceTree = SOURCE_ROOT; };
 		A8B2C26C19D6060700B3D892 /* nuvem1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuvem1.png; sourceTree = SOURCE_ROOT; };
 		A8B2C26D19D6060700B3D892 /* nuvem2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuvem2.png; sourceTree = SOURCE_ROOT; };
 		A8B2C26E19D6060700B3D892 /* porteira-aberta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "porteira-aberta.png"; sourceTree = SOURCE_ROOT; };
 		A8B2C26F19D6060700B3D892 /* porteira-fechada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "porteira-fechada.png"; sourceTree = SOURCE_ROOT; };
+		A8B2C27A19D60B0F00B3D892 /* botao-estudio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "botao-estudio.png"; sourceTree = SOURCE_ROOT; };
+		A8B2C27B19D60B0F00B3D892 /* botao-jogos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "botao-jogos.png"; sourceTree = SOURCE_ROOT; };
+		A8B2C27C19D60B0F00B3D892 /* botao-jornada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "botao-jornada.png"; sourceTree = SOURCE_ROOT; };
 		A8F1C4B019D1F8AD001850E4 /* EstudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EstudioViewController.h; sourceTree = "<group>"; };
 		A8F1C4B119D1F8AD001850E4 /* EstudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EstudioViewController.m; sourceTree = "<group>"; };
 		A8F1C4B319D20502001850E4 /* Exercicio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercicio.h; sourceTree = "<group>"; };
@@ -274,14 +274,14 @@
 			children = (
 				A8B2C26619D6060700B3D892 /* background-arvore.png */,
 				A8B2C26719D6060700B3D892 /* background-ceu.png */,
-				A8B2C26819D6060700B3D892 /* botao-estudio.png */,
-				A8B2C26919D6060700B3D892 /* botao-jogos.png */,
-				A8B2C26A19D6060700B3D892 /* botao-jornada.png */,
 				A8B2C26B19D6060700B3D892 /* cerca.png */,
 				A8B2C26C19D6060700B3D892 /* nuvem1.png */,
 				A8B2C26D19D6060700B3D892 /* nuvem2.png */,
 				A8B2C26E19D6060700B3D892 /* porteira-aberta.png */,
 				A8B2C26F19D6060700B3D892 /* porteira-fechada.png */,
+				A8B2C27A19D60B0F00B3D892 /* botao-estudio.png */,
+				A8B2C27B19D60B0F00B3D892 /* botao-jogos.png */,
+				A8B2C27C19D60B0F00B3D892 /* botao-jornada.png */,
 			);
 			name = MenuPrincipal;
 			sourceTree = "<group>";
@@ -438,19 +438,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8B2C26519D5FACC00B3D892 /* Vanilla.otf in Resources */,
+				A8B2C27F19D60B0F00B3D892 /* botao-jornada.png in Resources */,
 				A8B2C27019D6060700B3D892 /* background-arvore.png in Resources */,
+				A8B2C27E19D60B0F00B3D892 /* botao-jogos.png in Resources */,
 				A8B2C27919D6060700B3D892 /* porteira-fechada.png in Resources */,
 				A8B2C27719D6060700B3D892 /* nuvem2.png in Resources */,
 				A824718519D0AB0E00168026 /* InfoPlist.strings in Resources */,
-				A8B2C27419D6060700B3D892 /* botao-jornada.png in Resources */,
 				A8B2C27119D6060700B3D892 /* background-ceu.png in Resources */,
 				A82471B219D0AE2600168026 /* iPad.storyboard in Resources */,
 				A8B2C27819D6060700B3D892 /* porteira-aberta.png in Resources */,
 				A8B2C27519D6060700B3D892 /* cerca.png in Resources */,
 				A824719019D0AB0E00168026 /* Images.xcassets in Resources */,
-				A8B2C27319D6060700B3D892 /* botao-jogos.png in Resources */,
 				A8B2C27619D6060700B3D892 /* nuvem1.png in Resources */,
-				A8B2C27219D6060700B3D892 /* botao-estudio.png in Resources */,
+				A8B2C27D19D60B0F00B3D892 /* botao-estudio.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
