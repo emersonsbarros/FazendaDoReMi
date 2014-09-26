@@ -30,6 +30,18 @@
 		A82471A219D0AB0E00168026 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A82471A019D0AB0E00168026 /* InfoPlist.strings */; };
 		A82471A419D0AB0E00168026 /* FazendaDoReMiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A82471A319D0AB0E00168026 /* FazendaDoReMiTests.m */; };
 		A82471B219D0AE2600168026 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A82471B419D0AE2600168026 /* iPad.storyboard */; };
+		A8B2C25119D5E36900B3D892 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B2C25019D5E36900B3D892 /* MenuViewController.m */; };
+		A8B2C26519D5FACC00B3D892 /* Vanilla.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C26419D5FACC00B3D892 /* Vanilla.otf */; };
+		A8B2C27019D6060700B3D892 /* background-arvore.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C26619D6060700B3D892 /* background-arvore.png */; };
+		A8B2C27119D6060700B3D892 /* background-ceu.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C26719D6060700B3D892 /* background-ceu.png */; };
+		A8B2C27219D6060700B3D892 /* botao-estudio.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C26819D6060700B3D892 /* botao-estudio.png */; };
+		A8B2C27319D6060700B3D892 /* botao-jogos.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C26919D6060700B3D892 /* botao-jogos.png */; };
+		A8B2C27419D6060700B3D892 /* botao-jornada.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C26A19D6060700B3D892 /* botao-jornada.png */; };
+		A8B2C27519D6060700B3D892 /* cerca.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C26B19D6060700B3D892 /* cerca.png */; };
+		A8B2C27619D6060700B3D892 /* nuvem1.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C26C19D6060700B3D892 /* nuvem1.png */; };
+		A8B2C27719D6060700B3D892 /* nuvem2.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C26D19D6060700B3D892 /* nuvem2.png */; };
+		A8B2C27819D6060700B3D892 /* porteira-aberta.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C26E19D6060700B3D892 /* porteira-aberta.png */; };
+		A8B2C27919D6060700B3D892 /* porteira-fechada.png in Resources */ = {isa = PBXBuildFile; fileRef = A8B2C26F19D6060700B3D892 /* porteira-fechada.png */; };
 		A8F1C4B219D1F8AD001850E4 /* EstudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F1C4B119D1F8AD001850E4 /* EstudioViewController.m */; };
 		A8F1C4B519D20502001850E4 /* Exercicio.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F1C4B419D20502001850E4 /* Exercicio.m */; };
 		A8F1C4B819D205D6001850E4 /* Aula.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F1C4B719D205D6001850E4 /* Aula.m */; };
@@ -84,6 +96,19 @@
 		A82471A119D0AB0E00168026 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A82471A319D0AB0E00168026 /* FazendaDoReMiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FazendaDoReMiTests.m; sourceTree = "<group>"; };
 		A82471B319D0AE2600168026 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/iPad.storyboard; sourceTree = "<group>"; };
+		A8B2C24F19D5E36900B3D892 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		A8B2C25019D5E36900B3D892 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		A8B2C26419D5FACC00B3D892 /* Vanilla.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Vanilla.otf; sourceTree = "<group>"; };
+		A8B2C26619D6060700B3D892 /* background-arvore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-arvore.png"; sourceTree = SOURCE_ROOT; };
+		A8B2C26719D6060700B3D892 /* background-ceu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-ceu.png"; sourceTree = SOURCE_ROOT; };
+		A8B2C26819D6060700B3D892 /* botao-estudio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "botao-estudio.png"; sourceTree = SOURCE_ROOT; };
+		A8B2C26919D6060700B3D892 /* botao-jogos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "botao-jogos.png"; sourceTree = SOURCE_ROOT; };
+		A8B2C26A19D6060700B3D892 /* botao-jornada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "botao-jornada.png"; sourceTree = SOURCE_ROOT; };
+		A8B2C26B19D6060700B3D892 /* cerca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cerca.png; sourceTree = SOURCE_ROOT; };
+		A8B2C26C19D6060700B3D892 /* nuvem1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuvem1.png; sourceTree = SOURCE_ROOT; };
+		A8B2C26D19D6060700B3D892 /* nuvem2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuvem2.png; sourceTree = SOURCE_ROOT; };
+		A8B2C26E19D6060700B3D892 /* porteira-aberta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "porteira-aberta.png"; sourceTree = SOURCE_ROOT; };
+		A8B2C26F19D6060700B3D892 /* porteira-fechada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "porteira-fechada.png"; sourceTree = SOURCE_ROOT; };
 		A8F1C4B019D1F8AD001850E4 /* EstudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EstudioViewController.h; sourceTree = "<group>"; };
 		A8F1C4B119D1F8AD001850E4 /* EstudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EstudioViewController.m; sourceTree = "<group>"; };
 		A8F1C4B319D20502001850E4 /* Exercicio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercicio.h; sourceTree = "<group>"; };
@@ -161,6 +186,7 @@
 		A824716C19D0AB0E00168026 = {
 			isa = PBXGroup;
 			children = (
+				A8B2C26419D5FACC00B3D892 /* Vanilla.otf */,
 				A824718019D0AB0E00168026 /* FazendaDoReMi */,
 				A824718919D0AB0E00168026 /* AppDelegate.h */,
 				A824718A19D0AB0E00168026 /* AppDelegate.m */,
@@ -243,6 +269,23 @@
 			name = Storyboard;
 			sourceTree = "<group>";
 		};
+		A8B2C25219D5F2A200B3D892 /* MenuPrincipal */ = {
+			isa = PBXGroup;
+			children = (
+				A8B2C26619D6060700B3D892 /* background-arvore.png */,
+				A8B2C26719D6060700B3D892 /* background-ceu.png */,
+				A8B2C26819D6060700B3D892 /* botao-estudio.png */,
+				A8B2C26919D6060700B3D892 /* botao-jogos.png */,
+				A8B2C26A19D6060700B3D892 /* botao-jornada.png */,
+				A8B2C26B19D6060700B3D892 /* cerca.png */,
+				A8B2C26C19D6060700B3D892 /* nuvem1.png */,
+				A8B2C26D19D6060700B3D892 /* nuvem2.png */,
+				A8B2C26E19D6060700B3D892 /* porteira-aberta.png */,
+				A8B2C26F19D6060700B3D892 /* porteira-fechada.png */,
+			);
+			name = MenuPrincipal;
+			sourceTree = "<group>";
+		};
 		A8F1C4A519D1EA2F001850E4 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +316,7 @@
 		A8F1C4A919D1EA2F001850E4 /* Imagem */ = {
 			isa = PBXGroup;
 			children = (
+				A8B2C25219D5F2A200B3D892 /* MenuPrincipal */,
 			);
 			path = Imagem;
 			sourceTree = "<group>";
@@ -282,6 +326,8 @@
 			children = (
 				A8F1C4B019D1F8AD001850E4 /* EstudioViewController.h */,
 				A8F1C4B119D1F8AD001850E4 /* EstudioViewController.m */,
+				A8B2C24F19D5E36900B3D892 /* MenuViewController.h */,
+				A8B2C25019D5E36900B3D892 /* MenuViewController.m */,
 			);
 			path = Controlador;
 			sourceTree = "<group>";
@@ -391,9 +437,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8B2C26519D5FACC00B3D892 /* Vanilla.otf in Resources */,
+				A8B2C27019D6060700B3D892 /* background-arvore.png in Resources */,
+				A8B2C27919D6060700B3D892 /* porteira-fechada.png in Resources */,
+				A8B2C27719D6060700B3D892 /* nuvem2.png in Resources */,
 				A824718519D0AB0E00168026 /* InfoPlist.strings in Resources */,
+				A8B2C27419D6060700B3D892 /* botao-jornada.png in Resources */,
+				A8B2C27119D6060700B3D892 /* background-ceu.png in Resources */,
 				A82471B219D0AE2600168026 /* iPad.storyboard in Resources */,
+				A8B2C27819D6060700B3D892 /* porteira-aberta.png in Resources */,
+				A8B2C27519D6060700B3D892 /* cerca.png in Resources */,
 				A824719019D0AB0E00168026 /* Images.xcassets in Resources */,
+				A8B2C27319D6060700B3D892 /* botao-jogos.png in Resources */,
+				A8B2C27619D6060700B3D892 /* nuvem1.png in Resources */,
+				A8B2C27219D6060700B3D892 /* botao-estudio.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +473,7 @@
 				A811633B19D229CB00506D94 /* Item.m in Sources */,
 				A811634319D22B0000506D94 /* GerenciadorDeItem.m in Sources */,
 				A811634719D22C9000506D94 /* EfeitoItem.m in Sources */,
+				A8B2C25119D5E36900B3D892 /* MenuViewController.m in Sources */,
 				A8F1C4C319D207CE001850E4 /* Mascote.m in Sources */,
 				A8F1C4CC19D21236001850E4 /* SpriteMascote.m in Sources */,
 				A811634B19D22D9E00506D94 /* SomItem.m in Sources */,
