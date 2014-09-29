@@ -10,8 +10,14 @@
 
 @interface MenuViewController : UIViewController
 
+//Botões
 @property (weak, nonatomic) IBOutlet UIButton *btoJornada;
 @property (weak, nonatomic) IBOutlet UIButton *btoEstudio;
 @property (weak, nonatomic) IBOutlet UIButton *btoJogos;
+
+//Imagens animadas
+@property (weak, nonatomic) IBOutlet UIImageView *nuvemDireita;
+@property (weak, nonatomic) IBOutlet UIImageView *nuvemEsquerda;
+@property (weak, nonatomic) IBOutlet UIImageView *porteira;
 
 @end
