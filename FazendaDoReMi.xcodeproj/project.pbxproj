@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B6DCC9F19DB2D2500C166E3 /* nuvem-voltar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B6DCC9E19DB2D2500C166E3 /* nuvem-voltar.png */; };
+		0B6DCCA319DB2D8D00C166E3 /* botaoflauta.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B6DCCA019DB2D8D00C166E3 /* botaoflauta.png */; };
+		0B6DCCA419DB2D8D00C166E3 /* botaopiano.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B6DCCA119DB2D8D00C166E3 /* botaopiano.png */; };
+		0B6DCCA519DB2D8D00C166E3 /* botaoviolao.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B6DCCA219DB2D8D00C166E3 /* botaoviolao.png */; };
 		3FB6F4F519DA659C0080057B /* botao12Pausa.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6F4C919DA659C0080057B /* botao12Pausa.png */; };
 		3FB6F4F619DA659C0080057B /* botao12Tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6F4CA19DA659C0080057B /* botao12Tempo.png */; };
 		3FB6F4F719DA659C0080057B /* botao1Pausa.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6F4CB19DA659C0080057B /* botao1Pausa.png */; };
@@ -174,6 +178,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B6DCC9E19DB2D2500C166E3 /* nuvem-voltar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nuvem-voltar.png"; sourceTree = "<group>"; };
+		0B6DCCA019DB2D8D00C166E3 /* botaoflauta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botaoflauta.png; sourceTree = "<group>"; };
+		0B6DCCA119DB2D8D00C166E3 /* botaopiano.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botaopiano.png; sourceTree = "<group>"; };
+		0B6DCCA219DB2D8D00C166E3 /* botaoviolao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botaoviolao.png; sourceTree = "<group>"; };
 		3FB6F4C919DA659C0080057B /* botao12Pausa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao12Pausa.png; sourceTree = "<group>"; };
 		3FB6F4CA19DA659C0080057B /* botao12Tempo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao12Tempo.png; sourceTree = "<group>"; };
 		3FB6F4CB19DA659C0080057B /* botao1Pausa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao1Pausa.png; sourceTree = "<group>"; };
@@ -430,7 +438,11 @@
 		3FB6F4D319DA659C0080057B /* Cenarios */ = {
 			isa = PBXGroup;
 			children = (
+				0B6DCC9E19DB2D2500C166E3 /* nuvem-voltar.png */,
 				3FB6F4D419DA659C0080057B /* fundoazul.png */,
+				0B6DCCA019DB2D8D00C166E3 /* botaoflauta.png */,
+				0B6DCCA119DB2D8D00C166E3 /* botaopiano.png */,
+				0B6DCCA219DB2D8D00C166E3 /* botaoviolao.png */,
 				3FB6F4D519DA659C0080057B /* fundocasa.png */,
 			);
 			path = Cenarios;
@@ -990,6 +1002,7 @@
 				3FB6F50219DA659C0080057B /* Do4tempos.png in Resources */,
 				3FB6F51619DA659C0080057B /* SolMeiotempo.png in Resources */,
 				3FB6F55719DA67E60080057B /* FlautaDoce.plist in Resources */,
+				0B6DCCA319DB2D8D00C166E3 /* botaoflauta.png in Resources */,
 				3FB6F56519DA67E60080057B /* 6b - D.caf in Resources */,
 				3FB6F55D19DA67E60080057B /* mib3.caf in Resources */,
 				3FB6F57919DA67E60080057B /* P200 Piano F#6.caf in Resources */,
@@ -1000,6 +1013,7 @@
 				3FB6F56E19DA67E60080057B /* P200 Piano C7.caf in Resources */,
 				3FB6F51019DA659C0080057B /* ReMeiotempo.png in Resources */,
 				3FB6F4FE19DA659C0080057B /* btnplay.png in Resources */,
+				0B6DCC9F19DB2D2500C166E3 /* nuvem-voltar.png in Resources */,
 				3FB6F56319DA67E60080057B /* 6 - E.caf in Resources */,
 				3FC5D25919DA568F00348F51 /* background-ceu.png in Resources */,
 				3FB6F56219DA67E60080057B /* 5 - B.caf in Resources */,
@@ -1041,6 +1055,7 @@
 				3FB6F50519DA659C0080057B /* fa4Tempos.png in Resources */,
 				3FB6F57219DA67E60080057B /* P200 Piano D4.caf in Resources */,
 				3FB6F50319DA659C0080057B /* DoMeiotempo.png in Resources */,
+				0B6DCCA519DB2D8D00C166E3 /* botaoviolao.png in Resources */,
 				3FB6F4F719DA659C0080057B /* botao1Pausa.png in Resources */,
 				3FB6F57419DA67E60080057B /* P200 Piano D6.caf in Resources */,
 				3FB6F4FC19DA659C0080057B /* botao4tempos.png in Resources */,
@@ -1069,6 +1084,7 @@
 				3FB6F57819DA67E60080057B /* P200 Piano F#5.caf in Resources */,
 				A824719019D0AB0E00168026 /* Images.xcassets in Resources */,
 				3FB6F56B19DA67E60080057B /* P200 Piano A#5.caf in Resources */,
+				0B6DCCA419DB2D8D00C166E3 /* botaopiano.png in Resources */,
 				3FB6F55E19DA67E60080057B /* 1 - E.caf in Resources */,
 				3FB6F57C19DA67E60080057B /* Piano.plist in Resources */,
 				3FB6F56419DA67E60080057B /* 6a - A.caf in Resources */,

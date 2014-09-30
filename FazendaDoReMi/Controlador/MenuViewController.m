@@ -64,42 +64,33 @@
     
     NSLog(@"pos d = %f -- %f",self.nuvemDireita.frame.origin.x,self.nuvemDireita.frame.origin.y);
 
-    CABasicAnimation *move = [CABasicAnimation animationWithKeyPath:@"position"];
-    
-    
+    CABasicAnimation *moveNuvemDireita= [CABasicAnimation animationWithKeyPath:@"position"];
     // Setting starting position
-    [move setFromValue:[NSValue valueWithCGPoint: CGPointMake(self.nuvemDireita.frame.origin.x, self.nuvemDireita.frame.origin.y+40)]];
-    
+    [moveNuvemDireita setFromValue:[NSValue valueWithCGPoint: CGPointMake(self.nuvemDireita.frame.origin.x+100, self.nuvemDireita.frame.origin.y+40)]];
     // Setting ending position
-    [move setToValue:[NSValue valueWithCGPoint:CGPointMake(self.nuvemDireita.frame.origin.x-1224, self.nuvemDireita.frame.origin.y+40)]];
-    
-    NSLog(@"pos d = %f -- %f",self.nuvemDireita.frame.origin.x,self.nuvemDireita.frame.origin.y);
-    
+    [moveNuvemDireita setToValue:[NSValue valueWithCGPoint:CGPointMake(self.nuvemDireita.frame.origin.x-1224, self.nuvemDireita.frame.origin.y+40)]];
     // MAKE SURE IT DOESN'T MOVE BACK TO STARTING POSITION
-    [move setRemovedOnCompletion: YES];
+    [moveNuvemDireita setRemovedOnCompletion: YES];
    // [mover setFillMode:kCAFillModeForwards];
-
     // It will last 1 second and will be delayed by 3 seconds
-    [move setDuration: 30];
-    [move setRepeatCount: INFINITY];
-    
+    [moveNuvemDireita setDuration: 120];
+    [moveNuvemDireita setRepeatCount: INFINITY];
     // Add it to the layer
-    [self.nuvemDireita.layer addAnimation: move forKey:@"BigMove"];
+    [self.nuvemDireita.layer addAnimation: moveNuvemDireita forKey:@"BigMove"];
     
     
-//    [UIView animateWithDuration: 60
-//                          delay: 1.0
-//                        options:  UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionTransitionCrossDissolve
-//                     animations:^{
-//                         
-//                         self.nuvemDireita.frame = CGRectMake(self.nuvemDireita.frame.origin.x - 1224, self.nuvemDireita.frame.origin.y, self.nuvemDireita.frame.size.width, self.nuvemDireita.frame.size.height);
-//                         self.nuvemEsquerda.frame = CGRectMake(self.nuvemEsquerda.frame.origin.x + 1324, self.nuvemEsquerda.frame.origin.y, self.nuvemEsquerda.frame.size.width, self.nuvemEsquerda.frame.size.height);
-//                         
-//                         NSLog(@"Animação acontecendo");
-//                     }
-//                     completion:^(BOOL finished){
-//                         NSLog(@"Acabou animação nuvem direita");
-//                     }];
+    
+    CABasicAnimation *moveNuvemEsquerda= [CABasicAnimation animationWithKeyPath:@"position"];
+    [moveNuvemEsquerda setFromValue:[NSValue valueWithCGPoint: CGPointMake(self.nuvemEsquerda.frame.origin.x-100, self.nuvemEsquerda.frame.origin.y+40)]];
+    [moveNuvemEsquerda setToValue:[NSValue valueWithCGPoint:CGPointMake(self.nuvemEsquerda.frame.origin.x+1480, self.nuvemEsquerda.frame.origin.y+40)]];
+    [moveNuvemEsquerda setRemovedOnCompletion: YES];
+    [moveNuvemEsquerda setDuration:120];
+    [moveNuvemEsquerda setRepeatCount: INFINITY];
+    [self.nuvemEsquerda.layer addAnimation: moveNuvemEsquerda forKey:@"BigMove"];
+    
+    
+    
+    
 }
 
 -(void)animacaoPorteira{
@@ -118,8 +109,39 @@
     animacao.autoreverses = NO;
     animacao.duration = 1;
     animacao.repeatCount = 1;
+    animacao.beginTime = CACurrentMediaTime() + 2;
+    animacao.fillMode = kCAFillModeForwards;
+    animacao.removedOnCompletion = NO;
+    animacao.additive = NO;
     animacao.values = [self animationCGImagesArray: self.porteira];
     [self.porteira.layer addAnimation: animacao forKey:@"contents"];
+    
+    
+    [self performSelector:@selector(animacaoBotoes) withObject:NULL afterDelay:5];
+    
+}
+
+-(void)animacaoBotoes{
+    
+    
+    
+    CABasicAnimation *theAnimation;
+    theAnimation=[CABasicAnimation animationWithKeyPath:@"opacity"];
+    theAnimation.duration=1.0;
+    theAnimation.repeatCount=1;
+    theAnimation.autoreverses=NO;
+    theAnimation.fromValue=[NSNumber numberWithFloat:0.0];
+    theAnimation.toValue=[NSNumber numberWithFloat:1.0];
+    theAnimation.fillMode = kCAFillModeForwards;
+    theAnimation.removedOnCompletion = NO;
+    
+    
+    [self.lblBtnJornda.layer addAnimation:theAnimation forKey:@"animateOpacity"];
+    [self.lblBtnJogos.layer addAnimation:theAnimation forKey:@"animateOpacity"];
+    [self.lblBtnEstudio.layer addAnimation:theAnimation forKey:@"animateOpacity"];
+    
+    
+    [self.view addSubview:self.btoJornada];
     
 }
 

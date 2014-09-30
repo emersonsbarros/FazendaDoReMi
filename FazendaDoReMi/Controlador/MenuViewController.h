@@ -20,4 +20,10 @@
 @property (weak, nonatomic) IBOutlet UIImageView *nuvemEsquerda;
 @property (weak, nonatomic) IBOutlet UIImageView *porteira;
 
+
+@property (weak, nonatomic) IBOutlet UIButton *lblBtnJornda;
+@property (weak, nonatomic) IBOutlet UIButton *lblBtnEstudio;
+@property (weak, nonatomic) IBOutlet UIButton *lblBtnJogos;
+
+
 @end

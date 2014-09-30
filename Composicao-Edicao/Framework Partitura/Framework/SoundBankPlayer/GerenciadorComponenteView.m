@@ -68,7 +68,7 @@
 -(void)addComponentesPlayerEdicao:(UIViewController*)viewAtual{
     
     PlayerPartituraEdicaoViewController *bar = [[PlayerPartituraEdicaoViewController alloc]init];
-    bar.view.frame = CGRectMake(518,670, bar.view.frame.size.width,bar.view.frame.size.height);
+    bar.view.frame = CGRectMake(560,670, bar.view.frame.size.width,bar.view.frame.size.height);
     [viewAtual addChildViewController:bar];
     [viewAtual.view addSubview:bar.view];
 }

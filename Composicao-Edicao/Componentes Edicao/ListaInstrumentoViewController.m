@@ -26,7 +26,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.ajusteTamanhoBotaoInstrumento = 20;
+    
+    self.listaOutletBotoes = [[NSMutableArray alloc]init];
+    [self.listaOutletBotoes addObject:self.outBotaoFlauta];
+    [self.listaOutletBotoes addObject:self.outBotaoPiano];
+    [self.listaOutletBotoes addObject:self.outBotaoViolao];
+    
+    
 }
 
 -(void)viewDidDisappear:(BOOL)animated {
@@ -40,7 +48,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+-(void)resetaFrameBotoesNotas{
+    for(UIView *view in self.listaOutletBotoes){
+        view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
+    }
+}
 
 ////////////////////////////METODOS////////////////////////////////////
 
@@ -48,6 +60,9 @@
 //Seta um intrumento na Escolha de usuario para tocar
 - (IBAction)tocar:(id)sender {
     [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = @"Piano";
+//    self.outBotaoPiano.frame = CGRectMake(154-self.ajusteTamanhoBotaoInstrumento, 102-self.ajusteTamanhoBotaoInstrumento, 100+self.ajusteTamanhoBotaoInstrumento, 100+self.ajusteTamanhoBotaoInstrumento);
+    
+    
 }
 
 

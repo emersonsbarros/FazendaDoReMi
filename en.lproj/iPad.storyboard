@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="B0q-uH-okf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="B0q-uH-okf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -52,11 +52,11 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cercado.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZHr-Zn-7EW">
                                 <rect key="frame" x="0.0" y="370" width="1024" height="225"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="porteira-5.png" translatesAutoresizingMaskIntoConstraints="NO" id="v0A-bS-cCZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="porteira-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="v0A-bS-cCZ">
                                 <rect key="frame" x="230" y="56" width="571" height="551"/>
                             </imageView>
-                            <button opaque="NO" contentMode="TopLeft" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Fry-vF-hsH">
-                                <rect key="frame" x="298" y="615" width="107" height="121"/>
+                            <button opaque="NO" alpha="0.050000000000000003" contentMode="TopLeft" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Fry-vF-hsH">
+                                <rect key="frame" x="298" y="615" width="125" height="121"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
                                 <inset key="titleEdgeInsets" minX="-160" minY="0.0" maxX="0.0" maxY="-115"/>
                                 <state key="normal" backgroundImage="botao-jornada.png">
@@ -67,8 +67,8 @@
                                     <segue destination="dmu-Ru-iJ5" kind="push" id="oKr-4n-Q5p"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="TopLeft" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="k5s-RW-py3">
-                                <rect key="frame" x="459" y="617" width="107" height="121"/>
+                            <button opaque="NO" alpha="0.050000000000000003" contentMode="TopLeft" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="k5s-RW-py3">
+                                <rect key="frame" x="459" y="617" width="127" height="121"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <inset key="titleEdgeInsets" minX="-140" minY="0.0" maxX="0.0" maxY="-115"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="15"/>
@@ -80,8 +80,8 @@
                                     <segue destination="fc7-hy-kdh" kind="push" id="GFa-82-t8o"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKg-cb-Zzr">
-                                <rect key="frame" x="618" y="616" width="107" height="121"/>
+                            <button opaque="NO" alpha="0.050000000000000003" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKg-cb-Zzr">
+                                <rect key="frame" x="618" y="616" width="128" height="121"/>
                                 <inset key="titleEdgeInsets" minX="-140" minY="0.0" maxX="0.0" maxY="-115"/>
                                 <state key="normal" backgroundImage="botao-jogos.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -93,6 +93,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="syq-cX-hy9"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -102,6 +103,9 @@
                         <outlet property="btoEstudio" destination="k5s-RW-py3" id="AfZ-Ef-fXx"/>
                         <outlet property="btoJogos" destination="MKg-cb-Zzr" id="kQD-AJ-Unc"/>
                         <outlet property="btoJornada" destination="Fry-vF-hsH" id="tN6-m4-z5s"/>
+                        <outlet property="lblBtnEstudio" destination="k5s-RW-py3" id="JuA-wz-RrQ"/>
+                        <outlet property="lblBtnJogos" destination="MKg-cb-Zzr" id="AvT-s3-1m9"/>
+                        <outlet property="lblBtnJornda" destination="Fry-vF-hsH" id="LAY-If-er5"/>
                         <outlet property="nuvemDireita" destination="aIa-Jj-v0o" id="Auu-gn-Mpo"/>
                         <outlet property="nuvemEsquerda" destination="2Bc-mJ-tA7" id="skj-lf-no3"/>
                         <outlet property="porteira" destination="v0A-bS-cCZ" id="xxF-mv-4Rr"/>
@@ -111,7 +115,7 @@
             </objects>
             <point key="canvasLocation" x="1823" y="-888"/>
         </scene>
-        <!--Title-->
+        <!--Composicao Partitura View Controller - Title-->
         <scene sceneID="dzv-Lj-Aoa">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fc7-hy-kdh" customClass="ComposicaoPartituraViewController" sceneMemberID="viewController">
@@ -136,8 +140,8 @@
                                 <rect key="frame" x="0.0" y="362" width="1024" height="434"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mmv-FK-oG1">
-                                <rect key="frame" x="9" y="-7" width="66" height="73"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="0.0" y="0.0" width="133" height="93"/>
+                                <state key="normal" backgroundImage="nuvem-voltar.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -146,6 +150,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="RQq-Bf-iyP"/>
                     <connections>
@@ -168,6 +173,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="23W-b4-VSs"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -188,6 +194,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="rJg-3E-A2C"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -201,15 +208,16 @@
         <image name=" " width="1100" height="821"/>
         <image name="background-arvore.png" width="1024" height="768"/>
         <image name="background-ceu.png" width="1024" height="768"/>
-        <image name="botao-estudio.png" width="101" height="120"/>
-        <image name="botao-jogos.png" width="96" height="122"/>
-        <image name="botao-jornada.png" width="107" height="121"/>
+        <image name="botao-estudio.png" width="130" height="142"/>
+        <image name="botao-jogos.png" width="124" height="141"/>
+        <image name="botao-jornada.png" width="134" height="142"/>
         <image name="cercado.png" width="1024" height="225"/>
         <image name="fundoazul.png" width="1024" height="768"/>
         <image name="fundocasa.png" width="1024" height="768"/>
+        <image name="nuvem-voltar.png" width="137" height="109"/>
         <image name="nuvem1.png" width="281" height="83"/>
         <image name="nuvem2.png" width="438" height="128"/>
-        <image name="porteira-5.png" width="573" height="557"/>
+        <image name="porteira-1.png" width="573" height="557"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

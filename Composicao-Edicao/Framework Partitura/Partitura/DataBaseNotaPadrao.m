@@ -215,17 +215,17 @@
     notaLa4.chapeu = 0;
     notaLa4.nomeNota = @"A";
     notaLa4.tipoNota = @"whole";
-    notaLa4.imgCarinha = [UIImage imageNamed:@"La4tempos.png"];
+    notaLa4.imgCarinha = [UIImage imageNamed:@"La4Tempos.png"];
     
     NotaAnimadaPadrao *notaLa2 = [[NotaAnimadaPadrao alloc]init];
-    notaLa2.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"latempo.png"]];
+    notaLa2.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Latempo.png"]];
     notaLa2.carinha = 1;
     notaLa2.chapeu = 1;
     notaLa2.nomeNota = @"A";
     notaLa2.tipoNota = @"half";
     
     NotaAnimadaPadrao *notaLa1 = [[NotaAnimadaPadrao alloc]init];
-    notaLa1.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"latempo.png"]];
+    notaLa1.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Latempo.png"]];
     notaLa1.carinha = 1;
     notaLa1.chapeu = 0;
     notaLa1.nomeNota = @"A";
@@ -247,7 +247,7 @@
     notaSi4.chapeu = 0;
     notaSi4.nomeNota = @"B";
     notaSi4.tipoNota = @"whole";
-    notaSi4.imgCarinha = [UIImage imageNamed:@"Si4tempos.png"];
+    notaSi4.imgCarinha = [UIImage imageNamed:@"Si4Tempos.png"];
     
     NotaAnimadaPadrao *notaSi2 = [[NotaAnimadaPadrao alloc]init];
     notaSi2.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Sitempo.png"]];

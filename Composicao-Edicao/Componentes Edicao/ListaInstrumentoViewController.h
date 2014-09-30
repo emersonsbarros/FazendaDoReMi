@@ -12,4 +12,17 @@
 
 @interface ListaInstrumentoViewController : UIViewController
 
+
+
+@property NSMutableArray *listaOutletBotoes;
+@property int ajusteTamanhoBotaoInstrumento;
+
+//Outlet botoes
+@property (weak, nonatomic) IBOutlet UIButton *outBotaoViolao;
+@property (weak, nonatomic) IBOutlet UIButton *outBotaoPiano;
+@property (weak, nonatomic) IBOutlet UIButton *outBotaoFlauta;
+
+
+
+
 @end

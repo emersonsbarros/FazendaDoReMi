@@ -15,5 +15,18 @@
 
 //Nota que é escolhida pelo usuario colocar na partitura
 @property Nota *notaEscolhaEdicao;
+@property NSMutableArray *listaOutletNotas;
+
+
+//Outlet dos botoes
+@property (weak, nonatomic) IBOutlet UIButton *outBotao4Tempos;
+@property (weak, nonatomic) IBOutlet UIButton *outBotao2Tempos;
+@property (weak, nonatomic) IBOutlet UIButton *outBotao1Tempos;
+@property (weak, nonatomic) IBOutlet UIButton *outBotao12Tempos;
+
+@property (weak, nonatomic) IBOutlet UIButton *outBotao4TemposPausa;
+@property (weak, nonatomic) IBOutlet UIButton *outBotao2TemposPausa;
+@property (weak, nonatomic) IBOutlet UIButton *outBotao1TemposPausa;
+@property (weak, nonatomic) IBOutlet UIButton *outBotao12TemposPausa;
 
 @end

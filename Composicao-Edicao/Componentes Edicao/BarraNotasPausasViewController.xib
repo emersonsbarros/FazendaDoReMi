@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BarraNotasPausasViewController">
             <connections>
+                <outlet property="outBotao12Tempos" destination="r4z-3v-004" id="zWz-hp-Yvd"/>
+                <outlet property="outBotao12TemposPausa" destination="O26-zA-3fk" id="keL-nQ-wxd"/>
+                <outlet property="outBotao1Tempos" destination="2pG-jC-bjD" id="Fio-jG-WFn"/>
+                <outlet property="outBotao1TemposPausa" destination="Vxe-Cl-wto" id="2TX-4Q-Fyo"/>
+                <outlet property="outBotao2Tempos" destination="KAK-Ur-1FX" id="YwT-Z3-Hr6"/>
+                <outlet property="outBotao2TemposPausa" destination="m5w-ZC-jAx" id="mGc-Si-HWY"/>
+                <outlet property="outBotao4Tempos" destination="aXo-5S-DTu" id="IOy-q2-aJx"/>
+                <outlet property="outBotao4TemposPausa" destination="qcp-6o-z9H" id="VGk-ue-YHk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="892" height="49"/>
+            <rect key="frame" x="0.0" y="0.0" width="892" height="54"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="njD-f5-ohA">
-                    <rect key="frame" x="0.0" y="0.0" width="892" height="49"/>
+                    <rect key="frame" x="0.0" y="5" width="892" height="49"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXo-5S-DTu">
-                            <rect key="frame" x="15" y="3" width="45" height="43"/>
+                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXo-5S-DTu">
+                            <rect key="frame" x="272" y="-4" width="60" height="60"/>
                             <state key="normal" backgroundImage="botao4tempos.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -26,8 +34,8 @@
                                 <action selector="semibreveBotao:" destination="-1" eventType="touchUpInside" id="WxW-IJ-gph"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAK-Ur-1FX">
-                            <rect key="frame" x="79" y="3" width="46" height="42"/>
+                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAK-Ur-1FX">
+                            <rect key="frame" x="337" y="-4" width="60" height="60"/>
                             <state key="normal" backgroundImage="botao2tempos.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -35,8 +43,8 @@
                                 <action selector="minimaBotao:" destination="-1" eventType="touchUpInside" id="SR3-8j-8LM"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pG-jC-bjD">
-                            <rect key="frame" x="142" y="3" width="46" height="42"/>
+                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pG-jC-bjD">
+                            <rect key="frame" x="400" y="-3" width="60" height="60"/>
                             <state key="normal" backgroundImage="botao1Tempo.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -44,8 +52,8 @@
                                 <action selector="seminimaBotao:" destination="-1" eventType="touchUpInside" id="NLd-0Y-oO9"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4z-3v-004">
-                            <rect key="frame" x="202" y="2" width="46" height="43"/>
+                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4z-3v-004">
+                            <rect key="frame" x="460" y="-3" width="60" height="60"/>
                             <state key="normal" backgroundImage="botao12Tempo.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -53,8 +61,8 @@
                                 <action selector="colcheiaBotao:" destination="-1" eventType="touchUpInside" id="SBO-Cc-d06"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcp-6o-z9H">
-                            <rect key="frame" x="262" y="4" width="52" height="43"/>
+                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcp-6o-z9H">
+                            <rect key="frame" x="565" y="-3" width="60" height="60"/>
                             <state key="normal" backgroundImage="botao4Pausa.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -62,8 +70,8 @@
                                 <action selector="pausaSemibreveBotao:" destination="-1" eventType="touchUpInside" id="xPv-bV-JiW"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5w-ZC-jAx">
-                            <rect key="frame" x="322" y="3" width="51" height="42"/>
+                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5w-ZC-jAx">
+                            <rect key="frame" x="625" y="-5" width="60" height="60"/>
                             <state key="normal" backgroundImage="botao2Pausa.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -71,8 +79,8 @@
                                 <action selector="pausaMinimaBotao:" destination="-1" eventType="touchUpInside" id="xHd-x4-55q"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxe-Cl-wto">
-                            <rect key="frame" x="386" y="4" width="52" height="40"/>
+                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxe-Cl-wto">
+                            <rect key="frame" x="689" y="-5" width="60" height="60"/>
                             <state key="normal" backgroundImage="botao1Pausa.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -80,8 +88,8 @@
                                 <action selector="pausaSeminimaBotao:" destination="-1" eventType="touchUpInside" id="BuO-xF-2cw"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O26-zA-3fk">
-                            <rect key="frame" x="446" y="4" width="50" height="40"/>
+                        <button opaque="NO" alpha="0.49999999999999961" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O26-zA-3fk">
+                            <rect key="frame" x="749" y="-5" width="60" height="60"/>
                             <state key="normal" backgroundImage="botao12Pausa.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -97,18 +105,13 @@
         </view>
     </objects>
     <resources>
-        <image name="botao12Pausa.png" width="150" height="150"/>
-        <image name="botao12Tempo.png" width="150" height="150"/>
-        <image name="botao1Pausa.png" width="150" height="150"/>
-        <image name="botao1Tempo.png" width="150" height="150"/>
-        <image name="botao2Pausa.png" width="150" height="150"/>
-        <image name="botao2tempos.png" width="150" height="150"/>
-        <image name="botao4Pausa.png" width="150" height="150"/>
-        <image name="botao4tempos.png" width="150" height="150"/>
+        <image name="botao12Pausa.png" width="79" height="78"/>
+        <image name="botao12Tempo.png" width="79" height="78"/>
+        <image name="botao1Pausa.png" width="79" height="78"/>
+        <image name="botao1Tempo.png" width="79" height="78"/>
+        <image name="botao2Pausa.png" width="79" height="78"/>
+        <image name="botao2tempos.png" width="79" height="78"/>
+        <image name="botao4Pausa.png" width="79" height="78"/>
+        <image name="botao4tempos.png" width="79" height="78"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
-    </simulatedMetricsContainer>
 </document>
