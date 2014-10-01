@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="B0q-uH-okf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="B0q-uH-okf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -28,7 +29,7 @@
         <!--Menu View Controller-->
         <scene sceneID="iRK-Q5-LqX">
             <objects>
-                <viewController storyboardIdentifier="estudio" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QCV-fp-vov" customClass="MenuViewController" sceneMemberID="viewController">
+                <viewController id="QCV-fp-vov" customClass="MenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7cx-P9-xsY"/>
                         <viewControllerLayoutGuide type="bottom" id="BRL-uD-qEC"/>
@@ -41,7 +42,7 @@
                                 <rect key="frame" x="-6" y="0.0" width="1030" height="768"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-arvore.png" translatesAutoresizingMaskIntoConstraints="NO" id="eBJ-me-p7E">
-                                <rect key="frame" x="-3" y="0.0" width="1030" height="768"/>
+                                <rect key="frame" x="-7" y="0.0" width="1039" height="768"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nuvem1.png" translatesAutoresizingMaskIntoConstraints="NO" id="aIa-Jj-v0o">
                                 <rect key="frame" x="1029" y="20" width="281" height="83"/>
@@ -53,7 +54,7 @@
                                 <rect key="frame" x="0.0" y="370" width="1024" height="225"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="porteira-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="v0A-bS-cCZ">
-                                <rect key="frame" x="230" y="56" width="571" height="551"/>
+                                <rect key="frame" x="232" y="56" width="571" height="551"/>
                             </imageView>
                             <button opaque="NO" alpha="0.050000000000000003" contentMode="TopLeft" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Fry-vF-hsH">
                                 <rect key="frame" x="298" y="615" width="125" height="121"/>
@@ -87,13 +88,12 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="1wf-Vj-jFO" kind="push" id="wbF-kD-7IG"/>
-                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ZECAO01.png" translatesAutoresizingMaskIntoConstraints="NO" id="no6-YP-gkA">
+                                <rect key="frame" x="-274" y="104" width="787" height="682"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="syq-cX-hy9"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -103,6 +103,7 @@
                         <outlet property="btoEstudio" destination="k5s-RW-py3" id="AfZ-Ef-fXx"/>
                         <outlet property="btoJogos" destination="MKg-cb-Zzr" id="kQD-AJ-Unc"/>
                         <outlet property="btoJornada" destination="Fry-vF-hsH" id="tN6-m4-z5s"/>
+                        <outlet property="imgMascote" destination="no6-YP-gkA" id="HEs-Pu-DoM"/>
                         <outlet property="lblBtnEstudio" destination="k5s-RW-py3" id="JuA-wz-RrQ"/>
                         <outlet property="lblBtnJogos" destination="MKg-cb-Zzr" id="AvT-s3-1m9"/>
                         <outlet property="lblBtnJornda" destination="Fry-vF-hsH" id="LAY-If-er5"/>
@@ -115,10 +116,10 @@
             </objects>
             <point key="canvasLocation" x="1823" y="-888"/>
         </scene>
-        <!--Composicao Partitura View Controller - Title-->
+        <!--Title-->
         <scene sceneID="dzv-Lj-Aoa">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fc7-hy-kdh" customClass="ComposicaoPartituraViewController" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="fc7-hy-kdh" customClass="ComposicaoPartituraViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1KN-3s-erL"/>
                         <viewControllerLayoutGuide type="bottom" id="LxI-iL-VEO"/>
@@ -150,7 +151,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="RQq-Bf-iyP"/>
                     <connections>
@@ -161,31 +161,10 @@
             </objects>
             <point key="canvasLocation" x="3124" y="-882"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="oeC-M2-keV">
-            <objects>
-                <viewController id="1wf-Vj-jFO" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="I4o-CF-XUY"/>
-                        <viewControllerLayoutGuide type="bottom" id="CTw-yf-xua"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5X2-r5-9ca">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="23W-b4-VSs"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6oc-X7-fUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3124" y="268"/>
-        </scene>
-        <!--View Controller-->
+        <!--Jornada View Controller-->
         <scene sceneID="fyS-av-cnp">
             <objects>
-                <viewController id="dmu-Ru-iJ5" sceneMemberID="viewController">
+                <viewController id="dmu-Ru-iJ5" customClass="JornadaViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JzQ-J1-TWo"/>
                         <viewControllerLayoutGuide type="bottom" id="lQ0-xR-GCd"/>
@@ -193,8 +172,21 @@
                     <view key="view" contentMode="scaleToFill" id="Lar-5f-Wvv">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mapaAventura.png" translatesAutoresizingMaskIntoConstraints="NO" id="dV6-XG-cva">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlE-yG-rwq">
+                                <rect key="frame" x="0.0" y="0.0" width="157" height="109"/>
+                                <state key="normal" backgroundImage="nuvem-voltar.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnVoltaMenu:" destination="dmu-Ru-iJ5" eventType="touchUpInside" id="qmU-Ah-gXN"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="rJg-3E-A2C"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -206,6 +198,7 @@
     </scenes>
     <resources>
         <image name=" " width="1100" height="821"/>
+        <image name="ZECAO01.png" width="800" height="600"/>
         <image name="background-arvore.png" width="1024" height="768"/>
         <image name="background-ceu.png" width="1024" height="768"/>
         <image name="botao-estudio.png" width="130" height="142"/>
@@ -214,6 +207,7 @@
         <image name="cercado.png" width="1024" height="225"/>
         <image name="fundoazul.png" width="1024" height="768"/>
         <image name="fundocasa.png" width="1024" height="768"/>
+        <image name="mapaAventura.png" width="1024" height="768"/>
         <image name="nuvem-voltar.png" width="137" height="109"/>
         <image name="nuvem1.png" width="281" height="83"/>
         <image name="nuvem2.png" width="438" height="128"/>

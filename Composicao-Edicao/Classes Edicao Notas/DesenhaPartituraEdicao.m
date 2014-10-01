@@ -34,10 +34,12 @@
 
 
 /////////////////////////// Partitura Edicao /////////////////////////////////
--(void)addGestureSegurarNotasTela:(Nota*)notaSegura{
+-(void)addGestureSegurarNotasTela:(Nota*)notaSegura :(int)direcao{
     
     NotaEdicaoGesture *swipeGesture2 = [[NotaEdicaoGesture alloc] initWithTarget:self action:@selector(deletarNota:)];
-    swipeGesture2.direction = UISwipeGestureRecognizerDirectionDown;
+    if(direcao == 0)swipeGesture2.direction = UISwipeGestureRecognizerDirectionDown;
+    else swipeGesture2.direction = UISwipeGestureRecognizerDirectionUp;
+    
     [swipeGesture2 setNumberOfTouchesRequired:1];
     notaSegura.imagemNota.userInteractionEnabled = YES;
     swipeGesture2.notaEdicaoGesture = notaSegura;
@@ -65,7 +67,6 @@
                          }
                          
                          [self.listaNotasEdicao removeObject:self.notaParaEdicao];
-                         NSLog(@"qt %lu ",(unsigned long)self.listaNotasEdicao.count);
                      }];
     
 }
@@ -386,7 +387,7 @@
         aux.posNota = 0.0;
         aux.posicaoNotaEdicao = self.posicaoX;
         self.posicaoX += espacamentoEntreNotas;
-        [self addGestureSegurarNotasTela:aux];
+        [self addGestureSegurarNotasTela:aux:1];
         return aux;
         
         
@@ -420,7 +421,7 @@
         aux.posNota = 0.0;
         aux.posicaoNotaEdicao = self.posicaoX;
         self.posicaoX += espacamentoEntreNotas;
-        [self addGestureSegurarNotasTela:aux];
+        [self addGestureSegurarNotasTela:aux:1];
         return aux;
         
         
@@ -453,7 +454,7 @@
         aux.posNota = 0.0;
         aux.posicaoNotaEdicao = self.posicaoX;
         self.posicaoX += espacamentoEntreNotas;
-        [self addGestureSegurarNotasTela:aux];
+        [self addGestureSegurarNotasTela:aux:1];
         return aux;
         
         
@@ -487,7 +488,7 @@
         aux.posNota = 0.0;
         aux.posicaoNotaEdicao = self.posicaoX;
         self.posicaoX += espacamentoEntreNotas;
-        [self addGestureSegurarNotasTela:aux];
+        [self addGestureSegurarNotasTela:aux:1];
         return aux;
         
         
@@ -520,7 +521,7 @@
         aux.posNota = 0.0;
         aux.posicaoNotaEdicao = self.posicaoX;
         self.posicaoX += espacamentoEntreNotas;
-        [self addGestureSegurarNotasTela:aux];
+        [self addGestureSegurarNotasTela:aux:1];
         return aux;
         
         
@@ -555,7 +556,7 @@
         aux.posNota = 0.0;
         aux.posicaoNotaEdicao = self.posicaoX;
         self.posicaoX += espacamentoEntreNotas;
-        [self addGestureSegurarNotasTela:aux];
+        [self addGestureSegurarNotasTela:aux:1];
         return aux;
         
         
@@ -584,7 +585,7 @@
         aux.posNota = 0.0;
         aux.posicaoNotaEdicao = self.posicaoX;
         self.posicaoX += espacamentoEntreNotas;
-        [self addGestureSegurarNotasTela:aux];
+        [self addGestureSegurarNotasTela:aux:0];
         return aux;
         
         
@@ -614,7 +615,7 @@
         aux.posNota = 0.0;
         aux.posicaoNotaEdicao = self.posicaoX;
         self.posicaoX += espacamentoEntreNotas;
-        [self addGestureSegurarNotasTela:aux];
+        [self addGestureSegurarNotasTela:aux:0];
         return aux;
         
         
@@ -643,7 +644,7 @@
         aux.posNota = 0.0;
         aux.posicaoNotaEdicao = self.posicaoX;
         self.posicaoX += espacamentoEntreNotas;
-        [self addGestureSegurarNotasTela:aux];
+        [self addGestureSegurarNotasTela:aux:0];
         return aux;
         
         
@@ -673,7 +674,7 @@
         aux.posNota = 0.0;
         aux.posicaoNotaEdicao = self.posicaoX;
         self.posicaoX += espacamentoEntreNotas;
-        [self addGestureSegurarNotasTela:aux];
+        [self addGestureSegurarNotasTela:aux:0];
         return aux;
         
         
@@ -702,7 +703,7 @@
         aux.posNota = 0.0;
         aux.posicaoNotaEdicao = self.posicaoX;
         self.posicaoX += espacamentoEntreNotas;
-        [self addGestureSegurarNotasTela:aux];
+        [self addGestureSegurarNotasTela:aux:0];
         
         return aux;
         
@@ -732,7 +733,7 @@
         aux.posNota = 0.0;
         aux.posicaoNotaEdicao = self.posicaoX;
         self.posicaoX += espacamentoEntreNotas;
-        [self addGestureSegurarNotasTela:aux];
+        [self addGestureSegurarNotasTela:aux:0];
         return aux;
         
         
@@ -768,7 +769,7 @@
         aux.posNota = 0.0;
         aux.posicaoNotaEdicao = self.posicaoX;
         self.posicaoX += espacamentoEntreNotas;
-        [self addGestureSegurarNotasTela:aux];
+        [self addGestureSegurarNotasTela:aux:0];
         return aux;
         
         
@@ -860,7 +861,7 @@
             aux.tom = @"";
             aux.posicaoNotaEdicao = self.posicaoX;
             self.posicaoX += espacamentoEntreNotas;
-            [self addGestureSegurarNotasTela:aux];
+            [self addGestureSegurarNotasTela:aux:0];
             return aux;
             
         }else if([[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao nomeNota] isEqualToString:@"minimaPausa"]){
@@ -873,7 +874,7 @@
             aux.tom = @"";
             aux.posicaoNotaEdicao = self.posicaoX;
             self.posicaoX += espacamentoEntreNotas;
-            [self addGestureSegurarNotasTela:aux];
+            [self addGestureSegurarNotasTela:aux:0];
             return aux;
             
         }else if([[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao nomeNota] isEqualToString:@"seminimaPausa"]){
@@ -886,7 +887,7 @@
             aux.tom = @"";
             aux.posicaoNotaEdicao = self.posicaoX;
             self.posicaoX += espacamentoEntreNotas;
-            [self addGestureSegurarNotasTela:aux];
+            [self addGestureSegurarNotasTela:aux:0];
             return aux;
             
         }else if([[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao nomeNota] isEqualToString:@"colcheiaPausa"]){
@@ -899,7 +900,7 @@
             aux.tom = @"";
             aux.posicaoNotaEdicao = self.posicaoX;
             self.posicaoX += espacamentoEntreNotas;
-            [self addGestureSegurarNotasTela:aux];
+            [self addGestureSegurarNotasTela:aux:0];
             return aux;
             
         }else if([[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao tipoNota] isEqualToString:@"semicolcheiaPausa"]){
@@ -912,7 +913,7 @@
             aux.tom = @"";
             aux.posicaoNotaEdicao = self.posicaoX;
             self.posicaoX += espacamentoEntreNotas;
-            [self addGestureSegurarNotasTela:aux];
+            [self addGestureSegurarNotasTela:aux:0];
             return aux;
             
         }else if([[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao tipoNota] isEqualToString:@"fusaPausa"]){
@@ -925,7 +926,7 @@
             aux.tom = @"";
             aux.posicaoNotaEdicao = self.posicaoX;
             self.posicaoX += espacamentoEntreNotas;
-            [self addGestureSegurarNotasTela:aux];
+            [self addGestureSegurarNotasTela:aux:0];
             return aux;
             
         }else if([[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao tipoNota] isEqualToString:@"semifusaPausa"]){
@@ -938,7 +939,7 @@
             aux.tom = @"";
             aux.posicaoNotaEdicao = self.posicaoX;
             self.posicaoX += espacamentoEntreNotas;
-            [self addGestureSegurarNotasTela:aux];
+            [self addGestureSegurarNotasTela:aux:0];
             return aux;
             
         }
@@ -967,18 +968,15 @@
             //na linha
             if((posy <= t.frame.origin.y+precisaoTouchLinha)&&(posy >= t.frame.origin.y-precisaoTouchLinha)){
                 aux =  [self retornaNotaCriadaPeloUsuario:j:t:t2:ultimoTraco];
-                NSLog(@"aqui linha");
                 return aux;
                 
             //no espaco
             }else if((posy >= t.frame.origin.y+precisaoTouchLinha)&&(posy <= t2.frame.origin.y-precisaoTouchLinha)){
                 aux =  [self retornaNotaCriadaPeloUsuario:j+0.5:t:t2:ultimoTraco];
-                NSLog(@"aqui espaco");
                 return aux;
                 
             //linha do ultimo
             }else if((posy <= ultimoTraco.frame.origin.y+precisaoTouchLinha)&&(posy >= ultimoTraco.frame.origin.y-precisaoTouchLinha)){
-                NSLog(@"aqui ultimo");
                 aux =  [self retornaNotaCriadaPeloUsuario:6.0:t:t2:ultimoTraco];
                 return aux;
                 

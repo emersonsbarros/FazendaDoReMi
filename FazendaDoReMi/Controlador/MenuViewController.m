@@ -22,12 +22,23 @@
     return self;
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
+
 - (void)viewDidLoad{
     [super viewDidLoad];
     
     //Fonte padrão
     [[UILabel appearance] setFont:[UIFont fontWithName:@"Kronika" size:17.0]];
+    
+    
+    [self animacoesIntro];
+
+
 }
+
 
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
@@ -36,33 +47,45 @@
 - (void)viewDidDisappear:(BOOL)animated {
     [self.nuvemDireita.layer removeAllAnimations];
     [self.nuvemEsquerda.layer removeAllAnimations];
-    NSLog(@"Removeu!");
+    [self.imgMascote.layer removeAllAnimations];
+    [self.listaImagensMascote removeAllObjects];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [self animacoesIntro];
+    //Mascote
+    self.listaImagensMascote = [[NSMutableArray alloc]init];
+    
+    UIImage *image;
+    NSString *nomeImagem;
+    
+    for(int i=1;i<=73;i++){
+        if(i<=9){
+            nomeImagem = [NSString stringWithFormat:@"%@%d%@",@"ZECAO0",i,@".png"];
+        }else{
+            nomeImagem = [NSString stringWithFormat:@"%@%d%@",@"ZECAO",i,@".png"];
+        }
+        
+        image = [UIImage imageNamed:nomeImagem];
+        [self.listaImagensMascote addObject:image];
+    }
+    
+    
+    [self animacaoMascote];
+    
+
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 -(void)animacoesIntro{
+    
     [self animacaoNuvem];
 
-   [self animacaoPorteira];
+    [self animacaoPorteira];
 }
 
 -(void)animacaoNuvem{
     
-    NSLog(@"pos d = %f -- %f",self.nuvemDireita.frame.origin.x,self.nuvemDireita.frame.origin.y);
 
     CABasicAnimation *moveNuvemDireita= [CABasicAnimation animationWithKeyPath:@"position"];
     // Setting starting position
@@ -87,8 +110,6 @@
     [moveNuvemEsquerda setDuration:120];
     [moveNuvemEsquerda setRepeatCount: INFINITY];
     [self.nuvemEsquerda.layer addAnimation: moveNuvemEsquerda forKey:@"BigMove"];
-    
-    
     
     
 }
@@ -144,6 +165,32 @@
     [self.view addSubview:self.btoJornada];
     
 }
+
+
+-(void)animacaoMascote{
+    
+    self.imgMascote.animationImages = self.listaImagensMascote;
+    
+    CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
+    animationGroup.duration = 5;
+    animationGroup.beginTime = CACurrentMediaTime() + 2;
+    animationGroup.repeatCount = INFINITY;
+    CAMediaTimingFunction *easeOut = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+
+    CAKeyframeAnimation *animacao = [CAKeyframeAnimation animationWithKeyPath: @"contents"];
+    animacao.calculationMode = kCAAnimationDiscrete;
+    animacao.autoreverses = NO;
+    animacao.duration = 2.0;
+    animacao.repeatCount = 1;
+    animacao.timingFunction = easeOut;
+    animacao.values = [self animationCGImagesArray: self.imgMascote];
+    animationGroup.animations = @[animacao];
+    
+    
+    [self.imgMascote.layer addAnimation:animationGroup forKey:@"contents"];
+
+}
+
 
 //Aux que converte para CGImage, unico jeito para dar certo
 -(NSArray*)animationCGImagesArray:(UIImageView*)imgAddAnimacao {

@@ -50,7 +50,7 @@
 -(void)addComponentesEscolhaInstrumentoPartitura:(UIViewController*)viewAtual{
     
     ListaInstrumentoViewController *bar = [[ListaInstrumentoViewController alloc]init];
-    bar.view.frame = CGRectMake(120, 670, bar.view.frame.size.width,bar.view.frame.size.height);
+    bar.view.frame = CGRectMake(120, 640, bar.view.frame.size.width,bar.view.frame.size.height);
     [viewAtual addChildViewController:bar];
     [viewAtual.view addSubview:bar.view];
 }

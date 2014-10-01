@@ -10,6 +10,5 @@
 
 @interface EstudioViewController : UIViewController
 
-- (IBAction)testa:(id)sender;
 
 @end

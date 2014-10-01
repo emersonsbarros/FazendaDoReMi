@@ -34,11 +34,16 @@
     [self.listaOutletBotoes addObject:self.outBotaoPiano];
     [self.listaOutletBotoes addObject:self.outBotaoViolao];
     
+    self.outBotaoPiano.alpha = 1.0;
+
     
 }
 
 -(void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear: animated];
+    
+    [self.listaOutletBotoes removeAllObjects];
+    
 }
 
 
@@ -48,9 +53,10 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)resetaFrameBotoesNotas{
+
+-(void)ocultaAlphaBotoesNotas{
     for(UIView *view in self.listaOutletBotoes){
-        view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
+        view.alpha = 0.5;
     }
 }
 
@@ -60,19 +66,22 @@
 //Seta um intrumento na Escolha de usuario para tocar
 - (IBAction)tocar:(id)sender {
     [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = @"Piano";
-//    self.outBotaoPiano.frame = CGRectMake(154-self.ajusteTamanhoBotaoInstrumento, 102-self.ajusteTamanhoBotaoInstrumento, 100+self.ajusteTamanhoBotaoInstrumento, 100+self.ajusteTamanhoBotaoInstrumento);
-    
-    
+    [self ocultaAlphaBotoesNotas];
+    self.outBotaoPiano.alpha = 1.0;
 }
 
 
 - (IBAction)tocarViolao:(id)sender {
     [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = @"ViolaoNylon";
+    [self ocultaAlphaBotoesNotas];
+    self.outBotaoViolao.alpha = 1.0;
 }
 
 
 - (IBAction)tocarFlauta:(id)sender {
     [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = @"FlautaDoce";
+    [self ocultaAlphaBotoesNotas];
+    self.outBotaoFlauta.alpha = 1.0;
 }
 
 

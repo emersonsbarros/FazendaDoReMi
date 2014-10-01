@@ -23,7 +23,14 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *lblBtnJornda;
 @property (weak, nonatomic) IBOutlet UIButton *lblBtnEstudio;
+
 @property (weak, nonatomic) IBOutlet UIButton *lblBtnJogos;
 
+
+@property (weak, nonatomic) IBOutlet UIImageView *imgMascote;
+
+
+
+@property NSMutableArray *listaImagensMascote;
 
 @end

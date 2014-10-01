@@ -27,7 +27,9 @@
 -(void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear: animated];
     
-    [self.timerAutualizaQtNotas invalidate];
+    //[self.timerAutualizaQtNotas invalidate];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,11 +44,11 @@
     [super viewDidLoad];
     
     //aciona timer para atualizar a quantidade de notas inseridas
-    self.timerAutualizaQtNotas = [NSTimer scheduledTimerWithTimeInterval:0.5
-                                     target: self
-                                   selector: @selector(atualizaQtdNotas)
-                                   userInfo: nil
-                                    repeats: YES];
+//    self.timerAutualizaQtNotas = [NSTimer scheduledTimerWithTimeInterval:0.5
+//                                     target: self
+//                                   selector: @selector(atualizaQtdNotas)
+//                                   userInfo: nil
+//                                    repeats: YES];
     
 }
 
