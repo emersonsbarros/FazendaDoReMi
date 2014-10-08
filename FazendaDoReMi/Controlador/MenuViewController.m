@@ -27,6 +27,10 @@
 }
 
 
+- (void)didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+}
+
 - (void)viewDidLoad{
     [super viewDidLoad];
     
@@ -37,21 +41,14 @@
     
     [self animacoesIntro];
 
-
 }
 
-
-- (void)didReceiveMemoryWarning{
-    [super didReceiveMemoryWarning];
-}
 
 - (void)viewDidDisappear:(BOOL)animated {
-    [self.nuvemDireita.layer removeAllAnimations];
-    [self.nuvemEsquerda.layer removeAllAnimations];
-    [self.imgMascote.layer removeAllAnimations];
-    [self.listaImagensMascote removeAllObjects];
     
+    [[GerenciadorComponenteView sharedManager]finalizaExercicio:self];
 }
+
 
 -(void)viewWillAppear:(BOOL)animated{
     //Mascote
@@ -193,7 +190,6 @@
     [self.imgMascote.layer addAnimation:animationGroup forKey:@"contents"];
 
 }
-
 
 //Aux que converte para CGImage, unico jeito para dar certo
 -(NSArray*)animationCGImagesArray:(UIImageView*)imgAddAnimacao {

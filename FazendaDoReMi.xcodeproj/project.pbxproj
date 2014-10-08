@@ -18,6 +18,7 @@
 		0B6DCCA519DB2D8D00C166E3 /* botaoviolao.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B6DCCA219DB2D8D00C166E3 /* botaoviolao.png */; };
 		0BB1F17E19E5D40600E9F8E4 /* MascoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1F17C19E5D40600E9F8E4 /* MascoteViewController.m */; };
 		0BB1F17F19E5D40600E9F8E4 /* MascoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB1F17D19E5D40600E9F8E4 /* MascoteViewController.xib */; };
+		0BB1F18219E5DB6D00E9F8E4 /* GerenciadorAnimacoes.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1F18119E5DB6D00E9F8E4 /* GerenciadorAnimacoes.m */; };
 		3F0E879419DBA689003FF4EB /* mapaAventura.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0E879319DBA689003FF4EB /* mapaAventura.png */; };
 		3F0E879719DBA6F8003FF4EB /* JornadaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E879619DBA6F8003FF4EB /* JornadaViewController.m */; };
 		3F0E87E319DBA941003FF4EB /* ZECAO01.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0E879A19DBA940003FF4EB /* ZECAO01.png */; };
@@ -275,6 +276,8 @@
 		0BB1F17B19E5D40600E9F8E4 /* MascoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MascoteViewController.h; sourceTree = "<group>"; };
 		0BB1F17C19E5D40600E9F8E4 /* MascoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MascoteViewController.m; sourceTree = "<group>"; };
 		0BB1F17D19E5D40600E9F8E4 /* MascoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MascoteViewController.xib; sourceTree = "<group>"; };
+		0BB1F18019E5DB6D00E9F8E4 /* GerenciadorAnimacoes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GerenciadorAnimacoes.h; sourceTree = "<group>"; };
+		0BB1F18119E5DB6D00E9F8E4 /* GerenciadorAnimacoes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GerenciadorAnimacoes.m; sourceTree = "<group>"; };
 		3F0E879319DBA689003FF4EB /* mapaAventura.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapaAventura.png; sourceTree = "<group>"; };
 		3F0E879519DBA6F8003FF4EB /* JornadaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JornadaViewController.h; sourceTree = "<group>"; };
 		3F0E879619DBA6F8003FF4EB /* JornadaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JornadaViewController.m; sourceTree = "<group>"; };
@@ -606,6 +609,8 @@
 				A8F1C4BA19D206CC001850E4 /* GerenciadorDeAula.m */,
 				A8F1C4C719D21129001850E4 /* GerenciadorDeMascote.h */,
 				A8F1C4C819D21129001850E4 /* GerenciadorDeMascote.m */,
+				0BB1F18019E5DB6D00E9F8E4 /* GerenciadorAnimacoes.h */,
+				0BB1F18119E5DB6D00E9F8E4 /* GerenciadorAnimacoes.m */,
 			);
 			name = Gerenciadores;
 			sourceTree = "<group>";
@@ -1548,6 +1553,7 @@
 				A8F1C4C919D21129001850E4 /* GerenciadorDeMascote.m in Sources */,
 				A8F1C4B819D205D6001850E4 /* Aula.m in Sources */,
 				A824718E19D0AB0E00168026 /* FazendaDoReMi.xcdatamodeld in Sources */,
+				0BB1F18219E5DB6D00E9F8E4 /* GerenciadorAnimacoes.m in Sources */,
 				A811634019D22A9300506D94 /* SpriteItem.m in Sources */,
 				3FC5D33319DA5C3200348F51 /* Sinfonia.m in Sources */,
 				0B1D2A7F19E46A8D003CA4C4 /* AulaSomEx1ViewController.m in Sources */,

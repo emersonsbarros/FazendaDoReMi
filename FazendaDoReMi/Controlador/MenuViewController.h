@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GerenciadorNavigationController.h"
-
+#import "GerenciadorComponenteView.h"
 
 @interface MenuViewController : UIViewController
 
