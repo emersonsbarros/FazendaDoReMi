@@ -7,6 +7,7 @@
 //
 
 #import "Aula.h"
+#import "Exercicio.h"
 #import <Foundation/Foundation.h>
 
 @interface GerenciadorDeAula : NSObject

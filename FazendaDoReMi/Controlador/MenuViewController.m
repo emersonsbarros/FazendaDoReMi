@@ -33,6 +33,7 @@
     //Fonte padrão
     [[UILabel appearance] setFont:[UIFont fontWithName:@"Kronika" size:17.0]];
     
+    [GerenciadorNavigationController sharedManager].controladorApp = self.navigationController;
     
     [self animacoesIntro];
 
@@ -136,6 +137,8 @@
     animacao.additive = NO;
     animacao.values = [self animationCGImagesArray: self.porteira];
     [self.porteira.layer addAnimation: animacao forKey:@"contents"];
+    
+
     
     
     [self performSelector:@selector(animacaoBotoes) withObject:NULL afterDelay:5];

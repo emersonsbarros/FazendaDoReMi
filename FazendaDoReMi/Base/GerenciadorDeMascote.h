@@ -7,6 +7,7 @@
 //
 
 #import "Mascote.h"
+#import "SpriteMascote.h"
 #import <Foundation/Foundation.h>
 
 @interface GerenciadorDeMascote : NSObject

@@ -10,4 +10,20 @@
 
 @implementation Exercicio
 
+
+-(id)init:(int)idView nome :(NSString*)nome :(NSString*)nomeView  :(BOOL)estadoAula{
+    
+    self = [super init];
+    if(self){
+        self.idView = idView;
+        self.nome = nome;
+        self.nomeView = nomeView;
+        self.mascote = [[Mascote alloc]init];
+        self.estado = estadoAula;
+
+    }
+    return self;
+}
+
+
 @end

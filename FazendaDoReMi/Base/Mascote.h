@@ -10,12 +10,10 @@
 #import "Conversa.h"
 #import <Foundation/Foundation.h>
 
-@interface Mascote : NSObject
+@interface Mascote : UIImageView
 
 //Atributos
 @property NSString *nome;
-@property UIButton *notaBarriga;
-@property NSMutableArray *listaDeImagens;
 @property NSMutableArray *listaDeConversas;
 @property NSMutableArray *listaDeSprites;
 

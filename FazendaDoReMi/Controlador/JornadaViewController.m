@@ -7,6 +7,9 @@
 //
 
 #import "JornadaViewController.h"
+#import "AulaSomEx1ViewController.h"
+#import "GerenciadorComponenteView.h"
+#import "GerenciadorDeAula.h"
 
 @interface JornadaViewController ()
 
@@ -21,27 +24,49 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self mostraAulas];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+    }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)chamaExercicios:(id)sender{
+    
+    Aula *button = sender;
+    Exercicio *primeiroExercicio = [button.listaDeExercicios firstObject];
+    id object = [[NSClassFromString([primeiroExercicio nomeView]) alloc]initWithNibName:[primeiroExercicio nomeView] bundle:nil];
+    
+    //[GerenciadorDeAula sharedManager].exercicioAtual = button;
+
+    
+    [[GerenciadorNavigationController sharedManager].controladorApp pushViewController:object animated:YES];
+    
 }
-*/
 
 - (IBAction)btnVoltaMenu:(id)sender {
-    [self.navigationController popViewControllerAnimated: YES];
+    [[GerenciadorNavigationController sharedManager].controladorApp popViewControllerAnimated: YES];
 }
 
+
+//AulaSomViewController *aulaSom = [[AulaSomViewController alloc]init];
+//[[GerenciadorNavigationController sharedManager].controladorApp pushViewController:aulaSom animated:YES];
+
+
+-(void)mostraAulas{
+    
+    for(Aula *aula in [GerenciadorDeAula sharedManager].listaDeAulas){
+        
+        aula.layer.zPosition = 0;
+        [aula addTarget:self action:@selector(chamaExercicios:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [[self view] addSubview:aula];
+        
+    }
+}
 
 @end

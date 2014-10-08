@@ -8,18 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
-
-//Compontes Edicao e leitura de partituras
 #import "PlayerPartituraEdicaoViewController.h"
 #import "ListaInstrumentoViewController.h"
 #import "BarraNotasPausasViewController.h"
 #import "PlayerPartituraEdicaoViewController.h"
 
+#import "BotaoVoltarMapaViewController.h"
+#import "MascoteViewController.h"
 
 @interface GerenciadorComponenteView : NSObject
 
 
 +(GerenciadorComponenteView*)sharedManager;
+-(void)finalizaExercicio:(UIViewController*)contr;
 
 //Compontes Edicao e leitura de partituras
 -(void)addComponentesPlayerPartitura:(UIViewController*)viewAtual;
@@ -27,5 +28,7 @@
 -(void)addComponentesBarraMenuNotasPausa:(UIViewController*)viewAtual;
 -(void)addComponentesPlayerEdicao:(UIViewController*)viewAtual;
 
+-(void)addComponentesBotaoVoltaMapa:(UIViewController*)viewAtual;
+-(void)addComponentesMascote:(UIViewController*)viewAtual :(float)posX :(float)posY;
 
 @end

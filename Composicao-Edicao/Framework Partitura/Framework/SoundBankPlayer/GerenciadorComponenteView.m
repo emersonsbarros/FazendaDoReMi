@@ -36,6 +36,26 @@
 
 ////////////////////////// Leitura e Edicao ////////////////////////////////////
 
+-(void)finalizaExercicio:(UIViewController*)contr{
+    
+    for(UIView *img in contr.view.subviews){
+        img.alpha = 1;
+        [img.layer removeAllAnimations];
+        [img removeFromSuperview];
+    }
+    
+    for(UIViewController *img in contr.childViewControllers){
+        [img removeFromParentViewController];
+    }
+    
+    
+    [contr.view removeFromSuperview];
+    [contr removeFromParentViewController];
+    [contr didMoveToParentViewController:nil];
+    contr = nil;
+    
+    
+}
 
 //Leitura
 -(void)addComponentesPlayerPartitura:(UIViewController*)viewAtual{
@@ -69,6 +89,22 @@
     
     PlayerPartituraEdicaoViewController *bar = [[PlayerPartituraEdicaoViewController alloc]init];
     bar.view.frame = CGRectMake(560,670, bar.view.frame.size.width,bar.view.frame.size.height);
+    [viewAtual addChildViewController:bar];
+    [viewAtual.view addSubview:bar.view];
+}
+
+
+-(void)addComponentesBotaoVoltaMapa:(UIViewController*)viewAtual{
+    BotaoVoltarMapaViewController *bar = [[BotaoVoltarMapaViewController alloc]init];
+    bar.view.frame = CGRectMake(10,10, bar.view.frame.size.width,bar.view.frame.size.height);
+    [viewAtual addChildViewController:bar];
+    [viewAtual.view addSubview:bar.view];
+}
+
+
+-(void)addComponentesMascote:(UIViewController*)viewAtual :(float)posX :(float)posY{
+    MascoteViewController *bar = [[MascoteViewController alloc]init];
+    bar.view.frame = CGRectMake(posX,posY, bar.view.frame.size.width,bar.view.frame.size.height);
     [viewAtual addChildViewController:bar];
     [viewAtual.view addSubview:bar.view];
 }

@@ -9,12 +9,13 @@
 #import "Exercicio.h"
 #import <Foundation/Foundation.h>
 
-@interface Aula : NSObject
+@interface Aula : UIButton
 
 //Atributos
 @property NSMutableArray *listaDeExercicios;
 @property NSString *nomeDoLugar;
 @property UIImage *imagemDoBotao;
+
 
 
 @end

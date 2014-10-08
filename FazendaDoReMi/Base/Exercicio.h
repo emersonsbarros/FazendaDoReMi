@@ -11,9 +11,16 @@
 @interface Exercicio : NSObject
 
 //Atributos
+@property int idView;
 @property NSString *nome;
-@property NSString *tema;
+@property NSString *nomeView;
 @property Mascote *mascote;
 @property BOOL estado;
+
+
+
+//Construtor
+-(id)init:(int)idView nome :(NSString*)nome :(NSString*)nomeView  :(BOOL)estadoAula;
+
 
 @end

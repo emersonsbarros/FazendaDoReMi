@@ -8,12 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SpriteMascote : NSObject
+@interface SpriteMascote : CAKeyframeAnimation
 
 //Atributos
 @property NSString *nome;
 @property NSMutableArray *listaDeSprites;
-@property int repeticoes;
-@property float duracao;
+
+
+
+
+
+
+
 
 @end
