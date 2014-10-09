@@ -89,7 +89,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ZECAO01.png" translatesAutoresizingMaskIntoConstraints="NO" id="no6-YP-gkA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="no6-YP-gkA">
                                 <rect key="frame" x="-274" y="104" width="787" height="682"/>
                             </imageView>
                         </subviews>
@@ -201,7 +201,6 @@
     </scenes>
     <resources>
         <image name=" " width="1100" height="821"/>
-        <image name="ZECAO01.png" width="800" height="600"/>
         <image name="background-arvore.png" width="1024" height="768"/>
         <image name="background-ceu.png" width="1024" height="768"/>
         <image name="botao-estudio.png" width="130" height="142"/>

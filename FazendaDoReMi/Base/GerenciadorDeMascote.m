@@ -40,19 +40,35 @@
     [self instanciaMascoteCachorro];
 }
 
+////////////////////////////// CACHORRO ////////////////////////////////////////////////
 
 -(void)instanciaMascoteCachorro{
-////////////////////////////////////////////////////////////////////////////////////////////////////
+
     
     //caracteristicas basicas do Mascote
     Mascote *mascoteCachorro = [[Mascote alloc]init];
+    mascoteCachorro.image = [UIImage imageNamed:@"ZECAO10.png"];
     mascoteCachorro.nome = @"zecao";
     
-////////////////////////////////////////////////////////////////////////////////////////////////////
     
-    //Cria uma lista de sprites pra ele
-    SpriteMascote *spriteTchau = [CAKeyframeAnimation animationWithKeyPath:@"chau"];
+    //Animacoes
+    [self animacaoZecaoTchau:mascoteCachorro];
+
     
+    
+    
+    
+    //Add Mascotes na lista
+    [self.listaDeMascotes addObject:mascoteCachorro];
+    
+}
+
+-(void)animacaoZecaoTchau:(Mascote*)mascote{
+    
+    SpriteMascote *spriteTchau = [[SpriteMascote alloc]init];
+    spriteTchau.nome = @"ZecaoTchau";
+    spriteTchau = [CAKeyframeAnimation animationWithKeyPath:@"contents"];
+    //spriteTchau.nome = @"ZecaoTchau";
     UIImage *image;
     NSString *nomeImagem;
     NSMutableArray *listaImagens = [[NSMutableArray alloc]init];
@@ -67,27 +83,47 @@
         [listaImagens addObject:image];
     }
     
-    mascoteCachorro.animationImages = listaImagens;
+    mascote.animationImages = listaImagens;
+    
+    CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
+    animationGroup.duration = 5;
+    animationGroup.beginTime = CACurrentMediaTime() + 2;
+    animationGroup.repeatCount = INFINITY;
+    CAMediaTimingFunction *easeOut = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
     
     spriteTchau.calculationMode = kCAAnimationDiscrete;
     spriteTchau.autoreverses = NO;
-    spriteTchau.duration = 1;
+    spriteTchau.duration = 2.0;
     spriteTchau.repeatCount = 1;
-    spriteTchau.beginTime = CACurrentMediaTime() + 2;
+    spriteTchau.timingFunction = easeOut;
+    spriteTchau.values = [self animationCGImagesArray: mascote];
     spriteTchau.fillMode = kCAFillModeForwards;
-    spriteTchau.removedOnCompletion = NO;
-    spriteTchau.additive = NO;
-    spriteTchau.values = [self animationCGImagesArray:mascoteCachorro];
+    spriteTchau.removedOnCompletion = YES;
     
-////////////////////////////////////////////////////////////////////////////////////////////////////
+    animationGroup.animations = @[spriteTchau];
     
-    [mascoteCachorro.listaDeSprites addObject:spriteTchau];
-    
-////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-    [self.listaDeMascotes addObject:mascoteCachorro];
+    [mascote.listaDeSprites addObject:animationGroup];
+
     
 }
+
+
+////////////////////////////////// METODOS AUXILIARES //////////////////////////////////////////////
+
+-(SpriteMascote*)retornaAnimacaoMascote:(Mascote*)mascote :(NSString*)nomeAnimacao{
+    
+    //Procura o mascote na lista
+    for (SpriteMascote *mascoteSprite in mascote.listaDeSprites) {
+        if ([mascoteSprite.nome isEqualToString:nomeAnimacao]) {
+            return mascoteSprite;
+        }
+    }
+    
+    //Se não encontra retorna o primeiro mascote
+    return NULL;
+}
+
+
 
 //Aux que converte para CGImage, unico jeito para dar certo
 -(NSArray*)animationCGImagesArray:(UIImageView*)imgAddAnimacao {

@@ -18,6 +18,6 @@
 //Métodos
 +(GerenciadorDeMascote*)sharedManager;
 -(Mascote*)retornaMascote: (NSString*)nomeMascote;
-
+-(SpriteMascote*)retornaAnimacaoMascote:(Mascote*)mascote :(NSString*)nomeAnimacao;
 
 @end

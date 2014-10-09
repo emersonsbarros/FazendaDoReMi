@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "GerenciadorNavigationController.h"
 #import "GerenciadorComponenteView.h"
+#import "GerenciadorAnimacoes.h"
+#import "GerenciadorDeMascote.h"
 
 @interface MenuViewController : UIViewController
 
