@@ -54,7 +54,7 @@
 }
 
 - (IBAction)btnVoltaMenu:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    [[GerenciadorNavigationController sharedManager].controladorApp popViewControllerAnimated:YES];
 }
 
 

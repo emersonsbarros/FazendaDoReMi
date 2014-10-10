@@ -41,18 +41,18 @@
     for(UIView *img in contr.view.subviews){
         img.alpha = 1;
         [img.layer removeAllAnimations];
-        [img removeFromSuperview];
+       // [img removeFromSuperview];
     }
     
-    for(UIViewController *img in contr.childViewControllers){
-        [img removeFromParentViewController];
-    }
-    
-    
-    [contr.view removeFromSuperview];
-    [contr removeFromParentViewController];
-    [contr didMoveToParentViewController:nil];
-    contr = nil;
+//    for(UIViewController *img in contr.childViewControllers){
+//        [img removeFromParentViewController];
+//    }
+//    
+//    
+//    [contr.view removeFromSuperview];
+//    [contr removeFromParentViewController];
+//    [contr didMoveToParentViewController:nil];
+//    contr = nil;
     
     
 }
@@ -102,8 +102,8 @@
 }
 
 
--(void)addComponentesMascote:(UIViewController*)viewAtual :(float)posX :(float)posY{
-    MascoteViewController *bar = [[MascoteViewController alloc]init];
+-(void)addComponentesMascote:(UIViewController*)viewAtual :(float)posX :(float)posY :(NSString*)nomeMascote{
+    MascoteViewController *bar = [[MascoteViewController alloc]initMascote:nomeMascote];
     bar.view.frame = CGRectMake(posX,posY, bar.view.frame.size.width,bar.view.frame.size.height);
     [viewAtual addChildViewController:bar];
     [viewAtual.view addSubview:bar.view];

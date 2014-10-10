@@ -13,5 +13,6 @@
 
 //Atributos
 @property NSMutableArray *listaDeFalas;
+@property NSString *nomeConversa;
 
 @end

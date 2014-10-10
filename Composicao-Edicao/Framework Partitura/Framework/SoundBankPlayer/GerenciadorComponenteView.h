@@ -29,6 +29,6 @@
 -(void)addComponentesPlayerEdicao:(UIViewController*)viewAtual;
 
 -(void)addComponentesBotaoVoltaMapa:(UIViewController*)viewAtual;
--(void)addComponentesMascote:(UIViewController*)viewAtual :(float)posX :(float)posY;
+-(void)addComponentesMascote:(UIViewController*)viewAtual :(float)posX :(float)posY :(NSString*)nomeMascote;
 
 @end

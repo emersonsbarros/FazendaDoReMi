@@ -43,6 +43,14 @@
     return self;
 }
 
+-(id)initMascote:(NSString*)nomeMascote{
+    self = [super init];
+    if(self){
+        self.nomeMascote = nomeMascote;
+    }
+    return self;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
@@ -54,6 +62,7 @@
     [super viewDidLoad];
     
     self.nomeMascote = @"zecao";
+    
     self.imgMascote = [[GerenciadorDeMascote sharedManager]retornaMascote:self.nomeMascote];
     self.imgMascote.frame = CGRectMake(-270, -100, 787, 682);
     [self.view addSubview:self.imgMascote];
@@ -67,10 +76,30 @@
 }
 
 
+-(NSURL*)buscaUrlSomMascote:(NSString*)nomeAudio{
+    
+    for(Conversa *conversaMascote in self.imgMascote.listaDeConversas){
+        for(Fala *falaMascote in conversaMascote.listaDeFalas){
+            if([falaMascote.nome isEqualToString:nomeAudio]){
+                return falaMascote.caminhoDoAudio;
+            }
+        }
+    }
+    
+    return NULL;
+}
 
 
+-(void)executaSomMascote:(NSString*)nomeAudio :(float)delay{
+    NSURL *url = [self buscaUrlSomMascote:nomeAudio];
+    [self performSelector:@selector(playSom:) withObject:url afterDelay:delay];
+}
 
 
+-(void)playSom:(NSURL*)urlAudio{
+    self.playerMascote = [[AVAudioPlayer alloc] initWithContentsOfURL:urlAudio error: nil];
+    [self.playerMascote play];
+}
 
 
 

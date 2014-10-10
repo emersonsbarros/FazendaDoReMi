@@ -60,7 +60,6 @@
 }
 
 
-
 -(void)animacaoSprite:(UIImageView*)view :(NSArray*)imagensSprite :(float)duracao :(float)repeticao :(BOOL)autoReverso :(BOOL)voltarAoEstadoInicial :(float)tempoDelayComecar{
     
     view.animationImages = imagensSprite;

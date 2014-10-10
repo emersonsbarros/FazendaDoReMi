@@ -16,6 +16,8 @@
 		0B6DCCA319DB2D8D00C166E3 /* botaoflauta.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B6DCCA019DB2D8D00C166E3 /* botaoflauta.png */; };
 		0B6DCCA419DB2D8D00C166E3 /* botaopiano.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B6DCCA119DB2D8D00C166E3 /* botaopiano.png */; };
 		0B6DCCA519DB2D8D00C166E3 /* botaoviolao.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B6DCCA219DB2D8D00C166E3 /* botaoviolao.png */; };
+		0B9F945619E863E2005F4314 /* GerenciadorAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F945519E863E2005F4314 /* GerenciadorAudio.m */; };
+		0B9F945919E86629005F4314 /* AudioBemVindo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0B9F945819E86629005F4314 /* AudioBemVindo.m4a */; };
 		0BB1F17E19E5D40600E9F8E4 /* MascoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1F17C19E5D40600E9F8E4 /* MascoteViewController.m */; };
 		0BB1F17F19E5D40600E9F8E4 /* MascoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB1F17D19E5D40600E9F8E4 /* MascoteViewController.xib */; };
 		0BB1F18219E5DB6D00E9F8E4 /* GerenciadorAnimacoes.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1F18119E5DB6D00E9F8E4 /* GerenciadorAnimacoes.m */; };
@@ -273,6 +275,9 @@
 		0B6DCCA019DB2D8D00C166E3 /* botaoflauta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botaoflauta.png; sourceTree = "<group>"; };
 		0B6DCCA119DB2D8D00C166E3 /* botaopiano.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botaopiano.png; sourceTree = "<group>"; };
 		0B6DCCA219DB2D8D00C166E3 /* botaoviolao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botaoviolao.png; sourceTree = "<group>"; };
+		0B9F945419E863E2005F4314 /* GerenciadorAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GerenciadorAudio.h; sourceTree = "<group>"; };
+		0B9F945519E863E2005F4314 /* GerenciadorAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GerenciadorAudio.m; sourceTree = "<group>"; };
+		0B9F945819E86629005F4314 /* AudioBemVindo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = AudioBemVindo.m4a; sourceTree = "<group>"; };
 		0BB1F17B19E5D40600E9F8E4 /* MascoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MascoteViewController.h; sourceTree = "<group>"; };
 		0BB1F17C19E5D40600E9F8E4 /* MascoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MascoteViewController.m; sourceTree = "<group>"; };
 		0BB1F17D19E5D40600E9F8E4 /* MascoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MascoteViewController.xib; sourceTree = "<group>"; };
@@ -598,6 +603,14 @@
 			name = Componentes;
 			sourceTree = "<group>";
 		};
+		0B9F945719E86629005F4314 /* Audios */ = {
+			isa = PBXGroup;
+			children = (
+				0B9F945819E86629005F4314 /* AudioBemVindo.m4a */,
+			);
+			path = Audios;
+			sourceTree = SOURCE_ROOT;
+		};
 		0BB1F17819E5D36100E9F8E4 /* Gerenciadores */ = {
 			isa = PBXGroup;
 			children = (
@@ -611,6 +624,8 @@
 				A8F1C4C819D21129001850E4 /* GerenciadorDeMascote.m */,
 				0BB1F18019E5DB6D00E9F8E4 /* GerenciadorAnimacoes.h */,
 				0BB1F18119E5DB6D00E9F8E4 /* GerenciadorAnimacoes.m */,
+				0B9F945419E863E2005F4314 /* GerenciadorAudio.h */,
+				0B9F945519E863E2005F4314 /* GerenciadorAudio.m */,
 			);
 			name = Gerenciadores;
 			sourceTree = "<group>";
@@ -1189,17 +1204,10 @@
 		A8F1C4A719D1EA2F001850E4 /* Midia */ = {
 			isa = PBXGroup;
 			children = (
-				A8F1C4A819D1EA2F001850E4 /* Audio */,
+				0B9F945719E86629005F4314 /* Audios */,
 			);
 			name = Midia;
 			path = FazendaDoReMi/Midia;
-			sourceTree = "<group>";
-		};
-		A8F1C4A819D1EA2F001850E4 /* Audio */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Audio;
 			sourceTree = "<group>";
 		};
 		A8F1C4AF19D1F89B001850E4 /* Menus */ = {
@@ -1337,6 +1345,7 @@
 				3FB6F55419DA67E60080057B /* fad1.caf in Resources */,
 				3FB6F56019DA67E60080057B /* 3 - D.caf in Resources */,
 				3FC5D25F19DA568F00348F51 /* nuvem2.png in Resources */,
+				0B9F945919E86629005F4314 /* AudioBemVindo.m4a in Resources */,
 				0B1D2A8019E46A8D003CA4C4 /* AulaSomEx1ViewController.xib in Resources */,
 				3F0E882719DBA941003FF4EB /* ZECAO69.png in Resources */,
 				3F0E880419DBA941003FF4EB /* ZECAO34.png in Resources */,
@@ -1541,6 +1550,7 @@
 				A811634B19D22D9E00506D94 /* SomItem.m in Sources */,
 				3FC5D34119DA5CFB00348F51 /* SoundBankPlayer.m in Sources */,
 				3FC5D33A19DA5C3200348F51 /* Partitura.m in Sources */,
+				0B9F945619E863E2005F4314 /* GerenciadorAudio.m in Sources */,
 				A8F1C4B519D20502001850E4 /* Exercicio.m in Sources */,
 				A824718B19D0AB0E00168026 /* AppDelegate.m in Sources */,
 				0B1D2A8919E46CD1003CA4C4 /* GerenciadorNavigationController.m in Sources */,

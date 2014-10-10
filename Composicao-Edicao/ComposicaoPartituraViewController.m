@@ -76,7 +76,7 @@
 
 
 - (IBAction)testa:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    [[GerenciadorNavigationController sharedManager].controladorApp popViewControllerAnimated:YES];
 }
 
 

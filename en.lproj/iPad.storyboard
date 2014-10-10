@@ -1,27 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="U5g-DW-ElV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="CwD-NK-3Lq">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="LUs-Pe-Zuw">
-            <objects>
-                <navigationController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" id="U5g-DW-ElV" sceneMemberID="viewController">
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qmH-GQ-ErF">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="QCV-fp-vov" kind="relationship" relationship="rootViewController" id="qnq-ya-8GU"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zOY-WI-ZIY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="593" y="-853"/>
-        </scene>
         <!--Menu View Controller-->
         <scene sceneID="iRK-Q5-LqX">
             <objects>
@@ -64,7 +47,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="dmu-Ru-iJ5" kind="push" identifier="segueMapa" id="L1r-5G-SnU"/>
+                                    <segue destination="dmu-Ru-iJ5" kind="push" id="7vd-N8-zRo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.050000000000000003" contentMode="TopLeft" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="k5s-RW-py3">
@@ -90,6 +73,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="syq-cX-hy9"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -100,9 +84,6 @@
                         <outlet property="btoJogos" destination="MKg-cb-Zzr" id="kQD-AJ-Unc"/>
                         <outlet property="btoJornada" destination="Fry-vF-hsH" id="tN6-m4-z5s"/>
                         <outlet property="imgMascote" destination="no6-YP-gkA" id="HEs-Pu-DoM"/>
-                        <outlet property="lblBtnEstudio" destination="k5s-RW-py3" id="JuA-wz-RrQ"/>
-                        <outlet property="lblBtnJogos" destination="MKg-cb-Zzr" id="AvT-s3-1m9"/>
-                        <outlet property="lblBtnJornda" destination="Fry-vF-hsH" id="LAY-If-er5"/>
                         <outlet property="nuvemDireita" destination="aIa-Jj-v0o" id="Auu-gn-Mpo"/>
                         <outlet property="nuvemEsquerda" destination="2Bc-mJ-tA7" id="skj-lf-no3"/>
                         <outlet property="porteira" destination="v0A-bS-cCZ" id="xxF-mv-4Rr"/>
@@ -112,7 +93,7 @@
             </objects>
             <point key="canvasLocation" x="1823" y="-888"/>
         </scene>
-        <!--Title-->
+        <!--Composicao Partitura View Controller - Title-->
         <scene sceneID="dzv-Lj-Aoa">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="fc7-hy-kdh" customClass="ComposicaoPartituraViewController" sceneMemberID="viewController">
@@ -147,6 +128,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="RQq-Bf-iyP"/>
                     <connections>
@@ -183,6 +165,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="rJg-3E-A2C"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -190,6 +173,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmT-Fm-05H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2992" y="-977"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JF2-xo-wmo">
+            <objects>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="CwD-NK-3Lq" sceneMemberID="viewController">
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="f9F-TL-Khq">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="AG6-fy-O8J">
+                        <rect key="frame" x="0.0" y="724" width="1024" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="QCV-fp-vov" kind="relationship" relationship="rootViewController" id="w8K-Qc-25L"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gPT-sa-jr0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="569" y="-888"/>
         </scene>
     </scenes>
     <resources>

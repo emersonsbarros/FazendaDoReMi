@@ -55,6 +55,9 @@
     [self animacaoZecaoTchau:mascoteCachorro];
 
     
+    //Audios
+    [self audioMenuInicial:mascoteCachorro];
+    
     
     
     //Add Mascotes na lista
@@ -109,7 +112,22 @@
 }
 
 
+////AUDIOS
+-(void)audioMenuInicial:(Mascote*)mascote{
+    
+    Conversa *conversa = [[Conversa alloc]init];
+    conversa.nomeConversa = @"menuInicial";
 
+    
+    Fala *falaBemVindo = [[Fala alloc]init];
+    falaBemVindo.nome = @"BemVindoFazenda";
+    falaBemVindo.caminhoDoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"AudioBemVindo" ofType:@"m4a"]];
+    
+    [conversa.listaDeFalas addObject:falaBemVindo];
+
+    [mascote.listaDeConversas addObject:conversa];
+    
+}
 
 ////////////////////////////////// METODOS AUXILIARES //////////////////////////////////////////////
 

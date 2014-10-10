@@ -39,7 +39,7 @@
     
     [GerenciadorNavigationController sharedManager].controladorApp = self.navigationController;
     
-    [[GerenciadorComponenteView sharedManager]addComponentesMascote:self:0:200];
+    [[GerenciadorComponenteView sharedManager]addComponentesMascote:self:0:200:@"zecao"];
     
     [self animacoesIntro];
 
@@ -69,9 +69,9 @@
 
 -(void)animacaoBotoes{
     
-    [[GerenciadorAnimacoes sharedManager]animacaoOpacidade:self.lblBtnJornda:1.0:1:NO:NO];
-    [[GerenciadorAnimacoes sharedManager]animacaoOpacidade:self.lblBtnJogos:1.0:1:NO:NO];
-    [[GerenciadorAnimacoes sharedManager]animacaoOpacidade:self.lblBtnEstudio:1.0:1:NO:NO];
+    [[GerenciadorAnimacoes sharedManager]animacaoOpacidade:self.btoEstudio:1.0:1:NO:NO];
+    [[GerenciadorAnimacoes sharedManager]animacaoOpacidade:self.btoJogos:1.0:1:NO:NO];
+    [[GerenciadorAnimacoes sharedManager]animacaoOpacidade:self.btoJornada:1.0:1:NO:NO];
     
 }
 
@@ -93,8 +93,9 @@
 
 
 -(void)viewWillAppear:(BOOL)animated{
-    NSLog(@"numerp = %d",[GerenciadorNavigationController sharedManager].controladorApp.viewControllers.count);
+    
     [[MascoteViewController sharedManager]colocaAnimacaoMascote:@"ZecaoTchau"];
+    [[MascoteViewController sharedManager]executaSomMascote:@"BemVindoFazenda":2.0];
     
 }
 
