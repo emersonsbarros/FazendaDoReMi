@@ -40,11 +40,11 @@
     [self instanciaMascoteCachorro];
 }
 
-////////////////////////////// CACHORRO ////////////////////////////////////////////////
+//////////////////////////////////// Mascote Zecao ////////////////////////////////////////////////
 
 -(void)instanciaMascoteCachorro{
 
-    
+
     //caracteristicas basicas do Mascote
     Mascote *mascoteCachorro = [[Mascote alloc]init];
     mascoteCachorro.image = [UIImage imageNamed:@"ZECAO10.png"];
@@ -57,18 +57,15 @@
     
     
     
-    
     //Add Mascotes na lista
     [self.listaDeMascotes addObject:mascoteCachorro];
     
 }
 
+////ANIMACOES
 -(void)animacaoZecaoTchau:(Mascote*)mascote{
     
-    SpriteMascote *spriteTchau = [[SpriteMascote alloc]init];
-    spriteTchau.nome = @"ZecaoTchau";
-    spriteTchau = [CAKeyframeAnimation animationWithKeyPath:@"contents"];
-    //spriteTchau.nome = @"ZecaoTchau";
+    //Lista imagens Sprites
     UIImage *image;
     NSString *nomeImagem;
     NSMutableArray *listaImagens = [[NSMutableArray alloc]init];
@@ -82,30 +79,36 @@
         image = [UIImage imageNamed:nomeImagem];
         [listaImagens addObject:image];
     }
-    
     mascote.animationImages = listaImagens;
     
-    CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
-    animationGroup.duration = 5;
-    animationGroup.beginTime = CACurrentMediaTime() + 2;
-    animationGroup.repeatCount = INFINITY;
+    //Cria grupo animacao atraves da classe SpriteMascote para esses sprites
+    SpriteMascote *spriteTchau = [[SpriteMascote alloc]init];
+    spriteTchau.nome = @"ZecaoTchau";
+    spriteTchau.duration = 5;
+    spriteTchau.beginTime = CACurrentMediaTime() + 2;
+    spriteTchau.repeatCount = INFINITY;
     CAMediaTimingFunction *easeOut = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
     
-    spriteTchau.calculationMode = kCAAnimationDiscrete;
-    spriteTchau.autoreverses = NO;
-    spriteTchau.duration = 2.0;
-    spriteTchau.repeatCount = 1;
-    spriteTchau.timingFunction = easeOut;
-    spriteTchau.values = [self animationCGImagesArray: mascote];
-    spriteTchau.fillMode = kCAFillModeForwards;
-    spriteTchau.removedOnCompletion = YES;
+    //Faz a animacao de troca de imagens
+    CAKeyframeAnimation *animacaoChau = [CAKeyframeAnimation animationWithKeyPath:@"contents"];
+    animacaoChau.calculationMode = kCAAnimationDiscrete;
+    animacaoChau.autoreverses = NO;
+    animacaoChau.duration = 2.0;
+    animacaoChau.repeatCount = 1;
+    animacaoChau.timingFunction = easeOut;
+    animacaoChau.values = [self animationCGImagesArray: mascote];
+    animacaoChau.fillMode = kCAFillModeForwards;
+    animacaoChau.removedOnCompletion = YES;
     
-    animationGroup.animations = @[spriteTchau];
+    //Adicionas animacaoes no grupo
+    spriteTchau.animations = @[animacaoChau];
     
-    [mascote.listaDeSprites addObject:animationGroup];
-
+    //Add animacao no mascote
+    [mascote.listaDeSprites addObject:spriteTchau];
     
 }
+
+
 
 
 ////////////////////////////////// METODOS AUXILIARES //////////////////////////////////////////////

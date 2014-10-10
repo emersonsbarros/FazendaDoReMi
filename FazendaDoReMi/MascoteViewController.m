@@ -14,13 +14,16 @@
 
 @implementation MascoteViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
+}
+
++(id)allocWithZone:(struct _NSZone *)zone{
+    return [self sharedManager];
 }
 
 //Singleton
@@ -40,25 +43,39 @@
     return self;
 }
 
-
-+(id)allocWithZone:(struct _NSZone *)zone{
-    return [self sharedManager];
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    
 }
-
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
-
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.nomeMascote = @"zecao";
+    self.imgMascote = [[GerenciadorDeMascote sharedManager]retornaMascote:self.nomeMascote];
+    self.imgMascote.frame = CGRectMake(-270, -100, 787, 682);
+    [self.view addSubview:self.imgMascote];
+
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+
+-(void)colocaAnimacaoMascote:(NSString*)nomeAnimacao{
+    [self.imgMascote.layer addAnimation:[[GerenciadorDeMascote sharedManager]retornaAnimacaoMascote:self.imgMascote:nomeAnimacao] forKey:@"contents"];
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end

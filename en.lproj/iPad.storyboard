@@ -1,30 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="B0q-uH-okf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="U5g-DW-ElV">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
-        <scene sceneID="ymV-hb-w4z">
+        <scene sceneID="LUs-Pe-Zuw">
             <objects>
-                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="B0q-uH-okf" sceneMemberID="viewController">
+                <navigationController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" id="U5g-DW-ElV" sceneMemberID="viewController">
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cW7-cQ-SGQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qmH-GQ-ErF">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="OKg-Ph-Szy">
-                        <rect key="frame" x="0.0" y="724" width="1024" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
                     <connections>
-                        <segue destination="QCV-fp-vov" kind="relationship" relationship="rootViewController" id="jAj-rv-mk0"/>
+                        <segue destination="QCV-fp-vov" kind="relationship" relationship="rootViewController" id="qnq-ya-8GU"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1gj-qv-s5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOY-WI-ZIY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="509" y="-888"/>
+            <point key="canvasLocation" x="593" y="-853"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="iRK-Q5-LqX">
@@ -56,6 +52,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="porteira-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="v0A-bS-cCZ">
                                 <rect key="frame" x="232" y="56" width="571" height="551"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="no6-YP-gkA">
+                                <rect key="frame" x="-274" y="104" width="787" height="682"/>
+                            </imageView>
                             <button opaque="NO" alpha="0.050000000000000003" contentMode="TopLeft" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Fry-vF-hsH">
                                 <rect key="frame" x="298" y="615" width="125" height="121"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
@@ -65,7 +64,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="dmu-Ru-iJ5" kind="push" id="oKr-4n-Q5p"/>
+                                    <segue destination="dmu-Ru-iJ5" kind="push" identifier="segueMapa" id="L1r-5G-SnU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.050000000000000003" contentMode="TopLeft" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="k5s-RW-py3">
@@ -78,7 +77,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fc7-hy-kdh" kind="push" id="GFa-82-t8o"/>
+                                    <segue destination="fc7-hy-kdh" kind="push" identifier="segueEstudio" id="A2f-r1-iol"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.050000000000000003" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKg-cb-Zzr">
@@ -89,12 +88,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="no6-YP-gkA">
-                                <rect key="frame" x="-274" y="104" width="787" height="682"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="syq-cX-hy9"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -117,7 +112,7 @@
             </objects>
             <point key="canvasLocation" x="1823" y="-888"/>
         </scene>
-        <!--Composicao Partitura View Controller - Title-->
+        <!--Title-->
         <scene sceneID="dzv-Lj-Aoa">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="fc7-hy-kdh" customClass="ComposicaoPartituraViewController" sceneMemberID="viewController">
@@ -152,7 +147,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="RQq-Bf-iyP"/>
                     <connections>
@@ -161,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCE-VF-72q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3215" y="538"/>
+            <point key="canvasLocation" x="2847" y="25"/>
         </scene>
         <!--Jornada View Controller-->
         <scene sceneID="fyS-av-cnp">
@@ -189,14 +183,13 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="rJg-3E-A2C"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmT-Fm-05H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3196" y="-2022"/>
+            <point key="canvasLocation" x="2992" y="-977"/>
         </scene>
     </scenes>
     <resources>

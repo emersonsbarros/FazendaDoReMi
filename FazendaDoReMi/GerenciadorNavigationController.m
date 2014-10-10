@@ -45,9 +45,9 @@
 }
 
 
--(void)pushViewController{
-//    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"WebVideo"];
-//    [self.navigationController pushViewController:controller animated:YES];
-}
+//-(void)pushViewController{
+////    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"WebVideo"];
+////    [self.navigationController pushViewController:controller animated:YES];
+//}
 
 @end

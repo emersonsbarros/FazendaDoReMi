@@ -30,6 +30,11 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    NSLog(@"numerp = %d",[GerenciadorNavigationController sharedManager].controladorApp.viewControllers.count);
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     }
@@ -44,12 +49,12 @@
     //[GerenciadorDeAula sharedManager].exercicioAtual = button;
 
     
-    [[GerenciadorNavigationController sharedManager].controladorApp pushViewController:object animated:YES];
+    [self.navigationController pushViewController:object animated:YES];
     
 }
 
 - (IBAction)btnVoltaMenu:(id)sender {
-    [[GerenciadorNavigationController sharedManager].controladorApp popViewControllerAnimated: YES];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

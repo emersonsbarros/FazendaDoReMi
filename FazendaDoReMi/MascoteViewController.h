@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GerenciadorDeMascote.h"
+#import "Mascote.h"
 
 @interface MascoteViewController : UIViewController
 
 
-@property (weak, nonatomic) IBOutlet UIImageView *imgMascote;
+@property Mascote *imgMascote;
+@property NSString *nomeMascote;
 
++(MascoteViewController*)sharedManager;
+
+-(void)colocaAnimacaoMascote:(NSString*)nomeAnimacao;
 
 @end

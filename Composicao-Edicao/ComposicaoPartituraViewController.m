@@ -45,6 +45,10 @@
     }
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    NSLog(@"numerp = %d",[GerenciadorNavigationController sharedManager].controladorApp.viewControllers.count);
+}
+
 
 - (void)viewDidLoad
 {
@@ -72,7 +76,7 @@
 
 
 - (IBAction)testa:(id)sender {
-    [self.navigationController popViewControllerAnimated: YES];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

@@ -39,6 +39,8 @@
     
     [GerenciadorNavigationController sharedManager].controladorApp = self.navigationController;
     
+    [[GerenciadorComponenteView sharedManager]addComponentesMascote:self:0:200];
+    
     [self animacoesIntro];
 
 }
@@ -91,28 +93,11 @@
 
 
 -(void)viewWillAppear:(BOOL)animated{
-
-    [self animacaoMascote];
-    
+    NSLog(@"numerp = %d",[GerenciadorNavigationController sharedManager].controladorApp.viewControllers.count);
+    [[MascoteViewController sharedManager]colocaAnimacaoMascote:@"ZecaoTchau"];
     
 }
 
--(void)animacaoMascote{
-    
-    Mascote *mascoteZecao = [[GerenciadorDeMascote sharedManager]retornaMascote:@"zecao"];
-    mascoteZecao.frame = CGRectMake(-270, 100, 787, 682);
-    [mascoteZecao.layer addAnimation:[mascoteZecao.listaDeSprites firstObject] forKey:@"contents"];
-    [self.view addSubview:mascoteZecao];
-    
-    
-//    Mascote *mascoteZecao = [[GerenciadorDeMascote sharedManager]retornaMascote:@"zecao"];
-//    mascoteZecao.frame = CGRectMake(-270, 100, 787, 682);
-//    [mascoteZecao.layer addAnimation:[[GerenciadorDeMascote sharedManager]retornaAnimacaoMascote:mascoteZecao:@"ZecaoTchau"] forKey:@"contents"];
-//    [self.view addSubview:mascoteZecao];
-
-
-
-}
 
 
 

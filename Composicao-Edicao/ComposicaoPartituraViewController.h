@@ -10,6 +10,7 @@
 #import "GerenciadorComponenteView.h"
 #import "ComponenteScrollEdicao.h"
 #import "DesenhaPartituraEdicao.h"
+#import "GerenciadorNavigationController.h"
 
 @interface ComposicaoPartituraViewController : UIViewController <UIScrollViewDelegate> {
     

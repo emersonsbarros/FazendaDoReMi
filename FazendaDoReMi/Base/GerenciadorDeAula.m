@@ -39,7 +39,7 @@
 -(void)instanciaAulas{
     
     //Exercícios
-    Exercicio *aula1Exe1 = [[Exercicio alloc]init:0 nome:@"Som" :@"AulaSomViewController" :NO];
+    Exercicio *aula1Exe1 = [[Exercicio alloc]init:0 nome:@"Som" :@"AulaSomEx1ViewController" :NO];
     //Falas do Mascote
     
     

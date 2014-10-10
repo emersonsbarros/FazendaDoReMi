@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SpriteMascote : CAKeyframeAnimation
+@interface SpriteMascote : CAAnimationGroup
 
 //Atributos
 @property NSString *nome;
