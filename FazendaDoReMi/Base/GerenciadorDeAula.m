@@ -15,7 +15,6 @@
     
     if(self){
         self.listaDeAulas = [[NSMutableArray alloc] init];
-        self.listaDeViewControllers = [[NSMutableArray alloc] init];
         [self instanciaAulas];
     }
     return self;
@@ -35,39 +34,59 @@
     return gerenciadorDeAula;
 }
 
-
 -(void)instanciaAulas{
     
-    //Exercícios
-    Exercicio *aula1Exe1 = [[Exercicio alloc]init:0 nome:@"Som" :@"AulaSomEx1ViewController" :NO];
-    //Falas do Mascote
+    [self criaAulaCasa];
     
+}
+
+
+////////////////////////////// AULA CASA ////////////////////////////////
+
+-(void)criaAulaCasa{
+    
+    Aula *aula = [[Aula alloc]init];
+    aula.frame = CGRectMake(323, 619, 205, 218);
+    aula.nomeDoLugar = @"Casa";
+    [aula setBackgroundImage:[UIImage imageNamed:@"btnlixeira.png"] forState:UIControlStateNormal];
+    
+    //Exercicios
+    [self criaCasaExercicio1:aula];
+    
+    
+    
+    //Add aula no banco
+    [self.listaDeAulas addObject:aula];
+    
+}
+
+-(void)criaCasaExercicio1:(Aula*)aula{
+    
+    //Exercícios
+    Exercicio *exercicio = [[Exercicio alloc]init:0 nome:@"Som" :@"AulaSomEx1ViewController" :NO];
     
     //Fala
-    Fala *aula1Exe1fala1 = [[Fala alloc] init];
-    aula1Exe1fala1.caminhoDoAudio = [NSURL URLWithString: @""];
+    Fala *fala = [[Fala alloc] init];
+    fala.caminhoDoAudio = [NSURL URLWithString: @""];
     
-    Fala *aula1Exe1fala2 = [[Fala alloc] init];
-    aula1Exe1fala2.caminhoDoAudio = [NSURL URLWithString: @""];
+    Fala *fala2 = [[Fala alloc] init];
+    fala2.caminhoDoAudio = [NSURL URLWithString: @""];
     
     
     //Conversa
-    Conversa *aula1Exe1conversa1 = [[Conversa alloc] init];
-    [[aula1Exe1conversa1 listaDeFalas] addObject: aula1Exe1fala1];
-    [[aula1Exe1conversa1 listaDeFalas] addObject: aula1Exe1fala2];
-   
-    [[[aula1Exe1 mascote] listaDeConversas] addObject:aula1Exe1conversa1];
+    Conversa *conversa = [[Conversa alloc] init];
+    [[conversa listaDeFalas] addObject: fala];
+    [[conversa listaDeFalas] addObject: fala2];
+    [[[exercicio mascote] listaDeConversas] addObject:conversa];
     
-    Aula *aula1 = [[Aula alloc]init];
-    aula1.imagemDoBotao = [UIImage imageNamed:@"btnlixeira.png"];
-    aula1.frame = CGRectMake(323, 619, 205, 218);
-    aula1.nomeDoLugar = @"Casa";
-    [aula1 setBackgroundImage:[aula1 imagemDoBotao] forState:UIControlStateNormal];
-    [[aula1 listaDeExercicios]addObject: aula1Exe1];
-
     
-    [self.listaDeAulas addObject:aula1];
+    [[aula listaDeExercicios]addObject:exercicio];
     
 }
+
+
+////////////////////////////// AULA GALINHEIRO ////////////////////////////////
+
+
 
 @end

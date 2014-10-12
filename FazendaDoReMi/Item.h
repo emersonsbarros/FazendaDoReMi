@@ -9,15 +9,17 @@
 #import <AVFoundation/AVFoundation.h>
 #import <Foundation/Foundation.h>
 
-@interface Item : NSObject
+@interface Item : UIImageView
 
 //Atributos
 @property NSString *nome;
+@property BOOL estadoPressionado;
 @property NSMutableArray *listaSprites;
-@property AVAudioPlayer *player;
-@property UIImage *imagem;
+@property NSMutableArray *listaSonsURL;
+
 
 //Metodos
 -(void)retornaAudio: (NSString*)nome;
+
 
 @end

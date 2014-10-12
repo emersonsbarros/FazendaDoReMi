@@ -36,11 +36,19 @@
     
     //Fonte padrão
     [[UILabel appearance] setFont:[UIFont fontWithName:@"Kronika" size:17.0]];
-    
     [GerenciadorNavigationController sharedManager].controladorApp = self.navigationController;
+    
     
     [[GerenciadorComponenteView sharedManager]addComponentesMascote:self:0:200:@"zecao"];
     
+    
+    [[GerenciadorDeItem sharedManager]retornaItem:@"piano":self.imgTeste];
+    [[GerenciadorAnimacoes sharedManager]animacaozoomImagem:self.imgTeste];
+    
+    
+    [[GerenciadorAnimacoes sharedManager]animacaoSpriteEspecifica:self.imgTeste:@"pianoTocando":4:YES:NO:2.0];
+    
+       
     [self animacoesIntro];
 
 }

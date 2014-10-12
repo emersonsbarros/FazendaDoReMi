@@ -14,7 +14,7 @@
     self = [super init];
     
     if(self){
-        self.listaDeImagens = [[NSMutableArray alloc] init];
+       self.listaImagens = [[NSMutableArray alloc] init];
     }
     return self;
 }

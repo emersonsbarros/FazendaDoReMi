@@ -14,7 +14,6 @@
 //Atributos
 @property NSMutableArray *listaDeExercicios;
 @property NSString *nomeDoLugar;
-@property UIImage *imagemDoBotao;
 
 
 

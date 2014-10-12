@@ -11,6 +11,7 @@
 #import "GerenciadorComponenteView.h"
 #import "GerenciadorAnimacoes.h"
 #import "GerenciadorDeMascote.h"
+#import "GerenciadorDeItem.h"
 
 @interface MenuViewController : UIViewController
 
@@ -27,8 +28,11 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgMascote;
 
+@property (weak, nonatomic) IBOutlet Item *imgTeste;
 
 
 @property NSMutableArray *listaImagensMascote;
+
+
 
 @end

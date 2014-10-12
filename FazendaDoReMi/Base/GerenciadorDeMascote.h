@@ -10,7 +10,7 @@
 #import "SpriteMascote.h"
 #import <Foundation/Foundation.h>
 
-@interface GerenciadorDeMascote : NSObject
+@interface GerenciadorDeMascote : NSObject 
 
 //Atributos
 @property NSMutableArray *listaDeMascotes;

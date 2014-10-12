@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Item.h"
 #import "GerenciadorComponenteView.h"
 
 
@@ -14,8 +15,15 @@
 
 
 
+@property (weak, nonatomic) IBOutlet Item *imgViolao;
 
+@property (weak, nonatomic) IBOutlet Item *imgPiano;
 
+@property (weak, nonatomic) IBOutlet Item *imgFlauta;
+
+@property (weak, nonatomic) IBOutlet Item *imgTambor;
+
+@property (weak, nonatomic) IBOutlet Item *imgXilofone;
 
 
 @end

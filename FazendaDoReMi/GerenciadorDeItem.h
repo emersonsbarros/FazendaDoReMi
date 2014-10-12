@@ -7,6 +7,9 @@
 //
 
 #import "Item.h"
+#import "SpriteItem.h"
+#import "SomItem.h"
+
 #import <Foundation/Foundation.h>
 
 @interface GerenciadorDeItem : NSObject
@@ -15,6 +18,9 @@
 @property NSMutableArray *listaDeItens;
 
 //Metodos
--(Item*)retornaItem: (NSString*)nome;
+-(void)retornaItem:(NSString*)nome :(UIView*)viewContainer;
+
+
++(GerenciadorDeItem*)sharedManager;
 
 @end

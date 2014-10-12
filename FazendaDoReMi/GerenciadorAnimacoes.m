@@ -78,6 +78,28 @@
     
 }
 
+-(void)animacaoSpriteEspecifica:(Item*)viewItem :(NSString*)nomeAnimacaoSprite :(float)repeticao :(BOOL)autoReverso :(BOOL)voltarAoEstadoInicial :(float)tempoDelayComecar{
+    
+    for(SpriteItem *sprite in viewItem.listaSprites){
+        if([sprite.nomeAnimacao isEqualToString:nomeAnimacaoSprite]){
+            viewItem.animationImages = sprite.listaImagens;
+        }
+    }
+    
+
+    CAKeyframeAnimation *animacao = [CAKeyframeAnimation animationWithKeyPath: @"contents"];
+    animacao.calculationMode = kCAAnimationDiscrete;
+    animacao.duration = 1.0;
+    animacao.repeatCount = repeticao;
+    animacao.autoreverses = autoReverso;
+    animacao.beginTime = CACurrentMediaTime() + tempoDelayComecar;
+    animacao.fillMode = kCAFillModeForwards;
+    animacao.removedOnCompletion = voltarAoEstadoInicial;
+    animacao.additive = NO;
+    animacao.values = [self animationCGImagesArray:viewItem];
+    [viewItem.layer addAnimation: animacao forKey:@"animacaoSprite"];
+    
+}
 
 -(void)animacaoMoverLugar:(UIView*)view :(float)duracao :(float)repeticao :(BOOL)autoReverso :(float)posX :(float)posY{
     
@@ -93,7 +115,28 @@
 }
 
 
+-(void)animacaozoomImagem:(UIView*)view :(float)duracao :(float)repeticao :(BOOL)autoReverso :(float)valorInicial :(float)valorFinal{
 
+    CABasicAnimation *pulseAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale.xy"];
+    pulseAnimation.fromValue = @0.0;
+    pulseAnimation.toValue = @1.0;
+    pulseAnimation.duration = 2;
+    pulseAnimation.repeatCount = repeticao;
+
+    [view.layer addAnimation:pulseAnimation forKey:@"pulse"];
+
+}
+
+
+-(void)animacaozoomImagem:(UIView*)view{
+    CABasicAnimation *pulseAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale.xy"];
+    pulseAnimation.fromValue = @1.0;
+    pulseAnimation.toValue = @1.5;
+    pulseAnimation.duration = 1;
+    pulseAnimation.repeatCount = INFINITY;
+    
+    [view.layer addAnimation:pulseAnimation forKey:@"pulse"];
+}
 
 
 

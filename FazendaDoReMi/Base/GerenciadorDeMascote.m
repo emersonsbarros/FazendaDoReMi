@@ -119,11 +119,11 @@
     conversa.nomeConversa = @"menuInicial";
 
     
-    Fala *falaBemVindo = [[Fala alloc]init];
-    falaBemVindo.nome = @"BemVindoFazenda";
-    falaBemVindo.caminhoDoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"AudioBemVindo" ofType:@"m4a"]];
+    Fala *fala = [[Fala alloc]init];
+    fala.nome = @"BemVindoFazenda";
+    fala.caminhoDoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"AudioBemVindo" ofType:@"m4a"]];
     
-    [conversa.listaDeFalas addObject:falaBemVindo];
+    [conversa.listaDeFalas addObject:fala];
 
     [mascote.listaDeConversas addObject:conversa];
     

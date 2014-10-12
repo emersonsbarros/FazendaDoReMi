@@ -12,7 +12,7 @@
 
 //Atributos
 @property NSString *nome;
-@property NSMutableArray *listaDeSprites;
+
 
 
 

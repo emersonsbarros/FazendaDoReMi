@@ -15,6 +15,7 @@
     
     if(self){
         self.listaDeItens = [[NSMutableArray alloc] init];
+        [self instanciaItens];
     }
     return self;
 }
@@ -33,17 +34,63 @@
     return gerenciadorDeItem;
 }
 
--(Item*)retornaItem: (NSString*)nome{
+
+-(void)instanciaItens{
+    
+    [self addItemPiano];
+    
+}
+
+
+-(void)addItemPiano{
+    
+    //Cria item
+    Item *item = [[Item alloc]init];
+    item.nome = @"piano";
+    item.image = [UIImage imageNamed:@"piano.png"];
+    
+    //Add SOM
+    SomItem *somitem = [[SomItem alloc]init];
+    somitem.nomeSom = @"somPianoAcorde";
+    somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"somPiano" ofType:@"wav"]];
+    [item.listaSonsURL addObject:somitem];
+    
+    
+    //Cria sprite(somente imagens)
+    SpriteItem *itemsprite = [[SpriteItem alloc]init];
+    itemsprite.nomeAnimacao = @"pianoTocando";
+    UIImage *img1 = [UIImage imageNamed:@"piano.png"];
+    UIImage *img2 = [UIImage imageNamed:@"piano2.png"];
+    [itemsprite.listaImagens addObject:img1];
+    [itemsprite.listaImagens addObject:img2];
+    [item.listaSprites addObject:itemsprite];
+    
+    
+    //Add Item ao banco
+    [self.listaDeItens addObject:item];
+    
+}
+
+/////////////////////// METODOS AUXILIARES ///////////////////////
+
+
+-(void)retornaItem:(NSString*)nome :(Item*)viewContainer{
     
     //Procura o item na lista
     for (Item *item in self.listaDeItens) {
         if ([item.nome isEqualToString: nome]) {
-            return item;
+            item.frame = viewContainer.frame;
+            viewContainer.image = item.image;
+            viewContainer.nome = item.nome;
+            viewContainer.listaSonsURL = item.listaSonsURL;
+            viewContainer.listaSprites = item.listaSprites;
+            viewContainer.estadoPressionado = item.estadoPressionado;
+            //return item;
         }
     }
     
     //Se não encontra retorna o primeiro item
-    return self.listaDeItens.firstObject;
+    //return self.listaDeItens.firstObject;
 }
 
 @end
