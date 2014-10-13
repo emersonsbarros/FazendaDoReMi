@@ -16,6 +16,7 @@
 		0B6DCCA319DB2D8D00C166E3 /* botaoflauta.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B6DCCA019DB2D8D00C166E3 /* botaoflauta.png */; };
 		0B6DCCA419DB2D8D00C166E3 /* botaopiano.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B6DCCA119DB2D8D00C166E3 /* botaopiano.png */; };
 		0B6DCCA519DB2D8D00C166E3 /* botaoviolao.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B6DCCA219DB2D8D00C166E3 /* botaoviolao.png */; };
+		0B862C4319EC6E60009365DD /* ControladorDeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B862C4219EC6E60009365DD /* ControladorDeItem.m */; };
 		0B9F945619E863E2005F4314 /* GerenciadorAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F945519E863E2005F4314 /* GerenciadorAudio.m */; };
 		0B9F945919E86629005F4314 /* AudioBemVindo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0B9F945819E86629005F4314 /* AudioBemVindo.m4a */; };
 		0BB1F17E19E5D40600E9F8E4 /* MascoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB1F17C19E5D40600E9F8E4 /* MascoteViewController.m */; };
@@ -277,6 +278,8 @@
 		0B6DCCA019DB2D8D00C166E3 /* botaoflauta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botaoflauta.png; sourceTree = "<group>"; };
 		0B6DCCA119DB2D8D00C166E3 /* botaopiano.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botaopiano.png; sourceTree = "<group>"; };
 		0B6DCCA219DB2D8D00C166E3 /* botaoviolao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botaoviolao.png; sourceTree = "<group>"; };
+		0B862C4119EC6E60009365DD /* ControladorDeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControladorDeItem.h; sourceTree = "<group>"; };
+		0B862C4219EC6E60009365DD /* ControladorDeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControladorDeItem.m; sourceTree = "<group>"; };
 		0B9F945419E863E2005F4314 /* GerenciadorAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GerenciadorAudio.h; sourceTree = "<group>"; };
 		0B9F945519E863E2005F4314 /* GerenciadorAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GerenciadorAudio.m; sourceTree = "<group>"; };
 		0B9F945819E86629005F4314 /* AudioBemVindo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = AudioBemVindo.m4a; sourceTree = "<group>"; };
@@ -1082,6 +1085,8 @@
 				3FDCC04D19EB0673003DC572 /* SomItem.m */,
 				3FCBCDDC19EB5C66008C15F8 /* GestureItem.h */,
 				3FCBCDDD19EB5C66008C15F8 /* GestureItem.m */,
+				0B862C4119EC6E60009365DD /* ControladorDeItem.h */,
+				0B862C4219EC6E60009365DD /* ControladorDeItem.m */,
 			);
 			name = Item;
 			path = ..;
@@ -1545,6 +1550,7 @@
 				3FC5D33119DA5C3200348F51 /* EscolhaUsuarioPartitura.m in Sources */,
 				3FC5D33519DA5C3200348F51 /* Instrumento.m in Sources */,
 				3FC5D33419DA5C3200348F51 /* DataBaseInstrumento.m in Sources */,
+				0B862C4319EC6E60009365DD /* ControladorDeItem.m in Sources */,
 				3FC5D2F419DA59BA00348F51 /* PlayerPartituraEdicaoViewController.m in Sources */,
 				3F0E879719DBA6F8003FF4EB /* JornadaViewController.m in Sources */,
 				3FC5D2F219DA59BA00348F51 /* DesenhaPartituraEdicao.m in Sources */,

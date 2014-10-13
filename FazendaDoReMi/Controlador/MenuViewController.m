@@ -36,17 +36,24 @@
     
     //Fonte padrão
     [[UILabel appearance] setFont:[UIFont fontWithName:@"Kronika" size:17.0]];
+    //Classe recebe navigation controller pai
     [GerenciadorNavigationController sharedManager].controladorApp = self.navigationController;
     
-    
+    //Mascote
     [[GerenciadorComponenteView sharedManager]addComponentesMascote:self:0:200:@"zecao"];
+    [[MascoteViewController sharedManager]executaSomMascote:@"BemVindoFazenda":2.0];
     
     
+    [[ControladorDeItem sharedManager]chamaVerificador:[NSArray arrayWithObjects:self.imgTeste, nil]];
+    
+    
+    
+    //Add referencia
     [[GerenciadorDeItem sharedManager]retornaItem:@"piano":self.imgTeste:@"gestureTap"];
+    
     
     NSLog(@"V = %hhd",self.imgTeste.estadoPressionado);
     
-    //[[GerenciadorAnimacoes sharedManager]animacaozoomImagem:self.imgTeste];
     
     //[[GerenciadorAnimacoes sharedManager]animacaoSpriteEspecifica:self.imgTeste:@"pianoTocando":4:YES:NO:2.0];
     
@@ -84,6 +91,7 @@
     [[GerenciadorAnimacoes sharedManager]animacaoOpacidade:self.btoJornada:1.0:1:NO:NO];
     
 }
+
 - (IBAction)bt:(id)sender {
     NSLog(@"V = %hhd",self.imgTeste.estadoPressionado);
 }
@@ -108,7 +116,6 @@
 -(void)viewWillAppear:(BOOL)animated{
     
     [[MascoteViewController sharedManager]colocaAnimacaoMascote:@"ZecaoTchau"];
-    [[MascoteViewController sharedManager]executaSomMascote:@"BemVindoFazenda":2.0];
     
 }
 

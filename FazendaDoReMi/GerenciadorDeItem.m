@@ -128,6 +128,9 @@
     SomItem *somItem = gestureItem.item.listaSonsURL.firstObject;
     gestureItem.item.estadoPressionado = YES;
     [[GerenciadorAudio sharedManager]playAudio:somItem.caminhoAudio];
+    
+    [[GerenciadorAnimacoes sharedManager]animacaozoomImagem:gestureItem.item];
+    
 }
 
 @end

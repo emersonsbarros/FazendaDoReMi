@@ -12,6 +12,7 @@
 #import "GerenciadorAnimacoes.h"
 #import "GerenciadorDeMascote.h"
 #import "GerenciadorDeItem.h"
+#import "ControladorDeItem.h"
 
 @interface MenuViewController : UIViewController
 
