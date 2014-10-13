@@ -42,7 +42,6 @@
 
 -(void)playAudio:(NSURL*)audio{
     self.somExercicioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:audio error: nil];
-    self.somExercicioPlayer.volume = 5.0;
     [[self somExercicioPlayer]play];
 }
 

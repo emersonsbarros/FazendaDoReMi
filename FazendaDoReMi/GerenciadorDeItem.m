@@ -74,7 +74,7 @@
 /////////////////////// METODOS AUXILIARES ///////////////////////
 
 
--(void)retornaItem:(NSString*)nome :(Item*)viewContainer{
+-(void)retornaItem:(NSString*)nome :(Item*)viewContainer :(NSString*)nomeGesture{
     
     //Procura o item na lista
     for (Item *item in self.listaDeItens) {
@@ -89,8 +89,45 @@
         }
     }
     
-    //Se não encontra retorna o primeiro item
-    //return self.listaDeItens.firstObject;
+    [self addGestureItem:nomeGesture :viewContainer];
+  
+    
+}
+
+-(void)addGestureItem:(NSString*)nomeGesture :(Item*)viewContainer{
+    
+    if([nomeGesture isEqualToString:@"gestureTap"]){
+        GestureItem *gesture = [[GestureItem alloc]initWithTarget:self action:@selector(acaoToqueObjeto:)];
+        gesture.numberOfTapsRequired = 1;
+        gesture.numberOfTouchesRequired = 1;
+        gesture.item = viewContainer;
+        [viewContainer addGestureRecognizer:gesture];
+        
+    }else if([nomeGesture isEqualToString:@"gestureLong"]){
+       
+        
+    }else if([nomeGesture isEqualToString:@"gesturePinch"]){
+        
+        
+    }else if([nomeGesture isEqualToString:@"gestureRotation"]){
+        
+        
+    }else if([nomeGesture isEqualToString:@"gestureSwipe"]){
+       
+        
+    }else if([nomeGesture isEqualToString:@"gesturePan"]){
+        
+        
+    }else{
+        
+        
+    }
+}
+
+-(void)acaoToqueObjeto:(GestureItem*)gestureItem{
+    SomItem *somItem = gestureItem.item.listaSonsURL.firstObject;
+    gestureItem.item.estadoPressionado = YES;
+    [[GerenciadorAudio sharedManager]playAudio:somItem.caminhoAudio];
 }
 
 @end

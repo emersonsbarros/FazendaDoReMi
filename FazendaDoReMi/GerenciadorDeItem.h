@@ -9,6 +9,8 @@
 #import "Item.h"
 #import "SpriteItem.h"
 #import "SomItem.h"
+#import "GerenciadorAudio.h"
+#import "GestureItem.h"
 
 #import <Foundation/Foundation.h>
 
@@ -18,9 +20,10 @@
 @property NSMutableArray *listaDeItens;
 
 //Metodos
--(void)retornaItem:(NSString*)nome :(UIView*)viewContainer;
+-(void)retornaItem:(NSString*)nome :(UIView*)viewContainer :(NSString*)nomeGesture;
 
 
 +(GerenciadorDeItem*)sharedManager;
+
 
 @end

@@ -42,11 +42,13 @@
     [[GerenciadorComponenteView sharedManager]addComponentesMascote:self:0:200:@"zecao"];
     
     
-    [[GerenciadorDeItem sharedManager]retornaItem:@"piano":self.imgTeste];
-    [[GerenciadorAnimacoes sharedManager]animacaozoomImagem:self.imgTeste];
+    [[GerenciadorDeItem sharedManager]retornaItem:@"piano":self.imgTeste:@"gestureTap"];
     
+    NSLog(@"V = %hhd",self.imgTeste.estadoPressionado);
     
-    [[GerenciadorAnimacoes sharedManager]animacaoSpriteEspecifica:self.imgTeste:@"pianoTocando":4:YES:NO:2.0];
+    //[[GerenciadorAnimacoes sharedManager]animacaozoomImagem:self.imgTeste];
+    
+    //[[GerenciadorAnimacoes sharedManager]animacaoSpriteEspecifica:self.imgTeste:@"pianoTocando":4:YES:NO:2.0];
     
        
     [self animacoesIntro];
@@ -81,6 +83,9 @@
     [[GerenciadorAnimacoes sharedManager]animacaoOpacidade:self.btoJogos:1.0:1:NO:NO];
     [[GerenciadorAnimacoes sharedManager]animacaoOpacidade:self.btoJornada:1.0:1:NO:NO];
     
+}
+- (IBAction)bt:(id)sender {
+    NSLog(@"V = %hhd",self.imgTeste.estadoPressionado);
 }
 
 -(void)animacaoPorteira{

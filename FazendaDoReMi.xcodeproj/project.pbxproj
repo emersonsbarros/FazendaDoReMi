@@ -217,6 +217,7 @@
 		3FC5D34B19DA61FD00348F51 /* BarraNotasPausasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC5D34819DA61FD00348F51 /* BarraNotasPausasViewController.xib */; };
 		3FC5D34C19DA61FD00348F51 /* ListaInstrumentoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC5D34919DA61FD00348F51 /* ListaInstrumentoViewController.xib */; };
 		3FC5D34D19DA61FD00348F51 /* PlayerPartituraEdicaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC5D34A19DA61FD00348F51 /* PlayerPartituraEdicaoViewController.xib */; };
+		3FCBCDDE19EB5C66008C15F8 /* GestureItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBCDDD19EB5C66008C15F8 /* GestureItem.m */; };
 		3FDCC04E19EB0673003DC572 /* SomItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCC04D19EB0673003DC572 /* SomItem.m */; };
 		3FEF298F19E8BCDC00C01AB5 /* piano.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FEF298C19E8BCDC00C01AB5 /* piano.png */; };
 		3FEF299019E8BCDC00C01AB5 /* piano2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FEF298D19E8BCDC00C01AB5 /* piano2.png */; };
@@ -500,6 +501,8 @@
 		3FC5D34819DA61FD00348F51 /* BarraNotasPausasViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarraNotasPausasViewController.xib; sourceTree = "<group>"; };
 		3FC5D34919DA61FD00348F51 /* ListaInstrumentoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListaInstrumentoViewController.xib; sourceTree = "<group>"; };
 		3FC5D34A19DA61FD00348F51 /* PlayerPartituraEdicaoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerPartituraEdicaoViewController.xib; sourceTree = "<group>"; };
+		3FCBCDDC19EB5C66008C15F8 /* GestureItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureItem.h; sourceTree = "<group>"; };
+		3FCBCDDD19EB5C66008C15F8 /* GestureItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureItem.m; sourceTree = "<group>"; };
 		3FDCC04C19EB0673003DC572 /* SomItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SomItem.h; sourceTree = "<group>"; };
 		3FDCC04D19EB0673003DC572 /* SomItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SomItem.m; sourceTree = "<group>"; };
 		3FEF298C19E8BCDC00C01AB5 /* piano.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = piano.png; sourceTree = "<group>"; };
@@ -1077,6 +1080,8 @@
 				A811633F19D22A9300506D94 /* SpriteItem.m */,
 				3FDCC04C19EB0673003DC572 /* SomItem.h */,
 				3FDCC04D19EB0673003DC572 /* SomItem.m */,
+				3FCBCDDC19EB5C66008C15F8 /* GestureItem.h */,
+				3FCBCDDD19EB5C66008C15F8 /* GestureItem.m */,
 			);
 			name = Item;
 			path = ..;
@@ -1558,6 +1563,7 @@
 				3FC5D33719DA5C3200348F51 /* Nota.m in Sources */,
 				A8F1C4B219D1F8AD001850E4 /* EstudioViewController.m in Sources */,
 				3FC5D33919DA5C3200348F51 /* NotaEdicaoGesture.m in Sources */,
+				3FCBCDDE19EB5C66008C15F8 /* GestureItem.m in Sources */,
 				A8F1C4C519D207CE001850E4 /* Fala.m in Sources */,
 				3FC5D34719DA5DC200348F51 /* ListaInstrumentoViewController.m in Sources */,
 				A8F1C4C919D21129001850E4 /* GerenciadorDeMascote.m in Sources */,
