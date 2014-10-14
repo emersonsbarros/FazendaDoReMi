@@ -8,6 +8,8 @@
 
 #import "GerenciadorAnimacoes.h"
 
+
+
 @implementation GerenciadorAnimacoes
 
 -(id)init{
@@ -115,12 +117,12 @@
 }
 
 
--(void)animacaozoomImagem:(UIView*)view :(float)duracao :(float)repeticao :(BOOL)autoReverso :(float)valorInicial :(float)valorFinal{
+-(void)animacaozoomImagem:(UIView*)view :(float)duracao :(float)repeticao :(BOOL)autoReverso :(id)valorInicial :(id)valorFinal{
 
     CABasicAnimation *pulseAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale.xy"];
-    pulseAnimation.fromValue = @0.0;
-    pulseAnimation.toValue = @1.0;
-    pulseAnimation.duration = 2;
+    pulseAnimation.fromValue = valorInicial;
+    pulseAnimation.toValue = valorFinal;
+    pulseAnimation.duration = duracao;
     pulseAnimation.repeatCount = repeticao;
 
     [view.layer addAnimation:pulseAnimation forKey:@"pulse"];

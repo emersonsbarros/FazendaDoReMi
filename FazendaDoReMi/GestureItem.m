@@ -10,4 +10,14 @@
 
 @implementation GestureItem
 
+
+-(id)init{
+    self = [super init];
+    
+    if(self){
+        self.listaMetodos = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
 @end

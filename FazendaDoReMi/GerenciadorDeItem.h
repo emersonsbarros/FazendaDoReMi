@@ -20,7 +20,7 @@
 @property NSMutableArray *listaDeItens;
 
 //Metodos
--(void)retornaItem:(NSString*)nome :(UIView*)viewContainer :(NSString*)nomeGesture;
+
 
 
 +(GerenciadorDeItem*)sharedManager;

@@ -12,5 +12,7 @@
 @interface GestureItem : UITapGestureRecognizer
 
 @property Item *item;
+@property NSString *metodosSolicidados;
+@property NSMutableArray *listaMetodos;
 
 @end

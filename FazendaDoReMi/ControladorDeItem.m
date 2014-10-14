@@ -45,7 +45,6 @@
                                    userInfo: nil
                                     repeats: YES];
     
-    
     for(Item *itemPressionado in listaItens){
         [self.listaObjetosPressionados addObject:itemPressionado];
     }
@@ -61,7 +60,6 @@
         }
     }
     
-    //NSLog(@"c=%d",self.contadorItensPressionados);
     
     if(self.contadorItensPressionados == self.listaObjetosPressionados.count){
         NSLog(@"Todos Pressionados");
@@ -71,6 +69,28 @@
     }
    
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+-(void)retornaItem:(NSString*)nome :(Item*)viewContainer :(NSString*)nomeGesture{
+    
+    //Procura o item na lista
+    for (Item *item in [GerenciadorDeItem sharedManager].listaDeItens) {
+        if ([item.nome isEqualToString: nome]) {
+            item.frame = viewContainer.frame;
+            viewContainer.image = item.image;
+            viewContainer.nome = item.nome;
+            viewContainer.listaSonsURL = item.listaSonsURL;
+            viewContainer.listaSprites = item.listaSprites;
+            viewContainer.estadoPressionado = item.estadoPressionado;
+            //return item;
+        }
+    }
+    
+    [[GerenciadorMetodo sharedManager] addGestureItem:nomeGesture :viewContainer];
+    
+}
+
 
 
 @end

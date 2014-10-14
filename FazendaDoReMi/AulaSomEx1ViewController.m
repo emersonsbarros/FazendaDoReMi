@@ -32,11 +32,15 @@
 
     
     //Add referencia puchando da base de itens (nomeItem,outlet,tipoGesture)
-    [[GerenciadorDeItem sharedManager]retornaItem:@"piano":self.imgPiano:@"gestureTap"];
-    [[GerenciadorDeItem sharedManager]retornaItem:@"flauta":self.imgFlauta:@"gestureTap"];
-    [[GerenciadorDeItem sharedManager]retornaItem:@"tambor":self.imgTambor:@"gestureTap"];
-    [[GerenciadorDeItem sharedManager]retornaItem:@"violao":self.imgViolao:@"gestureTap"];
-    [[GerenciadorDeItem sharedManager]retornaItem:@"xilofone":self.imgXilofone:@"gestureTap"];
+    [[ControladorDeItem sharedManager]retornaItem:@"piano":self.imgPiano:@"gestureTap+1+2+3"];
+    [[ControladorDeItem sharedManager]retornaItem:@"flauta":self.imgFlauta:@"gestureTap+1+2+3"];
+    [[ControladorDeItem sharedManager]retornaItem:@"tambor":self.imgTambor:@"gestureTap+1+2+3"];
+    [[ControladorDeItem sharedManager]retornaItem:@"violao":self.imgViolao:@"gestureTap+1+2+3"];
+    [[ControladorDeItem sharedManager]retornaItem:@"xilofone":self.imgXilofone:@"gestureTap+1+2+3"];
+    
+    [[ControladorDeItem sharedManager]retornaItem:@"saxfone":self.imgSaxfone:@"gestureTap+1+2+3"];
+    [[ControladorDeItem sharedManager]retornaItem:@"chocalho":self.imgChocalho:@"gestureTap+1+2+3"];
+    [[ControladorDeItem sharedManager]retornaItem:@"violino":self.imgViolino:@"gestureTap+1+2+3"];
     
     
     

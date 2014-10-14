@@ -12,6 +12,22 @@
 		0B1D2A8519E46B81003CA4C4 /* BotaoVoltarMapaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1D2A8319E46B81003CA4C4 /* BotaoVoltarMapaViewController.m */; };
 		0B1D2A8619E46B81003CA4C4 /* BotaoVoltarMapaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1D2A8419E46B81003CA4C4 /* BotaoVoltarMapaViewController.xib */; };
 		0B1D2A8919E46CD1003CA4C4 /* GerenciadorNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1D2A8819E46CD1003CA4C4 /* GerenciadorNavigationController.m */; };
+		0B2FFB1419ED9A7600FD752E /* Doc NumerosMetodos.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB1319ED9A7600FD752E /* Doc NumerosMetodos.rtf */; };
+		0B2FFB1D19EDB7B500FD752E /* GerenciadorMetodo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2FFB1C19EDB7B500FD752E /* GerenciadorMetodo.m */; };
+		0B2FFB2F19EDBA1C00FD752E /* chocalho.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB1F19EDBA1C00FD752E /* chocalho.png */; };
+		0B2FFB3019EDBA1C00FD752E /* flauta.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2019EDBA1C00FD752E /* flauta.png */; };
+		0B2FFB3119EDBA1C00FD752E /* flor.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2119EDBA1C00FD752E /* flor.png */; };
+		0B2FFB3219EDBA1C00FD752E /* flor2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2219EDBA1C00FD752E /* flor2.png */; };
+		0B2FFB3319EDBA1C00FD752E /* piano.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2319EDBA1C00FD752E /* piano.png */; };
+		0B2FFB3519EDBA1C00FD752E /* portaretrato.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2519EDBA1C00FD752E /* portaretrato.png */; };
+		0B2FFB3619EDBA1C00FD752E /* portaretrato2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2619EDBA1C00FD752E /* portaretrato2.png */; };
+		0B2FFB3719EDBA1C00FD752E /* prendedor.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2719EDBA1C00FD752E /* prendedor.png */; };
+		0B2FFB3919EDBA1C00FD752E /* sala_Timbre.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2919EDBA1C00FD752E /* sala_Timbre.png */; };
+		0B2FFB3A19EDBA1C00FD752E /* saxfone.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2A19EDBA1C00FD752E /* saxfone.png */; };
+		0B2FFB3B19EDBA1C00FD752E /* tambor.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2B19EDBA1C00FD752E /* tambor.png */; };
+		0B2FFB3C19EDBA1C00FD752E /* violao.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2C19EDBA1C00FD752E /* violao.png */; };
+		0B2FFB3D19EDBA1C00FD752E /* violino.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2D19EDBA1C00FD752E /* violino.png */; };
+		0B2FFB3E19EDBA1C00FD752E /* xilofone.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2E19EDBA1C00FD752E /* xilofone.png */; };
 		0B6DCC9F19DB2D2500C166E3 /* nuvem-voltar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B6DCC9E19DB2D2500C166E3 /* nuvem-voltar.png */; };
 		0B6DCCA319DB2D8D00C166E3 /* botaoflauta.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B6DCCA019DB2D8D00C166E3 /* botaoflauta.png */; };
 		0B6DCCA419DB2D8D00C166E3 /* botaopiano.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B6DCCA119DB2D8D00C166E3 /* botaopiano.png */; };
@@ -220,7 +236,6 @@
 		3FC5D34D19DA61FD00348F51 /* PlayerPartituraEdicaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC5D34A19DA61FD00348F51 /* PlayerPartituraEdicaoViewController.xib */; };
 		3FCBCDDE19EB5C66008C15F8 /* GestureItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBCDDD19EB5C66008C15F8 /* GestureItem.m */; };
 		3FDCC04E19EB0673003DC572 /* SomItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCC04D19EB0673003DC572 /* SomItem.m */; };
-		3FEF298F19E8BCDC00C01AB5 /* piano.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FEF298C19E8BCDC00C01AB5 /* piano.png */; };
 		3FEF299019E8BCDC00C01AB5 /* piano2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FEF298D19E8BCDC00C01AB5 /* piano2.png */; };
 		3FEF299119E8BCDC00C01AB5 /* somPiano.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FEF298E19E8BCDC00C01AB5 /* somPiano.wav */; };
 		A811633B19D229CB00506D94 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = A811633A19D229CB00506D94 /* Item.m */; };
@@ -274,6 +289,23 @@
 		0B1D2A8419E46B81003CA4C4 /* BotaoVoltarMapaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BotaoVoltarMapaViewController.xib; sourceTree = "<group>"; };
 		0B1D2A8719E46CD1003CA4C4 /* GerenciadorNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GerenciadorNavigationController.h; sourceTree = "<group>"; };
 		0B1D2A8819E46CD1003CA4C4 /* GerenciadorNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GerenciadorNavigationController.m; sourceTree = "<group>"; };
+		0B2FFB1319ED9A7600FD752E /* Doc NumerosMetodos.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "Doc NumerosMetodos.rtf"; sourceTree = "<group>"; };
+		0B2FFB1B19EDB7B500FD752E /* GerenciadorMetodo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GerenciadorMetodo.h; sourceTree = "<group>"; };
+		0B2FFB1C19EDB7B500FD752E /* GerenciadorMetodo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GerenciadorMetodo.m; sourceTree = "<group>"; };
+		0B2FFB1F19EDBA1C00FD752E /* chocalho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chocalho.png; sourceTree = "<group>"; };
+		0B2FFB2019EDBA1C00FD752E /* flauta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flauta.png; sourceTree = "<group>"; };
+		0B2FFB2119EDBA1C00FD752E /* flor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flor.png; sourceTree = "<group>"; };
+		0B2FFB2219EDBA1C00FD752E /* flor2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flor2.png; sourceTree = "<group>"; };
+		0B2FFB2319EDBA1C00FD752E /* piano.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = piano.png; sourceTree = "<group>"; };
+		0B2FFB2519EDBA1C00FD752E /* portaretrato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portaretrato.png; sourceTree = "<group>"; };
+		0B2FFB2619EDBA1C00FD752E /* portaretrato2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portaretrato2.png; sourceTree = "<group>"; };
+		0B2FFB2719EDBA1C00FD752E /* prendedor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prendedor.png; sourceTree = "<group>"; };
+		0B2FFB2919EDBA1C00FD752E /* sala_Timbre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sala_Timbre.png; sourceTree = "<group>"; };
+		0B2FFB2A19EDBA1C00FD752E /* saxfone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saxfone.png; sourceTree = "<group>"; };
+		0B2FFB2B19EDBA1C00FD752E /* tambor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tambor.png; sourceTree = "<group>"; };
+		0B2FFB2C19EDBA1C00FD752E /* violao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = violao.png; sourceTree = "<group>"; };
+		0B2FFB2D19EDBA1C00FD752E /* violino.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = violino.png; sourceTree = "<group>"; };
+		0B2FFB2E19EDBA1C00FD752E /* xilofone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xilofone.png; sourceTree = "<group>"; };
 		0B6DCC9E19DB2D2500C166E3 /* nuvem-voltar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nuvem-voltar.png"; sourceTree = "<group>"; };
 		0B6DCCA019DB2D8D00C166E3 /* botaoflauta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botaoflauta.png; sourceTree = "<group>"; };
 		0B6DCCA119DB2D8D00C166E3 /* botaopiano.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botaopiano.png; sourceTree = "<group>"; };
@@ -508,7 +540,6 @@
 		3FCBCDDD19EB5C66008C15F8 /* GestureItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureItem.m; sourceTree = "<group>"; };
 		3FDCC04C19EB0673003DC572 /* SomItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SomItem.h; sourceTree = "<group>"; };
 		3FDCC04D19EB0673003DC572 /* SomItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SomItem.m; sourceTree = "<group>"; };
-		3FEF298C19E8BCDC00C01AB5 /* piano.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = piano.png; sourceTree = "<group>"; };
 		3FEF298D19E8BCDC00C01AB5 /* piano2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = piano2.png; sourceTree = "<group>"; };
 		3FEF298E19E8BCDC00C01AB5 /* somPiano.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = somPiano.wav; sourceTree = "<group>"; };
 		A811633919D229CB00506D94 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
@@ -607,6 +638,27 @@
 				0BB1F17919E5D3B000E9F8E4 /* BotaoVoltar */,
 			);
 			name = Componentes;
+			sourceTree = "<group>";
+		};
+		0B2FFB1E19EDBA1C00FD752E /* imagensSala */ = {
+			isa = PBXGroup;
+			children = (
+				0B2FFB1F19EDBA1C00FD752E /* chocalho.png */,
+				0B2FFB2019EDBA1C00FD752E /* flauta.png */,
+				0B2FFB2119EDBA1C00FD752E /* flor.png */,
+				0B2FFB2219EDBA1C00FD752E /* flor2.png */,
+				0B2FFB2319EDBA1C00FD752E /* piano.png */,
+				0B2FFB2519EDBA1C00FD752E /* portaretrato.png */,
+				0B2FFB2619EDBA1C00FD752E /* portaretrato2.png */,
+				0B2FFB2719EDBA1C00FD752E /* prendedor.png */,
+				0B2FFB2919EDBA1C00FD752E /* sala_Timbre.png */,
+				0B2FFB2A19EDBA1C00FD752E /* saxfone.png */,
+				0B2FFB2B19EDBA1C00FD752E /* tambor.png */,
+				0B2FFB2C19EDBA1C00FD752E /* violao.png */,
+				0B2FFB2D19EDBA1C00FD752E /* violino.png */,
+				0B2FFB2E19EDBA1C00FD752E /* xilofone.png */,
+			);
+			path = imagensSala;
 			sourceTree = "<group>";
 		};
 		0B9F945719E86629005F4314 /* Audios */ = {
@@ -949,6 +1001,7 @@
 		3FC5D24819DA568F00348F51 /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				0B2FFB1E19EDBA1C00FD752E /* imagensSala */,
 				3F0E879319DBA689003FF4EB /* mapaAventura.png */,
 				3FC5D24919DA568F00348F51 /* background-arvore.png */,
 				3FC5D24A19DA568F00348F51 /* background-ceu.png */,
@@ -1087,6 +1140,8 @@
 				3FCBCDDD19EB5C66008C15F8 /* GestureItem.m */,
 				0B862C4119EC6E60009365DD /* ControladorDeItem.h */,
 				0B862C4219EC6E60009365DD /* ControladorDeItem.m */,
+				0B2FFB1B19EDB7B500FD752E /* GerenciadorMetodo.h */,
+				0B2FFB1C19EDB7B500FD752E /* GerenciadorMetodo.m */,
 			);
 			name = Item;
 			path = ..;
@@ -1102,7 +1157,7 @@
 		A824716C19D0AB0E00168026 = {
 			isa = PBXGroup;
 			children = (
-				3FEF298C19E8BCDC00C01AB5 /* piano.png */,
+				0B2FFB1319ED9A7600FD752E /* Doc NumerosMetodos.rtf */,
 				3FEF298D19E8BCDC00C01AB5 /* piano2.png */,
 				3FEF298E19E8BCDC00C01AB5 /* somPiano.wav */,
 				3FC5D2B619DA59BA00348F51 /* Composicao-Edicao */,
@@ -1334,6 +1389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B2FFB1419ED9A7600FD752E /* Doc NumerosMetodos.rtf in Resources */,
 				3F0E880F19DBA941003FF4EB /* ZECAO45.png in Resources */,
 				3F0E87FC19DBA941003FF4EB /* ZECAO26.png in Resources */,
 				3FB6F57719DA67E60080057B /* P200 Piano F#4.caf in Resources */,
@@ -1358,6 +1414,7 @@
 				0B1D2A8019E46A8D003CA4C4 /* AulaSomEx1ViewController.xib in Resources */,
 				3F0E882719DBA941003FF4EB /* ZECAO69.png in Resources */,
 				3F0E880419DBA941003FF4EB /* ZECAO34.png in Resources */,
+				0B2FFB3E19EDBA1C00FD752E /* xilofone.png in Resources */,
 				3FB6F56E19DA67E60080057B /* P200 Piano C7.caf in Resources */,
 				3FB6F51019DA659C0080057B /* ReMeiotempo.png in Resources */,
 				3FB6F4FE19DA659C0080057B /* btnplay.png in Resources */,
@@ -1368,9 +1425,12 @@
 				3FC5D25919DA568F00348F51 /* background-ceu.png in Resources */,
 				3F0E87FA19DBA941003FF4EB /* ZECAO24.png in Resources */,
 				3F0E880C19DBA941003FF4EB /* ZECAO42.png in Resources */,
+				0B2FFB3719EDBA1C00FD752E /* prendedor.png in Resources */,
 				3F0E87F419DBA941003FF4EB /* ZECAO18.png in Resources */,
 				3FB6F56219DA67E60080057B /* 5 - B.caf in Resources */,
+				0B2FFB3D19EDBA1C00FD752E /* violino.png in Resources */,
 				3FB6F55519DA67E60080057B /* fad2.caf in Resources */,
+				0B2FFB3219EDBA1C00FD752E /* flor2.png in Resources */,
 				3FC5D25C19DA568F00348F51 /* botao-jornada.png in Resources */,
 				3FC5D34D19DA61FD00348F51 /* PlayerPartituraEdicaoViewController.xib in Resources */,
 				3FB6F56119DA67E60080057B /* 4 - G.caf in Resources */,
@@ -1396,6 +1456,7 @@
 				3F0E880519DBA941003FF4EB /* ZECAO35.png in Resources */,
 				3FB6F51419DA659C0080057B /* Sitempo.png in Resources */,
 				3F0E882219DBA941003FF4EB /* ZECAO64.png in Resources */,
+				0B2FFB3919EDBA1C00FD752E /* sala_Timbre.png in Resources */,
 				3FB6F4F519DA659C0080057B /* botao12Pausa.png in Resources */,
 				3FB6F55119DA67E60080057B /* do1.caf in Resources */,
 				3F0E881E19DBA941003FF4EB /* ZECAO60.png in Resources */,
@@ -1404,6 +1465,7 @@
 				3F0E881C19DBA941003FF4EB /* ZECAO58.png in Resources */,
 				3FB6F50919DA659C0080057B /* La4Tempos.png in Resources */,
 				3FB6F56F19DA67E60080057B /* P200 Piano D#8.caf in Resources */,
+				0B2FFB3B19EDBA1C00FD752E /* tambor.png in Resources */,
 				3F0E881319DBA941003FF4EB /* ZECAO49.png in Resources */,
 				3FB6F4F619DA659C0080057B /* botao12Tempo.png in Resources */,
 				3F0E87F219DBA941003FF4EB /* ZECAO16.png in Resources */,
@@ -1415,6 +1477,7 @@
 				3F0E882B19DBA941003FF4EB /* ZECAO73.png in Resources */,
 				3FB6F57619DA67E60080057B /* P200 Piano F#3.caf in Resources */,
 				3F0E87EA19DBA941003FF4EB /* ZECAO08.png in Resources */,
+				0B2FFB3319EDBA1C00FD752E /* piano.png in Resources */,
 				3F0E87F519DBA941003FF4EB /* ZECAO19.png in Resources */,
 				3F0E880019DBA941003FF4EB /* ZECAO30.png in Resources */,
 				3FB6F55619DA67E60080057B /* fad3.caf in Resources */,
@@ -1456,9 +1519,11 @@
 				A824718519D0AB0E00168026 /* InfoPlist.strings in Resources */,
 				3F0E87FD19DBA941003FF4EB /* ZECAO27.png in Resources */,
 				3FB6F50E19DA659C0080057B /* Mitempo.png in Resources */,
+				0B2FFB3A19EDBA1C00FD752E /* saxfone.png in Resources */,
 				3F0E87F819DBA941003FF4EB /* ZECAO22.png in Resources */,
 				3FB6F50719DA659C0080057B /* Fatempo.png in Resources */,
 				3FC5D34B19DA61FD00348F51 /* BarraNotasPausasViewController.xib in Resources */,
+				0B2FFB3119EDBA1C00FD752E /* flor.png in Resources */,
 				3FC5D34C19DA61FD00348F51 /* ListaInstrumentoViewController.xib in Resources */,
 				3FC5D26419DA568F00348F51 /* porteira-5.png in Resources */,
 				3F0E879419DBA689003FF4EB /* mapaAventura.png in Resources */,
@@ -1469,8 +1534,10 @@
 				3FB6F4FF19DA659C0080057B /* fundoazul.png in Resources */,
 				3F0E87F719DBA941003FF4EB /* ZECAO21.png in Resources */,
 				3F0E881219DBA941003FF4EB /* ZECAO48.png in Resources */,
+				0B2FFB3C19EDBA1C00FD752E /* violao.png in Resources */,
 				3F0E87EC19DBA941003FF4EB /* ZECAO10.png in Resources */,
 				3FB6F57519DA67E60080057B /* P200 Piano F#2.caf in Resources */,
+				0B2FFB2F19EDBA1C00FD752E /* chocalho.png in Resources */,
 				3F0E882A19DBA941003FF4EB /* ZECAO72.png in Resources */,
 				3FB6F57019DA67E60080057B /* P200 Piano D2.caf in Resources */,
 				3F0E881819DBA941003FF4EB /* ZECAO54.png in Resources */,
@@ -1478,16 +1545,18 @@
 				3FB6F57319DA67E60080057B /* P200 Piano D5.caf in Resources */,
 				A82471B219D0AE2600168026 /* iPad.storyboard in Resources */,
 				3F0E880119DBA941003FF4EB /* ZECAO31.png in Resources */,
+				0B2FFB3619EDBA1C00FD752E /* portaretrato2.png in Resources */,
 				3F0E87E619DBA941003FF4EB /* ZECAO04.png in Resources */,
 				3F0E87FB19DBA941003FF4EB /* ZECAO25.png in Resources */,
 				3FB6F57819DA67E60080057B /* P200 Piano F#5.caf in Resources */,
 				3F0E87FE19DBA941003FF4EB /* ZECAO28.png in Resources */,
-				3FEF298F19E8BCDC00C01AB5 /* piano.png in Resources */,
+				0B2FFB3519EDBA1C00FD752E /* portaretrato.png in Resources */,
 				A824719019D0AB0E00168026 /* Images.xcassets in Resources */,
 				3FB6F56B19DA67E60080057B /* P200 Piano A#5.caf in Resources */,
 				0B6DCCA419DB2D8D00C166E3 /* botaopiano.png in Resources */,
 				3FB6F55E19DA67E60080057B /* 1 - E.caf in Resources */,
 				3FB6F57C19DA67E60080057B /* Piano.plist in Resources */,
+				0B2FFB3019EDBA1C00FD752E /* flauta.png in Resources */,
 				3F0E880219DBA941003FF4EB /* ZECAO32.png in Resources */,
 				3F0E880619DBA941003FF4EB /* ZECAO36.png in Resources */,
 				3FB6F56419DA67E60080057B /* 6a - A.caf in Resources */,
@@ -1541,6 +1610,7 @@
 				A811633B19D229CB00506D94 /* Item.m in Sources */,
 				0B1D2A8519E46B81003CA4C4 /* BotaoVoltarMapaViewController.m in Sources */,
 				3FC5D33819DA5C3200348F51 /* NotaAnimadaPadrao.m in Sources */,
+				0B2FFB1D19EDB7B500FD752E /* GerenciadorMetodo.m in Sources */,
 				3FC5D2F319DA59BA00348F51 /* BarraNotasPausasViewController.m in Sources */,
 				A811634319D22B0000506D94 /* GerenciadorDeItem.m in Sources */,
 				A8B2C25119D5E36900B3D892 /* MenuViewController.m in Sources */,

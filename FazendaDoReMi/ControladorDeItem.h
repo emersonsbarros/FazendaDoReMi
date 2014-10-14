@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "Item.h"
+#import "SpriteItem.h"
+#import "SomItem.h"
+#import "GerenciadorAudio.h"
+#import "GestureItem.h"
+#import "GerenciadorAnimacoes.h"
+#import "GerenciadorDeItem.h"
+#import "GerenciadorMetodo.h"
 
 @interface ControladorDeItem : NSObject
 
@@ -21,5 +28,7 @@
 
 
 -(void)chamaVerificador:(NSArray*)listaItens;
+
+-(void)retornaItem:(NSString*)nome :(UIView*)viewContainer :(NSString*)nomeGesture;
 
 @end

@@ -27,5 +27,17 @@
 
 @property (weak, nonatomic) IBOutlet Item *imgXilofone;
 
+@property (weak, nonatomic) IBOutlet Item *imgChocalho;
+
+@property (weak, nonatomic) IBOutlet Item *imgViolino;
+
+@property (weak, nonatomic) IBOutlet Item *imgSaxfone;
+
+@property (weak, nonatomic) IBOutlet Item *imgQuadro;
+
+@property (weak, nonatomic) IBOutlet Item *imgFlorGiratoria;
+
+@property (weak, nonatomic) IBOutlet Item *imgFlorAgua;
+
 
 @end

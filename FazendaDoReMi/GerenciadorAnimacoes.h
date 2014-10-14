@@ -14,11 +14,16 @@
 #import <Foundation/Foundation.h>
 #import "Item.h"
 #import "SpriteItem.h"
+#import "GestureItem.h"
+#import "SomItem.h"
+#import "GerenciadorAudio.h"
 
 @interface GerenciadorAnimacoes : NSObject
 
 
 +(GerenciadorAnimacoes*)sharedManager;
+
+
 
 
 -(void)animacaoOpacidade:(UIView*)view :(float)duracao :(float)repeticao :(BOOL)autoReverso :(BOOL)voltarAoEstadoInicial;
@@ -27,10 +32,9 @@
 
 -(void)animacaoMoverLugar:(UIView*)view :(float)duracao :(float)repeticao :(BOOL)autoReverso :(float)posX :(float)posY;
 
--(void)animacaozoomImagem:(UIView*)view :(float)duracao :(float)repeticao :(BOOL)autoReverso :(float)valorInicial :(float)valorFinal;
+-(void)animacaozoomImagem:(UIView*)view :(float)duracao :(float)repeticao :(BOOL)autoReverso :(id)valorInicial :(id)valorFinal;
 
 -(void)animacaozoomImagem:(UIView*)view;
-
 
 -(void)animacaoSpriteEspecifica:(Item*)viewItem :(NSString*)nomeAnimacaoSprite :(float)repeticao :(BOOL)autoReverso :(BOOL)voltarAoEstadoInicial :(float)tempoDelayComecar;
 
