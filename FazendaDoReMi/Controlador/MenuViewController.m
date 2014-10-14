@@ -44,19 +44,6 @@
     [[MascoteViewController sharedManager]executaSomMascote:@"BemVindoFazenda":2.0];
     
     
-    [[ControladorDeItem sharedManager]chamaVerificador:[NSArray arrayWithObjects:self.imgTeste, nil]];
-    
-    
-    
-    //Add referencia
-    [[GerenciadorDeItem sharedManager]retornaItem:@"piano":self.imgTeste:@"gestureTap"];
-    
-    
-    NSLog(@"V = %hhd",self.imgTeste.estadoPressionado);
-    
-    
-    //[[GerenciadorAnimacoes sharedManager]animacaoSpriteEspecifica:self.imgTeste:@"pianoTocando":4:YES:NO:2.0];
-    
        
     [self animacoesIntro];
 
@@ -92,9 +79,6 @@
     
 }
 
-- (IBAction)bt:(id)sender {
-    NSLog(@"V = %hhd",self.imgTeste.estadoPressionado);
-}
 
 -(void)animacaoPorteira{
     

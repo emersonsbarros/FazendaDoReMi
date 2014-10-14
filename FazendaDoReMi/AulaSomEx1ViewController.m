@@ -28,7 +28,24 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-     [[GerenciadorComponenteView sharedManager]addComponentesBotaoVoltaMapa:self];
+    [[GerenciadorComponenteView sharedManager]addComponentesBotaoVoltaMapa:self];
+
+    
+    //Add referencia puchando da base de itens (nomeItem,outlet,tipoGesture)
+    [[GerenciadorDeItem sharedManager]retornaItem:@"piano":self.imgPiano:@"gestureTap"];
+    [[GerenciadorDeItem sharedManager]retornaItem:@"flauta":self.imgFlauta:@"gestureTap"];
+    [[GerenciadorDeItem sharedManager]retornaItem:@"tambor":self.imgTambor:@"gestureTap"];
+    [[GerenciadorDeItem sharedManager]retornaItem:@"violao":self.imgViolao:@"gestureTap"];
+    [[GerenciadorDeItem sharedManager]retornaItem:@"xilofone":self.imgXilofone:@"gestureTap"];
+    
+    
+    
+    //Add os itens que é desejado pressionar para decorrer com o proximo exercicio
+    [[ControladorDeItem sharedManager]chamaVerificador:[NSArray arrayWithObjects:self.imgFlauta,self.imgPiano,self.imgTambor,self.imgViolao,self.imgXilofone, nil]];
+    
+    
+     //[[GerenciadorAnimacoes sharedManager]animacaoSpriteEspecifica:self.imgTeste:@"pianoTocando":4:YES:NO:2.0];
+    
 
 }
 
@@ -39,7 +56,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    NSLog(@"numerp = %d",self.navigationController.viewControllers.count);
+    
 }
 
 

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Item.h"
+#import "ControladorDeItem.h"
+#import "GerenciadorDeItem.h"
 #import "GerenciadorComponenteView.h"
 
 

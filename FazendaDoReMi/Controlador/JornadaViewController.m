@@ -31,7 +31,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    NSLog(@"numerp = %d",[GerenciadorNavigationController sharedManager].controladorApp.viewControllers.count);
+    
 }
 
 

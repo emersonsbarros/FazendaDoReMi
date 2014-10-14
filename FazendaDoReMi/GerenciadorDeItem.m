@@ -38,6 +38,10 @@
 -(void)instanciaItens{
     
     [self addItemPiano];
+    [self addItemXilofone];
+    [self addItemFlauta];
+    [self addItemTambor];
+    [self addItemViolao];
     
 }
 
@@ -71,6 +75,122 @@
     
 }
 
+-(void)addItemXilofone{
+    
+    //Cria item
+    Item *item = [[Item alloc]init];
+    item.nome = @"xilofone";
+    item.image = [UIImage imageNamed:@"piano.png"];
+    
+    //Add SOM
+    SomItem *somitem = [[SomItem alloc]init];
+    somitem.nomeSom = @"somXilofoneAcorde";
+    somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"somPiano" ofType:@"wav"]];
+    [item.listaSonsURL addObject:somitem];
+    
+    
+    //Cria sprite(somente imagens)
+    SpriteItem *itemsprite = [[SpriteItem alloc]init];
+    itemsprite.nomeAnimacao = @"xilofoneTocando";
+    UIImage *img1 = [UIImage imageNamed:@"piano.png"];
+    UIImage *img2 = [UIImage imageNamed:@"piano2.png"];
+    [itemsprite.listaImagens addObject:img1];
+    [itemsprite.listaImagens addObject:img2];
+    [item.listaSprites addObject:itemsprite];
+    
+    
+    //Add Item ao banco
+    [self.listaDeItens addObject:item];
+    
+}
+
+-(void)addItemFlauta{
+    
+    //Cria item
+    Item *item = [[Item alloc]init];
+    item.nome = @"flauta";
+    item.image = [UIImage imageNamed:@"piano.png"];
+    
+    //Add SOM
+    SomItem *somitem = [[SomItem alloc]init];
+    somitem.nomeSom = @"somFlautaAcorde";
+    somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"somPiano" ofType:@"wav"]];
+    [item.listaSonsURL addObject:somitem];
+    
+    
+    //Cria sprite(somente imagens)
+    SpriteItem *itemsprite = [[SpriteItem alloc]init];
+    itemsprite.nomeAnimacao = @"flautaTocando";
+    UIImage *img1 = [UIImage imageNamed:@"piano.png"];
+    UIImage *img2 = [UIImage imageNamed:@"piano2.png"];
+    [itemsprite.listaImagens addObject:img1];
+    [itemsprite.listaImagens addObject:img2];
+    [item.listaSprites addObject:itemsprite];
+    
+    
+    //Add Item ao banco
+    [self.listaDeItens addObject:item];
+    
+}
+
+-(void)addItemViolao{
+    
+    //Cria item
+    Item *item = [[Item alloc]init];
+    item.nome = @"violao";
+    item.image = [UIImage imageNamed:@"piano.png"];
+    
+    //Add SOM
+    SomItem *somitem = [[SomItem alloc]init];
+    somitem.nomeSom = @"somViolaoAcorde";
+    somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"somPiano" ofType:@"wav"]];
+    [item.listaSonsURL addObject:somitem];
+    
+    
+    //Cria sprite(somente imagens)
+    SpriteItem *itemsprite = [[SpriteItem alloc]init];
+    itemsprite.nomeAnimacao = @"violaoTocando";
+    UIImage *img1 = [UIImage imageNamed:@"piano.png"];
+    UIImage *img2 = [UIImage imageNamed:@"piano2.png"];
+    [itemsprite.listaImagens addObject:img1];
+    [itemsprite.listaImagens addObject:img2];
+    [item.listaSprites addObject:itemsprite];
+    
+    
+    //Add Item ao banco
+    [self.listaDeItens addObject:item];
+    
+}
+
+-(void)addItemTambor{
+    
+    //Cria item
+    Item *item = [[Item alloc]init];
+    item.nome = @"tambor";
+    item.image = [UIImage imageNamed:@"piano.png"];
+    
+    //Add SOM
+    SomItem *somitem = [[SomItem alloc]init];
+    somitem.nomeSom = @"somTamborAcorde";
+    somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"somPiano" ofType:@"wav"]];
+    [item.listaSonsURL addObject:somitem];
+    
+    
+    //Cria sprite(somente imagens)
+    SpriteItem *itemsprite = [[SpriteItem alloc]init];
+    itemsprite.nomeAnimacao = @"tamborTocando";
+    UIImage *img1 = [UIImage imageNamed:@"piano.png"];
+    UIImage *img2 = [UIImage imageNamed:@"piano2.png"];
+    [itemsprite.listaImagens addObject:img1];
+    [itemsprite.listaImagens addObject:img2];
+    [item.listaSprites addObject:itemsprite];
+    
+    
+    //Add Item ao banco
+    [self.listaDeItens addObject:item];
+    
+}
+
 /////////////////////// METODOS AUXILIARES ///////////////////////
 
 
@@ -90,7 +210,6 @@
     }
     
     [self addGestureItem:nomeGesture :viewContainer];
-  
     
 }
 
@@ -101,6 +220,7 @@
         gesture.numberOfTapsRequired = 1;
         gesture.numberOfTouchesRequired = 1;
         gesture.item = viewContainer;
+        viewContainer.userInteractionEnabled = YES;
         [viewContainer addGestureRecognizer:gesture];
         
     }else if([nomeGesture isEqualToString:@"gestureLong"]){
@@ -124,10 +244,17 @@
     }
 }
 
--(void)acaoToqueObjeto:(GestureItem*)gestureItem{
+-(void)tocarSomItem:(GestureItem*)gestureItem{
     SomItem *somItem = gestureItem.item.listaSonsURL.firstObject;
-    gestureItem.item.estadoPressionado = YES;
     [[GerenciadorAudio sharedManager]playAudio:somItem.caminhoAudio];
+}
+
+-(void)alteraEstadoPressionado:(GestureItem*)gestureItem{
+    gestureItem.item.estadoPressionado = YES;
+}
+
+-(void)acaoToqueObjeto:(GestureItem*)gestureItem{
+    
     
     [[GerenciadorAnimacoes sharedManager]animacaozoomImagem:gestureItem.item];
     

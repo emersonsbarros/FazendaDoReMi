@@ -61,6 +61,7 @@
         }
     }
     
+    //NSLog(@"c=%d",self.contadorItensPressionados);
     
     if(self.contadorItensPressionados == self.listaObjetosPressionados.count){
         NSLog(@"Todos Pressionados");
