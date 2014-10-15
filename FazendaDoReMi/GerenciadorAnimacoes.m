@@ -140,7 +140,20 @@
     [view.layer addAnimation:pulseAnimation forKey:@"pulse"];
 }
 
-
+-(void)animacaoGirarImagem:(UIView*)view :(float)duracao :(float)repeticoes{
+    
+    CABasicAnimation *imageRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    imageRotation.toValue = [NSNumber numberWithFloat: M_PI * 2.0 * 2 * 1 ];
+    
+    imageRotation.duration = duracao;
+    imageRotation.repeatCount = repeticoes;
+    
+    imageRotation.removedOnCompletion = NO;
+    imageRotation.autoreverses=NO;
+    imageRotation.fillMode = kCAFillModeForwards;
+    
+    [view.layer addAnimation:imageRotation forKey:@"imageRotation"];
+}
 
 @end
 

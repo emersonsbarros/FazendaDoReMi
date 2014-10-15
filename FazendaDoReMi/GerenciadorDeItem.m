@@ -46,6 +46,11 @@
     [self addItemViolino];
     [self addItemChocalho];
     
+    [self addItemFlorRocha];
+    [self addItemFlorRosa];
+    
+    [self addItemQuadroZecao];
+    
 }
 
 
@@ -223,7 +228,6 @@
     
 }
 
-
 -(void)addItemSaxfone{
     
     //Cria item
@@ -253,8 +257,6 @@
     
 }
 
-
-
 -(void)addItemViolino{
     
     //Cria item
@@ -283,6 +285,95 @@
     [self.listaDeItens addObject:item];
     
 }
+
+-(void)addItemFlorRocha{
+    
+    //Cria item
+    Item *item = [[Item alloc]init];
+    item.nome = @"florRocha";
+    item.image = [UIImage imageNamed:@"florRocha.png"];
+    
+    //Add SOM
+    SomItem *somitem = [[SomItem alloc]init];
+    somitem.nomeSom = @"somTamborAcorde";
+    somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"somPiano" ofType:@"wav"]];
+    [item.listaSonsURL addObject:somitem];
+    
+    
+    //Cria sprite(somente imagens)
+    SpriteItem *itemsprite = [[SpriteItem alloc]init];
+    itemsprite.nomeAnimacao = @"tamborTocando";
+    UIImage *img1 = [UIImage imageNamed:@"piano.png"];
+    UIImage *img2 = [UIImage imageNamed:@"piano2.png"];
+    [itemsprite.listaImagens addObject:img1];
+    [itemsprite.listaImagens addObject:img2];
+    [item.listaSprites addObject:itemsprite];
+    
+    
+    //Add Item ao banco
+    [self.listaDeItens addObject:item];
+    
+}
+
+-(void)addItemFlorRosa{
+    
+    //Cria item
+    Item *item = [[Item alloc]init];
+    item.nome = @"florRosa";
+    item.image = [UIImage imageNamed:@"florRosa.png"];
+    
+    //Add SOM
+    SomItem *somitem = [[SomItem alloc]init];
+    somitem.nomeSom = @"somTamborAcorde";
+    somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"somPiano" ofType:@"wav"]];
+    [item.listaSonsURL addObject:somitem];
+    
+    
+    //Cria sprite(somente imagens)
+    SpriteItem *itemsprite = [[SpriteItem alloc]init];
+    itemsprite.nomeAnimacao = @"tamborTocando";
+    UIImage *img1 = [UIImage imageNamed:@"piano.png"];
+    UIImage *img2 = [UIImage imageNamed:@"piano2.png"];
+    [itemsprite.listaImagens addObject:img1];
+    [itemsprite.listaImagens addObject:img2];
+    [item.listaSprites addObject:itemsprite];
+    
+    
+    //Add Item ao banco
+    [self.listaDeItens addObject:item];
+    
+}
+
+-(void)addItemQuadroZecao{
+    
+    //Cria item
+    Item *item = [[Item alloc]init];
+    item.nome = @"quadroZecao";
+    item.image = [UIImage imageNamed:@"quadroZecao.png"];
+    
+    //Add SOM
+    SomItem *somitem = [[SomItem alloc]init];
+    somitem.nomeSom = @"somTamborAcorde";
+    somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"somPiano" ofType:@"wav"]];
+    [item.listaSonsURL addObject:somitem];
+    
+    
+    //Cria sprite(somente imagens)
+    SpriteItem *itemsprite = [[SpriteItem alloc]init];
+    itemsprite.nomeAnimacao = @"tamborTocando";
+    UIImage *img1 = [UIImage imageNamed:@"piano.png"];
+    UIImage *img2 = [UIImage imageNamed:@"piano2.png"];
+    [itemsprite.listaImagens addObject:img1];
+    [itemsprite.listaImagens addObject:img2];
+    [item.listaSprites addObject:itemsprite];
+    
+    
+    //Add Item ao banco
+    [self.listaDeItens addObject:item];
+    
+}
+
+
 
 
 /////////////////////// METODOS AUXILIARES ///////////////////////

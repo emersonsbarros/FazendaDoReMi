@@ -16,10 +16,10 @@
 		0B2FFB1D19EDB7B500FD752E /* GerenciadorMetodo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2FFB1C19EDB7B500FD752E /* GerenciadorMetodo.m */; };
 		0B2FFB2F19EDBA1C00FD752E /* chocalho.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB1F19EDBA1C00FD752E /* chocalho.png */; };
 		0B2FFB3019EDBA1C00FD752E /* flauta.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2019EDBA1C00FD752E /* flauta.png */; };
-		0B2FFB3119EDBA1C00FD752E /* flor.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2119EDBA1C00FD752E /* flor.png */; };
-		0B2FFB3219EDBA1C00FD752E /* flor2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2219EDBA1C00FD752E /* flor2.png */; };
+		0B2FFB3119EDBA1C00FD752E /* florRosa.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2119EDBA1C00FD752E /* florRosa.png */; };
+		0B2FFB3219EDBA1C00FD752E /* florRocha.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2219EDBA1C00FD752E /* florRocha.png */; };
 		0B2FFB3319EDBA1C00FD752E /* piano.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2319EDBA1C00FD752E /* piano.png */; };
-		0B2FFB3519EDBA1C00FD752E /* portaretrato.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2519EDBA1C00FD752E /* portaretrato.png */; };
+		0B2FFB3519EDBA1C00FD752E /* quadroZecao.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2519EDBA1C00FD752E /* quadroZecao.png */; };
 		0B2FFB3619EDBA1C00FD752E /* portaretrato2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2619EDBA1C00FD752E /* portaretrato2.png */; };
 		0B2FFB3719EDBA1C00FD752E /* prendedor.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2719EDBA1C00FD752E /* prendedor.png */; };
 		0B2FFB3919EDBA1C00FD752E /* sala_Timbre.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB2919EDBA1C00FD752E /* sala_Timbre.png */; };
@@ -294,10 +294,10 @@
 		0B2FFB1C19EDB7B500FD752E /* GerenciadorMetodo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GerenciadorMetodo.m; sourceTree = "<group>"; };
 		0B2FFB1F19EDBA1C00FD752E /* chocalho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chocalho.png; sourceTree = "<group>"; };
 		0B2FFB2019EDBA1C00FD752E /* flauta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flauta.png; sourceTree = "<group>"; };
-		0B2FFB2119EDBA1C00FD752E /* flor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flor.png; sourceTree = "<group>"; };
-		0B2FFB2219EDBA1C00FD752E /* flor2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flor2.png; sourceTree = "<group>"; };
+		0B2FFB2119EDBA1C00FD752E /* florRosa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = florRosa.png; sourceTree = "<group>"; };
+		0B2FFB2219EDBA1C00FD752E /* florRocha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = florRocha.png; sourceTree = "<group>"; };
 		0B2FFB2319EDBA1C00FD752E /* piano.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = piano.png; sourceTree = "<group>"; };
-		0B2FFB2519EDBA1C00FD752E /* portaretrato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portaretrato.png; sourceTree = "<group>"; };
+		0B2FFB2519EDBA1C00FD752E /* quadroZecao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quadroZecao.png; sourceTree = "<group>"; };
 		0B2FFB2619EDBA1C00FD752E /* portaretrato2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portaretrato2.png; sourceTree = "<group>"; };
 		0B2FFB2719EDBA1C00FD752E /* prendedor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prendedor.png; sourceTree = "<group>"; };
 		0B2FFB2919EDBA1C00FD752E /* sala_Timbre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sala_Timbre.png; sourceTree = "<group>"; };
@@ -645,10 +645,10 @@
 			children = (
 				0B2FFB1F19EDBA1C00FD752E /* chocalho.png */,
 				0B2FFB2019EDBA1C00FD752E /* flauta.png */,
-				0B2FFB2119EDBA1C00FD752E /* flor.png */,
-				0B2FFB2219EDBA1C00FD752E /* flor2.png */,
+				0B2FFB2119EDBA1C00FD752E /* florRosa.png */,
+				0B2FFB2219EDBA1C00FD752E /* florRocha.png */,
 				0B2FFB2319EDBA1C00FD752E /* piano.png */,
-				0B2FFB2519EDBA1C00FD752E /* portaretrato.png */,
+				0B2FFB2519EDBA1C00FD752E /* quadroZecao.png */,
 				0B2FFB2619EDBA1C00FD752E /* portaretrato2.png */,
 				0B2FFB2719EDBA1C00FD752E /* prendedor.png */,
 				0B2FFB2919EDBA1C00FD752E /* sala_Timbre.png */,
@@ -1430,7 +1430,7 @@
 				3FB6F56219DA67E60080057B /* 5 - B.caf in Resources */,
 				0B2FFB3D19EDBA1C00FD752E /* violino.png in Resources */,
 				3FB6F55519DA67E60080057B /* fad2.caf in Resources */,
-				0B2FFB3219EDBA1C00FD752E /* flor2.png in Resources */,
+				0B2FFB3219EDBA1C00FD752E /* florRocha.png in Resources */,
 				3FC5D25C19DA568F00348F51 /* botao-jornada.png in Resources */,
 				3FC5D34D19DA61FD00348F51 /* PlayerPartituraEdicaoViewController.xib in Resources */,
 				3FB6F56119DA67E60080057B /* 4 - G.caf in Resources */,
@@ -1523,7 +1523,7 @@
 				3F0E87F819DBA941003FF4EB /* ZECAO22.png in Resources */,
 				3FB6F50719DA659C0080057B /* Fatempo.png in Resources */,
 				3FC5D34B19DA61FD00348F51 /* BarraNotasPausasViewController.xib in Resources */,
-				0B2FFB3119EDBA1C00FD752E /* flor.png in Resources */,
+				0B2FFB3119EDBA1C00FD752E /* florRosa.png in Resources */,
 				3FC5D34C19DA61FD00348F51 /* ListaInstrumentoViewController.xib in Resources */,
 				3FC5D26419DA568F00348F51 /* porteira-5.png in Resources */,
 				3F0E879419DBA689003FF4EB /* mapaAventura.png in Resources */,
@@ -1550,7 +1550,7 @@
 				3F0E87FB19DBA941003FF4EB /* ZECAO25.png in Resources */,
 				3FB6F57819DA67E60080057B /* P200 Piano F#5.caf in Resources */,
 				3F0E87FE19DBA941003FF4EB /* ZECAO28.png in Resources */,
-				0B2FFB3519EDBA1C00FD752E /* portaretrato.png in Resources */,
+				0B2FFB3519EDBA1C00FD752E /* quadroZecao.png in Resources */,
 				A824719019D0AB0E00168026 /* Images.xcassets in Resources */,
 				3FB6F56B19DA67E60080057B /* P200 Piano A#5.caf in Resources */,
 				0B6DCCA419DB2D8D00C166E3 /* botaopiano.png in Resources */,

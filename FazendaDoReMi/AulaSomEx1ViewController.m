@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
     
     [[GerenciadorComponenteView sharedManager]addComponentesBotaoVoltaMapa:self];
 
@@ -42,10 +42,15 @@
     [[ControladorDeItem sharedManager]retornaItem:@"chocalho":self.imgChocalho:@"gestureTap+1+2+3"];
     [[ControladorDeItem sharedManager]retornaItem:@"violino":self.imgViolino:@"gestureTap+1+2+3"];
     
+    [[ControladorDeItem sharedManager]retornaItem:@"florRocha":self.imgFlorAgua:@"gestureTap"];
+    [[ControladorDeItem sharedManager]retornaItem:@"florRosa":self.imgFlorGiratoria:@"gestureTap+4"];
+    
+    [[ControladorDeItem sharedManager]retornaItem:@"quadroZecao":self.imgQuadro:@"gestureTap"];
+    
     
     
     //Add os itens que é desejado pressionar para decorrer com o proximo exercicio
-    [[ControladorDeItem sharedManager]chamaVerificador:[NSArray arrayWithObjects:self.imgFlauta,self.imgPiano,self.imgTambor,self.imgViolao,self.imgXilofone, nil]];
+    [[ControladorDeItem sharedManager]chamaVerificador:[NSArray arrayWithObjects:self.imgFlauta,self.imgPiano,self.imgTambor,self.imgViolao,self.imgXilofone,self.imgSaxfone,self.imgChocalho,self.imgViolino,nil]];
     
     
      //[[GerenciadorAnimacoes sharedManager]animacaoSpriteEspecifica:self.imgTeste:@"pianoTocando":4:YES:NO:2.0];

@@ -38,4 +38,6 @@
 
 -(void)animacaoSpriteEspecifica:(Item*)viewItem :(NSString*)nomeAnimacaoSprite :(float)repeticao :(BOOL)autoReverso :(BOOL)voltarAoEstadoInicial :(float)tempoDelayComecar;
 
+-(void)animacaoGirarImagem:(UIView*)view :(float)duracao :(float)repeticoes;
+
 @end

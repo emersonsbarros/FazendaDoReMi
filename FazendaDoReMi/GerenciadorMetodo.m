@@ -105,6 +105,7 @@
                 break;
             }
             CASE (@"4") {
+                [[GerenciadorAnimacoes sharedManager]animacaoGirarImagem:gestureItem.item:1:2];
                 break;
             }
             DEFAULT{
