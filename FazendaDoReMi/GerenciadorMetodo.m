@@ -101,11 +101,19 @@
                 break;
             }
             CASE (@"3"){
-                [[GerenciadorAnimacoes sharedManager]animacaozoomImagem:gestureItem.item :1 :8 :YES :@1.0 :@1.2];
+                [[GerenciadorAnimacoes sharedManager]animacaozoomImagem:gestureItem.item:1:8:YES:@1.0:@1.2];
                 break;
             }
             CASE (@"4") {
                 [[GerenciadorAnimacoes sharedManager]animacaoGirarImagem:gestureItem.item:1:2];
+                break;
+            }
+            CASE (@"5") {
+                [[GerenciadorAnimacoes sharedManager]animacaoMoverLugar:gestureItem.item:1:1:NO:0:400];
+                break;
+            }
+            CASE (@"6") {
+                [self escondeImagem:gestureItem];
                 break;
             }
             DEFAULT{
@@ -113,7 +121,7 @@
             }
         }
     }
-    
+   
     
 }
 
@@ -127,6 +135,8 @@
     gestureItem.item.estadoPressionado = YES;
 }
 
-
+-(void)escondeImagem:(GestureItem*)gestureitem{
+    gestureitem.item.hidden = YES;
+}
 
 @end

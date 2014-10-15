@@ -109,8 +109,8 @@
     moveNuvemDireita.duration = duracao;
     moveNuvemDireita.repeatCount = repeticao;
     moveNuvemDireita.removedOnCompletion = autoReverso;
-    moveNuvemDireita.fromValue = [NSValue valueWithCGPoint: CGPointMake(view.frame.origin.x, view.frame.origin.y+posY)];
-    moveNuvemDireita.toValue = [NSValue valueWithCGPoint: CGPointMake(view.frame.origin.x+posX, view.frame.origin.y+posY)];
+    moveNuvemDireita.fromValue = [NSValue valueWithCGPoint: CGPointMake(view.frame.origin.x+(view.frame.size.width/2), view.frame.origin.y+view.frame.size.height)];
+    moveNuvemDireita.toValue = [NSValue valueWithCGPoint: CGPointMake(view.frame.origin.x+(view.frame.size.width/2)+posX, view.frame.origin.y+posY)];
     
     [view.layer addAnimation: moveNuvemDireita forKey:@"animacaoMovimento"];
     
