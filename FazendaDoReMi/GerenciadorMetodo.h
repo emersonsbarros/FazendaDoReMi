@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "GestureItem.h"
-#import "GerenciadorAudio.h"
 #import "GerenciadorAnimacoes.h"
+#import "GerenciadoresAcoes.h"
 
 @interface GerenciadorMetodo : NSObject
 

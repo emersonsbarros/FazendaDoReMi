@@ -30,22 +30,25 @@
     
     [[GerenciadorComponenteView sharedManager]addComponentesBotaoVoltaMapa:self];
 
+//-(void)animacaozoomImagem:(UIView*)view :(float)duracao :(float)repeticao :(BOOL)autoReverso :(id)valorInicial :(id)valorFinal
     
-    //Add referencia puchando da base de itens (nomeItem,outlet,tipoGesture)
-    [[ControladorDeItem sharedManager]retornaItem:@"piano":self.imgPiano:@"gestureTap+1+2+3"];
-    [[ControladorDeItem sharedManager]retornaItem:@"flauta":self.imgFlauta:@"gestureTap+1+2+3"];
-    [[ControladorDeItem sharedManager]retornaItem:@"tambor":self.imgTambor:@"gestureTap+1+2+3"];
-    [[ControladorDeItem sharedManager]retornaItem:@"violao":self.imgViolao:@"gestureTap+1+2+3"];
-    [[ControladorDeItem sharedManager]retornaItem:@"xilofone":self.imgXilofone:@"gestureTap+1+2+3"];
+    //Add referencia puchando da base de itens (nomeItem,outlet,tipoGesture:parametros + metodos:parementros + n..)
+    [[ControladorDeItem sharedManager]retornaItem:@"piano":self.imgPiano:@"gestureTap:1:1 + 1 + 2 + 3:5.0:5.0:1.0:1.5"];
+    [[ControladorDeItem sharedManager]retornaItem:@"flauta":self.imgFlauta:@"gestureTap:1:1 + 1 + 2 + 3:5.0:5.0:1.0:1.5"];
+    [[ControladorDeItem sharedManager]retornaItem:@"tambor":self.imgTambor:@"gestureTap:1:1 + 1 + 2 + 3:5.0:5.0:1.0:1.5"];
+    [[ControladorDeItem sharedManager]retornaItem:@"violao":self.imgViolao:@"gestureTap:1:1 + 1 + 2 + 3:5.0:5.0:1.0:1.5"];
+    [[ControladorDeItem sharedManager]retornaItem:@"xilofone":self.imgXilofone:@"gestureTap:1:1 + 1 + 2 + 3:5.0:5.0:1.0:1.5"];
     
-    [[ControladorDeItem sharedManager]retornaItem:@"saxfone":self.imgSaxfone:@"gestureTap+1+2+3"];
-    [[ControladorDeItem sharedManager]retornaItem:@"chocalho":self.imgChocalho:@"gestureTap+1+2+3"];
-    [[ControladorDeItem sharedManager]retornaItem:@"violino":self.imgViolino:@"gestureTap+1+2+3"];
+    [[ControladorDeItem sharedManager]retornaItem:@"saxfone":self.imgSaxfone:@"gestureTap:1:1 + 1 + 2 + 3:5.0:5.0:1.0:1.5"];
+    [[ControladorDeItem sharedManager]retornaItem:@"chocalho":self.imgChocalho:@"gestureTap:1:1 + 1 + 2 + 3:5.0:5.0:1.0:1.5"];
+    [[ControladorDeItem sharedManager]retornaItem:@"violino":self.imgViolino:@"gestureTap:1:1 + 1 + 2 + 3:5.0:5.0:1.0:1.5"];
     
-    [[ControladorDeItem sharedManager]retornaItem:@"florRocha":self.imgFlorAgua:@"gestureTap"];
-    [[ControladorDeItem sharedManager]retornaItem:@"florRosa":self.imgFlorGiratoria:@"gestureTap+4"];
+    [[ControladorDeItem sharedManager]retornaItem:@"florRocha":self.imgFlorAgua:@"gestureTap:1:1"];
+    [[ControladorDeItem sharedManager]retornaItem:@"florRosa":self.imgFlorGiratoria:@"gestureTap:1:1 + 4"];
     
-    [[ControladorDeItem sharedManager]retornaItem:@"quadroZecao":self.imgQuadro:@"gestureTap+5"];
+    [[ControladorDeItem sharedManager]retornaItem:@"quadroZecao":self.imgQuadro:@"gestureTap:1:1 + 5"];
+    
+    
     
     
     

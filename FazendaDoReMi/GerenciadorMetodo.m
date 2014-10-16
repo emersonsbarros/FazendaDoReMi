@@ -42,15 +42,17 @@
 
 -(void)addGestureItem:(NSString*)nomeGesture :(Item*)viewContainer{
     
+    nomeGesture = [nomeGesture stringByReplacingOccurrencesOfString: @" " withString:@""];
     NSArray* foo = [nomeGesture componentsSeparatedByString: @"+"];
     
+    NSArray* nomeGestureParametros = [[foo firstObject] componentsSeparatedByString:@":"];
     
-    if([[foo objectAtIndex: 0] isEqualToString:@"gestureTap"]){
+    if([[nomeGestureParametros objectAtIndex: 0] isEqualToString:@"gestureTap"]){
         GestureItem *gesture = [[GestureItem alloc]initWithTarget:self action:@selector(acaoToqueObjeto:)];
         gesture.listaMetodos = [[NSMutableArray alloc]init];
         gesture.metodosSolicidados = nomeGesture;
-        gesture.numberOfTapsRequired = 1;
-        gesture.numberOfTouchesRequired = 1;
+        gesture.numberOfTapsRequired = [[nomeGestureParametros objectAtIndex:1]floatValue];
+        gesture.numberOfTouchesRequired = [[nomeGestureParametros objectAtIndex:2]floatValue];
         gesture.item = viewContainer;
         viewContainer.userInteractionEnabled = YES;
         [viewContainer addGestureRecognizer:gesture];
@@ -76,6 +78,7 @@
     }
 }
 
+
 -(void)quebraString:(GestureItem*)conjuntoMetodos{
     
     NSArray* listaMetodos = [conjuntoMetodos.metodosSolicidados componentsSeparatedByString:@"+"];
@@ -85,23 +88,27 @@
     
     
 }
-
+//3:5.0:2:YES:0.0:0.5
 -(void)acaoToqueObjeto:(GestureItem*)gestureItem{
     
     [self quebraString:gestureItem];
     
     for(NSString *numeroMetodos in gestureItem.listaMetodos){
-        SWITCH(numeroMetodos){
+        
+        NSArray* listMetParametros = [numeroMetodos componentsSeparatedByString:@":"];
+       
+        NSString *valor = [[numeroMetodos componentsSeparatedByString:@":"]objectAtIndex:0];
+        SWITCH(valor){
             CASE (@"1") {
-                [self alteraEstadoPressionado:gestureItem];
+                [[GerenciadoresAcoes sharedManager]alteraEstadoPressionado:gestureItem];
                 break;
             }
             CASE (@"2") {
-                [self tocarSomItem:gestureItem];
+                [[GerenciadoresAcoes sharedManager]tocarSomItem:gestureItem];
                 break;
             }
             CASE (@"3"){
-                [[GerenciadorAnimacoes sharedManager]animacaozoomImagem:gestureItem.item:1:8:YES:@1.0:@1.2];
+                [[GerenciadorAnimacoes sharedManager]animacaozoomImagem:gestureItem.item:[listMetParametros objectAtIndex:1]:[listMetParametros objectAtIndex:2]:[listMetParametros objectAtIndex:3]:[listMetParametros objectAtIndex:4]];
                 break;
             }
             CASE (@"4") {
@@ -113,30 +120,19 @@
                 break;
             }
             CASE (@"6") {
-                [self escondeImagem:gestureItem];
+                [[GerenciadoresAcoes sharedManager]escondeImagem:gestureItem];
                 break;
             }
             DEFAULT{
                 break;
             }
         }
+
     }
-   
+    
     
 }
 
 
--(void)tocarSomItem:(GestureItem*)gestureItem{
-    SomItem *somItem = gestureItem.item.listaSonsURL.firstObject;
-    [[GerenciadorAudio sharedManager]playAudio:somItem.caminhoAudio];
-}
-
--(void)alteraEstadoPressionado:(GestureItem*)gestureItem{
-    gestureItem.item.estadoPressionado = YES;
-}
-
--(void)escondeImagem:(GestureItem*)gestureitem{
-    gestureitem.item.hidden = YES;
-}
 
 @end

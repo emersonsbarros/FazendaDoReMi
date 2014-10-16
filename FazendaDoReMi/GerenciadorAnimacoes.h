@@ -32,7 +32,7 @@
 
 -(void)animacaoMoverLugar:(UIView*)view :(float)duracao :(float)repeticao :(BOOL)autoReverso :(float)posX :(float)posY;
 
--(void)animacaozoomImagem:(UIView*)view :(float)duracao :(float)repeticao :(BOOL)autoReverso :(id)valorInicial :(id)valorFinal;
+-(void)animacaozoomImagem:(UIView*)view :(NSString*)duracao :(NSString*)repeticao :(NSString*)valorInicial :(NSString*)valorFinal;
 
 -(void)animacaozoomImagem:(UIView*)view;
 

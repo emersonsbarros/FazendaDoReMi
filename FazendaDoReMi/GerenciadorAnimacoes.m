@@ -117,20 +117,21 @@
 }
 
 
--(void)animacaozoomImagem:(UIView*)view :(float)duracao :(float)repeticao :(BOOL)autoReverso :(id)valorInicial :(id)valorFinal{
+-(void)animacaozoomImagem:(UIView*)view :(NSString*)duracao :(NSString*)repeticao :(NSString*)valorInicial :(NSString*)valorFinal{
 
     CABasicAnimation *pulseAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale.xy"];
-    pulseAnimation.fromValue = valorInicial;
-    pulseAnimation.toValue = valorFinal;
-    pulseAnimation.duration = duracao;
-    pulseAnimation.repeatCount = repeticao;
+    
+    pulseAnimation.fromValue = [NSNumber numberWithFloat:[valorInicial floatValue]];
+    pulseAnimation.toValue = [NSNumber numberWithFloat:[valorFinal floatValue]];
+    pulseAnimation.duration = [duracao floatValue];
+    pulseAnimation.repeatCount = [repeticao floatValue];
 
     [view.layer addAnimation:pulseAnimation forKey:@"pulse"];
-
 }
 
 
 -(void)animacaozoomImagem:(UIView*)view{
+    
     CABasicAnimation *pulseAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale.xy"];
     pulseAnimation.fromValue = @1.0;
     pulseAnimation.toValue = @1.5;
@@ -144,16 +145,17 @@
     
     CABasicAnimation *imageRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
     imageRotation.toValue = [NSNumber numberWithFloat: M_PI * 2.0 * 2 * 1 ];
-    
     imageRotation.duration = duracao;
     imageRotation.repeatCount = repeticoes;
-    
     imageRotation.removedOnCompletion = NO;
     imageRotation.autoreverses=NO;
     imageRotation.fillMode = kCAFillModeForwards;
     
     [view.layer addAnimation:imageRotation forKey:@"imageRotation"];
 }
+
+
+
 
 @end
 
