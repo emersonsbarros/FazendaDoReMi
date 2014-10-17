@@ -11,7 +11,7 @@
 #import "ControladorDeItem.h"
 #import "GerenciadorDeItem.h"
 #import "GerenciadorComponenteView.h"
-#import "Metodo.h"
+
 
 @interface AulaSomEx1ViewController : UIViewController
 

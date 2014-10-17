@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GestureItem.h"
+#import "GestureTapItem.h"
 #import "GerenciadorAudio.h"
 #import "SomItem.h"
 
@@ -16,9 +16,9 @@
 +(GerenciadoresAcoes*)sharedManager;
 
 
--(void)tocarSomItem:(GestureItem*)gestureItem;
--(void)alteraEstadoPressionado:(GestureItem*)gestureItem;
--(void)escondeImagem:(GestureItem*)gestureitem;
+-(void)tocarSomItem:(GestureTapItem*)gestureItem;
+-(void)alteraEstadoPressionado:(GestureTapItem*)gestureItem;
+-(void)escondeImagem:(GestureTapItem*)gestureitem;
 
 
 @end

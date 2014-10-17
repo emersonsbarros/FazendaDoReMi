@@ -14,7 +14,7 @@
 #import <Foundation/Foundation.h>
 #import "Item.h"
 #import "SpriteItem.h"
-#import "GestureItem.h"
+#import "GestureTapItem.h"
 #import "SomItem.h"
 #import "GerenciadorAudio.h"
 

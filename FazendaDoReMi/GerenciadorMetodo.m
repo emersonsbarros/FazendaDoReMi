@@ -48,7 +48,7 @@
     NSArray* nomeGestureParametros = [[foo firstObject] componentsSeparatedByString:@":"];
     
     if([[nomeGestureParametros objectAtIndex: 0] isEqualToString:@"gestureTap"]){
-        GestureItem *gesture = [[GestureItem alloc]initWithTarget:self action:@selector(acaoToqueObjeto:)];
+        GestureTapItem *gesture = [[GestureTapItem alloc]initWithTarget:self action:@selector(acaoToqueObjeto:)];
         gesture.listaMetodos = [[NSMutableArray alloc]init];
         gesture.metodosSolicidados = nomeGesture;
         gesture.numberOfTapsRequired = [[nomeGestureParametros objectAtIndex:1]floatValue];
@@ -79,7 +79,7 @@
 }
 
 
--(void)quebraString:(GestureItem*)conjuntoMetodos{
+-(void)quebraString:(GestureTapItem*)conjuntoMetodos{
     
     NSArray* listaMetodos = [conjuntoMetodos.metodosSolicidados componentsSeparatedByString:@"+"];
     for(NSString *caracteres in listaMetodos){
@@ -89,7 +89,7 @@
     
 }
 //3:5.0:2:YES:0.0:0.5
--(void)acaoToqueObjeto:(GestureItem*)gestureItem{
+-(void)acaoToqueObjeto:(GestureTapItem*)gestureItem{
     
     [self quebraString:gestureItem];
     

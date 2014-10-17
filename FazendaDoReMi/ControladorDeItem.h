@@ -11,7 +11,7 @@
 #import "SpriteItem.h"
 #import "SomItem.h"
 #import "GerenciadorAudio.h"
-#import "GestureItem.h"
+#import "GestureTapItem.h"
 #import "GerenciadorAnimacoes.h"
 #import "GerenciadorDeItem.h"
 #import "GerenciadorMetodo.h"

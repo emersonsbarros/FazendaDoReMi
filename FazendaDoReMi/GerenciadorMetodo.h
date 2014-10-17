@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GestureItem.h"
+#import "GestureTapItem.h"
 #import "GerenciadorAnimacoes.h"
 #import "GerenciadoresAcoes.h"
 

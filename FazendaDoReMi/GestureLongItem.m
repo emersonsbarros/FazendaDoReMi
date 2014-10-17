@@ -1,15 +1,14 @@
 //
-//  GestureItem.m
+//  GestureLongItem.m
 //  FazendaDoReMi
 //
-//  Created by Vinicius Resende Fialho on 12/10/14.
+//  Created by VINICIUS RESENDE FIALHO on 17/10/14.
 //  Copyright (c) 2014 EMERSON BARROS | VINICIUS RESENDE. All rights reserved.
 //
 
-#import "GestureItem.h"
+#import "GestureLongItem.h"
 
-@implementation GestureItem
-
+@implementation GestureLongItem
 
 -(id)init{
     self = [super init];
@@ -19,5 +18,6 @@
     }
     return self;
 }
+
 
 @end
