@@ -10,4 +10,15 @@
 
 @implementation GesturePanGesture
 
+-(id)init{
+    self = [super init];
+    
+    if(self){
+        self.listaMetodos = [[NSMutableArray alloc] init];
+        self.idGesture = 4;
+    }
+    return self;
+}
+
+
 @end

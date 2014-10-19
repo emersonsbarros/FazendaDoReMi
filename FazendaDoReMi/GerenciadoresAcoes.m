@@ -36,17 +36,17 @@
 ///////////////////////////////////////////////////////////////////////////////////
 
 
--(void)tocarSomItem:(GestureTapItem*)gestureItem{
-    SomItem *somItem = gestureItem.item.listaSonsURL.firstObject;
+-(void)tocarSomItem:(Item*)item{
+    SomItem *somItem = item.listaSonsURL.firstObject;
     [[GerenciadorAudio sharedManager]playAudio:somItem.caminhoAudio];
 }
 
--(void)alteraEstadoPressionado:(GestureTapItem*)gestureItem{
-    gestureItem.item.estadoPressionado = YES;
+-(void)alteraEstadoPressionado:(Item*)item{
+    item.estadoPressionado = YES;
 }
 
--(void)escondeImagem:(GestureTapItem*)gestureitem{
-    gestureitem.item.hidden = YES;
+-(void)escondeImagem:(Item*)item{
+    item.hidden = YES;
 }
 
 

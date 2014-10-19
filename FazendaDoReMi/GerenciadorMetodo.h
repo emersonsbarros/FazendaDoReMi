@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GestureTapItem.h"
 #import "GerenciadorAnimacoes.h"
 #import "GerenciadoresAcoes.h"
+#import "GestureLongItem.h"
+#import "GestureTapItem.h"
+#import "GestureSwipeItem.h"
 
 @interface GerenciadorMetodo : NSObject
 
@@ -17,5 +19,9 @@
 +(GerenciadorMetodo*)sharedManager;
 
 -(void)addGestureItem:(NSString*)nomeGesture :(Item*)viewContainer;
+
+@property NSMutableArray *listaMetodos;
+
+
 
 @end

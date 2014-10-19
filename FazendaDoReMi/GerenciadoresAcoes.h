@@ -16,9 +16,9 @@
 +(GerenciadoresAcoes*)sharedManager;
 
 
--(void)tocarSomItem:(GestureTapItem*)gestureItem;
--(void)alteraEstadoPressionado:(GestureTapItem*)gestureItem;
--(void)escondeImagem:(GestureTapItem*)gestureitem;
+-(void)tocarSomItem:(Item*)item;
+-(void)alteraEstadoPressionado:(Item*)item;
+-(void)escondeImagem:(Item*)item;
 
 
 @end

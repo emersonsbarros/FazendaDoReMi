@@ -27,7 +27,7 @@
 -(id)init{
     self = [super init];
     if(self){
-        
+        self.listaMetodos = [[NSMutableArray alloc]init];
     }
     return self;
 }
@@ -40,6 +40,56 @@
 ///////////////////////////////// CONTROLADORES METODOS //////////////////////////////////////
 
 
+
+-(void)escolheMetodoNumero:(Item*)itemEspecifico{
+    
+    for(NSString *numeroMetodos in self.listaMetodos){
+        
+        NSArray* listMetParametros = [numeroMetodos componentsSeparatedByString:@":"];
+        
+        NSString *valor = [[numeroMetodos componentsSeparatedByString:@":"]objectAtIndex:0];
+        SWITCH(valor){
+            
+            CASE (@"1") {
+                [[GerenciadoresAcoes sharedManager]alteraEstadoPressionado:itemEspecifico];
+                break;
+            }
+            CASE (@"2") {
+                [[GerenciadoresAcoes sharedManager]tocarSomItem:itemEspecifico];
+                break;
+            }
+            CASE (@"3"){
+                [[GerenciadorAnimacoes sharedManager]animacaozoomImagem:itemEspecifico:[listMetParametros objectAtIndex:1]:[listMetParametros objectAtIndex:2]:[listMetParametros objectAtIndex:3]:[listMetParametros objectAtIndex:4]];
+                break;
+            }
+            CASE (@"4") {
+                [[GerenciadorAnimacoes sharedManager]animacaoGirarImagem:itemEspecifico:1:2];
+                break;
+            }
+            CASE (@"5") {
+                [[GerenciadorAnimacoes sharedManager]animacaoMoverLugar:itemEspecifico:1:1:NO:0:400];
+                break;
+            }
+            CASE (@"6") {
+                [[GerenciadoresAcoes sharedManager]escondeImagem:itemEspecifico];
+                break;
+            }
+            DEFAULT{
+                break;
+            }
+        }
+        
+    }
+    
+    [self.listaMetodos removeAllObjects];
+    
+}
+
+
+
+
+/////////////////////////////// AUXILIAR CONTRALADOR //////////////////////////////////
+
 -(void)addGestureItem:(NSString*)nomeGesture :(Item*)viewContainer{
     
     nomeGesture = [nomeGesture stringByReplacingOccurrencesOfString: @" " withString:@""];
@@ -47,7 +97,9 @@
     
     NSArray* nomeGestureParametros = [[foo firstObject] componentsSeparatedByString:@":"];
     
+    
     if([[nomeGestureParametros objectAtIndex: 0] isEqualToString:@"gestureTap"]){
+        
         GestureTapItem *gesture = [[GestureTapItem alloc]initWithTarget:self action:@selector(acaoToqueObjeto:)];
         gesture.listaMetodos = [[NSMutableArray alloc]init];
         gesture.metodosSolicidados = nomeGesture;
@@ -56,20 +108,38 @@
         gesture.item = viewContainer;
         viewContainer.userInteractionEnabled = YES;
         [viewContainer addGestureRecognizer:gesture];
+    
         
-    }else if([nomeGesture isEqualToString:@"gestureLong"]){
+    }else if([[nomeGestureParametros objectAtIndex: 0] isEqualToString:@"gestureLong"]){
+
+        GestureLongItem *gesture = [[GestureLongItem alloc]initWithTarget:self action:@selector(acaoToqueObjeto:)];
+        gesture.listaMetodos = [[NSMutableArray alloc]init];
+        gesture.metodosSolicidados = nomeGesture;
+        gesture.numberOfTapsRequired = [[nomeGestureParametros objectAtIndex:1]floatValue];
+        gesture.numberOfTouchesRequired = [[nomeGestureParametros objectAtIndex:2]floatValue];
+        gesture.minimumPressDuration = 2.0;
+        gesture.item = viewContainer;
+        viewContainer.userInteractionEnabled = YES;
+        [viewContainer addGestureRecognizer:gesture];
         
         
-    }else if([nomeGesture isEqualToString:@"gesturePinch"]){
+    }else if([[nomeGestureParametros objectAtIndex: 0] isEqualToString:@"gesturePinch"]){
         
         
-    }else if([nomeGesture isEqualToString:@"gestureRotation"]){
+    }else if([[nomeGestureParametros objectAtIndex: 0] isEqualToString:@"gestureRotation"]){
         
         
-    }else if([nomeGesture isEqualToString:@"gestureSwipe"]){
+    }else if([[nomeGestureParametros objectAtIndex: 0] isEqualToString:@"gestureSwipe"]){
+        GestureSwipeItem *gesture = [[GestureSwipeItem alloc]initWithTarget:self action:@selector(acaoToqueObjeto:)];
+        gesture.listaMetodos = [[NSMutableArray alloc]init];
+        gesture.metodosSolicidados = nomeGesture;
+        gesture.direction = UISwipeGestureRecognizerDirectionRight;
+        gesture.numberOfTouchesRequired = 1;
+        gesture.item = viewContainer;
+        viewContainer.userInteractionEnabled = YES;
+        [viewContainer addGestureRecognizer:gesture];
         
-        
-    }else if([nomeGesture isEqualToString:@"gesturePan"]){
+    }else if([[nomeGestureParametros objectAtIndex: 0] isEqualToString:@"gesturePan"]){
         
         
     }else{
@@ -83,54 +153,53 @@
     
     NSArray* listaMetodos = [conjuntoMetodos.metodosSolicidados componentsSeparatedByString:@"+"];
     for(NSString *caracteres in listaMetodos){
-        [conjuntoMetodos.listaMetodos addObject:caracteres];
+        [self.listaMetodos addObject:caracteres];
     }
-    
     
 }
+
 //3:5.0:2:YES:0.0:0.5
--(void)acaoToqueObjeto:(GestureTapItem*)gestureItem{
+-(void)acaoToqueObjeto:(id)gestureItems{
+ 
+    Item *itemEspecifico;
     
-    [self quebraString:gestureItem];
     
-    for(NSString *numeroMetodos in gestureItem.listaMetodos){
+    if([gestureItems isKindOfClass:[GestureTapItem class]]){
+        GestureTapItem* gestureItem = (GestureTapItem*)gestureItems;
+        itemEspecifico = gestureItem.item;
         
-        NSArray* listMetParametros = [numeroMetodos componentsSeparatedByString:@":"];
-       
-        NSString *valor = [[numeroMetodos componentsSeparatedByString:@":"]objectAtIndex:0];
-        SWITCH(valor){
-            CASE (@"1") {
-                [[GerenciadoresAcoes sharedManager]alteraEstadoPressionado:gestureItem];
-                break;
-            }
-            CASE (@"2") {
-                [[GerenciadoresAcoes sharedManager]tocarSomItem:gestureItem];
-                break;
-            }
-            CASE (@"3"){
-                [[GerenciadorAnimacoes sharedManager]animacaozoomImagem:gestureItem.item:[listMetParametros objectAtIndex:1]:[listMetParametros objectAtIndex:2]:[listMetParametros objectAtIndex:3]:[listMetParametros objectAtIndex:4]];
-                break;
-            }
-            CASE (@"4") {
-                [[GerenciadorAnimacoes sharedManager]animacaoGirarImagem:gestureItem.item:1:2];
-                break;
-            }
-            CASE (@"5") {
-                [[GerenciadorAnimacoes sharedManager]animacaoMoverLugar:gestureItem.item:1:1:NO:0:400];
-                break;
-            }
-            CASE (@"6") {
-                [[GerenciadoresAcoes sharedManager]escondeImagem:gestureItem];
-                break;
-            }
-            DEFAULT{
-                break;
-            }
+        NSArray* listaMetodos = [gestureItem.metodosSolicidados componentsSeparatedByString:@"+"];
+        for(NSString *caracteres in listaMetodos){
+            [self.listaMetodos addObject:caracteres];
+        }
+        
+        NSLog(@"tap");
+        
+    }else if([gestureItems isKindOfClass:[GestureLongItem class]]){
+        GestureLongItem* gestureItem = (GestureLongItem*)gestureItems;
+        itemEspecifico = gestureItem.item;
+        
+        NSArray* listaMetodos = [gestureItem.metodosSolicidados componentsSeparatedByString:@"+"];
+        for(NSString *caracteres in listaMetodos){
+            [self.listaMetodos addObject:caracteres];
+        }
+        
+        NSLog(@"LOng");
+        
+    }else if([gestureItems isKindOfClass:[GestureSwipeItem class]]){
+        GestureSwipeItem* gestureItem = (GestureSwipeItem*)gestureItems;
+        itemEspecifico = gestureItem.item;
+        
+        NSArray* listaMetodos = [gestureItem.metodosSolicidados componentsSeparatedByString:@"+"];
+        for(NSString *caracteres in listaMetodos){
+            [self.listaMetodos addObject:caracteres];
         }
 
+        NSLog(@"swip!");
     }
     
     
+    [self escolheMetodoNumero:itemEspecifico];
 }
 
 

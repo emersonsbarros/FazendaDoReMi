@@ -14,5 +14,6 @@
 @property Item *item;
 @property NSString *metodosSolicidados;
 @property NSMutableArray *listaMetodos;
+@property int idGesture;
 
 @end

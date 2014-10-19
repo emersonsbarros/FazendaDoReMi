@@ -10,4 +10,14 @@
 
 @implementation GestureRotationItem
 
+-(id)init{
+    self = [super init];
+    
+    if(self){
+        self.listaMetodos = [[NSMutableArray alloc] init];
+        self.idGesture = 3;
+    }
+    return self;
+}
+
 @end

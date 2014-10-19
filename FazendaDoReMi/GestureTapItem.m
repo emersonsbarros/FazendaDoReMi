@@ -16,6 +16,7 @@
     
     if(self){
         self.listaMetodos = [[NSMutableArray alloc] init];
+        self.idGesture = 0;
     }
     return self;
 }

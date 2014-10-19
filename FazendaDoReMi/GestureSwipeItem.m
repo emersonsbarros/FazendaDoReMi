@@ -10,4 +10,14 @@
 
 @implementation GestureSwipeItem
 
+-(id)init{
+    self = [super init];
+    
+    if(self){
+        self.listaMetodos = [[NSMutableArray alloc] init];
+        self.idGesture = 2;
+    }
+    return self;
+}
+
 @end

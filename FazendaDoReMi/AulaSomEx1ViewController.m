@@ -32,7 +32,7 @@
 
     
     //Add referencia puchando da base de itens (nomeItem,outlet,tipoGesture:parametros + metodos:parementros + n..)
-    [[ControladorDeItem sharedManager]retornaItem:@"piano":self.imgPiano:@"gestureTap:1:1 + 1 + 2 + 3:5.0:5.0:1.0:1.5"];
+    [[ControladorDeItem sharedManager]retornaItem:@"piano":self.imgPiano:@"gestureSwipe + 4"];
     [[ControladorDeItem sharedManager]retornaItem:@"flauta":self.imgFlauta:@"gestureTap:1:1 + 1 + 2 + 3:5.0:5.0:1.0:1.5"];
     [[ControladorDeItem sharedManager]retornaItem:@"tambor":self.imgTambor:@"gestureTap:1:1 + 1 + 2 + 3:5.0:5.0:1.0:1.5"];
     [[ControladorDeItem sharedManager]retornaItem:@"violao":self.imgViolao:@"gestureTap:1:1 + 1 + 2 + 3:5.0:5.0:1.0:1.5"];
