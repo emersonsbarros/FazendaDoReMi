@@ -16,8 +16,16 @@
 +(GerenciadoresAcoes*)sharedManager;
 
 
--(void)tocarSomItem:(Item*)item;
+
+//Toca o som do respectivo Objeto
+-(void)tocarSomItem:(Item*)item :(NSString*)indiceAudio;
+
+
+//Coloca uma tag quando o objeto é pressionado para poder trocar de Viewcontroller
 -(void)alteraEstadoPressionado:(Item*)item;
+
+
+//Esconde uma imagem
 -(void)escondeImagem:(Item*)item;
 
 

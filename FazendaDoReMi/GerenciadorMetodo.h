@@ -12,6 +12,9 @@
 #import "GestureLongItem.h"
 #import "GestureTapItem.h"
 #import "GestureSwipeItem.h"
+#import "GestureRotationItem.h"
+#import "GesturePanGesture.h"
+#import "GesturePinchItem.h"
 
 @interface GerenciadorMetodo : NSObject
 

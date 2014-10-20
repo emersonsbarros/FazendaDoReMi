@@ -36,8 +36,8 @@
 ///////////////////////////////////////////////////////////////////////////////////
 
 
--(void)tocarSomItem:(Item*)item{
-    SomItem *somItem = item.listaSonsURL.firstObject;
+-(void)tocarSomItem:(Item*)item :(NSString*)indiceAudio{
+    SomItem *somItem = [item.listaSonsURL objectAtIndex:[indiceAudio integerValue]];
     [[GerenciadorAudio sharedManager]playAudio:somItem.caminhoAudio];
 }
 

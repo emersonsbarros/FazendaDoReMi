@@ -48,6 +48,7 @@
         NSArray* listMetParametros = [numeroMetodos componentsSeparatedByString:@":"];
         
         NSString *valor = [[numeroMetodos componentsSeparatedByString:@":"]objectAtIndex:0];
+        
         SWITCH(valor){
             
             CASE (@"1") {
@@ -55,7 +56,7 @@
                 break;
             }
             CASE (@"2") {
-                [[GerenciadoresAcoes sharedManager]tocarSomItem:itemEspecifico];
+                [[GerenciadoresAcoes sharedManager]tocarSomItem:itemEspecifico:[listMetParametros objectAtIndex:1]];
                 break;
             }
             CASE (@"3"){
@@ -63,11 +64,13 @@
                 break;
             }
             CASE (@"4") {
-                [[GerenciadorAnimacoes sharedManager]animacaoGirarImagem:itemEspecifico:1:2];
+                //[[GerenciadorAnimacoes sharedManager]animacaoGirarImagem:itemEspecifico:1:2];
+                [[GerenciadorAnimacoes sharedManager]animacaoGirarImagem:itemEspecifico:[listMetParametros objectAtIndex:1]:[listMetParametros objectAtIndex:2]];
                 break;
             }
             CASE (@"5") {
-                [[GerenciadorAnimacoes sharedManager]animacaoMoverLugar:itemEspecifico:1:1:NO:0:400];
+                //[[GerenciadorAnimacoes sharedManager]animacaoMoverLugar:itemEspecifico:1:1:NO:0:400];
+                [[GerenciadorAnimacoes sharedManager]animacaoMoverLugar:itemEspecifico:[listMetParametros objectAtIndex:1]:[listMetParametros objectAtIndex:2]:[listMetParametros objectAtIndex:3]:[listMetParametros objectAtIndex:4]:[listMetParametros objectAtIndex:5]];
                 break;
             }
             CASE (@"6") {
@@ -82,9 +85,7 @@
     }
     
     [self.listaMetodos removeAllObjects];
-    
 }
-
 
 
 
@@ -99,7 +100,6 @@
     
     
     if([[nomeGestureParametros objectAtIndex: 0] isEqualToString:@"gestureTap"]){
-        
         GestureTapItem *gesture = [[GestureTapItem alloc]initWithTarget:self action:@selector(acaoToqueObjeto:)];
         gesture.listaMetodos = [[NSMutableArray alloc]init];
         gesture.metodosSolicidados = nomeGesture;
@@ -111,95 +111,162 @@
     
         
     }else if([[nomeGestureParametros objectAtIndex: 0] isEqualToString:@"gestureLong"]){
-
         GestureLongItem *gesture = [[GestureLongItem alloc]initWithTarget:self action:@selector(acaoToqueObjeto:)];
         gesture.listaMetodos = [[NSMutableArray alloc]init];
         gesture.metodosSolicidados = nomeGesture;
-        gesture.numberOfTapsRequired = [[nomeGestureParametros objectAtIndex:1]floatValue];
-        gesture.numberOfTouchesRequired = [[nomeGestureParametros objectAtIndex:2]floatValue];
-        gesture.minimumPressDuration = 2.0;
+        gesture.minimumPressDuration = [[nomeGestureParametros objectAtIndex:1]floatValue];
         gesture.item = viewContainer;
         viewContainer.userInteractionEnabled = YES;
         [viewContainer addGestureRecognizer:gesture];
         
         
     }else if([[nomeGestureParametros objectAtIndex: 0] isEqualToString:@"gesturePinch"]){
+        GesturePinchItem *gesture = [[GesturePinchItem alloc]initWithTarget:self action:@selector(acaoToqueObjeto:)];
+        gesture.listaMetodos = [[NSMutableArray alloc]init];
+        gesture.metodosSolicidados = nomeGesture;
+        gesture.item = viewContainer;
+        viewContainer.userInteractionEnabled = YES;
+        [viewContainer addGestureRecognizer:gesture];
         
         
     }else if([[nomeGestureParametros objectAtIndex: 0] isEqualToString:@"gestureRotation"]){
+        GestureRotationItem *gesture = [[GestureRotationItem alloc]initWithTarget:self action:@selector(acaoToqueObjeto:)];
+        gesture.listaMetodos = [[NSMutableArray alloc]init];
+        gesture.metodosSolicidados = nomeGesture;
+        gesture.item = viewContainer;
+        viewContainer.userInteractionEnabled = YES;
+        [viewContainer addGestureRecognizer:gesture];
         
         
     }else if([[nomeGestureParametros objectAtIndex: 0] isEqualToString:@"gestureSwipe"]){
         GestureSwipeItem *gesture = [[GestureSwipeItem alloc]initWithTarget:self action:@selector(acaoToqueObjeto:)];
         gesture.listaMetodos = [[NSMutableArray alloc]init];
         gesture.metodosSolicidados = nomeGesture;
-        gesture.direction = UISwipeGestureRecognizerDirectionRight;
-        gesture.numberOfTouchesRequired = 1;
+        
+        if([[nomeGestureParametros objectAtIndex:1]floatValue] == 1){
+            gesture.direction = UISwipeGestureRecognizerDirectionRight;
+        }else if([[nomeGestureParametros objectAtIndex:1]floatValue] == 2){
+            gesture.direction = UISwipeGestureRecognizerDirectionLeft;
+        }else if([[nomeGestureParametros objectAtIndex:1]floatValue] == 3){
+            gesture.direction = UISwipeGestureRecognizerDirectionUp;
+        }else if([[nomeGestureParametros objectAtIndex:1]floatValue] == 4){
+            gesture.direction = UISwipeGestureRecognizerDirectionDown;
+        }
+        
         gesture.item = viewContainer;
         viewContainer.userInteractionEnabled = YES;
         [viewContainer addGestureRecognizer:gesture];
         
+        
     }else if([[nomeGestureParametros objectAtIndex: 0] isEqualToString:@"gesturePan"]){
+        GesturePanGesture *gesture = [[GesturePanGesture alloc]initWithTarget:self action:@selector(acaoToqueObjeto:)];
+        gesture.listaMetodos = [[NSMutableArray alloc]init];
+        gesture.metodosSolicidados = nomeGesture;
+        gesture.item = viewContainer;
+        viewContainer.userInteractionEnabled = YES;
+        [viewContainer addGestureRecognizer:gesture];
+
         
-        
-    }else{
-        
-        
-    }
+    }else NSLog(@"Erro gesture");
+    
 }
 
 
--(void)quebraString:(GestureTapItem*)conjuntoMetodos{
+
+-(void)acaoToqueObjeto:(id)gestureItems{
+ 
+    Item *itemEspecifico;
     
-    NSArray* listaMetodos = [conjuntoMetodos.metodosSolicidados componentsSeparatedByString:@"+"];
+    if([gestureItems isKindOfClass:[GestureTapItem class]]){
+        GestureTapItem* gestureItem = (GestureTapItem*)gestureItems;
+        itemEspecifico = gestureItem.item;
+        [self quebraString:gestureItem.metodosSolicidados];
+        
+        
+    }else if([gestureItems isKindOfClass:[GestureLongItem class]]){
+        GestureLongItem* gestureItem = (GestureLongItem*)gestureItems;
+        itemEspecifico = gestureItem.item;
+        [self quebraString:gestureItem.metodosSolicidados];
+    
+        
+    }else if([gestureItems isKindOfClass:[GestureSwipeItem class]]){
+        GestureSwipeItem* gestureItem = (GestureSwipeItem*)gestureItems;
+        itemEspecifico = gestureItem.item;
+        [self quebraString:gestureItem.metodosSolicidados];
+
+    }else if([gestureItems isKindOfClass:[GesturePanGesture class]]){
+        GesturePanGesture* gestureItem = (GesturePanGesture*)gestureItems;
+        itemEspecifico = gestureItem.item;
+        [self quebraString:gestureItem.metodosSolicidados];
+        [self pan:gestureItem];
+        
+        
+    }else if([gestureItems isKindOfClass:[GestureRotationItem class]]){
+        GestureRotationItem* gestureItem = (GestureRotationItem*)gestureItems;
+        itemEspecifico = gestureItem.item;
+        [self quebraString:gestureItem.metodosSolicidados];
+        
+    }else if([gestureItems isKindOfClass:[GesturePinchItem class]]){
+        GesturePinchItem* gestureItem = (GesturePinchItem*)gestureItems;
+        itemEspecifico = gestureItem.item;
+        [self quebraString:gestureItem.metodosSolicidados];
+        
+    }else NSLog(@"erro acionador gesture");
+    
+    
+    [self escolheMetodoNumero:itemEspecifico];
+}
+
+
+
+-(void)quebraString:(NSString*)conjuntoMetodos{
+    
+    NSArray* listaMetodos = [conjuntoMetodos componentsSeparatedByString:@"+"];
     for(NSString *caracteres in listaMetodos){
         [self.listaMetodos addObject:caracteres];
     }
     
 }
 
-//3:5.0:2:YES:0.0:0.5
--(void)acaoToqueObjeto:(id)gestureItems{
- 
-    Item *itemEspecifico;
+//Metodos para deixar mais maroto o gesture de arrastar
+- (void)pan:(UIPanGestureRecognizer *)gesture {
     
+    static CGPoint originalCenter;
     
-    if([gestureItems isKindOfClass:[GestureTapItem class]]){
-        GestureTapItem* gestureItem = (GestureTapItem*)gestureItems;
-        itemEspecifico = gestureItem.item;
-        
-        NSArray* listaMetodos = [gestureItem.metodosSolicidados componentsSeparatedByString:@"+"];
-        for(NSString *caracteres in listaMetodos){
-            [self.listaMetodos addObject:caracteres];
-        }
-        
-        NSLog(@"tap");
-        
-    }else if([gestureItems isKindOfClass:[GestureLongItem class]]){
-        GestureLongItem* gestureItem = (GestureLongItem*)gestureItems;
-        itemEspecifico = gestureItem.item;
-        
-        NSArray* listaMetodos = [gestureItem.metodosSolicidados componentsSeparatedByString:@"+"];
-        for(NSString *caracteres in listaMetodos){
-            [self.listaMetodos addObject:caracteres];
-        }
-        
-        NSLog(@"LOng");
-        
-    }else if([gestureItems isKindOfClass:[GestureSwipeItem class]]){
-        GestureSwipeItem* gestureItem = (GestureSwipeItem*)gestureItems;
-        itemEspecifico = gestureItem.item;
-        
-        NSArray* listaMetodos = [gestureItem.metodosSolicidados componentsSeparatedByString:@"+"];
-        for(NSString *caracteres in listaMetodos){
-            [self.listaMetodos addObject:caracteres];
-        }
-
-        NSLog(@"swip!");
+    if (gesture.state == UIGestureRecognizerStateBegan)
+    {
+        originalCenter = gesture.view.center;
+        [self pauseLayer:gesture.view.layer];
+    }
+    else if (gesture.state == UIGestureRecognizerStateChanged)
+    {
+        CGPoint translate = [gesture translationInView:gesture.view.superview];
+        gesture.view.center = CGPointMake(originalCenter.x + translate.x, originalCenter.y + translate.y);
+    }
+    else if (gesture.state == UIGestureRecognizerStateEnded ||
+             gesture.state == UIGestureRecognizerStateFailed ||
+             gesture.state == UIGestureRecognizerStateCancelled)
+    {
+        [self resumeLayer:gesture.view.layer];
     }
     
-    
-    [self escolheMetodoNumero:itemEspecifico];
+}
+
+-(void)pauseLayer:(CALayer*)layer
+{
+    CFTimeInterval pausedTime = [layer convertTime:CACurrentMediaTime() fromLayer:nil];
+    layer.speed = 0.0;
+    layer.timeOffset = pausedTime;
+}
+
+-(void)resumeLayer:(CALayer*)layer
+{
+    CFTimeInterval pausedTime = [layer timeOffset];
+    layer.speed = 1.0;
+    layer.timeOffset = 0.0;
+    layer.beginTime = 0.0;
+    CFTimeInterval timeSincePause = [layer convertTime:CACurrentMediaTime() fromLayer:nil] - pausedTime;
+    layer.beginTime = timeSincePause;
 }
 
 

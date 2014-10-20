@@ -43,7 +43,6 @@
     [[GerenciadorComponenteView sharedManager]addComponentesMascote:self:0:200:@"zecao"];
     [[MascoteViewController sharedManager]executaSomMascote:@"BemVindoFazenda":2.0];
     
-    
        
     [self animacoesIntro];
 
@@ -66,16 +65,16 @@
 
 -(void)animacaoNuvem{
     
-    [[GerenciadorAnimacoes sharedManager]animacaoMoverLugar:self.nuvemDireita:120:INFINITY:YES:-1224:40];
-    [[GerenciadorAnimacoes sharedManager]animacaoMoverLugar:self.nuvemEsquerda:120:INFINITY:YES:1480:40];
+    [[GerenciadorAnimacoes sharedManager]animacaoMoverLugar:self.nuvemDireita:@"120":@"INFINITY":@"YES":@"-1224":@"40"];
+    [[GerenciadorAnimacoes sharedManager]animacaoMoverLugar:self.nuvemEsquerda:@"120":@"INFINITY":@"YES":@"1480":@"40"];
     
 }
 
 -(void)animacaoBotoes{
     
-    [[GerenciadorAnimacoes sharedManager]animacaoOpacidade:self.btoEstudio:1.0:1:NO:NO];
-    [[GerenciadorAnimacoes sharedManager]animacaoOpacidade:self.btoJogos:1.0:1:NO:NO];
-    [[GerenciadorAnimacoes sharedManager]animacaoOpacidade:self.btoJornada:1.0:1:NO:NO];
+//    [[GerenciadorAnimacoes sharedManager]animacaoOpacidade:self.btoEstudio:@""1.0:1:NO:NO];
+//    [[GerenciadorAnimacoes sharedManager]animacaoOpacidade:self.btoJogos:1.0:1:NO:NO];
+//    [[GerenciadorAnimacoes sharedManager]animacaoOpacidade:self.btoJornada:1.0:1:NO:NO];
     
 }
 

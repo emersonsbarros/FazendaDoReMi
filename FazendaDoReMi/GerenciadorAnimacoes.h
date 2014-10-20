@@ -23,21 +23,30 @@
 
 +(GerenciadorAnimacoes*)sharedManager;
 
+///////////////////////////////////////////////////////////////////////////////
 
-
-
--(void)animacaoOpacidade:(UIView*)view :(float)duracao :(float)repeticao :(BOOL)autoReverso :(BOOL)voltarAoEstadoInicial;
 
 -(void)animacaoSprite:(UIImageView*)view :(NSArray*)imagensSprite :(float)duracao :(float)repeticao :(BOOL)autoReverso :(BOOL)voltarAoEstadoInicial :(float)tempoDelayComecar;
 
--(void)animacaoMoverLugar:(UIView*)view :(float)duracao :(float)repeticao :(BOOL)autoReverso :(float)posX :(float)posY;
 
+///////////////////////////////////////////////////////////////////////////////
+
+
+//Add animacao opacidade nas imagens
+-(void)animacaoOpacidade:(UIView*)view :(NSString*)duracao :(NSString*)repeticao :(NSString*)autoReverso :(NSString*)voltarAoEstadoInicial;
+
+//Add animacao de mover o lugar do objeto
+-(void)animacaoMoverLugar:(UIView*)view :(NSString*)duracao :(NSString*)repeticao :(NSString*)autoReverso :(NSString*)posX :(NSString*)posY;
+
+//Add animacao de dar zoom na imagem
 -(void)animacaozoomImagem:(UIView*)view :(NSString*)duracao :(NSString*)repeticao :(NSString*)valorInicial :(NSString*)valorFinal;
 
--(void)animacaozoomImagem:(UIView*)view;
+//Add animacao de sprites para uma imagem
+-(void)animacaoSpriteEspecifica:(Item*)viewItem :(NSString*)nomeAnimacaoSprite :(NSString*)repeticao :(NSString*)autoReverso :(NSString*)voltarAoEstadoInicial :(NSString*)tempoDelayComecar;
 
--(void)animacaoSpriteEspecifica:(Item*)viewItem :(NSString*)nomeAnimacaoSprite :(float)repeticao :(BOOL)autoReverso :(BOOL)voltarAoEstadoInicial :(float)tempoDelayComecar;
+//Add animacao de girar uma imagem
+-(void)animacaoGirarImagem:(UIView*)view :(NSString*)duracao :(NSString*)repeticoes;
 
--(void)animacaoGirarImagem:(UIView*)view :(float)duracao :(float)repeticoes;
+
 
 @end

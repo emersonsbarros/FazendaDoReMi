@@ -35,32 +35,7 @@
     return gerenciadorDeMascote;
 }
 
-
-//Aux que converte para CGImage, unico jeito para dar certo
--(NSArray*)animationCGImagesArray:(UIImageView*)imgAddAnimacao {
-    NSMutableArray *array = [NSMutableArray arrayWithCapacity:[imgAddAnimacao.animationImages count]];
-    for (UIImage *image in imgAddAnimacao.animationImages) {
-        [array addObject:(id)[image CGImage]];
-    }
-    return [NSArray arrayWithArray:array];
-}
-
-
--(void)animacaoOpacidade:(UIView*)view :(float)duracao :(float)repeticao :(BOOL)autoReverso :(BOOL)voltarAoEstadoInicial{
-    
-    CABasicAnimation *theAnimation;
-    theAnimation=[CABasicAnimation animationWithKeyPath:@"opacity"];
-    theAnimation.duration = duracao;
-    theAnimation.repeatCount = repeticao;
-    theAnimation.autoreverses = autoReverso;
-    theAnimation.fromValue=[NSNumber numberWithFloat:0.0];
-    theAnimation.toValue=[NSNumber numberWithFloat:1.0];
-    theAnimation.fillMode = kCAFillModeForwards;
-    theAnimation.removedOnCompletion = voltarAoEstadoInicial;
-    [view.layer addAnimation:theAnimation forKey:@"animacaoOpacidade"];
-    
-}
-
+///////////////////////////////////////////////////// Padroes /////////////////////////////////////////////////////////////
 
 -(void)animacaoSprite:(UIImageView*)view :(NSArray*)imagensSprite :(float)duracao :(float)repeticao :(BOOL)autoReverso :(BOOL)voltarAoEstadoInicial :(float)tempoDelayComecar{
     
@@ -80,7 +55,27 @@
     
 }
 
--(void)animacaoSpriteEspecifica:(Item*)viewItem :(NSString*)nomeAnimacaoSprite :(float)repeticao :(BOOL)autoReverso :(BOOL)voltarAoEstadoInicial :(float)tempoDelayComecar{
+//////////////////////////////////////////////////////  FRAMEWORK /////////////////////////////////////////////////////////
+
+
+
+-(void)animacaoOpacidade:(UIView*)view :(NSString*)duracao :(NSString*)repeticao :(NSString*)autoReverso :(NSString*)voltarAoEstadoInicial{
+    
+    CABasicAnimation *theAnimation;
+    theAnimation=[CABasicAnimation animationWithKeyPath:@"opacity"];
+    theAnimation.duration = [duracao floatValue];
+    theAnimation.repeatCount = [repeticao floatValue];
+    theAnimation.autoreverses = [autoReverso floatValue];
+    theAnimation.fromValue=[NSNumber numberWithFloat:0.0];
+    theAnimation.toValue=[NSNumber numberWithFloat:1.0];
+    theAnimation.fillMode = kCAFillModeForwards;
+    theAnimation.removedOnCompletion = [voltarAoEstadoInicial boolValue];
+    [view.layer addAnimation:theAnimation forKey:@"animacaoOpacidade"];
+    
+}
+
+
+-(void)animacaoSpriteEspecifica:(Item*)viewItem :(NSString*)nomeAnimacaoSprite :(NSString*)repeticao :(NSString*)autoReverso :(NSString*)voltarAoEstadoInicial :(NSString*)tempoDelayComecar{
     
     for(SpriteItem *sprite in viewItem.listaSprites){
         if([sprite.nomeAnimacao isEqualToString:nomeAnimacaoSprite]){
@@ -92,25 +87,27 @@
     CAKeyframeAnimation *animacao = [CAKeyframeAnimation animationWithKeyPath: @"contents"];
     animacao.calculationMode = kCAAnimationDiscrete;
     animacao.duration = 1.0;
-    animacao.repeatCount = repeticao;
-    animacao.autoreverses = autoReverso;
-    animacao.beginTime = CACurrentMediaTime() + tempoDelayComecar;
+    animacao.repeatCount = [repeticao floatValue];
+    animacao.autoreverses = [autoReverso floatValue];
+    animacao.beginTime = CACurrentMediaTime() + [tempoDelayComecar floatValue];
     animacao.fillMode = kCAFillModeForwards;
-    animacao.removedOnCompletion = voltarAoEstadoInicial;
+    animacao.removedOnCompletion = [voltarAoEstadoInicial boolValue];
+    animacao.autoreverses = [autoReverso boolValue];
     animacao.additive = NO;
     animacao.values = [self animationCGImagesArray:viewItem];
     [viewItem.layer addAnimation: animacao forKey:@"animacaoSprite"];
     
 }
 
--(void)animacaoMoverLugar:(UIView*)view :(float)duracao :(float)repeticao :(BOOL)autoReverso :(float)posX :(float)posY{
+
+-(void)animacaoMoverLugar:(UIView*)view :(NSString*)duracao :(NSString*)repeticao :(NSString*)autoReverso :(NSString*)posX :(NSString*)posY{
     
     CABasicAnimation *moveNuvemDireita= [CABasicAnimation animationWithKeyPath:@"position"];
-    moveNuvemDireita.duration = duracao;
-    moveNuvemDireita.repeatCount = repeticao;
-    moveNuvemDireita.removedOnCompletion = autoReverso;
+    moveNuvemDireita.duration = [duracao floatValue];
+    moveNuvemDireita.repeatCount = [repeticao floatValue];
+    moveNuvemDireita.removedOnCompletion = [autoReverso boolValue];
     moveNuvemDireita.fromValue = [NSValue valueWithCGPoint: CGPointMake(view.frame.origin.x+(view.frame.size.width/2), view.frame.origin.y+view.frame.size.height)];
-    moveNuvemDireita.toValue = [NSValue valueWithCGPoint: CGPointMake(view.frame.origin.x+(view.frame.size.width/2)+posX, view.frame.origin.y+posY)];
+    moveNuvemDireita.toValue = [NSValue valueWithCGPoint: CGPointMake(view.frame.origin.x+(view.frame.size.width/2)+[posX floatValue], view.frame.origin.y+[posY floatValue])];
     
     [view.layer addAnimation: moveNuvemDireita forKey:@"animacaoMovimento"];
     
@@ -126,35 +123,35 @@
     pulseAnimation.duration = [duracao floatValue];
     pulseAnimation.repeatCount = [repeticao floatValue];
 
-    [view.layer addAnimation:pulseAnimation forKey:@"pulse"];
+    [view.layer addAnimation:pulseAnimation forKey:@"animacaoPulsar"];
 }
 
 
--(void)animacaozoomImagem:(UIView*)view{
-    
-    CABasicAnimation *pulseAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale.xy"];
-    pulseAnimation.fromValue = @1.0;
-    pulseAnimation.toValue = @1.5;
-    pulseAnimation.duration = 1;
-    pulseAnimation.repeatCount = INFINITY;
-    
-    [view.layer addAnimation:pulseAnimation forKey:@"pulse"];
-}
-
--(void)animacaoGirarImagem:(UIView*)view :(float)duracao :(float)repeticoes{
+-(void)animacaoGirarImagem:(UIView*)view :(NSString*)duracao :(NSString*)repeticoes{
     
     CABasicAnimation *imageRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
     imageRotation.toValue = [NSNumber numberWithFloat: M_PI * 2.0 * 2 * 1 ];
-    imageRotation.duration = duracao;
-    imageRotation.repeatCount = repeticoes;
+    imageRotation.duration = [duracao floatValue];
+    imageRotation.repeatCount = [repeticoes floatValue];
     imageRotation.removedOnCompletion = NO;
     imageRotation.autoreverses=NO;
     imageRotation.fillMode = kCAFillModeForwards;
     
-    [view.layer addAnimation:imageRotation forKey:@"imageRotation"];
+    [view.layer addAnimation:imageRotation forKey:@"animacaoRotacao"];
 }
 
 
+//////////////////////////////////////////////////////  AUXILIAR /////////////////////////////////////////////////////////
+
+
+//Aux que converte para CGImage, unico jeito para dar certo
+-(NSArray*)animationCGImagesArray:(UIImageView*)imgAddAnimacao {
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:[imgAddAnimacao.animationImages count]];
+    for (UIImage *image in imgAddAnimacao.animationImages) {
+        [array addObject:(id)[image CGImage]];
+    }
+    return [NSArray arrayWithArray:array];
+}
 
 
 @end

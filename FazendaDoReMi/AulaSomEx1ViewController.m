@@ -32,20 +32,20 @@
 
     
     //Add referencia puchando da base de itens (nomeItem,outlet,tipoGesture:parametros + metodos:parementros + n..)
-    [[ControladorDeItem sharedManager]retornaItem:@"piano":self.imgPiano:@"gestureSwipe + 4"];
-    [[ControladorDeItem sharedManager]retornaItem:@"flauta":self.imgFlauta:@"gestureTap:1:1 + 1 + 2 + 3:5.0:5.0:1.0:1.5"];
-    [[ControladorDeItem sharedManager]retornaItem:@"tambor":self.imgTambor:@"gestureTap:1:1 + 1 + 2 + 3:5.0:5.0:1.0:1.5"];
-    [[ControladorDeItem sharedManager]retornaItem:@"violao":self.imgViolao:@"gestureTap:1:1 + 1 + 2 + 3:5.0:5.0:1.0:1.5"];
-    [[ControladorDeItem sharedManager]retornaItem:@"xilofone":self.imgXilofone:@"gestureTap:1:1 + 1 + 2 + 3:5.0:5.0:1.0:1.5"];
+    [[ControladorDeItem sharedManager]retornaItem:@"piano":self.imgPiano:@"gesturePan + 4:1:2"];
+    [[ControladorDeItem sharedManager]retornaItem:@"flauta":self.imgFlauta:@"gestureTap:1:1 + 1 + 2:0 + 3:5.0:5.0:1.0:1.5"];
+    [[ControladorDeItem sharedManager]retornaItem:@"tambor":self.imgTambor:@"gestureTap:1:1 + 1 + 2:0 + 3:5.0:5.0:1.0:1.5"];
+    [[ControladorDeItem sharedManager]retornaItem:@"violao":self.imgViolao:@"gestureLong:3 + 1 + 2:0 + 3:5.0:5.0:1.0:1.5"];
+    [[ControladorDeItem sharedManager]retornaItem:@"xilofone":self.imgXilofone:@"gestureSwipe:1 + 1 + 2:0 + 3:5.0:5.0:1.0:1.5"];
     
-    [[ControladorDeItem sharedManager]retornaItem:@"saxfone":self.imgSaxfone:@"gestureTap:1:1 + 1 + 2 + 3:5.0:5.0:1.0:1.5"];
-    [[ControladorDeItem sharedManager]retornaItem:@"chocalho":self.imgChocalho:@"gestureTap:1:1 + 1 + 2 + 3:5.0:5.0:1.0:1.5"];
-    [[ControladorDeItem sharedManager]retornaItem:@"violino":self.imgViolino:@"gestureTap:1:1 + 1 + 2 + 3:5.0:5.0:1.0:1.5"];
+    [[ControladorDeItem sharedManager]retornaItem:@"saxfone":self.imgSaxfone:@"gestureTap:1:1 + 1 + 2:0 + 3:5.0:5.0:1.0:1.5"];
+    [[ControladorDeItem sharedManager]retornaItem:@"chocalho":self.imgChocalho:@"gestureTap:1:1 + 1 + 2:0 + 3:5.0:5.0:1.0:1.5"];
+    [[ControladorDeItem sharedManager]retornaItem:@"violino":self.imgViolino:@"gestureTap:1:1 + 1 + 2:0 + 3:5.0:5.0:1.0:1.5"];
     
     [[ControladorDeItem sharedManager]retornaItem:@"florRocha":self.imgFlorAgua:@"gestureTap:1:1"];
-    [[ControladorDeItem sharedManager]retornaItem:@"florRosa":self.imgFlorGiratoria:@"gestureTap:1:1 + 4"];
+    [[ControladorDeItem sharedManager]retornaItem:@"florRosa":self.imgFlorGiratoria:@"gestureTap:1:1 + 4:1:2"];
     
-    [[ControladorDeItem sharedManager]retornaItem:@"quadroZecao":self.imgQuadro:@"gestureTap:1:1 + 5"];
+    [[ControladorDeItem sharedManager]retornaItem:@"quadroZecao":self.imgQuadro:@"gestureTap:1:1 + 5:1:1:NO:0:400"];
     
     
     //Add os itens que é desejado pressionar para decorrer com o proximo exercicio
