@@ -50,7 +50,7 @@
         NSString *valor = [[numeroMetodos componentsSeparatedByString:@":"]objectAtIndex:0];
         
         SWITCH(valor){
-            
+        
             CASE (@"1") {
                 [[GerenciadoresAcoes sharedManager]alteraEstadoPressionado:itemEspecifico];
                 break;
@@ -64,12 +64,10 @@
                 break;
             }
             CASE (@"4") {
-                //[[GerenciadorAnimacoes sharedManager]animacaoGirarImagem:itemEspecifico:1:2];
                 [[GerenciadorAnimacoes sharedManager]animacaoGirarImagem:itemEspecifico:[listMetParametros objectAtIndex:1]:[listMetParametros objectAtIndex:2]];
                 break;
             }
             CASE (@"5") {
-                //[[GerenciadorAnimacoes sharedManager]animacaoMoverLugar:itemEspecifico:1:1:NO:0:400];
                 [[GerenciadorAnimacoes sharedManager]animacaoMoverLugar:itemEspecifico:[listMetParametros objectAtIndex:1]:[listMetParametros objectAtIndex:2]:[listMetParametros objectAtIndex:3]:[listMetParametros objectAtIndex:4]:[listMetParametros objectAtIndex:5]];
                 break;
             }
@@ -78,6 +76,8 @@
                 break;
             }
             DEFAULT{
+               
+                
                 break;
             }
         }
@@ -90,6 +90,48 @@
 
 
 /////////////////////////////// AUXILIAR CONTRALADOR //////////////////////////////////
+
+-(void)checkColisao:(NSTimer *) timer{
+    
+    TimerGesturePan *time = timer.userInfo;
+    
+    id presentationLayer1 = time.itemColidir.layer.presentationLayer;
+    id presentationLayer2 = time.itemArrastar.layer.presentationLayer;
+    
+    BOOL nowIntersecting = CGRectIntersectsRect([presentationLayer1 frame], [presentationLayer2 frame]);
+    
+    if (nowIntersecting){
+        [self quebraString:time.nomeMetodos];
+        [self escolheMetodoNumero:time.gesturePan.item];
+        [timer invalidate];
+    }
+    
+}
+
+-(void)addGestureItemPan:(NSString*)nomeGesture :(Item*)viewContainer :(Item*)viewColisao {
+
+    GesturePanGesture *gesture = [[GesturePanGesture alloc]initWithTarget:self action:@selector(pan:)];
+    gesture.listaMetodos = [[NSMutableArray alloc]init];
+    gesture.metodosSolicidados = nomeGesture;
+    gesture.item = viewContainer;
+    viewContainer.userInteractionEnabled = YES;
+    [viewContainer addGestureRecognizer:gesture];
+    
+    
+    TimerGesturePan *timerPan = [[TimerGesturePan alloc]init];
+    timerPan.itemArrastar = viewContainer;
+    timerPan.itemColidir = viewColisao;
+    timerPan.nomeMetodos = nomeGesture;
+    timerPan.gesturePan = gesture;
+
+    
+    [NSTimer scheduledTimerWithTimeInterval: 0.5
+                                     target: self
+                                   selector: @selector(checkColisao:)
+                                   userInfo: timerPan
+                                    repeats: YES];
+    
+}
 
 -(void)addGestureItem:(NSString*)nomeGesture :(Item*)viewContainer{
     
@@ -221,7 +263,9 @@
 
 -(void)quebraString:(NSString*)conjuntoMetodos{
     
-    NSArray* listaMetodos = [conjuntoMetodos componentsSeparatedByString:@"+"];
+    NSString* nomeGesture = [conjuntoMetodos stringByReplacingOccurrencesOfString: @" " withString:@""];
+    
+    NSArray* listaMetodos = [nomeGesture componentsSeparatedByString:@"+"];
     for(NSString *caracteres in listaMetodos){
         [self.listaMetodos addObject:caracteres];
     }

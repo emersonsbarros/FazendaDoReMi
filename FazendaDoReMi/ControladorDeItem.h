@@ -31,4 +31,6 @@
 
 -(void)retornaItem:(NSString*)nome :(UIView*)viewContainer :(NSString*)nomeGesture;
 
+-(void)retornaItemGesture:(NSString*)nome :(Item*)viewContainer :(Item*)viewColidir  :(NSString*)nomeGesture;
+
 @end

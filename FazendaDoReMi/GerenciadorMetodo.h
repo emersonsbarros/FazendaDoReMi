@@ -16,6 +16,8 @@
 #import "GesturePanGesture.h"
 #import "GesturePinchItem.h"
 
+#import "TimerGesturePan.h"
+
 @interface GerenciadorMetodo : NSObject
 
 
@@ -23,6 +25,9 @@
 
 -(void)addGestureItem:(NSString*)nomeGesture :(Item*)viewContainer;
 
+-(void)addGestureItemPan:(NSString*)nomeGesture :(Item*)viewContainer :(Item*)viewColisao;
+    
+    
 @property NSMutableArray *listaMetodos;
 
 

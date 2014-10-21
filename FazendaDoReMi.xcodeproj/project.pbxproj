@@ -135,6 +135,7 @@
 		0BB81EAC19F5A134001F868D /* AulaSomEx2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB81EAA19F5A134001F868D /* AulaSomEx2ViewController.xib */; };
 		0BBE5DDD19F0434C00293215 /* GerenciadoresAcoes.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBE5DDC19F0434C00293215 /* GerenciadoresAcoes.m */; };
 		0BD109EB19F57C7D00D5FA52 /* GesturePinchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD109EA19F57C7D00D5FA52 /* GesturePinchItem.m */; };
+		0BE2D17719F6C9E800DB0F71 /* TimerGesturePan.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE2D17619F6C9E800DB0F71 /* TimerGesturePan.m */; };
 		3F0E879719DBA6F8003FF4EB /* JornadaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E879619DBA6F8003FF4EB /* JornadaViewController.m */; };
 		3F3EBFFE19F34A3E00BB221D /* piano2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F3EBFFD19F34A3E00BB221D /* piano2.png */; };
 		3FB6F4F519DA659C0080057B /* botao12Pausa.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6F4C919DA659C0080057B /* botao12Pausa.png */; };
@@ -432,6 +433,8 @@
 		0BBE5DDC19F0434C00293215 /* GerenciadoresAcoes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GerenciadoresAcoes.m; sourceTree = "<group>"; };
 		0BD109E919F57C7D00D5FA52 /* GesturePinchItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GesturePinchItem.h; sourceTree = "<group>"; };
 		0BD109EA19F57C7D00D5FA52 /* GesturePinchItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GesturePinchItem.m; sourceTree = "<group>"; };
+		0BE2D17519F6C9E800DB0F71 /* TimerGesturePan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerGesturePan.h; sourceTree = "<group>"; };
+		0BE2D17619F6C9E800DB0F71 /* TimerGesturePan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerGesturePan.m; sourceTree = "<group>"; };
 		3F0E879519DBA6F8003FF4EB /* JornadaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JornadaViewController.h; sourceTree = "<group>"; };
 		3F0E879619DBA6F8003FF4EB /* JornadaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JornadaViewController.m; sourceTree = "<group>"; };
 		3F3EBFFD19F34A3E00BB221D /* piano2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = piano2.png; sourceTree = "<group>"; };
@@ -1284,6 +1287,8 @@
 				3FDCC04D19EB0673003DC572 /* SomItem.m */,
 				0B862C4119EC6E60009365DD /* ControladorDeItem.h */,
 				0B862C4219EC6E60009365DD /* ControladorDeItem.m */,
+				0BE2D17519F6C9E800DB0F71 /* TimerGesturePan.h */,
+				0BE2D17619F6C9E800DB0F71 /* TimerGesturePan.m */,
 			);
 			name = Item;
 			path = ..;
@@ -1754,6 +1759,7 @@
 				3FC5D34419DA5D4C00348F51 /* GerenciadorComponenteView.m in Sources */,
 				3FC5D34119DA5CFB00348F51 /* SoundBankPlayer.m in Sources */,
 				3FC5D33A19DA5C3200348F51 /* Partitura.m in Sources */,
+				0BE2D17719F6C9E800DB0F71 /* TimerGesturePan.m in Sources */,
 				0B9F945619E863E2005F4314 /* GerenciadorAudio.m in Sources */,
 				A8F1C4B519D20502001850E4 /* Exercicio.m in Sources */,
 				A824718B19D0AB0E00168026 /* AppDelegate.m in Sources */,

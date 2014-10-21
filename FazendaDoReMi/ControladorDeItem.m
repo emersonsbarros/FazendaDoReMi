@@ -91,6 +91,23 @@
     
 }
 
-
+-(void)retornaItemGesture:(NSString*)nome :(Item*)viewContainer :(Item*)viewColidir  :(NSString*)nomeGesture{
+    
+    //Procura o item na lista
+    for (Item *item in [GerenciadorDeItem sharedManager].listaDeItens) {
+        if ([item.nome isEqualToString: nome]) {
+            item.frame = viewContainer.frame;
+            viewContainer.image = item.image;
+            viewContainer.nome = item.nome;
+            viewContainer.listaSonsURL = item.listaSonsURL;
+            viewContainer.listaSprites = item.listaSprites;
+            viewContainer.estadoPressionado = item.estadoPressionado;
+            //return item;
+        }
+    }
+    
+    [[GerenciadorMetodo sharedManager] addGestureItemPan:nomeGesture :viewContainer :viewColidir];
+    
+}
 
 @end
