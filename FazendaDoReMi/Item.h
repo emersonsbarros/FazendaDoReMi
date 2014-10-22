@@ -18,8 +18,4 @@
 @property NSMutableArray *listaSonsURL;
 
 
-//Metodos
--(void)retornaAudio: (NSString*)nome;
-
-
 @end

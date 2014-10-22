@@ -89,7 +89,7 @@
 
     NSArray *imageArray = [NSArray arrayWithObjects:image1, image2, image3, image4, image5, nil];
     
-    [[GerenciadorAnimacoes sharedManager]animacaoSprite:self.porteira :imageArray :1 :1 :NO :NO :2];
+    //[[GerenciadorAnimacoes sharedManager]animacaoSprite:self.porteira :imageArray :1 :1 :NO :NO :2];
     
     [self performSelector:@selector(animacaoBotoes) withObject:NULL afterDelay:5];
     

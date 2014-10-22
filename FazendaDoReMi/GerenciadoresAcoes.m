@@ -33,18 +33,22 @@
     return gerenciadorDeItem;
 }
 
-///////////////////////////////////////////////////////////////////////////////////
+///////////////////////// METODOS DE ACAO ////////////////////////////////////
 
-
+//Toca um som do item especifico
 -(void)tocarSomItem:(Item*)item :(NSString*)indiceAudio{
     SomItem *somItem = [item.listaSonsURL objectAtIndex:[indiceAudio integerValue]];
     [[GerenciadorAudio sharedManager]playAudio:somItem.caminhoAudio];
 }
 
+
+//Altera o estado do item como pressionado para poder passar de exercicio
 -(void)alteraEstadoPressionado:(Item*)item{
     item.estadoPressionado = YES;
 }
 
+
+//Oculta a imagem
 -(void)escondeImagem:(Item*)item{
     item.hidden = YES;
 }

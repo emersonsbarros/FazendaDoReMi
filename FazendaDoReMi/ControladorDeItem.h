@@ -18,19 +18,17 @@
 
 @interface ControladorDeItem : NSObject
 
-
+//Atributos
 @property NSMutableArray *listaObjetosPressionados;
-
-+(ControladorDeItem*)sharedManager;
-
 @property int contadorItensPressionados;
 @property NSTimer *timerVerificadorItemPressionado;
 
 
+//Metodos
++(ControladorDeItem*)sharedManager;
 -(void)chamaVerificador:(NSArray*)listaItens;
-
 -(void)retornaItem:(NSString*)nome :(UIView*)viewContainer :(NSString*)nomeGesture;
-
 -(void)retornaItemGesture:(NSString*)nome :(Item*)viewContainer :(Item*)viewColidir  :(NSString*)nomeGesture;
+
 
 @end

@@ -5,6 +5,9 @@
 //  Created by VINICIUS RESENDE FIALHO on 13/10/14.
 //  Copyright (c) 2014 EMERSON BARROS | VINICIUS RESENDE. All rights reserved.
 //
+ //[[GerenciadorAnimacoes sharedManager]animacaoSpriteEspecifica:self.imgTeste:@"pianoTocando":4:YES:NO:2.0];
+
+
 
 #import "ControladorDeItem.h"
 
@@ -34,6 +37,7 @@
     }
     return gerenciadorDeItem;
 }
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -66,12 +70,13 @@
         [self.listaObjetosPressionados removeAllObjects];
         self.contadorItensPressionados = 0;
         [self.timerVerificadorItemPressionado invalidate];
+        
     }
    
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+//associa o item do banco a view passada e chama o gesture para ser inserido
 -(void)retornaItem:(NSString*)nome :(Item*)viewContainer :(NSString*)nomeGesture{
     
     //Procura o item na lista
@@ -91,6 +96,8 @@
     
 }
 
+
+//associa o item do banco a view passada e chama o gesture pan
 -(void)retornaItemGesture:(NSString*)nome :(Item*)viewContainer :(Item*)viewColidir  :(NSString*)nomeGesture{
     
     //Procura o item na lista

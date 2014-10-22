@@ -40,7 +40,7 @@
 ///////////////////////////////// CONTROLADORES METODOS //////////////////////////////////////
 
 
-
+//Metodo que executa o metodo pelo numero passado na string
 -(void)escolheMetodoNumero:(Item*)itemEspecifico{
     
     for(NSString *numeroMetodos in self.listaMetodos){
@@ -91,6 +91,7 @@
 
 /////////////////////////////// AUXILIAR CONTRALADOR //////////////////////////////////
 
+//Analiza a colisao de um Pan Gesture
 -(void)checkColisao:(NSTimer *) timer{
     
     TimerGesturePan *time = timer.userInfo;
@@ -108,6 +109,8 @@
     
 }
 
+
+//Add um gesture Pan, passando a string controladora, view para arrastar e a view de colisao
 -(void)addGestureItemPan:(NSString*)nomeGesture :(Item*)viewContainer :(Item*)viewColisao {
 
     GesturePanGesture *gesture = [[GesturePanGesture alloc]initWithTarget:self action:@selector(pan:)];
@@ -133,6 +136,8 @@
     
 }
 
+
+//Add o gesture a um item
 -(void)addGestureItem:(NSString*)nomeGesture :(Item*)viewContainer{
     
     nomeGesture = [nomeGesture stringByReplacingOccurrencesOfString: @" " withString:@""];
@@ -214,7 +219,7 @@
 }
 
 
-
+//Chamado quando o gesture é feito
 -(void)acaoToqueObjeto:(id)gestureItems{
  
     Item *itemEspecifico;
@@ -260,7 +265,7 @@
 }
 
 
-
+//Quebra string controladora
 -(void)quebraString:(NSString*)conjuntoMetodos{
     
     NSString* nomeGesture = [conjuntoMetodos stringByReplacingOccurrencesOfString: @" " withString:@""];
@@ -271,6 +276,7 @@
     }
     
 }
+
 
 //Metodos para deixar mais maroto o gesture de arrastar
 - (void)pan:(UIPanGestureRecognizer *)gesture {
@@ -295,6 +301,7 @@
     }
     
 }
+
 
 -(void)pauseLayer:(CALayer*)layer
 {

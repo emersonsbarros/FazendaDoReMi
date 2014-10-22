@@ -34,6 +34,8 @@
     return gerenciadorDeAula;
 }
 
+
+//Cria aulas
 -(void)instanciaAulas{
     
     [self criaAulaCasa];
@@ -43,6 +45,7 @@
 
 ////////////////////////////// AULA CASA ////////////////////////////////
 
+//Cria Aula
 -(void)criaAulaCasa{
     
     Aula *aula = [[Aula alloc]init];
@@ -60,6 +63,7 @@
     
 }
 
+//Cria exercicio
 -(void)criaCasaExercicio1:(Aula*)aula{
     
     //Exercícios
@@ -85,7 +89,8 @@
 }
 
 
-////////////////////////////// AULA GALINHEIRO ////////////////////////////////
+
+////////////////////// AULA GALINHEIRO ////////////////////////////////
 
 
 

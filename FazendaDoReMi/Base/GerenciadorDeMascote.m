@@ -35,13 +35,15 @@
     return gerenciadorDeMascote;
 }
 
-
+//Instancia Mascotes
 -(void)instanciaMascotes{
     [self instanciaMascoteCachorro];
 }
 
+
 //////////////////////////////////// Mascote Zecao ////////////////////////////////////////////////
 
+//Mascote
 -(void)instanciaMascoteCachorro{
 
 
@@ -111,7 +113,6 @@
     
 }
 
-
 ////AUDIOS
 -(void)audioMenuInicial:(Mascote*)mascote{
     
@@ -131,6 +132,8 @@
 
 ////////////////////////////////// METODOS AUXILIARES //////////////////////////////////////////////
 
+
+//Retorna um srite do mascote
 -(SpriteMascote*)retornaAnimacaoMascote:(Mascote*)mascote :(NSString*)nomeAnimacao{
     
     //Procura o mascote na lista
@@ -155,6 +158,8 @@
     return [NSArray arrayWithArray:array];
 }
 
+
+//Retorna um mascote pelo seu nome
 -(Mascote*)retornaMascote:(NSString*)nomeMascote{
     
     //Procura o mascote na lista
@@ -167,5 +172,8 @@
     //Se não encontra retorna o primeiro mascote
     return self.listaDeMascotes.firstObject;
 }
+
+
+
 
 @end

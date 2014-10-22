@@ -34,11 +34,7 @@
 }
 
 /////////////////////////////////////////////////////////////////////////////////////
-//[notaDo2.carinha setFrame:CGRectMake(-65,-15,150,180)];
-//[notaDo2.imagemNota addSubview:notaDo2.carinha];
-//
-//[notaDo2.chapeu setFrame:CGRectMake(-33,50,80,50)];
-//[notaDo2.imagemNota addSubview:notaDo2.chapeu];
+
 
 
 //Notas/Pausas Padroes da Partitura
@@ -359,6 +355,7 @@
 }
 
 
+//Retorna a pausa pelo seu nome
 -(Nota*)retornaNotaPausaPadrao:(NSString*)nomeNota{
     
     Nota *nota;
@@ -373,6 +370,8 @@
     return NULL;
 }
 
+
+//Retorna o nota crianca pelo nome
 -(NotaAnimadaPadrao*)retornaNotaPadraoCrianca:(NSString*)tipoNomeNota{
 
     NotaAnimadaPadrao *nota;
@@ -389,7 +388,7 @@
     return NULL;
 }
 
-
+//Retorna o rosto do animal que corresponde a nota
 -(UIImage*)retornaCarinhaNota:(NSString*)tipoNomeNota{
     
     NotaAnimadaPadrao *nota;
@@ -405,4 +404,9 @@
     return NULL;
 }
 
+
 @end
+
+
+
+

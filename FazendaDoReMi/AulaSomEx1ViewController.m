@@ -22,22 +22,24 @@
     }
     return self;
 }
+// [[ControladorDeItem sharedManager]retornaItem:@"xilofone":self.imgXilofone:@"gestureSwipe:1 + 1 + 2:0 + 3:5.0:5.0:1.0:1.5"];
+//[[ControladorDeItem sharedManager]retornaItemGesture:@"flauta" :self.imgFlauta:self.imgPiano:@"gesturePan + 3:5.0:5.0:1.0:1.5 + 2:0"];
+//[[ControladorDeItem sharedManager]retornaItem:@"violao":self.imgViolao:@"gestureLong:3 + 1 + 2:0 + 3:5.0:5.0:1.0:1.5"];
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     
+    //Add p botao de voltar
     [[GerenciadorComponenteView sharedManager]addComponentesBotaoVoltaMapa:self];
 
-    
     //Add referencia puchando da base de itens (nomeItem,outlet,tipoGesture:parametros + metodos:parementros + n..)
     
-    [[ControladorDeItem sharedManager]retornaItem:@"piano":self.imgPiano:@"gestureTap:1:1"];
     
+    //Add os Itens na tela
+    [[ControladorDeItem sharedManager]retornaItem:@"piano":self.imgPiano:@"gestureTap:1:1"];
     [[ControladorDeItem sharedManager]retornaItemGesture:@"flauta" :self.imgFlauta:self.imgPiano:@"gesturePan + 3:5.0:5.0:1.0:1.5 + 2:0"];
-
-    //[[ControladorDeItem sharedManager]retornaItem:@"flauta":self.imgFlauta:@"gestureTap:1:1 + 1 + 2:0 + 3:5.0:5.0:1.0:1.5"];
     [[ControladorDeItem sharedManager]retornaItem:@"tambor":self.imgTambor:@"gestureTap:1:1 + 1 + 2:0 + 3:5.0:5.0:1.0:1.5"];
     [[ControladorDeItem sharedManager]retornaItem:@"violao":self.imgViolao:@"gestureLong:3 + 1 + 2:0 + 3:5.0:5.0:1.0:1.5"];
     [[ControladorDeItem sharedManager]retornaItem:@"xilofone":self.imgXilofone:@"gestureSwipe:1 + 1 + 2:0 + 3:5.0:5.0:1.0:1.5"];
@@ -52,10 +54,11 @@
     [[ControladorDeItem sharedManager]retornaItem:@"quadroZecao":self.imgQuadro:@"gestureTap:1:1 + 5:1:1:NO:0:400"];
     
     
+    
     //Add os itens que é desejado pressionar para decorrer com o proximo exercicio
     [[ControladorDeItem sharedManager]chamaVerificador:[NSArray arrayWithObjects:self.imgFlauta,self.imgPiano,self.imgTambor,self.imgViolao,self.imgXilofone,self.imgSaxfone,self.imgChocalho,self.imgViolino,nil]];
     
-     //[[GerenciadorAnimacoes sharedManager]animacaoSpriteEspecifica:self.imgTeste:@"pianoTocando":4:YES:NO:2.0];
+    
     
 
 }

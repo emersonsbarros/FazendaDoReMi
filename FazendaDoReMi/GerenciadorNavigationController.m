@@ -34,7 +34,10 @@
     return gerenciadorDeSom;
 }
 
+///////////////////////////////////////// Metodos ///////////////////////////////////////
 
+
+//retorna uma view controller com base no seu nome
 -(UIViewController*)retornaViewControllerStoryBoard:(NSString*)nomeview{
     for(UIViewController *controladores in [GerenciadorNavigationController sharedManager].controladorApp.viewControllers){
         if([controladores.restorationIdentifier isEqualToString:nomeview]){

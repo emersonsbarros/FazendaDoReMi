@@ -21,15 +21,15 @@
 @interface GerenciadorMetodo : NSObject
 
 
-+(GerenciadorMetodo*)sharedManager;
-
--(void)addGestureItem:(NSString*)nomeGesture :(Item*)viewContainer;
-
--(void)addGestureItemPan:(NSString*)nomeGesture :(Item*)viewContainer :(Item*)viewColisao;
-    
-    
+//Atributos
 @property NSMutableArray *listaMetodos;
 
+
+//Metodos
++(GerenciadorMetodo*)sharedManager;
+-(void)addGestureItem:(NSString*)nomeGesture :(Item*)viewContainer;
+-(void)addGestureItemPan:(NSString*)nomeGesture :(Item*)viewContainer :(Item*)viewColisao;
+    
 
 
 @end

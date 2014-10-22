@@ -43,6 +43,7 @@
 
 //////////////////////////////////////////////////////////////////////
 
+//Add gesture ao scorll view
 -(void)addGesturePrintarNotasTela{
     
     limiteDeNotas = 100;
@@ -55,7 +56,7 @@
 }
 
 
-
+//Adiciona nota ao scroll
 -(void)addNotaNaTela:(id)sender{
     UITapGestureRecognizer *touch = (UITapGestureRecognizer*)sender;
     CGPoint touchPoint = [touch locationInView:self.scrollPartitura];
@@ -95,6 +96,8 @@
     
 }
 
+
+//Acompanha a nota no scroll quando está tocando
 -(void)atualizaPosicaoTocando{
     
     Nota *notaAtual = [[DesenhaPartituraEdicao sharedManager].listaNotasEdicao objectAtIndex:self.contadorIndiceNota];
@@ -136,14 +139,8 @@
     
 }
 
-/////////////////////////////////////////////////////////////////////
 
--(void)iniciaEdicaoPartitura{
-    [[ComponenteScrollEdicao sharedManager]desenhaLinhasPengrama];
-    [[ComponenteScrollEdicao sharedManager]addGesturePrintarNotasTela];
-
-}
-
+//desenha o pentagrama e clave no scroll
 -(void)desenhaLinhasPengrama{
     
     for (UIImageView *t in [DesenhaPartituraEdicao sharedManager].listaImagensTracoPentagrama) {
@@ -173,6 +170,7 @@
 }
 
 
+//Recebe o scroll de edicao
 -(void)recebeScroll:(UIScrollView*)scroll{
     
     self.scrollPartitura = scroll;
@@ -180,12 +178,14 @@
     
 }
 
-
+//Reseta o tamanho original do scroll
 -(void)resetaScroll{
     
     [self.scrollPartitura setContentOffset:CGPointMake(0,0) animated:YES];
 }
 
+
+//toca a partitura
 -(void)tocaPartituraEdicao{
     
     if([Sinfonia sharedManager].estadoBotaoPlay){
@@ -201,6 +201,8 @@
 
 }
 
+
+//limpa a partitura
 -(void)limparPartituraEdicao{
     
     if([Sinfonia sharedManager].estadoBotaoLimpar){

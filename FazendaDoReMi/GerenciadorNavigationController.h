@@ -10,11 +10,12 @@
 
 @interface GerenciadorNavigationController : NSObject
 
-
+//Atributos
 @property UINavigationController *controladorApp;
 
-+(GerenciadorNavigationController*)sharedManager;
 
+//Metodos
++(GerenciadorNavigationController*)sharedManager;
 -(UIViewController*)retornaViewControllerStoryBoard:(NSString*)nomeview;
 
 

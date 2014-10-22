@@ -58,7 +58,7 @@
 //////////////////////////////////////////////////////  FRAMEWORK /////////////////////////////////////////////////////////
 
 
-
+//Add animacao opacidade nas imagens
 -(void)animacaoOpacidade:(UIView*)view :(NSString*)duracao :(NSString*)repeticao :(NSString*)autoReverso :(NSString*)voltarAoEstadoInicial{
     
     CABasicAnimation *theAnimation;
@@ -74,7 +74,7 @@
     
 }
 
-
+//Add animacao de sprites para uma imagem
 -(void)animacaoSpriteEspecifica:(Item*)viewItem :(NSString*)nomeAnimacaoSprite :(NSString*)repeticao :(NSString*)autoReverso :(NSString*)voltarAoEstadoInicial :(NSString*)tempoDelayComecar{
     
     for(SpriteItem *sprite in viewItem.listaSprites){
@@ -100,6 +100,7 @@
 }
 
 
+//Add animacao de mover o lugar do objeto
 -(void)animacaoMoverLugar:(UIView*)view :(NSString*)duracao :(NSString*)repeticao :(NSString*)autoReverso :(NSString*)posX :(NSString*)posY{
     
     CABasicAnimation *moveNuvemDireita= [CABasicAnimation animationWithKeyPath:@"position"];
@@ -114,6 +115,7 @@
 }
 
 
+//Add animacao de dar zoom na imagem
 -(void)animacaozoomImagem:(UIView*)view :(NSString*)duracao :(NSString*)repeticao :(NSString*)valorInicial :(NSString*)valorFinal{
 
     CABasicAnimation *pulseAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale.xy"];
@@ -127,6 +129,7 @@
 }
 
 
+//Add animacao de girar uma imagem
 -(void)animacaoGirarImagem:(UIView*)view :(NSString*)duracao :(NSString*)repeticoes{
     
     CABasicAnimation *imageRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];

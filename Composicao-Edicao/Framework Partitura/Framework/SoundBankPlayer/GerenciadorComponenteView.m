@@ -34,30 +34,11 @@
 }
 
 
-////////////////////////// Leitura e Edicao ////////////////////////////////////
 
--(void)finalizaExercicio:(UIViewController*)contr{
-    
-    for(UIView *img in contr.view.subviews){
-        img.alpha = 1;
-        [img.layer removeAllAnimations];
-       // [img removeFromSuperview];
-    }
-    
-//    for(UIViewController *img in contr.childViewControllers){
-//        [img removeFromParentViewController];
-//    }
-//    
-//    
-//    [contr.view removeFromSuperview];
-//    [contr removeFromParentViewController];
-//    [contr didMoveToParentViewController:nil];
-//    contr = nil;
-    
-    
-}
 
-//Leitura
+////////////////////////// LEITURA E EDICAO ////////////////////////////////////
+
+
 -(void)addComponentesPlayerPartitura:(UIViewController*)viewAtual{
     
     PlayerPartituraEdicaoViewController *bar = [[PlayerPartituraEdicaoViewController alloc]init];
@@ -67,6 +48,7 @@
 }
 
 
+//barra de escolha partitura
 -(void)addComponentesEscolhaInstrumentoPartitura:(UIViewController*)viewAtual{
     
     ListaInstrumentoViewController *bar = [[ListaInstrumentoViewController alloc]init];
@@ -76,7 +58,7 @@
 }
 
 
-//Edicao
+//barra de menu de pausar e notas
 -(void)addComponentesBarraMenuNotasPausa:(UIViewController*)viewAtual{
     
     BarraNotasPausasViewController *bar = [[BarraNotasPausasViewController alloc]init];
@@ -85,6 +67,8 @@
     [viewAtual.view addSubview:bar.view];
 }
 
+
+//barra de player (play,limpar)
 -(void)addComponentesPlayerEdicao:(UIViewController*)viewAtual{
     
     PlayerPartituraEdicaoViewController *bar = [[PlayerPartituraEdicaoViewController alloc]init];
@@ -93,6 +77,9 @@
     [viewAtual.view addSubview:bar.view];
 }
 
+
+
+////////////////////////// EXERCICIOS ////////////////////////////////////
 
 -(void)addComponentesBotaoVoltaMapa:(UIViewController*)viewAtual{
     BotaoVoltarMapaViewController *bar = [[BotaoVoltarMapaViewController alloc]init];
@@ -110,8 +97,29 @@
 }
 
 
+////////////////////////// AUXILIARES ////////////////////////////////////
 
-
+//Finaliza exercicios
+-(void)finalizaExercicio:(UIViewController*)contr{
+    
+    for(UIView *img in contr.view.subviews){
+        img.alpha = 1;
+        [img.layer removeAllAnimations];
+        // [img removeFromSuperview];
+    }
+    
+    //    for(UIViewController *img in contr.childViewControllers){
+    //        [img removeFromParentViewController];
+    //    }
+    //
+    //
+    //    [contr.view removeFromSuperview];
+    //    [contr removeFromParentViewController];
+    //    [contr didMoveToParentViewController:nil];
+    //    contr = nil;
+    
+    
+}
 
 @end
 

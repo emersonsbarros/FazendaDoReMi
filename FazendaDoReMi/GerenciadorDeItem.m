@@ -34,7 +34,7 @@
     return gerenciadorDeItem;
 }
 
-
+//Cria Itens
 -(void)instanciaItens{
     
     [self addItemPiano];
@@ -53,7 +53,7 @@
     
 }
 
-
+//Cria Piano
 -(void)addItemPiano{
     
     //Cria item
@@ -83,6 +83,8 @@
     
 }
 
+
+//Cria xilofone
 -(void)addItemXilofone{
     
     //Cria item
@@ -112,6 +114,8 @@
     
 }
 
+
+//Cria Flauta
 -(void)addItemFlauta{
     
     //Cria item
@@ -141,6 +145,8 @@
     
 }
 
+
+//Cria Violao
 -(void)addItemViolao{
     
     //Cria item
@@ -170,6 +176,8 @@
     
 }
 
+
+//Cria tambor
 -(void)addItemTambor{
     
     //Cria item
@@ -199,6 +207,8 @@
     
 }
 
+
+//Cria chocalho
 -(void)addItemChocalho{
     
     //Cria item
@@ -228,6 +238,8 @@
     
 }
 
+
+//Cria saxfone
 -(void)addItemSaxfone{
     
     //Cria item
@@ -257,6 +269,8 @@
     
 }
 
+
+//Cria Violino
 -(void)addItemViolino{
     
     //Cria item
@@ -286,6 +300,7 @@
     
 }
 
+//Cria Flor Rocha
 -(void)addItemFlorRocha{
     
     //Cria item
@@ -315,6 +330,7 @@
     
 }
 
+//Cria Flor Rosa
 -(void)addItemFlorRosa{
     
     //Cria item
@@ -344,6 +360,8 @@
     
 }
 
+
+//Cria Quadro Zecao
 -(void)addItemQuadroZecao{
     
     //Cria item

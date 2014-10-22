@@ -20,15 +20,19 @@
 
 
 +(GerenciadorComponenteView*)sharedManager;
--(void)finalizaExercicio:(UIViewController*)contr;
+
 
 //Compontes Edicao e leitura de partituras
+-(void)finalizaExercicio:(UIViewController*)contr;
 -(void)addComponentesPlayerPartitura:(UIViewController*)viewAtual;
 -(void)addComponentesEscolhaInstrumentoPartitura:(UIViewController*)viewAtual;
 -(void)addComponentesBarraMenuNotasPausa:(UIViewController*)viewAtual;
--(void)addComponentesPlayerEdicao:(UIViewController*)viewAtual;
 
+
+//Componetes Exericicios
+-(void)addComponentesPlayerEdicao:(UIViewController*)viewAtual;
 -(void)addComponentesBotaoVoltaMapa:(UIViewController*)viewAtual;
 -(void)addComponentesMascote:(UIViewController*)viewAtual :(float)posX :(float)posY :(NSString*)nomeMascote;
+
 
 @end

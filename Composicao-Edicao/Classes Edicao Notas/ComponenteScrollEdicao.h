@@ -20,22 +20,19 @@
     NSMutableArray *listaSons;
 }
 
-
-+(ComponenteScrollEdicao*)sharedManager;
-
-
+//Atributos
 @property UIScrollView *scrollPartitura;
-
--(void)recebeScroll:(UIScrollView*)scroll;
--(void)desenhaLinhasPengrama;
-
-
 @property float posNotaTocando;
 @property int contadorIndiceNota;
 @property CGPoint posOriginalScroll;
--(void)addGesturePrintarNotasTela;
 
+
+//Metodos
++(ComponenteScrollEdicao*)sharedManager;
+-(void)recebeScroll:(UIScrollView*)scroll;
+-(void)desenhaLinhasPengrama;
+-(void)addGesturePrintarNotasTela;
 -(void)tocaPartituraEdicao;
-    -(void)limparPartituraEdicao;
+-(void)limparPartituraEdicao;
 
 @end

@@ -19,10 +19,9 @@
 //Atributos
 @property NSMutableArray *listaDeItens;
 
+
+
 //Metodos
-
-
-
 +(GerenciadorDeItem*)sharedManager;
 
 

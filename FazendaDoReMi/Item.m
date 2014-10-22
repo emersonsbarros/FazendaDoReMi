@@ -22,28 +22,6 @@
     return self;
 }
 
--(void)retornaAudio: (NSString*)nome{
-}
 
-
-//-(void)zoomImagemLoop:(Item*)item{
-//   
-//    CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
-//    animationGroup.duration = 5;
-//    animationGroup.repeatCount = INFINITY;
-//    
-//    CAMediaTimingFunction *easeOut = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-//    
-//    CABasicAnimation *pulseAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale.xy"];
-//    pulseAnimation.fromValue = @0.0;
-//    pulseAnimation.toValue = @1.0;
-//    pulseAnimation.duration = 2;
-//    pulseAnimation.timingFunction = easeOut;
-//    
-//    animationGroup.animations = @[pulseAnimation];
-//    
-//    [item.layer addAnimation:animationGroup forKey:@"pulse"];
-//    
-//}
 
 @end
