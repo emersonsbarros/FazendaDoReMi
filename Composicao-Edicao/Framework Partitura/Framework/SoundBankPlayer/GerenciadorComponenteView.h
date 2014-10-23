@@ -16,6 +16,8 @@
 #import "BotaoVoltarMapaViewController.h"
 #import "MascoteViewController.h"
 
+#import "PianoViewController.h"
+
 @interface GerenciadorComponenteView : NSObject
 
 
@@ -33,6 +35,11 @@
 -(void)addComponentesPlayerEdicao:(UIViewController*)viewAtual;
 -(void)addComponentesBotaoVoltaMapa:(UIViewController*)viewAtual;
 -(void)addComponentesMascote:(UIViewController*)viewAtual :(float)posX :(float)posY :(NSString*)nomeMascote;
+
+
+//Instrumentos
+-(void)addComponentesPiano:(UIViewController*)viewAtual :(float)posX :(float)posY;
+
 
 
 @end

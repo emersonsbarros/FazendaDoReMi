@@ -46,6 +46,7 @@
 -(id)init{
     self = [super init];
     if(self){
+        
         self.listaPartiturasSinfonia = [[NSMutableArray alloc]init];
         self.controleVelocidaTranNota = 0.5;
         [[DataBaseInstrumento sharedManager] addInstrumentosPadroesDoApplicativo];
@@ -53,6 +54,8 @@
         
         self.estadoBotaoLimpar = true;
         self.estadoBotaoPlay = true;
+        
+        [self criaSoundBank];
        
     }
     return self;
@@ -60,6 +63,17 @@
 
 +(id)allocWithZone:(struct _NSZone *)zone{
     return [self sharedManager];
+}
+
+-(void)criaSoundBank{
+    auxListaSoundBank = 0;
+    listaSoundBank = [[NSMutableArray alloc]init];
+    
+    for(int i=0;i<10;i++){
+        SoundBankPlayer *bank = [[SoundBankPlayer alloc]init];
+        [listaSoundBank addObject:bank];
+    }
+    
 }
 
 ////////////////////////////////// Efeitos para Notas //////////////////////////////////
@@ -81,6 +95,30 @@
 
 
 /////////////////////////////// Metodos Tocar Notas ///////////////////////////////////////////
+
+
+//Toca uma nota
+-(void)tocarUmaNotaPeloInstrumento:(NSMutableArray*)listaSons :(NSString*)nomeInstrumentoPlist{
+    
+    self.instrumento = [[DataBaseInstrumento sharedManager]retornaInstrumento:nomeInstrumentoPlist];
+    
+    [_soundBankPlayer setSoundBank:self.instrumento.nomeInstrumento];
+    
+    auxIndiceNotas = 0;
+    
+    recebeOrdemNotasDoInstrumento = self.instrumento.ordemNotasInstrumento;
+    
+    self.listaPartiturasSinfonia = [[NSMutableArray alloc]init];
+    
+    Partitura *part = [[Partitura alloc]init];
+    [[self listaPartiturasSinfonia]addObject:part];
+    [[[self listaPartiturasSinfonia]objectAtIndex:0]setListaNotasPartitura:listaSons];
+    
+    [_soundBankPlayer allNotesOff];
+    
+    [self tocarPlayerPartitura];
+    
+}
 
 //Toca uma nota
 -(void)tocarUmaNota:(NSMutableArray*)listaSons :(NSString*)nomeInstrumentoPlist{

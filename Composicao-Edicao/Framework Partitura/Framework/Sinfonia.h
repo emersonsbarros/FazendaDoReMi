@@ -29,7 +29,9 @@
     
     SoundBankPlayer *_soundBankPlayer;
     SoundBankPlayer *_soundBankPlayer2;
-  
+    
+    NSMutableArray *listaSoundBank;
+    int auxListaSoundBank;
 }
 
 

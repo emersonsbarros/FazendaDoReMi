@@ -96,6 +96,14 @@
     [viewAtual.view addSubview:bar.view];
 }
 
+////////////////////////// Instrumentos ////////////////////////////////////
+
+-(void)addComponentesPiano:(UIViewController*)viewAtual :(float)posX :(float)posY{
+    PianoViewController *bar = [[PianoViewController alloc]init];
+    bar.view.frame = CGRectMake(posX,posY, bar.view.frame.size.width,bar.view.frame.size.height);
+    [viewAtual addChildViewController:bar];
+    [viewAtual.view addSubview:bar.view];
+}
 
 ////////////////////////// AUXILIARES ////////////////////////////////////
 

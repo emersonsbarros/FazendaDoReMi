@@ -135,6 +135,9 @@
 		0BB81EAC19F5A134001F868D /* AulaSomEx2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB81EAA19F5A134001F868D /* AulaSomEx2ViewController.xib */; };
 		0BBE5DDD19F0434C00293215 /* GerenciadoresAcoes.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBE5DDC19F0434C00293215 /* GerenciadoresAcoes.m */; };
 		0BD109EB19F57C7D00D5FA52 /* GesturePinchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD109EA19F57C7D00D5FA52 /* GesturePinchItem.m */; };
+		0BD5808D19F973C70042F603 /* PianoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5808B19F973C70042F603 /* PianoViewController.m */; };
+		0BD5808E19F973C70042F603 /* PianoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5808C19F973C70042F603 /* PianoViewController.xib */; };
+		0BD5809119F9794A0042F603 /* InstrumentoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5809019F9794A0042F603 /* InstrumentoViewController.m */; };
 		0BE2D17719F6C9E800DB0F71 /* TimerGesturePan.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE2D17619F6C9E800DB0F71 /* TimerGesturePan.m */; };
 		3F0E879719DBA6F8003FF4EB /* JornadaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E879619DBA6F8003FF4EB /* JornadaViewController.m */; };
 		3F3EBFFE19F34A3E00BB221D /* piano2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F3EBFFD19F34A3E00BB221D /* piano2.png */; };
@@ -433,6 +436,11 @@
 		0BBE5DDC19F0434C00293215 /* GerenciadoresAcoes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GerenciadoresAcoes.m; sourceTree = "<group>"; };
 		0BD109E919F57C7D00D5FA52 /* GesturePinchItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GesturePinchItem.h; sourceTree = "<group>"; };
 		0BD109EA19F57C7D00D5FA52 /* GesturePinchItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GesturePinchItem.m; sourceTree = "<group>"; };
+		0BD5808A19F973C70042F603 /* PianoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PianoViewController.h; sourceTree = "<group>"; };
+		0BD5808B19F973C70042F603 /* PianoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PianoViewController.m; sourceTree = "<group>"; };
+		0BD5808C19F973C70042F603 /* PianoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PianoViewController.xib; sourceTree = "<group>"; };
+		0BD5808F19F9794A0042F603 /* InstrumentoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstrumentoViewController.h; path = ../InstrumentoViewController.h; sourceTree = "<group>"; };
+		0BD5809019F9794A0042F603 /* InstrumentoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstrumentoViewController.m; path = ../InstrumentoViewController.m; sourceTree = "<group>"; };
 		0BE2D17519F6C9E800DB0F71 /* TimerGesturePan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerGesturePan.h; sourceTree = "<group>"; };
 		0BE2D17619F6C9E800DB0F71 /* TimerGesturePan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerGesturePan.m; sourceTree = "<group>"; };
 		3F0E879519DBA6F8003FF4EB /* JornadaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JornadaViewController.h; sourceTree = "<group>"; };
@@ -530,8 +538,8 @@
 		3FC5D2BE19DA59BA00348F51 /* BarraNotasPausasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarraNotasPausasViewController.m; sourceTree = "<group>"; };
 		3FC5D2BF19DA59BA00348F51 /* PlayerPartituraEdicaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerPartituraEdicaoViewController.h; sourceTree = "<group>"; };
 		3FC5D2C019DA59BA00348F51 /* PlayerPartituraEdicaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerPartituraEdicaoViewController.m; sourceTree = "<group>"; };
-		3FC5D2C119DA59BA00348F51 /* ComposicaoPartituraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposicaoPartituraViewController.h; sourceTree = "<group>"; };
-		3FC5D2C219DA59BA00348F51 /* ComposicaoPartituraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposicaoPartituraViewController.m; sourceTree = "<group>"; };
+		3FC5D2C119DA59BA00348F51 /* ComposicaoPartituraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComposicaoPartituraViewController.h; path = "../../Composicao-Edicao/ComposicaoPartituraViewController.h"; sourceTree = "<group>"; };
+		3FC5D2C219DA59BA00348F51 /* ComposicaoPartituraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComposicaoPartituraViewController.m; path = "../../Composicao-Edicao/ComposicaoPartituraViewController.m"; sourceTree = "<group>"; };
 		3FC5D31B19DA5C3200348F51 /* EscolhaUsuarioPartitura.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EscolhaUsuarioPartitura.h; sourceTree = "<group>"; };
 		3FC5D31C19DA5C3200348F51 /* EscolhaUsuarioPartitura.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EscolhaUsuarioPartitura.m; sourceTree = "<group>"; };
 		3FC5D31D19DA5C3200348F51 /* LeitorPartituraXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeitorPartituraXML.h; sourceTree = "<group>"; };
@@ -853,8 +861,15 @@
 		0BAFB16619F1AD5A00DCF54F /* Estudio */ = {
 			isa = PBXGroup;
 			children = (
+				0BD5808F19F9794A0042F603 /* InstrumentoViewController.h */,
+				0BD5809019F9794A0042F603 /* InstrumentoViewController.m */,
+				3FC5D2C119DA59BA00348F51 /* ComposicaoPartituraViewController.h */,
+				3FC5D2C219DA59BA00348F51 /* ComposicaoPartituraViewController.m */,
 				A8F1C4B019D1F8AD001850E4 /* EstudioViewController.h */,
 				A8F1C4B119D1F8AD001850E4 /* EstudioViewController.m */,
+				0BD5808A19F973C70042F603 /* PianoViewController.h */,
+				0BD5808B19F973C70042F603 /* PianoViewController.m */,
+				0BD5808C19F973C70042F603 /* PianoViewController.xib */,
 			);
 			name = Estudio;
 			sourceTree = "<group>";
@@ -1175,8 +1190,6 @@
 				3FC5D31919DA5C3200348F51 /* Framework Partitura */,
 				3FC5D2B719DA59BA00348F51 /* Classes Edicao Notas */,
 				3FC5D2BC19DA59BA00348F51 /* Componentes Edicao */,
-				3FC5D2C119DA59BA00348F51 /* ComposicaoPartituraViewController.h */,
-				3FC5D2C219DA59BA00348F51 /* ComposicaoPartituraViewController.m */,
 			);
 			name = "Composicao-Edicao";
 			path = "../Composicao-Edicao";
@@ -1675,6 +1688,7 @@
 				0BAFB10A19F1ABBB00DCF54F /* violao.png in Resources */,
 				0BAFB10919F1ABBB00DCF54F /* tambor.png in Resources */,
 				3FB6F56B19DA67E60080057B /* P200 Piano A#5.caf in Resources */,
+				0BD5808E19F973C70042F603 /* PianoViewController.xib in Resources */,
 				0BAFB10419F1ABBB00DCF54F /* portaretrato2.png in Resources */,
 				0BAFB15C19F1ABBB00DCF54F /* ZECAO66.png in Resources */,
 				0BAFB11619F1ABBB00DCF54F /* porteira-1.png in Resources */,
@@ -1761,6 +1775,7 @@
 				3FC5D33A19DA5C3200348F51 /* Partitura.m in Sources */,
 				0BE2D17719F6C9E800DB0F71 /* TimerGesturePan.m in Sources */,
 				0B9F945619E863E2005F4314 /* GerenciadorAudio.m in Sources */,
+				0BD5809119F9794A0042F603 /* InstrumentoViewController.m in Sources */,
 				A8F1C4B519D20502001850E4 /* Exercicio.m in Sources */,
 				A824718B19D0AB0E00168026 /* AppDelegate.m in Sources */,
 				0BD109EB19F57C7D00D5FA52 /* GesturePinchItem.m in Sources */,
@@ -1784,6 +1799,7 @@
 				0BB81EAB19F5A134001F868D /* AulaSomEx2ViewController.m in Sources */,
 				3FC5D34019DA5CFB00348F51 /* OpenALSupport.c in Sources */,
 				3FC5D33219DA5C3200348F51 /* LeitorPartituraXML.m in Sources */,
+				0BD5808D19F973C70042F603 /* PianoViewController.m in Sources */,
 				A8F1C4BB19D206CC001850E4 /* GerenciadorDeAula.m in Sources */,
 				A8F1C4C419D207CE001850E4 /* Conversa.m in Sources */,
 			);
