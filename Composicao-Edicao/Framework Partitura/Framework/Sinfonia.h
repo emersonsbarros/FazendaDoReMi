@@ -47,7 +47,6 @@
 
 
 
--(void)metodoIniciaSinfonia:(NSString*)nomePartitura :(NSString*)nomeInstrumento;
 -(void)tocarPlayerPartitura;
 -(void)pausePlayerPartitura;
 -(void)pararPlayerPartitura;

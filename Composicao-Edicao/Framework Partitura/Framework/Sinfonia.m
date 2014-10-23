@@ -66,7 +66,7 @@
 }
 
 -(void)criaSoundBank{
-    auxListaSoundBank = 0;
+    auxListaSoundBank = 1;
     listaSoundBank = [[NSMutableArray alloc]init];
     
     for(int i=0;i<10;i++){
@@ -98,14 +98,16 @@
 
 
 //Toca uma nota
--(void)tocarUmaNotaPeloInstrumento:(NSMutableArray*)listaSons :(NSString*)nomeInstrumentoPlist{
+-(void)tocarUmaNota:(NSMutableArray*)listaSons :(NSString*)nomeInstrumentoPlist{
+    
+    if(auxListaSoundBank == 9) auxListaSoundBank = 1; else auxListaSoundBank += 1;
     
     self.instrumento = [[DataBaseInstrumento sharedManager]retornaInstrumento:nomeInstrumentoPlist];
     
-    [_soundBankPlayer setSoundBank:self.instrumento.nomeInstrumento];
+    [[listaSoundBank objectAtIndex:auxListaSoundBank-1] setSoundBank:self.instrumento.nomeInstrumento];
     
     auxIndiceNotas = 0;
-    
+
     recebeOrdemNotasDoInstrumento = self.instrumento.ordemNotasInstrumento;
     
     self.listaPartiturasSinfonia = [[NSMutableArray alloc]init];
@@ -114,34 +116,14 @@
     [[self listaPartiturasSinfonia]addObject:part];
     [[[self listaPartiturasSinfonia]objectAtIndex:0]setListaNotasPartitura:listaSons];
     
-    [_soundBankPlayer allNotesOff];
+    [[listaSoundBank objectAtIndex:auxListaSoundBank-1] allNotesOff];
     
     [self tocarPlayerPartitura];
+    
+    
     
 }
 
-//Toca uma nota
--(void)tocarUmaNota:(NSMutableArray*)listaSons :(NSString*)nomeInstrumentoPlist{
-    
-    self.instrumento = [[DataBaseInstrumento sharedManager]retornaInstrumento:nomeInstrumentoPlist];
-    
-    [_soundBankPlayer setSoundBank:self.instrumento.nomeInstrumento];
-    
-    auxIndiceNotas = 0;
-    
-    recebeOrdemNotasDoInstrumento = self.instrumento.ordemNotasInstrumento;
-    
-    self.listaPartiturasSinfonia = [[NSMutableArray alloc]init];
-    
-    Partitura *part = [[Partitura alloc]init];
-    [[self listaPartiturasSinfonia]addObject:part];
-    [[[self listaPartiturasSinfonia]objectAtIndex:0]setListaNotasPartitura:listaSons];
-    
-    [_soundBankPlayer allNotesOff];
-    
-    [self tocarPlayerPartitura];
-    
-}
 
 //Toca uma lista de notas
 -(void)tocarTodasNotasEdicao:(NSMutableArray*)listaSons :(NSString*)nomeInstrumentoPlist{
@@ -168,39 +150,6 @@
     
 }
 
-//Comeca a sinfonia
--(void)metodoIniciaSinfonia:(NSString*)nomePartituras :(NSString*)nomeInstrumentoPlist {
-    
-
-   //////////////////////////////// SoundBankPlayer ////////////////////////////////////////
-    
-    self.instrumento = [[DataBaseInstrumento sharedManager]retornaInstrumento:nomeInstrumentoPlist];
-    
-    
-    [_soundBankPlayer setSoundBank:self.instrumento.nomeInstrumento];
-//    _soundBankPlayer2 = [[SoundBankPlayer alloc] init];
-//    [_soundBankPlayer2 setSoundBank:self.instrumento.nomeInstrumento];
-    
-    
-    //////////////////////////////// XML ////////////////////////////////////////;
-
-    self.listaPartiturasSinfonia = [[NSMutableArray alloc]init];
-    [[LeitorPartituraXML sharedManager]iniciaLeiuturaXML:nomePartituras];
-    
-    
-    ////////////////////////////// Tocar Musica  /////////////////////////////
-    
-    auxIndiceNotas = 0;
-    auxIndiceNotas2 = 0;
-    self.compassoAtual = 0;
-    
-    recebeOrdemNotasDoInstrumento = self.instrumento.ordemNotasInstrumento;
-
-    auxIndiceNotasPausa = 0;
-    
-    
-    [self tocarPlayerPartitura];
-}
 
 ////////////////////////////// Metodos Player ////////////////////////////////////
 
@@ -258,92 +207,6 @@
 }
 
 ///////////////////////////////  Piano  ///////////////////////////////////////////////
-
--(void)tocarpentagrama2{
-    
-    Nota *nota = [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]objectAtIndex:auxIndiceNotas2];
-    NSString *nomeNota = [nota nomeNota];
-    NSString *nivelNota = [nota oitava];
-    NSString *tomEncurtado = [nota tom];
-    NSString *notaFinal = [NSString stringWithFormat:@"%@%@",nivelNota,nomeNota];
-    NSString *tempoNota = [nota tipoNota];
-    
-    float tempo = 0.0;
-    float volume = 0.4;
-  
-    if([tempoNota isEqualToString:@"64th"]){
-        tempo = n64th;
-    }else if([tempoNota isEqualToString:@"32th"]){
-        tempo = n32th;
-    }else if([tempoNota isEqualToString:@"16th"]){
-        tempo = n16th;
-    }else if([tempoNota isEqualToString:@"eighth"]){
-        tempo = eighth;
-    }else if([tempoNota isEqualToString:@"quarter"]){
-        tempo = quarter;
-    }else if([tempoNota isEqualToString:@"half"]){
-        tempo = half;
-    }else if([tempoNota isEqualToString:@"whole"]){
-        tempo = whole;
-        volume = 10.0;
-    }else{
-       // NSLog(@"deu errado temopo");
-    }
-    
-    
-    if ([tomEncurtado rangeOfString:@"-1"].location != NSNotFound){
-        int indiceDescerEscala = -1;
-        
-        //NSLog(@"antes %@",notaFinal);
-        notaFinal  = [self.instrumento retornaIndiceListaMusicas:notaFinal:indiceDescerEscala];
-        //NSLog(@"depois- %@",notaFinal);
-        
-    }else if ([tomEncurtado rangeOfString:@"1"].location != NSNotFound){
-        int indiceSubirEscala = 1;
-        
-        //NSLog(@"antes %@",notaFinal);
-        notaFinal  = [self.instrumento retornaIndiceListaMusicas:notaFinal:indiceSubirEscala];
-        //NSLog(@"depois+ %@",notaFinal);
-        
-    }else if ([tomEncurtado rangeOfString:@"-2"].location != NSNotFound){
-        int indiceSubirEscala = -2;
-        
-        //NSLog(@"antes %@",notaFinal);
-        notaFinal  = [self.instrumento retornaIndiceListaMusicas:notaFinal:indiceSubirEscala];
-        //NSLog(@"depois-- %@",notaFinal);
-        
-    }else if ([tomEncurtado rangeOfString:@"2"].location != NSNotFound){
-        int indiceSubirEscala = 2;
-        
-        NSLog(@"antes %@",notaFinal);
-        notaFinal  = [self.instrumento retornaIndiceListaMusicas:notaFinal:indiceSubirEscala];
-        NSLog(@"depois++ %@",notaFinal);
-        
-    }else if([notaFinal isEqualToString:@""]){
-        
-        volume = 0.0;
-        
-    }else{
-        
-        
-    }
-    
-    int retornaNotadoXML = [[self instrumento]retornarNumeroNotaInstrumento:recebeOrdemNotasDoInstrumento:notaFinal];
-    [_soundBankPlayer2 queueNote:retornaNotadoXML gain:volume];
-	[_soundBankPlayer2 playQueuedNotes];
-    
-    NSLog(@"notaP2 %d %@ %d",auxIndiceNotas,notaFinal,retornaNotadoXML);
-    
-    auxIndiceNotas2++;
-    
-    
-    if(auxIndiceNotas2 < [[[[self listaPartiturasSinfonia]objectAtIndex:1]listaNotasPartitura]count]){
-        if([tempoNota isEqualToString:@"quarter"]) tempo = tempo-self.controleVelocidaTranNota;
-        [NSTimer scheduledTimerWithTimeInterval:tempo target:self selector:@selector(tocarpentagrama2) userInfo:nil repeats:NO];
-    }
-    
-    
-}
 
 -(void)tocarpentagrama1{
     
@@ -457,8 +320,8 @@
         [self mostraEfeito:nota];
 
         int retornaNotadoXML = [[self instrumento]retornarNumeroNotaInstrumento:recebeOrdemNotasDoInstrumento:notaFinal];
-        [_soundBankPlayer queueNote:retornaNotadoXML gain:volume];
-        [_soundBankPlayer playQueuedNotes];
+        [[listaSoundBank objectAtIndex:auxListaSoundBank-1] queueNote:retornaNotadoXML gain:volume];
+        [[listaSoundBank objectAtIndex:auxListaSoundBank-1] playQueuedNotes];
 
         
         auxIndiceNotas++;
