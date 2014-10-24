@@ -69,7 +69,7 @@
     auxListaSoundBank = 1;
     listaSoundBank = [[NSMutableArray alloc]init];
     
-    for(int i=0;i<5;i++){
+    for(int i=0;i<15;i++){
         PartituraComposta *bank = [[PartituraComposta alloc]init];
         [listaSoundBank addObject:bank];
     }
@@ -100,7 +100,7 @@
 //Toca uma nota
 -(void)tocarUmaNota:(NSMutableArray*)listaSons :(NSString*)nomeInstrumentoPlist{
     
-    if(auxListaSoundBank == 5) auxListaSoundBank = 1; else auxListaSoundBank += 1;
+    if(auxListaSoundBank == 15) auxListaSoundBank = 1; else auxListaSoundBank += 1;
     
     
     PartituraComposta *partitura = [listaSoundBank objectAtIndex:auxListaSoundBank-1];

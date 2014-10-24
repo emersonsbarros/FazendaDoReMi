@@ -28,7 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [[GerenciadorComponenteView sharedManager]addComponentesPiano:self :0 :200];
+    [[GerenciadorComponenteView sharedManager]addComponentesPiano:self :0 :400];
     
 }
 

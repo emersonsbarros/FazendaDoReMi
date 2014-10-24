@@ -13,19 +13,14 @@
 @interface PianoViewController : UIViewController
 
 
-
+///////4
 - (IBAction)tecla4c:(id)sender;
 - (IBAction)tecla4d:(id)sender;
-
 - (IBAction)tecla4e:(id)sender;
-
 - (IBAction)tecla4f:(id)sender;
 - (IBAction)tecla4g:(id)sender;
-
 - (IBAction)tecla4a:(id)sender;
 - (IBAction)tecla4b:(id)sender;
-
-
 
 @property Nota *nota4c;
 @property Nota *nota4d;
@@ -36,4 +31,50 @@
 @property Nota *nota4b;
 
 
+
+///////5
+- (IBAction)tecla5c:(id)sender;
+- (IBAction)tecla5d:(id)sender;
+- (IBAction)tecla5e:(id)sender;
+- (IBAction)tecla5f:(id)sender;
+- (IBAction)tecla5g:(id)sender;
+- (IBAction)tecla5a:(id)sender;
+
+
+@property Nota *nota5c;
+@property Nota *nota5d;
+@property Nota *nota5e;
+@property Nota *nota5f;
+@property Nota *nota5g;
+@property Nota *nota5a;
+@property Nota *nota5b;
+
+
+
+
+//Sutenido
+- (IBAction)teclas1:(id)sender;
+- (IBAction)teclas2:(id)sender;
+- (IBAction)teclas3:(id)sender;
+- (IBAction)teclas4:(id)sender;
+- (IBAction)teclas5:(id)sender;
+- (IBAction)tecla6:(id)sender;
+- (IBAction)teclas7:(id)sender;
+- (IBAction)teclas8:(id)sender;
+- (IBAction)tecla9:(id)sender;
+
+@property Nota *notas1;
+@property Nota *notas2;
+@property Nota *notas3;
+@property Nota *notas4;
+@property Nota *notas5;
+@property Nota *notas6;
+@property Nota *notas7;
+@property Nota *notas8;
+@property Nota *notas9;
+
+
 @end
+
+
+
