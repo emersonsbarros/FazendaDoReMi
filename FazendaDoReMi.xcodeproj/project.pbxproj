@@ -250,6 +250,7 @@
 		3FCBCDDE19EB5C66008C15F8 /* GestureTapItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBCDDD19EB5C66008C15F8 /* GestureTapItem.m */; };
 		3FDCC04E19EB0673003DC572 /* SomItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCC04D19EB0673003DC572 /* SomItem.m */; };
 		3FEF299119E8BCDC00C01AB5 /* somPiano.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FEF298E19E8BCDC00C01AB5 /* somPiano.wav */; };
+		3FF8CBF919F9EC5A001A40F8 /* PartituraComposta.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8CBF819F9EC5A001A40F8 /* PartituraComposta.m */; };
 		A811633B19D229CB00506D94 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = A811633A19D229CB00506D94 /* Item.m */; };
 		A811633D19D22A1000506D94 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A811633C19D22A1000506D94 /* AVFoundation.framework */; };
 		A811634019D22A9300506D94 /* SpriteItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A811633F19D22A9300506D94 /* SpriteItem.m */; };
@@ -576,6 +577,8 @@
 		3FDCC04C19EB0673003DC572 /* SomItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SomItem.h; sourceTree = "<group>"; };
 		3FDCC04D19EB0673003DC572 /* SomItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SomItem.m; sourceTree = "<group>"; };
 		3FEF298E19E8BCDC00C01AB5 /* somPiano.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = somPiano.wav; sourceTree = "<group>"; };
+		3FF8CBF719F9EC5A001A40F8 /* PartituraComposta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartituraComposta.h; sourceTree = "<group>"; };
+		3FF8CBF819F9EC5A001A40F8 /* PartituraComposta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartituraComposta.m; sourceTree = "<group>"; };
 		A811633919D229CB00506D94 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		A811633A19D229CB00506D94 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		A811633C19D22A1000506D94 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -1242,6 +1245,8 @@
 				3FC5D31E19DA5C3200348F51 /* LeitorPartituraXML.m */,
 				3FC5D31F19DA5C3200348F51 /* Sinfonia.h */,
 				3FC5D32019DA5C3200348F51 /* Sinfonia.m */,
+				3FF8CBF719F9EC5A001A40F8 /* PartituraComposta.h */,
+				3FF8CBF819F9EC5A001A40F8 /* PartituraComposta.m */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -1794,6 +1799,7 @@
 				0BB1F18219E5DB6D00E9F8E4 /* GerenciadorAnimacoes.m in Sources */,
 				A811634019D22A9300506D94 /* SpriteItem.m in Sources */,
 				3FC5D33319DA5C3200348F51 /* Sinfonia.m in Sources */,
+				3FF8CBF919F9EC5A001A40F8 /* PartituraComposta.m in Sources */,
 				0BAFB16B19F1B7B800DCF54F /* GestureLongItem.m in Sources */,
 				0B1D2A7F19E46A8D003CA4C4 /* AulaSomEx1ViewController.m in Sources */,
 				0BB81EAB19F5A134001F868D /* AulaSomEx2ViewController.m in Sources */,

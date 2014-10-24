@@ -41,7 +41,7 @@
     
     //Mascote
     [[GerenciadorComponenteView sharedManager]addComponentesMascote:self:0:200:@"zecao"];
-    [[MascoteViewController sharedManager]executaSomMascote:@"BemVindoFazenda":2.0];
+    //[[MascoteViewController sharedManager]executaSomMascote:@"BemVindoFazenda":2.0];
     
        
     [self animacoesIntro];
@@ -81,17 +81,17 @@
 
 -(void)animacaoPorteira{
     
-    UIImage *image1 = [UIImage imageNamed:@"porteira-1.png"];
-    UIImage *image2 = [UIImage imageNamed:@"porteira-2.png"];
-    UIImage *image3 = [UIImage imageNamed:@"porteira-3.png"];
-    UIImage *image4 = [UIImage imageNamed:@"porteira-4.png"];
-    UIImage *image5 = [UIImage imageNamed:@"porteira-5.png"];
+//    UIImage *image1 = [UIImage imageNamed:@"porteira-1.png"];
+//    UIImage *image2 = [UIImage imageNamed:@"porteira-2.png"];
+//    UIImage *image3 = [UIImage imageNamed:@"porteira-3.png"];
+//    UIImage *image4 = [UIImage imageNamed:@"porteira-4.png"];
+//    UIImage *image5 = [UIImage imageNamed:@"porteira-5.png"];
 
-    NSArray *imageArray = [NSArray arrayWithObjects:image1, image2, image3, image4, image5, nil];
+    //NSArray *imageArray = [NSArray arrayWithObjects:image1, image2, image3, image4, image5, nil];
     
     //[[GerenciadorAnimacoes sharedManager]animacaoSprite:self.porteira :imageArray :1 :1 :NO :NO :2];
     
-    [self performSelector:@selector(animacaoBotoes) withObject:NULL afterDelay:5];
+    //[self performSelector:@selector(animacaoBotoes) withObject:NULL afterDelay:5];
     
 }
 

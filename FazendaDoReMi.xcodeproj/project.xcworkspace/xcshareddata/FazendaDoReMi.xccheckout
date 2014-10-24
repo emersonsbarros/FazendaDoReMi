@@ -14,7 +14,7 @@
 		<string>https://github.com/emersonsbarros/FazendaDoReMi.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>FazendaDoReMi.xcodeproj/project.xcworkspace</string>
+	<string>FazendaDoReMi.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0E01EDFAF3433463BD3105259EF8D83357CF05C3</key>
