@@ -539,10 +539,10 @@
 		3FB6F54E19DA67E60080057B /* P200 Piano F#7.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "P200 Piano F#7.caf"; sourceTree = "<group>"; };
 		3FB6F54F19DA67E60080057B /* P200 Piano G#9.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "P200 Piano G#9.caf"; sourceTree = "<group>"; };
 		3FB6F55019DA67E60080057B /* Piano.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Piano.plist; sourceTree = "<group>"; };
-		3FC5D2B819DA59BA00348F51 /* ComponenteScrollEdicao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComponenteScrollEdicao.h; sourceTree = "<group>"; };
-		3FC5D2B919DA59BA00348F51 /* ComponenteScrollEdicao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComponenteScrollEdicao.m; sourceTree = "<group>"; };
-		3FC5D2BA19DA59BA00348F51 /* DesenhaPartituraEdicao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesenhaPartituraEdicao.h; sourceTree = "<group>"; };
-		3FC5D2BB19DA59BA00348F51 /* DesenhaPartituraEdicao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesenhaPartituraEdicao.m; sourceTree = "<group>"; };
+		3FC5D2B819DA59BA00348F51 /* ComponenteScrollEdicao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComponenteScrollEdicao.h; path = "../../Composicao-Edicao/Classes Edicao Notas/ComponenteScrollEdicao.h"; sourceTree = "<group>"; };
+		3FC5D2B919DA59BA00348F51 /* ComponenteScrollEdicao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComponenteScrollEdicao.m; path = "../../Composicao-Edicao/Classes Edicao Notas/ComponenteScrollEdicao.m"; sourceTree = "<group>"; };
+		3FC5D2BA19DA59BA00348F51 /* DesenhaPartituraEdicao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DesenhaPartituraEdicao.h; path = "../../Composicao-Edicao/Classes Edicao Notas/DesenhaPartituraEdicao.h"; sourceTree = "<group>"; };
+		3FC5D2BB19DA59BA00348F51 /* DesenhaPartituraEdicao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DesenhaPartituraEdicao.m; path = "../../Composicao-Edicao/Classes Edicao Notas/DesenhaPartituraEdicao.m"; sourceTree = "<group>"; };
 		3FC5D2BD19DA59BA00348F51 /* BarraNotasPausasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarraNotasPausasViewController.h; sourceTree = "<group>"; };
 		3FC5D2BE19DA59BA00348F51 /* BarraNotasPausasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarraNotasPausasViewController.m; sourceTree = "<group>"; };
 		3FC5D2BF19DA59BA00348F51 /* PlayerPartituraEdicaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerPartituraEdicaoViewController.h; sourceTree = "<group>"; };
@@ -876,7 +876,6 @@
 		0BAFB16519F1AD3500DCF54F /* Mapa Jornada */ = {
 			isa = PBXGroup;
 			children = (
-				3F0E879519DBA6F8003FF4EB /* JornadaViewController.h */,
 				3F0E879619DBA6F8003FF4EB /* JornadaViewController.m */,
 			);
 			name = "Mapa Jornada";
@@ -885,6 +884,10 @@
 		0BAFB16619F1AD5A00DCF54F /* Estudio */ = {
 			isa = PBXGroup;
 			children = (
+				3FC5D2B819DA59BA00348F51 /* ComponenteScrollEdicao.h */,
+				3FC5D2B919DA59BA00348F51 /* ComponenteScrollEdicao.m */,
+				3FC5D2BA19DA59BA00348F51 /* DesenhaPartituraEdicao.h */,
+				3FC5D2BB19DA59BA00348F51 /* DesenhaPartituraEdicao.m */,
 				0BD5808F19F9794A0042F603 /* InstrumentoViewController.h */,
 				0BD5809019F9794A0042F603 /* InstrumentoViewController.m */,
 				3FC5D2C119DA59BA00348F51 /* ComposicaoPartituraViewController.h */,
@@ -894,6 +897,7 @@
 				0BD5808A19F973C70042F603 /* PianoViewController.h */,
 				0BD5808B19F973C70042F603 /* PianoViewController.m */,
 				0BD5808C19F973C70042F603 /* PianoViewController.xib */,
+				3F0E879519DBA6F8003FF4EB /* JornadaViewController.h */,
 			);
 			name = Estudio;
 			sourceTree = "<group>";
@@ -1222,10 +1226,6 @@
 		3FC5D2B719DA59BA00348F51 /* Classes Edicao Notas */ = {
 			isa = PBXGroup;
 			children = (
-				3FC5D2B819DA59BA00348F51 /* ComponenteScrollEdicao.h */,
-				3FC5D2B919DA59BA00348F51 /* ComponenteScrollEdicao.m */,
-				3FC5D2BA19DA59BA00348F51 /* DesenhaPartituraEdicao.h */,
-				3FC5D2BB19DA59BA00348F51 /* DesenhaPartituraEdicao.m */,
 			);
 			path = "Classes Edicao Notas";
 			sourceTree = "<group>";

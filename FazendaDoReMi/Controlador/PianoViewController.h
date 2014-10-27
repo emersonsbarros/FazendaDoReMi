@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Sinfonia.h"
 #import "Nota.h"
+#import "ComponenteScrollEdicao.h"
 
 @interface PianoViewController : UIViewController
 
@@ -22,13 +23,13 @@
 - (IBAction)tecla4a:(id)sender;
 - (IBAction)tecla4b:(id)sender;
 
-@property Nota *nota4c;
-@property Nota *nota4d;
-@property Nota *nota4e;
-@property Nota *nota4f;
-@property Nota *nota4g;
-@property Nota *nota4a;
-@property Nota *nota4b;
+@property NSValue *nota4c;
+@property NSValue *nota4d;
+@property NSValue *nota4e;
+@property NSValue *nota4f;
+@property NSValue *nota4g;
+@property NSValue *nota4a;
+@property NSValue *nota4b;
 
 
 
@@ -41,13 +42,13 @@
 - (IBAction)tecla5a:(id)sender;
 
 
-@property Nota *nota5c;
-@property Nota *nota5d;
-@property Nota *nota5e;
-@property Nota *nota5f;
-@property Nota *nota5g;
-@property Nota *nota5a;
-@property Nota *nota5b;
+@property NSValue *nota5c;
+@property NSValue *nota5d;
+@property NSValue *nota5e;
+@property NSValue *nota5f;
+@property NSValue *nota5g;
+@property NSValue *nota5a;
+@property NSValue *nota5b;
 
 
 
@@ -73,6 +74,7 @@
 @property Nota *notas8;
 @property Nota *notas9;
 
+@property CGPoint pontoToque;
 
 @end
 

@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "GerenciadorComponenteView.h"
+#import "ComponenteScrollEdicao.h"
+#import "DesenhaPartituraEdicao.h"
+#import "GerenciadorNavigationController.h"
 
-@interface InstrumentoViewController : UIViewController
+@interface InstrumentoViewController : UIViewController <UIScrollViewDelegate>
+
+
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollPartitura;
+@property UITapGestureRecognizer *gesture;
 
 @end

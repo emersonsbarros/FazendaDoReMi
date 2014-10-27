@@ -751,7 +751,7 @@
 
 
 //Carrega e monta as Linhas do Pentagrama
--(void)desenhaContornoPartituraParaEdicao:(int)qtLinhas{
+-(void)desenhaContornoPartituraParaEdicao:(int)qtLinhas :(BOOL)estadoGesture{
     
     self.posicaoX = 250;
     espacamentoEntreNotas = 180;
@@ -780,17 +780,21 @@
         [ self.listaImagensTracoPentagrama addObject:linha];
     }
     
-    [self desenhaContornoPartituraScroll];
+    [self desenhaContornoPartituraScroll:estadoGesture];
     
 }
 
 
 //Chama o metodo de desenhar pentagra e add o gesture ao scroll para poder inserir notas
--(void)desenhaContornoPartituraScroll{
-    
+-(void)desenhaContornoPartituraScroll:(BOOL)estadoGesture{
     [[ComponenteScrollEdicao sharedManager]desenhaLinhasPengrama];
-    [[ComponenteScrollEdicao sharedManager]addGesturePrintarNotasTela];
+    
+    if(estadoGesture){
+        [[ComponenteScrollEdicao sharedManager]addGesturePrintarNotasTela];
+    }
+    
 }
+
 
 
 

@@ -27,7 +27,7 @@
 
 //Metodos
 +(DesenhaPartituraEdicao*)sharedManager;
--(void)desenhaContornoPartituraParaEdicao:(int)qtLinhas;
+-(void)desenhaContornoPartituraParaEdicao:(int)qtLinhas :(BOOL)estadoGesture;
 -(void)rearranjaPosicoesNotas:(int)posicaoNotaDeletada;
 -(Nota*)retornaPosicaoNotaEdicao:(float)posx :(float)posy;
 -(void)aumentarLinhasPentagrama;

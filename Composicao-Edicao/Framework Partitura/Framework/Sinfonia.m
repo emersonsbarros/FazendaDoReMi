@@ -128,29 +128,34 @@
 
 
 //Toca uma lista de notas
-//-(void)tocarTodasNotasEdicao:(NSMutableArray*)listaSons :(NSString*)nomeInstrumentoPlist{
-//   
-//    self.instrumento = [[DataBaseInstrumento sharedManager]retornaInstrumento:nomeInstrumentoPlist];
-//    
-//    [_soundBankPlayer setSoundBank:self.instrumento.nomeInstrumento];
-//    
-//    auxIndiceNotas = 0;
-//    auxIndiceNotasPausa = 0;
-//    self.compassoAtual = 0;
-//    self.controleVelocidaTranNota = 0;
-//    
-//    recebeOrdemNotasDoInstrumento = self.instrumento.ordemNotasInstrumento;
-//    
-//    self.listaPartiturasSinfonia = [[NSMutableArray alloc]init];
-//    Partitura *part = [[Partitura alloc]init];
-//    [[self listaPartiturasSinfonia]addObject:part];
-//    [[[self listaPartiturasSinfonia]objectAtIndex:0]setListaNotasPartitura:listaSons];
-//    
-//    [_soundBankPlayer allNotesOff];
-//    
-//    [self tocarPlayerPartitura];
-//    
-//}
+-(void)tocarTodasNotasEdicao:(NSMutableArray*)listaSons :(NSString*)nomeInstrumentoPlist{
+   
+    if(auxListaSoundBank == 15) auxListaSoundBank = 1; else auxListaSoundBank += 1;
+    
+    
+    PartituraComposta *partitura = [listaSoundBank objectAtIndex:auxListaSoundBank-1];
+    
+    partitura.instrumento = [[DataBaseInstrumento sharedManager]retornaInstrumento:nomeInstrumentoPlist];
+    
+    [partitura.soundBank setSoundBank:partitura.instrumento.nomeInstrumento];
+    
+    partitura.auxIndiceNotas = 0;
+    
+    partitura.listaOrdemInstrumento = partitura.instrumento.ordemNotasInstrumento;
+    
+    partitura.listaPartituraSinfonia = [[NSMutableArray alloc]init];
+    
+    Partitura *part = [[Partitura alloc]init];
+    [partitura.listaPartituraSinfonia addObject:part];
+    [[partitura.listaPartituraSinfonia objectAtIndex:0]setListaNotasPartitura:listaSons];
+    
+    //[partitura.soundBank allNotesOff];
+    
+    
+    [self tocarPlayerPartitura];
+
+    
+}
 
 
 ////////////////////////////// Metodos Player ////////////////////////////////////

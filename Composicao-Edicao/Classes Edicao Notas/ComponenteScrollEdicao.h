@@ -34,5 +34,7 @@
 -(void)addGesturePrintarNotasTela;
 -(void)tocaPartituraEdicao;
 -(void)limparPartituraEdicao;
+-(void)addNotaNaTelaInstrumento:(NSValue*)touchPoint;
+
 
 @end

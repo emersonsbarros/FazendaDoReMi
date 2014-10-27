@@ -57,13 +57,13 @@
     //Add componentes da Tela Edicao
     [[GerenciadorComponenteView sharedManager]addComponentesBarraMenuNotasPausa:self];
     [[GerenciadorComponenteView sharedManager]addComponentesEscolhaInstrumentoPartitura:self];
-    [[GerenciadorComponenteView sharedManager]addComponentesPlayerEdicao:self];
-    
+    [[GerenciadorComponenteView sharedManager]addComponentesPlayerEdicao:self:560:670];
+
     
     //Manda o UIScrollView para a classe modeladora
     [[ComponenteScrollEdicao sharedManager]recebeScroll:self.scrollEdicao];
     //Desenha a partitura com 10 linhas de pentagrama
-    [[DesenhaPartituraEdicao sharedManager]desenhaContornoPartituraParaEdicao:6];
+    [[DesenhaPartituraEdicao sharedManager]desenhaContornoPartituraParaEdicao:6:YES];
     
    
 }

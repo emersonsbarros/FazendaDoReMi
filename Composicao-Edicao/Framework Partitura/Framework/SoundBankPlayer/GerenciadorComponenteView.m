@@ -39,12 +39,13 @@
 ////////////////////////// LEITURA E EDICAO ////////////////////////////////////
 
 
--(void)addComponentesPlayerPartitura:(UIViewController*)viewAtual{
+-(void)addComponentesPlayerPartitura:(UIViewController*)viewAtual :(float)posX :(float)posY{
     
     PlayerPartituraEdicaoViewController *bar = [[PlayerPartituraEdicaoViewController alloc]init];
-    bar.view.frame = CGRectMake(460, 670, bar.view.frame.size.width,bar.view.frame.size.height);
+    bar.view.frame = CGRectMake(posX, posY, bar.view.frame.size.width,bar.view.frame.size.height);
     [viewAtual addChildViewController:bar];
     [viewAtual.view addSubview:bar.view];
+    //bar.view.frame = CGRectMake(460, 670, bar.view.frame.size.width,bar.view.frame.size.height);
 }
 
 
@@ -69,10 +70,10 @@
 
 
 //barra de player (play,limpar)
--(void)addComponentesPlayerEdicao:(UIViewController*)viewAtual{
+-(void)addComponentesPlayerEdicao:(UIViewController*)viewAtual :(float)posX :(float)posY{
     
     PlayerPartituraEdicaoViewController *bar = [[PlayerPartituraEdicaoViewController alloc]init];
-    bar.view.frame = CGRectMake(560,670, bar.view.frame.size.width,bar.view.frame.size.height);
+    bar.view.frame = CGRectMake(posX,posY, bar.view.frame.size.width,bar.view.frame.size.height);
     [viewAtual addChildViewController:bar];
     [viewAtual.view addSubview:bar.view];
 }

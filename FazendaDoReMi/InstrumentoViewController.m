@@ -23,12 +23,36 @@
     return self;
 }
 
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [[GerenciadorComponenteView sharedManager]addComponentesPiano:self :0 :400];
+    //Add componentes da Tela Edicao
+    [[GerenciadorComponenteView sharedManager]addComponentesBarraMenuNotasPausa:self];
+    [[GerenciadorComponenteView sharedManager]addComponentesEscolhaInstrumentoPartitura:self];
+    [[GerenciadorComponenteView sharedManager]addComponentesPlayerEdicao:self:-250:-10];
+    
+    
+    //Manda o UIScrollView para a classe modeladora
+    [[ComponenteScrollEdicao sharedManager]recebeScroll:self.scrollPartitura];
+    [[ComponenteScrollEdicao sharedManager].scrollPartitura removeGestureRecognizer:[[ComponenteScrollEdicao sharedManager].scrollPartitura.gestureRecognizers firstObject]];
+    
+
+    
+    //Desenha a partitura com 10 linhas de pentagrama
+    [[DesenhaPartituraEdicao sharedManager]desenhaContornoPartituraParaEdicao:6:NO];
+    
+    [[GerenciadorComponenteView sharedManager]addComponentesPiano:self :0 :500];
+    
+    
+    
     
 }
 
