@@ -30,7 +30,7 @@
 -(id)init{
     self = [super init];
     if(self){
-        
+        self.tocandoBloqueioInserirNota = YES;
     }
     return self;
 }
@@ -46,7 +46,7 @@
 //Add gesture ao scorll view
 -(void)addGesturePrintarNotasTela{
     
-    limiteDeNotas = 100;
+    self.limiteDeNotas = 200;
     
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addNotaNaTela:)];
     singleTap.numberOfTouchesRequired = 1;
@@ -58,40 +58,42 @@
 
 //Adiciona nota ao scroll
 -(void)addNotaNaTelaInstrumento:(NSValue*)touchPoint{
-    
-    float posx = touchPoint.CGPointValue.x;
-    float posy = touchPoint.CGPointValue.y;
-    
-    
+ 
+    if(self.tocandoBloqueioInserirNota){
+        
+        float posx = touchPoint.CGPointValue.x;
+        float posy = touchPoint.CGPointValue.y;
+        
+        Nota *not = [[DesenhaPartituraEdicao sharedManager] retornaPosicaoNotaEdicao:posx:posy];
+        
+        if((not != NULL)&&([DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count <= self.limiteDeNotas)){
+            [DesenhaPartituraEdicao sharedManager].notaParaEdicao = not;
+            
+            listaSons = [[NSMutableArray alloc]init];
+            [listaSons addObject:not];
+            
+            [[Sinfonia sharedManager]tocarUmaNota:listaSons:[EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura];
+            
+            [[DesenhaPartituraEdicao sharedManager].listaNotasEdicao addObject:not];
+            
+            for(Nota *img in [DesenhaPartituraEdicao sharedManager].listaNotasEdicao){
+                [[Sinfonia sharedManager]desapareceEfeito:img];
+            }
+            
+            [[self scrollPartitura]addSubview:[not imagemNota]];
+            
+            
+            [[self scrollPartitura] setContentSize:CGSizeMake((self.scrollPartitura.bounds.size.width+[DesenhaPartituraEdicao sharedManager].posicaoX)-700, self.scrollPartitura.bounds.size.height)];
+            
+            if([DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count > 4){
+                [[DesenhaPartituraEdicao sharedManager] aumentarLinhasPentagrama];
+                CGPoint bottomOffset = CGPointMake(([DesenhaPartituraEdicao sharedManager].posicaoX-600),0);
+                [[self scrollPartitura] setContentOffset:bottomOffset animated:YES];
+            }
+        }else{
+            NSLog(@"Passou do limite de notas");
+        }
 
-    Nota *not = [[DesenhaPartituraEdicao sharedManager] retornaPosicaoNotaEdicao:posx:posy];
-    
-    if((not != NULL)&&([DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count <= limiteDeNotas)){
-        [DesenhaPartituraEdicao sharedManager].notaParaEdicao = not;
-        
-        listaSons = [[NSMutableArray alloc]init];
-        [listaSons addObject:not];
-        
-        [[Sinfonia sharedManager]tocarUmaNota:listaSons:[EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura];
-        
-        [[DesenhaPartituraEdicao sharedManager].listaNotasEdicao addObject:not];
-        
-        for(Nota *img in [DesenhaPartituraEdicao sharedManager].listaNotasEdicao){
-            [[Sinfonia sharedManager]desapareceEfeito:img];
-        }
-        
-        [[self scrollPartitura]addSubview:[not imagemNota]];
-        
-        
-        [[self scrollPartitura] setContentSize:CGSizeMake((self.scrollPartitura.bounds.size.width+[DesenhaPartituraEdicao sharedManager].posicaoX)-700, self.scrollPartitura.bounds.size.height)];
-        
-        if([DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count > 4){
-            [[DesenhaPartituraEdicao sharedManager] aumentarLinhasPentagrama];
-            CGPoint bottomOffset = CGPointMake(([DesenhaPartituraEdicao sharedManager].posicaoX-600),0);
-            [[self scrollPartitura] setContentOffset:bottomOffset animated:YES];
-        }
-    }else{
-        NSLog(@"Passou do limite de notas");
     }
     
 }
@@ -107,7 +109,7 @@
 
     Nota *not = [[DesenhaPartituraEdicao sharedManager] retornaPosicaoNotaEdicao:posx:posy];
     
-    if((not != NULL)&&([DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count <= limiteDeNotas)){
+    if((not != NULL)&&([DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count <= self.limiteDeNotas)){
         [DesenhaPartituraEdicao sharedManager].notaParaEdicao = not;
         
         listaSons = [[NSMutableArray alloc]init];
@@ -228,6 +230,8 @@
 
 //toca a partitura
 -(void)tocaPartituraEdicao{
+    
+    self.tocandoBloqueioInserirNota = NO;
     
     if([Sinfonia sharedManager].estadoBotaoPlay){
         

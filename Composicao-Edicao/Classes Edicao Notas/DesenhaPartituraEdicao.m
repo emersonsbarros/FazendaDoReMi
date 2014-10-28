@@ -788,6 +788,7 @@
 //Chama o metodo de desenhar pentagra e add o gesture ao scroll para poder inserir notas
 -(void)desenhaContornoPartituraScroll:(BOOL)estadoGesture{
     [[ComponenteScrollEdicao sharedManager]desenhaLinhasPengrama];
+    [ComponenteScrollEdicao sharedManager].limiteDeNotas = 200;
     
     if(estadoGesture){
         [[ComponenteScrollEdicao sharedManager]addGesturePrintarNotasTela];

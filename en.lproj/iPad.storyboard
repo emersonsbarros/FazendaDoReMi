@@ -78,6 +78,8 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
                     <connections>
                         <outlet property="btoEstudio" destination="k5s-RW-py3" id="AfZ-Ef-fXx"/>
                         <outlet property="btoJogos" destination="MKg-cb-Zzr" id="kQD-AJ-Unc"/>

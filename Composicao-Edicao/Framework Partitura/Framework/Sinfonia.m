@@ -217,6 +217,7 @@
     PartituraComposta *partitura = [listaSoundBank objectAtIndex:auxListaSoundBank-1];
     
     if(partitura.auxIndiceNotas >= [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]count]){
+        [ComponenteScrollEdicao sharedManager].tocandoBloqueioInserirNota = YES;
         self.estadoBotaoLimpar = true;
         self.estadoBotaoPlay = true;
         

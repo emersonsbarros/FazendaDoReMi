@@ -20,6 +20,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 #import "PartituraComposta.h"
+#import "ComponenteScrollEdicao.h"
 
 @interface Sinfonia : NSObject < NSXMLParserDelegate > {
     

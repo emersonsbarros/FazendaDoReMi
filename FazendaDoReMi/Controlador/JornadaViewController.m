@@ -26,20 +26,18 @@
     [super viewDidLoad];
     
     [self mostraAulas];
-    
-    
+
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    
-   
     
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    }
+    
+}
 
 
 -(void)chamaExercicios:(id)sender{

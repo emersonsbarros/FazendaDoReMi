@@ -16,9 +16,13 @@
 @interface ComponenteScrollEdicao : NSObject <UIScrollViewDelegate> {
     int posicaoX ;
      int espacamentoEntreNotas;
-     int limiteDeNotas;
+    
     NSMutableArray *listaSons;
 }
+
+@property int limiteDeNotas;
+@property BOOL tocandoBloqueioInserirNota;
+
 
 //Atributos
 @property UIScrollView *scrollPartitura;
