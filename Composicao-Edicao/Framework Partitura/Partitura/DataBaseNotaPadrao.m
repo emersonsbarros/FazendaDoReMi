@@ -35,7 +35,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////
 
-
+//C = DO --- D = RE -- E = MI --- F = FA --- G = SOL ---A = LA --- B = SI
 
 //Notas/Pausas Padroes da Partitura
 -(void)addNotasPadroesDoApplicativo {
@@ -48,6 +48,7 @@
     notaDo4.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"imagemBranco.png"]];
     notaDo4.carinha = 1;
     notaDo4.chapeu = 0;
+    notaDo4.sustenido = 1;
     notaDo4.nomeNota = @"C";
     notaDo4.tipoNota = @"whole";
     notaDo4.imgCarinha = [UIImage imageNamed:@"Do4tempos.png"];
@@ -57,6 +58,7 @@
     notaDo2.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Dotempo.png"]];
     notaDo2.carinha = 1;
     notaDo2.chapeu = 1;
+    notaDo2.sustenido = 1;
     notaDo2.nomeNota = @"C";
     notaDo2.tipoNota = @"half";
 
@@ -65,6 +67,7 @@
     notaDo1.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Dotempo.png"]];
     notaDo1.carinha = 1;
     notaDo1.chapeu = 0;
+    notaDo1.sustenido = 1;
     notaDo1.nomeNota = @"C";
     notaDo1.tipoNota = @"quarter";
     
@@ -73,6 +76,7 @@
     notaDo12.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"DoMeiotempo.png"]];
     notaDo12.carinha = 1;
     notaDo12.chapeu = 0;
+    notaDo12.sustenido = 1;
     notaDo12.nomeNota = @"C";
     notaDo12.tipoNota = @"eighth";
     
@@ -83,6 +87,7 @@
     notaRe4.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"imagemBranco.png"]];
     notaRe4.carinha = 1;
     notaRe4.chapeu = 0;
+    notaRe4.sustenido = 1;
     notaRe4.nomeNota = @"D";
     notaRe4.tipoNota = @"whole";
     notaRe4.imgCarinha = [UIImage imageNamed:@"Re4tempos.png"];
@@ -91,6 +96,7 @@
     notaRe2.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Retempo.png"]];
     notaRe2.carinha = 1;
     notaRe2.chapeu = 1;
+    notaRe2.sustenido = 1;
     notaRe2.nomeNota = @"D";
     notaRe2.tipoNota = @"half";
     
@@ -98,6 +104,7 @@
     notaRe1.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Retempo.png"]];
     notaRe1.carinha = 1;
     notaRe1.chapeu = 0;
+    notaRe1.sustenido = 1;
     notaRe1.nomeNota = @"D";
     notaRe1.tipoNota = @"quarter";
     
@@ -105,6 +112,7 @@
     notaRe12.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"ReMeiotempo.png"]];
     notaRe12.carinha = 1;
     notaRe12.chapeu = 0;
+    notaRe12.sustenido = 1;
     notaRe12.nomeNota = @"D";
     notaRe12.tipoNota = @"eighth";
     
@@ -114,6 +122,7 @@
     notaMi4.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"imagemBranco.png"]];
     notaMi4.carinha = 1;
     notaMi4.chapeu = 0;
+    notaMi4.sustenido = 0;
     notaMi4.nomeNota = @"E";
     notaMi4.tipoNota = @"whole";
     notaMi4.imgCarinha = [UIImage imageNamed:@"Mi4tempos.png"];
@@ -122,6 +131,7 @@
     notaMi2.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Mitempo.png"]];
     notaMi2.carinha = 1;
     notaMi2.chapeu = 1;
+    notaMi2.sustenido = 0;
     notaMi2.nomeNota = @"E";
     notaMi2.tipoNota = @"half";
     
@@ -129,6 +139,7 @@
     notaMi1.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Mitempo.png"]];
     notaMi1.carinha = 1;
     notaMi1.chapeu = 0;
+    notaMi1.sustenido = 0;
     notaMi1.nomeNota = @"E";
     notaMi1.tipoNota = @"quarter";
     
@@ -136,6 +147,7 @@
     notaMi12.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"MiMeiotempo.png"]];
     notaMi12.carinha = 1;
     notaMi12.chapeu = 0;
+    notaMi12.sustenido = 0;
     notaMi12.nomeNota = @"E";
     notaMi12.tipoNota = @"eighth";
 
@@ -145,6 +157,7 @@
     notaFa4.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"imagemBranco.png"]];
     notaFa4.carinha = 1;
     notaFa4.chapeu = 0;
+    notaFa4.sustenido = 1;
     notaFa4.nomeNota = @"F";
     notaFa4.tipoNota = @"whole";
     notaFa4.imgCarinha = [UIImage imageNamed:@"fa4Tempos.png"];
@@ -153,6 +166,7 @@
     notaFa2.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Fatempo.png"]];
     notaFa2.carinha = 1;
     notaFa2.chapeu = 1;
+    notaFa2.sustenido = 1;
     notaFa2.nomeNota = @"F";
     notaFa2.tipoNota = @"half";
     
@@ -160,6 +174,7 @@
     notaFa1.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Fatempo.png"]];
     notaFa1.carinha = 1;
     notaFa1.chapeu = 0;
+    notaFa1.sustenido = 1;
     notaFa1.nomeNota = @"F";
     notaFa1.tipoNota = @"quarter";
     
@@ -167,6 +182,7 @@
     notaFa12.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"FaMeiotempo.png"]];
     notaFa12.carinha = 1;
     notaFa12.chapeu = 0;
+    notaFa12.sustenido = 1;
     notaFa12.nomeNota = @"F";
     notaFa12.tipoNota = @"eighth";
     
@@ -177,6 +193,7 @@
     notaSol4.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"imagemBranco.png"]];
     notaSol4.carinha = 1;
     notaSol4.chapeu = 0;
+    notaSol4.sustenido = 1;
     notaSol4.nomeNota = @"G";
     notaSol4.tipoNota = @"whole";
     notaSol4.imgCarinha = [UIImage imageNamed:@"Sol4Tempos.png"];
@@ -185,6 +202,7 @@
     notaSol2.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Soltempo.png"]];
     notaSol2.carinha = 1;
     notaSol2.chapeu = 1;
+    notaSol2.sustenido = 1;
     notaSol2.nomeNota = @"G";
     notaSol2.tipoNota = @"half";
     
@@ -192,6 +210,7 @@
     notaSol1.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Soltempo.png"]];
     notaSol1.carinha = 1;
     notaSol1.chapeu = 0;
+    notaSol1.sustenido = 1;
     notaSol1.nomeNota = @"G";
     notaSol1.tipoNota = @"quarter";
     
@@ -199,6 +218,7 @@
     notaSol12.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"SolMeiotempo.png"]];
     notaSol12.carinha = 1;
     notaSol12.chapeu = 0;
+    notaSol12.sustenido = 1;
     notaSol12.nomeNota = @"G";
     notaSol12.tipoNota = @"eighth";
     
@@ -209,6 +229,7 @@
     notaLa4.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"imagemBranco.png"]];
     notaLa4.carinha = 1;
     notaLa4.chapeu = 0;
+    notaLa4.sustenido = 1;
     notaLa4.nomeNota = @"A";
     notaLa4.tipoNota = @"whole";
     notaLa4.imgCarinha = [UIImage imageNamed:@"La4Tempos.png"];
@@ -217,6 +238,7 @@
     notaLa2.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Latempo.png"]];
     notaLa2.carinha = 1;
     notaLa2.chapeu = 1;
+    notaLa2.sustenido = 1;
     notaLa2.nomeNota = @"A";
     notaLa2.tipoNota = @"half";
     
@@ -224,6 +246,7 @@
     notaLa1.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Latempo.png"]];
     notaLa1.carinha = 1;
     notaLa1.chapeu = 0;
+    notaLa1.sustenido = 1;
     notaLa1.nomeNota = @"A";
     notaLa1.tipoNota = @"quarter";
     
@@ -231,6 +254,7 @@
     notaLa12.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"LaMeiotempo.png"]];
     notaLa12.carinha = 1;
     notaLa12.chapeu = 0;
+    notaLa12.sustenido = 1;
     notaLa12.nomeNota = @"A";
     notaLa12.tipoNota = @"eighth";
     
@@ -241,6 +265,7 @@
     notaSi4.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"imagemBranco.png"]];
     notaSi4.carinha = 1;
     notaSi4.chapeu = 0;
+    notaSi4.sustenido = 0;
     notaSi4.nomeNota = @"B";
     notaSi4.tipoNota = @"whole";
     notaSi4.imgCarinha = [UIImage imageNamed:@"Si4Tempos.png"];
@@ -249,6 +274,7 @@
     notaSi2.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Sitempo.png"]];
     notaSi2.carinha = 1;
     notaSi2.chapeu = 1;
+    notaSi2.sustenido = 0;
     notaSi2.nomeNota = @"B";
     notaSi2.tipoNota = @"half";
     
@@ -256,6 +282,7 @@
     notaSi1.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Sitempo.png"]];
     notaSi1.carinha = 1;
     notaSi1.chapeu = 0;
+    notaSi1.sustenido = 0;
     notaSi1.nomeNota = @"B";
     notaSi1.tipoNota = @"quarter";
     
@@ -263,6 +290,7 @@
     notaSi12.imagemNota = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"SiMeiotempo.png"]];
     notaSi12.carinha = 1;
     notaSi12.chapeu = 0;
+    notaSi12.sustenido = 0;
     notaSi12.nomeNota = @"B";
     notaSi12.tipoNota = @"eighth";
     

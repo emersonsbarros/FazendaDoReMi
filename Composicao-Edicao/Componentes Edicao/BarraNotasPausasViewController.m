@@ -18,7 +18,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
+        self.estadoAtivarBotao = NO;
     }
     return self;
 }
@@ -122,6 +122,29 @@
     [self ocultaAlphaBotoesNotas];
     self.outBotao12TemposPausa.alpha = 1.0;
 }
+
+
+- (IBAction)sustenido:(id)sender {
+    if(self.estadoAtivarBotao){
+        [EscolhaUsuarioPartitura sharedManager].estadoBotaoSustenido = NO;
+        self.estadoAtivarBotao = NO;
+        self.outBotaoSustenido.alpha = 0.5;
+    }else {
+        [EscolhaUsuarioPartitura sharedManager].estadoBotaoSustenido = YES;
+        self.estadoAtivarBotao = YES;
+        self.outBotaoSustenido.alpha = 1.0;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
 
 
 

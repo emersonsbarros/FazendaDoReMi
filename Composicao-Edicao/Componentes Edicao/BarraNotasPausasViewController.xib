@@ -14,6 +14,7 @@
                 <outlet property="outBotao2TemposPausa" destination="m5w-ZC-jAx" id="mGc-Si-HWY"/>
                 <outlet property="outBotao4Tempos" destination="aXo-5S-DTu" id="IOy-q2-aJx"/>
                 <outlet property="outBotao4TemposPausa" destination="qcp-6o-z9H" id="VGk-ue-YHk"/>
+                <outlet property="outBotaoSustenido" destination="IAG-zz-N61" id="n6N-Bz-oME"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,6 +33,17 @@
                             </state>
                             <connections>
                                 <action selector="semibreveBotao:" destination="-1" eventType="touchUpInside" id="WxW-IJ-gph"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAG-zz-N61">
+                            <rect key="frame" x="204" y="-4" width="60" height="60"/>
+                            <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="semibreveBotao:" destination="-1" eventType="touchUpInside" id="lJe-kq-dj7"/>
+                                <action selector="sustenido:" destination="-1" eventType="touchUpInside" id="5XQ-bh-cRz"/>
                             </connections>
                         </button>
                         <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAK-Ur-1FX">

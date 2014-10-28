@@ -103,38 +103,42 @@
     UITapGestureRecognizer *touch = (UITapGestureRecognizer*)sender;
     CGPoint touchPoint = [touch locationInView:self.scrollPartitura];
     
-    float posx = touchPoint.x;
-    float posy = touchPoint.y;
-    NSLog(@"nota x = %f, y =%f ",posx,posy);
+    if(self.tocandoBloqueioInserirNota){
+        
+        float posx = touchPoint.x;
+        float posy = touchPoint.y;
+        NSLog(@"nota x = %f, y =%f ",posx,posy);
+        
+        Nota *not = [[DesenhaPartituraEdicao sharedManager] retornaPosicaoNotaEdicao:posx:posy];
+        
+        if((not != NULL)&&([DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count <= self.limiteDeNotas)){
+            [DesenhaPartituraEdicao sharedManager].notaParaEdicao = not;
+            
+            listaSons = [[NSMutableArray alloc]init];
+            [listaSons addObject:not];
+            
+            [[Sinfonia sharedManager]tocarUmaNota:listaSons:[EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura];
+            
+            [[DesenhaPartituraEdicao sharedManager].listaNotasEdicao addObject:not];
+            
+            for(Nota *img in [DesenhaPartituraEdicao sharedManager].listaNotasEdicao){
+                [[Sinfonia sharedManager]desapareceEfeito:img];
+            }
+            
+            [[self scrollPartitura]addSubview:[not imagemNota]];
+            
+            
+            [[self scrollPartitura] setContentSize:CGSizeMake((self.scrollPartitura.bounds.size.width+[DesenhaPartituraEdicao sharedManager].posicaoX)-700, self.scrollPartitura.bounds.size.height)];
+            
+            if([DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count > 4){
+                [[DesenhaPartituraEdicao sharedManager] aumentarLinhasPentagrama];
+                CGPoint bottomOffset = CGPointMake(([DesenhaPartituraEdicao sharedManager].posicaoX-600),0);
+                [[self scrollPartitura] setContentOffset:bottomOffset animated:YES];
+            }
+        }else{
+            NSLog(@"Passou do limite de notas");
+        }
 
-    Nota *not = [[DesenhaPartituraEdicao sharedManager] retornaPosicaoNotaEdicao:posx:posy];
-    
-    if((not != NULL)&&([DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count <= self.limiteDeNotas)){
-        [DesenhaPartituraEdicao sharedManager].notaParaEdicao = not;
-        
-        listaSons = [[NSMutableArray alloc]init];
-        [listaSons addObject:not];
-        
-        [[Sinfonia sharedManager]tocarUmaNota:listaSons:[EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura];
-        
-        [[DesenhaPartituraEdicao sharedManager].listaNotasEdicao addObject:not];
-        
-        for(Nota *img in [DesenhaPartituraEdicao sharedManager].listaNotasEdicao){
-            [[Sinfonia sharedManager]desapareceEfeito:img];
-        }
-        
-        [[self scrollPartitura]addSubview:[not imagemNota]];
-        
-        
-        [[self scrollPartitura] setContentSize:CGSizeMake((self.scrollPartitura.bounds.size.width+[DesenhaPartituraEdicao sharedManager].posicaoX)-700, self.scrollPartitura.bounds.size.height)];
-        
-        if([DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count > 4){
-            [[DesenhaPartituraEdicao sharedManager] aumentarLinhasPentagrama];
-            CGPoint bottomOffset = CGPointMake(([DesenhaPartituraEdicao sharedManager].posicaoX-600),0);
-            [[self scrollPartitura] setContentOffset:bottomOffset animated:YES];
-        }
-    }else{
-        NSLog(@"Passou do limite de notas");
     }
     
 }

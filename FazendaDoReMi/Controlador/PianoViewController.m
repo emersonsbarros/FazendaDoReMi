@@ -134,16 +134,6 @@
 
 
 
-
-
-
-//[nomeNotas addObject:@"5Fs"];
-//[nomeNotas addObject:@"5G"];
-//[nomeNotas addObject:@"5Gs"];
-//[nomeNotas addObject:@"5A"];
-//[nomeNotas addObject:@"5As"];
-
-
 - (IBAction)teclas1:(id)sender {
     self.notas1 = [[Nota alloc]init];
     self.notas1.imagemAcidente = NULL;

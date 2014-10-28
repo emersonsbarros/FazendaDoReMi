@@ -29,4 +29,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *outBotao1TemposPausa;
 @property (weak, nonatomic) IBOutlet UIButton *outBotao12TemposPausa;
 
+
+@property BOOL estadoAtivarBotao;
+@property (weak, nonatomic) IBOutlet UIButton *outBotaoSustenido;
+
+
 @end

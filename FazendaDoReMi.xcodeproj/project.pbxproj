@@ -138,6 +138,7 @@
 		0BB81EAB19F5A134001F868D /* AulaSomEx2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB81EA919F5A134001F868D /* AulaSomEx2ViewController.m */; };
 		0BB81EAC19F5A134001F868D /* AulaSomEx2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB81EAA19F5A134001F868D /* AulaSomEx2ViewController.xib */; };
 		0BBE5DDD19F0434C00293215 /* GerenciadoresAcoes.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBE5DDC19F0434C00293215 /* GerenciadoresAcoes.m */; };
+		0BD08D081A0023C60028AA79 /* sustenidoDO.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BD08D071A0023C60028AA79 /* sustenidoDO.png */; };
 		0BD109EB19F57C7D00D5FA52 /* GesturePinchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD109EA19F57C7D00D5FA52 /* GesturePinchItem.m */; };
 		0BD5808D19F973C70042F603 /* PianoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5808B19F973C70042F603 /* PianoViewController.m */; };
 		0BD5808E19F973C70042F603 /* PianoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5808C19F973C70042F603 /* PianoViewController.xib */; };
@@ -443,6 +444,7 @@
 		0BB81EAA19F5A134001F868D /* AulaSomEx2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AulaSomEx2ViewController.xib; sourceTree = "<group>"; };
 		0BBE5DDB19F0434C00293215 /* GerenciadoresAcoes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GerenciadoresAcoes.h; sourceTree = "<group>"; };
 		0BBE5DDC19F0434C00293215 /* GerenciadoresAcoes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GerenciadoresAcoes.m; sourceTree = "<group>"; };
+		0BD08D071A0023C60028AA79 /* sustenidoDO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sustenidoDO.png; sourceTree = "<group>"; };
 		0BD109E919F57C7D00D5FA52 /* GesturePinchItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GesturePinchItem.h; sourceTree = "<group>"; };
 		0BD109EA19F57C7D00D5FA52 /* GesturePinchItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GesturePinchItem.m; sourceTree = "<group>"; };
 		0BD5808A19F973C70042F603 /* PianoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PianoViewController.h; sourceTree = "<group>"; };
@@ -1080,6 +1082,7 @@
 		3FB6F4D819DA659C0080057B /* Do */ = {
 			isa = PBXGroup;
 			children = (
+				0BD08D071A0023C60028AA79 /* sustenidoDO.png */,
 				3FB6F4D919DA659C0080057B /* Do4tempos.png */,
 				3FB6F4DA19DA659C0080057B /* DoMeiotempo.png */,
 				3FB6F4DB19DA659C0080057B /* Dotempo.png */,
@@ -1583,6 +1586,7 @@
 				3FB6F56E19DA67E60080057B /* P200 Piano C7.caf in Resources */,
 				3FB6F51019DA659C0080057B /* ReMeiotempo.png in Resources */,
 				3FB6F4FE19DA659C0080057B /* btnplay.png in Resources */,
+				0BD08D081A0023C60028AA79 /* sustenidoDO.png in Resources */,
 				3F3EBFFE19F34A3E00BB221D /* piano2.png in Resources */,
 				0B6DCC9F19DB2D2500C166E3 /* nuvem-voltar.png in Resources */,
 				3FB6F56319DA67E60080057B /* 6 - E.caf in Resources */,

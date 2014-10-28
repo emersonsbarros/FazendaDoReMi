@@ -120,6 +120,17 @@
 }
 
 
+-(void)alteraNotaSustenido:(Nota*)nota{
+    
+    if([EscolhaUsuarioPartitura sharedManager].estadoBotaoSustenido){
+        NotaAnimadaPadrao *mudaTom = [[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:nota.nomeNota];
+        if(mudaTom.sustenido == 1){
+            nota.nomeNota = [NSString stringWithFormat:@"%@%@",nota.nomeNota,@"s"];
+        }
+    }
+    
+}
+
 //Metodo que controla a posicao tocada pelo usuario transformando em um nota especifica
 -(Nota*)retornaNotaCriadaPeloUsuario:(float)j :(UIImageView*)t :(UIImageView*)t2 :(UIImageView*)ultimoTraco{
     
@@ -140,11 +151,14 @@
         aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
         
         aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
+        
          
         float degrees = 180; //the value in degrees
          aux.imagemNota.transform = CGAffineTransformMakeRotation(degrees * M_PI/180);
          
         [self addComponentesImangesNota:aux:aux.oitava];
+         
+        [self alteraNotaSustenido:aux];
          
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX-60,t.frame.origin.y-aux.imagemNota.frame.size.height-ajusteNota+100,tamanhoHor,tamanhoVert)];
          
@@ -185,6 +199,7 @@
         aux.imagemNota.transform = CGAffineTransformMakeRotation(degrees * M_PI/180);
         
         [self addComponentesImangesNota:aux:aux.oitava];
+         [self alteraNotaSustenido:aux];
         
         float pos = (((t2.frame.origin.y-t.frame.origin.y)/2)+t.frame.origin.y);
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX-60,(pos)-aux.imagemNota.frame.size.height-ajusteNota+100,tamanhoHor,tamanhoVert)];
@@ -219,6 +234,8 @@
         aux.imagemNota.transform = CGAffineTransformMakeRotation(degrees * M_PI/180);
         
         [self addComponentesImangesNota:aux:aux.oitava];
+         [self alteraNotaSustenido:aux];
+        
         
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX-60,t.frame.origin.y-aux.imagemNota.frame.size.height-ajusteNota+100,tamanhoHor,tamanhoVert)];
         aux.tom = @"";
@@ -247,11 +264,14 @@
         aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
         
         aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
+
         
         float degrees = 180; //the value in degrees
         aux.imagemNota.transform = CGAffineTransformMakeRotation(degrees * M_PI/180);
         
         [self addComponentesImangesNota:aux:aux.oitava];
+         [self alteraNotaSustenido:aux];
+        
         
         float pos = (((t2.frame.origin.y-t.frame.origin.y)/2)+t.frame.origin.y);
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX-60,(pos)-aux.imagemNota.frame.size.height-ajusteNota+100,tamanhoHor,tamanhoVert)];
@@ -286,6 +306,7 @@
         aux.imagemNota.transform = CGAffineTransformMakeRotation(degrees * M_PI/180);
         
         [self addComponentesImangesNota:aux:aux.oitava];
+        [self alteraNotaSustenido:aux];
         
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX-60,t.frame.origin.y-aux.imagemNota.frame.size.height-ajusteNota+100,tamanhoHor,tamanhoVert)];
         aux.tom = @"";
@@ -314,10 +335,12 @@
         
         aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
         
+        
         float degrees = 180; //the value in degrees
         aux.imagemNota.transform = CGAffineTransformMakeRotation(degrees * M_PI/180);
         
         [self addComponentesImangesNota:aux:aux.oitava];
+        [self alteraNotaSustenido:aux];
         
         float pos = (((t2.frame.origin.y-t.frame.origin.y)/2)+t.frame.origin.y);
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX-60,(pos)-aux.imagemNota.frame.size.height-ajusteNota+100,tamanhoHor,tamanhoVert)];
@@ -350,6 +373,7 @@
         
         aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
         [self addComponentesImangesNota:aux:aux.oitava];
+        [self alteraNotaSustenido:aux];
         
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,t.frame.origin.y-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
         aux.tom = @"";
@@ -378,6 +402,7 @@
         
         aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
         [self addComponentesImangesNota:aux:aux.oitava];
+        [self alteraNotaSustenido:aux];
         
         float pos = (((t2.frame.origin.y-t.frame.origin.y)/2)+t.frame.origin.y);
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,(pos)-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
@@ -409,6 +434,7 @@
         
         aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
         [self addComponentesImangesNota:aux:aux.oitava];
+        [self alteraNotaSustenido:aux];
         
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,t.frame.origin.y-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
         aux.tom = @"";
@@ -437,6 +463,7 @@
         
         aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
         [self addComponentesImangesNota:aux:aux.oitava];
+        [self alteraNotaSustenido:aux];
         
         float pos = (((t2.frame.origin.y-t.frame.origin.y)/2)+t.frame.origin.y);
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,(pos)-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
@@ -468,6 +495,7 @@
         
         aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
         [self addComponentesImangesNota:aux:aux.oitava];
+        [self alteraNotaSustenido:aux];
         
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,t.frame.origin.y-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
         aux.tom = @"";
@@ -497,6 +525,7 @@
         
         aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
         [self addComponentesImangesNota:aux:aux.oitava];
+        [self alteraNotaSustenido:aux];
         
         float pos = (((t2.frame.origin.y-t.frame.origin.y)/2)+t.frame.origin.y);
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,(pos)-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
@@ -527,6 +556,7 @@
         
         aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
         [self addComponentesImangesNota:aux:aux.oitava];
+        [self alteraNotaSustenido:aux];
         
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,(ultimoTraco.frame.origin.y-aux.imagemNota.frame.size.height-ajusteNota),tamanhoHor,tamanhoVert)];
         
@@ -576,6 +606,14 @@
             [chapeu setFrame:CGRectMake(-33,50,80,50)];
             [aux.imagemNota addSubview:chapeu];
         }
+        if([EscolhaUsuarioPartitura sharedManager].estadoBotaoSustenido){
+            if(padrao.sustenido == 1){
+                UIImageView *chapeu = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"sustenidoDO.png"]];
+                [chapeu setFrame:CGRectMake(-55,100,20,30)];
+                [aux.imagemNota addSubview:chapeu];
+            }
+        }
+        
     }else{
         if(padrao.carinha == 1){
             UIImageView *carinha = [[UIImageView alloc]initWithImage:imgCarinha];
@@ -591,6 +629,15 @@
             chapeu.transform = CGAffineTransformMakeRotation(degrees * M_PI/180);
             [chapeu setFrame:CGRectMake(-30,145,80,50)];
             [aux.imagemNota addSubview:chapeu];
+        }
+        if([EscolhaUsuarioPartitura sharedManager].estadoBotaoSustenido){
+            if(padrao.sustenido == 1){
+                UIImageView *chapeu = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"sustenidoDO.png"]];
+                float degrees = 180; //the value in degrees
+                chapeu.transform = CGAffineTransformMakeRotation(degrees * M_PI/180);
+                [chapeu setFrame:CGRectMake(60,115,20,30)];
+                [aux.imagemNota addSubview:chapeu];
+            }
         }
     }
     
