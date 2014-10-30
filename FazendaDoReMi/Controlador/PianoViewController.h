@@ -64,17 +64,17 @@
 - (IBAction)teclas8:(id)sender;
 - (IBAction)tecla9:(id)sender;
 
-@property Nota *notas1;
-@property Nota *notas2;
-@property Nota *notas3;
-@property Nota *notas4;
-@property Nota *notas5;
-@property Nota *notas6;
-@property Nota *notas7;
-@property Nota *notas8;
-@property Nota *notas9;
+@property NSValue *notas1;
+@property NSValue *notas2;
+@property NSValue *notas3;
+@property NSValue *notas4;
+@property NSValue *notas5;
+@property NSValue *notas6;
+@property NSValue *notas7;
+@property NSValue *notas8;
+@property NSValue *notas9;
 
-@property CGPoint pontoToque;
+
 
 @end
 

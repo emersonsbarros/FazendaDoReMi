@@ -64,6 +64,7 @@
         float posx = touchPoint.CGPointValue.x;
         float posy = touchPoint.CGPointValue.y;
         
+        
         Nota *not = [[DesenhaPartituraEdicao sharedManager] retornaPosicaoNotaEdicao:posx:posy];
         
         if((not != NULL)&&([DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count <= self.limiteDeNotas)){
