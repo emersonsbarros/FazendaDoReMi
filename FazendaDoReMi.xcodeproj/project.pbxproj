@@ -1527,6 +1527,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "EMERSON BARROS | VINICIUS RESENDE";
 				TargetAttributes = {
+					A824717419D0AB0E00168026 = {
+						DevelopmentTeam = U6NZ972TGR;
+					};
 					A824719419D0AB0E00168026 = {
 						TestTargetID = A824717419D0AB0E00168026;
 					};
@@ -1964,9 +1967,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FazendaDoReMi/FazendaDoReMi-Prefix.pch";
 				INFOPLIST_FILE = "FazendaDoReMi/FazendaDoReMi-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1977,9 +1982,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FazendaDoReMi/FazendaDoReMi-Prefix.pch";
 				INFOPLIST_FILE = "FazendaDoReMi/FazendaDoReMi-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

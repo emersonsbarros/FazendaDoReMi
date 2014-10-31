@@ -48,7 +48,7 @@
     if(self){
         
         self.listaPartiturasSinfonia = [[NSMutableArray alloc]init];
-        self.controleVelocidaTranNota = 0.5;
+        self.controleVelocidaTranNota = 0.0;
         [[DataBaseInstrumento sharedManager] addInstrumentosPadroesDoApplicativo];
         _soundBankPlayer = [[SoundBankPlayer alloc] init];
         

@@ -50,8 +50,8 @@
 @property NSValue *nota5a;
 @property NSValue *nota5b;
 
-
-
+@property float cont;
+@property NSTimer *tempoProximaNota;
 
 //Sutenido
 - (IBAction)teclas1:(id)sender;
