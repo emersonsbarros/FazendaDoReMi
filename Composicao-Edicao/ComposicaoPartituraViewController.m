@@ -55,7 +55,7 @@
     [super viewDidLoad];
     
     //Add componentes da Tela Edicao
-    [[GerenciadorComponenteView sharedManager]addComponentesBarraMenuNotasPausa:self];
+    [[GerenciadorComponenteView sharedManager]addComponentesBarraMenuNotasPausa:self:NO];
     [[GerenciadorComponenteView sharedManager]addComponentesEscolhaInstrumentoPartitura:self];
     [[GerenciadorComponenteView sharedManager]addComponentesPlayerEdicao:self:560:670];
 

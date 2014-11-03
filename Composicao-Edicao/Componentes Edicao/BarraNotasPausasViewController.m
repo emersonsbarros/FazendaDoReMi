@@ -51,6 +51,11 @@
     [self.listaOutletNotas addObject:self.outBotao1TemposPausa];
     [self.listaOutletNotas addObject:self.outBotao12TemposPausa];
     
+    if(self.aux){
+        [self removeBtnSustenido];
+    }
+    
+    
     //Seta como padrao a escolha do usario como seminima
     [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao = [[DataBaseNotaPadrao sharedManager]retornaNotaPadrao:@"quarter"];
     
@@ -98,6 +103,10 @@
 
 ///////////////////////// PAUSA /////////////////////////
 
+-(void)removeBtnSustenido{
+    self.outBtnSustenido.hidden = YES;
+}
+
 
 - (IBAction)pausaSemibreveBotao:(id)sender {
     [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao = [[DataBaseNotaPadrao sharedManager]retornaNotaPausaPadrao:@"semibrevePausa"];
@@ -128,11 +137,11 @@
     if(self.estadoAtivarBotao){
         [EscolhaUsuarioPartitura sharedManager].estadoBotaoSustenido = NO;
         self.estadoAtivarBotao = NO;
-        self.outBotaoSustenido.alpha = 0.5;
+        self.outBtnSustenido.alpha = 0.5;
     }else {
         [EscolhaUsuarioPartitura sharedManager].estadoBotaoSustenido = YES;
         self.estadoAtivarBotao = YES;
-        self.outBotaoSustenido.alpha = 1.0;
+        self.outBtnSustenido.alpha = 1.0;
     }
     
 }

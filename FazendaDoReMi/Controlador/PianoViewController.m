@@ -30,6 +30,8 @@
     
     [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(atualizaTempo:) userInfo:nil repeats:YES];
     self.cont = 0;
+    
+    [self deixaBotoesExclusivos:self.view];
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,12 +69,19 @@
      self.cont = 0;
 }
 
+-(void)deixaBotoesExclusivos:(UIView *)myView
+{
+    for (UIView * button in [myView subviews]) {
+        if([button isKindOfClass:[UIButton class]])
+            [((UIButton *)button) setExclusiveTouch:YES];
+    }
+}
+
 - (IBAction)tecla4c:(id)sender {
-[EscolhaUsuarioPartitura sharedManager].estadoBotaoSustenido = NO;
+    [EscolhaUsuarioPartitura sharedManager].estadoBotaoSustenido = NO;
     self.nota4c = [NSValue valueWithCGPoint:CGPointMake(222.000000,483.000000)];
     [NSTimer scheduledTimerWithTimeInterval:0.000 target:self selector:@selector(tocarNotaPoint:) userInfo:self.nota4c repeats:NO];
-    
-    [self condicao:self.cont];
+
     
    }
 
@@ -181,7 +190,6 @@
     self.notas1 = [NSValue valueWithCGPoint:CGPointMake(222.000000,483.000000)];
     [NSTimer scheduledTimerWithTimeInterval:0.053 target:self selector:@selector(tocarNotaPoint:) userInfo:self.notas1 repeats:NO];
     
-    [self condicao:self.cont];
 
 }
 
@@ -190,7 +198,6 @@
     self.notas2 = [NSValue valueWithCGPoint:CGPointMake(191.000000,459.000000)];
     [NSTimer scheduledTimerWithTimeInterval:0.048 target:self selector:@selector(tocarNotaPoint:) userInfo:self.notas2 repeats:NO];
     
-    [self condicao:self.cont];
 }
 
 - (IBAction)teclas3:(id)sender {
@@ -198,7 +205,6 @@
     self.notas3 = [NSValue valueWithCGPoint:CGPointMake(685.000000,403.000000)];
     [NSTimer scheduledTimerWithTimeInterval:0.043 target:self selector:@selector(tocarNotaPoint:) userInfo:self.notas3 repeats:NO];
     
-    [self condicao:self.cont];
 }
 
 - (IBAction)teclas4:(id)sender {
@@ -206,7 +212,6 @@
     self.notas4 = [NSValue valueWithCGPoint:CGPointMake(900.000000,359.000000)];
     [NSTimer scheduledTimerWithTimeInterval:0.037 target:self selector:@selector(tocarNotaPoint:) userInfo:self.notas4 repeats:NO];
     
-    [self condicao:self.cont];
 }
 
 - (IBAction)teclas5:(id)sender {
@@ -214,7 +219,6 @@
     self.notas5 = [NSValue valueWithCGPoint:CGPointMake(1128.000000,339.000000)];
     [NSTimer scheduledTimerWithTimeInterval:0.033 target:self selector:@selector(tocarNotaPoint:) userInfo:self.notas5 repeats:NO];
     
-    [self condicao:self.cont];
     
 }
 
@@ -223,7 +227,6 @@
     self.notas6 = [NSValue valueWithCGPoint:CGPointMake(1464.000000,281.000000)];
     [NSTimer scheduledTimerWithTimeInterval:0.027 target:self selector:@selector(tocarNotaPoint:) userInfo:self.notas6 repeats:NO];
     
-    [self condicao:self.cont];
 }
 
 - (IBAction)teclas7:(id)sender {
@@ -231,7 +234,6 @@
     self.notas7 = [NSValue valueWithCGPoint:CGPointMake(1652.000000,243.000000)];
     [NSTimer scheduledTimerWithTimeInterval:0.022 target:self selector:@selector(tocarNotaPoint:) userInfo:self.notas7 repeats:NO];
     
-    [self condicao:self.cont];
 }
 
 - (IBAction)teclas8:(id)sender {
@@ -239,7 +241,6 @@
     self.notas8 = [NSValue valueWithCGPoint:CGPointMake(2010.000000,181.000000)];
     [NSTimer scheduledTimerWithTimeInterval:0.017 target:self selector:@selector(tocarNotaPoint:) userInfo:self.notas8 repeats:NO];
     
-    [self condicao:self.cont];
 }
 
 
@@ -248,7 +249,7 @@
     self.notas9 = [NSValue valueWithCGPoint:CGPointMake(2206.000000,166.000000)];
     [NSTimer scheduledTimerWithTimeInterval:0.08 target:self selector:@selector(tocarNotaPoint:) userInfo:self.notas9 repeats:NO];
     
-    [self condicao:self.cont];
+
 }
 
 

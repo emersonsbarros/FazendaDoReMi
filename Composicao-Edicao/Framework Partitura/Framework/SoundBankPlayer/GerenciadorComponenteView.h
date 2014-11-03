@@ -28,7 +28,7 @@
 -(void)finalizaExercicio:(UIViewController*)contr;
 -(void)addComponentesPlayerPartitura:(UIViewController*)viewAtual :(float)posX :(float)posY;
 -(void)addComponentesEscolhaInstrumentoPartitura:(UIViewController*)viewAtual;
--(void)addComponentesBarraMenuNotasPausa:(UIViewController*)viewAtual;
+-(void)addComponentesBarraMenuNotasPausa:(UIViewController*)viewAtual :(BOOL)estado;
 
 
 //Componetes Exericicios

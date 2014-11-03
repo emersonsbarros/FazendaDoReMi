@@ -35,7 +35,7 @@
     // Do any additional setup after loading the view.
     
     //Add componentes da Tela Edicao
-    [[GerenciadorComponenteView sharedManager]addComponentesBarraMenuNotasPausa:self];
+    [[GerenciadorComponenteView sharedManager]addComponentesBarraMenuNotasPausa:self:YES];
     [[GerenciadorComponenteView sharedManager]addComponentesEscolhaInstrumentoPartitura:self];
     [[GerenciadorComponenteView sharedManager]addComponentesPlayerEdicao:self:-250:-10];
     

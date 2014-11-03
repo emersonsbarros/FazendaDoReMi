@@ -60,9 +60,10 @@
 
 
 //barra de menu de pausar e notas
--(void)addComponentesBarraMenuNotasPausa:(UIViewController*)viewAtual{
+-(void)addComponentesBarraMenuNotasPausa:(UIViewController*)viewAtual :(BOOL)estado{
     
     BarraNotasPausasViewController *bar = [[BarraNotasPausasViewController alloc]init];
+    if(estado)bar.aux = YES;
     bar.view.frame = CGRectMake(101,5, bar.view.frame.size.width,bar.view.frame.size.height);
     [viewAtual addChildViewController:bar];
     [viewAtual.view addSubview:bar.view];

@@ -22,6 +22,14 @@
 		0B7368E919FAC5C10066720F /* teclaBrancaUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B7368E519FAC5C10066720F /* teclaBrancaUp.png */; };
 		0B7368EA19FAC5C10066720F /* teclaPretaDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B7368E619FAC5C10066720F /* teclaPretaDown.png */; };
 		0B7368EB19FAC5C10066720F /* teclaPretaUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B7368E719FAC5C10066720F /* teclaPretaUp.png */; };
+		0B7C6A591A07EE53007802A9 /* botaoSustenido.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B7C6A581A07EE53007802A9 /* botaoSustenido.png */; };
+		0B7C6A611A07EEDD007802A9 /* sustenidoDo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B7C6A5A1A07EEDD007802A9 /* sustenidoDo.png */; };
+		0B7C6A621A07EEDD007802A9 /* sustenidoFa.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B7C6A5B1A07EEDD007802A9 /* sustenidoFa.png */; };
+		0B7C6A631A07EEDD007802A9 /* sustenidoLa.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B7C6A5C1A07EEDD007802A9 /* sustenidoLa.png */; };
+		0B7C6A641A07EEDD007802A9 /* sustenidoMi.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B7C6A5D1A07EEDD007802A9 /* sustenidoMi.png */; };
+		0B7C6A651A07EEDD007802A9 /* sustenidoRe.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B7C6A5E1A07EEDD007802A9 /* sustenidoRe.png */; };
+		0B7C6A661A07EEDD007802A9 /* sustenidoSi.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B7C6A5F1A07EEDD007802A9 /* sustenidoSi.png */; };
+		0B7C6A671A07EEDD007802A9 /* sustenidoSol.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B7C6A601A07EEDD007802A9 /* sustenidoSol.png */; };
 		0B862C4319EC6E60009365DD /* ControladorDeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B862C4219EC6E60009365DD /* ControladorDeItem.m */; };
 		0B9F945619E863E2005F4314 /* GerenciadorAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F945519E863E2005F4314 /* GerenciadorAudio.m */; };
 		0BAFB0FC19F1ABBB00DCF54F /* AudioBemVindo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0BAFB08E19F1ABBB00DCF54F /* AudioBemVindo.m4a */; };
@@ -138,7 +146,6 @@
 		0BB81EAB19F5A134001F868D /* AulaSomEx2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB81EA919F5A134001F868D /* AulaSomEx2ViewController.m */; };
 		0BB81EAC19F5A134001F868D /* AulaSomEx2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BB81EAA19F5A134001F868D /* AulaSomEx2ViewController.xib */; };
 		0BBE5DDD19F0434C00293215 /* GerenciadoresAcoes.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBE5DDC19F0434C00293215 /* GerenciadoresAcoes.m */; };
-		0BD08D081A0023C60028AA79 /* sustenidoDO.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BD08D071A0023C60028AA79 /* sustenidoDO.png */; };
 		0BD109EB19F57C7D00D5FA52 /* GesturePinchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD109EA19F57C7D00D5FA52 /* GesturePinchItem.m */; };
 		0BD5808D19F973C70042F603 /* PianoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5808B19F973C70042F603 /* PianoViewController.m */; };
 		0BD5808E19F973C70042F603 /* PianoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD5808C19F973C70042F603 /* PianoViewController.xib */; };
@@ -318,6 +325,14 @@
 		0B7368E519FAC5C10066720F /* teclaBrancaUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teclaBrancaUp.png; sourceTree = "<group>"; };
 		0B7368E619FAC5C10066720F /* teclaPretaDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teclaPretaDown.png; sourceTree = "<group>"; };
 		0B7368E719FAC5C10066720F /* teclaPretaUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teclaPretaUp.png; sourceTree = "<group>"; };
+		0B7C6A581A07EE53007802A9 /* botaoSustenido.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botaoSustenido.png; sourceTree = "<group>"; };
+		0B7C6A5A1A07EEDD007802A9 /* sustenidoDo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sustenidoDo.png; sourceTree = "<group>"; };
+		0B7C6A5B1A07EEDD007802A9 /* sustenidoFa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sustenidoFa.png; sourceTree = "<group>"; };
+		0B7C6A5C1A07EEDD007802A9 /* sustenidoLa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sustenidoLa.png; sourceTree = "<group>"; };
+		0B7C6A5D1A07EEDD007802A9 /* sustenidoMi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sustenidoMi.png; sourceTree = "<group>"; };
+		0B7C6A5E1A07EEDD007802A9 /* sustenidoRe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sustenidoRe.png; sourceTree = "<group>"; };
+		0B7C6A5F1A07EEDD007802A9 /* sustenidoSi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sustenidoSi.png; sourceTree = "<group>"; };
+		0B7C6A601A07EEDD007802A9 /* sustenidoSol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sustenidoSol.png; sourceTree = "<group>"; };
 		0B862C4119EC6E60009365DD /* ControladorDeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControladorDeItem.h; sourceTree = "<group>"; };
 		0B862C4219EC6E60009365DD /* ControladorDeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControladorDeItem.m; sourceTree = "<group>"; };
 		0B9F945419E863E2005F4314 /* GerenciadorAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GerenciadorAudio.h; sourceTree = "<group>"; };
@@ -444,7 +459,6 @@
 		0BB81EAA19F5A134001F868D /* AulaSomEx2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AulaSomEx2ViewController.xib; sourceTree = "<group>"; };
 		0BBE5DDB19F0434C00293215 /* GerenciadoresAcoes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GerenciadoresAcoes.h; sourceTree = "<group>"; };
 		0BBE5DDC19F0434C00293215 /* GerenciadoresAcoes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GerenciadoresAcoes.m; sourceTree = "<group>"; };
-		0BD08D071A0023C60028AA79 /* sustenidoDO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sustenidoDO.png; sourceTree = "<group>"; };
 		0BD109E919F57C7D00D5FA52 /* GesturePinchItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GesturePinchItem.h; sourceTree = "<group>"; };
 		0BD109EA19F57C7D00D5FA52 /* GesturePinchItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GesturePinchItem.m; sourceTree = "<group>"; };
 		0BD5808A19F973C70042F603 /* PianoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PianoViewController.h; sourceTree = "<group>"; };
@@ -1035,6 +1049,7 @@
 		3FB6F4C819DA659C0080057B /* Botoes */ = {
 			isa = PBXGroup;
 			children = (
+				0B7C6A581A07EE53007802A9 /* botaoSustenido.png */,
 				3FB6F4C919DA659C0080057B /* botao12Pausa.png */,
 				3FB6F4CA19DA659C0080057B /* botao12Tempo.png */,
 				3FB6F4CB19DA659C0080057B /* botao1Pausa.png */,
@@ -1082,7 +1097,13 @@
 		3FB6F4D819DA659C0080057B /* Do */ = {
 			isa = PBXGroup;
 			children = (
-				0BD08D071A0023C60028AA79 /* sustenidoDO.png */,
+				0B7C6A5A1A07EEDD007802A9 /* sustenidoDo.png */,
+				0B7C6A5B1A07EEDD007802A9 /* sustenidoFa.png */,
+				0B7C6A5C1A07EEDD007802A9 /* sustenidoLa.png */,
+				0B7C6A5D1A07EEDD007802A9 /* sustenidoMi.png */,
+				0B7C6A5E1A07EEDD007802A9 /* sustenidoRe.png */,
+				0B7C6A5F1A07EEDD007802A9 /* sustenidoSi.png */,
+				0B7C6A601A07EEDD007802A9 /* sustenidoSol.png */,
 				3FB6F4D919DA659C0080057B /* Do4tempos.png */,
 				3FB6F4DA19DA659C0080057B /* DoMeiotempo.png */,
 				3FB6F4DB19DA659C0080057B /* Dotempo.png */,
@@ -1589,7 +1610,6 @@
 				3FB6F56E19DA67E60080057B /* P200 Piano C7.caf in Resources */,
 				3FB6F51019DA659C0080057B /* ReMeiotempo.png in Resources */,
 				3FB6F4FE19DA659C0080057B /* btnplay.png in Resources */,
-				0BD08D081A0023C60028AA79 /* sustenidoDO.png in Resources */,
 				3F3EBFFE19F34A3E00BB221D /* piano2.png in Resources */,
 				0B6DCC9F19DB2D2500C166E3 /* nuvem-voltar.png in Resources */,
 				3FB6F56319DA67E60080057B /* 6 - E.caf in Resources */,
@@ -1602,9 +1622,11 @@
 				0BAFB15519F1ABBB00DCF54F /* ZECAO59.png in Resources */,
 				3FB6F56119DA67E60080057B /* 4 - G.caf in Resources */,
 				0BAFB14119F1ABBB00DCF54F /* ZECAO39.png in Resources */,
+				0B7C6A651A07EEDD007802A9 /* sustenidoRe.png in Resources */,
 				3FB6F55C19DA67E60080057B /* mib2.caf in Resources */,
 				0BAFB12119F1ABBB00DCF54F /* ZECAO07.png in Resources */,
 				0BAFB13719F1ABBB00DCF54F /* ZECAO29.png in Resources */,
+				0B7C6A671A07EEDD007802A9 /* sustenidoSol.png in Resources */,
 				3FB6F4FB19DA659C0080057B /* botao4Pausa.png in Resources */,
 				0BAFB11219F1ABBB00DCF54F /* cercado.png in Resources */,
 				3FB6F50B19DA659C0080057B /* Latempo.png in Resources */,
@@ -1630,6 +1652,7 @@
 				0BAFB13519F1ABBB00DCF54F /* ZECAO27.png in Resources */,
 				3FB6F51519DA659C0080057B /* Sol4Tempos.png in Resources */,
 				0BAFB13C19F1ABBB00DCF54F /* ZECAO34.png in Resources */,
+				0B7C6A591A07EE53007802A9 /* botaoSustenido.png in Resources */,
 				3FB6F51419DA659C0080057B /* Sitempo.png in Resources */,
 				3FB6F4F519DA659C0080057B /* botao12Pausa.png in Resources */,
 				3FB6F55119DA67E60080057B /* do1.caf in Resources */,
@@ -1643,14 +1666,18 @@
 				0BAFB16319F1ABBB00DCF54F /* ZECAO73.png in Resources */,
 				0BAFB10519F1ABBB00DCF54F /* prendedor.png in Resources */,
 				0BAFB10219F1ABBB00DCF54F /* florRosa.png in Resources */,
+				0B7C6A631A07EEDD007802A9 /* sustenidoLa.png in Resources */,
 				0BAFB11F19F1ABBB00DCF54F /* ZECAO05.png in Resources */,
 				3FB6F4F619DA659C0080057B /* botao12Tempo.png in Resources */,
 				3FB6F50619DA659C0080057B /* FaMeiotempo.png in Resources */,
+				0B7C6A641A07EEDD007802A9 /* sustenidoMi.png in Resources */,
 				3FB6F56919DA67E60080057B /* P200 Piano A#3.caf in Resources */,
+				0B7C6A621A07EEDD007802A9 /* sustenidoFa.png in Resources */,
 				3FB6F57619DA67E60080057B /* P200 Piano F#3.caf in Resources */,
 				3FB6F55619DA67E60080057B /* fad3.caf in Resources */,
 				3FB6F55B19DA67E60080057B /* mib1.caf in Resources */,
 				0BAFB11019F1ABBB00DCF54F /* botao-jogos.png in Resources */,
+				0B7C6A661A07EEDD007802A9 /* sustenidoSi.png in Resources */,
 				3FB6F50F19DA659C0080057B /* Re4tempos.png in Resources */,
 				0BB81EAC19F5A134001F868D /* AulaSomEx2ViewController.xib in Resources */,
 				3FB6F50019DA659C0080057B /* fundocasa.png in Resources */,
@@ -1737,6 +1764,7 @@
 				3FB6F57C19DA67E60080057B /* Piano.plist in Resources */,
 				3FB6F56419DA67E60080057B /* 6a - A.caf in Resources */,
 				3FB6F50A19DA659C0080057B /* LaMeiotempo.png in Resources */,
+				0B7C6A611A07EEDD007802A9 /* sustenidoDo.png in Resources */,
 				3FEF299119E8BCDC00C01AB5 /* somPiano.wav in Resources */,
 				0B7368EB19FAC5C10066720F /* teclaPretaUp.png in Resources */,
 				3FB6F56719DA67E60080057B /* ViolaoNylon.plist in Resources */,

@@ -587,11 +587,35 @@
 }
 
 
+-(UIImageView*)vereficaCorSustenido:(Nota*)nota{
+    UIImageView *imgSustenido;
+    
+    if([nota.nomeNota isEqualToString:@"C"]){
+        imgSustenido = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"sustenidoDo.png"]];
+    }else if([nota.nomeNota isEqualToString:@"D"]){
+        imgSustenido = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"sustenidoRe.png"]];
+    }else if([nota.nomeNota isEqualToString:@"E"]){
+        imgSustenido = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"sustenidoMi.png"]];
+    }else if([nota.nomeNota isEqualToString:@"F"]){
+        imgSustenido = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"sustenidoFa.png"]];
+    }else if([nota.nomeNota isEqualToString:@"G"]){
+        imgSustenido = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"sustenidoSol.png"]];
+    }else if([nota.nomeNota isEqualToString:@"A"]){
+        imgSustenido = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"sustenidoLa.png"]];
+    }else if([nota.nomeNota isEqualToString:@"B"]){
+        imgSustenido = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"sustenidoSi.png"]];
+    }else{
+        NSLog(@"nao encontrou imagem");
+    }
+    
+    return imgSustenido;
+}
+
 //Add os componetens a mais em uma nota (chapeu,rosto animal) dependendo da sua posicao(cima,baixo)
 -(void)addComponentesImangesNota:(Nota*)aux :(NSString*)oitava{
     
     NotaAnimadaPadrao *padrao = [[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota];
-    
+    NSLog(@"dsds %@",aux.nomeNota);
     UIImage *imgCarinha = [[DataBaseNotaPadrao sharedManager]retornaCarinhaNota:aux.nomeNota];
     
     if([oitava isEqualToString:@"4"]){
@@ -608,7 +632,7 @@
         }
         if([EscolhaUsuarioPartitura sharedManager].estadoBotaoSustenido){
             if(padrao.sustenido == 1){
-                UIImageView *chapeu = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"sustenidoDO.png"]];
+                UIImageView *chapeu = [self vereficaCorSustenido:aux];
                 [chapeu setFrame:CGRectMake(-55,100,20,30)];
                 [aux.imagemNota addSubview:chapeu];
             }
@@ -632,7 +656,7 @@
         }
         if([EscolhaUsuarioPartitura sharedManager].estadoBotaoSustenido){
             if(padrao.sustenido == 1){
-                UIImageView *chapeu = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"sustenidoDO.png"]];
+                UIImageView *chapeu = [self vereficaCorSustenido:aux];
                 float degrees = 180; //the value in degrees
                 chapeu.transform = CGAffineTransformMakeRotation(degrees * M_PI/180);
                 [chapeu setFrame:CGRectMake(60,115,20,30)];
