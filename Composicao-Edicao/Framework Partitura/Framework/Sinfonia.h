@@ -19,7 +19,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <QuartzCore/QuartzCore.h>
 
-#import "PartituraComposta.h"
+#import "PartituraSinfonia.h"
 #import "ComponenteScrollEdicao.h"
 
 @interface Sinfonia : NSObject < NSXMLParserDelegate > {

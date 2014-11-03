@@ -70,7 +70,7 @@
     listaSoundBank = [[NSMutableArray alloc]init];
     
     for(int i=0;i<15;i++){
-        PartituraComposta *bank = [[PartituraComposta alloc]init];
+        PartituraSinfonia *bank = [[PartituraSinfonia alloc]init];
         [listaSoundBank addObject:bank];
     }
     
@@ -103,7 +103,7 @@
     if(auxListaSoundBank == 15) auxListaSoundBank = 1; else auxListaSoundBank += 1;
     
     
-    PartituraComposta *partitura = [listaSoundBank objectAtIndex:auxListaSoundBank-1];
+    PartituraSinfonia *partitura = [listaSoundBank objectAtIndex:auxListaSoundBank-1];
     
     partitura.instrumento = [[DataBaseInstrumento sharedManager]retornaInstrumento:nomeInstrumentoPlist];
     
@@ -133,7 +133,7 @@
     if(auxListaSoundBank == 15) auxListaSoundBank = 1; else auxListaSoundBank += 1;
     
     
-    PartituraComposta *partitura = [listaSoundBank objectAtIndex:auxListaSoundBank-1];
+    PartituraSinfonia *partitura = [listaSoundBank objectAtIndex:auxListaSoundBank-1];
     
     partitura.instrumento = [[DataBaseInstrumento sharedManager]retornaInstrumento:nomeInstrumentoPlist];
     
@@ -162,7 +162,7 @@
 
 -(void)tocarPlayerPartitura{
     
-    PartituraComposta *partitura = [listaSoundBank objectAtIndex:auxListaSoundBank-1];
+    PartituraSinfonia *partitura = [listaSoundBank objectAtIndex:auxListaSoundBank-1];
     
     partitura.auxIndiceNotas = auxIndiceNotasPausa;
     
@@ -214,7 +214,7 @@
 
 -(void)tocarpentagrama1{
     
-    PartituraComposta *partitura = [listaSoundBank objectAtIndex:auxListaSoundBank-1];
+    PartituraSinfonia *partitura = [listaSoundBank objectAtIndex:auxListaSoundBank-1];
     
     if(partitura.auxIndiceNotas >= [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]count]){
         [ComponenteScrollEdicao sharedManager].tocandoBloqueioInserirNota = YES;
@@ -352,7 +352,7 @@
 
 -(void)tocarPrimeiroPentagramaViolao{
     
-    PartituraComposta *partitura = [listaSoundBank objectAtIndex:auxListaSoundBank-1];
+    PartituraSinfonia *partitura = [listaSoundBank objectAtIndex:auxListaSoundBank-1];
 
     if(partitura.auxIndiceNotas >= [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]count]){
         [ComponenteScrollEdicao sharedManager].tocandoBloqueioInserirNota = YES;

@@ -11,7 +11,7 @@
 #import "Partitura.h"
 #import "Instrumento.h"
 
-@interface PartituraComposta : NSObject
+@interface PartituraSinfonia : NSObject
 
 
 @property SoundBankPlayer *soundBank;

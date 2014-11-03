@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 EMERSON BARROS | VINICIUS RESENDE. All rights reserved.
 //
 
-#import "PartituraComposta.h"
+#import "PartituraSinfonia.h"
 
-@implementation PartituraComposta
+@implementation PartituraSinfonia
 
 
 -(id)init{

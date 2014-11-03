@@ -327,12 +327,12 @@
 		0B7368E719FAC5C10066720F /* teclaPretaUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teclaPretaUp.png; sourceTree = "<group>"; };
 		0B7C6A581A07EE53007802A9 /* botaoSustenido.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botaoSustenido.png; sourceTree = "<group>"; };
 		0B7C6A5A1A07EEDD007802A9 /* sustenidoDo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sustenidoDo.png; sourceTree = "<group>"; };
-		0B7C6A5B1A07EEDD007802A9 /* sustenidoFa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sustenidoFa.png; sourceTree = "<group>"; };
-		0B7C6A5C1A07EEDD007802A9 /* sustenidoLa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sustenidoLa.png; sourceTree = "<group>"; };
-		0B7C6A5D1A07EEDD007802A9 /* sustenidoMi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sustenidoMi.png; sourceTree = "<group>"; };
-		0B7C6A5E1A07EEDD007802A9 /* sustenidoRe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sustenidoRe.png; sourceTree = "<group>"; };
-		0B7C6A5F1A07EEDD007802A9 /* sustenidoSi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sustenidoSi.png; sourceTree = "<group>"; };
-		0B7C6A601A07EEDD007802A9 /* sustenidoSol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sustenidoSol.png; sourceTree = "<group>"; };
+		0B7C6A5B1A07EEDD007802A9 /* sustenidoFa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sustenidoFa.png; path = ../Do/sustenidoFa.png; sourceTree = "<group>"; };
+		0B7C6A5C1A07EEDD007802A9 /* sustenidoLa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sustenidoLa.png; path = ../Do/sustenidoLa.png; sourceTree = "<group>"; };
+		0B7C6A5D1A07EEDD007802A9 /* sustenidoMi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sustenidoMi.png; path = ../Do/sustenidoMi.png; sourceTree = "<group>"; };
+		0B7C6A5E1A07EEDD007802A9 /* sustenidoRe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sustenidoRe.png; path = ../Do/sustenidoRe.png; sourceTree = "<group>"; };
+		0B7C6A5F1A07EEDD007802A9 /* sustenidoSi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sustenidoSi.png; path = ../Do/sustenidoSi.png; sourceTree = "<group>"; };
+		0B7C6A601A07EEDD007802A9 /* sustenidoSol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sustenidoSol.png; path = ../Do/sustenidoSol.png; sourceTree = "<group>"; };
 		0B862C4119EC6E60009365DD /* ControladorDeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControladorDeItem.h; sourceTree = "<group>"; };
 		0B862C4219EC6E60009365DD /* ControladorDeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControladorDeItem.m; sourceTree = "<group>"; };
 		0B9F945419E863E2005F4314 /* GerenciadorAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GerenciadorAudio.h; sourceTree = "<group>"; };
@@ -555,10 +555,10 @@
 		3FB6F54E19DA67E60080057B /* P200 Piano F#7.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "P200 Piano F#7.caf"; sourceTree = "<group>"; };
 		3FB6F54F19DA67E60080057B /* P200 Piano G#9.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "P200 Piano G#9.caf"; sourceTree = "<group>"; };
 		3FB6F55019DA67E60080057B /* Piano.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Piano.plist; sourceTree = "<group>"; };
-		3FC5D2B819DA59BA00348F51 /* ComponenteScrollEdicao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComponenteScrollEdicao.h; path = "../../Composicao-Edicao/Classes Edicao Notas/ComponenteScrollEdicao.h"; sourceTree = "<group>"; };
-		3FC5D2B919DA59BA00348F51 /* ComponenteScrollEdicao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComponenteScrollEdicao.m; path = "../../Composicao-Edicao/Classes Edicao Notas/ComponenteScrollEdicao.m"; sourceTree = "<group>"; };
-		3FC5D2BA19DA59BA00348F51 /* DesenhaPartituraEdicao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DesenhaPartituraEdicao.h; path = "../../Composicao-Edicao/Classes Edicao Notas/DesenhaPartituraEdicao.h"; sourceTree = "<group>"; };
-		3FC5D2BB19DA59BA00348F51 /* DesenhaPartituraEdicao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DesenhaPartituraEdicao.m; path = "../../Composicao-Edicao/Classes Edicao Notas/DesenhaPartituraEdicao.m"; sourceTree = "<group>"; };
+		3FC5D2B819DA59BA00348F51 /* ComponenteScrollEdicao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComponenteScrollEdicao.h; path = "../Classes Edicao Notas/ComponenteScrollEdicao.h"; sourceTree = "<group>"; };
+		3FC5D2B919DA59BA00348F51 /* ComponenteScrollEdicao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComponenteScrollEdicao.m; path = "../Classes Edicao Notas/ComponenteScrollEdicao.m"; sourceTree = "<group>"; };
+		3FC5D2BA19DA59BA00348F51 /* DesenhaPartituraEdicao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DesenhaPartituraEdicao.h; path = "../Classes Edicao Notas/DesenhaPartituraEdicao.h"; sourceTree = "<group>"; };
+		3FC5D2BB19DA59BA00348F51 /* DesenhaPartituraEdicao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DesenhaPartituraEdicao.m; path = "../Classes Edicao Notas/DesenhaPartituraEdicao.m"; sourceTree = "<group>"; };
 		3FC5D2BD19DA59BA00348F51 /* BarraNotasPausasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarraNotasPausasViewController.h; sourceTree = "<group>"; };
 		3FC5D2BE19DA59BA00348F51 /* BarraNotasPausasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarraNotasPausasViewController.m; sourceTree = "<group>"; };
 		3FC5D2BF19DA59BA00348F51 /* PlayerPartituraEdicaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerPartituraEdicaoViewController.h; sourceTree = "<group>"; };
@@ -601,7 +601,7 @@
 		3FDCC04C19EB0673003DC572 /* SomItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SomItem.h; sourceTree = "<group>"; };
 		3FDCC04D19EB0673003DC572 /* SomItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SomItem.m; sourceTree = "<group>"; };
 		3FEF298E19E8BCDC00C01AB5 /* somPiano.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = somPiano.wav; sourceTree = "<group>"; };
-		3FF8CBF719F9EC5A001A40F8 /* PartituraComposta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartituraComposta.h; sourceTree = "<group>"; };
+		3FF8CBF719F9EC5A001A40F8 /* PartituraSinfonia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartituraSinfonia.h; sourceTree = "<group>"; };
 		3FF8CBF819F9EC5A001A40F8 /* PartituraComposta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartituraComposta.m; sourceTree = "<group>"; };
 		A811633919D229CB00506D94 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		A811633A19D229CB00506D94 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
@@ -693,6 +693,7 @@
 		0B1D2A8119E46B61003CA4C4 /* Componentes */ = {
 			isa = PBXGroup;
 			children = (
+				3FC5D2BC19DA59BA00348F51 /* Componentes Edicao */,
 				0BB1F17A19E5D3F500E9F8E4 /* Mascote */,
 				0BB1F17919E5D3B000E9F8E4 /* BotaoVoltar */,
 			);
@@ -709,6 +710,54 @@
 			);
 			name = Teclas;
 			path = Imagens/Teclas;
+			sourceTree = "<group>";
+		};
+		0B7C6A681A080B6A007802A9 /* Barra Menu Notas */ = {
+			isa = PBXGroup;
+			children = (
+				3FC5D34819DA61FD00348F51 /* BarraNotasPausasViewController.xib */,
+				3FC5D2BD19DA59BA00348F51 /* BarraNotasPausasViewController.h */,
+				3FC5D2BE19DA59BA00348F51 /* BarraNotasPausasViewController.m */,
+			);
+			name = "Barra Menu Notas";
+			sourceTree = "<group>";
+		};
+		0B7C6A691A080C73007802A9 /* Lista */ = {
+			isa = PBXGroup;
+			children = (
+				3FC5D34919DA61FD00348F51 /* ListaInstrumentoViewController.xib */,
+				3FC5D34519DA5DC200348F51 /* ListaInstrumentoViewController.h */,
+				3FC5D34619DA5DC200348F51 /* ListaInstrumentoViewController.m */,
+			);
+			name = Lista;
+			sourceTree = "<group>";
+		};
+		0B7C6A6A1A080C7D007802A9 /* Player Partitura */ = {
+			isa = PBXGroup;
+			children = (
+				3FC5D34A19DA61FD00348F51 /* PlayerPartituraEdicaoViewController.xib */,
+				3FC5D2BF19DA59BA00348F51 /* PlayerPartituraEdicaoViewController.h */,
+				3FC5D2C019DA59BA00348F51 /* PlayerPartituraEdicaoViewController.m */,
+			);
+			name = "Player Partitura";
+			sourceTree = "<group>";
+		};
+		0B7C6A6B1A080ED2007802A9 /* Piano */ = {
+			isa = PBXGroup;
+			children = (
+				0B7C6A6C1A080EE3007802A9 /* New Group */,
+				0BD5808A19F973C70042F603 /* PianoViewController.h */,
+				0BD5808B19F973C70042F603 /* PianoViewController.m */,
+				0BD5808C19F973C70042F603 /* PianoViewController.xib */,
+			);
+			name = Piano;
+			sourceTree = "<group>";
+		};
+		0B7C6A6C1A080EE3007802A9 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 		0BAFB08C19F1ABBB00DCF54F /* Midia */ = {
@@ -900,19 +949,13 @@
 		0BAFB16619F1AD5A00DCF54F /* Estudio */ = {
 			isa = PBXGroup;
 			children = (
-				3FC5D2B819DA59BA00348F51 /* ComponenteScrollEdicao.h */,
-				3FC5D2B919DA59BA00348F51 /* ComponenteScrollEdicao.m */,
-				3FC5D2BA19DA59BA00348F51 /* DesenhaPartituraEdicao.h */,
-				3FC5D2BB19DA59BA00348F51 /* DesenhaPartituraEdicao.m */,
+				0B7C6A6B1A080ED2007802A9 /* Piano */,
 				0BD5808F19F9794A0042F603 /* InstrumentoViewController.h */,
 				0BD5809019F9794A0042F603 /* InstrumentoViewController.m */,
 				3FC5D2C119DA59BA00348F51 /* ComposicaoPartituraViewController.h */,
 				3FC5D2C219DA59BA00348F51 /* ComposicaoPartituraViewController.m */,
 				A8F1C4B019D1F8AD001850E4 /* EstudioViewController.h */,
 				A8F1C4B119D1F8AD001850E4 /* EstudioViewController.m */,
-				0BD5808A19F973C70042F603 /* PianoViewController.h */,
-				0BD5808B19F973C70042F603 /* PianoViewController.m */,
-				0BD5808C19F973C70042F603 /* PianoViewController.xib */,
 				3F0E879519DBA6F8003FF4EB /* JornadaViewController.h */,
 			);
 			name = Estudio;
@@ -1098,12 +1141,6 @@
 			isa = PBXGroup;
 			children = (
 				0B7C6A5A1A07EEDD007802A9 /* sustenidoDo.png */,
-				0B7C6A5B1A07EEDD007802A9 /* sustenidoFa.png */,
-				0B7C6A5C1A07EEDD007802A9 /* sustenidoLa.png */,
-				0B7C6A5D1A07EEDD007802A9 /* sustenidoMi.png */,
-				0B7C6A5E1A07EEDD007802A9 /* sustenidoRe.png */,
-				0B7C6A5F1A07EEDD007802A9 /* sustenidoSi.png */,
-				0B7C6A601A07EEDD007802A9 /* sustenidoSol.png */,
 				3FB6F4D919DA659C0080057B /* Do4tempos.png */,
 				3FB6F4DA19DA659C0080057B /* DoMeiotempo.png */,
 				3FB6F4DB19DA659C0080057B /* Dotempo.png */,
@@ -1114,6 +1151,7 @@
 		3FB6F4DC19DA659C0080057B /* Fa */ = {
 			isa = PBXGroup;
 			children = (
+				0B7C6A5B1A07EEDD007802A9 /* sustenidoFa.png */,
 				3FB6F4DD19DA659C0080057B /* fa4Tempos.png */,
 				3FB6F4DE19DA659C0080057B /* FaMeiotempo.png */,
 				3FB6F4DF19DA659C0080057B /* Fatempo.png */,
@@ -1124,6 +1162,7 @@
 		3FB6F4E119DA659C0080057B /* La */ = {
 			isa = PBXGroup;
 			children = (
+				0B7C6A5C1A07EEDD007802A9 /* sustenidoLa.png */,
 				3FB6F4E219DA659C0080057B /* La4Tempos.png */,
 				3FB6F4E319DA659C0080057B /* LaMeiotempo.png */,
 				3FB6F4E419DA659C0080057B /* Latempo.png */,
@@ -1134,6 +1173,7 @@
 		3FB6F4E519DA659C0080057B /* Mi */ = {
 			isa = PBXGroup;
 			children = (
+				0B7C6A5D1A07EEDD007802A9 /* sustenidoMi.png */,
 				3FB6F4E619DA659C0080057B /* Mi4tempos.png */,
 				3FB6F4E719DA659C0080057B /* MiMeiotempo.png */,
 				3FB6F4E819DA659C0080057B /* Mitempo.png */,
@@ -1144,6 +1184,7 @@
 		3FB6F4E919DA659C0080057B /* Re */ = {
 			isa = PBXGroup;
 			children = (
+				0B7C6A5E1A07EEDD007802A9 /* sustenidoRe.png */,
 				3FB6F4EA19DA659C0080057B /* Re4tempos.png */,
 				3FB6F4EB19DA659C0080057B /* ReMeiotempo.png */,
 				3FB6F4EC19DA659C0080057B /* Retempo.png */,
@@ -1154,6 +1195,7 @@
 		3FB6F4ED19DA659C0080057B /* Si */ = {
 			isa = PBXGroup;
 			children = (
+				0B7C6A5F1A07EEDD007802A9 /* sustenidoSi.png */,
 				3FB6F4EE19DA659C0080057B /* Si4Tempos.png */,
 				3FB6F4EF19DA659C0080057B /* SiMeiotempo.png */,
 				3FB6F4F019DA659C0080057B /* Sitempo.png */,
@@ -1164,6 +1206,7 @@
 		3FB6F4F119DA659C0080057B /* Sol */ = {
 			isa = PBXGroup;
 			children = (
+				0B7C6A601A07EEDD007802A9 /* sustenidoSol.png */,
 				3FB6F4F219DA659C0080057B /* Sol4Tempos.png */,
 				3FB6F4F319DA659C0080057B /* SolMeiotempo.png */,
 				3FB6F4F419DA659C0080057B /* Soltempo.png */,
@@ -1174,13 +1217,13 @@
 		3FB6F52219DA67E60080057B /* Flauta */ = {
 			isa = PBXGroup;
 			children = (
+				3FB6F52919DA67E60080057B /* FlautaDoce.plist */,
 				3FB6F52319DA67E60080057B /* do1.caf */,
 				3FB6F52419DA67E60080057B /* do2.caf */,
 				3FB6F52519DA67E60080057B /* do3.caf */,
 				3FB6F52619DA67E60080057B /* fad1.caf */,
 				3FB6F52719DA67E60080057B /* fad2.caf */,
 				3FB6F52819DA67E60080057B /* fad3.caf */,
-				3FB6F52919DA67E60080057B /* FlautaDoce.plist */,
 				3FB6F52A19DA67E60080057B /* la1.caf */,
 				3FB6F52B19DA67E60080057B /* la2.caf */,
 				3FB6F52C19DA67E60080057B /* la3.caf */,
@@ -1194,6 +1237,7 @@
 		3FB6F53019DA67E60080057B /* guitar natural */ = {
 			isa = PBXGroup;
 			children = (
+				3FB6F53A19DA67E60080057B /* ViolaoNylon.plist */,
 				3FB6F53119DA67E60080057B /* 1 - E.caf */,
 				3FB6F53219DA67E60080057B /* 2 - A.caf */,
 				3FB6F53319DA67E60080057B /* 3 - D.caf */,
@@ -1203,7 +1247,6 @@
 				3FB6F53719DA67E60080057B /* 6a - A.caf */,
 				3FB6F53819DA67E60080057B /* 6b - D.caf */,
 				3FB6F53919DA67E60080057B /* 6c - G.caf */,
-				3FB6F53A19DA67E60080057B /* ViolaoNylon.plist */,
 			);
 			path = "guitar natural";
 			sourceTree = "<group>";
@@ -1211,6 +1254,7 @@
 		3FB6F53B19DA67E60080057B /* Piano */ = {
 			isa = PBXGroup;
 			children = (
+				3FB6F55019DA67E60080057B /* Piano.plist */,
 				3FB6F53C19DA67E60080057B /* P200 Piano A#2.caf */,
 				3FB6F53D19DA67E60080057B /* P200 Piano A#3.caf */,
 				3FB6F53E19DA67E60080057B /* P200 Piano A#4.caf */,
@@ -1231,7 +1275,6 @@
 				3FB6F54D19DA67E60080057B /* P200 Piano F#6.caf */,
 				3FB6F54E19DA67E60080057B /* P200 Piano F#7.caf */,
 				3FB6F54F19DA67E60080057B /* P200 Piano G#9.caf */,
-				3FB6F55019DA67E60080057B /* Piano.plist */,
 			);
 			path = Piano;
 			sourceTree = "<group>";
@@ -1240,39 +1283,29 @@
 			isa = PBXGroup;
 			children = (
 				3FC5D31919DA5C3200348F51 /* Framework Partitura */,
-				3FC5D2B719DA59BA00348F51 /* Classes Edicao Notas */,
-				3FC5D2BC19DA59BA00348F51 /* Componentes Edicao */,
 			);
 			name = "Composicao-Edicao";
 			path = "../Composicao-Edicao";
 			sourceTree = "<group>";
 		};
-		3FC5D2B719DA59BA00348F51 /* Classes Edicao Notas */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Classes Edicao Notas";
-			sourceTree = "<group>";
-		};
 		3FC5D2BC19DA59BA00348F51 /* Componentes Edicao */ = {
 			isa = PBXGroup;
 			children = (
-				3FC5D34819DA61FD00348F51 /* BarraNotasPausasViewController.xib */,
-				3FC5D34919DA61FD00348F51 /* ListaInstrumentoViewController.xib */,
-				3FC5D34A19DA61FD00348F51 /* PlayerPartituraEdicaoViewController.xib */,
-				3FC5D34519DA5DC200348F51 /* ListaInstrumentoViewController.h */,
-				3FC5D34619DA5DC200348F51 /* ListaInstrumentoViewController.m */,
-				3FC5D2BD19DA59BA00348F51 /* BarraNotasPausasViewController.h */,
-				3FC5D2BE19DA59BA00348F51 /* BarraNotasPausasViewController.m */,
-				3FC5D2BF19DA59BA00348F51 /* PlayerPartituraEdicaoViewController.h */,
-				3FC5D2C019DA59BA00348F51 /* PlayerPartituraEdicaoViewController.m */,
+				0B7C6A6A1A080C7D007802A9 /* Player Partitura */,
+				0B7C6A691A080C73007802A9 /* Lista */,
+				0B7C6A681A080B6A007802A9 /* Barra Menu Notas */,
 			);
-			path = "Componentes Edicao";
+			name = "Componentes Edicao";
+			path = "../Composicao-Edicao/Componentes Edicao";
 			sourceTree = "<group>";
 		};
 		3FC5D31919DA5C3200348F51 /* Framework Partitura */ = {
 			isa = PBXGroup;
 			children = (
+				3FC5D2B819DA59BA00348F51 /* ComponenteScrollEdicao.h */,
+				3FC5D2B919DA59BA00348F51 /* ComponenteScrollEdicao.m */,
+				3FC5D2BA19DA59BA00348F51 /* DesenhaPartituraEdicao.h */,
+				3FC5D2BB19DA59BA00348F51 /* DesenhaPartituraEdicao.m */,
 				3FC5D31A19DA5C3200348F51 /* Framework */,
 				3FC5D32119DA5C3200348F51 /* Instrumentos */,
 				3FC5D32619DA5C3200348F51 /* Partitura */,
@@ -1290,7 +1323,7 @@
 				3FC5D31E19DA5C3200348F51 /* LeitorPartituraXML.m */,
 				3FC5D31F19DA5C3200348F51 /* Sinfonia.h */,
 				3FC5D32019DA5C3200348F51 /* Sinfonia.m */,
-				3FF8CBF719F9EC5A001A40F8 /* PartituraComposta.h */,
+				3FF8CBF719F9EC5A001A40F8 /* PartituraSinfonia.h */,
 				3FF8CBF819F9EC5A001A40F8 /* PartituraComposta.m */,
 			);
 			path = Framework;
