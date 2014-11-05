@@ -151,8 +151,8 @@
     
     //[partitura.soundBank allNotesOff];
     
-    
     [self tocarPlayerPartitura];
+    
 
     
 }
@@ -162,12 +162,10 @@
 
 -(void)tocarPlayerPartitura{
     
+    
     PartituraSinfonia *partitura = [listaSoundBank objectAtIndex:auxListaSoundBank-1];
     
     partitura.auxIndiceNotas = auxIndiceNotasPausa;
-    
-    self.estadoBotaoPlay = false;
-    self.estadoBotaoLimpar = false;
     
     NSString *nomePrimeiroMetodo = partitura.instrumento.metodoPrimeiroTocar;
     
@@ -212,14 +210,47 @@
 
 ///////////////////////////////  Piano  ///////////////////////////////////////////////
 
+-(float)pegaTempoNota:(Nota*)nota{
+    
+    float tempo = 0.0;
+    
+    if([nota.tipoNota isEqualToString:@"64th"]){
+        tempo = n64th;
+    }else if([nota.tipoNota isEqualToString:@"32th"]){
+        tempo = n32th;
+    }else if([nota.tipoNota isEqualToString:@"16th"]){
+        tempo = n16th;
+    }else if([nota.tipoNota isEqualToString:@"eighth"]){
+        tempo = eighth;
+    }else if([nota.tipoNota isEqualToString:@"quarter"]){
+        tempo = quarter;
+    }else if([nota.tipoNota isEqualToString:@"half"]){
+        tempo = half;
+    }else if([nota.tipoNota isEqualToString:@"whole"]){
+        tempo = whole;
+    }else{
+        NSLog(@"deu errado temopo");
+    }
+    
+    return tempo;
+}
+
+-(void)liberaInserirNota{
+    [PlayerPartituraEdicaoViewController sharedManager].lblLimparPartitura.hidden = NO;
+    [PlayerPartituraEdicaoViewController sharedManager].lblPlayPartitura.hidden = NO;
+    [ComponenteScrollEdicao sharedManager].tocandoBloqueioInserirNota = YES;
+    self.estadoBotaoLimpar = true;
+    self.estadoBotaoPlay = true;
+}
+
 -(void)tocarpentagrama1{
     
     PartituraSinfonia *partitura = [listaSoundBank objectAtIndex:auxListaSoundBank-1];
     
     if(partitura.auxIndiceNotas >= [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]count]){
-        [ComponenteScrollEdicao sharedManager].tocandoBloqueioInserirNota = YES;
-        self.estadoBotaoLimpar = true;
-        self.estadoBotaoPlay = true;
+        Nota *ultimaNota = [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]lastObject];
+        
+        [self performSelector:@selector(liberaInserirNota) withObject:nil afterDelay:[self pegaTempoNota:ultimaNota]+0.0];
         
     }else{
         
@@ -355,7 +386,7 @@
     PartituraSinfonia *partitura = [listaSoundBank objectAtIndex:auxListaSoundBank-1];
 
     if(partitura.auxIndiceNotas >= [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]count]){
-        [ComponenteScrollEdicao sharedManager].tocandoBloqueioInserirNota = YES;
+        
         self.estadoBotaoLimpar = true;
         self.estadoBotaoPlay = true;
         

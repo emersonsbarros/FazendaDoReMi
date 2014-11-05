@@ -50,6 +50,7 @@
 }
 
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -64,8 +65,7 @@
     [[ComponenteScrollEdicao sharedManager]recebeScroll:self.scrollEdicao];
     //Desenha a partitura com 10 linhas de pentagrama
     [[DesenhaPartituraEdicao sharedManager]desenhaContornoPartituraParaEdicao:6:YES];
-    
-   
+ 
 }
 
 - (void)didReceiveMemoryWarning

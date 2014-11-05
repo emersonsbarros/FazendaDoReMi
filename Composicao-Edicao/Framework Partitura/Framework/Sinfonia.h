@@ -22,6 +22,8 @@
 #import "PartituraSinfonia.h"
 #import "ComponenteScrollEdicao.h"
 
+#import "PlayerPartituraEdicaoViewController.h"
+
 @interface Sinfonia : NSObject < NSXMLParserDelegate > {
     
     NSMutableArray *recebeOrdemNotasDoInstrumento;

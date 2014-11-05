@@ -19,4 +19,12 @@
 //timer
 @property NSTimer *timerAutualizaQtNotas;
 
++(PlayerPartituraEdicaoViewController*)sharedManager;
+
+
+
+@property (weak, nonatomic) IBOutlet UIButton *lblPlayPartitura;
+@property (weak, nonatomic) IBOutlet UIButton *lblLimparPartitura;
+
+
 @end

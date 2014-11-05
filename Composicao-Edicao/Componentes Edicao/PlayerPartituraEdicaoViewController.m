@@ -23,6 +23,27 @@
     return self;
 }
 
++(PlayerPartituraEdicaoViewController*)sharedManager{
+    static PlayerPartituraEdicaoViewController *unicoInstrumento = nil;
+    if(!unicoInstrumento){
+        unicoInstrumento = [[super allocWithZone:nil]init];
+    }
+    return unicoInstrumento;
+}
+
++(id)allocWithZone:(struct _NSZone *)zone{
+    return [self sharedManager];
+}
+
+-(id)init{
+    self = [super init];
+    if(self){
+       
+    }
+    return self;
+}
+
+
 
 -(void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear: animated];

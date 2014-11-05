@@ -742,22 +742,13 @@
 			name = "Player Partitura";
 			sourceTree = "<group>";
 		};
-		0B7C6A6B1A080ED2007802A9 /* Piano */ = {
+		0B7C6A6C1A080EE3007802A9 /* Composicao */ = {
 			isa = PBXGroup;
 			children = (
-				0B7C6A6C1A080EE3007802A9 /* New Group */,
-				0BD5808A19F973C70042F603 /* PianoViewController.h */,
-				0BD5808B19F973C70042F603 /* PianoViewController.m */,
-				0BD5808C19F973C70042F603 /* PianoViewController.xib */,
+				3FC5D2C119DA59BA00348F51 /* ComposicaoPartituraViewController.h */,
+				3FC5D2C219DA59BA00348F51 /* ComposicaoPartituraViewController.m */,
 			);
-			name = Piano;
-			sourceTree = "<group>";
-		};
-		0B7C6A6C1A080EE3007802A9 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
+			name = Composicao;
 			sourceTree = "<group>";
 		};
 		0BAFB08C19F1ABBB00DCF54F /* Midia */ = {
@@ -941,6 +932,7 @@
 		0BAFB16519F1AD3500DCF54F /* Mapa Jornada */ = {
 			isa = PBXGroup;
 			children = (
+				3F0E879519DBA6F8003FF4EB /* JornadaViewController.h */,
 				3F0E879619DBA6F8003FF4EB /* JornadaViewController.m */,
 			);
 			name = "Mapa Jornada";
@@ -949,14 +941,10 @@
 		0BAFB16619F1AD5A00DCF54F /* Estudio */ = {
 			isa = PBXGroup;
 			children = (
-				0B7C6A6B1A080ED2007802A9 /* Piano */,
-				0BD5808F19F9794A0042F603 /* InstrumentoViewController.h */,
-				0BD5809019F9794A0042F603 /* InstrumentoViewController.m */,
-				3FC5D2C119DA59BA00348F51 /* ComposicaoPartituraViewController.h */,
-				3FC5D2C219DA59BA00348F51 /* ComposicaoPartituraViewController.m */,
+				0B7C6A6C1A080EE3007802A9 /* Composicao */,
+				3FC730DD1A092ABA0086EBE3 /* Instrumento */,
 				A8F1C4B019D1F8AD001850E4 /* EstudioViewController.h */,
 				A8F1C4B119D1F8AD001850E4 /* EstudioViewController.m */,
-				3F0E879519DBA6F8003FF4EB /* JornadaViewController.h */,
 			);
 			name = Estudio;
 			sourceTree = "<group>";
@@ -1369,6 +1357,18 @@
 				3FC5D33F19DA5CFB00348F51 /* SoundBankPlayer.m */,
 			);
 			path = SoundBankPlayer;
+			sourceTree = "<group>";
+		};
+		3FC730DD1A092ABA0086EBE3 /* Instrumento */ = {
+			isa = PBXGroup;
+			children = (
+				0BD5809019F9794A0042F603 /* InstrumentoViewController.m */,
+				0BD5808F19F9794A0042F603 /* InstrumentoViewController.h */,
+				0BD5808A19F973C70042F603 /* PianoViewController.h */,
+				0BD5808B19F973C70042F603 /* PianoViewController.m */,
+				0BD5808C19F973C70042F603 /* PianoViewController.xib */,
+			);
+			name = Instrumento;
 			sourceTree = "<group>";
 		};
 		A811634419D22C5300506D94 /* Item */ = {

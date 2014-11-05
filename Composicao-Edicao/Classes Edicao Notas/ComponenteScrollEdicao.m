@@ -46,7 +46,7 @@
 //Add gesture ao scorll view
 -(void)addGesturePrintarNotasTela{
     
-    self.limiteDeNotas = 200;
+    self.limiteDeNotas = 50;
     
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addNotaNaTela:)];
     singleTap.numberOfTouchesRequired = 1;
@@ -239,6 +239,12 @@
     self.tocandoBloqueioInserirNota = NO;
     
     if([Sinfonia sharedManager].estadoBotaoPlay){
+        
+        [PlayerPartituraEdicaoViewController sharedManager].lblLimparPartitura.hidden = YES;
+        [PlayerPartituraEdicaoViewController sharedManager].lblPlayPartitura.hidden = YES;
+        
+        [Sinfonia sharedManager].estadoBotaoPlay = false;
+        [Sinfonia sharedManager].estadoBotaoLimpar = false;
         
         [[Sinfonia sharedManager]desapareceEfeito:[[DesenhaPartituraEdicao sharedManager].listaNotasEdicao lastObject]];
         
