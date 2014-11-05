@@ -106,6 +106,9 @@
     
     if(self.tocandoBloqueioInserirNota){
         
+//        [Sinfonia sharedManager].estadoBotaoLimpar = NO;
+//        [Sinfonia sharedManager].estadoBotaoPlay = NO;
+        
         float posx = touchPoint.x;
         float posy = touchPoint.y;
         NSLog(@"nota x = %f, y =%f ",posx,posy);
@@ -232,27 +235,30 @@
     [self.scrollPartitura setContentOffset:CGPointMake(0,0) animated:YES];
 }
 
+-(void)esperaTocar{
+    
+    
+    [[Sinfonia sharedManager]desapareceEfeito:[[DesenhaPartituraEdicao sharedManager].listaNotasEdicao lastObject]];
+    
+    self.contadorIndiceNota = 0;
+    self.posOriginalScroll = self.scrollPartitura.contentOffset;
+    if([DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count != 0)[self atualizaPosicaoTocando];
+    
+    if([[DesenhaPartituraEdicao sharedManager].listaNotasEdicao lastObject] != NULL)[[Sinfonia sharedManager]tocarTodasNotasEdicao:[DesenhaPartituraEdicao sharedManager].listaNotasEdicao:[EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura];
+}
+
 
 //toca a partitura
 -(void)tocaPartituraEdicao{
     
-    self.tocandoBloqueioInserirNota = NO;
-    
-    if([Sinfonia sharedManager].estadoBotaoPlay){
+    if(([Sinfonia sharedManager].estadoBotaoPlay) && ([DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count != 0)){
         
+        self.tocandoBloqueioInserirNota = NO;
+//        [Sinfonia sharedManager].estadoBotaoPlay = NO;
+//        [Sinfonia sharedManager].estadoBotaoLimpar = NO;
         [PlayerPartituraEdicaoViewController sharedManager].lblLimparPartitura.hidden = YES;
         [PlayerPartituraEdicaoViewController sharedManager].lblPlayPartitura.hidden = YES;
-        
-        [Sinfonia sharedManager].estadoBotaoPlay = false;
-        [Sinfonia sharedManager].estadoBotaoLimpar = false;
-        
-        [[Sinfonia sharedManager]desapareceEfeito:[[DesenhaPartituraEdicao sharedManager].listaNotasEdicao lastObject]];
-        
-        self.contadorIndiceNota = 0;
-        self.posOriginalScroll = self.scrollPartitura.contentOffset;
-        if([DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count != 0)[self atualizaPosicaoTocando];
-        
-        if([[DesenhaPartituraEdicao sharedManager].listaNotasEdicao lastObject] != NULL)[[Sinfonia sharedManager]tocarTodasNotasEdicao:[DesenhaPartituraEdicao sharedManager].listaNotasEdicao:[EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura];
+        [self performSelector:@selector(esperaTocar) withObject:nil afterDelay:3.1];
     }
 
 }
@@ -283,6 +289,7 @@
             CGPoint bottomOffset = CGPointMake(0,0);
             [[self scrollPartitura] setContentOffset:bottomOffset animated:YES];
             [DesenhaPartituraEdicao sharedManager].posicaoX = 250;
+            
         }
     }
     

@@ -56,7 +56,8 @@
         self.estadoBotaoPlay = true;
         
         [self criaSoundBank];
-       
+        
+        self.auxPlayPartituraProblema = NO;
     }
     return self;
 }
@@ -120,7 +121,8 @@
     [[partitura.listaPartituraSinfonia objectAtIndex:0]setListaNotasPartitura:listaSons];
     
     //[partitura.soundBank allNotesOff];
-
+//    [Sinfonia sharedManager].estadoBotaoLimpar = NO;
+//    [Sinfonia sharedManager].estadoBotaoPlay = NO;
     
     [self tocarPlayerPartitura];
 }
@@ -132,8 +134,10 @@
    
     if(auxListaSoundBank == 15) auxListaSoundBank = 1; else auxListaSoundBank += 1;
     
+
     
     PartituraSinfonia *partitura = [listaSoundBank objectAtIndex:auxListaSoundBank-1];
+    //[partitura.soundBank allNotesOff];
     
     partitura.instrumento = [[DataBaseInstrumento sharedManager]retornaInstrumento:nomeInstrumentoPlist];
     
@@ -149,7 +153,7 @@
     [partitura.listaPartituraSinfonia addObject:part];
     [[partitura.listaPartituraSinfonia objectAtIndex:0]setListaNotasPartitura:listaSons];
     
-    //[partitura.soundBank allNotesOff];
+    self.auxPlayPartituraProblema = YES;
     
     [self tocarPlayerPartitura];
     
@@ -172,6 +176,8 @@
     SEL selectors1 = NSSelectorFromString(nomePrimeiroMetodo);
     
     [self performSelector:selectors1 withObject:NULL afterDelay:0.0];
+    
+    
   
 
 }
@@ -235,12 +241,29 @@
     return tempo;
 }
 
--(void)liberaInserirNota{
+
+-(void)teste{
+    self.estadoBotaoLimpar = true;
+    self.estadoBotaoPlay = true;
+    NSLog(@"oiii");
+}
+
+
+-(void)liberaInserirNota:(PartituraSinfonia*)part{
+    
+    part.auxIndiceNotas = 0;
+    
     [PlayerPartituraEdicaoViewController sharedManager].lblLimparPartitura.hidden = NO;
     [PlayerPartituraEdicaoViewController sharedManager].lblPlayPartitura.hidden = NO;
     [ComponenteScrollEdicao sharedManager].tocandoBloqueioInserirNota = YES;
+    
+    self.auxPlayPartituraProblema = NO;
+    
     self.estadoBotaoLimpar = true;
     self.estadoBotaoPlay = true;
+    NSLog(@"play");
+    
+    
 }
 
 -(void)tocarpentagrama1{
@@ -248,9 +271,10 @@
     PartituraSinfonia *partitura = [listaSoundBank objectAtIndex:auxListaSoundBank-1];
     
     if(partitura.auxIndiceNotas >= [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]count]){
-        Nota *ultimaNota = [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]lastObject];
-        
-        [self performSelector:@selector(liberaInserirNota) withObject:nil afterDelay:[self pegaTempoNota:ultimaNota]+0.0];
+        int v = [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]count] - 1;
+        Nota *ultimaNota = [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]objectAtIndex:v];
+        if(self.auxPlayPartituraProblema)[self performSelector:@selector(liberaInserirNota:) withObject:partitura afterDelay:[self pegaTempoNota:ultimaNota]+0.0];
+        else [self performSelector:@selector(teste) withObject:nil afterDelay:[self pegaTempoNota:ultimaNota]+0.0];
         
     }else{
         

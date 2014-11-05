@@ -39,7 +39,7 @@
     int auxListaSoundBank;
 }
 
-
+@property BOOL auxPlayPartituraProblema;
 +(Sinfonia*)sharedManager;
 
 
