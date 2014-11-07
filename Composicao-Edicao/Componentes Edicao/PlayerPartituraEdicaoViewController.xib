@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerPartituraEdicaoViewController">
             <connections>
                 <outlet property="lblLimparPartitura" destination="QYR-HK-IvU" id="yw3-F1-rjy"/>
                 <outlet property="lblPlayPartitura" destination="5vS-KG-YdQ" id="6H5-IY-TCS"/>
+                <outlet property="lblStopPartitura" destination="1RN-ub-n6F" id="XpO-9h-ssg"/>
                 <outlet property="txtQtd" destination="LR1-73-a9Q" id="Gc9-am-sEY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -29,6 +29,17 @@
                         <action selector="tocarTodasNoras:" destination="-1" eventType="touchUpInside" id="U6S-Eg-UDF"/>
                     </connections>
                 </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RN-ub-n6F">
+                    <rect key="frame" x="159" y="2" width="101" height="101"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <state key="normal" backgroundImage="btnplay.png">
+                        <color key="titleColor" red="0.086274512110000007" green="0.11372549830000001" blue="0.74117648599999997" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="stopPartitura:" destination="-1" eventType="touchUpInside" id="U69-yo-G6c"/>
+                    </connections>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYR-HK-IvU">
                     <rect key="frame" x="364" y="16" width="76" height="74"/>
                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
@@ -47,7 +58,6 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <nil key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
@@ -56,9 +66,4 @@
         <image name="btnlixeira.png" width="104" height="104"/>
         <image name="btnplay.png" width="126" height="125"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
-    </simulatedMetricsContainer>
 </document>

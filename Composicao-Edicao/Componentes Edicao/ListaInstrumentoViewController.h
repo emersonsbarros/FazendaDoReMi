@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "EscolhaUsuarioPartitura.h"
-
+#import "Sinfonia.h"
 
 @interface ListaInstrumentoViewController : UIViewController
 

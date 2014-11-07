@@ -22,9 +22,9 @@
 +(PlayerPartituraEdicaoViewController*)sharedManager;
 
 
-
 @property (weak, nonatomic) IBOutlet UIButton *lblPlayPartitura;
 @property (weak, nonatomic) IBOutlet UIButton *lblLimparPartitura;
+@property (weak, nonatomic) IBOutlet UIButton *lblStopPartitura;
 
 
 @end

@@ -258,7 +258,13 @@
 //        [Sinfonia sharedManager].estadoBotaoLimpar = NO;
         [PlayerPartituraEdicaoViewController sharedManager].lblLimparPartitura.hidden = YES;
         [PlayerPartituraEdicaoViewController sharedManager].lblPlayPartitura.hidden = YES;
-        [self performSelector:@selector(esperaTocar) withObject:nil afterDelay:3.1];
+        [self performSelector:@selector(esperaTocar) withObject:nil afterDelay:0.0];
+        
+        
+        for(int i=0;i<15;i++){
+            PartituraSinfonia *bank = [[Sinfonia sharedManager].listaSoundBank objectAtIndex:i];
+            [bank.soundBank allNotesOff];
+        }
     }
 
 }

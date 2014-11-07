@@ -38,7 +38,7 @@
 -(id)init{
     self = [super init];
     if(self){
-       
+    
     }
     return self;
 }
@@ -48,8 +48,7 @@
 -(void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear: animated];
     
-    //[self.timerAutualizaQtNotas invalidate];
-    
+    self.lblStopPartitura.hidden = YES;
     
 }
 
@@ -64,14 +63,11 @@
 {
     [super viewDidLoad];
     
-    //aciona timer para atualizar a quantidade de notas inseridas
-//    self.timerAutualizaQtNotas = [NSTimer scheduledTimerWithTimeInterval:0.5
-//                                     target: self
-//                                   selector: @selector(atualizaQtdNotas)
-//                                   userInfo: nil
-//                                    repeats: YES];
+    self.lblStopPartitura.hidden = YES;
+
     
 }
+
 
 ////////////////////////////////// METODOS //////////////////////////////////////////
 
@@ -88,8 +84,8 @@
 
 //Toca todas as notas do usario
 - (IBAction)tocarTodasNoras:(id)sender {
-    
     [[ComponenteScrollEdicao sharedManager]tocaPartituraEdicao];
+    self.lblStopPartitura.hidden = NO;
 }
 
 //Limpa as notas da tela
@@ -98,6 +94,13 @@
     [[ComponenteScrollEdicao sharedManager]limparPartituraEdicao];
 
 }
+
+- (IBAction)stopPartitura:(id)sender {
+    self.lblStopPartitura.hidden = YES;
+    [[Sinfonia sharedManager]pararPlayerPartitura];
+}
+
+
 
 
 @end

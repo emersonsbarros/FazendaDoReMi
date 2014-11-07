@@ -21,6 +21,7 @@
 
 #import "PartituraSinfonia.h"
 #import "ComponenteScrollEdicao.h"
+#import "DesenhaPartituraEdicao.h"
 
 #import "PlayerPartituraEdicaoViewController.h"
 
@@ -30,19 +31,16 @@
     
     int auxIndiceNotasPausa;
     int auxIndiceNotas;
-    int auxIndiceNotas2;
     
-    SoundBankPlayer *_soundBankPlayer;
-    SoundBankPlayer *_soundBankPlayer2;
-    
-    NSMutableArray *listaSoundBank;
     int auxListaSoundBank;
 }
-
+@property NSMutableArray *listaSoundBank;
 @property BOOL auxPlayPartituraProblema;
 +(Sinfonia*)sharedManager;
 
 
+-(void)trocaInstrumentoESoundBank;
+@property NSMutableArray *listaAuxSoundBank;
 @property NSString *nomeSinfonia;
 @property NSString *dataSinfonia;
 @property NSString *nomeInstrumentoSinfonia;
