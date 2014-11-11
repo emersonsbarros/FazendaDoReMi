@@ -130,7 +130,7 @@
             }
             
             [[self scrollPartitura]addSubview:[not imagemNota]];
-            
+            self.tempoUltimaNota = [[Sinfonia sharedManager]pegaTempoNota:not];
             
             [[self scrollPartitura] setContentSize:CGSizeMake((self.scrollPartitura.bounds.size.width+[DesenhaPartituraEdicao sharedManager].posicaoX)-700, self.scrollPartitura.bounds.size.height)];
             
@@ -237,14 +237,17 @@
 
 -(void)esperaTocar{
     
-    
     [[Sinfonia sharedManager]desapareceEfeito:[[DesenhaPartituraEdicao sharedManager].listaNotasEdicao lastObject]];
     
     self.contadorIndiceNota = 0;
     self.posOriginalScroll = self.scrollPartitura.contentOffset;
     if([DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count != 0)[self atualizaPosicaoTocando];
     
-    if([[DesenhaPartituraEdicao sharedManager].listaNotasEdicao lastObject] != NULL)[[Sinfonia sharedManager]tocarTodasNotasEdicao:[DesenhaPartituraEdicao sharedManager].listaNotasEdicao:[EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura];
+    if([[DesenhaPartituraEdicao sharedManager].listaNotasEdicao lastObject] != NULL){
+        [[Sinfonia sharedManager]tocarTodasNotasEdicao:[DesenhaPartituraEdicao sharedManager].listaNotasEdicao:[EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura];
+    }
+    
+    
 }
 
 
@@ -254,17 +257,21 @@
     if(([Sinfonia sharedManager].estadoBotaoPlay) && ([DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count != 0)){
         
         self.tocandoBloqueioInserirNota = NO;
-//        [Sinfonia sharedManager].estadoBotaoPlay = NO;
-//        [Sinfonia sharedManager].estadoBotaoLimpar = NO;
+
         [PlayerPartituraEdicaoViewController sharedManager].lblLimparPartitura.hidden = YES;
         [PlayerPartituraEdicaoViewController sharedManager].lblPlayPartitura.hidden = YES;
-        [self performSelector:@selector(esperaTocar) withObject:nil afterDelay:0.0];
         
+        float tempo = self.tempoUltimaNota;
         
         for(int i=0;i<15;i++){
             PartituraSinfonia *bank = [[Sinfonia sharedManager].listaSoundBank objectAtIndex:i];
             [bank.soundBank allNotesOff];
         }
+        
+        CGPoint bottomOffset = CGPointMake(0,0);
+        [[self scrollPartitura] setContentOffset:bottomOffset animated:YES];
+        
+        [self performSelector:@selector(esperaTocar) withObject:nil afterDelay:tempo+0.1];
     }
 
 }

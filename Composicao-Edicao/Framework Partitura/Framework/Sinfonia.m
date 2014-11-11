@@ -130,8 +130,6 @@
         auxListaSoundBank += 1;
     }
     
-    
-    
     PartituraSinfonia *partitura = [self.listaSoundBank objectAtIndex:auxListaSoundBank-1];
     
     partitura.instrumento = [[DataBaseInstrumento sharedManager]retornaInstrumento:nomeInstrumentoPlist];
@@ -148,7 +146,6 @@
     [partitura.listaPartituraSinfonia addObject:part];
     [[partitura.listaPartituraSinfonia objectAtIndex:0]setListaNotasPartitura:listaSons];
 
-    
     [self tocarPlayerPartitura];
 }
 
@@ -228,8 +225,7 @@
      PartituraSinfonia *partitura = [self.listaSoundBank objectAtIndex:auxListaSoundBank-1];
      Partitura *listaNotas = [partitura.listaPartituraSinfonia firstObject];
     
-   
-    if(listaNotas.listaNotasPartitura.count > 0){
+     if(listaNotas.listaNotasPartitura.count > 0){
         
         Nota *nota = [listaNotas.listaNotasPartitura objectAtIndex:partitura.auxIndiceNotas-1];
         
@@ -240,7 +236,7 @@
         [[ComponenteScrollEdicao sharedManager].scrollPartitura setContentOffset:bottomOffset animated:YES];
         [ComponenteScrollEdicao sharedManager].contadorIndiceNota = [DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count-1;
         
-    }
+     }
 }
 
 ///////////////////////////////  Piano  ///////////////////////////////////////////////

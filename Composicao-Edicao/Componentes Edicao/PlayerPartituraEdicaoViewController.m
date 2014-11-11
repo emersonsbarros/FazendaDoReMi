@@ -84,8 +84,10 @@
 
 //Toca todas as notas do usario
 - (IBAction)tocarTodasNoras:(id)sender {
-    [[ComponenteScrollEdicao sharedManager]tocaPartituraEdicao];
-    self.lblStopPartitura.hidden = NO;
+    if(([DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count != 0)){
+        [[ComponenteScrollEdicao sharedManager]tocaPartituraEdicao];
+        self.lblStopPartitura.hidden = NO;
+    }
 }
 
 //Limpa as notas da tela

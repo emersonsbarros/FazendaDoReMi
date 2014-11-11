@@ -127,7 +127,7 @@
 }
 
 - (IBAction)pausaColcheiaBotao:(id)sender {
-    [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao = [[DataBaseNotaPadrao sharedManager]retornaNotaPausaPadrao:@"quarter"];
+    [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao = [[DataBaseNotaPadrao sharedManager]retornaNotaPausaPadrao:@"colcheiaPausa"];
     [self ocultaAlphaBotoesNotas];
     self.outBotao12TemposPausa.alpha = 1.0;
 }

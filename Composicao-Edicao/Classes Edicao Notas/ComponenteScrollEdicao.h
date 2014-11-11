@@ -23,6 +23,7 @@
 @property int limiteDeNotas;
 @property BOOL tocandoBloqueioInserirNota;
 
+@property float tempoUltimaNota;
 
 //Atributos
 @property UIScrollView *scrollPartitura;

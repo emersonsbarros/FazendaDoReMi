@@ -49,6 +49,8 @@
 @property Instrumento *instrumento;
 
 
+-(float)pegaTempoNota:(Nota*)nota;
+
 
 -(void)tocarPlayerPartitura;
 -(void)pausePlayerPartitura;
