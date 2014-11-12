@@ -86,21 +86,19 @@
 - (IBAction)tocarTodasNoras:(id)sender {
     if(([DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count != 0)){
         [[ComponenteScrollEdicao sharedManager]tocaPartituraEdicao];
-        self.lblStopPartitura.hidden = NO;
     }
 }
 
 //Limpa as notas da tela
 - (IBAction)limparNotasPartituraEdicao:(id)sender {
     
-    //[[ComponenteScrollEdicao sharedManager]limparPartituraEdicao];
- [[Sinfonia sharedManager]pararPlayerPartitura];
+    [[ComponenteScrollEdicao sharedManager]limparPartituraEdicao];
+
 }
 
 - (IBAction)stopPartitura:(id)sender {
     self.lblStopPartitura.hidden = YES;
     [[Sinfonia sharedManager]pararPlayerPartitura];
-    
 }
 
 

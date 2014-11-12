@@ -185,7 +185,8 @@
     [self tocarPlayerPartitura];
     
 
-    
+    [PlayerPartituraEdicaoViewController sharedManager].lblStopPartitura.hidden = NO;
+
 }
 
 
@@ -202,7 +203,8 @@
     SEL selectors1 = NSSelectorFromString(nomePrimeiroMetodo);
     
     [self performSelector:selectors1 withObject:NULL afterDelay:0.0];
-   
+    
+
 }
 
 -(void)pausePlayerPartitura {

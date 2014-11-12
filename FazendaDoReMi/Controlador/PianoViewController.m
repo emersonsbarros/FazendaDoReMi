@@ -32,6 +32,44 @@
     self.cont = 0;
     
     [self deixaBotoesExclusivos:self.view];
+    
+    int contador=0;
+    for(UIButton *btn in self.view.subviews){
+        
+        if(btn.tag == 5){
+            
+            contador++;
+           
+            switch (contador) {
+                case 1:
+                    [self addLabelEImagem:btn :@"Dó"];
+                    break;
+                case 2:
+                    [self addLabelEImagem:btn :@"Ré"];
+                    break;
+                case 3:
+                    [self addLabelEImagem:btn :@"Mi"];
+                    break;
+                case 4:
+                    [self addLabelEImagem:btn :@"Fá"];
+                    break;
+                case 5:
+                    [self addLabelEImagem:btn :@"Sol"];
+                    break;
+                case 6:
+                    [self addLabelEImagem:btn :@"Lá"];
+                    break;
+                case 7:
+                    [self addLabelEImagem:btn :@"Si"];
+                    contador = 0;
+                    break;
+                default:
+    
+                    break;
+            }
+            
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -250,6 +288,40 @@
     [NSTimer scheduledTimerWithTimeInterval:0.08 target:self selector:@selector(tocarNotaPoint:) userInfo:self.notas9 repeats:NO];
     
 
+}
+
+
+-(void)addLabelEImagem:(UIView*)tecla :(NSString*)nome{
+    
+    UILabel *textoNota = [[UILabel alloc]initWithFrame:CGRectMake(25.25, 235, 30, 30)];
+    textoNota.text = nome;
+    textoNota.numberOfLines = 1;
+    textoNota.textColor = [UIColor blackColor];
+    textoNota.textAlignment = NSTextAlignmentCenter;
+    
+    UIImageView *img;
+    if([nome isEqualToString:@"Dó"]){
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Do4Tempos"]];
+    }else if([nome isEqualToString:@"Ré"]){
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Re4Tempos"]];
+    }else if([nome isEqualToString:@"Mi"]){
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Mi4Tempos"]];
+    }else if([nome isEqualToString:@"Fá"]){
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Fa4Tempos"]];
+    }else if([nome isEqualToString:@"Sol"]){
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Sol4Tempos"]];
+    }else if([nome isEqualToString:@"Lá"]){
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"La4Tempos"]];
+    }else if([nome isEqualToString:@"Si"]){
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Si4Tempos"]];
+    }
+    
+    img.frame = CGRectMake(0, 135, 80, 100);
+    
+    
+    [tecla addSubview:textoNota];
+    [tecla addSubview:img];
+   
 }
 
 
