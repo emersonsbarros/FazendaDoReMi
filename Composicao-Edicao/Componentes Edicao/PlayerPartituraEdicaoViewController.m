@@ -93,13 +93,14 @@
 //Limpa as notas da tela
 - (IBAction)limparNotasPartituraEdicao:(id)sender {
     
-    [[ComponenteScrollEdicao sharedManager]limparPartituraEdicao];
-
+    //[[ComponenteScrollEdicao sharedManager]limparPartituraEdicao];
+ [[Sinfonia sharedManager]pararPlayerPartitura];
 }
 
 - (IBAction)stopPartitura:(id)sender {
     self.lblStopPartitura.hidden = YES;
     [[Sinfonia sharedManager]pararPlayerPartitura];
+    
 }
 
 

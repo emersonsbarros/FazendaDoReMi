@@ -227,14 +227,15 @@
     
      if(listaNotas.listaNotasPartitura.count > 0){
         
-        Nota *nota = [listaNotas.listaNotasPartitura objectAtIndex:partitura.auxIndiceNotas-1];
+         for(Nota *not in listaNotas.listaNotasPartitura){
+             not.imagemNota.alpha = 1.0;
+         }
+         
+         partitura.auxIndiceNotas = listaNotas.listaNotasPartitura.count;
         
-        nota.imagemNota.alpha = 1.0;
-        partitura.auxIndiceNotas = listaNotas.listaNotasPartitura.count;
-        
-        CGPoint bottomOffset = CGPointMake(0,0);
-        [[ComponenteScrollEdicao sharedManager].scrollPartitura setContentOffset:bottomOffset animated:YES];
-        [ComponenteScrollEdicao sharedManager].contadorIndiceNota = [DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count-1;
+         CGPoint bottomOffset = CGPointMake(0,0);
+         [[ComponenteScrollEdicao sharedManager].scrollPartitura setContentOffset:bottomOffset animated:YES];
+         [ComponenteScrollEdicao sharedManager].contadorIndiceNota = [DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count-1;
         
      }
 }
