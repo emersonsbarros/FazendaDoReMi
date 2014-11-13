@@ -101,7 +101,14 @@
 ////////////////////////// Instrumentos ////////////////////////////////////
 
 -(void)addComponentesPiano:(UIViewController*)viewAtual :(float)posX :(float)posY{
-    PianoViewController *bar = [[PianoViewController alloc]init];
+    PianoVirtualViewController *bar = [[PianoVirtualViewController alloc]init];
+    bar.view.frame = CGRectMake(posX,posY, bar.view.frame.size.width,bar.view.frame.size.height);
+    [viewAtual addChildViewController:bar];
+    [viewAtual.view addSubview:bar.view];
+}
+
+-(void)addComponentesTeclado:(UIViewController*)viewAtual :(float)posX :(float)posY{
+    TecladoViewController *bar = [[TecladoViewController alloc]init];
     bar.view.frame = CGRectMake(posX,posY, bar.view.frame.size.width,bar.view.frame.size.height);
     [viewAtual addChildViewController:bar];
     [viewAtual.view addSubview:bar.view];

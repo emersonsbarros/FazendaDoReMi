@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 EMERSON BARROS | VINICIUS RESENDE. All rights reserved.
 //
 
-#import "InstrumentoViewController.h"
+#import "InstrumentoPianoViewController.h"
 
-@interface InstrumentoViewController ()
+@interface InstrumentoPianoViewController ()
 
 @end
 
-@implementation InstrumentoViewController
+@implementation InstrumentoPianoViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

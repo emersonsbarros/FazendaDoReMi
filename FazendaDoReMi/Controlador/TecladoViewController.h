@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "Sinfonia.h"
 #import "Nota.h"
-#import "ComponenteScrollEdicao.h"
 
-@interface PianoViewController : UIViewController
+@interface TecladoViewController : UIViewController
 
 
 ///////4
@@ -23,13 +22,13 @@
 - (IBAction)tecla4a:(id)sender;
 - (IBAction)tecla4b:(id)sender;
 
-@property NSValue *nota4c;
-@property NSValue *nota4d;
-@property NSValue *nota4e;
-@property NSValue *nota4f;
-@property NSValue *nota4g;
-@property NSValue *nota4a;
-@property NSValue *nota4b;
+@property Nota *nota4c;
+@property Nota *nota4d;
+@property Nota *nota4e;
+@property Nota *nota4f;
+@property Nota *nota4g;
+@property Nota *nota4a;
+@property Nota *nota4b;
 
 
 
@@ -42,16 +41,16 @@
 - (IBAction)tecla5a:(id)sender;
 
 
-@property NSValue *nota5c;
-@property NSValue *nota5d;
-@property NSValue *nota5e;
-@property NSValue *nota5f;
-@property NSValue *nota5g;
-@property NSValue *nota5a;
-@property NSValue *nota5b;
+@property Nota *nota5c;
+@property Nota *nota5d;
+@property Nota *nota5e;
+@property Nota *nota5f;
+@property Nota *nota5g;
+@property Nota *nota5a;
+@property Nota *nota5b;
 
-@property float cont;
-@property NSTimer *tempoProximaNota;
+
+
 
 //Sutenido
 - (IBAction)teclas1:(id)sender;
@@ -64,15 +63,29 @@
 - (IBAction)teclas8:(id)sender;
 - (IBAction)tecla9:(id)sender;
 
-@property NSValue *notas1;
-@property NSValue *notas2;
-@property NSValue *notas3;
-@property NSValue *notas4;
-@property NSValue *notas5;
-@property NSValue *notas6;
-@property NSValue *notas7;
-@property NSValue *notas8;
-@property NSValue *notas9;
+@property Nota *notas1;
+@property Nota *notas2;
+@property Nota *notas3;
+@property Nota *notas4;
+@property Nota *notas5;
+@property Nota *notas6;
+@property Nota *notas7;
+@property Nota *notas8;
+@property Nota *notas9;
+
+
+
+// Insttrumento
+@property NSString *nomeInstrumento;
+
+- (IBAction)btnPiano:(id)sender;
+- (IBAction)btnFlauta:(id)sender;
+- (IBAction)btnViolao:(id)sender;
+- (IBAction)btnSaxfone:(id)sender;
+- (IBAction)btnGuitarra:(id)sender;
+- (IBAction)btnTambor:(id)sender;
+- (IBAction)btnOrgao:(id)sender;
+
 
 
 

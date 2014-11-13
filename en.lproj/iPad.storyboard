@@ -107,7 +107,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKw-cg-Tct">
-                                <rect key="frame" x="751" y="283" width="149" height="118"/>
+                                <rect key="frame" x="751" y="281" width="149" height="118"/>
                                 <state key="normal" title="Edicao">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -124,6 +124,15 @@
                                     <segue destination="T8i-dr-9jl" kind="push" id="30K-zy-Ma7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPf-az-RkT">
+                                <rect key="frame" x="546" y="103" width="169" height="147"/>
+                                <state key="normal" title="Teclado">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hJd-UK-P8D" kind="push" id="Px0-Hv-o6F"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -134,6 +143,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WFs-5V-l0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3233" y="48"/>
+        </scene>
+        <!--Teclado Livre View Controller-->
+        <scene sceneID="OC7-or-6HY">
+            <objects>
+                <viewController id="hJd-UK-P8D" customClass="TecladoLivreViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HH7-dT-9lj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ri3-91-Xgz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QF6-Pj-Aim">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dTK-HF-Avu"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QMR-TH-Yqk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4733" y="-1195"/>
         </scene>
         <!--Composicao Partitura View Controller - Title-->
         <scene sceneID="dzv-Lj-Aoa">
@@ -180,12 +211,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCE-VF-72q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4386" y="-315"/>
+            <point key="canvasLocation" x="4998" y="-291"/>
         </scene>
-        <!--Instrumento View Controller-->
+        <!--Instrumento Piano View Controller-->
         <scene sceneID="Vie-iQ-grd">
             <objects>
-                <viewController id="T8i-dr-9jl" customClass="InstrumentoViewController" sceneMemberID="viewController">
+                <viewController id="T8i-dr-9jl" customClass="InstrumentoPianoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="m73-Bq-LbI"/>
                         <viewControllerLayoutGuide type="bottom" id="Hkf-Mx-ejP"/>
@@ -212,7 +243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8aY-CJ-OZT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4386" y="552"/>
+            <point key="canvasLocation" x="5022" y="596"/>
         </scene>
         <!--Jornada View Controller-->
         <scene sceneID="fyS-av-cnp">

@@ -31,9 +31,14 @@
     self = [super init];
     if(self){
         self.tocandoBloqueioInserirNota = YES;
+        self.imgVassoura = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"vassoura-01.png"]];
+        self.imgVassoura.frame = CGRectMake(950, 150, 212, 278);
+        self.imgVassoura.hidden = YES;
     }
+    
     return self;
 }
+
 
 
 +(id)allocWithZone:(struct _NSZone *)zone{
@@ -204,6 +209,10 @@
     
     
     [DesenhaPartituraEdicao sharedManager].listaNotasEdicao = [[NSMutableArray alloc]init];
+    
+    [self.scrollPartitura addSubview:self.imgVassoura];
+    [self addAnimacaoSpriteVassoura];
+
 
 }
 
@@ -284,6 +293,8 @@
         
         if([DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count != 0){
             
+            [self movimentaVassoura];
+            
             for (UIView *subView in self.scrollPartitura.subviews)
             {
                 for(int i=0;i<[DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count;i++){
@@ -303,9 +314,82 @@
             [[self scrollPartitura] setContentOffset:bottomOffset animated:YES];
             [DesenhaPartituraEdicao sharedManager].posicaoX = 250;
             
+     
         }
     }
+}
+
+
+-(void)movimentaVassoura{
+   
+    [PlayerPartituraEdicaoViewController sharedManager].lblLimparPartitura.hidden = YES;
+    [PlayerPartituraEdicaoViewController sharedManager].lblPlayPartitura.hidden = YES;
+
+    
+    self.imgVassoura.hidden = NO;
+   
+    CABasicAnimation *moveNuvemDireita= [CABasicAnimation animationWithKeyPath:@"position"];
+    moveNuvemDireita.duration = 2.0;
+    moveNuvemDireita.repeatCount = 1;
+    moveNuvemDireita.fromValue = [NSValue valueWithCGPoint: CGPointMake(self.imgVassoura.frame.origin.x+100,self.imgVassoura.frame.origin.y+120)];
+    moveNuvemDireita.toValue = [NSValue valueWithCGPoint: CGPointMake(self.imgVassoura.frame.origin.x-700,self.imgVassoura.frame.origin.y+120)];
+    moveNuvemDireita.fillMode = kCAFillModeBackwards;
+    moveNuvemDireita.removedOnCompletion = NO;
+    [self.imgVassoura.layer addAnimation: moveNuvemDireita forKey:@"animacaoMovimento"];
+
+    [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(finalizaLimparTela) userInfo:nil repeats:NO];
     
 }
+
+-(void)finalizaLimparTela{
+    self.imgVassoura.hidden = YES;
+    [PlayerPartituraEdicaoViewController sharedManager].lblLimparPartitura.hidden = NO;
+    [PlayerPartituraEdicaoViewController sharedManager].lblPlayPartitura.hidden = NO;
+}
+
+
+
+//Aux que converte para CGImage, unico jeito para dar certo
+-(NSArray*)animationCGImagesArray:(UIImageView*)imgAddAnimacao {
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:[imgAddAnimacao.animationImages count]];
+    for (UIImage *image in imgAddAnimacao.animationImages) {
+        [array addObject:(id)[image CGImage]];
+    }
+    return [NSArray arrayWithArray:array];
+}
+
+-(void)addAnimacaoSpriteVassoura{
+    
+    UIImage *image1 = [UIImage imageNamed:@"vassoura-01.png"];
+    UIImage *image2 = [UIImage imageNamed:@"vassoura-02.png"];
+    UIImage *image3 = [UIImage imageNamed:@"vassoura-03.png"];
+    UIImage *image4 = [UIImage imageNamed:@"vassoura-04.png"];
+    UIImage *image5 = [UIImage imageNamed:@"vassoura-05.png"];
+    UIImage *image6 = [UIImage imageNamed:@"vassoura-06.png"];
+    UIImage *image7 = [UIImage imageNamed:@"vassoura-07.png"];
+    UIImage *image8 = [UIImage imageNamed:@"vassoura-08.png"];
+    
+    NSArray *imageArray = [NSArray arrayWithObjects:image1, image2, image3, image4, image5, image6, image7, image8, nil];
+    
+    self.imgVassoura.animationImages = imageArray;
+    
+    CAKeyframeAnimation *animacao = [CAKeyframeAnimation animationWithKeyPath: @"contents"];
+    animacao.calculationMode = kCAAnimationDiscrete;
+    animacao.duration = 0.5;
+    animacao.repeatCount = INFINITY;
+    animacao.autoreverses = YES;
+    animacao.beginTime = CACurrentMediaTime() + 0.2;
+    animacao.fillMode = kCAFillModeForwards;
+    animacao.removedOnCompletion = YES;
+    animacao.additive = NO;
+    animacao.values = [self animationCGImagesArray:self.imgVassoura];
+    [self.imgVassoura.layer addAnimation: animacao forKey:@"animacaoSprite"];
+    
+}
+
+
+
+
+
 
 @end

@@ -16,7 +16,9 @@
 #import "BotaoVoltarMapaViewController.h"
 #import "MascoteViewController.h"
 
-#import "PianoViewController.h"
+#import "PianoVirtualViewController.h"
+#import "TecladoLivreViewController.h"
+#import "TecladoViewController.h"
 
 @interface GerenciadorComponenteView : NSObject
 
@@ -39,7 +41,7 @@
 
 //Instrumentos
 -(void)addComponentesPiano:(UIViewController*)viewAtual :(float)posX :(float)posY;
-
+-(void)addComponentesTeclado:(UIViewController*)viewAtual :(float)posX :(float)posY;
 
 
 @end

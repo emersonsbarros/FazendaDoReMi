@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 EMERSON BARROS | VINICIUS RESENDE. All rights reserved.
 //
 
-#import "PianoViewController.h"
+#import "PianoVirtualViewController.h"
 
-@interface PianoViewController ()
+@interface PianoVirtualViewController ()
 
 @end
 
-@implementation PianoViewController
+@implementation PianoVirtualViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,7 +39,8 @@
         if(btn.tag == 5){
             
             contador++;
-           
+           NSLog(@"olha %d",contador);
+            
             switch (contador) {
                 case 1:
                     [self addLabelEImagem:btn :@"Dó"];

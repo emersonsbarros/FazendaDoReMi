@@ -12,9 +12,7 @@
 #import "DesenhaPartituraEdicao.h"
 #import "GerenciadorNavigationController.h"
 
-@interface InstrumentoViewController : UIViewController <UIScrollViewDelegate>
-
-
+@interface InstrumentoPianoViewController : UIViewController <UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollPartitura;
 @property UITapGestureRecognizer *gesture;

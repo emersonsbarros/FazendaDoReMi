@@ -42,6 +42,8 @@
 -(void)addNotaNaTelaInstrumento:(NSValue*)touchPoint;
 
 
+//Vassoura
+@property UIImageView *imgVassoura;
 
 
 @end
