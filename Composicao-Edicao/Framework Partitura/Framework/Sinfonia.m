@@ -133,7 +133,6 @@
     PartituraSinfonia *partitura = [self.listaSoundBank objectAtIndex:auxListaSoundBank-1];
     
     partitura.instrumento = [[DataBaseInstrumento sharedManager]retornaInstrumento:nomeInstrumentoPlist];
-    
     [partitura.soundBank setSoundBank:partitura.instrumento.nomeInstrumento];
     
     partitura.auxIndiceNotas = 0;

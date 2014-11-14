@@ -474,12 +474,12 @@
 
 - (IBAction)btnTambor:(id)sender {
     [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
-     self.nomeInstrumento = @"Tambor";
+     self.nomeInstrumento = @"TamborBongo";
 }
 
 - (IBAction)btnOrgao:(id)sender {
     [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
-     self.nomeInstrumento = @"--";
+     self.nomeInstrumento = @"Telefone";
 }
 
 
