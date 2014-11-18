@@ -494,19 +494,93 @@
     self.nomeInstrumento = @"Xilofone";
 }
 
-
 - (IBAction)btnSaxfone:(id)sender {
     [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
-     self.nomeInstrumento = @"Saxfone";
+    self.nomeInstrumento = @"Saxfone";
+}
+
+
+//////////////////////////////////////////////////////
+
+
+- (IBAction)btnAcordiao:(id)sender {
+    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    self.nomeInstrumento = @"Acordiao";
+}
+
+- (IBAction)btnClarinete:(id)sender {
+    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    self.nomeInstrumento = @"Clarinete";
+}
+
+- (IBAction)btnCrystal:(id)sender {
+    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    self.nomeInstrumento = @"Crystal";
+}
+
+- (IBAction)btnFlautaIndio:(id)sender {
+    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    self.nomeInstrumento = @"FlautaIndio";
 }
 
 
 
-/////////////////////////////////////////////////////
-
-- (IBAction)btnOrgao:(id)sender {
+- (IBAction)btnHarpa:(id)sender {
     [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
-    self.nomeInstrumento = @"Orgao";
+    self.nomeInstrumento = @"Harpa";
+}
+
+- (IBAction)btnHit:(id)sender {
+    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    self.nomeInstrumento = @"Hit";
+}
+
+
+
+- (IBAction)btnOcarina:(id)sender {
+    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    self.nomeInstrumento = @"Ocarina";
+}
+
+- (IBAction)btnPassaro:(id)sender {
+    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    self.nomeInstrumento = @"Passaro";
+}
+
+- (IBAction)btnPianoIgreja:(id)sender {
+    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    self.nomeInstrumento = @"PianoIgreja";
+}
+
+- (IBAction)btnTecnologico:(id)sender {
+    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    self.nomeInstrumento = @"Tecnologico";
+}
+
+- (IBAction)btnShamisen:(id)sender {
+    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    self.nomeInstrumento = @"Shamisen";
+}
+
+- (IBAction)btnPanela:(id)sender {
+    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    self.nomeInstrumento = @"Panela";
+}
+
+- (IBAction)bntSino:(id)sender {
+    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    self.nomeInstrumento = @"Sino";
+}
+
+- (IBAction)btnVioloncelo:(id)sender {
+    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    self.nomeInstrumento = @"Violoncelo";
+}
+
+/////
+- (IBAction)btnGaita:(id)sender {
+    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    self.nomeInstrumento = @"Gaita";
 }
 
 - (IBAction)btnBanjo:(id)sender {

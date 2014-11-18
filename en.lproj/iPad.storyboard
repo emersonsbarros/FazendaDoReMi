@@ -106,31 +106,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKw-cg-Tct">
-                                <rect key="frame" x="751" y="281" width="149" height="118"/>
-                                <state key="normal" title="Edicao">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MenuCatavento.png" translatesAutoresizingMaskIntoConstraints="NO" id="GAW-0A-HSQ">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="catavento.png" translatesAutoresizingMaskIntoConstraints="NO" id="n9k-SQ-zTU">
+                                <rect key="frame" x="15" y="271" width="197" height="195"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="catavento.png" translatesAutoresizingMaskIntoConstraints="NO" id="KfI-i6-Ba6">
+                                <rect key="frame" x="813" y="271" width="197" height="195"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="catavento.png" translatesAutoresizingMaskIntoConstraints="NO" id="HHZ-Mr-pdl">
+                                <rect key="frame" x="565" y="271" width="197" height="195"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="catavento.png" translatesAutoresizingMaskIntoConstraints="NO" id="3ZZ-jp-Wxq">
+                                <rect key="frame" x="302" y="271" width="197" height="195"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPf-az-RkT">
+                                <rect key="frame" x="883" y="333" width="78" height="78"/>
+                                <state key="normal" image="btnpianoze.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fc7-hy-kdh" kind="push" id="jKa-Ed-e85"/>
+                                    <segue destination="hJd-UK-P8D" kind="push" id="Px0-Hv-o6F"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gW-Ig-slk">
-                                <rect key="frame" x="731" y="481" width="169" height="147"/>
-                                <state key="normal" title="piano">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gW-Ig-slk">
+                                <rect key="frame" x="80" y="333" width="78" height="78"/>
+                                <state key="normal" image="btnpiano.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="T8i-dr-9jl" kind="push" id="30K-zy-Ma7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPf-az-RkT">
-                                <rect key="frame" x="546" y="103" width="169" height="147"/>
-                                <state key="normal" title="Teclado">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKw-cg-Tct">
+                                <rect key="frame" x="630" y="331" width="78" height="78"/>
+                                <state key="normal" image="btnpartitura.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hJd-UK-P8D" kind="push" id="Px0-Hv-o6F"/>
+                                    <segue destination="fc7-hy-kdh" kind="push" id="jKa-Ed-e85"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -139,6 +159,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="Nfe-b3-KTL"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="btnCatavento2" destination="n9k-SQ-zTU" id="ZIS-gl-ZJv"/>
+                        <outlet property="btnCatavento3" destination="HHZ-Mr-pdl" id="3SQ-E7-4t7"/>
+                        <outlet property="btnCatavento4" destination="3ZZ-jp-Wxq" id="Rh8-UP-X5E"/>
+                        <outlet property="imgCatavento1" destination="KfI-i6-Ba6" id="b3I-qk-qxe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WFs-5V-l0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -304,11 +330,16 @@
     </scenes>
     <resources>
         <image name=" " width="1100" height="821"/>
+        <image name="MenuCatavento.png" width="1024" height="768"/>
         <image name="background-arvore.png" width="1024" height="768"/>
         <image name="background-ceu.png" width="1024" height="768"/>
         <image name="botao-estudio.png" width="130" height="142"/>
         <image name="botao-jogos.png" width="124" height="141"/>
         <image name="botao-jornada.png" width="134" height="142"/>
+        <image name="btnpartitura.png" width="78" height="78"/>
+        <image name="btnpiano.png" width="78" height="78"/>
+        <image name="btnpianoze.png" width="78" height="78"/>
+        <image name="catavento.png" width="207" height="209"/>
         <image name="cercado.png" width="1024" height="225"/>
         <image name="fundoazul.png" width="1024" height="768"/>
         <image name="fundocasa.png" width="1024" height="768"/>

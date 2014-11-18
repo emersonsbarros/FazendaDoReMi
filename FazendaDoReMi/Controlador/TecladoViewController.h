@@ -85,11 +85,34 @@
 - (IBAction)btnSaxfone:(id)sender;
 - (IBAction)btnGuitarra:(id)sender;
 - (IBAction)btnTambor:(id)sender;
-- (IBAction)btnOrgao:(id)sender;
 - (IBAction)btnAgogo:(id)sender;
-- (IBAction)btnBanjo:(id)sender;
 - (IBAction)btnTrompete:(id)sender;
 - (IBAction)btnXilofone:(id)sender;
+
+
+
+- (IBAction)btnAcordiao:(id)sender;
+- (IBAction)btnClarinete:(id)sender;
+- (IBAction)btnCrystal:(id)sender;
+- (IBAction)btnFlautaIndio:(id)sender;
+- (IBAction)btnGaita:(id)sender;
+- (IBAction)btnHarpa:(id)sender;
+- (IBAction)btnHit:(id)sender;
+- (IBAction)btnBanjo:(id)sender;
+- (IBAction)btnOcarina:(id)sender;
+- (IBAction)btnPassaro:(id)sender;
+- (IBAction)btnPianoIgreja:(id)sender;
+- (IBAction)btnTecnologico:(id)sender;
+- (IBAction)btnShamisen:(id)sender;
+- (IBAction)btnPanela:(id)sender;
+- (IBAction)bntSino:(id)sender;
+- (IBAction)btnVioloncelo:(id)sender;
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>70000</string>
+	<string>Cello D2.caf</string>
+	<string>38</string>
+	<string>38</string>
+	<string>Cello G2.caf</string>
+	<string>45</string>
+	<string>45</string>
+	<string>Cello C3.caf</string>
+	<string>48</string>
+	<string>48</string>
+	<string>Cello D3.caf</string>
+	<string>52</string>
+	<string>52</string>
+	<string>Cello G3.caf</string>
+	<string>56</string>
+	<string>56</string>
+	<string>Cello C4.caf</string>
+	<string>63</string>
+	<string>63</string>
+	<string>Cello F4.caf</string>
+	<string>69</string>
+	<string>69</string>
+	<string>Cello B4.caf</string>
+	<string>73</string>
+	<string>73</string>
+	<string>Cello E5.caf</string>
+	<string>77</string>
+	<string>77</string>
+	<string>Cello A5.caf</string>
+	<string>92</string>
+	<string>92</string>
+</array>
+</plist>

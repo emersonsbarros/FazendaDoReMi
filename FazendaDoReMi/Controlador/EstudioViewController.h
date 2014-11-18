@@ -11,4 +11,13 @@
 @interface EstudioViewController : UIViewController
 
 
+
+@property (weak, nonatomic) IBOutlet UIImageView *imgCatavento1;
+@property (weak, nonatomic) IBOutlet UIImageView *btnCatavento2;
+@property (weak, nonatomic) IBOutlet UIImageView *btnCatavento3;
+@property (weak, nonatomic) IBOutlet UIImageView *btnCatavento4;
+
+
+
+
 @end
