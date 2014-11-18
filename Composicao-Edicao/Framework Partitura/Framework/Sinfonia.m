@@ -100,6 +100,11 @@
 /////////////////////////////// Metodos Tocar Notas ///////////////////////////////////////////
 
 -(void)trocaInstrumentoESoundBank{
+    
+    for(PartituraSinfonia *part in self.listaSoundBank){
+        [part.soundBank allNotesOff];
+    }
+    
     for(PartituraSinfonia *part in self.listaSoundBank){
         [self.listaAuxSoundBank addObject:part];
     }
@@ -239,6 +244,7 @@
          [ComponenteScrollEdicao sharedManager].contadorIndiceNota = [DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count-1;
         
      }
+    
 }
 
 ///////////////////////////////  Piano  ///////////////////////////////////////////////

@@ -78,6 +78,7 @@
 // Insttrumento
 @property NSString *nomeInstrumento;
 
+- (IBAction)btnTelefone:(id)sender;
 - (IBAction)btnPiano:(id)sender;
 - (IBAction)btnFlauta:(id)sender;
 - (IBAction)btnViolao:(id)sender;
@@ -85,6 +86,11 @@
 - (IBAction)btnGuitarra:(id)sender;
 - (IBAction)btnTambor:(id)sender;
 - (IBAction)btnOrgao:(id)sender;
+- (IBAction)btnAgogo:(id)sender;
+- (IBAction)btnBanjo:(id)sender;
+- (IBAction)btnTrompete:(id)sender;
+- (IBAction)btnXilofone:(id)sender;
+
 
 
 

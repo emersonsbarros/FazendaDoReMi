@@ -239,6 +239,11 @@
 		0BE4328D1A15324F00A5BFC1 /* TecladoLivreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4328C1A15324F00A5BFC1 /* TecladoLivreViewController.m */; };
 		3F0E879719DBA6F8003FF4EB /* JornadaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E879619DBA6F8003FF4EB /* JornadaViewController.m */; };
 		3F3EBFFE19F34A3E00BB221D /* piano2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F3EBFFD19F34A3E00BB221D /* piano2.png */; };
+		3F5D4D421A17E67200A33538 /* Xilofone.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D4D3D1A17E67200A33538 /* Xilofone.plist */; };
+		3F5D4D431A17E67200A33538 /* Xylo C7.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D4D3E1A17E67200A33538 /* Xylo C7.caf */; };
+		3F5D4D441A17E67200A33538 /* Xylo E4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D4D3F1A17E67200A33538 /* Xylo E4.caf */; };
+		3F5D4D451A17E67200A33538 /* Xylo E5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D4D401A17E67200A33538 /* Xylo E5.caf */; };
+		3F5D4D461A17E67200A33538 /* Xylo G#4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D4D411A17E67200A33538 /* Xylo G#4.caf */; };
 		3FB6F4F519DA659C0080057B /* botao12Pausa.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6F4C919DA659C0080057B /* botao12Pausa.png */; };
 		3FB6F4F619DA659C0080057B /* botao12Tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6F4CA19DA659C0080057B /* botao12Tempo.png */; };
 		3FB6F4F719DA659C0080057B /* botao1Pausa.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6F4CB19DA659C0080057B /* botao1Pausa.png */; };
@@ -346,6 +351,49 @@
 		3FC5D34D19DA61FD00348F51 /* PlayerPartituraEdicaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC5D34A19DA61FD00348F51 /* PlayerPartituraEdicaoViewController.xib */; };
 		3FCBCDDE19EB5C66008C15F8 /* GestureTapItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCBCDDD19EB5C66008C15F8 /* GestureTapItem.m */; };
 		3FDCC04E19EB0673003DC572 /* SomItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCC04D19EB0673003DC572 /* SomItem.m */; };
+		3FE14EFB1A16B4AD001BE8D7 /* Church Org C2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14EF51A16B4AD001BE8D7 /* Church Org C2.caf */; };
+		3FE14EFC1A16B4AD001BE8D7 /* Church Org C3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14EF61A16B4AD001BE8D7 /* Church Org C3.caf */; };
+		3FE14EFD1A16B4AD001BE8D7 /* Church Org C4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14EF71A16B4AD001BE8D7 /* Church Org C4.caf */; };
+		3FE14EFE1A16B4AD001BE8D7 /* Church Org C6.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14EF81A16B4AD001BE8D7 /* Church Org C6.caf */; };
+		3FE14EFF1A16B4AD001BE8D7 /* Church Org F6.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14EF91A16B4AD001BE8D7 /* Church Org F6.caf */; };
+		3FE14F001A16B4AD001BE8D7 /* Orgao.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14EFA1A16B4AD001BE8D7 /* Orgao.plist */; };
+		3FE14F041A16B7B6001BE8D7 /* Agogo Bell.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F021A16B7B6001BE8D7 /* Agogo Bell.caf */; };
+		3FE14F051A16B7B6001BE8D7 /* Agogo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F031A16B7B6001BE8D7 /* Agogo.plist */; };
+		3FE14F101A16B91B001BE8D7 /* Gtr HDist LPH - A31-1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F071A16B91B001BE8D7 /* Gtr HDist LPH - A31-1.caf */; };
+		3FE14F111A16B91B001BE8D7 /* Gtr HDist LPH - A31-2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F081A16B91B001BE8D7 /* Gtr HDist LPH - A31-2.caf */; };
+		3FE14F121A16B91B001BE8D7 /* Gtr HDist LPH - B21.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F091A16B91B001BE8D7 /* Gtr HDist LPH - B21.caf */; };
+		3FE14F131A16B91B001BE8D7 /* Gtr HDist LPH - B41.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F0A1A16B91B001BE8D7 /* Gtr HDist LPH - B41.caf */; };
+		3FE14F141A16B91B001BE8D7 /* Gtr HDist LPH - E11.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F0B1A16B91B001BE8D7 /* Gtr HDist LPH - E11.caf */; };
+		3FE14F151A16B91B001BE8D7 /* Gtr HDist LPH - E21.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F0C1A16B91B001BE8D7 /* Gtr HDist LPH - E21.caf */; };
+		3FE14F161A16B91B001BE8D7 /* Gtr HDist LPH - E41.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F0D1A16B91B001BE8D7 /* Gtr HDist LPH - E41.caf */; };
+		3FE14F171A16B91B001BE8D7 /* Gtr HDist LPH - G41.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F0E1A16B91B001BE8D7 /* Gtr HDist LPH - G41.caf */; };
+		3FE14F181A16B91B001BE8D7 /* Guitarra.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F0F1A16B91B001BE8D7 /* Guitarra.plist */; };
+		3FE14F231A16BB15001BE8D7 /* A-mid.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F1A1A16BB15001BE8D7 /* A-mid.caf */; };
+		3FE14F241A16BB15001BE8D7 /* Bb-low.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F1B1A16BB15001BE8D7 /* Bb-low.caf */; };
+		3FE14F251A16BB15001BE8D7 /* C-midhigh.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F1C1A16BB15001BE8D7 /* C-midhigh.caf */; };
+		3FE14F261A16BB15001BE8D7 /* D-low.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F1D1A16BB15001BE8D7 /* D-low.caf */; };
+		3FE14F271A16BB15001BE8D7 /* Eb-low.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F1E1A16BB15001BE8D7 /* Eb-low.caf */; };
+		3FE14F281A16BB15001BE8D7 /* F-high.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F1F1A16BB15001BE8D7 /* F-high.caf */; };
+		3FE14F291A16BB15001BE8D7 /* F-mid.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F201A16BB15001BE8D7 /* F-mid.caf */; };
+		3FE14F2A1A16BB15001BE8D7 /* G-low.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F211A16BB15001BE8D7 /* G-low.caf */; };
+		3FE14F2B1A16BB15001BE8D7 /* Saxfone.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F221A16BB15001BE8D7 /* Saxfone.plist */; };
+		3FE14F361A16C85A001BE8D7 /* Banjo B21.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F2D1A16C85A001BE8D7 /* Banjo B21.caf */; };
+		3FE14F371A16C85A001BE8D7 /* Banjo B22.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F2E1A16C85A001BE8D7 /* Banjo B22.caf */; };
+		3FE14F381A16C85A001BE8D7 /* Banjo F31.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F2F1A16C85A001BE8D7 /* Banjo F31.caf */; };
+		3FE14F391A16C85A001BE8D7 /* Banjo F32.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F301A16C85A001BE8D7 /* Banjo F32.caf */; };
+		3FE14F3A1A16C85A001BE8D7 /* Banjo F33.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F311A16C85A001BE8D7 /* Banjo F33.caf */; };
+		3FE14F3B1A16C85A001BE8D7 /* Banjo F34.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F321A16C85A001BE8D7 /* Banjo F34.caf */; };
+		3FE14F3C1A16C85A001BE8D7 /* Banjo F5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F331A16C85A001BE8D7 /* Banjo F5.caf */; };
+		3FE14F3D1A16C85A001BE8D7 /* Banjo F6.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F341A16C85A001BE8D7 /* Banjo F6.caf */; };
+		3FE14F3E1A16C85A001BE8D7 /* Banjo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F351A16C85A001BE8D7 /* Banjo.plist */; };
+		3FE14F481A16CE83001BE8D7 /* Trompete.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F401A16CE83001BE8D7 /* Trompete.plist */; };
+		3FE14F491A16CE83001BE8D7 /* TrumpA#5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F411A16CE83001BE8D7 /* TrumpA#5.caf */; };
+		3FE14F4A1A16CE83001BE8D7 /* TrumpC#6.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F421A16CE83001BE8D7 /* TrumpC#6.caf */; };
+		3FE14F4B1A16CE83001BE8D7 /* TrumpC5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F431A16CE83001BE8D7 /* TrumpC5.caf */; };
+		3FE14F4C1A16CE83001BE8D7 /* TrumpD#5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F441A16CE83001BE8D7 /* TrumpD#5.caf */; };
+		3FE14F4D1A16CE83001BE8D7 /* TrumpD#6.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F451A16CE83001BE8D7 /* TrumpD#6.caf */; };
+		3FE14F4E1A16CE83001BE8D7 /* TrumpG5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F461A16CE83001BE8D7 /* TrumpG5.caf */; };
+		3FE14F4F1A16CE83001BE8D7 /* TrumpG6.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F471A16CE83001BE8D7 /* TrumpG6.caf */; };
 		3FEF299119E8BCDC00C01AB5 /* somPiano.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FEF298E19E8BCDC00C01AB5 /* somPiano.wav */; };
 		3FF8CBF919F9EC5A001A40F8 /* PartituraComposta.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8CBF819F9EC5A001A40F8 /* PartituraComposta.m */; };
 		A811633B19D229CB00506D94 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = A811633A19D229CB00506D94 /* Item.m */; };
@@ -644,6 +692,11 @@
 		3F0E879519DBA6F8003FF4EB /* JornadaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JornadaViewController.h; sourceTree = "<group>"; };
 		3F0E879619DBA6F8003FF4EB /* JornadaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JornadaViewController.m; sourceTree = "<group>"; };
 		3F3EBFFD19F34A3E00BB221D /* piano2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = piano2.png; sourceTree = "<group>"; };
+		3F5D4D3D1A17E67200A33538 /* Xilofone.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Xilofone.plist; sourceTree = "<group>"; };
+		3F5D4D3E1A17E67200A33538 /* Xylo C7.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Xylo C7.caf"; sourceTree = "<group>"; };
+		3F5D4D3F1A17E67200A33538 /* Xylo E4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Xylo E4.caf"; sourceTree = "<group>"; };
+		3F5D4D401A17E67200A33538 /* Xylo E5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Xylo E5.caf"; sourceTree = "<group>"; };
+		3F5D4D411A17E67200A33538 /* Xylo G#4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Xylo G#4.caf"; sourceTree = "<group>"; };
 		3FB6F4C919DA659C0080057B /* botao12Pausa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao12Pausa.png; sourceTree = "<group>"; };
 		3FB6F4CA19DA659C0080057B /* botao12Tempo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao12Tempo.png; sourceTree = "<group>"; };
 		3FB6F4CB19DA659C0080057B /* botao1Pausa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao1Pausa.png; sourceTree = "<group>"; };
@@ -772,6 +825,49 @@
 		3FCBCDDD19EB5C66008C15F8 /* GestureTapItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureTapItem.m; sourceTree = "<group>"; };
 		3FDCC04C19EB0673003DC572 /* SomItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SomItem.h; sourceTree = "<group>"; };
 		3FDCC04D19EB0673003DC572 /* SomItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SomItem.m; sourceTree = "<group>"; };
+		3FE14EF51A16B4AD001BE8D7 /* Church Org C2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Church Org C2.caf"; sourceTree = "<group>"; };
+		3FE14EF61A16B4AD001BE8D7 /* Church Org C3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Church Org C3.caf"; sourceTree = "<group>"; };
+		3FE14EF71A16B4AD001BE8D7 /* Church Org C4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Church Org C4.caf"; sourceTree = "<group>"; };
+		3FE14EF81A16B4AD001BE8D7 /* Church Org C6.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Church Org C6.caf"; sourceTree = "<group>"; };
+		3FE14EF91A16B4AD001BE8D7 /* Church Org F6.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Church Org F6.caf"; sourceTree = "<group>"; };
+		3FE14EFA1A16B4AD001BE8D7 /* Orgao.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Orgao.plist; sourceTree = "<group>"; };
+		3FE14F021A16B7B6001BE8D7 /* Agogo Bell.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Agogo Bell.caf"; sourceTree = "<group>"; };
+		3FE14F031A16B7B6001BE8D7 /* Agogo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Agogo.plist; sourceTree = "<group>"; };
+		3FE14F071A16B91B001BE8D7 /* Gtr HDist LPH - A31-1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gtr HDist LPH - A31-1.caf"; sourceTree = "<group>"; };
+		3FE14F081A16B91B001BE8D7 /* Gtr HDist LPH - A31-2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gtr HDist LPH - A31-2.caf"; sourceTree = "<group>"; };
+		3FE14F091A16B91B001BE8D7 /* Gtr HDist LPH - B21.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gtr HDist LPH - B21.caf"; sourceTree = "<group>"; };
+		3FE14F0A1A16B91B001BE8D7 /* Gtr HDist LPH - B41.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gtr HDist LPH - B41.caf"; sourceTree = "<group>"; };
+		3FE14F0B1A16B91B001BE8D7 /* Gtr HDist LPH - E11.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gtr HDist LPH - E11.caf"; sourceTree = "<group>"; };
+		3FE14F0C1A16B91B001BE8D7 /* Gtr HDist LPH - E21.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gtr HDist LPH - E21.caf"; sourceTree = "<group>"; };
+		3FE14F0D1A16B91B001BE8D7 /* Gtr HDist LPH - E41.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gtr HDist LPH - E41.caf"; sourceTree = "<group>"; };
+		3FE14F0E1A16B91B001BE8D7 /* Gtr HDist LPH - G41.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gtr HDist LPH - G41.caf"; sourceTree = "<group>"; };
+		3FE14F0F1A16B91B001BE8D7 /* Guitarra.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Guitarra.plist; sourceTree = "<group>"; };
+		3FE14F1A1A16BB15001BE8D7 /* A-mid.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "A-mid.caf"; sourceTree = "<group>"; };
+		3FE14F1B1A16BB15001BE8D7 /* Bb-low.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bb-low.caf"; sourceTree = "<group>"; };
+		3FE14F1C1A16BB15001BE8D7 /* C-midhigh.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "C-midhigh.caf"; sourceTree = "<group>"; };
+		3FE14F1D1A16BB15001BE8D7 /* D-low.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-low.caf"; sourceTree = "<group>"; };
+		3FE14F1E1A16BB15001BE8D7 /* Eb-low.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Eb-low.caf"; sourceTree = "<group>"; };
+		3FE14F1F1A16BB15001BE8D7 /* F-high.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "F-high.caf"; sourceTree = "<group>"; };
+		3FE14F201A16BB15001BE8D7 /* F-mid.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "F-mid.caf"; sourceTree = "<group>"; };
+		3FE14F211A16BB15001BE8D7 /* G-low.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "G-low.caf"; sourceTree = "<group>"; };
+		3FE14F221A16BB15001BE8D7 /* Saxfone.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Saxfone.plist; sourceTree = "<group>"; };
+		3FE14F2D1A16C85A001BE8D7 /* Banjo B21.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Banjo B21.caf"; sourceTree = "<group>"; };
+		3FE14F2E1A16C85A001BE8D7 /* Banjo B22.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Banjo B22.caf"; sourceTree = "<group>"; };
+		3FE14F2F1A16C85A001BE8D7 /* Banjo F31.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Banjo F31.caf"; sourceTree = "<group>"; };
+		3FE14F301A16C85A001BE8D7 /* Banjo F32.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Banjo F32.caf"; sourceTree = "<group>"; };
+		3FE14F311A16C85A001BE8D7 /* Banjo F33.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Banjo F33.caf"; sourceTree = "<group>"; };
+		3FE14F321A16C85A001BE8D7 /* Banjo F34.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Banjo F34.caf"; sourceTree = "<group>"; };
+		3FE14F331A16C85A001BE8D7 /* Banjo F5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Banjo F5.caf"; sourceTree = "<group>"; };
+		3FE14F341A16C85A001BE8D7 /* Banjo F6.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Banjo F6.caf"; sourceTree = "<group>"; };
+		3FE14F351A16C85A001BE8D7 /* Banjo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Banjo.plist; sourceTree = "<group>"; };
+		3FE14F401A16CE83001BE8D7 /* Trompete.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Trompete.plist; sourceTree = "<group>"; };
+		3FE14F411A16CE83001BE8D7 /* TrumpA#5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TrumpA#5.caf"; sourceTree = "<group>"; };
+		3FE14F421A16CE83001BE8D7 /* TrumpC#6.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TrumpC#6.caf"; sourceTree = "<group>"; };
+		3FE14F431A16CE83001BE8D7 /* TrumpC5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TrumpC5.caf; sourceTree = "<group>"; };
+		3FE14F441A16CE83001BE8D7 /* TrumpD#5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TrumpD#5.caf"; sourceTree = "<group>"; };
+		3FE14F451A16CE83001BE8D7 /* TrumpD#6.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TrumpD#6.caf"; sourceTree = "<group>"; };
+		3FE14F461A16CE83001BE8D7 /* TrumpG5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TrumpG5.caf; sourceTree = "<group>"; };
+		3FE14F471A16CE83001BE8D7 /* TrumpG6.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TrumpG6.caf; sourceTree = "<group>"; };
 		3FEF298E19E8BCDC00C01AB5 /* somPiano.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = somPiano.wav; sourceTree = "<group>"; };
 		3FF8CBF719F9EC5A001A40F8 /* PartituraSinfonia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartituraSinfonia.h; sourceTree = "<group>"; };
 		3FF8CBF819F9EC5A001A40F8 /* PartituraComposta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartituraComposta.m; sourceTree = "<group>"; };
@@ -1379,6 +1475,18 @@
 			name = Componentes;
 			sourceTree = "<group>";
 		};
+		3F5D4D3C1A17E67200A33538 /* Xilofone */ = {
+			isa = PBXGroup;
+			children = (
+				3F5D4D3D1A17E67200A33538 /* Xilofone.plist */,
+				3F5D4D3E1A17E67200A33538 /* Xylo C7.caf */,
+				3F5D4D3F1A17E67200A33538 /* Xylo E4.caf */,
+				3F5D4D401A17E67200A33538 /* Xylo E5.caf */,
+				3F5D4D411A17E67200A33538 /* Xylo G#4.caf */,
+			);
+			path = Xilofone;
+			sourceTree = "<group>";
+		};
 		3FB6F4C719DA659C0080057B /* TemaNotaFazenda */ = {
 			isa = PBXGroup;
 			children = (
@@ -1637,6 +1745,13 @@
 		3FC5D32119DA5C3200348F51 /* Instrumentos */ = {
 			isa = PBXGroup;
 			children = (
+				3FE14F3F1A16CE83001BE8D7 /* Trompete */,
+				3F5D4D3C1A17E67200A33538 /* Xilofone */,
+				3FE14F2C1A16C85A001BE8D7 /* Banjo */,
+				3FE14F191A16BB15001BE8D7 /* Saxfone */,
+				3FE14F061A16B91B001BE8D7 /* Guitarra */,
+				3FE14F011A16B7B6001BE8D7 /* Agogo */,
+				3FE14EF41A16B4AD001BE8D7 /* Orgao */,
 				0BC4BC1A1A16948D00D03E1F /* Telefone */,
 				0BC4BB8D1A16933900D03E1F /* Bongo */,
 				3FB6F52219DA67E60080057B /* Flauta */,
@@ -1684,6 +1799,91 @@
 				0BE432901A15357700A5BFC1 /* Piano */,
 			);
 			name = Instrumento;
+			sourceTree = "<group>";
+		};
+		3FE14EF41A16B4AD001BE8D7 /* Orgao */ = {
+			isa = PBXGroup;
+			children = (
+				3FE14EF51A16B4AD001BE8D7 /* Church Org C2.caf */,
+				3FE14EF61A16B4AD001BE8D7 /* Church Org C3.caf */,
+				3FE14EF71A16B4AD001BE8D7 /* Church Org C4.caf */,
+				3FE14EF81A16B4AD001BE8D7 /* Church Org C6.caf */,
+				3FE14EF91A16B4AD001BE8D7 /* Church Org F6.caf */,
+				3FE14EFA1A16B4AD001BE8D7 /* Orgao.plist */,
+			);
+			path = Orgao;
+			sourceTree = "<group>";
+		};
+		3FE14F011A16B7B6001BE8D7 /* Agogo */ = {
+			isa = PBXGroup;
+			children = (
+				3FE14F021A16B7B6001BE8D7 /* Agogo Bell.caf */,
+				3FE14F031A16B7B6001BE8D7 /* Agogo.plist */,
+			);
+			path = Agogo;
+			sourceTree = "<group>";
+		};
+		3FE14F061A16B91B001BE8D7 /* Guitarra */ = {
+			isa = PBXGroup;
+			children = (
+				3FE14F071A16B91B001BE8D7 /* Gtr HDist LPH - A31-1.caf */,
+				3FE14F081A16B91B001BE8D7 /* Gtr HDist LPH - A31-2.caf */,
+				3FE14F091A16B91B001BE8D7 /* Gtr HDist LPH - B21.caf */,
+				3FE14F0A1A16B91B001BE8D7 /* Gtr HDist LPH - B41.caf */,
+				3FE14F0B1A16B91B001BE8D7 /* Gtr HDist LPH - E11.caf */,
+				3FE14F0C1A16B91B001BE8D7 /* Gtr HDist LPH - E21.caf */,
+				3FE14F0D1A16B91B001BE8D7 /* Gtr HDist LPH - E41.caf */,
+				3FE14F0E1A16B91B001BE8D7 /* Gtr HDist LPH - G41.caf */,
+				3FE14F0F1A16B91B001BE8D7 /* Guitarra.plist */,
+			);
+			path = Guitarra;
+			sourceTree = "<group>";
+		};
+		3FE14F191A16BB15001BE8D7 /* Saxfone */ = {
+			isa = PBXGroup;
+			children = (
+				3FE14F1A1A16BB15001BE8D7 /* A-mid.caf */,
+				3FE14F1B1A16BB15001BE8D7 /* Bb-low.caf */,
+				3FE14F1C1A16BB15001BE8D7 /* C-midhigh.caf */,
+				3FE14F1D1A16BB15001BE8D7 /* D-low.caf */,
+				3FE14F1E1A16BB15001BE8D7 /* Eb-low.caf */,
+				3FE14F1F1A16BB15001BE8D7 /* F-high.caf */,
+				3FE14F201A16BB15001BE8D7 /* F-mid.caf */,
+				3FE14F211A16BB15001BE8D7 /* G-low.caf */,
+				3FE14F221A16BB15001BE8D7 /* Saxfone.plist */,
+			);
+			path = Saxfone;
+			sourceTree = "<group>";
+		};
+		3FE14F2C1A16C85A001BE8D7 /* Banjo */ = {
+			isa = PBXGroup;
+			children = (
+				3FE14F2D1A16C85A001BE8D7 /* Banjo B21.caf */,
+				3FE14F2E1A16C85A001BE8D7 /* Banjo B22.caf */,
+				3FE14F2F1A16C85A001BE8D7 /* Banjo F31.caf */,
+				3FE14F301A16C85A001BE8D7 /* Banjo F32.caf */,
+				3FE14F311A16C85A001BE8D7 /* Banjo F33.caf */,
+				3FE14F321A16C85A001BE8D7 /* Banjo F34.caf */,
+				3FE14F331A16C85A001BE8D7 /* Banjo F5.caf */,
+				3FE14F341A16C85A001BE8D7 /* Banjo F6.caf */,
+				3FE14F351A16C85A001BE8D7 /* Banjo.plist */,
+			);
+			path = Banjo;
+			sourceTree = "<group>";
+		};
+		3FE14F3F1A16CE83001BE8D7 /* Trompete */ = {
+			isa = PBXGroup;
+			children = (
+				3FE14F401A16CE83001BE8D7 /* Trompete.plist */,
+				3FE14F411A16CE83001BE8D7 /* TrumpA#5.caf */,
+				3FE14F421A16CE83001BE8D7 /* TrumpC#6.caf */,
+				3FE14F431A16CE83001BE8D7 /* TrumpC5.caf */,
+				3FE14F441A16CE83001BE8D7 /* TrumpD#5.caf */,
+				3FE14F451A16CE83001BE8D7 /* TrumpD#6.caf */,
+				3FE14F461A16CE83001BE8D7 /* TrumpG5.caf */,
+				3FE14F471A16CE83001BE8D7 /* TrumpG6.caf */,
+			);
+			path = Trompete;
 			sourceTree = "<group>";
 		};
 		A811634419D22C5300506D94 /* Item */ = {
@@ -1929,6 +2129,8 @@
 			files = (
 				0BC4BBF51A16939800D03E1F /* bongo37.caf in Resources */,
 				0B2FFB1419ED9A7600FD752E /* MANUAL DE USO.rtf in Resources */,
+				3FE14F3D1A16C85A001BE8D7 /* Banjo F6.caf in Resources */,
+				3FE14F4C1A16CE83001BE8D7 /* TrumpD#5.caf in Resources */,
 				3FB6F57719DA67E60080057B /* P200 Piano F#4.caf in Resources */,
 				0BAFB14219F1ABBB00DCF54F /* ZECAO40.png in Resources */,
 				0BAFB10D19F1ABBB00DCF54F /* background-arvore.png in Resources */,
@@ -1942,6 +2144,8 @@
 				0BAFB14519F1ABBB00DCF54F /* ZECAO43.png in Resources */,
 				0BAFB10F19F1ABBB00DCF54F /* botao-estudio.png in Resources */,
 				3FB6F56519DA67E60080057B /* 6b - D.caf in Resources */,
+				3FE14EFB1A16B4AD001BE8D7 /* Church Org C2.caf in Resources */,
+				3FE14F101A16B91B001BE8D7 /* Gtr HDist LPH - A31-1.caf in Resources */,
 				3FB6F55D19DA67E60080057B /* mib3.caf in Resources */,
 				0BC4BBFD1A16939800D03E1F /* bongo45.caf in Resources */,
 				0BAFB12F19F1ABBB00DCF54F /* ZECAO21.png in Resources */,
@@ -1950,11 +2154,13 @@
 				3FB6F57919DA67E60080057B /* P200 Piano F#6.caf in Resources */,
 				0BAFB12919F1ABBB00DCF54F /* ZECAO15.png in Resources */,
 				3FB6F56619DA67E60080057B /* 6c - G.caf in Resources */,
+				3FE14F4E1A16CE83001BE8D7 /* TrumpG5.caf in Resources */,
 				0B1D2A8619E46B81003CA4C4 /* BotaoVoltarMapaViewController.xib in Resources */,
 				0BC4BC051A16939800D03E1F /* bongo53.caf in Resources */,
 				0BAFB0FE19F1ABBB00DCF54F /* Vanilla.otf in Resources */,
 				3FB6F55419DA67E60080057B /* fad1.caf in Resources */,
 				0BAFB15019F1ABBB00DCF54F /* ZECAO54.png in Resources */,
+				3FE14F141A16B91B001BE8D7 /* Gtr HDist LPH - E11.caf in Resources */,
 				0BAFB14C19F1ABBB00DCF54F /* ZECAO50.png in Resources */,
 				0BAFB15219F1ABBB00DCF54F /* ZECAO56.png in Resources */,
 				0BAFB15319F1ABBB00DCF54F /* ZECAO57.png in Resources */,
@@ -1974,12 +2180,15 @@
 				0BC607AF1A1294BC007E9456 /* btnStop.png in Resources */,
 				3FB6F56219DA67E60080057B /* 5 - B.caf in Resources */,
 				3FB6F55519DA67E60080057B /* fad2.caf in Resources */,
+				3FE14F3E1A16C85A001BE8D7 /* Banjo.plist in Resources */,
 				0BAFB14A19F1ABBB00DCF54F /* ZECAO48.png in Resources */,
 				0BAFB16019F1ABBB00DCF54F /* ZECAO70.png in Resources */,
 				0BC4BBF31A16939800D03E1F /* bongo35.caf in Resources */,
+				3F5D4D461A17E67200A33538 /* Xylo G#4.caf in Resources */,
 				3FC5D34D19DA61FD00348F51 /* PlayerPartituraEdicaoViewController.xib in Resources */,
 				0BC4BBDF1A16939800D03E1F /* bongo15.caf in Resources */,
 				0BC4BC201A1696D400D03E1F /* TamborBongo.plist in Resources */,
+				3FE14EFC1A16B4AD001BE8D7 /* Church Org C3.caf in Resources */,
 				0BC4BBD11A16939800D03E1F /* bongo01.caf in Resources */,
 				0BAFB15919F1ABBB00DCF54F /* ZECAO63.png in Resources */,
 				0BAFB15519F1ABBB00DCF54F /* ZECAO59.png in Resources */,
@@ -1990,6 +2199,7 @@
 				0BC4BC131A16939800D03E1F /* bongo67.caf in Resources */,
 				0B7C6A651A07EEDD007802A9 /* sustenidoRe.png in Resources */,
 				3FB6F55C19DA67E60080057B /* mib2.caf in Resources */,
+				3F5D4D431A17E67200A33538 /* Xylo C7.caf in Resources */,
 				0BAFB12119F1ABBB00DCF54F /* ZECAO07.png in Resources */,
 				0BAFB13719F1ABBB00DCF54F /* ZECAO29.png in Resources */,
 				0B7C6A671A07EEDD007802A9 /* sustenidoSol.png in Resources */,
@@ -2028,7 +2238,10 @@
 				0BAFB13519F1ABBB00DCF54F /* ZECAO27.png in Resources */,
 				0BC4BBD51A16939800D03E1F /* bongo05.caf in Resources */,
 				3FB6F51519DA659C0080057B /* Sol4Tempos.png in Resources */,
+				3FE14F3B1A16C85A001BE8D7 /* Banjo F34.caf in Resources */,
+				3FE14F001A16B4AD001BE8D7 /* Orgao.plist in Resources */,
 				0BC4BBFA1A16939800D03E1F /* bongo42.caf in Resources */,
+				3FE14F151A16B91B001BE8D7 /* Gtr HDist LPH - E21.caf in Resources */,
 				0BAFB13C19F1ABBB00DCF54F /* ZECAO34.png in Resources */,
 				0B7C6A591A07EE53007802A9 /* botaoSustenido.png in Resources */,
 				3FB6F51419DA659C0080057B /* Sitempo.png in Resources */,
@@ -2038,9 +2251,11 @@
 				3FB6F50919DA659C0080057B /* La4Tempos.png in Resources */,
 				3FB6F56F19DA67E60080057B /* P200 Piano D#8.caf in Resources */,
 				0BAFB11519F1ABBB00DCF54F /* nuvem2.png in Resources */,
+				3FE14F281A16BB15001BE8D7 /* F-high.caf in Resources */,
 				0BAFB14019F1ABBB00DCF54F /* ZECAO38.png in Resources */,
 				0BC4BBD71A16939800D03E1F /* bongo07.caf in Resources */,
 				0BAFB10819F1ABBB00DCF54F /* saxfone.png in Resources */,
+				3FE14F271A16BB15001BE8D7 /* Eb-low.caf in Resources */,
 				0BAFB10719F1ABBB00DCF54F /* sala_Timbre.png in Resources */,
 				0BC4BBF41A16939800D03E1F /* bongo36.caf in Resources */,
 				0BAFB16319F1ABBB00DCF54F /* ZECAO73.png in Resources */,
@@ -2052,6 +2267,7 @@
 				3FB6F4F619DA659C0080057B /* botao12Tempo.png in Resources */,
 				0BC4BBE01A16939800D03E1F /* bongo16.caf in Resources */,
 				3FB6F50619DA659C0080057B /* FaMeiotempo.png in Resources */,
+				3FE14F181A16B91B001BE8D7 /* Guitarra.plist in Resources */,
 				0B7C6A641A07EEDD007802A9 /* sustenidoMi.png in Resources */,
 				3FB6F56919DA67E60080057B /* P200 Piano A#3.caf in Resources */,
 				0BC4BBF21A16939800D03E1F /* bongo34.caf in Resources */,
@@ -2061,33 +2277,45 @@
 				3FB6F55B19DA67E60080057B /* mib1.caf in Resources */,
 				0BAFB11019F1ABBB00DCF54F /* botao-jogos.png in Resources */,
 				0B7C6A661A07EEDD007802A9 /* sustenidoSi.png in Resources */,
+				3FE14F241A16BB15001BE8D7 /* Bb-low.caf in Resources */,
 				3FB6F50F19DA659C0080057B /* Re4tempos.png in Resources */,
+				3FE14F371A16C85A001BE8D7 /* Banjo B22.caf in Resources */,
 				0BB81EAC19F5A134001F868D /* AulaSomEx2ViewController.xib in Resources */,
 				3FB6F50019DA659C0080057B /* fundocasa.png in Resources */,
+				3FE14F051A16B7B6001BE8D7 /* Agogo.plist in Resources */,
 				3FB6F57A19DA67E60080057B /* P200 Piano F#7.caf in Resources */,
+				3FE14F2B1A16BB15001BE8D7 /* Saxfone.plist in Resources */,
 				3FB6F51719DA659C0080057B /* Soltempo.png in Resources */,
 				0BAFB13819F1ABBB00DCF54F /* ZECAO30.png in Resources */,
+				3FE14F361A16C85A001BE8D7 /* Banjo B21.caf in Resources */,
 				0BE432851A1524DF00A5BFC1 /* vassoura-08.png in Resources */,
 				0BC4BC101A16939800D03E1F /* bongo64.caf in Resources */,
 				0BAFB12819F1ABBB00DCF54F /* ZECAO14.png in Resources */,
+				3FE14F4D1A16CE83001BE8D7 /* TrumpD#6.caf in Resources */,
 				0BAFB12619F1ABBB00DCF54F /* ZECAO12.png in Resources */,
 				3FB6F57B19DA67E60080057B /* P200 Piano G#9.caf in Resources */,
+				3FE14F131A16B91B001BE8D7 /* Gtr HDist LPH - B41.caf in Resources */,
 				0BAFB14D19F1ABBB00DCF54F /* ZECAO51.png in Resources */,
 				3FB6F50519DA659C0080057B /* fa4Tempos.png in Resources */,
 				3FB6F57219DA67E60080057B /* P200 Piano D4.caf in Resources */,
 				3FB6F50319DA659C0080057B /* DoMeiotempo.png in Resources */,
 				0B6DCCA519DB2D8D00C166E3 /* botaoviolao.png in Resources */,
+				3FE14F381A16C85A001BE8D7 /* Banjo F31.caf in Resources */,
+				3F5D4D441A17E67200A33538 /* Xylo E4.caf in Resources */,
 				0BC4BBE11A16939800D03E1F /* bongo17.caf in Resources */,
 				0BAFB14F19F1ABBB00DCF54F /* ZECAO53.png in Resources */,
 				3FB6F4F719DA659C0080057B /* botao1Pausa.png in Resources */,
 				3FB6F57419DA67E60080057B /* P200 Piano D6.caf in Resources */,
+				3FE14F171A16B91B001BE8D7 /* Gtr HDist LPH - G41.caf in Resources */,
 				0BC4BBE81A16939800D03E1F /* bongo24.caf in Resources */,
 				0BAFB15619F1ABBB00DCF54F /* ZECAO60.png in Resources */,
 				0BAFB15A19F1ABBB00DCF54F /* ZECAO64.png in Resources */,
 				3FB6F4FC19DA659C0080057B /* botao4tempos.png in Resources */,
 				0BAFB15819F1ABBB00DCF54F /* ZECAO62.png in Resources */,
+				3FE14F4A1A16CE83001BE8D7 /* TrumpC#6.caf in Resources */,
 				3FB6F4F819DA659C0080057B /* botao1Tempo.png in Resources */,
 				3FB6F50D19DA659C0080057B /* MiMeiotempo.png in Resources */,
+				3FE14F3C1A16C85A001BE8D7 /* Banjo F5.caf in Resources */,
 				0BAFB14919F1ABBB00DCF54F /* ZECAO47.png in Resources */,
 				3FB6F51219DA659C0080057B /* Si4Tempos.png in Resources */,
 				0BAFB10C19F1ABBB00DCF54F /* xilofone.png in Resources */,
@@ -2110,6 +2338,7 @@
 				0BC4BBE61A16939800D03E1F /* bongo22.caf in Resources */,
 				0BAFB11C19F1ABBB00DCF54F /* ZECAO02.png in Resources */,
 				0BC4BBEB1A16939800D03E1F /* bongo27.caf in Resources */,
+				3FE14F4F1A16CE83001BE8D7 /* TrumpG6.caf in Resources */,
 				0BAFB14B19F1ABBB00DCF54F /* ZECAO49.png in Resources */,
 				3FB6F50E19DA659C0080057B /* Mitempo.png in Resources */,
 				0BC4BBF81A16939800D03E1F /* bongo40.caf in Resources */,
@@ -2123,6 +2352,7 @@
 				3FC5D34B19DA61FD00348F51 /* BarraNotasPausasViewController.xib in Resources */,
 				0BC4BC1D1A16949600D03E1F /* Telefone.plist in Resources */,
 				3FC5D34C19DA61FD00348F51 /* ListaInstrumentoViewController.xib in Resources */,
+				3FE14F491A16CE83001BE8D7 /* TrumpA#5.caf in Resources */,
 				0BC4BC0C1A16939800D03E1F /* bongo60.caf in Resources */,
 				0BAFB11B19F1ABBB00DCF54F /* ZECAO01.png in Resources */,
 				0BC4BC121A16939800D03E1F /* bongo66.caf in Resources */,
@@ -2133,7 +2363,9 @@
 				3FB6F56819DA67E60080057B /* P200 Piano A#2.caf in Resources */,
 				3FB6F4FF19DA659C0080057B /* fundoazul.png in Resources */,
 				0BAFB15119F1ABBB00DCF54F /* ZECAO55.png in Resources */,
+				3FE14F291A16BB15001BE8D7 /* F-mid.caf in Resources */,
 				0BAFB0FC19F1ABBB00DCF54F /* AudioBemVindo.m4a in Resources */,
+				3FE14F041A16B7B6001BE8D7 /* Agogo Bell.caf in Resources */,
 				0BC4BBE21A16939800D03E1F /* bongo18.caf in Resources */,
 				0BAFB13219F1ABBB00DCF54F /* ZECAO24.png in Resources */,
 				0BC4BBD31A16939800D03E1F /* bongo03.caf in Resources */,
@@ -2145,6 +2377,7 @@
 				0BAFB13419F1ABBB00DCF54F /* ZECAO26.png in Resources */,
 				3FB6F57519DA67E60080057B /* P200 Piano F#2.caf in Resources */,
 				0BAFB10119F1ABBB00DCF54F /* florRocha.png in Resources */,
+				3FE14F4B1A16CE83001BE8D7 /* TrumpC5.caf in Resources */,
 				3FB6F57019DA67E60080057B /* P200 Piano D2.caf in Resources */,
 				0BC607AC1A128D33007E9456 /* colcheiaPausa.png in Resources */,
 				0BC4BC0E1A16939800D03E1F /* bongo62.caf in Resources */,
@@ -2178,10 +2411,13 @@
 				0BAFB14319F1ABBB00DCF54F /* ZECAO41.png in Resources */,
 				0B6DCCA419DB2D8D00C166E3 /* botaopiano.png in Resources */,
 				0BAFB10619F1ABBB00DCF54F /* quadroZecao.png in Resources */,
+				3FE14EFD1A16B4AD001BE8D7 /* Church Org C4.caf in Resources */,
 				0BAFB13319F1ABBB00DCF54F /* ZECAO25.png in Resources */,
 				0BC4BC001A16939800D03E1F /* bongo48.caf in Resources */,
+				3FE14F251A16BB15001BE8D7 /* C-midhigh.caf in Resources */,
 				3FB6F55E19DA67E60080057B /* 1 - E.caf in Resources */,
 				0BAFB10B19F1ABBB00DCF54F /* violino.png in Resources */,
+				3FE14F111A16B91B001BE8D7 /* Gtr HDist LPH - A31-2.caf in Resources */,
 				3FB6F57C19DA67E60080057B /* Piano.plist in Resources */,
 				3FB6F56419DA67E60080057B /* 6a - A.caf in Resources */,
 				3FB6F50A19DA659C0080057B /* LaMeiotempo.png in Resources */,
@@ -2192,12 +2428,16 @@
 				3FB6F56719DA67E60080057B /* ViolaoNylon.plist in Resources */,
 				0BAFB11D19F1ABBB00DCF54F /* ZECAO03.png in Resources */,
 				0BAFB12B19F1ABBB00DCF54F /* ZECAO17.png in Resources */,
+				3FE14F2A1A16BB15001BE8D7 /* G-low.caf in Resources */,
+				3FE14F261A16BB15001BE8D7 /* D-low.caf in Resources */,
 				0BC4BBEC1A16939800D03E1F /* bongo28.caf in Resources */,
+				3FE14F481A16CE83001BE8D7 /* Trompete.plist in Resources */,
 				0BAFB12D19F1ABBB00DCF54F /* ZECAO19.png in Resources */,
 				0BC4BBFB1A16939800D03E1F /* bongo43.caf in Resources */,
 				0BE4328A1A15323200A5BFC1 /* TecladoViewController.xib in Resources */,
 				0BE432821A1524DF00A5BFC1 /* vassoura-05.png in Resources */,
 				0BE4327F1A1524DF00A5BFC1 /* vassoura-02.png in Resources */,
+				3FE14F231A16BB15001BE8D7 /* A-mid.caf in Resources */,
 				0BAFB14419F1ABBB00DCF54F /* ZECAO42.png in Resources */,
 				0BE432831A1524DF00A5BFC1 /* vassoura-06.png in Resources */,
 				0BAFB16219F1ABBB00DCF54F /* ZECAO72.png in Resources */,
@@ -2206,23 +2446,31 @@
 				0BC4BC081A16939800D03E1F /* bongo56.caf in Resources */,
 				3FB6F55F19DA67E60080057B /* 2 - A.caf in Resources */,
 				3FB6F55919DA67E60080057B /* la2.caf in Resources */,
+				3FE14EFE1A16B4AD001BE8D7 /* Church Org C6.caf in Resources */,
+				3FE14F161A16B91B001BE8D7 /* Gtr HDist LPH - E41.caf in Resources */,
 				3FB6F4FD19DA659C0080057B /* btnlixeira.png in Resources */,
+				3F5D4D451A17E67200A33538 /* Xylo E5.caf in Resources */,
 				3FB6F50119DA659C0080057B /* chapeu.png in Resources */,
 				0BAFB14E19F1ABBB00DCF54F /* ZECAO52.png in Resources */,
 				0BAFB14619F1ABBB00DCF54F /* ZECAO44.png in Resources */,
 				0BAFB10019F1ABBB00DCF54F /* flauta.png in Resources */,
+				3F5D4D421A17E67200A33538 /* Xilofone.plist in Resources */,
 				0BAFB12419F1ABBB00DCF54F /* ZECAO10.png in Resources */,
 				0BAFB12019F1ABBB00DCF54F /* ZECAO06.png in Resources */,
 				0BAFB13119F1ABBB00DCF54F /* ZECAO23.png in Resources */,
+				3FE14F391A16C85A001BE8D7 /* Banjo F32.caf in Resources */,
 				0BAFB16119F1ABBB00DCF54F /* ZECAO71.png in Resources */,
 				3FB6F56C19DA67E60080057B /* P200 Piano A#7.caf in Resources */,
 				0BAFB12719F1ABBB00DCF54F /* ZECAO13.png in Resources */,
 				0BE432801A1524DF00A5BFC1 /* vassoura-03.png in Resources */,
 				0BAFB0FF19F1ABBB00DCF54F /* chocalho.png in Resources */,
+				3FE14EFF1A16B4AD001BE8D7 /* Church Org F6.caf in Resources */,
 				3FB6F56A19DA67E60080057B /* P200 Piano A#4.caf in Resources */,
 				0BC4BBE71A16939800D03E1F /* bongo23.caf in Resources */,
+				3FE14F3A1A16C85A001BE8D7 /* Banjo F33.caf in Resources */,
 				0BAFB13D19F1ABBB00DCF54F /* ZECAO35.png in Resources */,
 				3FB6F55319DA67E60080057B /* do3.caf in Resources */,
+				3FE14F121A16B91B001BE8D7 /* Gtr HDist LPH - B21.caf in Resources */,
 				3FB6F56D19DA67E60080057B /* P200 Piano C10.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
