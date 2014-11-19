@@ -292,7 +292,7 @@
     if([Sinfonia sharedManager].estadoBotaoLimpar){
         
         if([DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count != 0){
-            
+            self.tocandoBloqueioInserirNota = NO;
             [self movimentaVassoura];
             
             for (UIView *subView in self.scrollPartitura.subviews)
@@ -342,6 +342,7 @@
 }
 
 -(void)finalizaLimparTela{
+    self.tocandoBloqueioInserirNota = YES;
     self.imgVassoura.hidden = YES;
     [PlayerPartituraEdicaoViewController sharedManager].lblLimparPartitura.hidden = NO;
     [PlayerPartituraEdicaoViewController sharedManager].lblPlayPartitura.hidden = NO;

@@ -493,7 +493,7 @@
     [self adicionaOrdemNota:nomeNotas];
     instr1.ordemNotasInstrumento = nomeNotas;
     instr1.numeroIniciaNota = 23;
-    instr1.metodoPrimeiroTocar = @"tocarpentagrama1";
+    instr1.metodoPrimeiroTocar = @"tocarPrimeiroPentagramaFlauta";
     instr1.metodoSegundoTocar = @"tocarpentagrama2";
     
     [self AddInstrumento:instr1];

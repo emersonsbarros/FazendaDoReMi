@@ -18,6 +18,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView *btnCatavento4;
 
 
+@property (weak, nonatomic) IBOutlet UIImageView *imgNuvem2;
+@property (weak, nonatomic) IBOutlet UIImageView *imgNuvem1;
+@property (weak, nonatomic) IBOutlet UIImageView *imgNuvem3;
+@property (weak, nonatomic) IBOutlet UIImageView *imgNuvem4;
+@property (weak, nonatomic) IBOutlet UIImageView *imgNuvem5;
 
 
 @end

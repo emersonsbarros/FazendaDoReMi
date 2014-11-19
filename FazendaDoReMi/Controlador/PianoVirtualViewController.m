@@ -28,6 +28,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    
+    [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = @"Piano";
+    
     [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(atualizaTempo:) userInfo:nil repeats:YES];
     self.cont = 0;
     

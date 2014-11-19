@@ -19,6 +19,7 @@
 #import "PianoVirtualViewController.h"
 #import "TecladoLivreViewController.h"
 #import "TecladoViewController.h"
+#import "XilofoneVirtualViewController.h"
 
 @interface GerenciadorComponenteView : NSObject
 
@@ -42,6 +43,6 @@
 //Instrumentos
 -(void)addComponentesPiano:(UIViewController*)viewAtual :(float)posX :(float)posY;
 -(void)addComponentesTeclado:(UIViewController*)viewAtual :(float)posX :(float)posY;
-
+-(void)addComponentesXilofone:(UIViewController*)viewAtual :(float)posX :(float)posY;
 
 @end

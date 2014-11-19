@@ -114,6 +114,14 @@
     [viewAtual.view addSubview:bar.view];
 }
 
+
+-(void)addComponentesXilofone:(UIViewController*)viewAtual :(float)posX :(float)posY{
+    XilofoneVirtualViewController *bar = [[XilofoneVirtualViewController alloc]init];
+    bar.view.frame = CGRectMake(posX,posY, bar.view.frame.size.width,bar.view.frame.size.height);
+    [viewAtual addChildViewController:bar];
+    [viewAtual.view addSubview:bar.view];
+}
+
 ////////////////////////// AUXILIARES ////////////////////////////////////
 
 //Finaliza exercicios

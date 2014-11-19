@@ -82,7 +82,7 @@
 
 - (IBAction)tocarFlauta:(id)sender {
     [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
-    [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = @"FlautaDoce";
+    [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = @"Ocarina";
     [self ocultaAlphaBotoesNotas];
     self.outBotaoFlauta.alpha = 1.0;
 }

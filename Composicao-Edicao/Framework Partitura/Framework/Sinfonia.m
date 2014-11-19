@@ -580,6 +580,8 @@
 -(void)tocarPrimeiroPentagramaFlauta{
     
     PartituraSinfonia *partitura = [self.listaSoundBank objectAtIndex:auxListaSoundBank-1];
+    [partitura.soundBank allNotesOff];
+    
     
     if(partitura.auxIndiceNotas >= [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]count]){
         int v = [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]count] - 1;
@@ -695,8 +697,6 @@
     
     
     int retornaNotadoXML = [partitura.instrumento retornarNumeroNotaInstrumento:partitura.listaOrdemInstrumento:notaFinal];
-    
-    
     [partitura.soundBank queueNote:retornaNotadoXML gain:volume];
     [partitura.soundBank  playQueuedNotes];
     
@@ -705,10 +705,9 @@
     NSLog(@"notas %d %f %@-%@",partitura.auxIndiceNotas,tempo,nota.oitava,nota.nomeNota);
     
     
-    if([tempoNota isEqualToString:@"quarter"]){
-        tempo = tempo-self.controleVelocidaTranNota;
-        [NSTimer scheduledTimerWithTimeInterval:tempo target:self selector:@selector(tocarpentagrama1) userInfo:nil repeats:NO];
-    }
+    if([tempoNota isEqualToString:@"quarter"]) tempo = tempo-self.controleVelocidaTranNota;
+    [NSTimer scheduledTimerWithTimeInterval:tempo target:self selector:@selector(tocarPrimeiroPentagramaFlauta) userInfo:nil repeats:NO];
+        
         
     }
 }

@@ -110,20 +110,28 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="catavento.png" translatesAutoresizingMaskIntoConstraints="NO" id="n9k-SQ-zTU">
-                                <rect key="frame" x="15" y="271" width="197" height="195"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nuvemEstudio1.png" translatesAutoresizingMaskIntoConstraints="NO" id="r5d-bg-g2b">
+                                <rect key="frame" x="-270" y="12" width="267" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="catavento.png" translatesAutoresizingMaskIntoConstraints="NO" id="KfI-i6-Ba6">
-                                <rect key="frame" x="813" y="271" width="197" height="195"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nuvemEstudio1.png" translatesAutoresizingMaskIntoConstraints="NO" id="7sQ-hP-rcH">
+                                <rect key="frame" x="1025" y="91" width="338" height="117"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="catavento.png" translatesAutoresizingMaskIntoConstraints="NO" id="HHZ-Mr-pdl">
-                                <rect key="frame" x="565" y="271" width="197" height="195"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cataventos.png" translatesAutoresizingMaskIntoConstraints="NO" id="n9k-SQ-zTU">
+                                <rect key="frame" x="16" y="268" width="206" height="208"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="catavento.png" translatesAutoresizingMaskIntoConstraints="NO" id="3ZZ-jp-Wxq">
-                                <rect key="frame" x="302" y="271" width="197" height="195"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cataventos.png" translatesAutoresizingMaskIntoConstraints="NO" id="KfI-i6-Ba6">
+                                <rect key="frame" x="820" y="266" width="206" height="208"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cataventos.png" translatesAutoresizingMaskIntoConstraints="NO" id="HHZ-Mr-pdl">
+                                <rect key="frame" x="561" y="265" width="206" height="208"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cataventos.png" translatesAutoresizingMaskIntoConstraints="NO" id="3ZZ-jp-Wxq">
+                                <rect key="frame" x="298" y="265" width="206" height="208"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPf-az-RkT">
@@ -153,17 +161,31 @@
                                     <segue destination="fc7-hy-kdh" kind="push" id="jKa-Ed-e85"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBK-Ph-Irg">
+                                <rect key="frame" x="333" y="331" width="133" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btnxilo.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mrY-4P-jEF" kind="push" id="eO0-Jh-k5n"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="Nfe-b3-KTL"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
                     <connections>
                         <outlet property="btnCatavento2" destination="n9k-SQ-zTU" id="ZIS-gl-ZJv"/>
                         <outlet property="btnCatavento3" destination="HHZ-Mr-pdl" id="3SQ-E7-4t7"/>
                         <outlet property="btnCatavento4" destination="3ZZ-jp-Wxq" id="Rh8-UP-X5E"/>
                         <outlet property="imgCatavento1" destination="KfI-i6-Ba6" id="b3I-qk-qxe"/>
+                        <outlet property="imgNuvem1" destination="r5d-bg-g2b" id="8EY-k5-GrN"/>
+                        <outlet property="imgNuvem2" destination="7sQ-hP-rcH" id="Lna-3t-8jo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WFs-5V-l0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -327,19 +349,54 @@
             </objects>
             <point key="canvasLocation" x="569" y="-888"/>
         </scene>
+        <!--Instrumento Xilofone View Controller-->
+        <scene sceneID="0BT-Al-r3K">
+            <objects>
+                <viewController id="mrY-4P-jEF" customClass="InstrumentoXilofoneViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rwi-qh-oQm"/>
+                        <viewControllerLayoutGuide type="bottom" id="otw-fP-Tmu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0er-yY-qrD">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backxilofone-2.png" highlightedImage=" " translatesAutoresizingMaskIntoConstraints="NO" id="U7I-KL-1Cu">
+                                <rect key="frame" x="-18" y="-2" width="1060" height="770"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fzC-zC-hG4">
+                                <rect key="frame" x="-3" y="-39" width="1030" height="537"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UmY-xt-HnB"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <connections>
+                        <outlet property="scrollPartitura" destination="fzC-zC-hG4" id="Y3Y-Yx-IKu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LjZ-vW-Ekx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4990" y="1634"/>
+        </scene>
     </scenes>
     <resources>
         <image name=" " width="1100" height="821"/>
         <image name="MenuCatavento.png" width="1024" height="768"/>
         <image name="background-arvore.png" width="1024" height="768"/>
         <image name="background-ceu.png" width="1024" height="768"/>
+        <image name="backxilofone-2.png" width="1024" height="768"/>
         <image name="botao-estudio.png" width="130" height="142"/>
         <image name="botao-jogos.png" width="124" height="141"/>
         <image name="botao-jornada.png" width="134" height="142"/>
         <image name="btnpartitura.png" width="78" height="78"/>
         <image name="btnpiano.png" width="78" height="78"/>
         <image name="btnpianoze.png" width="78" height="78"/>
-        <image name="catavento.png" width="207" height="209"/>
+        <image name="btnxilo.png" width="78" height="78"/>
+        <image name="cataventos.png" width="243" height="247"/>
         <image name="cercado.png" width="1024" height="225"/>
         <image name="fundoazul.png" width="1024" height="768"/>
         <image name="fundocasa.png" width="1024" height="768"/>
@@ -347,6 +404,7 @@
         <image name="nuvem-voltar.png" width="137" height="109"/>
         <image name="nuvem1.png" width="281" height="83"/>
         <image name="nuvem2.png" width="438" height="128"/>
+        <image name="nuvemEstudio1.png" width="338" height="117"/>
         <image name="porteira-1.png" width="573" height="557"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

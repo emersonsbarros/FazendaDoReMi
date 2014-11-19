@@ -1,18 +1,18 @@
 //
-//  InstrumentoViewController.m
+//  InstrumentoXilofoneViewController.m
 //  FazendaDoReMi
 //
-//  Created by VINICIUS RESENDE FIALHO on 23/10/14.
+//  Created by VINICIUS RESENDE FIALHO on 19/11/14.
 //  Copyright (c) 2014 EMERSON BARROS | VINICIUS RESENDE. All rights reserved.
 //
 
-#import "InstrumentoPianoViewController.h"
+#import "InstrumentoXilofoneViewController.h"
 
-@interface InstrumentoPianoViewController ()
+@interface InstrumentoXilofoneViewController ()
 
 @end
 
-@implementation InstrumentoPianoViewController
+@implementation InstrumentoXilofoneViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -22,7 +22,6 @@
     }
     return self;
 }
-
 
 - (BOOL)prefersStatusBarHidden {
     return YES;
@@ -43,18 +42,16 @@
     [[ComponenteScrollEdicao sharedManager]recebeScroll:self.scrollPartitura];
     [[ComponenteScrollEdicao sharedManager].scrollPartitura removeGestureRecognizer:[[ComponenteScrollEdicao sharedManager].scrollPartitura.gestureRecognizers firstObject]];
     
-
     
     //Desenha a partitura com 10 linhas de pentagrama
     [[DesenhaPartituraEdicao sharedManager]desenhaContornoPartituraParaEdicao:6:NO];
     
-    [[GerenciadorComponenteView sharedManager]addComponentesPiano:self :0 :500];
+    [[GerenciadorComponenteView sharedManager]addComponentesXilofone:self :0 :500];
     
     
     
     
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
