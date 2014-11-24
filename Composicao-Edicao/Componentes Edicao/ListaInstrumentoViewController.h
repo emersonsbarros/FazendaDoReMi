@@ -22,7 +22,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *outBotaoPiano;
 @property (weak, nonatomic) IBOutlet UIButton *outBotaoFlauta;
 
-
-
+@property UIImageView *imgFundo;
+@property UIImageView *imgFundoSecundario;
+-(void)recebeImagensView:(UIImageView*)img1 :(UIImageView*)img2;
 
 @end

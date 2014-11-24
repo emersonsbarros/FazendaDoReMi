@@ -23,10 +23,27 @@
     return self;
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+    
+}
+
+-(void)desapareceTelaCarregamento{
+    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    self.viewCarregamento.hidden = YES;
+}
+
+-(void)chamaTelaCarregamento{
+    self.viewCarregamento.hidden = NO;
+    [self performSelector:@selector(desapareceTelaCarregamento) withObject:nil afterDelay:5.0];
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [[GerenciadorComponenteView sharedManager]addComponentesBotaoVoltar:self:0:-8];
     
     self.nomeInstrumento = @"Piano";
     
@@ -419,19 +436,19 @@
     
     UIImageView *img;
     if([nome isEqualToString:@"Dó"]){
-        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Do4Tempos"]];
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Do4tempos.png"]];
     }else if([nome isEqualToString:@"Ré"]){
-        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Re4Tempos"]];
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Re4tempos.png"]];
     }else if([nome isEqualToString:@"Mi"]){
-        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Mi4Tempos"]];
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Mi4tempos.png"]];
     }else if([nome isEqualToString:@"Fá"]){
-        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Fa4Tempos"]];
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"fa4Tempos.png"]];
     }else if([nome isEqualToString:@"Sol"]){
-        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Sol4Tempos"]];
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Sol4Tempos.png"]];
     }else if([nome isEqualToString:@"Lá"]){
-        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"La4Tempos"]];
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"La4Tempos.png"]];
     }else if([nome isEqualToString:@"Si"]){
-        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Si4Tempos"]];
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Si4Tempos.png"]];
     }
     
     img.frame = CGRectMake(0, 135, 80, 100);
@@ -448,54 +465,64 @@
 
 
 - (IBAction)btnTelefone:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+
     self.nomeInstrumento = @"Telefone";
 }
 
 - (IBAction)btnPiano:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+    
     self.nomeInstrumento = @"Piano";
 }
 
 - (IBAction)btnFlauta:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+  
      self.nomeInstrumento = @"FlautaDoce";
 }
 
 - (IBAction)btnTambor:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+ 
     self.nomeInstrumento = @"TamborBongo";
 }
 
 - (IBAction)btnViolao:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+
      self.nomeInstrumento = @"ViolaoNylon";
 }
 
 - (IBAction)btnGuitarra:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+
     self.nomeInstrumento = @"Guitarra";
 }
 
 
 - (IBAction)btnAgogo:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+    
     self.nomeInstrumento = @"Agogo";
 }
 
 
 - (IBAction)btnTrompete:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+    
     self.nomeInstrumento = @"Trompete";
 }
 
 - (IBAction)btnXilofone:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+
     self.nomeInstrumento = @"Xilofone";
 }
 
 - (IBAction)btnSaxfone:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+   
     self.nomeInstrumento = @"Saxfone";
 }
 
@@ -504,87 +531,103 @@
 
 
 - (IBAction)btnAcordiao:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+
     self.nomeInstrumento = @"Acordiao";
 }
 
 - (IBAction)btnClarinete:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+  
     self.nomeInstrumento = @"Clarinete";
 }
 
 - (IBAction)btnCrystal:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+   ;
     self.nomeInstrumento = @"Crystal";
 }
 
 - (IBAction)btnFlautaIndio:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+   
     self.nomeInstrumento = @"FlautaIndio";
 }
 
 
 
 - (IBAction)btnHarpa:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+
     self.nomeInstrumento = @"Harpa";
 }
 
 - (IBAction)btnHit:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+   
     self.nomeInstrumento = @"Hit";
 }
 
 
 
 - (IBAction)btnOcarina:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+   
     self.nomeInstrumento = @"Ocarina";
 }
 
+
 - (IBAction)btnPassaro:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+    
     self.nomeInstrumento = @"Passaro";
 }
 
 - (IBAction)btnPianoIgreja:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+   
     self.nomeInstrumento = @"PianoIgreja";
 }
 
 - (IBAction)btnTecnologico:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+ 
     self.nomeInstrumento = @"Tecnologico";
 }
 
 - (IBAction)btnShamisen:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+   
     self.nomeInstrumento = @"Shamisen";
 }
 
 - (IBAction)btnPanela:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+   
     self.nomeInstrumento = @"Panela";
 }
 
 - (IBAction)bntSino:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+
     self.nomeInstrumento = @"Sino";
 }
 
 - (IBAction)btnVioloncelo:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
+
     self.nomeInstrumento = @"Violoncelo";
 }
 
 /////
+
 - (IBAction)btnGaita:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
     self.nomeInstrumento = @"Gaita";
 }
 
 - (IBAction)btnBanjo:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [self chamaTelaCarregamento];
     self.nomeInstrumento = @"Banjo";
 }
 

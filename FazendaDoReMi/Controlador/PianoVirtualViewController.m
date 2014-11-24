@@ -305,19 +305,19 @@
     
     UIImageView *img;
     if([nome isEqualToString:@"Dó"]){
-        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Do4Tempos"]];
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Do4tempos.png"]];
     }else if([nome isEqualToString:@"Ré"]){
-        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Re4Tempos"]];
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Re4tempos.png"]];
     }else if([nome isEqualToString:@"Mi"]){
-        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Mi4Tempos"]];
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Mi4tempos.png"]];
     }else if([nome isEqualToString:@"Fá"]){
-        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Fa4Tempos"]];
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"fa4Tempos.png"]];
     }else if([nome isEqualToString:@"Sol"]){
-        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Sol4Tempos"]];
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Sol4Tempos.png"]];
     }else if([nome isEqualToString:@"Lá"]){
-        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"La4Tempos"]];
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"La4Tempos.png"]];
     }else if([nome isEqualToString:@"Si"]){
-        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Si4Tempos"]];
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Si4Tempos.png"]];
     }
     
     img.frame = CGRectMake(0, 135, 80, 100);

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GerenciadorComponenteView.h"
 
 @interface EstudioViewController : UIViewController
 

@@ -116,7 +116,6 @@
         
         float posx = touchPoint.x;
         float posy = touchPoint.y;
-        NSLog(@"nota x = %f, y =%f ",posx,posy);
         
         Nota *not = [[DesenhaPartituraEdicao sharedManager] retornaPosicaoNotaEdicao:posx:posy];
         

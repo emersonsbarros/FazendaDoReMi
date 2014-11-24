@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="CwD-NK-3Lq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="CwD-NK-3Lq">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Menu View Controller-->
@@ -37,7 +38,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="no6-YP-gkA">
                                 <rect key="frame" x="-274" y="104" width="787" height="682"/>
                             </imageView>
-                            <button opaque="NO" alpha="0.050000000000000003" contentMode="TopLeft" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Fry-vF-hsH">
+                            <button opaque="NO" contentMode="TopLeft" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Fry-vF-hsH">
                                 <rect key="frame" x="298" y="615" width="125" height="121"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
                                 <inset key="titleEdgeInsets" minX="-160" minY="0.0" maxX="0.0" maxY="-115"/>
@@ -49,7 +50,7 @@
                                     <segue destination="dmu-Ru-iJ5" kind="push" id="7vd-N8-zRo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.050000000000000003" contentMode="TopLeft" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="k5s-RW-py3">
+                            <button opaque="NO" contentMode="TopLeft" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="k5s-RW-py3">
                                 <rect key="frame" x="459" y="617" width="127" height="121"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <inset key="titleEdgeInsets" minX="-140" minY="0.0" maxX="0.0" maxY="-115"/>
@@ -62,7 +63,7 @@
                                     <segue destination="2UJ-ZY-qto" kind="push" id="7di-ng-fmu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.050000000000000003" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKg-cb-Zzr">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKg-cb-Zzr">
                                 <rect key="frame" x="618" y="616" width="128" height="121"/>
                                 <inset key="titleEdgeInsets" minX="-140" minY="0.0" maxX="0.0" maxY="-115"/>
                                 <state key="normal" backgroundImage="botao-jogos.png">
@@ -72,7 +73,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="syq-cX-hy9"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -108,31 +108,24 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MenuCatavento.png" translatesAutoresizingMaskIntoConstraints="NO" id="GAW-0A-HSQ">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nuvemEstudio1.png" translatesAutoresizingMaskIntoConstraints="NO" id="r5d-bg-g2b">
                                 <rect key="frame" x="-270" y="12" width="267" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nuvemEstudio1.png" translatesAutoresizingMaskIntoConstraints="NO" id="7sQ-hP-rcH">
                                 <rect key="frame" x="1025" y="91" width="338" height="117"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cataventos.png" translatesAutoresizingMaskIntoConstraints="NO" id="n9k-SQ-zTU">
                                 <rect key="frame" x="16" y="268" width="206" height="208"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cataventos.png" translatesAutoresizingMaskIntoConstraints="NO" id="KfI-i6-Ba6">
                                 <rect key="frame" x="820" y="266" width="206" height="208"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cataventos.png" translatesAutoresizingMaskIntoConstraints="NO" id="HHZ-Mr-pdl">
                                 <rect key="frame" x="561" y="265" width="206" height="208"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cataventos.png" translatesAutoresizingMaskIntoConstraints="NO" id="3ZZ-jp-Wxq">
                                 <rect key="frame" x="298" y="265" width="206" height="208"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPf-az-RkT">
                                 <rect key="frame" x="883" y="333" width="78" height="78"/>
@@ -163,7 +156,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBK-Ph-Irg">
                                 <rect key="frame" x="333" y="331" width="133" height="78"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btnxilo.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -173,7 +165,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="Nfe-b3-KTL"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -195,7 +186,7 @@
         <!--Teclado Livre View Controller-->
         <scene sceneID="OC7-or-6HY">
             <objects>
-                <viewController id="hJd-UK-P8D" customClass="TecladoLivreViewController" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="hJd-UK-P8D" customClass="TecladoLivreViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HH7-dT-9lj"/>
                         <viewControllerLayoutGuide type="bottom" id="Ri3-91-Xgz"/>
@@ -204,20 +195,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="dTK-HF-Avu"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <size key="freeformSize" width="1024" height="768"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QMR-TH-Yqk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4733" y="-1195"/>
         </scene>
-        <!--Composicao Partitura View Controller - Title-->
+        <!--Title-->
         <scene sceneID="dzv-Lj-Aoa">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="fc7-hy-kdh" customClass="ComposicaoPartituraViewController" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" hidesBottomBarWhenPushed="YES" id="fc7-hy-kdh" customClass="ComposicaoPartituraViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1KN-3s-erL"/>
                         <viewControllerLayoutGuide type="bottom" id="LxI-iL-VEO"/>
@@ -227,7 +216,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fundoazul.png" highlightedImage=" " translatesAutoresizingMaskIntoConstraints="NO" id="M5U-Fd-0Cd">
-                                <rect key="frame" x="0.0" y="0.0" width="1060" height="660"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1060" height="768"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RBe-1J-b9s">
                                 <rect key="frame" x="0.0" y="51" width="1024" height="602"/>
@@ -249,11 +238,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="RQq-Bf-iyP"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="imgFundo" destination="M5U-Fd-0Cd" id="U4G-5o-x4C"/>
+                        <outlet property="imgFundoSecundario" destination="AJm-os-dwJ" id="gZF-02-R5m"/>
                         <outlet property="scrollEdicao" destination="RBe-1J-b9s" id="lG6-nM-jtC"/>
                     </connections>
                 </viewController>
@@ -264,7 +254,7 @@
         <!--Instrumento Piano View Controller-->
         <scene sceneID="Vie-iQ-grd">
             <objects>
-                <viewController id="T8i-dr-9jl" customClass="InstrumentoPianoViewController" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="T8i-dr-9jl" customClass="InstrumentoPianoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="m73-Bq-LbI"/>
                         <viewControllerLayoutGuide type="bottom" id="Hkf-Mx-ejP"/>
@@ -281,7 +271,6 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="5Ry-6l-IAh"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -319,7 +308,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="rJg-3E-A2C"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -352,7 +340,7 @@
         <!--Instrumento Xilofone View Controller-->
         <scene sceneID="0BT-Al-r3K">
             <objects>
-                <viewController id="mrY-4P-jEF" customClass="InstrumentoXilofoneViewController" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="mrY-4P-jEF" customClass="InstrumentoXilofoneViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rwi-qh-oQm"/>
                         <viewControllerLayoutGuide type="bottom" id="otw-fP-Tmu"/>
@@ -369,18 +357,16 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="UmY-xt-HnB"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <size key="freeformSize" width="1024" height="768"/>
                     <connections>
                         <outlet property="scrollPartitura" destination="fzC-zC-hG4" id="Y3Y-Yx-IKu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LjZ-vW-Ekx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4990" y="1634"/>
+            <point key="canvasLocation" x="4877" y="1653"/>
         </scene>
     </scenes>
     <resources>

@@ -157,8 +157,6 @@
 		0BBF81EB1A1D1DA00033149B /* TeclaXilo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BBF81DB1A1D1DA00033149B /* TeclaXilo1.png */; };
 		0BBF81EC1A1D1DA00033149B /* TeclaXilo10.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BBF81DC1A1D1DA00033149B /* TeclaXilo10.png */; };
 		0BBF81ED1A1D1DA00033149B /* TeclaXilo11.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BBF81DD1A1D1DA00033149B /* TeclaXilo11.png */; };
-		0BBF81EE1A1D1DA00033149B /* TeclaXilo12.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BBF81DE1A1D1DA00033149B /* TeclaXilo12.png */; };
-		0BBF81EF1A1D1DA00033149B /* TeclaXilo13.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BBF81DF1A1D1DA00033149B /* TeclaXilo13.png */; };
 		0BBF81F01A1D1DA00033149B /* TeclaXilo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BBF81E01A1D1DA00033149B /* TeclaXilo2.png */; };
 		0BBF81F11A1D1DA00033149B /* TeclaXilo3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BBF81E11A1D1DA00033149B /* TeclaXilo3.png */; };
 		0BBF81F21A1D1DA00033149B /* TeclaXilo4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BBF81E21A1D1DA00033149B /* TeclaXilo4.png */; };
@@ -378,6 +376,10 @@
 		0BE4328A1A15323200A5BFC1 /* TecladoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BE432881A15323200A5BFC1 /* TecladoViewController.xib */; };
 		0BE4328D1A15324F00A5BFC1 /* TecladoLivreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4328C1A15324F00A5BFC1 /* TecladoLivreViewController.m */; };
 		3F0E879719DBA6F8003FF4EB /* JornadaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E879619DBA6F8003FF4EB /* JornadaViewController.m */; };
+		3F1246081A1DA7240064ADF0 /* TeclaXilo12.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1246061A1DA7240064ADF0 /* TeclaXilo12.png */; };
+		3F1246091A1DA7240064ADF0 /* TeclaXilo13.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1246071A1DA7240064ADF0 /* TeclaXilo13.png */; };
+		3F1C09431A22C1C600905CD1 /* BotaoVoltarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1C09411A22C1C600905CD1 /* BotaoVoltarViewController.m */; };
+		3F1C09441A22C1C600905CD1 /* BotaoVoltarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1C09421A22C1C600905CD1 /* BotaoVoltarViewController.xib */; };
 		3F3EBFFE19F34A3E00BB221D /* piano2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F3EBFFD19F34A3E00BB221D /* piano2.png */; };
 		3F5D4D421A17E67200A33538 /* Xilofone.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D4D3D1A17E67200A33538 /* Xilofone.plist */; };
 		3F5D4D431A17E67200A33538 /* Xylo C7.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D4D3E1A17E67200A33538 /* Xylo C7.caf */; };
@@ -520,7 +522,7 @@
 		3FE14F4E1A16CE83001BE8D7 /* TrumpG5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F461A16CE83001BE8D7 /* TrumpG5.caf */; };
 		3FE14F4F1A16CE83001BE8D7 /* TrumpG6.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F471A16CE83001BE8D7 /* TrumpG6.caf */; };
 		3FEF299119E8BCDC00C01AB5 /* somPiano.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FEF298E19E8BCDC00C01AB5 /* somPiano.wav */; };
-		3FF8CBF919F9EC5A001A40F8 /* PartituraComposta.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8CBF819F9EC5A001A40F8 /* PartituraComposta.m */; };
+		3FF8CBF919F9EC5A001A40F8 /* PartituraSinfonia.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8CBF819F9EC5A001A40F8 /* PartituraSinfonia.m */; };
 		A811633B19D229CB00506D94 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = A811633A19D229CB00506D94 /* Item.m */; };
 		A811633D19D22A1000506D94 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A811633C19D22A1000506D94 /* AVFoundation.framework */; };
 		A811634019D22A9300506D94 /* SpriteItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A811633F19D22A9300506D94 /* SpriteItem.m */; };
@@ -730,8 +732,6 @@
 		0BBF81DB1A1D1DA00033149B /* TeclaXilo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TeclaXilo1.png; sourceTree = "<group>"; };
 		0BBF81DC1A1D1DA00033149B /* TeclaXilo10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TeclaXilo10.png; sourceTree = "<group>"; };
 		0BBF81DD1A1D1DA00033149B /* TeclaXilo11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TeclaXilo11.png; sourceTree = "<group>"; };
-		0BBF81DE1A1D1DA00033149B /* TeclaXilo12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TeclaXilo12.png; sourceTree = "<group>"; };
-		0BBF81DF1A1D1DA00033149B /* TeclaXilo13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TeclaXilo13.png; sourceTree = "<group>"; };
 		0BBF81E01A1D1DA00033149B /* TeclaXilo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TeclaXilo2.png; sourceTree = "<group>"; };
 		0BBF81E11A1D1DA00033149B /* TeclaXilo3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TeclaXilo3.png; sourceTree = "<group>"; };
 		0BBF81E21A1D1DA00033149B /* TeclaXilo4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TeclaXilo4.png; sourceTree = "<group>"; };
@@ -958,6 +958,11 @@
 		0BE4328C1A15324F00A5BFC1 /* TecladoLivreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TecladoLivreViewController.m; sourceTree = "<group>"; };
 		3F0E879519DBA6F8003FF4EB /* JornadaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JornadaViewController.h; sourceTree = "<group>"; };
 		3F0E879619DBA6F8003FF4EB /* JornadaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JornadaViewController.m; sourceTree = "<group>"; };
+		3F1246061A1DA7240064ADF0 /* TeclaXilo12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TeclaXilo12.png; sourceTree = "<group>"; };
+		3F1246071A1DA7240064ADF0 /* TeclaXilo13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TeclaXilo13.png; sourceTree = "<group>"; };
+		3F1C09401A22C1C600905CD1 /* BotaoVoltarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BotaoVoltarViewController.h; sourceTree = "<group>"; };
+		3F1C09411A22C1C600905CD1 /* BotaoVoltarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BotaoVoltarViewController.m; sourceTree = "<group>"; };
+		3F1C09421A22C1C600905CD1 /* BotaoVoltarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BotaoVoltarViewController.xib; sourceTree = "<group>"; };
 		3F3EBFFD19F34A3E00BB221D /* piano2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = piano2.png; sourceTree = "<group>"; };
 		3F5D4D3D1A17E67200A33538 /* Xilofone.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Xilofone.plist; sourceTree = "<group>"; };
 		3F5D4D3E1A17E67200A33538 /* Xylo C7.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Xylo C7.caf"; sourceTree = "<group>"; };
@@ -1122,7 +1127,7 @@
 		3FE14F471A16CE83001BE8D7 /* TrumpG6.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TrumpG6.caf; sourceTree = "<group>"; };
 		3FEF298E19E8BCDC00C01AB5 /* somPiano.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = somPiano.wav; sourceTree = "<group>"; };
 		3FF8CBF719F9EC5A001A40F8 /* PartituraSinfonia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartituraSinfonia.h; sourceTree = "<group>"; };
-		3FF8CBF819F9EC5A001A40F8 /* PartituraComposta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartituraComposta.m; sourceTree = "<group>"; };
+		3FF8CBF819F9EC5A001A40F8 /* PartituraSinfonia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartituraSinfonia.m; sourceTree = "<group>"; };
 		A811633919D229CB00506D94 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		A811633A19D229CB00506D94 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		A811633C19D22A1000506D94 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -1580,8 +1585,8 @@
 				0BBF81DB1A1D1DA00033149B /* TeclaXilo1.png */,
 				0BBF81DC1A1D1DA00033149B /* TeclaXilo10.png */,
 				0BBF81DD1A1D1DA00033149B /* TeclaXilo11.png */,
-				0BBF81DE1A1D1DA00033149B /* TeclaXilo12.png */,
-				0BBF81DF1A1D1DA00033149B /* TeclaXilo13.png */,
+				3F1246061A1DA7240064ADF0 /* TeclaXilo12.png */,
+				3F1246071A1DA7240064ADF0 /* TeclaXilo13.png */,
 				0BBF81E01A1D1DA00033149B /* TeclaXilo2.png */,
 				0BBF81E11A1D1DA00033149B /* TeclaXilo3.png */,
 				0BBF81E21A1D1DA00033149B /* TeclaXilo4.png */,
@@ -2012,6 +2017,16 @@
 			name = Componentes;
 			sourceTree = "<group>";
 		};
+		3F1C09451A22C1D200905CD1 /* Botao Voltar */ = {
+			isa = PBXGroup;
+			children = (
+				3F1C09401A22C1C600905CD1 /* BotaoVoltarViewController.h */,
+				3F1C09411A22C1C600905CD1 /* BotaoVoltarViewController.m */,
+				3F1C09421A22C1C600905CD1 /* BotaoVoltarViewController.xib */,
+			);
+			name = "Botao Voltar";
+			sourceTree = "<group>";
+		};
 		3F5D4D3C1A17E67200A33538 /* Xilofone */ = {
 			isa = PBXGroup;
 			children = (
@@ -2274,7 +2289,7 @@
 				3FC5D31F19DA5C3200348F51 /* Sinfonia.h */,
 				3FC5D32019DA5C3200348F51 /* Sinfonia.m */,
 				3FF8CBF719F9EC5A001A40F8 /* PartituraSinfonia.h */,
-				3FF8CBF819F9EC5A001A40F8 /* PartituraComposta.m */,
+				3FF8CBF819F9EC5A001A40F8 /* PartituraSinfonia.m */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -2282,6 +2297,10 @@
 		3FC5D32119DA5C3200348F51 /* Instrumentos */ = {
 			isa = PBXGroup;
 			children = (
+				3FC5D32219DA5C3200348F51 /* DataBaseInstrumento.h */,
+				3FC5D32319DA5C3200348F51 /* DataBaseInstrumento.m */,
+				3FC5D32419DA5C3200348F51 /* Instrumento.h */,
+				3FC5D32519DA5C3200348F51 /* Instrumento.m */,
 				3FE14F3F1A16CE83001BE8D7 /* Trompete */,
 				3F5D4D3C1A17E67200A33538 /* Xilofone */,
 				3FE14F191A16BB15001BE8D7 /* Saxfone */,
@@ -2292,10 +2311,6 @@
 				3FB6F52219DA67E60080057B /* Flauta */,
 				3FB6F53019DA67E60080057B /* guitar natural */,
 				3FB6F53B19DA67E60080057B /* Piano */,
-				3FC5D32219DA5C3200348F51 /* DataBaseInstrumento.h */,
-				3FC5D32319DA5C3200348F51 /* DataBaseInstrumento.m */,
-				3FC5D32419DA5C3200348F51 /* Instrumento.h */,
-				3FC5D32519DA5C3200348F51 /* Instrumento.m */,
 				0BC8DA411A1BBB2700F74157 /* Acordiao */,
 				0BC8DA4B1A1BBB2700F74157 /* Clarinete */,
 				0BC8DA551A1BBB2700F74157 /* Crystal */,
@@ -2538,6 +2553,7 @@
 		A8F1C4AF19D1F89B001850E4 /* Menus */ = {
 			isa = PBXGroup;
 			children = (
+				3F1C09451A22C1D200905CD1 /* Botao Voltar */,
 				0BAFB16619F1AD5A00DCF54F /* Estudio */,
 				0BAFB16519F1AD3500DCF54F /* Mapa Jornada */,
 				0BAFB16419F1AD2300DCF54F /* Home */,
@@ -2731,7 +2747,6 @@
 				0BC8DB261A1BBB2700F74157 /* Cello A5.caf in Resources */,
 				3F5D4D461A17E67200A33538 /* Xylo G#4.caf in Resources */,
 				3FC5D34D19DA61FD00348F51 /* PlayerPartituraEdicaoViewController.xib in Resources */,
-				0BBF81EF1A1D1DA00033149B /* TeclaXilo13.png in Resources */,
 				0BC8DB041A1BBB2700F74157 /* Ocarina.plist in Resources */,
 				0BC8DB2C1A1BBB2700F74157 /* Cello E5.caf in Resources */,
 				0BC4BBDF1A16939800D03E1F /* bongo15.caf in Resources */,
@@ -2825,6 +2840,7 @@
 				0BC8DAD91A1BBB2700F74157 /* Bottle Blow C5.caf in Resources */,
 				0BC8DB0B1A1BBB2700F74157 /* Pipe Organ D1.caf in Resources */,
 				0BC4BBD91A16939800D03E1F /* bongo09.caf in Resources */,
+				3F1C09441A22C1C600905CD1 /* BotaoVoltarViewController.xib in Resources */,
 				0BC8DB021A1BBB2700F74157 /* Ocarina C6.caf in Resources */,
 				0BAFB10519F1ABBB00DCF54F /* prendedor.png in Resources */,
 				0BBF81F51A1D1DA00033149B /* TeclaXilo7.png in Resources */,
@@ -3035,6 +3051,7 @@
 				0BC4BBDA1A16939800D03E1F /* bongo10.caf in Resources */,
 				0BAFB10A19F1ABBB00DCF54F /* violao.png in Resources */,
 				0BAFB10919F1ABBB00DCF54F /* tambor.png in Resources */,
+				3F1246081A1DA7240064ADF0 /* TeclaXilo12.png in Resources */,
 				3FB6F56B19DA67E60080057B /* P200 Piano A#5.caf in Resources */,
 				0BD5808E19F973C70042F603 /* PianoVirtualViewController.xib in Resources */,
 				0BAFB10419F1ABBB00DCF54F /* portaretrato2.png in Resources */,
@@ -3081,7 +3098,6 @@
 				0BE432821A1524DF00A5BFC1 /* vassoura-05.png in Resources */,
 				0BE4327F1A1524DF00A5BFC1 /* vassoura-02.png in Resources */,
 				3FE14F231A16BB15001BE8D7 /* A-mid.caf in Resources */,
-				0BBF81EE1A1D1DA00033149B /* TeclaXilo12.png in Resources */,
 				0BC8DB181A1BBB2700F74157 /* Shamisen.plist in Resources */,
 				0BAFB14419F1ABBB00DCF54F /* ZECAO42.png in Resources */,
 				0BE432831A1524DF00A5BFC1 /* vassoura-06.png in Resources */,
@@ -3118,6 +3134,7 @@
 				3FE14F121A16B91B001BE8D7 /* Gtr HDist LPH - B21.caf in Resources */,
 				0BC8DB2B1A1BBB2700F74157 /* Cello D3.caf in Resources */,
 				3FB6F56D19DA67E60080057B /* P200 Piano C10.caf in Resources */,
+				3F1246091A1DA7240064ADF0 /* TeclaXilo13.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3186,9 +3203,10 @@
 				0BBE5DDD19F0434C00293215 /* GerenciadoresAcoes.m in Sources */,
 				A824718E19D0AB0E00168026 /* FazendaDoReMi.xcdatamodeld in Sources */,
 				0BB1F18219E5DB6D00E9F8E4 /* GerenciadorAnimacoes.m in Sources */,
+				3F1C09431A22C1C600905CD1 /* BotaoVoltarViewController.m in Sources */,
 				A811634019D22A9300506D94 /* SpriteItem.m in Sources */,
 				3FC5D33319DA5C3200348F51 /* Sinfonia.m in Sources */,
-				3FF8CBF919F9EC5A001A40F8 /* PartituraComposta.m in Sources */,
+				3FF8CBF919F9EC5A001A40F8 /* PartituraSinfonia.m in Sources */,
 				0BAFB16B19F1B7B800DCF54F /* GestureLongItem.m in Sources */,
 				0B1D2A7F19E46A8D003CA4C4 /* AulaSomEx1ViewController.m in Sources */,
 				0BB81EAB19F5A134001F868D /* AulaSomEx2ViewController.m in Sources */,

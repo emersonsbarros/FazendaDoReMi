@@ -47,7 +47,7 @@
 
 
 -(void)viewWillAppear:(BOOL)animated{
-    NSLog(@"numerp = %d",[GerenciadorNavigationController sharedManager].controladorApp.viewControllers.count);
+    //NSLog(@"numerp = %d",[GerenciadorNavigationController sharedManager].controladorApp.viewControllers.count);
 }
 
 
@@ -57,7 +57,7 @@
     
     //Add componentes da Tela Edicao
     [[GerenciadorComponenteView sharedManager]addComponentesBarraMenuNotasPausa:self:NO];
-    [[GerenciadorComponenteView sharedManager]addComponentesEscolhaInstrumentoPartitura:self];
+    [[GerenciadorComponenteView sharedManager]addComponentesEscolhaInstrumentoPartitura:self:self.imgFundo:self.imgFundoSecundario];
     [[GerenciadorComponenteView sharedManager]addComponentesPlayerEdicao:self:830:670];
 
     

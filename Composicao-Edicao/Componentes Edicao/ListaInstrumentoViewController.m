@@ -23,6 +23,11 @@
     return self;
 }
 
+-(void)recebeImagensView:(UIImageView*)img1 :(UIImageView*)img2{
+    self.imgFundo = img1;
+    self.imgFundoSecundario = img2;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -69,14 +74,18 @@
     [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = @"Piano";
     [self ocultaAlphaBotoesNotas];
     self.outBotaoPiano.alpha = 1.0;
+    self.imgFundo.image = [UIImage imageNamed:@"fundoazul.png"];
+    self.imgFundoSecundario.image = [UIImage imageNamed:@"fundocasa.png"];
 }
 
 
 - (IBAction)tocarViolao:(id)sender {
     [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
-    [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = @"ViolaoNylon";
+    [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = @"Xilofone";
     [self ocultaAlphaBotoesNotas];
     self.outBotaoViolao.alpha = 1.0;
+    self.imgFundo.image = [UIImage imageNamed:@"backxilofone-2.png"];
+    self.imgFundoSecundario.image = [UIImage imageNamed:@"backxilofone1-2.png"];
 }
 
 

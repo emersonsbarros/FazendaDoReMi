@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListaInstrumentoViewController">
@@ -18,16 +18,6 @@
             <rect key="frame" x="0.0" y="0.0" width="386" height="118"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" alpha="0.49999999999999961" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8iX-J0-nwi">
-                    <rect key="frame" x="15" y="8" width="110" height="110"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                    <state key="normal" backgroundImage="botaoviolao.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="tocarViolao:" destination="-1" eventType="touchUpInside" id="DFE-qO-wdZ"/>
-                    </connections>
-                </button>
                 <button opaque="NO" alpha="0.49999999999999961" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="O5W-of-WjS">
                     <rect key="frame" x="140" y="8" width="110" height="110"/>
                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
@@ -38,7 +28,7 @@
                         <action selector="tocar:" destination="-1" eventType="touchUpInside" id="5EK-1p-DCZ"/>
                     </connections>
                 </button>
-                <button opaque="NO" alpha="0.49999999999999961" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="f8i-eq-a08">
+                <button hidden="YES" opaque="NO" alpha="0.49999999999999961" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="f8i-eq-a08">
                     <rect key="frame" x="266" y="8" width="110" height="110"/>
                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
                     <state key="normal" backgroundImage="botaoflauta.png">
@@ -48,7 +38,18 @@
                         <action selector="tocarFlauta:" destination="-1" eventType="touchUpInside" id="TXM-Cb-hOP"/>
                     </connections>
                 </button>
+                <button opaque="NO" alpha="0.49999999999999961" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8iX-J0-nwi">
+                    <rect key="frame" x="33" y="19" width="80" height="80"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <state key="normal" backgroundImage="btnxilo.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="tocarViolao:" destination="-1" eventType="touchUpInside" id="DFE-qO-wdZ"/>
+                    </connections>
+                </button>
             </subviews>
+            <nil key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
@@ -56,6 +57,11 @@
     <resources>
         <image name="botaoflauta.png" width="124" height="124"/>
         <image name="botaopiano.png" width="124" height="124"/>
-        <image name="botaoviolao.png" width="124" height="124"/>
+        <image name="btnxilo.png" width="78" height="78"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
 </document>

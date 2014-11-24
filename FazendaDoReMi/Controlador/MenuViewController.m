@@ -36,6 +36,7 @@
     
     //Fonte padrão
     [[UILabel appearance] setFont:[UIFont fontWithName:@"Kronika" size:17.0]];
+    
     //Classe recebe navigation controller pai
     [GerenciadorNavigationController sharedManager].controladorApp = self.navigationController;
     
@@ -43,8 +44,7 @@
     [[GerenciadorComponenteView sharedManager]addComponentesMascote:self:0:200:@"zecao"];
     //[[MascoteViewController sharedManager]executaSomMascote:@"BemVindoFazenda":2.0];
     
-       
-    [self animacoesIntro];
+   // [self animacoesIntro];
 
 }
 
@@ -98,7 +98,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     
-    [[MascoteViewController sharedManager]colocaAnimacaoMascote:@"ZecaoTchau"];
+   // [[MascoteViewController sharedManager]colocaAnimacaoMascote:@"ZecaoTchau"];
     
 }
 

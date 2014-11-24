@@ -32,7 +32,7 @@
 
 
 - (void)viewDidAppear:(BOOL)animated {
-    [super viewDidDisappear:YES];
+    [super viewDidAppear:YES];
     
     
     [self animacaoGirar:self.imgCatavento1 :0.0:7.0];
@@ -40,16 +40,29 @@
     [self animacaoGirar:self.btnCatavento3 :1.0:6.0];
     [self animacaoGirar:self.btnCatavento4 :0.5:5.0];
     
-    [self animacaoMovimentarPosicao:self.imgNuvem1 :20.0 :1400 :30];
-    [self animacaoMovimentarPosicao:self.imgNuvem2 :20.0 :-1400 :70];
+    [self animacaoMovimentarPosicao:self.imgNuvem1 :50.0 :1400 :30];
+    [self animacaoMovimentarPosicao:self.imgNuvem2 :50.0 :-1400 :70];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
     
+    [super viewDidDisappear:YES];
+   
+    [self.imgCatavento1.layer removeAllAnimations];
+    [self.btnCatavento2.layer removeAllAnimations];
+    [self.btnCatavento3.layer removeAllAnimations];
+    [self.btnCatavento4.layer removeAllAnimations];
+    
+    [self.imgNuvem1.layer removeAllAnimations];
+    [self.imgNuvem2.layer removeAllAnimations];
     
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [[GerenciadorComponenteView sharedManager]addComponentesBotaoVoltar:self:0:-8];
+    
 }
 
 

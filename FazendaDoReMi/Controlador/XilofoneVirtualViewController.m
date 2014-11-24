@@ -29,6 +29,45 @@
     // Do any additional setup after loading the view from its nib.
     
     [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = @"Xilofone";
+    
+    int contador=0;
+    for(UIButton *btn in self.view.subviews){
+        
+        if(btn.tag == 5){
+            
+            contador++;
+                       
+            switch (contador) {
+                case 1:
+                    [self addLabelEImagem:btn :@"Dó"];
+                    break;
+                case 2:
+                    [self addLabelEImagem:btn :@"Ré"];
+                    break;
+                case 3:
+                    [self addLabelEImagem:btn :@"Mi"];
+                    break;
+                case 4:
+                    [self addLabelEImagem:btn :@"Fá"];
+                    break;
+                case 5:
+                    [self addLabelEImagem:btn :@"Sol"];
+                    break;
+                case 6:
+                    [self addLabelEImagem:btn :@"Lá"];
+                    break;
+                case 7:
+                    [self addLabelEImagem:btn :@"Si"];
+                    contador = 0;
+                    break;
+                default:
+                    
+                    break;
+            }
+            
+        }
+    }
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -124,7 +163,38 @@
 }
 
 
-
+-(void)addLabelEImagem:(UIView*)tecla :(NSString*)nome{
+    
+    UILabel *textoNota = [[UILabel alloc]initWithFrame:CGRectMake(25.25, 140, 30, 30)];
+    textoNota.text = nome;
+    textoNota.numberOfLines = 1;
+    textoNota.textColor = [UIColor blackColor];
+    textoNota.textAlignment = NSTextAlignmentCenter;
+    
+    UIImageView *img;
+    if([nome isEqualToString:@"Dó"]){
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Do4tempos.png"]];
+    }else if([nome isEqualToString:@"Ré"]){
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Re4tempos.png"]];
+    }else if([nome isEqualToString:@"Mi"]){
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Mi4tempos.png"]];
+    }else if([nome isEqualToString:@"Fá"]){
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"fa4Tempos.png"]];
+    }else if([nome isEqualToString:@"Sol"]){
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Sol4Tempos.png"]];
+    }else if([nome isEqualToString:@"Lá"]){
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"La4Tempos.png"]];
+    }else if([nome isEqualToString:@"Si"]){
+        img = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Si4Tempos.png"]];
+    }
+    
+    img.frame = CGRectMake(0, 35, 80, 100);
+    
+    
+    [tecla addSubview:textoNota];
+    [tecla addSubview:img];
+    
+}
 
 
 

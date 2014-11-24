@@ -20,6 +20,8 @@
 //Scroll que recebe a partituras
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollEdicao;
 
+@property (weak, nonatomic) IBOutlet UIImageView *imgFundo;
+@property (weak, nonatomic) IBOutlet UIImageView *imgFundoSecundario;
 
 
 

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Sinfonia.h"
 #import "Nota.h"
+#import "GerenciadorComponenteView.h"
 
 @interface TecladoViewController : UIViewController
 
@@ -112,6 +113,7 @@
 
 
 
+@property (weak, nonatomic) IBOutlet UIView *viewCarregamento;
 
 
 

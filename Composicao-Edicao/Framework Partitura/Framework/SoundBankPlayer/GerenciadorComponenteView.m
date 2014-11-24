@@ -50,12 +50,14 @@
 
 
 //barra de escolha partitura
--(void)addComponentesEscolhaInstrumentoPartitura:(UIViewController*)viewAtual{
+-(void)addComponentesEscolhaInstrumentoPartitura:(UIViewController*)viewAtual :(UIImageView*)imgFundo :(UIImageView*)imgFundoSecundario{
     
     ListaInstrumentoViewController *bar = [[ListaInstrumentoViewController alloc]init];
     bar.view.frame = CGRectMake(120, 640, bar.view.frame.size.width,bar.view.frame.size.height);
+    [bar recebeImagensView:imgFundo :imgFundoSecundario];
     [viewAtual addChildViewController:bar];
     [viewAtual.view addSubview:bar.view];
+    
 }
 
 
@@ -79,6 +81,15 @@
     [viewAtual.view addSubview:bar.view];
 }
 
+
+//barra de player (play,limpar)
+-(void)addComponentesBotaoVoltar:(UIViewController*)viewAtual :(float)posX :(float)posY{
+    
+    BotaoVoltarViewController *bar = [[BotaoVoltarViewController alloc]init];
+    bar.view.frame = CGRectMake(posX,posY, bar.view.frame.size.width,bar.view.frame.size.height);
+    [viewAtual addChildViewController:bar];
+    [viewAtual.view addSubview:bar.view];
+}
 
 
 ////////////////////////// EXERCICIOS ////////////////////////////////////

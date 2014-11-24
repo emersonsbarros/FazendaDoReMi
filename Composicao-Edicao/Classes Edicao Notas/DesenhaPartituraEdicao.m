@@ -615,7 +615,6 @@
 -(void)addComponentesImangesNota:(Nota*)aux :(NSString*)oitava{
     
     NotaAnimadaPadrao *padrao = [[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota];
-    NSLog(@"dsds %@",aux.nomeNota);
     UIImage *imgCarinha = [[DataBaseNotaPadrao sharedManager]retornaCarinhaNota:aux.nomeNota];
     
     if([oitava isEqualToString:@"4"]){

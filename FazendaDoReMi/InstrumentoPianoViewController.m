@@ -36,7 +36,8 @@
     
     //Add componentes da Tela Edicao
     [[GerenciadorComponenteView sharedManager]addComponentesBarraMenuNotasPausa:self:YES];
-    [[GerenciadorComponenteView sharedManager]addComponentesPlayerEdicao:self:0:-8];
+    [[GerenciadorComponenteView sharedManager]addComponentesPlayerEdicao:self:150:-8];
+    [[GerenciadorComponenteView sharedManager]addComponentesBotaoVoltar:self:0:-8];
     
     
     //Manda o UIScrollView para a classe modeladora

@@ -21,6 +21,8 @@
 #import "TecladoViewController.h"
 #import "XilofoneVirtualViewController.h"
 
+#import "BotaoVoltarViewController.h"
+
 @interface GerenciadorComponenteView : NSObject
 
 
@@ -30,9 +32,9 @@
 //Compontes Edicao e leitura de partituras
 -(void)finalizaExercicio:(UIViewController*)contr;
 -(void)addComponentesPlayerPartitura:(UIViewController*)viewAtual :(float)posX :(float)posY;
--(void)addComponentesEscolhaInstrumentoPartitura:(UIViewController*)viewAtual;
+-(void)addComponentesEscolhaInstrumentoPartitura:(UIViewController*)viewAtual :(UIImageView*)imgFundo :(UIImageView*)imgFundoSecundario;
 -(void)addComponentesBarraMenuNotasPausa:(UIViewController*)viewAtual :(BOOL)estado;
-
+-(void)addComponentesBotaoVoltar:(UIViewController*)viewAtual :(float)posX :(float)posY;
 
 //Componetes Exericicios
 -(void)addComponentesPlayerEdicao:(UIViewController*)viewAtual :(float)posX :(float)posY;
