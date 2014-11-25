@@ -24,6 +24,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgFundoSecundario;
 
 
+@property (weak, nonatomic) IBOutlet UIView *viewTelaCarregamento;
+
+
+-(void)chamaTelaCarregamento;
++(ComposicaoPartituraViewController*)sharedManager;
 
 
 @end

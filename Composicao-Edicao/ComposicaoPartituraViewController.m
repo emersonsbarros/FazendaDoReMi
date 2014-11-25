@@ -30,6 +30,29 @@
     return YES;
 }
 
+-(id)init{
+    self = [super init];
+    
+    if(self){
+       
+    }
+    return self;
+}
+
++(id)allocWithZone:(struct _NSZone *)zone{
+    return [self sharedManager];
+}
+
+//Singleton
++(ComposicaoPartituraViewController*)sharedManager{
+    static ComposicaoPartituraViewController *gerenciadorDeItem = nil;
+    
+    if(!gerenciadorDeItem){
+        gerenciadorDeItem = [[super allocWithZone: nil] init];
+    }
+    return gerenciadorDeItem;
+}
+
 
 -(void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear: animated];
@@ -57,9 +80,10 @@
     
     //Add componentes da Tela Edicao
     [[GerenciadorComponenteView sharedManager]addComponentesBarraMenuNotasPausa:self:NO];
-    [[GerenciadorComponenteView sharedManager]addComponentesEscolhaInstrumentoPartitura:self:self.imgFundo:self.imgFundoSecundario];
     [[GerenciadorComponenteView sharedManager]addComponentesPlayerEdicao:self:830:670];
-
+    [[GerenciadorComponenteView sharedManager]addComponentesEscolhaInstrumentoPartitura:self:self.imgFundo:self.imgFundoSecundario];
+    
+    [self.view bringSubviewToFront:self.viewTelaCarregamento];
     
     //Manda o UIScrollView para a classe modeladora
     [[ComponenteScrollEdicao sharedManager]recebeScroll:self.scrollEdicao];
@@ -74,6 +98,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)desapareceTelaCarregamento{
+    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    self.viewTelaCarregamento.hidden = YES;
+}
+
+-(void)chamaTelaCarregamento{
+    self.viewTelaCarregamento.hidden = NO;
+    [self performSelector:@selector(desapareceTelaCarregamento) withObject:nil afterDelay:4.1];
+}
 
 - (IBAction)testa:(id)sender {
     [[GerenciadorNavigationController sharedManager].controladorApp popViewControllerAnimated:YES];

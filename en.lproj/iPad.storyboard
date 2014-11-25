@@ -236,15 +236,22 @@
                                     <action selector="testa:" destination="fc7-hy-kdh" eventType="touchUpInside" id="We9-l2-Pjw"/>
                                 </connections>
                             </button>
+                            <view hidden="YES" alpha="0.49999999999999961" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJA-qs-MU4">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="RQq-Bf-iyP"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
                     <connections>
                         <outlet property="imgFundo" destination="M5U-Fd-0Cd" id="U4G-5o-x4C"/>
                         <outlet property="imgFundoSecundario" destination="AJm-os-dwJ" id="gZF-02-R5m"/>
                         <outlet property="scrollEdicao" destination="RBe-1J-b9s" id="lG6-nM-jtC"/>
+                        <outlet property="viewTelaCarregamento" destination="LJA-qs-MU4" id="AAD-B7-uyW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCE-VF-72q" userLabel="First Responder" sceneMemberID="firstResponder"/>

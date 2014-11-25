@@ -92,4 +92,6 @@
 
 - (void)deallocs;
 
+- (void)freeBuffers;
+
 @end

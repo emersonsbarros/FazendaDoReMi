@@ -70,7 +70,8 @@
 
 //Seta um intrumento na Escolha de usuario para tocar
 - (IBAction)tocar:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [[ComposicaoPartituraViewController sharedManager]chamaTelaCarregamento];
+    
     [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = @"Piano";
     [self ocultaAlphaBotoesNotas];
     self.outBotaoPiano.alpha = 1.0;
@@ -80,7 +81,8 @@
 
 
 - (IBAction)tocarViolao:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [[ComposicaoPartituraViewController sharedManager]chamaTelaCarregamento];
+    
     [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = @"Xilofone";
     [self ocultaAlphaBotoesNotas];
     self.outBotaoViolao.alpha = 1.0;
@@ -90,7 +92,8 @@
 
 
 - (IBAction)tocarFlauta:(id)sender {
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    //[[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    
     [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = @"Ocarina";
     [self ocultaAlphaBotoesNotas];
     self.outBotaoFlauta.alpha = 1.0;

@@ -58,21 +58,23 @@
         
         self.auxPlayPartituraProblema = NO;
         
-        self.listaAuxSoundBank = [[NSMutableArray alloc]init];
-        
     }
+    
     return self;
 }
+
 
 +(id)allocWithZone:(struct _NSZone *)zone{
     return [self sharedManager];
 }
 
+
 -(void)criaSoundBank{
+    
     auxListaSoundBank = 1;
     self.listaSoundBank = [[NSMutableArray alloc]init];
     
-    for(int i=0;i<15;i++){
+    for(int i=0;i<8;i++){
         PartituraSinfonia *bank = [[PartituraSinfonia alloc]init];
         [self.listaSoundBank addObject:bank];
     }
@@ -81,13 +83,13 @@
 
 ////////////////////////////////// Efeitos para Notas //////////////////////////////////
 
-
 -(void)mostraEfeito:(Nota*)notes{
     
     Nota *notaBrilha = notes;
     notaBrilha.imagemNota.alpha = 0.5;
     
 }
+
 
 -(void)desapareceEfeito:(Nota*)notes{
     
@@ -101,25 +103,15 @@
 
 -(void)trocaInstrumentoESoundBank{
     
-    for(PartituraSinfonia *part in self.listaSoundBank){
-        [part.soundBank allNotesOff];
-    }
-    
-    for(PartituraSinfonia *part in self.listaSoundBank){
-        [self.listaAuxSoundBank addObject:part];
-    }
-    
     [self.listaSoundBank removeAllObjects];
     
-    for(int i=0;i<15;i++){
+    auxListaSoundBank = 1;
+    //self.listaSoundBank = [[NSMutableArray alloc]init];
+    
+    for(int i=0;i<8;i++){
         PartituraSinfonia *bank = [[PartituraSinfonia alloc]init];
-        PartituraSinfonia *bank2 = [self.listaAuxSoundBank objectAtIndex:i];
-        for(Nota *notas in bank2.listaPartituraSinfonia){
-            [bank.listaPartituraSinfonia addObject:notas];
-        }
         [self.listaSoundBank addObject:bank];
     }
-    
     
 }
 
@@ -129,7 +121,7 @@
     PartituraSinfonia *partituraPararNota = [self.listaSoundBank objectAtIndex:auxListaSoundBank-1];
     [partituraPararNota.soundBank allNotesOff];
     
-    if(auxListaSoundBank == 15) {
+    if(auxListaSoundBank == 8) {
         auxListaSoundBank = 1;
     }else {
         auxListaSoundBank += 1;
@@ -161,7 +153,7 @@
     PartituraSinfonia *partituraPararNota = [self.listaSoundBank objectAtIndex:auxListaSoundBank-1];
     [partituraPararNota.soundBank allNotesOff];
     
-    if(auxListaSoundBank == 15) {
+    if(auxListaSoundBank == 8) {
         auxListaSoundBank = 1;
     }else {
         auxListaSoundBank += 1;

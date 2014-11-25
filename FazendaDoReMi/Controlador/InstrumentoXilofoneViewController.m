@@ -27,6 +27,19 @@
     return YES;
 }
 
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear: animated];
+    
+    //Tira o som da partitura caso o usuario saia com a musica tocando
+    [[Sinfonia sharedManager]pararPlayerPartitura];
+    [Sinfonia sharedManager].estadoBotaoPlay = true;
+    [Sinfonia sharedManager].estadoBotaoLimpar = true;
+    
+    
+    for(UIView *view in self.view.subviews){
+        [view removeFromSuperview];
+    }
+}
 
 - (void)viewDidLoad
 {

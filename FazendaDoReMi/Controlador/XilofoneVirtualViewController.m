@@ -29,6 +29,7 @@
     // Do any additional setup after loading the view from its nib.
     
     [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = @"Xilofone";
+    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
     
     int contador=0;
     for(UIButton *btn in self.view.subviews){

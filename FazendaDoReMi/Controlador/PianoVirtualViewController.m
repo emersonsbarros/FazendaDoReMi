@@ -30,6 +30,7 @@
     
     
     [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = @"Piano";
+    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
     
     [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(atualizaTempo:) userInfo:nil repeats:YES];
     self.cont = 0;

@@ -40,7 +40,6 @@
 
 
 -(void)trocaInstrumentoESoundBank;
-@property NSMutableArray *listaAuxSoundBank;
 @property NSString *nomeSinfonia;
 @property NSString *dataSinfonia;
 @property NSString *nomeInstrumentoSinfonia;
