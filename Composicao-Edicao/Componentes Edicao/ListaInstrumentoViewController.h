@@ -27,4 +27,9 @@
 @property UIImageView *imgFundoSecundario;
 -(void)recebeImagensView:(UIImageView*)img1 :(UIImageView*)img2;
 
+
++(ListaInstrumentoViewController*)sharedManager;
+
+
+
 @end

@@ -280,6 +280,7 @@
     
     [PlayerPartituraEdicaoViewController sharedManager].lblLimparPartitura.hidden = NO;
     [PlayerPartituraEdicaoViewController sharedManager].lblPlayPartitura.hidden = NO;
+    [ListaInstrumentoViewController sharedManager].view.hidden = NO;
     [ComponenteScrollEdicao sharedManager].tocandoBloqueioInserirNota = YES;
     [PlayerPartituraEdicaoViewController sharedManager].lblStopPartitura.hidden = YES;
     

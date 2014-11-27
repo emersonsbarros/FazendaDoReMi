@@ -10,7 +10,7 @@
 #import "Sinfonia.h"
 #import "NotaEdicaoGesture.h"
 #import "DesenhaPartituraEdicao.h"
-
+#import "ListaInstrumentoViewController.h"
 
 
 @interface ComponenteScrollEdicao : NSObject <UIScrollViewDelegate> {

@@ -196,8 +196,8 @@
     [self adicionaOrdemNota:nomeNotas];
     
     instr1.ordemNotasInstrumento = nomeNotas;
-    instr1.numeroIniciaNota = 37;
-    instr1.metodoPrimeiroTocar = @"tocarPrimeiroPentagramaFlauta";
+    instr1.numeroIniciaNota = 33;
+    instr1.metodoPrimeiroTocar = @"tocarpentagrama1";
     instr1.metodoSegundoTocar = @"tocarSegundoPentagramaFlauta";
     
     [self AddInstrumento:instr1];
@@ -243,7 +243,7 @@
     
     NSMutableArray *nomeNotas = [[NSMutableArray alloc]init];
     [self adicionaOrdemNota:nomeNotas];    instr1.ordemNotasInstrumento = nomeNotas;
-    instr1.numeroIniciaNota = 37;
+    instr1.numeroIniciaNota = 33;
     instr1.metodoPrimeiroTocar = @"tocarpentagrama1";
     instr1.metodoSegundoTocar = @"tocarpentagrama2";
     
@@ -324,7 +324,7 @@
     NSMutableArray *nomeNotas = [[NSMutableArray alloc]init];
     [self adicionaOrdemNota:nomeNotas];
     instr1.ordemNotasInstrumento = nomeNotas;
-    instr1.numeroIniciaNota = 50;
+    instr1.numeroIniciaNota = 15;
     instr1.metodoPrimeiroTocar = @"tocarpentagrama1";
     instr1.metodoSegundoTocar = @"tocarpentagrama2";
     
@@ -359,7 +359,7 @@
     NSMutableArray *nomeNotas = [[NSMutableArray alloc]init];
     [self adicionaOrdemNota:nomeNotas];
     instr1.ordemNotasInstrumento = nomeNotas;
-    instr1.numeroIniciaNota = 23;
+    instr1.numeroIniciaNota = 11;
     instr1.metodoPrimeiroTocar = @"tocarpentagrama1";
     instr1.metodoSegundoTocar = @"tocarpentagrama2";
     
@@ -375,7 +375,7 @@
     NSMutableArray *nomeNotas = [[NSMutableArray alloc]init];
     [self adicionaOrdemNota:nomeNotas];
     instr1.ordemNotasInstrumento = nomeNotas;
-    instr1.numeroIniciaNota = 23;
+    instr1.numeroIniciaNota = 20;
     instr1.metodoPrimeiroTocar = @"tocarpentagrama1";
     instr1.metodoSegundoTocar = @"tocarpentagrama2";
     
@@ -425,11 +425,12 @@
     NSMutableArray *nomeNotas = [[NSMutableArray alloc]init];
     [self adicionaOrdemNota:nomeNotas];
     instr1.ordemNotasInstrumento = nomeNotas;
-    instr1.numeroIniciaNota = 23;
+    instr1.numeroIniciaNota = 16;
     instr1.metodoPrimeiroTocar = @"tocarpentagrama1";
     instr1.metodoSegundoTocar = @"tocarpentagrama2";
     
     [self AddInstrumento:instr1];
+    
     
 }
 
@@ -492,14 +493,13 @@
     NSMutableArray *nomeNotas = [[NSMutableArray alloc]init];
     [self adicionaOrdemNota:nomeNotas];
     instr1.ordemNotasInstrumento = nomeNotas;
-    instr1.numeroIniciaNota = 23;
-    instr1.metodoPrimeiroTocar = @"tocarPrimeiroPentagramaFlauta";
+    instr1.numeroIniciaNota = 29;
+    instr1.metodoPrimeiroTocar = @"tocarpentagrama1";
     instr1.metodoSegundoTocar = @"tocarpentagrama2";
     
     [self AddInstrumento:instr1];
     
 }
-
 
 -(void)instanciaInstrumentoPassaro{
     
@@ -592,7 +592,7 @@
     NSMutableArray *nomeNotas = [[NSMutableArray alloc]init];
     [self adicionaOrdemNota:nomeNotas];
     instr1.ordemNotasInstrumento = nomeNotas;
-    instr1.numeroIniciaNota = 17;
+    instr1.numeroIniciaNota = 16;
     instr1.metodoPrimeiroTocar = @"tocarpentagrama1";
     instr1.metodoSegundoTocar = @"tocarpentagrama2";
     

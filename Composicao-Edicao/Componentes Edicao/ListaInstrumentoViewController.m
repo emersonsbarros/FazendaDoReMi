@@ -23,6 +23,31 @@
     return self;
 }
 
+-(id)init{
+    self = [super init];
+    
+    if(self){
+        
+    }
+    return self;
+}
+
++(id)allocWithZone:(struct _NSZone *)zone{
+    return [self sharedManager];
+}
+
+//Singleton
++(ListaInstrumentoViewController*)sharedManager{
+    static ListaInstrumentoViewController *gerenciadorDeItem = nil;
+    
+    if(!gerenciadorDeItem){
+        gerenciadorDeItem = [[super allocWithZone: nil] init];
+    }
+    return gerenciadorDeItem;
+}
+
+
+
 -(void)recebeImagensView:(UIImageView*)img1 :(UIImageView*)img2{
     self.imgFundo = img1;
     self.imgFundoSecundario = img2;

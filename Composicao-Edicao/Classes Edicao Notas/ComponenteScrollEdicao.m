@@ -268,6 +268,7 @@
 
         [PlayerPartituraEdicaoViewController sharedManager].lblLimparPartitura.hidden = YES;
         [PlayerPartituraEdicaoViewController sharedManager].lblPlayPartitura.hidden = YES;
+        [ListaInstrumentoViewController sharedManager].view.hidden = YES;
         
         float tempo = self.tempoUltimaNota;
         

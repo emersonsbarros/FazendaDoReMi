@@ -2,6 +2,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "SoundBankPlayer.h"
 #import "OpenALSupport.h"
+#import "Sinfonia.h"
 
 // How many Buffer objects we have. This limits the number of sound samples
 // there can be in the sound bank.
@@ -310,6 +311,8 @@ static void InterruptionListener(void *inClientData, UInt32 inInterruptionState)
 		ALenum error;
 		if ((error = alGetError()) != AL_NO_ERROR) 
 		{
+            NSLog(@"reconstroi metodos");
+            [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
 			NSLog(@"Error generating OpenAL source: %x", error);
 			return;
 		}
