@@ -18,16 +18,18 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
+
 
 -(id)init{
     self = [super init];
     
     if(self){
-        
+        self.listaBotoesInstrumentos = [[NSMutableArray alloc]init];
+        [self criaBotoesInstrumento];
     }
     return self;
 }
@@ -56,23 +58,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.ajusteTamanhoBotaoInstrumento = 20;
-    
-    self.listaOutletBotoes = [[NSMutableArray alloc]init];
-    [self.listaOutletBotoes addObject:self.outBotaoFlauta];
-    [self.listaOutletBotoes addObject:self.outBotaoPiano];
-    [self.listaOutletBotoes addObject:self.outBotaoViolao];
-    
-    self.outBotaoPiano.alpha = 1.0;
-
-    
+    [self mostraBotoesInstrumentos];
 }
 
 -(void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear: animated];
-    
-    [self.listaOutletBotoes removeAllObjects];
     
 }
 
@@ -84,45 +74,79 @@
 }
 
 
--(void)ocultaAlphaBotoesNotas{
-    for(UIView *view in self.listaOutletBotoes){
-        view.alpha = 0.5;
-    }
-}
-
 ////////////////////////////METODOS////////////////////////////////////
 
 
-//Seta um intrumento na Escolha de usuario para tocar
-- (IBAction)tocar:(id)sender {
-    [[ComposicaoPartituraViewController sharedManager]chamaTelaCarregamento];
+-(void)criaBotoesInstrumento{
+    [self criaBotaoPiano];
+    [self criaBotaoPiano];
+    [self criaBotaoPiano];
+    [self criaBotaoPiano];
+    [self criaBotaoPiano];
+    [self criaBotaoPiano];
+    [self criaBotaoPiano];
+    [self criaBotaoPiano];
+    [self criaBotaoPiano];
     
-    [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = @"Piano";
-    [self ocultaAlphaBotoesNotas];
-    self.outBotaoPiano.alpha = 1.0;
-    self.imgFundo.image = [UIImage imageNamed:@"fundoazul.png"];
-    self.imgFundoSecundario.image = [UIImage imageNamed:@"fundocasa.png"];
+//    [self criaBotaoFlauta];
+//    [self criaBotaoXilofone];
+}
+
+-(void)criaBotaoPiano{
+    BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithImage:[UIImage imageNamed:@"btnlixeira.png"]];
+    btn.nomeInstrumento = @"Piano";
+    btn.imgFundo = [UIImage imageNamed:@"fundoazul.png"];
+    btn.imgFundoSecundario = [UIImage imageNamed:@"fundocasa.png"];
+    [self.listaBotoesInstrumentos addObject:btn];
+}
+
+//-(void)criaBotaoXilofone{
+//    BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithFrame:CGRectMake(50, 0, 110, 110)];
+//    
+//    btn.nomeInstrumento = @"Xilofone";
+//    [btn setBackgroundImage:[UIImage imageNamed:@"btnlixeira.png"] forState:UIControlStateNormal];
+//    btn.imgFundo = [UIImage imageNamed:@"backxilofone-2.png"];
+//    btn.imgFundoSecundario = [UIImage imageNamed:@"backxilofone1-2.png"];
+//    [self.listaBotoesInstrumentos addObject:btn];
+//}
+//
+//-(void)criaBotaoFlauta{
+//    BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithFrame:CGRectMake(100, 0, 110, 110)];
+//    
+//    btn.nomeInstrumento = @"FlautaDoce";
+//    [btn setBackgroundImage:[UIImage imageNamed:@"btnlixeira.png"] forState:UIControlStateNormal];
+//    btn.imgFundo = [UIImage imageNamed:@"backxilofone-2.png"];
+//    btn.imgFundoSecundario = [UIImage imageNamed:@"backxilofone1-2.png"];
+//    [self.listaBotoesInstrumentos addObject:btn];
+//}
+
+
+//-(void)chamaExercicios:(id)sender{
+//    BotaoInstrumento *button = sender;
+//    
+//    [[ComposicaoPartituraViewController sharedManager]chamaTelaCarregamento];
+//    [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = button.nomeInstrumento;
+//    self.imgFundo.image = [UIImage imageNamed:@"fundoazul.png"];
+//    self.imgFundoSecundario.image = [UIImage imageNamed:@"fundocasa.png"];
+//}
+
+
+-(void)mostraBotoesInstrumentos{
+    
+    self.isp = [[InfiniteScrollPicker alloc] initWithFrame:CGRectMake(0, -20, 455, 150)];
+    [self.isp setItemSize:CGSizeMake(80, 80)];
+    [self.isp setImageAry:self.listaBotoesInstrumentos];
+    [self.isp setSelectedItem:5];
+    [self.view addSubview:self.isp];
 }
 
 
-- (IBAction)tocarViolao:(id)sender {
-    [[ComposicaoPartituraViewController sharedManager]chamaTelaCarregamento];
-    
-    [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = @"Xilofone";
-    [self ocultaAlphaBotoesNotas];
-    self.outBotaoViolao.alpha = 1.0;
-    self.imgFundo.image = [UIImage imageNamed:@"backxilofone-2.png"];
-    self.imgFundoSecundario.image = [UIImage imageNamed:@"backxilofone1-2.png"];
+
+- (void)infiniteScrollPicker:(InfiniteScrollPicker *)infiniteScrollPicker didSelectAtImage:(UIImage *)image
+{
+    NSLog(@"selected");
 }
 
-
-- (IBAction)tocarFlauta:(id)sender {
-    //[[Sinfonia sharedManager]trocaInstrumentoESoundBank];
-    
-    [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = @"Ocarina";
-    [self ocultaAlphaBotoesNotas];
-    self.outBotaoFlauta.alpha = 1.0;
-}
 
 
 

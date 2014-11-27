@@ -375,6 +375,9 @@
 		0BE432891A15323200A5BFC1 /* TecladoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE432871A15323200A5BFC1 /* TecladoViewController.m */; };
 		0BE4328A1A15323200A5BFC1 /* TecladoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BE432881A15323200A5BFC1 /* TecladoViewController.xib */; };
 		0BE4328D1A15324F00A5BFC1 /* TecladoLivreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4328C1A15324F00A5BFC1 /* TecladoLivreViewController.m */; };
+		0BF00EBE1A27A6A80006A627 /* BotaoInstrumento.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF00EBD1A27A6A80006A627 /* BotaoInstrumento.m */; };
+		0BF00EC41A27B7110006A627 /* InfiniteScrollPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF00EC11A27B7110006A627 /* InfiniteScrollPicker.m */; };
+		0BF00EC51A27B7110006A627 /* UIView+viewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF00EC31A27B7110006A627 /* UIView+viewController.m */; };
 		3F0E879719DBA6F8003FF4EB /* JornadaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E879619DBA6F8003FF4EB /* JornadaViewController.m */; };
 		3F1246081A1DA7240064ADF0 /* TeclaXilo12.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1246061A1DA7240064ADF0 /* TeclaXilo12.png */; };
 		3F1246091A1DA7240064ADF0 /* TeclaXilo13.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1246071A1DA7240064ADF0 /* TeclaXilo13.png */; };
@@ -956,6 +959,12 @@
 		0BE432881A15323200A5BFC1 /* TecladoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TecladoViewController.xib; sourceTree = "<group>"; };
 		0BE4328B1A15324F00A5BFC1 /* TecladoLivreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TecladoLivreViewController.h; sourceTree = "<group>"; };
 		0BE4328C1A15324F00A5BFC1 /* TecladoLivreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TecladoLivreViewController.m; sourceTree = "<group>"; };
+		0BF00EBC1A27A6A80006A627 /* BotaoInstrumento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BotaoInstrumento.h; sourceTree = "<group>"; };
+		0BF00EBD1A27A6A80006A627 /* BotaoInstrumento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BotaoInstrumento.m; sourceTree = "<group>"; };
+		0BF00EC01A27B7110006A627 /* InfiniteScrollPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteScrollPicker.h; sourceTree = "<group>"; };
+		0BF00EC11A27B7110006A627 /* InfiniteScrollPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteScrollPicker.m; sourceTree = "<group>"; };
+		0BF00EC21A27B7110006A627 /* UIView+viewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+viewController.h"; sourceTree = "<group>"; };
+		0BF00EC31A27B7110006A627 /* UIView+viewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+viewController.m"; sourceTree = "<group>"; };
 		3F0E879519DBA6F8003FF4EB /* JornadaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JornadaViewController.h; sourceTree = "<group>"; };
 		3F0E879619DBA6F8003FF4EB /* JornadaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JornadaViewController.m; sourceTree = "<group>"; };
 		3F1246061A1DA7240064ADF0 /* TeclaXilo12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TeclaXilo12.png; sourceTree = "<group>"; };
@@ -1250,6 +1259,8 @@
 		0B7C6A691A080C73007802A9 /* Lista */ = {
 			isa = PBXGroup;
 			children = (
+				0BF00EBF1A27B7110006A627 /* Infinite Scroll */,
+				0BF00EBB1A27A6870006A627 /* Botao instrumento */,
 				3FC5D34919DA61FD00348F51 /* ListaInstrumentoViewController.xib */,
 				3FC5D34519DA5DC200348F51 /* ListaInstrumentoViewController.h */,
 				3FC5D34619DA5DC200348F51 /* ListaInstrumentoViewController.m */,
@@ -2015,6 +2026,26 @@
 				0BE432881A15323200A5BFC1 /* TecladoViewController.xib */,
 			);
 			name = Componentes;
+			sourceTree = "<group>";
+		};
+		0BF00EBB1A27A6870006A627 /* Botao instrumento */ = {
+			isa = PBXGroup;
+			children = (
+				0BF00EBC1A27A6A80006A627 /* BotaoInstrumento.h */,
+				0BF00EBD1A27A6A80006A627 /* BotaoInstrumento.m */,
+			);
+			name = "Botao instrumento";
+			sourceTree = "<group>";
+		};
+		0BF00EBF1A27B7110006A627 /* Infinite Scroll */ = {
+			isa = PBXGroup;
+			children = (
+				0BF00EC01A27B7110006A627 /* InfiniteScrollPicker.h */,
+				0BF00EC11A27B7110006A627 /* InfiniteScrollPicker.m */,
+				0BF00EC21A27B7110006A627 /* UIView+viewController.h */,
+				0BF00EC31A27B7110006A627 /* UIView+viewController.m */,
+			);
+			path = "Infinite Scroll";
 			sourceTree = "<group>";
 		};
 		3F1C09451A22C1D200905CD1 /* Botao Voltar */ = {
@@ -3155,6 +3186,7 @@
 			files = (
 				0BAFB16F19F1B82F00DCF54F /* GestureSwipeItem.m in Sources */,
 				A811633B19D229CB00506D94 /* Item.m in Sources */,
+				0BF00EC51A27B7110006A627 /* UIView+viewController.m in Sources */,
 				0B1D2A8519E46B81003CA4C4 /* BotaoVoltarMapaViewController.m in Sources */,
 				3FC5D33819DA5C3200348F51 /* NotaAnimadaPadrao.m in Sources */,
 				0BE432891A15323200A5BFC1 /* TecladoViewController.m in Sources */,
@@ -3168,6 +3200,7 @@
 				0BB1F17E19E5D40600E9F8E4 /* MascoteViewController.m in Sources */,
 				3FC5D33119DA5C3200348F51 /* EscolhaUsuarioPartitura.m in Sources */,
 				3FC5D33519DA5C3200348F51 /* Instrumento.m in Sources */,
+				0BF00EBE1A27A6A80006A627 /* BotaoInstrumento.m in Sources */,
 				3FC5D33419DA5C3200348F51 /* DataBaseInstrumento.m in Sources */,
 				0B862C4319EC6E60009365DD /* ControladorDeItem.m in Sources */,
 				3FC5D2F419DA59BA00348F51 /* PlayerPartituraEdicaoViewController.m in Sources */,
@@ -3204,6 +3237,7 @@
 				A824718E19D0AB0E00168026 /* FazendaDoReMi.xcdatamodeld in Sources */,
 				0BB1F18219E5DB6D00E9F8E4 /* GerenciadorAnimacoes.m in Sources */,
 				3F1C09431A22C1C600905CD1 /* BotaoVoltarViewController.m in Sources */,
+				0BF00EC41A27B7110006A627 /* InfiniteScrollPicker.m in Sources */,
 				A811634019D22A9300506D94 /* SpriteItem.m in Sources */,
 				3FC5D33319DA5C3200348F51 /* Sinfonia.m in Sources */,
 				3FF8CBF919F9EC5A001A40F8 /* PartituraSinfonia.m in Sources */,

@@ -10,24 +10,20 @@
 #import "EscolhaUsuarioPartitura.h"
 #import "Sinfonia.h"
 #import "ComposicaoPartituraViewController.h"
+#import "BotaoInstrumento.h"
+#import "InfiniteScrollPicker.h"
 
 @interface ListaInstrumentoViewController : UIViewController
 
 
 
-@property NSMutableArray *listaOutletBotoes;
-@property int ajusteTamanhoBotaoInstrumento;
-
-//Outlet botoes
-@property (weak, nonatomic) IBOutlet UIButton *outBotaoViolao;
-@property (weak, nonatomic) IBOutlet UIButton *outBotaoPiano;
-@property (weak, nonatomic) IBOutlet UIButton *outBotaoFlauta;
-
+@property NSMutableArray *listaBotoesInstrumentos;
 @property UIImageView *imgFundo;
 @property UIImageView *imgFundoSecundario;
+@property  InfiniteScrollPicker *isp;
+
+
 -(void)recebeImagensView:(UIImageView*)img1 :(UIImageView*)img2;
-
-
 +(ListaInstrumentoViewController*)sharedManager;
 
 
