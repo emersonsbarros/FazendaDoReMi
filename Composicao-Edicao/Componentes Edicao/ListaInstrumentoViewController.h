@@ -7,16 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Sinfonia.h"
-#import "BotaoInstrumento.h"
-#import "InfiniteScrollPicker.h"
 #import "GerenciadorBotaoInstrumento.h"
+#import "Sinfonia.h"
 
 @interface ListaInstrumentoViewController : UIViewController
 
 
-@property InfiniteScrollPicker *isp;
 +(ListaInstrumentoViewController*)sharedManager;
+-(void)chamaTelaCarregamento;
 
+
+@property (weak, nonatomic) IBOutlet UIView *viewCarregamento;
 
 @end

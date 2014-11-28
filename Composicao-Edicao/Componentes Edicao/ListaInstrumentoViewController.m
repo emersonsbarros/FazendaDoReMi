@@ -85,14 +85,26 @@
 
 -(void)mostraBotoesInstrumentos{
     
-    self.isp = [[InfiniteScrollPicker alloc] initWithFrame:CGRectMake(0, -20, 455, 150)];
-    [self.isp setItemSize:CGSizeMake(80, 80)];
-    [self.isp setImageAry:[GerenciadorBotaoInstrumento sharedManager].listaBotoesInstrumentos];
-    [self.isp setSelectedItem:5];
-    [self.view addSubview:self.isp];
+    [GerenciadorBotaoInstrumento sharedManager].isp = [[InfiniteScrollPicker alloc] initWithFrame:CGRectMake(0, -20, 455, 150)];
+    [[GerenciadorBotaoInstrumento sharedManager].isp setItemSize:CGSizeMake(80, 80)];
+    [[GerenciadorBotaoInstrumento sharedManager].isp setImageAry:[GerenciadorBotaoInstrumento sharedManager].listaBotoesInstrumentos];
+    [[GerenciadorBotaoInstrumento sharedManager].isp setSelectedItem:5];
+    [self.view addSubview:[GerenciadorBotaoInstrumento sharedManager].isp];
+    
+    
 }
 
 
+
+-(void)desapareceTelaCarregamento{
+    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    self.viewCarregamento.hidden = YES;
+}
+
+-(void)chamaTelaCarregamento{
+    self.viewCarregamento.hidden = NO;
+    [self performSelector:@selector(desapareceTelaCarregamento) withObject:nil afterDelay:4.1];
+}
 
 - (void)infiniteScrollPicker:(InfiniteScrollPicker *)infiniteScrollPicker didSelectAtImage:(UIImage *)image
 {

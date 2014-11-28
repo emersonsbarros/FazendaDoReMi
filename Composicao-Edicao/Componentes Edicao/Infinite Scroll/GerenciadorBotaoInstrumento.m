@@ -21,6 +21,8 @@
     return self;
 }
 
+
+
 +(id)allocWithZone:(struct _NSZone *)zone{
     return [self sharedManager];
 }
@@ -37,15 +39,29 @@
 
 
 -(void)acionaBotao:(TapBotaoInstrumento*)button{
-    //NSLog(@"dd %@",button.btnInstrumento.nomeInstrumento);
     
-   // [[ComposicaoPartituraViewController sharedManager]chamaTelaCarregamento];
-   // [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [[ListaInstrumentoViewController sharedManager] chamaTelaCarregamento];
+    
     [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = button.btnInstrumento.nomeInstrumento;
-    self.imgFundo.image = [UIImage imageNamed:@"fundoazul.png"];
-    self.imgFundoSecundario.image = [UIImage imageNamed:@"fundocasa.png"];
+    self.imgFundo.image = button.btnInstrumento.imgFundo;
+    self.imgFundoSecundario.image = button.btnInstrumento.imgFundoSecundario;
     
 }
+
+//-(void)adicionaGesture{
+//    
+//    for(BotaoInstrumento *btn in [GerenciadorBotaoInstrumento sharedManager].isp.imageStore){
+//        
+//        NSLog(@"dfdf%@",btn.nomeInstrumento);
+//        
+//        TapBotaoInstrumento *gesture = [[TapBotaoInstrumento alloc]initWithTarget:self action:@selector(acionaBotao:)];
+//        gesture.numberOfTapsRequired = 1;
+//        gesture.numberOfTouchesRequired = 1;
+//        gesture.btnInstrumento = btn;
+//        btn.userInteractionEnabled = YES;
+//        [btn addGestureRecognizer:gesture];
+//    }
+//}
 
 -(void)recebeImagensView:(UIImageView*)img1 :(UIImageView*)img2{
     self.imgFundo = img1;
@@ -216,6 +232,7 @@
     btn.imgFundo = [UIImage imageNamed:@"backxilofone-2.png"];
     btn.imgFundoSecundario = [UIImage imageNamed:@"backxilofone1-2.png"];
     [self.listaBotoesInstrumentos addObject:btn];
+    
 }
 
 

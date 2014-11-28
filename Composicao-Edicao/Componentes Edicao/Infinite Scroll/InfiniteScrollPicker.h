@@ -10,7 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "BotaoInstrumento.h"
 #import "TapBotaoInstrumento.h"
-#import "GerenciadorBotaoInstrumento.h"
+
 
 @class InfiniteScrollPicker;
 
@@ -21,6 +21,7 @@
     float lastSnappingX;
 
 }
+
 
 @property (nonatomic, strong) NSArray *imageAry;
 @property (nonatomic) CGSize itemSize;

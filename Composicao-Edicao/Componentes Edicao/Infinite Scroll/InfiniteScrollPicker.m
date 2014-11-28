@@ -8,6 +8,7 @@
 
 #import "InfiniteScrollPicker.h"
 #import "UIView+viewController.h"
+#import "GerenciadorBotaoInstrumento.h"
 
 @implementation InfiniteScrollPicker
 
@@ -33,6 +34,8 @@
     }
     return self;
 }
+
+
 
 - (void)initInfiniteScrollView
 {

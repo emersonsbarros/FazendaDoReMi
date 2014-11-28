@@ -2079,10 +2079,10 @@
 		0BF00EBF1A27B7110006A627 /* Infinite Scroll */ = {
 			isa = PBXGroup;
 			children = (
-				0BF00EC01A27B7110006A627 /* InfiniteScrollPicker.h */,
-				0BF00EC11A27B7110006A627 /* InfiniteScrollPicker.m */,
 				0BF00EC21A27B7110006A627 /* UIView+viewController.h */,
 				0BF00EC31A27B7110006A627 /* UIView+viewController.m */,
+				0BF00EC01A27B7110006A627 /* InfiniteScrollPicker.h */,
+				0BF00EC11A27B7110006A627 /* InfiniteScrollPicker.m */,
 				3FCCA4061A28205D00BB1CBB /* GerenciadorBotaoInstrumento.h */,
 				3FCCA4071A28205D00BB1CBB /* GerenciadorBotaoInstrumento.m */,
 			);
