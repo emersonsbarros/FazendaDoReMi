@@ -23,6 +23,8 @@
 
 #import "BotaoVoltarViewController.h"
 
+#import "GerenciadorBotaoInstrumento.h"
+
 @interface GerenciadorComponenteView : NSObject
 
 

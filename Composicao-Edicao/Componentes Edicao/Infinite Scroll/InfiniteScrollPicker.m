@@ -39,11 +39,11 @@
     [self initInfiniteScrollViewWithSelectedItem:0];
 }
 
--(void)acaoToqueObjeto:(UITapGestureRecognizer*)tap{
-//    [[ComposicaoPartituraViewController sharedManager]chamaTelaCarregamento];
-//    [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = button.nomeInstrumento;
-//    self.imgFundo.image = [UIImage imageNamed:@"fundoazul.png"];
-//    self.imgFundoSecundario.image = [UIImage imageNamed:@"fundocasa.png"];
+
+-(void)acaoToqueObjeto:(TapBotaoInstrumento*)button{
+    
+    [[GerenciadorBotaoInstrumento sharedManager]acionaBotao:button];
+
 }
 
 - (void)initInfiniteScrollViewWithSelectedItem:(int)index
@@ -75,10 +75,13 @@
             temp.frame = CGRectMake(i * _itemSize.width, self.frame.size.height - _itemSize.height, _itemSize.width, _itemSize.height);
             
             
-            UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(acaoToqueObjeto:)];
+            TapBotaoInstrumento *gesture = [[TapBotaoInstrumento alloc]initWithTarget:self action:@selector(acaoToqueObjeto:)];
             gesture.numberOfTapsRequired = 1;
             gesture.numberOfTouchesRequired = 1;
+            gesture.btnInstrumento = aux
+            ;
             temp.userInteractionEnabled = YES;
+            
             [temp addGestureRecognizer:gesture];
 
             [imageStore addObject:temp];

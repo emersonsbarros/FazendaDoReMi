@@ -54,7 +54,7 @@
     
     ListaInstrumentoViewController *bar = [[ListaInstrumentoViewController alloc]init];
     bar.view.frame = CGRectMake(50, 640, bar.view.frame.size.width,bar.view.frame.size.height);
-    [bar recebeImagensView:imgFundo :imgFundoSecundario];
+    [[GerenciadorBotaoInstrumento sharedManager] recebeImagensView:imgFundo :imgFundoSecundario];
     [viewAtual addChildViewController:bar];
     [viewAtual.view addSubview:bar.view];
     

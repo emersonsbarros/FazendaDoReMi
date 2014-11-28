@@ -312,7 +312,7 @@ static void InterruptionListener(void *inClientData, UInt32 inInterruptionState)
 		if ((error = alGetError()) != AL_NO_ERROR) 
 		{
             NSLog(@"reconstroi metodos");
-            [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+            //[[Sinfonia sharedManager]trocaInstrumentoESoundBank];
 			NSLog(@"Error generating OpenAL source: %x", error);
 			return;
 		}

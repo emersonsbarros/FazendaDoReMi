@@ -28,8 +28,7 @@
     self = [super init];
     
     if(self){
-        self.listaBotoesInstrumentos = [[NSMutableArray alloc]init];
-        [self criaBotoesInstrumento];
+   
     }
     return self;
 }
@@ -50,10 +49,7 @@
 
 
 
--(void)recebeImagensView:(UIImageView*)img1 :(UIImageView*)img2{
-    self.imgFundo = img1;
-    self.imgFundoSecundario = img2;
-}
+
 
 - (void)viewDidLoad
 {
@@ -77,50 +73,6 @@
 ////////////////////////////METODOS////////////////////////////////////
 
 
--(void)criaBotoesInstrumento{
-    [self criaBotaoPiano];
-    [self criaBotaoPiano];
-    [self criaBotaoPiano];
-    [self criaBotaoPiano];
-    [self criaBotaoPiano];
-    [self criaBotaoPiano];
-    [self criaBotaoPiano];
-    [self criaBotaoPiano];
-    [self criaBotaoPiano];
-    
-//    [self criaBotaoFlauta];
-//    [self criaBotaoXilofone];
-}
-
--(void)criaBotaoPiano{
-    BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithImage:[UIImage imageNamed:@"btnlixeira.png"]];
-    btn.nomeInstrumento = @"Piano";
-    btn.imgFundo = [UIImage imageNamed:@"fundoazul.png"];
-    btn.imgFundoSecundario = [UIImage imageNamed:@"fundocasa.png"];
-    [self.listaBotoesInstrumentos addObject:btn];
-}
-
-//-(void)criaBotaoXilofone{
-//    BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithFrame:CGRectMake(50, 0, 110, 110)];
-//    
-//    btn.nomeInstrumento = @"Xilofone";
-//    [btn setBackgroundImage:[UIImage imageNamed:@"btnlixeira.png"] forState:UIControlStateNormal];
-//    btn.imgFundo = [UIImage imageNamed:@"backxilofone-2.png"];
-//    btn.imgFundoSecundario = [UIImage imageNamed:@"backxilofone1-2.png"];
-//    [self.listaBotoesInstrumentos addObject:btn];
-//}
-//
-//-(void)criaBotaoFlauta{
-//    BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithFrame:CGRectMake(100, 0, 110, 110)];
-//    
-//    btn.nomeInstrumento = @"FlautaDoce";
-//    [btn setBackgroundImage:[UIImage imageNamed:@"btnlixeira.png"] forState:UIControlStateNormal];
-//    btn.imgFundo = [UIImage imageNamed:@"backxilofone-2.png"];
-//    btn.imgFundoSecundario = [UIImage imageNamed:@"backxilofone1-2.png"];
-//    [self.listaBotoesInstrumentos addObject:btn];
-//}
-
-
 //-(void)chamaExercicios:(id)sender{
 //    BotaoInstrumento *button = sender;
 //    
@@ -135,7 +87,7 @@
     
     self.isp = [[InfiniteScrollPicker alloc] initWithFrame:CGRectMake(0, -20, 455, 150)];
     [self.isp setItemSize:CGSizeMake(80, 80)];
-    [self.isp setImageAry:self.listaBotoesInstrumentos];
+    [self.isp setImageAry:[GerenciadorBotaoInstrumento sharedManager].listaBotoesInstrumentos];
     [self.isp setSelectedItem:5];
     [self.view addSubview:self.isp];
 }
@@ -146,6 +98,9 @@
 {
     NSLog(@"selected");
 }
+
+
+///////
 
 
 

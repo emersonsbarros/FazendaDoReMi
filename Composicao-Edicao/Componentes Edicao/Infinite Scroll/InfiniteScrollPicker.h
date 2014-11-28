@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "BotaoInstrumento.h"
-
+#import "TapBotaoInstrumento.h"
+#import "GerenciadorBotaoInstrumento.h"
 
 @class InfiniteScrollPicker;
 

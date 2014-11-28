@@ -7,25 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EscolhaUsuarioPartitura.h"
 #import "Sinfonia.h"
-#import "ComposicaoPartituraViewController.h"
 #import "BotaoInstrumento.h"
 #import "InfiniteScrollPicker.h"
+#import "GerenciadorBotaoInstrumento.h"
 
 @interface ListaInstrumentoViewController : UIViewController
 
 
-
-@property NSMutableArray *listaBotoesInstrumentos;
-@property UIImageView *imgFundo;
-@property UIImageView *imgFundoSecundario;
-@property  InfiniteScrollPicker *isp;
-
-
--(void)recebeImagensView:(UIImageView*)img1 :(UIImageView*)img2;
+@property InfiniteScrollPicker *isp;
 +(ListaInstrumentoViewController*)sharedManager;
-
 
 
 @end
