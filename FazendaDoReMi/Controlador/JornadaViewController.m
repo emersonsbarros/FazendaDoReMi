@@ -12,7 +12,6 @@
 #import "GerenciadorDeAula.h"
 
 @interface JornadaViewController ()
-
 @end
 
 @implementation JornadaViewController
@@ -21,45 +20,32 @@
     return YES;
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self mostraAulas];
-
 }
-
--(void)viewWillAppear:(BOOL)animated{
-    
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
-}
-
 
 -(void)chamaExercicios:(id)sender{
     
+    //Aula, Exercicio, ViewController
     Aula *button = sender;
     Exercicio *primeiroExercicio = [button.listaDeExercicios firstObject];
+    
+    
     id object = [[NSClassFromString([primeiroExercicio nomeView]) alloc]initWithNibName:[primeiroExercicio nomeView] bundle:nil];
     
-    //[GerenciadorDeAula sharedManager].exercicioAtual = button;
-
+    //Guardar a aula e exercício atual
+    [GerenciadorDeAula sharedManager].aulaAtual = button;
+    [GerenciadorDeAula sharedManager].indexDoExercicioAtual = 0;
     
-    [self.navigationController pushViewController:object animated:YES];
+    //Push no navigation com a view do exercício
+    [self.navigationController pushViewController: object animated: YES];
     
 }
 
 - (IBAction)btnVoltaMenu:(id)sender {
     [[GerenciadorNavigationController sharedManager].controladorApp popViewControllerAnimated:YES];
 }
-
-
-//AulaSomViewController *aulaSom = [[AulaSomViewController alloc]init];
-//[[GerenciadorNavigationController sharedManager].controladorApp pushViewController:aulaSom animated:YES];
 
 
 -(void)mostraAulas{

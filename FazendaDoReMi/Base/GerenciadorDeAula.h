@@ -14,6 +14,8 @@
 
 //Atributos
 @property NSMutableArray *listaDeAulas;
+@property Aula *aulaAtual;
+@property int indexDoExercicioAtual;
 
 //Métodos
 +(GerenciadorDeAula*)sharedManager;

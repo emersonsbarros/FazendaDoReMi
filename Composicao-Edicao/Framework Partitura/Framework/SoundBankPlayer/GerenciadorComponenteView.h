@@ -13,7 +13,8 @@
 #import "BarraNotasPausasViewController.h"
 #import "PlayerPartituraEdicaoViewController.h"
 
-#import "BotaoVoltarMapaViewController.h"
+#import "BotaoPausaAulaViewController.h"
+#import "MenuPausaAulaViewController.h"
 #import "MascoteViewController.h"
 
 #import "PianoVirtualViewController.h"
@@ -40,7 +41,8 @@
 
 //Componetes Exericicios
 -(void)addComponentesPlayerEdicao:(UIViewController*)viewAtual :(float)posX :(float)posY;
--(void)addComponentesBotaoVoltaMapa:(UIViewController*)viewAtual;
+-(void)addComponentesMenuPausa:(UIViewController*)viewAtual;
+-(void)addComponentesBotaoPausaAula:(UIViewController*)viewAtual;
 -(void)addComponentesMascote:(UIViewController*)viewAtual :(float)posX :(float)posY :(NSString*)nomeMascote;
 
 

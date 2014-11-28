@@ -94,9 +94,10 @@
 
 ////////////////////////// EXERCICIOS ////////////////////////////////////
 
--(void)addComponentesBotaoVoltaMapa:(UIViewController*)viewAtual{
-    BotaoVoltarMapaViewController *bar = [[BotaoVoltarMapaViewController alloc]init];
-    bar.view.frame = CGRectMake(10,10, bar.view.frame.size.width,bar.view.frame.size.height);
+-(void)addComponentesBotaoPausaAula:(UIViewController*)viewAtual{
+    BotaoPausaAulaViewController *bar = [[BotaoPausaAulaViewController alloc]init];
+    bar.view.frame = CGRectMake(10,700, bar.view.frame.size.width, bar.view.frame.size.height);
+    
     [viewAtual addChildViewController:bar];
     [viewAtual.view addSubview:bar.view];
 }
@@ -107,6 +108,14 @@
     bar.view.frame = CGRectMake(posX,posY, bar.view.frame.size.width,bar.view.frame.size.height);
     [viewAtual addChildViewController:bar];
     [viewAtual.view addSubview:bar.view];
+}
+
+-(void)addComponentesMenuPausa:(UIViewController*)viewAtual{
+    MenuPausaAulaViewController *pausaMenu = [[MenuPausaAulaViewController alloc]init];
+    pausaMenu.view.frame = CGRectMake(viewAtual.view.frame.origin.x, viewAtual.view.frame.origin.y, pausaMenu.view.frame.size.width, pausaMenu.view.frame.size.height);
+    
+    [viewAtual addChildViewController: pausaMenu];
+    [viewAtual.view addSubview: pausaMenu.view];
 }
 
 ////////////////////////// Instrumentos ////////////////////////////////////

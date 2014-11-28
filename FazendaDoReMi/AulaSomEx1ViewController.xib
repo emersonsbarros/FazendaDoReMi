@@ -9,7 +9,8 @@
                 <outlet property="imgChocalho" destination="xFO-JY-z0h" id="c0O-mr-ZkU"/>
                 <outlet property="imgFlauta" destination="0JR-rT-uRu" id="EDJ-8B-ZyF"/>
                 <outlet property="imgFlorAgua" destination="Au9-k5-MoB" id="7C9-gf-dYb"/>
-                <outlet property="imgFlorGiratoria" destination="Fcb-sA-9Ma" id="eJI-2q-bLq"/>
+                <outlet property="imgFlorGiratoria1" destination="Fcb-sA-9Ma" id="vU1-MG-QGj"/>
+                <outlet property="imgFlorGiratoria2" destination="eYA-Oe-yIQ" id="nNb-qn-xdQ"/>
                 <outlet property="imgPiano" destination="L4w-ER-Cua" id="mPV-BB-jzl"/>
                 <outlet property="imgQuadro" destination="2eG-SZ-Wf4" id="H5s-DA-0zi"/>
                 <outlet property="imgSaxfone" destination="1sl-dH-6vB" id="GfF-u7-yG2"/>
@@ -28,6 +29,9 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sala_Timbre.png" translatesAutoresizingMaskIntoConstraints="NO" id="pTX-tl-iyp">
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eYA-Oe-yIQ" customClass="Item">
+                    <rect key="frame" x="415" y="304" width="41" height="38"/>
+                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YbX-zO-Lij" customClass="Item">
                     <rect key="frame" x="701" y="81" width="75" height="155"/>
                 </imageView>
@@ -35,7 +39,7 @@
                     <rect key="frame" x="486" y="398" width="90" height="105"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="portaretrato2.png" translatesAutoresizingMaskIntoConstraints="NO" id="xKX-GE-hIy" customClass="Item">
-                    <rect key="frame" x="437" y="140" width="38" height="37"/>
+                    <rect key="frame" x="391" y="147" width="32" height="30"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cbR-3q-ZSa" customClass="Item">
                     <rect key="frame" x="152" y="423" width="115" height="105"/>
@@ -53,19 +57,19 @@
                     <rect key="frame" x="713" y="95" width="37" height="15"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1sl-dH-6vB" customClass="Item">
-                    <rect key="frame" x="884" y="546" width="115" height="148"/>
+                    <rect key="frame" x="814" y="140" width="115" height="148"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0JR-rT-uRu" customClass="Item">
                     <rect key="frame" x="321" y="188" width="71" height="72"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fcb-sA-9Ma" customClass="Item">
-                    <rect key="frame" x="427" y="185" width="48" height="43"/>
+                    <rect key="frame" x="362" y="304" width="41" height="38"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Au9-k5-MoB" customClass="Item">
-                    <rect key="frame" x="365" y="318" width="34" height="29"/>
+                    <rect key="frame" x="423" y="189" width="28" height="24"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2eG-SZ-Wf4" customClass="Item">
-                    <rect key="frame" x="381" y="140" width="48" height="37"/>
+                    <rect key="frame" x="436" y="149" width="43" height="28"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Awb-Q9-RDj" customClass="Item">
                     <rect key="frame" x="308" y="449" width="148" height="143"/>

@@ -75,6 +75,10 @@
                 [[GerenciadoresAcoes sharedManager]escondeImagem:itemEspecifico];
                 break;
             }
+            CASE (@"7") {
+                [[GerenciadorAnimacoes sharedManager]animacaoSpriteEspecifica:itemEspecifico :[listMetParametros objectAtIndex:1]:[listMetParametros objectAtIndex:2]:[listMetParametros objectAtIndex:3]:[listMetParametros objectAtIndex:4]:[listMetParametros objectAtIndex:5]];
+                break;
+            }
             DEFAULT{
                
                 
