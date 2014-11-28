@@ -375,6 +375,9 @@
 		0BE432891A15323200A5BFC1 /* TecladoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE432871A15323200A5BFC1 /* TecladoViewController.m */; };
 		0BE4328A1A15323200A5BFC1 /* TecladoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BE432881A15323200A5BFC1 /* TecladoViewController.xib */; };
 		0BE4328D1A15324F00A5BFC1 /* TecladoLivreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4328C1A15324F00A5BFC1 /* TecladoLivreViewController.m */; };
+		0BE8393C1A28E5BA008FA90F /* SalvarPartituraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE8393A1A28E5BA008FA90F /* SalvarPartituraViewController.m */; };
+		0BE8393D1A28E5BA008FA90F /* SalvarPartituraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BE8393B1A28E5BA008FA90F /* SalvarPartituraViewController.xib */; };
+		0BE839401A28E750008FA90F /* DataBasePartituraSalva.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE8393F1A28E750008FA90F /* DataBasePartituraSalva.m */; };
 		0BF00EBE1A27A6A80006A627 /* BotaoInstrumento.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF00EBD1A27A6A80006A627 /* BotaoInstrumento.m */; };
 		0BF00EC41A27B7110006A627 /* InfiniteScrollPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF00EC11A27B7110006A627 /* InfiniteScrollPicker.m */; };
 		0BF00EC51A27B7110006A627 /* UIView+viewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF00EC31A27B7110006A627 /* UIView+viewController.m */; };
@@ -976,6 +979,11 @@
 		0BE432881A15323200A5BFC1 /* TecladoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TecladoViewController.xib; sourceTree = "<group>"; };
 		0BE4328B1A15324F00A5BFC1 /* TecladoLivreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TecladoLivreViewController.h; sourceTree = "<group>"; };
 		0BE4328C1A15324F00A5BFC1 /* TecladoLivreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TecladoLivreViewController.m; sourceTree = "<group>"; };
+		0BE839391A28E5BA008FA90F /* SalvarPartituraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalvarPartituraViewController.h; sourceTree = "<group>"; };
+		0BE8393A1A28E5BA008FA90F /* SalvarPartituraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalvarPartituraViewController.m; sourceTree = "<group>"; };
+		0BE8393B1A28E5BA008FA90F /* SalvarPartituraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SalvarPartituraViewController.xib; sourceTree = "<group>"; };
+		0BE8393E1A28E750008FA90F /* DataBasePartituraSalva.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBasePartituraSalva.h; sourceTree = "<group>"; };
+		0BE8393F1A28E750008FA90F /* DataBasePartituraSalva.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBasePartituraSalva.m; sourceTree = "<group>"; };
 		0BF00EBC1A27A6A80006A627 /* BotaoInstrumento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BotaoInstrumento.h; sourceTree = "<group>"; };
 		0BF00EBD1A27A6A80006A627 /* BotaoInstrumento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BotaoInstrumento.m; sourceTree = "<group>"; };
 		0BF00EC01A27B7110006A627 /* InfiniteScrollPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteScrollPicker.h; sourceTree = "<group>"; };
@@ -2065,6 +2073,18 @@
 			name = Componentes;
 			sourceTree = "<group>";
 		};
+		0BE839381A28E4E0008FA90F /* SalvarPartitura */ = {
+			isa = PBXGroup;
+			children = (
+				0BE8393E1A28E750008FA90F /* DataBasePartituraSalva.h */,
+				0BE8393F1A28E750008FA90F /* DataBasePartituraSalva.m */,
+				0BE839391A28E5BA008FA90F /* SalvarPartituraViewController.h */,
+				0BE8393A1A28E5BA008FA90F /* SalvarPartituraViewController.m */,
+				0BE8393B1A28E5BA008FA90F /* SalvarPartituraViewController.xib */,
+			);
+			name = SalvarPartitura;
+			sourceTree = "<group>";
+		};
 		0BF00EBB1A27A6870006A627 /* Botao instrumento */ = {
 			isa = PBXGroup;
 			children = (
@@ -2328,6 +2348,7 @@
 		3FC5D2BC19DA59BA00348F51 /* Componentes Edicao */ = {
 			isa = PBXGroup;
 			children = (
+				0BE839381A28E4E0008FA90F /* SalvarPartitura */,
 				0B7C6A6A1A080C7D007802A9 /* Player Partitura */,
 				0B7C6A691A080C73007802A9 /* Lista */,
 				0B7C6A681A080B6A007802A9 /* Barra Menu Notas */,
@@ -2860,6 +2881,7 @@
 				0BC4BC131A16939800D03E1F /* bongo67.caf in Resources */,
 				0B7C6A651A07EEDD007802A9 /* sustenidoRe.png in Resources */,
 				0BC8DB171A1BBB2700F74157 /* Banjo F6.caf in Resources */,
+				0BE8393D1A28E5BA008FA90F /* SalvarPartituraViewController.xib in Resources */,
 				0BBF81F11A1D1DA00033149B /* TeclaXilo3.png in Resources */,
 				3FB6F55C19DA67E60080057B /* mib2.caf in Resources */,
 				3F5D4D431A17E67200A33538 /* Xylo C7.caf in Resources */,
@@ -3304,7 +3326,9 @@
 				0BD109EB19F57C7D00D5FA52 /* GesturePinchItem.m in Sources */,
 				0B1D2A8919E46CD1003CA4C4 /* GerenciadorNavigationController.m in Sources */,
 				A824718719D0AB0E00168026 /* main.m in Sources */,
+				0BE8393C1A28E5BA008FA90F /* SalvarPartituraViewController.m in Sources */,
 				3FC5D33719DA5C3200348F51 /* Nota.m in Sources */,
+				0BE839401A28E750008FA90F /* DataBasePartituraSalva.m in Sources */,
 				A8F1C4B219D1F8AD001850E4 /* EstudioViewController.m in Sources */,
 				3FC5D33919DA5C3200348F51 /* NotaEdicaoGesture.m in Sources */,
 				0BBF81D41A1D1C4C0033149B /* XilofoneVirtualViewController.m in Sources */,
