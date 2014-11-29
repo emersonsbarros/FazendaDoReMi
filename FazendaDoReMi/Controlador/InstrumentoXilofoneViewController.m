@@ -23,8 +23,17 @@
     return self;
 }
 
+////////////////////// VIEWCONTROLLER //////////////////////
+
+
 - (BOOL)prefersStatusBarHidden {
     return YES;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:YES];
+    
+    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
 }
 
 -(void)viewDidDisappear:(BOOL)animated{
@@ -36,9 +45,9 @@
     [Sinfonia sharedManager].estadoBotaoLimpar = true;
     
     
-    for(UIView *view in self.view.subviews){
-        [view removeFromSuperview];
-    }
+//    for(UIView *view in self.view.subviews){
+//        [view removeFromSuperview];
+//    }
 }
 
 - (void)viewDidLoad
@@ -62,25 +71,13 @@
     
     [[GerenciadorComponenteView sharedManager]addComponentesXilofone:self :0 :500];
     
-    
-    
-    
 }
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

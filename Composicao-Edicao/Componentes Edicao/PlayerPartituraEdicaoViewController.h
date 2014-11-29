@@ -15,16 +15,18 @@
 
 //Label para mostrar quantidade de notas inseridas
 @property (weak, nonatomic) IBOutlet UILabel *txtQtd;
-
-//timer
+//timer para calcular qt de notas
 @property NSTimer *timerAutualizaQtNotas;
 
-+(PlayerPartituraEdicaoViewController*)sharedManager;
 
-
+//Out dos botoes
 @property (weak, nonatomic) IBOutlet UIButton *lblPlayPartitura;
 @property (weak, nonatomic) IBOutlet UIButton *lblLimparPartitura;
 @property (weak, nonatomic) IBOutlet UIButton *lblStopPartitura;
+
+
+//Metodos
++(PlayerPartituraEdicaoViewController*)sharedManager;
 
 
 @end

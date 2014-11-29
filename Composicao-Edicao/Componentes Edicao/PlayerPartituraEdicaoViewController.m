@@ -23,6 +23,9 @@
     return self;
 }
 
+
+////////////////////////////////// SINGTON //////////////////////////////////
+
 +(PlayerPartituraEdicaoViewController*)sharedManager{
     static PlayerPartituraEdicaoViewController *unicoInstrumento = nil;
     if(!unicoInstrumento){
@@ -38,24 +41,28 @@
 -(id)init{
     self = [super init];
     if(self){
-    
+        
     }
     return self;
 }
 
 
+////////////////////////////////// VIEWCONTROLLER //////////////////////////////////
 
--(void)viewDidDisappear:(BOOL)animated{
-    [super viewDidDisappear: animated];
-    
-    self.lblStopPartitura.hidden = YES;
-    
-}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+-(void)viewDidDisappear:(BOOL)animated{
+   
+    [super viewDidDisappear: animated];
+    
+    self.lblStopPartitura.hidden = YES;
+    
 }
 
 
@@ -69,7 +76,7 @@
 }
 
 
-////////////////////////////////// METODOS //////////////////////////////////////////
+////////////////////////////////// METODOS AUXILIARES //////////////////////////////////////////
 
 
 //metodo que atualiza a qt de notas inseridas
@@ -80,7 +87,7 @@
 }
 
 
-////////////////////////////////// Player //////////////////////////////////////////
+////////////////////////////////////// Player Acoes //////////////////////////////////////////
 
 //Toca todas as notas do usario
 - (IBAction)tocarTodasNoras:(id)sender {
@@ -89,6 +96,7 @@
     }
 }
 
+
 //Limpa as notas da tela
 - (IBAction)limparNotasPartituraEdicao:(id)sender {
     
@@ -96,6 +104,7 @@
 
 }
 
+//Stop na partitura
 - (IBAction)stopPartitura:(id)sender {
     self.lblStopPartitura.hidden = YES;
     [[Sinfonia sharedManager]pararPlayerPartitura];

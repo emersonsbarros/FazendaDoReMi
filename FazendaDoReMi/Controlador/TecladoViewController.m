@@ -23,19 +23,11 @@
     return self;
 }
 
+///////////////////// VIEWCONTROLLER /////////////////////
+
 - (BOOL)prefersStatusBarHidden {
     return YES;
     
-}
-
--(void)desapareceTelaCarregamento{
-    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
-    self.viewCarregamento.hidden = YES;
-}
-
--(void)chamaTelaCarregamento{
-    self.viewCarregamento.hidden = NO;
-    [self performSelector:@selector(desapareceTelaCarregamento) withObject:nil afterDelay:5.0];
 }
 
 
@@ -43,7 +35,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [[GerenciadorComponenteView sharedManager]addComponentesBotaoVoltar:self:0:-8];
     
     self.nomeInstrumento = @"Piano";
     
@@ -95,11 +86,29 @@
     
 }
 
+
+//////////////////////////// METODOS AUXILIARES /////////////////////
+
+
+-(void)desapareceTelaCarregamento{
+    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    self.viewCarregamento.hidden = YES;
+}
+
+-(void)chamaTelaCarregamento{
+    self.viewCarregamento.hidden = NO;
+    [self performSelector:@selector(desapareceTelaCarregamento) withObject:nil afterDelay:5.0];
+}
+
+
 -(void)tocarNota:(NSTimer*)tempo{
      [[Sinfonia sharedManager]tocarUmaNota:[NSMutableArray arrayWithObjects:[tempo userInfo], nil]:self.nomeInstrumento];
      [tempo invalidate];
 }
 
+
+
+//////////////////////////// ACOES TECLAS ////////////////////////////
 
 - (IBAction)tecla4c:(id)sender {
     
@@ -527,7 +536,7 @@
 }
 
 
-//////////////////////////////////////////////////////
+////////////////////////// BOTOES INSTRUMENTO ////////////////////////////
 
 
 - (IBAction)btnAcordiao:(id)sender {
@@ -619,7 +628,6 @@
     self.nomeInstrumento = @"Violoncelo";
 }
 
-/////
 
 - (IBAction)btnGaita:(id)sender {
     [self chamaTelaCarregamento];

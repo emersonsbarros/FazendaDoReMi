@@ -11,6 +11,9 @@
 @implementation GerenciadorBotaoInstrumento
 
 
+
+////////////////////////////////// SINGTON //////////////////////////////////
+
 -(id)init{
     self = [super init];
     
@@ -37,36 +40,25 @@
     return gerenciadorDeItem;
 }
 
+////////////////////////////////// METODOS AUXILIARES //////////////////////////////////
 
 -(void)acionaBotao:(TapBotaoInstrumento*)button{
     
     [[ListaInstrumentoViewController sharedManager] chamaTelaCarregamento];
-    
     [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = button.btnInstrumento.nomeInstrumento;
     self.imgFundo.image = button.btnInstrumento.imgFundo;
     self.imgFundoSecundario.image = button.btnInstrumento.imgFundoSecundario;
     
 }
 
-//-(void)adicionaGesture{
-//    
-//    for(BotaoInstrumento *btn in [GerenciadorBotaoInstrumento sharedManager].isp.imageStore){
-//        
-//        NSLog(@"dfdf%@",btn.nomeInstrumento);
-//        
-//        TapBotaoInstrumento *gesture = [[TapBotaoInstrumento alloc]initWithTarget:self action:@selector(acionaBotao:)];
-//        gesture.numberOfTapsRequired = 1;
-//        gesture.numberOfTouchesRequired = 1;
-//        gesture.btnInstrumento = btn;
-//        btn.userInteractionEnabled = YES;
-//        [btn addGestureRecognizer:gesture];
-//    }
-//}
 
 -(void)recebeImagensView:(UIImageView*)img1 :(UIImageView*)img2{
     self.imgFundo = img1;
     self.imgFundoSecundario = img2;
 }
+
+
+////////////////////////////////// CRIA BOTOES INSTRUMENTOS ///////////////////////////
 
 -(void)criaBotoesInstrumento{
     [self criaBotaoPiano];
@@ -234,18 +226,6 @@
     [self.listaBotoesInstrumentos addObject:btn];
     
 }
-
-
-
-//-(void)chamaExercicios:(id)sender{
-//    BotaoInstrumento *button = sender;
-//
-//    [[ComposicaoPartituraViewController sharedManager]chamaTelaCarregamento];
-//    [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = button.nomeInstrumento;
-//    self.imgFundo.image = [UIImage imageNamed:@"fundoazul.png"];
-//    self.imgFundoSecundario.image = [UIImage imageNamed:@"fundocasa.png"];
-//}
-
 
 
 

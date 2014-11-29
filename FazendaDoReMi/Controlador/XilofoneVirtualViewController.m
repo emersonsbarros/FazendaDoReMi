@@ -23,6 +23,9 @@
     return self;
 }
 
+////////////////////// viewcontroller //////////////////////
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -30,6 +33,8 @@
     
     [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = @"Xilofone";
     [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    
+    [self deixaBotoesExclusivos:self.view];
     
     int contador=0;
     for(UIButton *btn in self.view.subviews){
@@ -75,6 +80,18 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+
+////////////////////// METODOS AUXILIARES //////////////////////
+
+-(void)deixaBotoesExclusivos:(UIView *)myView
+{
+    for (UIView * button in [myView subviews]) {
+        if([button isKindOfClass:[UIButton class]])
+            [((UIButton *)button) setExclusiveTouch:YES];
+    }
 }
 
 -(void)tocarNotaPoint:(NSTimer*)tempo{
@@ -163,7 +180,7 @@
     
 }
 
-
+//Adiciona imagem e lavel a tecla
 -(void)addLabelEImagem:(UIView*)tecla :(NSString*)nome{
     
     UILabel *textoNota = [[UILabel alloc]initWithFrame:CGRectMake(25.25, 140, 30, 30)];

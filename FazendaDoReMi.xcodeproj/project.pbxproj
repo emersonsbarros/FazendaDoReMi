@@ -1489,9 +1489,9 @@
 			children = (
 				0BF00EBF1A27B7110006A627 /* Infinite Scroll */,
 				0BF00EBB1A27A6870006A627 /* Botao instrumento */,
-				3FC5D34919DA61FD00348F51 /* ListaInstrumentoViewController.xib */,
 				3FC5D34519DA5DC200348F51 /* ListaInstrumentoViewController.h */,
 				3FC5D34619DA5DC200348F51 /* ListaInstrumentoViewController.m */,
+				3FC5D34919DA61FD00348F51 /* ListaInstrumentoViewController.xib */,
 			);
 			name = Lista;
 			sourceTree = "<group>";
@@ -1499,9 +1499,9 @@
 		0B7C6A6A1A080C7D007802A9 /* Player Partitura */ = {
 			isa = PBXGroup;
 			children = (
-				3FC5D34A19DA61FD00348F51 /* PlayerPartituraEdicaoViewController.xib */,
 				3FC5D2BF19DA59BA00348F51 /* PlayerPartituraEdicaoViewController.h */,
 				3FC5D2C019DA59BA00348F51 /* PlayerPartituraEdicaoViewController.m */,
+				3FC5D34A19DA61FD00348F51 /* PlayerPartituraEdicaoViewController.xib */,
 			);
 			name = "Player Partitura";
 			sourceTree = "<group>";
@@ -2493,6 +2493,7 @@
 				3F1C09421A22C1C600905CD1 /* BotaoVoltarViewController.xib */,
 			);
 			name = "Botao Voltar";
+			path = ../../FazendaDoReMi/Controlador;
 			sourceTree = "<group>";
 		};
 		3F5D4D3C1A17E67200A33538 /* Xilofone */ = {
@@ -2721,6 +2722,7 @@
 		3FC5D2BC19DA59BA00348F51 /* Componentes Edicao */ = {
 			isa = PBXGroup;
 			children = (
+				3F1C09451A22C1D200905CD1 /* Botao Voltar */,
 				0BE839381A28E4E0008FA90F /* SalvarPartitura */,
 				0B7C6A6A1A080C7D007802A9 /* Player Partitura */,
 				0B7C6A691A080C73007802A9 /* Lista */,
@@ -3041,7 +3043,6 @@
 		A8F1C4AF19D1F89B001850E4 /* Menus */ = {
 			isa = PBXGroup;
 			children = (
-				3F1C09451A22C1D200905CD1 /* Botao Voltar */,
 				0BAFB16619F1AD5A00DCF54F /* Estudio */,
 				0BAFB16519F1AD3500DCF54F /* Mapa Jornada */,
 				0BAFB16419F1AD2300DCF54F /* Home */,

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GerenciadorBotaoInstrumento.h"
 #import "Sinfonia.h"
+#import "ComposicaoPartituraViewController.h"
 
 @interface ListaInstrumentoViewController : UIViewController
 
@@ -17,6 +18,5 @@
 -(void)chamaTelaCarregamento;
 
 
-@property (weak, nonatomic) IBOutlet UIView *viewCarregamento;
 
 @end

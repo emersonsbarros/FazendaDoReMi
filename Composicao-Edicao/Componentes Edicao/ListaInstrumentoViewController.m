@@ -23,6 +23,7 @@
     return self;
 }
 
+//////////////////////////// SINGTON //////////////////////////// 
 
 -(id)init{
     self = [super init];
@@ -48,13 +49,15 @@
 }
 
 
-
+//////////////////////////// VIEWCONTROLLER ////////////////////////////
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self mostraBotoesInstrumentos];
+    
+    
 }
 
 -(void)viewDidDisappear:(BOOL)animated {
@@ -70,49 +73,38 @@
 }
 
 
-////////////////////////////METODOS////////////////////////////////////
+//////////////////////////// METODOS AUXILIARES ////////////////////////////////////
 
 
-//-(void)chamaExercicios:(id)sender{
-//    BotaoInstrumento *button = sender;
-//    
-//    [[ComposicaoPartituraViewController sharedManager]chamaTelaCarregamento];
-//    [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = button.nomeInstrumento;
-//    self.imgFundo.image = [UIImage imageNamed:@"fundoazul.png"];
-//    self.imgFundoSecundario.image = [UIImage imageNamed:@"fundocasa.png"];
-//}
-
-
+//Adiciona Scroll Terceiro
 -(void)mostraBotoesInstrumentos{
     
     [GerenciadorBotaoInstrumento sharedManager].isp = [[InfiniteScrollPicker alloc] initWithFrame:CGRectMake(0, -20, 455, 150)];
     [[GerenciadorBotaoInstrumento sharedManager].isp setItemSize:CGSizeMake(80, 80)];
     [[GerenciadorBotaoInstrumento sharedManager].isp setImageAry:[GerenciadorBotaoInstrumento sharedManager].listaBotoesInstrumentos];
-    [[GerenciadorBotaoInstrumento sharedManager].isp setSelectedItem:5];
+    [[GerenciadorBotaoInstrumento sharedManager].isp setSelectedItem:0];
     [self.view addSubview:[GerenciadorBotaoInstrumento sharedManager].isp];
     
-    
 }
 
 
-
+//Troca de instrumento
 -(void)desapareceTelaCarregamento{
     [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
-    self.viewCarregamento.hidden = YES;
+    [ComposicaoPartituraViewController sharedManager].viewTelaCarregamento.hidden = YES;
 }
 
+//Timer para trocar instrumento
 -(void)chamaTelaCarregamento{
-    self.viewCarregamento.hidden = NO;
+     [ComposicaoPartituraViewController sharedManager].viewTelaCarregamento.hidden = NO;
     [self performSelector:@selector(desapareceTelaCarregamento) withObject:nil afterDelay:4.1];
 }
 
-- (void)infiniteScrollPicker:(InfiniteScrollPicker *)infiniteScrollPicker didSelectAtImage:(UIImage *)image
-{
+
+
+- (void)infiniteScrollPicker:(InfiniteScrollPicker *)infiniteScrollPicker didSelectAtImage:(UIImage *)image{
     NSLog(@"selected");
 }
-
-
-///////
 
 
 

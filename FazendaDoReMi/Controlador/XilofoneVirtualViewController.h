@@ -15,7 +15,7 @@
 
 
 
-
+//Botoes
 - (IBAction)btnTecla1:(id)sender;
 - (IBAction)btnTecla2:(id)sender;
 - (IBAction)btnTecla3:(id)sender;
@@ -31,7 +31,7 @@
 - (IBAction)btnTecla13:(id)sender;
 
 
-
+//Valores para passar como um touch (x,y)
 @property NSValue *nota4c;
 @property NSValue *nota4d;
 @property NSValue *nota4e;

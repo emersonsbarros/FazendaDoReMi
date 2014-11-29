@@ -26,10 +26,6 @@
 }
 
 
-- (BOOL)prefersStatusBarHidden {
-    return YES;
-}
-
 -(id)init{
     self = [super init];
     
@@ -53,6 +49,20 @@
     return gerenciadorDeItem;
 }
 
+/////////////////// VIEWCONTROLLER ///////////////////
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:YES];
+    
+    [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
+    [EscolhaUsuarioPartitura sharedManager].nomeInstrumentoPartitura = @"Piano";
+    
+}
 
 -(void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear: animated];
@@ -68,12 +78,6 @@
     }
 }
 
-
--(void)viewWillAppear:(BOOL)animated{
-    //NSLog(@"numerp = %d",[GerenciadorNavigationController sharedManager].controladorApp.viewControllers.count);
-}
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -81,6 +85,7 @@
     //Add componentes da Tela Edicao
     [[GerenciadorComponenteView sharedManager]addComponentesBarraMenuNotasPausa:self:NO];
     [[GerenciadorComponenteView sharedManager]addComponentesPlayerEdicao:self:830:670];
+    [[GerenciadorComponenteView sharedManager]addComponentesBotaoVoltar:self:0:-8];
     [[GerenciadorComponenteView sharedManager]addComponentesEscolhaInstrumentoPartitura:self:self.imgFundo:self.imgFundoSecundario];
     
     [self.view bringSubviewToFront:self.viewTelaCarregamento];
@@ -89,6 +94,7 @@
     [[ComponenteScrollEdicao sharedManager]recebeScroll:self.scrollEdicao];
     //Desenha a partitura com 10 linhas de pentagrama
     [[DesenhaPartituraEdicao sharedManager]desenhaContornoPartituraParaEdicao:6:YES];
+    
  
 }
 
@@ -98,6 +104,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
+/////////////////// METODOS AUXILIARES ///////////////////
+
 -(void)desapareceTelaCarregamento{
     [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
     self.viewTelaCarregamento.hidden = YES;
@@ -106,10 +116,6 @@
 -(void)chamaTelaCarregamento{
     self.viewTelaCarregamento.hidden = NO;
     [self performSelector:@selector(desapareceTelaCarregamento) withObject:nil afterDelay:4.1];
-}
-
-- (IBAction)testa:(id)sender {
-    [[GerenciadorNavigationController sharedManager].controladorApp popViewControllerAnimated:YES];
 }
 
 

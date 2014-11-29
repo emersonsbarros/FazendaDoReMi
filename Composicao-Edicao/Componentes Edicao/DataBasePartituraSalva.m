@@ -33,7 +33,7 @@
 
 
 -(void)salvarPartitura{
-    Partitura *partitura = [[Partitura alloc]init];
+    //Partitura *partitura = [[Partitura alloc]init];
     
     
 }

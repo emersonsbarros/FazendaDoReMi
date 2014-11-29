@@ -14,7 +14,7 @@
 @interface TecladoViewController : UIViewController
 
 
-///////4
+//OITAVA 4
 - (IBAction)tecla4c:(id)sender;
 - (IBAction)tecla4d:(id)sender;
 - (IBAction)tecla4e:(id)sender;
@@ -22,7 +22,6 @@
 - (IBAction)tecla4g:(id)sender;
 - (IBAction)tecla4a:(id)sender;
 - (IBAction)tecla4b:(id)sender;
-
 @property Nota *nota4c;
 @property Nota *nota4d;
 @property Nota *nota4e;
@@ -33,15 +32,13 @@
 
 
 
-///////5
+//OITAVA 5
 - (IBAction)tecla5c:(id)sender;
 - (IBAction)tecla5d:(id)sender;
 - (IBAction)tecla5e:(id)sender;
 - (IBAction)tecla5f:(id)sender;
 - (IBAction)tecla5g:(id)sender;
 - (IBAction)tecla5a:(id)sender;
-
-
 @property Nota *nota5c;
 @property Nota *nota5d;
 @property Nota *nota5e;
@@ -63,7 +60,6 @@
 - (IBAction)teclas7:(id)sender;
 - (IBAction)teclas8:(id)sender;
 - (IBAction)tecla9:(id)sender;
-
 @property Nota *notas1;
 @property Nota *notas2;
 @property Nota *notas3;
@@ -110,9 +106,7 @@
 - (IBAction)btnVioloncelo:(id)sender;
 
 
-
-
-
+//vIRE CARREGAMENTO
 @property (weak, nonatomic) IBOutlet UIView *viewCarregamento;
 
 

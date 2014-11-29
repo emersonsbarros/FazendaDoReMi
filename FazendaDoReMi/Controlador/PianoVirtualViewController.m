@@ -23,6 +23,9 @@
     return self;
 }
 
+
+////////////////////// VIEWCONTROLLER //////////////////////
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -82,6 +85,11 @@
     [super didReceiveMemoryWarning];
     
 }
+
+
+
+
+////////////////////// METODOS AUXILIARES //////////////////////
 
 -(void)atualizaTempo:(NSTimer*)tempo{
     self.cont += 0.5;
@@ -322,7 +330,6 @@
     }
     
     img.frame = CGRectMake(0, 135, 80, 100);
-    
     
     [tecla addSubview:textoNota];
     [tecla addSubview:img];

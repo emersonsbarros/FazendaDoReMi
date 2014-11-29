@@ -23,7 +23,7 @@
     return self;
 }
 
-
+///////////////////// VIEWCONTROLLER /////////////////////
 
 - (BOOL)prefersStatusBarHidden {
     return YES;
@@ -33,7 +33,6 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:YES];
-    
     
     [self animacaoGirar:self.imgCatavento1 :0.0:7.0];
     [self animacaoGirar:self.btnCatavento2 :1.5:4.0];
@@ -72,6 +71,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
+///////////////////// METODOS AUXILIARES /////////////////////
 
 -(void)animacaoGirar:(UIImageView*)imagem :(float)tempo :(float)duracaoRotacao{
     

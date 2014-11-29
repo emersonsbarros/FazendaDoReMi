@@ -14,11 +14,11 @@
 
 @implementation BotaoVoltarViewController
 
+
+
 - (BOOL)prefersStatusBarHidden {
     return YES;
-    
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,7 +29,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 
 - (IBAction)btnVoltar:(id)sender {

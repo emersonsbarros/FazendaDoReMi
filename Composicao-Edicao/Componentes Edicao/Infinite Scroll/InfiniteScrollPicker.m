@@ -35,6 +35,24 @@
     return self;
 }
 
+/////////////////////////// METODOS SECUNDARIOS ///////////////////////////
+
+-(void)acaoToqueObjeto:(TapBotaoInstrumento*)button{
+    
+    if([button.btnInstrumento.nomeInstrumento isEqualToString:[GerenciadorBotaoInstrumento sharedManager].btnInstrumentoAtual.nomeInstrumento]){
+        [[GerenciadorBotaoInstrumento sharedManager]acionaBotao:button];
+    }
+    
+}
+
+- (void)infiniteScrollPicker:(InfiniteScrollPicker *)infiniteScrollPicker didSelectAtImage:(BotaoInstrumento *)image {
+    
+    [GerenciadorBotaoInstrumento sharedManager].btnInstrumentoAtual = image;
+    
+}
+
+
+/////////////////////////// METODOS CLASSE TERCEIRO ////////////////////////
 
 
 - (void)initInfiniteScrollView
@@ -43,11 +61,6 @@
 }
 
 
--(void)acaoToqueObjeto:(TapBotaoInstrumento*)button{
-    
-    [[GerenciadorBotaoInstrumento sharedManager]acionaBotao:button];
-
-}
 
 - (void)initInfiniteScrollViewWithSelectedItem:(int)index
 {
@@ -76,7 +89,9 @@
             BotaoInstrumento *temp = [[BotaoInstrumento alloc]init];
             temp.image = aux.image;
             temp.frame = CGRectMake(i * _itemSize.width, self.frame.size.height - _itemSize.height, _itemSize.width, _itemSize.height);
-            
+            temp.nomeInstrumento = aux.nomeInstrumento;
+            temp.imgFundo = aux.imgFundo;
+            temp.imgFundoSecundario = aux.imgFundoSecundario;
             
             TapBotaoInstrumento *gesture = [[TapBotaoInstrumento alloc]initWithTarget:self action:@selector(acaoToqueObjeto:)];
             gesture.numberOfTapsRequired = 1;
@@ -214,10 +229,6 @@
     return (-1 * fabsf((offset)*2 - self.frame.size.width/2) + self.frame.size.width/2)/4;
 }
 
-- (void)infiniteScrollPicker:(InfiniteScrollPicker *)infiniteScrollPicker didSelectAtImage:(UIImage *)image
-{
-    NSLog(@"selected");
-}
 
 - (void)snapToAnEmotion
 {
@@ -228,15 +239,17 @@
     
     float offset = self.contentOffset.x;
     
+    BotaoInstrumento *view;
     for (int i = 0; i < imageStore.count; i++) {
-        BotaoInstrumento *view = [imageStore objectAtIndex:i];
-    
+        view = [imageStore objectAtIndex:i];
+     
         if (view.center.x > offset && view.center.x < (offset + self.frame.size.width))
         {
             if (((view.center.x + view.frame.size.width) - view.center.x) > biggestSize)
             {
                 biggestSize = ((view.frame.origin.x + view.frame.size.width) - view.frame.origin.x);
                 biggestView = view;
+               
             }
             
         }
@@ -259,7 +272,7 @@
             {
                 #pragma clang diagnostic push
                 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-                [[self firstAvailableUIViewController] performSelector:selector withObject:self withObject:biggestView.image];
+                [self  performSelector:selector withObject:self withObject:biggestView];
                 #pragma clang diagnostic pop
             }
             

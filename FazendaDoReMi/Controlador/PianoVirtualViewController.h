@@ -14,7 +14,7 @@
 @interface PianoVirtualViewController : UIViewController
 
 
-///////4
+///////OITVA 4
 - (IBAction)tecla4c:(id)sender;
 - (IBAction)tecla4d:(id)sender;
 - (IBAction)tecla4e:(id)sender;
@@ -33,7 +33,7 @@
 
 
 
-///////5
+///////OITAVA 5
 - (IBAction)tecla5c:(id)sender;
 - (IBAction)tecla5d:(id)sender;
 - (IBAction)tecla5e:(id)sender;
@@ -50,8 +50,6 @@
 @property NSValue *nota5a;
 @property NSValue *nota5b;
 
-@property float cont;
-@property NSTimer *tempoProximaNota;
 
 //Sutenido
 - (IBAction)teclas1:(id)sender;
@@ -75,6 +73,9 @@
 @property NSValue *notas9;
 
 
+//CALCULA TEMPO NOTA
+@property float cont;
+@property NSTimer *tempoProximaNota;
 
 @end
 
