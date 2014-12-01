@@ -90,46 +90,13 @@
     
 }
 
-///////////////////////// Exercicio ///////////////////////////////
+///////////////////////// AULA ///////////////////////////////
 
-
-
--(void)cadastrarExercicios:(Exercicio*)exercicios{
-   
-    AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    ExercicioBanco *novoExercicio = [NSEntityDescription insertNewObjectForEntityForName:@"ExercicioBanco" inManagedObjectContext:context];
-    
-    [novoExercicio setTipo:0];
-    [novoExercicio setNome:exercicios.nome];
-    [novoExercicio setIdView:[NSNumber numberWithInt:exercicios.idView]];
-   
-    NSError *error;
-    [context save:&error];
+-(void)cadastrarAula:(Aula*)aula{
     
 }
 
 
--(NSArray*)retornaTodosExercicios{
-    
-    AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
-    NSManagedObjectContext *context = [appDelegate managedObjectContext];
-    
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:[NSEntityDescription entityForName:@"ExercicioBanco" inManagedObjectContext:context]];
-    [request setIncludesSubentities:NO]; //Omit subentities. Default is YES (i.e. include subentities)
-    NSError *error;
-    
-    NSArray *entityObjects = [context executeFetchRequest:request error:&error];
-    
-    for(ExercicioBanco *object in entityObjects){
-        NSLog(@"nomeExe %@",[object valueForKey:@"nome"]);
-        NSLog(@"ID %@",[object valueForKey:@"idView"]);
-    }
-    
-    return entityObjects;
-    
-}
 
 /////////////////////////  USUARIO ////////////////////////////////
 

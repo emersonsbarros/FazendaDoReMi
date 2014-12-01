@@ -1,5 +1,5 @@
 //
-//  UsuarioAplicativo.h
+//  Componentes.h
 //  FazendaDoReMi
 //
 //  Created by Vinicius Resende Fialho on 01/12/14.
@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@interface UsuarioAplicativo : NSObject
 
-@property NSString *nome;
+@interface Componentes : NSManagedObject
+
+@property (nonatomic, retain) NSDecimalNumber * id_Componente;
+@property (nonatomic, retain) NSString * nome;
 
 @end

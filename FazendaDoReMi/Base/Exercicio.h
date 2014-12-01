@@ -11,7 +11,9 @@
 @interface Exercicio : NSObject
 
 //Atributos
+@property int tipo;
 @property int idView;
+@property int pontuacao;
 @property NSString *nome;
 @property NSString *nomeView;
 @property Mascote *mascote;

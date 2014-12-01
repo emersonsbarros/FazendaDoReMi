@@ -11,8 +11,6 @@
 #import "UsuarioAplicativo.h"
 #import "Usuario.h"
 #import "Aula.h"
-#import "Exercicio.h"
-#import "ExercicioBanco.h"
 
 @interface GerenciadorUsuario : NSObject
 
@@ -21,6 +19,7 @@
 
 +(GerenciadorUsuario*)sharedManager;
 -(void)setaUsuarioAtual:(UsuarioAplicativo*)usuario;
+
 
 
 
@@ -35,8 +34,6 @@
 -(void)atualizarNomeUsuario:(NSString*)nomeAtual :(NSString*)paramentroMudar;
 
 
--(void)cadastrarExercicios:(Exercicio*)exercicios;
--(NSArray*)retornaTodosExercicios;
 
 
 @end

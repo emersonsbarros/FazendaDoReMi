@@ -35,6 +35,11 @@
     
     self.result = @"vini";
     
+//    for(Aula *aula in [GerenciadorDeAula sharedManager].listaDeAulas){
+//        for(Exercicio *ex in aula.listaDeExercicios){
+//            [[GerenciadorUsuario sharedManager]cadastrarExercicios:ex];
+//        }
+//    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,8 +49,9 @@
 
 
 - (IBAction)btnTodos:(id)sender {
-    [[GerenciadorUsuario sharedManager]retornaTodosUsuarios];
-    [[GerenciadorUsuario sharedManager]retornaNumeroUsuarios];
+    //[[GerenciadorUsuario sharedManager]retornaTodosUsuarios];
+    //[[GerenciadorUsuario sharedManager]retornaNumeroUsuarios];
+    [[GerenciadorUsuario sharedManager]retornaTodosExercicios];
 }
 
 - (IBAction)btnDeletar:(id)sender {

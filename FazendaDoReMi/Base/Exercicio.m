@@ -15,12 +15,12 @@
     
     self = [super init];
     if(self){
+        self.tipo = 0;
         self.idView = idView;
         self.nome = nome;
         self.nomeView = nomeView;
         self.mascote = [[Mascote alloc]init];
         self.estado = estadoAula;
-
     }
     return self;
 }

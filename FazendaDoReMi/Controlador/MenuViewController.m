@@ -31,8 +31,18 @@
     [super didReceiveMemoryWarning];
 }
 
+
+-(void)alimentaDadosPadraoBanco{
+    
+  
+    
+}
+
+
 - (void)viewDidLoad{
     [super viewDidLoad];
+    
+    [self alimentaDadosPadraoBanco];
     
     //Fonte padrão
     [[UILabel appearance] setFont:[UIFont fontWithName:@"Kronika" size:17.0]];

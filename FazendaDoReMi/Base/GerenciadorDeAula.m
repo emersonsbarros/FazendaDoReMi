@@ -101,7 +101,7 @@
 -(void)criaCasaExercicio2:(Aula*)aula{
     
     //Exercícios
-    Exercicio *exercicio = [[Exercicio alloc]init:0 nome:@"Som" :@"AulaSomEx2ViewController": NO];
+    Exercicio *exercicio = [[Exercicio alloc]init:1 nome:@"Som" :@"AulaSomEx2ViewController": NO];
     
     //Fala
     Fala *fala = [[Fala alloc] init];
@@ -126,7 +126,7 @@
 -(void)criaCasaExercicio3:(Aula*)aula{
     
     //Exercícios
-    Exercicio *exercicio = [[Exercicio alloc]init:0 nome:@"Som" :@"AulaSomEx3ViewController": NO];
+    Exercicio *exercicio = [[Exercicio alloc]init:2 nome:@"Som" :@"AulaSomEx3ViewController": NO];
     
     //Fala
     Fala *fala = [[Fala alloc] init];
@@ -151,7 +151,7 @@
 -(void)criaCasaExercicio4:(Aula*)aula{
     
     //Exercícios
-    Exercicio *exercicio = [[Exercicio alloc]init:0 nome:@"Som" :@"AulaSomEx4ViewController": NO];
+    Exercicio *exercicio = [[Exercicio alloc]init:3 nome:@"Som" :@"AulaSomEx4ViewController": NO];
     
     //Fala
     Fala *fala = [[Fala alloc] init];
@@ -176,7 +176,7 @@
 -(void)criaCasaExercicio5:(Aula*)aula{
     
     //Exercícios
-    Exercicio *exercicio = [[Exercicio alloc]init:0 nome:@"Som" :@"AulaSomEx5ViewController": NO];
+    Exercicio *exercicio = [[Exercicio alloc]init:4 nome:@"Som" :@"AulaSomEx5ViewController": NO];
     
     //Fala
     Fala *fala = [[Fala alloc] init];
@@ -201,7 +201,7 @@
 -(void)criaCasaExercicio6:(Aula*)aula{
     
     //Exercícios
-    Exercicio *exercicio = [[Exercicio alloc]init:0 nome:@"Som" :@"AulaSomEx6ViewController": NO];
+    Exercicio *exercicio = [[Exercicio alloc]init:5 nome:@"Som" :@"AulaSomEx6ViewController": NO];
     
     //Fala
     Fala *fala = [[Fala alloc] init];
