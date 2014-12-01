@@ -41,7 +41,9 @@
     //Push no navigation com a view do exercício
     [self.navigationController pushViewController: object animated: YES];
     
+    
 }
+
 
 - (IBAction)btnVoltaMenu:(id)sender {
     [[GerenciadorNavigationController sharedManager].controladorApp popViewControllerAnimated:YES];
