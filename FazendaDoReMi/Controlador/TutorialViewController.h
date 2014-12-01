@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GerenciadorUsuario.h"
-#import "Usuario.h"
+#import "UsuarioAplicativo.h"
 
 @interface TutorialViewController : UIViewController
 

@@ -7,16 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Usuario.h"
 #import "AppDelegate.h"
+#import "UsuarioAplicativo.h"
+#import "Usuario.h"
 
 @interface GerenciadorUsuario : NSObject
 
-@property Usuario *usuarioLogado;
+@property UsuarioAplicativo *usuarioLogado;
 
 
 +(GerenciadorUsuario*)sharedManager;
--(void)setaUsuarioAtual:(Usuario*)usuario;
+-(void)setaUsuarioAtual:(UsuarioAplicativo*)usuario;
 
 
 
@@ -27,7 +28,7 @@
 
 
 -(Usuario*)retornaUsuario:(NSString*)nomeUsuario;
--(void)cadastrarUsuario:(Usuario*)usuario;
+-(void)cadastrarUsuario:(UsuarioAplicativo*)usuario;
 -(void)deletarUsuario:(NSString*)nomeUsuario;
 -(void)atualizarNomeUsuario:(NSString*)nomeAtual :(NSString*)paramentroMudar;
 

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GerenciadorUsuario.h"
 
 @interface TelaUsuarioViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 

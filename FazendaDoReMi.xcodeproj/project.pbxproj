@@ -475,6 +475,7 @@
 		3F1246091A1DA7240064ADF0 /* TeclaXilo13.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1246071A1DA7240064ADF0 /* TeclaXilo13.png */; };
 		3F1C09431A22C1C600905CD1 /* BotaoVoltarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1C09411A22C1C600905CD1 /* BotaoVoltarViewController.m */; };
 		3F1C09441A22C1C600905CD1 /* BotaoVoltarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1C09421A22C1C600905CD1 /* BotaoVoltarViewController.xib */; };
+		3F4611591A2C0A9300A1650A /* UsuarioAplicativo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4611581A2C0A9300A1650A /* UsuarioAplicativo.m */; };
 		3F5D4D421A17E67200A33538 /* Xilofone.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D4D3D1A17E67200A33538 /* Xilofone.plist */; };
 		3F5D4D431A17E67200A33538 /* Xylo C7.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D4D3E1A17E67200A33538 /* Xylo C7.caf */; };
 		3F5D4D441A17E67200A33538 /* Xylo E4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D4D3F1A17E67200A33538 /* Xylo E4.caf */; };
@@ -482,7 +483,6 @@
 		3F5D4D461A17E67200A33538 /* Xylo G#4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D4D411A17E67200A33538 /* Xylo G#4.caf */; };
 		3F8FC7AC1A2BE4E600419BBF /* GerenciadorUsuario.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8FC7AB1A2BE4E600419BBF /* GerenciadorUsuario.m */; };
 		3FAA70871A2B895100EB1BA8 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA70861A2B895100EB1BA8 /* TutorialViewController.m */; };
-		3FAA708A1A2B8D6100EB1BA8 /* Usuario.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA70891A2B8D6100EB1BA8 /* Usuario.m */; };
 		3FB6F4F519DA659C0080057B /* botao12Pausa.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6F4C919DA659C0080057B /* botao12Pausa.png */; };
 		3FB6F4F619DA659C0080057B /* botao12Tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6F4CA19DA659C0080057B /* botao12Tempo.png */; };
 		3FB6F4F719DA659C0080057B /* botao1Pausa.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6F4CB19DA659C0080057B /* botao1Pausa.png */; };
@@ -606,6 +606,7 @@
 		3FCCA4041A280E8000BB1CBB /* btnTrompete.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FCCA3F51A280E8000BB1CBB /* btnTrompete.png */; };
 		3FCCA4051A280E8000BB1CBB /* btnViolao.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FCCA3F61A280E8000BB1CBB /* btnViolao.png */; };
 		3FCCA4081A28205D00BB1CBB /* GerenciadorBotaoInstrumento.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCCA4071A28205D00BB1CBB /* GerenciadorBotaoInstrumento.m */; };
+		3FCD26B91A2CD14300C84554 /* Usuario.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD26B81A2CD14300C84554 /* Usuario.m */; };
 		3FDCC04E19EB0673003DC572 /* SomItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDCC04D19EB0673003DC572 /* SomItem.m */; };
 		3FE14F041A16B7B6001BE8D7 /* Agogo Bell.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F021A16B7B6001BE8D7 /* Agogo Bell.caf */; };
 		3FE14F051A16B7B6001BE8D7 /* Agogo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FE14F031A16B7B6001BE8D7 /* Agogo.plist */; };
@@ -1187,6 +1188,8 @@
 		3F1C09401A22C1C600905CD1 /* BotaoVoltarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BotaoVoltarViewController.h; sourceTree = "<group>"; };
 		3F1C09411A22C1C600905CD1 /* BotaoVoltarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BotaoVoltarViewController.m; sourceTree = "<group>"; };
 		3F1C09421A22C1C600905CD1 /* BotaoVoltarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BotaoVoltarViewController.xib; sourceTree = "<group>"; };
+		3F4611571A2C0A9300A1650A /* UsuarioAplicativo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsuarioAplicativo.h; sourceTree = "<group>"; };
+		3F4611581A2C0A9300A1650A /* UsuarioAplicativo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsuarioAplicativo.m; sourceTree = "<group>"; };
 		3F5D4D3D1A17E67200A33538 /* Xilofone.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Xilofone.plist; sourceTree = "<group>"; };
 		3F5D4D3E1A17E67200A33538 /* Xylo C7.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Xylo C7.caf"; sourceTree = "<group>"; };
 		3F5D4D3F1A17E67200A33538 /* Xylo E4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Xylo E4.caf"; sourceTree = "<group>"; };
@@ -1196,8 +1199,6 @@
 		3F8FC7AB1A2BE4E600419BBF /* GerenciadorUsuario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GerenciadorUsuario.m; sourceTree = "<group>"; };
 		3FAA70851A2B895100EB1BA8 /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
 		3FAA70861A2B895100EB1BA8 /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
-		3FAA70881A2B8D6100EB1BA8 /* Usuario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Usuario.h; path = ../Usuario.h; sourceTree = "<group>"; };
-		3FAA70891A2B8D6100EB1BA8 /* Usuario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Usuario.m; path = ../Usuario.m; sourceTree = "<group>"; };
 		3FB6F4C919DA659C0080057B /* botao12Pausa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao12Pausa.png; sourceTree = "<group>"; };
 		3FB6F4CA19DA659C0080057B /* botao12Tempo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao12Tempo.png; sourceTree = "<group>"; };
 		3FB6F4CB19DA659C0080057B /* botao1Pausa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao1Pausa.png; sourceTree = "<group>"; };
@@ -1343,6 +1344,8 @@
 		3FCCA3F61A280E8000BB1CBB /* btnViolao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnViolao.png; sourceTree = "<group>"; };
 		3FCCA4061A28205D00BB1CBB /* GerenciadorBotaoInstrumento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GerenciadorBotaoInstrumento.h; sourceTree = "<group>"; };
 		3FCCA4071A28205D00BB1CBB /* GerenciadorBotaoInstrumento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GerenciadorBotaoInstrumento.m; sourceTree = "<group>"; };
+		3FCD26B71A2CD14300C84554 /* Usuario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Usuario.h; path = ../Usuario.h; sourceTree = "<group>"; };
+		3FCD26B81A2CD14300C84554 /* Usuario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Usuario.m; path = ../Usuario.m; sourceTree = "<group>"; };
 		3FDCC04C19EB0673003DC572 /* SomItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SomItem.h; sourceTree = "<group>"; };
 		3FDCC04D19EB0673003DC572 /* SomItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SomItem.m; sourceTree = "<group>"; };
 		3FE14F021A16B7B6001BE8D7 /* Agogo Bell.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Agogo Bell.caf"; sourceTree = "<group>"; };
@@ -3090,10 +3093,12 @@
 		A8F1C4AF19D1F89B001850E4 /* Menus */ = {
 			isa = PBXGroup;
 			children = (
+				3FCD26B71A2CD14300C84554 /* Usuario.h */,
+				3FCD26B81A2CD14300C84554 /* Usuario.m */,
+				3F4611571A2C0A9300A1650A /* UsuarioAplicativo.h */,
+				3F4611581A2C0A9300A1650A /* UsuarioAplicativo.m */,
 				3F8FC7AA1A2BE4E600419BBF /* GerenciadorUsuario.h */,
 				3F8FC7AB1A2BE4E600419BBF /* GerenciadorUsuario.m */,
-				3FAA70881A2B8D6100EB1BA8 /* Usuario.h */,
-				3FAA70891A2B8D6100EB1BA8 /* Usuario.m */,
 				3FAA70841A2B893100EB1BA8 /* Tutorial */,
 				3FE950601A2BB7EE008EEF1E /* TelaUsuario */,
 				0BAFB16619F1AD5A00DCF54F /* Estudio */,
@@ -3807,7 +3812,6 @@
 				3FC5D33819DA5C3200348F51 /* NotaAnimadaPadrao.m in Sources */,
 				0BE432891A15323200A5BFC1 /* TecladoViewController.m in Sources */,
 				0BAFB17219F1B83D00DCF54F /* GestureRotationItem.m in Sources */,
-				3FAA708A1A2B8D6100EB1BA8 /* Usuario.m in Sources */,
 				0B2FFB1D19EDB7B500FD752E /* GerenciadorMetodo.m in Sources */,
 				3FC5D2F319DA59BA00348F51 /* BarraNotasPausasViewController.m in Sources */,
 				A811634319D22B0000506D94 /* GerenciadorDeItem.m in Sources */,
@@ -3822,6 +3826,7 @@
 				0B862C4319EC6E60009365DD /* ControladorDeItem.m in Sources */,
 				0BE8394A1A2904A7008FA90F /* MenuPausaAulaViewController.m in Sources */,
 				3FC5D2F419DA59BA00348F51 /* PlayerPartituraEdicaoViewController.m in Sources */,
+				3F4611591A2C0A9300A1650A /* UsuarioAplicativo.m in Sources */,
 				3F0E879719DBA6F8003FF4EB /* JornadaViewController.m in Sources */,
 				3FC5D2F219DA59BA00348F51 /* DesenhaPartituraEdicao.m in Sources */,
 				3FC5D33619DA5C3200348F51 /* DataBaseNotaPadrao.m in Sources */,
@@ -3832,6 +3837,7 @@
 				3FAA70871A2B895100EB1BA8 /* TutorialViewController.m in Sources */,
 				0BBF81D01A1D1C210033149B /* InstrumentoXilofoneViewController.m in Sources */,
 				3FC5D34419DA5D4C00348F51 /* GerenciadorComponenteView.m in Sources */,
+				3FCD26B91A2CD14300C84554 /* Usuario.m in Sources */,
 				3FC5D34119DA5CFB00348F51 /* SoundBankPlayer.m in Sources */,
 				3FC5D33A19DA5C3200348F51 /* Partitura.m in Sources */,
 				0BE839621A290580008FA90F /* AulaSomEx6ViewController.m in Sources */,

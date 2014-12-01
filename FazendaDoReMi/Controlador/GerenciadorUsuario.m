@@ -25,7 +25,7 @@
 -(id)init{
     self = [super init];
     if(self){
-        self.usuarioLogado = [[Usuario alloc]init];
+        self.usuarioLogado = [[UsuarioAplicativo alloc]init];
     }
     return self;
 }
@@ -65,7 +65,7 @@
     NSError *error;
     NSUInteger count = [context countForFetchRequest:request error:&error];
    
-    NSLog(@"numersssos %d",count);
+    NSLog(@"qt usuarios %d",count);
     
     return count;
 }
@@ -136,13 +136,16 @@
 }
 
 
--(void)cadastrarUsuario:(Usuario*)usuario{
+-(void)cadastrarUsuario:(UsuarioAplicativo*)usuario{
     
     AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
     NSManagedObjectContext *context = [appDelegate managedObjectContext];
     Usuario *novoUsuario = [NSEntityDescription insertNewObjectForEntityForName:@"Usuario" inManagedObjectContext:context];
-    
+        
     [novoUsuario setNome:usuario.nome];
+    
+    NSError *error;
+    [context save:&error];
 }
 
 -(Usuario*)retornaUsuario:(NSString*)nomeUsuario{

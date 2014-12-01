@@ -1,5 +1,5 @@
 //
-//  Usuario.h
+//  UsuarioAplicativo.h
 //  FazendaDoReMi
 //
 //  Created by Vinicius Resende Fialho on 01/12/14.
@@ -7,11 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
 
+@interface UsuarioAplicativo : NSObject
 
-@interface Usuario : NSManagedObject
-
-@property (nonatomic, retain) NSString * nome;
+@property NSString *nome;
+@property NSString *senha;
 
 @end

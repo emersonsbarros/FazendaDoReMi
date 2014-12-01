@@ -40,7 +40,7 @@
     self.viewPrincipal.layer.cornerRadius = 20.0f;
     self.viewPrincipal.layer.borderWidth = 1.0f;
     self.viewPrincipal.layer.borderColor = [UIColor blackColor].CGColor;
-    
+
     
     self.tableUsuarios.backgroundColor = [UIColor whiteColor];
     self.tableUsuarios.showsVerticalScrollIndicator = NO;
@@ -64,7 +64,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return [[GerenciadorUsuario sharedManager]retornaTodosUsuarios].count;
 }
 
 
@@ -78,12 +78,13 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    Usuario *user = [[[GerenciadorUsuario sharedManager]retornaTodosUsuarios] objectAtIndex:[indexPath row]];
     
     UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
     recipeImageView.image = [UIImage imageNamed:@"iconeFacebook.png"];
     
     UILabel *recipeNameLabel = (UILabel *)[cell viewWithTag:101];
-    recipeNameLabel.text = @"Vinicius";
+    recipeNameLabel.text = user.nome;
 
     UIButton *btn = (UIButton *)[cell viewWithTag:102];
     [btn addTarget:self action:@selector(chamaExercicios:) forControlEvents:UIControlEventTouchUpInside];
@@ -95,6 +96,7 @@
     //recipeNameLabel.frame = CGRectMake(0, 0, recipeNameLabel.frame.size.width, recipeNameLabel.frame.size.height);
     
     return cell;
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
