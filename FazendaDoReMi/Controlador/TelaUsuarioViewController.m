@@ -41,7 +41,8 @@
     self.viewPrincipal.layer.borderWidth = 1.0f;
     self.viewPrincipal.layer.borderColor = [UIColor blackColor].CGColor;
 
-    
+    self.tableUsuarios.transform = CGAffineTransformMakeRotation(M_PI/-2);
+    [self.tableUsuarios setFrame:CGRectMake(30, 30, 647, 375)];
     self.tableUsuarios.backgroundColor = [UIColor whiteColor];
     self.tableUsuarios.showsVerticalScrollIndicator = NO;
     self.tableUsuarios.delegate = self;

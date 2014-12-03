@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14B25" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="12F45" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Componentes" representedClassName="Componentes" syncable="YES">
         <attribute name="id_Componente" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
@@ -8,19 +8,23 @@
         <attribute name="idView" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tipo" optional="YES" attributeType="Integer 32" syncable="YES"/>
+        <relationship name="usuario_exercicio" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Usuario_Exercicio" inverseName="exercicioBanco" inverseEntity="Usuario_Exercicio" syncable="YES"/>
     </entity>
     <entity name="Usuario" representedClassName="Usuario" syncable="YES">
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="usuario_exercicio" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Usuario_Exercicio" inverseName="usuario" inverseEntity="Usuario_Exercicio" syncable="YES"/>
     </entity>
     <entity name="Usuario_Exercicio" representedClassName="Usuario_Exercicio" syncable="YES">
         <attribute name="idView" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="nomeUsuario" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pontuacao" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="exercicioBanco" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ExercicioBanco" inverseName="usuario_exercicio" inverseEntity="ExercicioBanco" syncable="YES"/>
+        <relationship name="usuario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Usuario" inverseName="usuario_exercicio" inverseEntity="Usuario" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Usuario" positionX="-90" positionY="-67" width="117" height="58"/>
-        <element name="Usuario_Exercicio" positionX="142" positionY="-189" width="128" height="88"/>
-        <element name="Componentes" positionX="-99" positionY="-214" width="128" height="43"/>
-        <element name="ExercicioBanco" positionX="333" positionY="-72" width="128" height="88"/>
+        <element name="Componentes" positionX="-27" positionY="-178" width="128" height="43"/>
+        <element name="ExercicioBanco" positionX="313" positionY="-22" width="128" height="103"/>
+        <element name="Usuario" positionX="-63" positionY="-90" width="117" height="73"/>
+        <element name="Usuario_Exercicio" positionX="142" positionY="-162" width="128" height="118"/>
     </elements>
 </model>
