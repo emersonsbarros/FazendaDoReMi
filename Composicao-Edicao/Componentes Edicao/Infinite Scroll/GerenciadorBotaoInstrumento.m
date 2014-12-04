@@ -91,7 +91,7 @@
 }
 
 -(void)criaBotaoXilofone{
-    BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithImage:[UIImage imageNamed:@"btnlixeira.png"]];
+    BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithImage:[UIImage imageNamed:@"btnXilofone.png"]];
     btn.nomeInstrumento = @"Xilofone";
     btn.imgFundo = [UIImage imageNamed:@"backxilofone-2.png"];
     btn.imgFundoSecundario = [UIImage imageNamed:@"backxilofone1-2.png"];
@@ -101,128 +101,128 @@
 -(void)criaBotaoTrompete{
     BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithImage:[UIImage imageNamed:@"btnTrompete.png"]];
     btn.nomeInstrumento = @"Trompete";
-    btn.imgFundo = [UIImage imageNamed:@"backxilofone-2.png"];
-    btn.imgFundoSecundario = [UIImage imageNamed:@"backxilofone1-2.png"];
+    btn.imgFundo = [UIImage imageNamed:@"backOutrosInstrumentos2.png"];
+    btn.imgFundoSecundario = [UIImage imageNamed:@"backOutrosInstrumentos1.png"];
     [self.listaBotoesInstrumentos addObject:btn];
 }
 
 -(void)criaBotaoSaxfone{
     BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithImage:[UIImage imageNamed:@"btnSaxofone.png"]];
     btn.nomeInstrumento = @"Saxfone";
-    btn.imgFundo = [UIImage imageNamed:@"backxilofone-2.png"];
-    btn.imgFundoSecundario = [UIImage imageNamed:@"backxilofone1-2.png"];
+    btn.imgFundo = [UIImage imageNamed:@"backOutrosInstrumentos2.png"];
+    btn.imgFundoSecundario = [UIImage imageNamed:@"backOutrosInstrumentos1.png"];
     [self.listaBotoesInstrumentos addObject:btn];
 }
 
 -(void)criaBotaoGuitarra{
-    BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithImage:[UIImage imageNamed:@"btnlixeira.png"]];
+    BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithImage:[UIImage imageNamed:@"btnGuitarra.png"]];
     btn.nomeInstrumento = @"Guitarra";
-    btn.imgFundo = [UIImage imageNamed:@"backxilofone-2.png"];
-    btn.imgFundoSecundario = [UIImage imageNamed:@"backxilofone1-2.png"];
+    btn.imgFundo = [UIImage imageNamed:@"backOutrosInstrumentos2.png"];
+    btn.imgFundoSecundario = [UIImage imageNamed:@"backOutrosInstrumentos1.png"];
     [self.listaBotoesInstrumentos addObject:btn];
 }
 
 -(void)criaBotaoTelefone{
     BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithImage:[UIImage imageNamed:@"btnTelefone.png"]];
-    btn.nomeInstrumento = @"Telefone";
-    btn.imgFundo = [UIImage imageNamed:@"backxilofone-2.png"];
-    btn.imgFundoSecundario = [UIImage imageNamed:@"backxilofone1-2.png"];
+    btn.nomeInstrumento = @"Tecnologico";
+    btn.imgFundo = [UIImage imageNamed:@"backOutrosInstrumentos2.png"];
+    btn.imgFundoSecundario = [UIImage imageNamed:@"backOutrosInstrumentos1.png"];
     [self.listaBotoesInstrumentos addObject:btn];
 }
 
 -(void)criaBotaoBongo{
     BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithImage:[UIImage imageNamed:@"btnTambor.png"]];
     btn.nomeInstrumento = @"TamborBongo";
-    btn.imgFundo = [UIImage imageNamed:@"backxilofone-2.png"];
-    btn.imgFundoSecundario = [UIImage imageNamed:@"backxilofone1-2.png"];
+    btn.imgFundo = [UIImage imageNamed:@"backOutrosInstrumentos2.png"];
+    btn.imgFundoSecundario = [UIImage imageNamed:@"backOutrosInstrumentos1.png"];
     [self.listaBotoesInstrumentos addObject:btn];
 }
 
 -(void)criaBotaoFlauta{
     BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithImage:[UIImage imageNamed:@"btnFlauta.png"]];
     btn.nomeInstrumento = @"FlautaDoce";
-    btn.imgFundo = [UIImage imageNamed:@"backxilofone-2.png"];
-    btn.imgFundoSecundario = [UIImage imageNamed:@"backxilofone1-2.png"];
+    btn.imgFundo = [UIImage imageNamed:@"backOutrosInstrumentos2.png"];
+    btn.imgFundoSecundario = [UIImage imageNamed:@"backOutrosInstrumentos1.png"];
     [self.listaBotoesInstrumentos addObject:btn];
 }
 
 -(void)criaBotaoViolao{
     BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithImage:[UIImage imageNamed:@"btnViolao.png"]];
     btn.nomeInstrumento = @"ViolaoNylon";
-    btn.imgFundo = [UIImage imageNamed:@"backxilofone-2.png"];
-    btn.imgFundoSecundario = [UIImage imageNamed:@"backxilofone1-2.png"];
+    btn.imgFundo = [UIImage imageNamed:@"backOutrosInstrumentos2.png"];
+    btn.imgFundoSecundario = [UIImage imageNamed:@"backOutrosInstrumentos1.png"];
     [self.listaBotoesInstrumentos addObject:btn];
 }
 
 -(void)criaBotaoAcordiao{
     BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithImage:[UIImage imageNamed:@"btnAcordeon.png"]];
     btn.nomeInstrumento = @"Acordiao";
-    btn.imgFundo = [UIImage imageNamed:@"backxilofone-2.png"];
-    btn.imgFundoSecundario = [UIImage imageNamed:@"backxilofone1-2.png"];
+    btn.imgFundo = [UIImage imageNamed:@"backOutrosInstrumentos2.png"];
+    btn.imgFundoSecundario = [UIImage imageNamed:@"backOutrosInstrumentos1.png"];
     [self.listaBotoesInstrumentos addObject:btn];
 }
 
 -(void)criaBotaoClarinete{
     BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithImage:[UIImage imageNamed:@"btnClarinete.png"]];
     btn.nomeInstrumento = @"Clarinete";
-    btn.imgFundo = [UIImage imageNamed:@"backxilofone-2.png"];
-    btn.imgFundoSecundario = [UIImage imageNamed:@"backxilofone1-2.png"];
+    btn.imgFundo = [UIImage imageNamed:@"backOutrosInstrumentos2.png"];
+    btn.imgFundoSecundario = [UIImage imageNamed:@"backOutrosInstrumentos1.png"];
     [self.listaBotoesInstrumentos addObject:btn];
 }
 
 -(void)criaBotaoCrystal{
     BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithImage:[UIImage imageNamed:@"btnCopoCristal.png"]];
     btn.nomeInstrumento = @"Crystal";
-    btn.imgFundo = [UIImage imageNamed:@"backxilofone-2.png"];
-    btn.imgFundoSecundario = [UIImage imageNamed:@"backxilofone1-2.png"];
+    btn.imgFundo = [UIImage imageNamed:@"backOutrosInstrumentos2.png"];
+    btn.imgFundoSecundario = [UIImage imageNamed:@"backOutrosInstrumentos1.png"];
     [self.listaBotoesInstrumentos addObject:btn];
 }
 
 -(void)criaBotaoFlautaIndio{
     BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithImage:[UIImage imageNamed:@"btnFlautaIndio.png"]];
     btn.nomeInstrumento = @"FlautaIndio";
-    btn.imgFundo = [UIImage imageNamed:@"backxilofone-2.png"];
-    btn.imgFundoSecundario = [UIImage imageNamed:@"backxilofone1-2.png"];
+    btn.imgFundo = [UIImage imageNamed:@"backOutrosInstrumentos2.png"];
+    btn.imgFundoSecundario = [UIImage imageNamed:@"backOutrosInstrumentos1.png"];
     [self.listaBotoesInstrumentos addObject:btn];
 }
 
 -(void)criaBotaoGaita{
     BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithImage:[UIImage imageNamed:@"btnGaita.png"]];
     btn.nomeInstrumento = @"Gaita";
-    btn.imgFundo = [UIImage imageNamed:@"backxilofone-2.png"];
-    btn.imgFundoSecundario = [UIImage imageNamed:@"backxilofone1-2.png"];
+    btn.imgFundo = [UIImage imageNamed:@"backOutrosInstrumentos2.png"];
+    btn.imgFundoSecundario = [UIImage imageNamed:@"backOutrosInstrumentos1.png"];
     [self.listaBotoesInstrumentos addObject:btn];
 }
 
 -(void)criaBotaoHarpa{
     BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithImage:[UIImage imageNamed:@"btnHarpa.png"]];
     btn.nomeInstrumento = @"Harpa";
-    btn.imgFundo = [UIImage imageNamed:@"backxilofone-2.png"];
-    btn.imgFundoSecundario = [UIImage imageNamed:@"backxilofone1-2.png"];
+    btn.imgFundo = [UIImage imageNamed:@"backOutrosInstrumentos2.png"];
+    btn.imgFundoSecundario = [UIImage imageNamed:@"backOutrosInstrumentos1.png"];
     [self.listaBotoesInstrumentos addObject:btn];
 }
 
 -(void)criaBotaoBanjo{
     BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithImage:[UIImage imageNamed:@"btnBanjo.png"]];
     btn.nomeInstrumento = @"Banjo";
-    btn.imgFundo = [UIImage imageNamed:@"backxilofone-2.png"];
-    btn.imgFundoSecundario = [UIImage imageNamed:@"backxilofone1-2.png"];
+    btn.imgFundo = [UIImage imageNamed:@"backOutrosInstrumentos2.png"];
+    btn.imgFundoSecundario = [UIImage imageNamed:@"backOutrosInstrumentos1.png"];
     [self.listaBotoesInstrumentos addObject:btn];
 }
 
 -(void)criaBotaoOcarina{
     BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithImage:[UIImage imageNamed:@"btnOcarina.png"]];
     btn.nomeInstrumento = @"Ocarina";
-    btn.imgFundo = [UIImage imageNamed:@"backxilofone-2.png"];
-    btn.imgFundoSecundario = [UIImage imageNamed:@"backxilofone1-2.png"];
+    btn.imgFundo = [UIImage imageNamed:@"backOutrosInstrumentos2.png"];
+    btn.imgFundoSecundario = [UIImage imageNamed:@"backOutrosInstrumentos1.png"];
     [self.listaBotoesInstrumentos addObject:btn];
 }
 
 -(void)criaBotaoPanela{
-    BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithImage:[UIImage imageNamed:@"btnlixeira.png"]];
+    BotaoInstrumento *btn = [[BotaoInstrumento alloc]initWithImage:[UIImage imageNamed:@"btnPanela.png"]];
     btn.nomeInstrumento = @"Panela";
-    btn.imgFundo = [UIImage imageNamed:@"backxilofone-2.png"];
-    btn.imgFundoSecundario = [UIImage imageNamed:@"backxilofone1-2.png"];
+    btn.imgFundo = [UIImage imageNamed:@"backOutrosInstrumentos2.png"];
+    btn.imgFundoSecundario = [UIImage imageNamed:@"backOutrosInstrumentos1.png"];
     [self.listaBotoesInstrumentos addObject:btn];
     
 }

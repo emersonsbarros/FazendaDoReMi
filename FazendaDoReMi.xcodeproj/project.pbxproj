@@ -10,6 +10,12 @@
 		0B1D2A8919E46CD1003CA4C4 /* GerenciadorNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1D2A8819E46CD1003CA4C4 /* GerenciadorNavigationController.m */; };
 		0B2FFB1419ED9A7600FD752E /* MANUAL DE USO.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FFB1319ED9A7600FD752E /* MANUAL DE USO.rtf */; };
 		0B2FFB1D19EDB7B500FD752E /* GerenciadorMetodo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2FFB1C19EDB7B500FD752E /* GerenciadorMetodo.m */; };
+		0B430FBC1A30E05C00C0F53C /* Zecaopiano.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B430FBB1A30E05C00C0F53C /* Zecaopiano.png */; };
+		0B430FBE1A30E82400C0F53C /* btnPanela.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B430FBD1A30E82400C0F53C /* btnPanela.png */; };
+		0B430FC01A30E82A00C0F53C /* btnGuitarra.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B430FBF1A30E82A00C0F53C /* btnGuitarra.png */; };
+		0B430FC21A30E83200C0F53C /* btnXilofone.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B430FC11A30E83200C0F53C /* btnXilofone.png */; };
+		0B430FC51A30EF3D00C0F53C /* backOutrosInstrumentos1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B430FC31A30EF3D00C0F53C /* backOutrosInstrumentos1.png */; };
+		0B430FC61A30EF3D00C0F53C /* backOutrosInstrumentos2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B430FC41A30EF3D00C0F53C /* backOutrosInstrumentos2.png */; };
 		0B6DCC9F19DB2D2500C166E3 /* nuvem-voltar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B6DCC9E19DB2D2500C166E3 /* nuvem-voltar.png */; };
 		0B7368E819FAC5C10066720F /* teclaBrancaDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B7368E419FAC5C10066720F /* teclaBrancaDown.png */; };
 		0B7368E919FAC5C10066720F /* teclaBrancaUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B7368E519FAC5C10066720F /* teclaBrancaUp.png */; };
@@ -694,6 +700,12 @@
 		0B2FFB1319ED9A7600FD752E /* MANUAL DE USO.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "MANUAL DE USO.rtf"; sourceTree = "<group>"; };
 		0B2FFB1B19EDB7B500FD752E /* GerenciadorMetodo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GerenciadorMetodo.h; sourceTree = "<group>"; };
 		0B2FFB1C19EDB7B500FD752E /* GerenciadorMetodo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GerenciadorMetodo.m; sourceTree = "<group>"; };
+		0B430FBB1A30E05C00C0F53C /* Zecaopiano.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Zecaopiano.png; path = iconesInstrumentos/Zecaopiano.png; sourceTree = "<group>"; };
+		0B430FBD1A30E82400C0F53C /* btnPanela.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnPanela.png; sourceTree = "<group>"; };
+		0B430FBF1A30E82A00C0F53C /* btnGuitarra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnGuitarra.png; sourceTree = "<group>"; };
+		0B430FC11A30E83200C0F53C /* btnXilofone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnXilofone.png; sourceTree = "<group>"; };
+		0B430FC31A30EF3D00C0F53C /* backOutrosInstrumentos1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backOutrosInstrumentos1.png; sourceTree = "<group>"; };
+		0B430FC41A30EF3D00C0F53C /* backOutrosInstrumentos2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backOutrosInstrumentos2.png; sourceTree = "<group>"; };
 		0B6DCC9E19DB2D2500C166E3 /* nuvem-voltar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nuvem-voltar.png"; sourceTree = "<group>"; };
 		0B7368E419FAC5C10066720F /* teclaBrancaDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teclaBrancaDown.png; sourceTree = "<group>"; };
 		0B7368E519FAC5C10066720F /* teclaBrancaUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teclaBrancaUp.png; sourceTree = "<group>"; };
@@ -1600,6 +1612,7 @@
 		0BAFB09219F1ABBB00DCF54F /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				0B430FBB1A30E05C00C0F53C /* Zecaopiano.png */,
 				0BE83A371A290EAD008FA90F /* btoVoltar.png */,
 				3FE950641A2BBC22008EEF1E /* imgRedeSocial */,
 				0BE839FC1A290C29008FA90F /* Imagenns/Aula/Som */,
@@ -1857,6 +1870,8 @@
 		0BBF81D71A1D1DA00033149B /* Imagens Xilofone */ = {
 			isa = PBXGroup;
 			children = (
+				0B430FC31A30EF3D00C0F53C /* backOutrosInstrumentos1.png */,
+				0B430FC41A30EF3D00C0F53C /* backOutrosInstrumentos2.png */,
 				0BBF81D81A1D1DA00033149B /* backxilofone-2.png */,
 				0BBF81D91A1D1DA00033149B /* backxilofone1-2.png */,
 				0BBF81DA1A1D1DA00033149B /* pauzinhodoXilo.png */,
@@ -2879,6 +2894,9 @@
 		3FCCA3E71A280E7F00BB1CBB /* iconesInstrumentos */ = {
 			isa = PBXGroup;
 			children = (
+				0B430FC11A30E83200C0F53C /* btnXilofone.png */,
+				0B430FBF1A30E82A00C0F53C /* btnGuitarra.png */,
+				0B430FBD1A30E82400C0F53C /* btnPanela.png */,
 				3FCCA3E81A280E7F00BB1CBB /* btnAcordeon.png */,
 				3FCCA3E91A280E7F00BB1CBB /* btnBanjo.png */,
 				3FCCA3EA1A280E8000BB1CBB /* btnClarinete.png */,
@@ -3234,6 +3252,7 @@
 				3FE14F4C1A16CE83001BE8D7 /* TrumpD#5.caf in Resources */,
 				0BC8DB101A1BBB2700F74157 /* Saw Lead C3.caf in Resources */,
 				0BE8397E1A29094A008FA90F /* caixaDeMusica.mp3 in Resources */,
+				0B430FC61A30EF3D00C0F53C /* backOutrosInstrumentos2.png in Resources */,
 				3FB6F57719DA67E60080057B /* P200 Piano F#4.caf in Resources */,
 				0BAFB14219F1ABBB00DCF54F /* ZECAO40.png in Resources */,
 				0BE839881A29094A008FA90F /* robo.mp3 in Resources */,
@@ -3301,6 +3320,8 @@
 				0BE8398C1A29094A008FA90F /* talheres.mp3 in Resources */,
 				3FB6F56E19DA67E60080057B /* P200 Piano C7.caf in Resources */,
 				0BE8397C1A29094A008FA90F /* batedeira.mp3 in Resources */,
+				0B430FBE1A30E82400C0F53C /* btnPanela.png in Resources */,
+				0B430FC21A30E83200C0F53C /* btnXilofone.png in Resources */,
 				3FB6F51019DA659C0080057B /* ReMeiotempo.png in Resources */,
 				0BC8DAE21A1BBB2700F74157 /* Harmonica D6.caf in Resources */,
 				0BC4BBF71A16939800D03E1F /* bongo39.caf in Resources */,
@@ -3436,6 +3457,7 @@
 				0BE839E81A290BC3008FA90F /* piano.png in Resources */,
 				3F1C09441A22C1C600905CD1 /* BotaoVoltarViewController.xib in Resources */,
 				0BC8DB021A1BBB2700F74157 /* Ocarina C6.caf in Resources */,
+				0B430FBC1A30E05C00C0F53C /* Zecaopiano.png in Resources */,
 				0BBF81F51A1D1DA00033149B /* TeclaXilo7.png in Resources */,
 				0BC8DB2E1A1BBB2700F74157 /* Cello G2.caf in Resources */,
 				3FCCA3FF1A280E8000BB1CBB /* btnOcarina.png in Resources */,
@@ -3481,6 +3503,7 @@
 				0BE839D71A290BC3008FA90F /* tocaTrecoPulando4.png in Resources */,
 				3FB6F50019DA659C0080057B /* fundocasa.png in Resources */,
 				3FE14F051A16B7B6001BE8D7 /* Agogo.plist in Resources */,
+				0B430FC01A30E82A00C0F53C /* btnGuitarra.png in Resources */,
 				3FB6F57A19DA67E60080057B /* P200 Piano F#7.caf in Resources */,
 				0BE83A131A290DA1008FA90F /* galinhaRosa.png in Resources */,
 				3FE14F2B1A16BB15001BE8D7 /* Saxfone.plist in Resources */,
@@ -3637,6 +3660,7 @@
 				0BAFB15119F1ABBB00DCF54F /* ZECAO55.png in Resources */,
 				3FE14F291A16BB15001BE8D7 /* F-mid.caf in Resources */,
 				3FCCA3FA1A280E8000BB1CBB /* btnCopoCristal.png in Resources */,
+				0B430FC51A30EF3D00C0F53C /* backOutrosInstrumentos1.png in Resources */,
 				0BAFB0FC19F1ABBB00DCF54F /* AudioBemVindo.m4a in Resources */,
 				3FE14F041A16B7B6001BE8D7 /* Agogo Bell.caf in Resources */,
 				0BC4BBE21A16939800D03E1F /* bongo18.caf in Resources */,

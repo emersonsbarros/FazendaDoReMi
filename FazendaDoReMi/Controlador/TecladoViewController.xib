@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TecladoViewController">
@@ -16,6 +15,10 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Zecaopiano.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wrs-OP-dAf">
+                    <rect key="frame" x="-2" y="0.0" width="1027" height="503"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
                 <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pT-rX-2AB">
                     <rect key="frame" x="-1" y="500" width="78" height="268"/>
                     <color key="backgroundColor" red="0.082352943720000002" green="0.72941178080000002" blue="0.76470595600000002" alpha="1" colorSpace="deviceRGB"/>
@@ -237,9 +240,9 @@
                         <action selector="teclas8:" destination="-1" eventType="touchDown" id="wZ1-wg-Ecr"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjq-B3-ADc">
-                    <rect key="frame" x="166" y="155" width="109" height="94"/>
-                    <state key="normal" title="Piano">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjq-B3-ADc">
+                    <rect key="frame" x="483" y="7" width="72" height="72"/>
+                    <state key="normal" backgroundImage="btnPiano.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -247,8 +250,8 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY1-qY-ad3">
-                    <rect key="frame" x="181" y="36" width="109" height="94"/>
-                    <state key="normal" title="Flauta">
+                    <rect key="frame" x="799" y="7" width="72" height="72"/>
+                    <state key="normal" backgroundImage="btnFlauta.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -256,8 +259,8 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sc-bj-BQU">
-                    <rect key="frame" x="172" y="250" width="109" height="94"/>
-                    <state key="normal" title="Saxfone">
+                    <rect key="frame" x="706" y="256" width="72" height="72"/>
+                    <state key="normal" backgroundImage="btnSaxofone.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -265,8 +268,8 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vm9-Hs-qIX">
-                    <rect key="frame" x="289" y="126" width="109" height="94"/>
-                    <state key="normal" title="Tambor">
+                    <rect key="frame" x="915" y="170" width="72" height="72"/>
+                    <state key="normal" backgroundImage="btnTambor.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -274,8 +277,8 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QiZ-Jh-TVG">
-                    <rect key="frame" x="289" y="228" width="109" height="94"/>
-                    <state key="normal" title="Guitarra">
+                    <rect key="frame" x="394" y="7" width="72" height="72"/>
+                    <state key="normal" backgroundImage="btnGuitarra.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -283,35 +286,17 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byY-B3-jPk">
-                    <rect key="frame" x="289" y="44" width="109" height="94"/>
-                    <state key="normal" title="Violão">
+                    <rect key="frame" x="700" y="8" width="72" height="72"/>
+                    <state key="normal" backgroundImage="btnViolao.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="btnViolao:" destination="-1" eventType="touchUpInside" id="Pee-Kf-fbY"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diR-aW-xqs">
-                    <rect key="frame" x="423" y="79" width="88" height="44"/>
-                    <state key="normal" title="Telefone">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="btnTelefone:" destination="-1" eventType="touchUpInside" id="9R4-PC-7eD"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBh-Ym-JLW">
-                    <rect key="frame" x="406" y="242" width="109" height="94"/>
-                    <state key="normal" title="Agogo">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="btnAgogo:" destination="-1" eventType="touchUpInside" id="czt-4u-e4B"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESW-Iw-de5">
-                    <rect key="frame" x="336" y="0.0" width="109" height="94"/>
-                    <state key="normal" title="Trompete">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESW-Iw-de5">
+                    <rect key="frame" x="584" y="7" width="72" height="72"/>
+                    <state key="normal" image="btnTrompete.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -319,8 +304,8 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldV-Oa-5Bk">
-                    <rect key="frame" x="402" y="140" width="109" height="94"/>
-                    <state key="normal" title="Xilofone">
+                    <rect key="frame" x="550" y="170" width="72" height="72"/>
+                    <state key="normal" backgroundImage="btnXilofone.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -328,8 +313,8 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbk-bG-7Vm">
-                    <rect key="frame" x="559" y="54" width="109" height="94"/>
-                    <state key="normal" title="Acordião">
+                    <rect key="frame" x="592" y="90" width="72" height="72"/>
+                    <state key="normal" backgroundImage="btnAcordeon.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -337,8 +322,8 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ord-Qc-pnC">
-                    <rect key="frame" x="921" y="54" width="109" height="94"/>
-                    <state key="normal" title="Flauta Indio">
+                    <rect key="frame" x="921" y="90" width="72" height="72"/>
+                    <state key="normal" backgroundImage="btnFlautaIndio.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -346,8 +331,8 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0Z-OL-AYu">
-                    <rect key="frame" x="816" y="53" width="109" height="94"/>
-                    <state key="normal" title="Crystal">
+                    <rect key="frame" x="807" y="90" width="72" height="72"/>
+                    <state key="normal" backgroundImage="btnCopoCristal.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -355,8 +340,8 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2q-1H-aEw">
-                    <rect key="frame" x="691" y="54" width="109" height="94"/>
-                    <state key="normal" title="Clarinete">
+                    <rect key="frame" x="700" y="90" width="72" height="72"/>
+                    <state key="normal" backgroundImage="btnClarinete.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -364,8 +349,8 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbd-fM-OE7">
-                    <rect key="frame" x="550" y="155" width="109" height="94"/>
-                    <state key="normal" title="Gaita">
+                    <rect key="frame" x="496" y="90" width="72" height="72"/>
+                    <state key="normal" backgroundImage="btnGaita.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -373,26 +358,17 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nT1-fG-sy0">
-                    <rect key="frame" x="921" y="155" width="109" height="94"/>
-                    <state key="normal" title="Banjo">
+                    <rect key="frame" x="921" y="7" width="72" height="72"/>
+                    <state key="normal" backgroundImage="btnBanjo.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="btnBanjo:" destination="-1" eventType="touchUpInside" id="OCe-xP-xJx"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wa5-8L-8qq">
-                    <rect key="frame" x="816" y="155" width="109" height="94"/>
-                    <state key="normal" title="Hit">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="btnHit:" destination="-1" eventType="touchUpInside" id="aES-pv-Rve"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MR1-oW-9UC">
-                    <rect key="frame" x="691" y="155" width="109" height="94"/>
-                    <state key="normal" title="Harpa">
+                    <rect key="frame" x="799" y="170" width="72" height="72"/>
+                    <state key="normal" backgroundImage="btnHarpa.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -400,8 +376,8 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVe-Yu-FgH">
-                    <rect key="frame" x="559" y="250" width="109" height="94"/>
-                    <state key="normal" title="Ocarina">
+                    <rect key="frame" x="712" y="170" width="72" height="72"/>
+                    <state key="normal" backgroundImage="btnOcarina.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -409,43 +385,16 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQm-Ka-cEg">
-                    <rect key="frame" x="915" y="257" width="109" height="94"/>
-                    <state key="normal" title="Tecnologico">
+                    <rect key="frame" x="818" y="256" width="72" height="72"/>
+                    <state key="normal" backgroundImage="btnTelefone.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="btnTecnologico:" destination="-1" eventType="touchUpInside" id="aUb-ji-6Xr"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uR4-2Q-Qo1">
-                    <rect key="frame" x="816" y="250" width="109" height="94"/>
-                    <state key="normal" title="Piano Igreja">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="btnPianoIgreja:" destination="-1" eventType="touchUpInside" id="XTH-hV-GyU"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qta-hV-RfW">
-                    <rect key="frame" x="691" y="250" width="109" height="94"/>
-                    <state key="normal" title="Passaro">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="btnPassaro:" destination="-1" eventType="touchUpInside" id="V3p-iV-5MN"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kD5-EI-qjl">
-                    <rect key="frame" x="544" y="337" width="109" height="94"/>
-                    <state key="normal" title="Shamisen">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="btnShamisen:" destination="-1" eventType="touchUpInside" id="kzS-3b-qmd"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dpb-5a-CpK">
-                    <rect key="frame" x="906" y="337" width="109" height="94"/>
+                    <rect key="frame" x="376" y="68" width="109" height="94"/>
                     <state key="normal" title="Violoncelo">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -453,18 +402,9 @@
                         <action selector="btnVioloncelo:" destination="-1" eventType="touchUpInside" id="I4t-im-AhJ"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uhb-vo-e1w">
-                    <rect key="frame" x="801" y="337" width="109" height="94"/>
-                    <state key="normal" title="Sino">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="bntSino:" destination="-1" eventType="touchUpInside" id="gLR-lH-nNG"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNA-UW-cmp">
-                    <rect key="frame" x="676" y="337" width="109" height="94"/>
-                    <state key="normal" title="Panela">
+                    <rect key="frame" x="915" y="256" width="72" height="72"/>
+                    <state key="normal" backgroundImage="btnPanela.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -472,10 +412,10 @@
                     </connections>
                 </button>
                 <view hidden="YES" alpha="0.49999999999999961" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oHt-pg-vi6">
-                    <rect key="frame" x="0.0" y="0.0" width="1064" height="832"/>
+                    <rect key="frame" x="0.0" y="403" width="1064" height="380"/>
                     <subviews>
                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="o6u-mU-3zh">
-                            <rect key="frame" x="514" y="397" width="37" height="37"/>
+                            <rect key="frame" x="514" y="-55" width="37" height="37"/>
                             <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </activityIndicatorView>
                     </subviews>
@@ -483,20 +423,33 @@
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            <nil key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
     <resources>
+        <image name="Zecaopiano.png" width="1024" height="500"/>
+        <image name="btnAcordeon.png" width="173" height="173"/>
+        <image name="btnBanjo.png" width="173" height="173"/>
+        <image name="btnClarinete.png" width="173" height="173"/>
+        <image name="btnCopoCristal.png" width="173" height="173"/>
+        <image name="btnFlauta.png" width="173" height="173"/>
+        <image name="btnFlautaIndio.png" width="173" height="173"/>
+        <image name="btnGaita.png" width="173" height="173"/>
+        <image name="btnGuitarra.png" width="173" height="173"/>
+        <image name="btnHarpa.png" width="173" height="173"/>
+        <image name="btnOcarina.png" width="173" height="173"/>
+        <image name="btnPanela.png" width="173" height="173"/>
+        <image name="btnPiano.png" width="173" height="173"/>
+        <image name="btnSaxofone.png" width="173" height="173"/>
+        <image name="btnTambor.png" width="173" height="173"/>
+        <image name="btnTelefone.png" width="173" height="173"/>
+        <image name="btnTrompete.png" width="173" height="173"/>
+        <image name="btnViolao.png" width="173" height="173"/>
+        <image name="btnXilofone.png" width="173" height="173"/>
         <image name="teclaBrancaDown.png" width="78" height="324"/>
         <image name="teclaBrancaUp.png" width="78" height="324"/>
         <image name="teclaPretaDown.png" width="48" height="191"/>
         <image name="teclaPretaUp.png" width="48" height="191"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
-    </simulatedMetricsContainer>
 </document>
