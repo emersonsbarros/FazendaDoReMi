@@ -37,12 +37,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[GerenciadorComponenteView sharedManager]addComponentesBotaoVoltar:self:0:-8];
+    
     self.viewPrincipal.layer.cornerRadius = 20.0f;
     self.viewPrincipal.layer.borderWidth = 1.0f;
     self.viewPrincipal.layer.borderColor = [UIColor blackColor].CGColor;
 
     self.tableUsuarios.transform = CGAffineTransformMakeRotation(M_PI/-2);
     [self.tableUsuarios setFrame:CGRectMake(30, 30, 647, 375)];
+    
     self.tableUsuarios.backgroundColor = [UIColor whiteColor];
     self.tableUsuarios.showsVerticalScrollIndicator = NO;
     self.tableUsuarios.delegate = self;
@@ -82,7 +85,7 @@
     Usuario *user = [[[GerenciadorUsuario sharedManager]retornaTodosUsuarios] objectAtIndex:[indexPath row]];
     
     UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
-    recipeImageView.image = [UIImage imageNamed:@"iconeFacebook.png"];
+    recipeImageView.image = [UIImage imageNamed:@"fotoAvatar.jpg"];
     
     UILabel *recipeNameLabel = (UILabel *)[cell viewWithTag:101];
     recipeNameLabel.text = user.nome;
@@ -93,8 +96,6 @@
     recipeImageView.transform = CGAffineTransformMakeRotation(M_PI/2);
     recipeNameLabel.transform = CGAffineTransformMakeRotation(M_PI/2);
     btn.transform = CGAffineTransformMakeRotation(M_PI/2);
-    
-    //recipeNameLabel.frame = CGRectMake(0, 0, recipeNameLabel.frame.size.width, recipeNameLabel.frame.size.height);
     
     return cell;
     

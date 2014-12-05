@@ -24,4 +24,6 @@
 @property NSString *result;
 
 
+@property (weak, nonatomic) IBOutlet UIView *viewPrincipal;
+
 @end

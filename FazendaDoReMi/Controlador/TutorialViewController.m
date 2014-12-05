@@ -31,6 +31,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.viewPrincipal.layer.cornerRadius = 20.0f;
+    self.viewPrincipal.layer.borderWidth = 1.0f;
+    self.viewPrincipal.layer.borderColor = [UIColor blackColor].CGColor;
+    
     //[self limparDados];
     
     self.result = @"vini";
