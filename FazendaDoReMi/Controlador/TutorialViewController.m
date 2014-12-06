@@ -2,7 +2,7 @@
 //  TutorialViewController.m
 //  FazendaDoReMi
 //
-//  Created by Vinicius Resende Fialho on 30/11/14.
+//  Created by Vinicius Resende Fialho on 05/12/14.
 //  Copyright (c) 2014 EMERSON BARROS | VINICIUS RESENDE. All rights reserved.
 //
 
@@ -14,72 +14,57 @@
 
 @implementation TutorialViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+
+-(void)criaItens{
+    
 }
 
-- (BOOL)prefersStatusBarHidden {
-    return YES;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
-    self.viewPrincipal.layer.cornerRadius = 20.0f;
-    self.viewPrincipal.layer.borderWidth = 1.0f;
-    self.viewPrincipal.layer.borderColor = [UIColor blackColor].CGColor;
+    self.listaAudios = [[NSMutableArray alloc]init];
+    self.listaVideos = [[NSMutableArray alloc]init];
+    self.indiceLista = 0;
     
-    //[self limparDados];
     
-    self.result = @"vini";
+    NSString *path = [[NSBundle mainBundle]pathForResource:@"carro" ofType:@"mp3"];
+    self.link = [AVAsset assetWithURL:[NSURL fileURLWithPath:path]];
+    self.item =[[AVPlayerItem alloc]initWithAsset:self.link];
+    self.player = [[AVPlayer alloc]initWithPlayerItem:self.item];
+    self.layer =[AVPlayerLayer playerLayerWithPlayer:self.player];
+    self.layer.frame = CGRectMake(0, 0, self.viewVideo.frame.size.width, self.viewVideo.frame.size.height);
+    [self.viewVideo.layer addSublayer:self.layer];
+    [self.layer setBackgroundColor:[[UIColor blackColor]CGColor]];
     
-//    for(Aula *aula in [GerenciadorDeAula sharedManager].listaDeAulas){
-//        for(Exercicio *ex in aula.listaDeExercicios){
-//            [[GerenciadorUsuario sharedManager]cadastrarExercicios:ex];
-//        }
-//    }
+    [self.player seekToTime:kCMTimeZero];
+    [self.player play];
+    self.player.actionAtItemEnd = AVPlayerActionAtItemEndNone;
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(playerItemDidReachEnd:)
+                                                 name:AVPlayerItemDidPlayToEndTimeNotification
+                                               object:[self.player currentItem]];
+    
+    
 }
+
+- (void)playerItemDidReachEnd:(NSNotification *)notification {
+    AVPlayerItem *p = [notification object];
+    [p seekToTime:kCMTimeZero];
+    NSLog(@"fgdfg");
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-
-- (IBAction)btnTodos:(id)sender {
-    //[[GerenciadorUsuario sharedManager]retornaTodosUsuarios];
-    //[[GerenciadorUsuario sharedManager]retornaNumeroUsuarios];
-    [[GerenciadorUsuario sharedManager]retornaTodosExercicios];
+- (IBAction)btnProximo:(id)sender {
+    self.indiceLista += 1;
+    
 }
-
-- (IBAction)btnDeletar:(id)sender {
-    [[GerenciadorUsuario sharedManager]deletarUsuario:self.txtCampoNome.text];
-}
-
-- (IBAction)btnAtualizar:(id)sender {
-    [[GerenciadorUsuario sharedManager]atualizarNomeUsuario:@"vini":self.txtCampoNome.text];
-}
-
-- (IBAction)btnCadastrarUsuario:(id)sender {
-    UsuarioAplicativo *user = [[UsuarioAplicativo alloc]init];
-    user.nome = self.txtCampoNome.text;
-    [[GerenciadorUsuario sharedManager]cadastrarUsuario:user];
-}
-
-- (IBAction)btnPesquisar:(id)sender {
-    [[GerenciadorUsuario sharedManager]retornaUsuario:self.txtCampoNome.text];
-}
-
--(void)limparDados{
-    [[GerenciadorUsuario sharedManager]limparDadosBanco];
-}
-
 
 
 

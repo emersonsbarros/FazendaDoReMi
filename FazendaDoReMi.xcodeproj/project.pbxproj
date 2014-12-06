@@ -482,13 +482,14 @@
 		3F1C09431A22C1C600905CD1 /* BotaoVoltarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1C09411A22C1C600905CD1 /* BotaoVoltarViewController.m */; };
 		3F1C09441A22C1C600905CD1 /* BotaoVoltarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1C09421A22C1C600905CD1 /* BotaoVoltarViewController.xib */; };
 		3F2149871A324C2F0047D0DB /* fotoAvatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F2149861A324C2F0047D0DB /* fotoAvatar.jpg */; };
+		3F21498A1A3276400047D0DB /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2149891A3276400047D0DB /* TutorialViewController.m */; };
 		3F4611591A2C0A9300A1650A /* UsuarioAplicativo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4611581A2C0A9300A1650A /* UsuarioAplicativo.m */; };
 		3F5D4D421A17E67200A33538 /* Xilofone.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D4D3D1A17E67200A33538 /* Xilofone.plist */; };
 		3F5D4D431A17E67200A33538 /* Xylo C7.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D4D3E1A17E67200A33538 /* Xylo C7.caf */; };
 		3F5D4D441A17E67200A33538 /* Xylo E4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D4D3F1A17E67200A33538 /* Xylo E4.caf */; };
 		3F5D4D451A17E67200A33538 /* Xylo E5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D4D401A17E67200A33538 /* Xylo E5.caf */; };
 		3F5D4D461A17E67200A33538 /* Xylo G#4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D4D411A17E67200A33538 /* Xylo G#4.caf */; };
-		3FAA70871A2B895100EB1BA8 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA70861A2B895100EB1BA8 /* TutorialViewController.m */; };
+		3FAA70871A2B895100EB1BA8 /* TelaCadastrarUsuarioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA70861A2B895100EB1BA8 /* TelaCadastrarUsuarioViewController.m */; };
 		3FB6F4F519DA659C0080057B /* botao12Pausa.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6F4C919DA659C0080057B /* botao12Pausa.png */; };
 		3FB6F4F619DA659C0080057B /* botao12Tempo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6F4CA19DA659C0080057B /* botao12Tempo.png */; };
 		3FB6F4F719DA659C0080057B /* botao1Pausa.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FB6F4CB19DA659C0080057B /* botao1Pausa.png */; };
@@ -1205,6 +1206,8 @@
 		3F1C09411A22C1C600905CD1 /* BotaoVoltarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BotaoVoltarViewController.m; sourceTree = "<group>"; };
 		3F1C09421A22C1C600905CD1 /* BotaoVoltarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BotaoVoltarViewController.xib; sourceTree = "<group>"; };
 		3F2149861A324C2F0047D0DB /* fotoAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fotoAvatar.jpg; path = Zecao/fotoAvatar.jpg; sourceTree = "<group>"; };
+		3F2149881A3276400047D0DB /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
+		3F2149891A3276400047D0DB /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
 		3F4611571A2C0A9300A1650A /* UsuarioAplicativo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UsuarioAplicativo.h; path = ../Controlador/UsuarioAplicativo.h; sourceTree = "<group>"; };
 		3F4611581A2C0A9300A1650A /* UsuarioAplicativo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UsuarioAplicativo.m; path = ../Controlador/UsuarioAplicativo.m; sourceTree = "<group>"; };
 		3F5D4D3D1A17E67200A33538 /* Xilofone.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Xilofone.plist; sourceTree = "<group>"; };
@@ -1212,8 +1215,8 @@
 		3F5D4D3F1A17E67200A33538 /* Xylo E4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Xylo E4.caf"; sourceTree = "<group>"; };
 		3F5D4D401A17E67200A33538 /* Xylo E5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Xylo E5.caf"; sourceTree = "<group>"; };
 		3F5D4D411A17E67200A33538 /* Xylo G#4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Xylo G#4.caf"; sourceTree = "<group>"; };
-		3FAA70851A2B895100EB1BA8 /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
-		3FAA70861A2B895100EB1BA8 /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
+		3FAA70851A2B895100EB1BA8 /* TelaCadastrarUsuarioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelaCadastrarUsuarioViewController.h; sourceTree = "<group>"; };
+		3FAA70861A2B895100EB1BA8 /* TelaCadastrarUsuarioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TelaCadastrarUsuarioViewController.m; sourceTree = "<group>"; };
 		3FB6F4C919DA659C0080057B /* botao12Pausa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao12Pausa.png; sourceTree = "<group>"; };
 		3FB6F4CA19DA659C0080057B /* botao12Tempo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao12Tempo.png; sourceTree = "<group>"; };
 		3FB6F4CB19DA659C0080057B /* botao1Pausa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao1Pausa.png; sourceTree = "<group>"; };
@@ -2560,8 +2563,10 @@
 		3FAA70841A2B893100EB1BA8 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				3FAA70851A2B895100EB1BA8 /* TutorialViewController.h */,
-				3FAA70861A2B895100EB1BA8 /* TutorialViewController.m */,
+				3FAA70851A2B895100EB1BA8 /* TelaCadastrarUsuarioViewController.h */,
+				3FAA70861A2B895100EB1BA8 /* TelaCadastrarUsuarioViewController.m */,
+				3F2149881A3276400047D0DB /* TutorialViewController.h */,
+				3F2149891A3276400047D0DB /* TutorialViewController.m */,
 			);
 			name = Tutorial;
 			sourceTree = "<group>";
@@ -3866,6 +3871,7 @@
 				3FCD26E61A2CEDF800C84554 /* Usuario_Exercicio.m in Sources */,
 				3FC5D33119DA5C3200348F51 /* EscolhaUsuarioPartitura.m in Sources */,
 				3FC5D33519DA5C3200348F51 /* Instrumento.m in Sources */,
+				3F21498A1A3276400047D0DB /* TutorialViewController.m in Sources */,
 				0BF00EBE1A27A6A80006A627 /* BotaoInstrumento.m in Sources */,
 				3FC5D33419DA5C3200348F51 /* DataBaseInstrumento.m in Sources */,
 				0B862C4319EC6E60009365DD /* ControladorDeItem.m in Sources */,
@@ -3880,7 +3886,7 @@
 				A8F1C4CC19D21236001850E4 /* SpriteMascote.m in Sources */,
 				3FC5D2F119DA59BA00348F51 /* ComponenteScrollEdicao.m in Sources */,
 				0BAFB17519F1B85300DCF54F /* GesturePanGesture.m in Sources */,
-				3FAA70871A2B895100EB1BA8 /* TutorialViewController.m in Sources */,
+				3FAA70871A2B895100EB1BA8 /* TelaCadastrarUsuarioViewController.m in Sources */,
 				0BBF81D01A1D1C210033149B /* InstrumentoXilofoneViewController.m in Sources */,
 				3FC5D34419DA5D4C00348F51 /* GerenciadorComponenteView.m in Sources */,
 				3FCD26B91A2CD14300C84554 /* Usuario.m in Sources */,

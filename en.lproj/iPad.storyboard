@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="CwD-NK-3Lq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="ysP-Ec-pzc">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--Menu View Controller-->
@@ -101,10 +101,10 @@
             </objects>
             <point key="canvasLocation" x="1823" y="-888"/>
         </scene>
-        <!--Tutorial View Controller-->
+        <!--Tela Cadastrar Usuario View Controller-->
         <scene sceneID="y5u-Lg-GGf">
             <objects>
-                <viewController storyboardIdentifier="Tutorial" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1p2-Qv-ipY" customClass="TutorialViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Tutorial" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1p2-Qv-ipY" customClass="TelaCadastrarUsuarioViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5KT-dR-0PG"/>
                         <viewControllerLayoutGuide type="bottom" id="K8T-kl-3bJ"/>
@@ -203,11 +203,12 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="txtCampoNome" destination="mL8-YE-tyu" id="vV9-Hi-T4a"/>
+                        <outlet property="viewPrincipal" destination="UkV-UK-BYd" id="QaX-Cs-s6d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkR-Pi-8mK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="718" y="-45"/>
+            <point key="canvasLocation" x="-617" y="-893"/>
         </scene>
         <!--Estudio View Controller-->
         <scene sceneID="SY0-u1-njL">
@@ -451,6 +452,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPT-sa-jr0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="569" y="-888"/>
+        </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="LSp-sf-6ci">
+            <objects>
+                <viewController id="ysP-Ec-pzc" customClass="TutorialViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Eu-ut-iZb"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ekw-Bk-Jtm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ewa-oL-TMb">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-ceu.png" translatesAutoresizingMaskIntoConstraints="NO" id="0P5-Sg-DQX">
+                                <rect key="frame" x="0.0" y="0.0" width="1030" height="768"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-arvore.png" translatesAutoresizingMaskIntoConstraints="NO" id="afk-Wi-o2d">
+                                <rect key="frame" x="0.0" y="0.0" width="1039" height="768"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rdr-Q0-NTm">
+                                <rect key="frame" x="266" y="115" width="701" height="549"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YMd-fc-nmM">
+                                        <rect key="frame" x="71" y="69" width="550" height="320"/>
+                                        <color key="backgroundColor" red="0.66666666669999997" green="0.1147709022" blue="0.12612563709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWo-g2-iSZ">
+                                        <rect key="frame" x="412" y="442" width="100" height="50"/>
+                                        <state key="normal" title="Proximo">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnProximo:" destination="ysP-Ec-pzc" eventType="touchUpInside" id="lOe-Zj-Sau"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndO-fs-rX5">
+                                        <rect key="frame" x="267" y="442" width="100" height="50"/>
+                                        <state key="normal" title="Repetir">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ZECAO01.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lyv-Qs-VBE">
+                                <rect key="frame" x="-273" y="105" width="787" height="682"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="viewPrincipal" destination="rdr-Q0-NTm" id="qVX-Fw-neb"/>
+                        <outlet property="viewVideo" destination="YMd-fc-nmM" id="zNg-wa-cd5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qJ5-CP-JQO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="569" y="-24"/>
         </scene>
         <!--Instrumento Xilofone View Controller-->
         <scene sceneID="0BT-Al-r3K">
