@@ -46,22 +46,24 @@
 }
 
 -(void)criaVideo1{
-    NSString *path = [[NSBundle mainBundle]pathForResource:@"m" ofType:@"mp4"];
-    NSURL *url = [NSURL fileURLWithPath:path];
-    [self.listaVideos addObject:url];
+    UIImage *img = [UIImage imageNamed:@"backxilofone1-2.png"];
+    [self.listaImagens addObject:img];
 }
 
 -(void)criaVideo2{
-    NSString *path = [[NSBundle mainBundle]pathForResource:@"m" ofType:@"mp4"];
-    NSURL *url = [NSURL fileURLWithPath:path];
-    [self.listaVideos addObject:url];
+    UIImage *img = [UIImage imageNamed:@"backOutrosInstrumentos1.png"];
+    [self.listaImagens addObject:img];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.viewPrincipal.layer.cornerRadius = 20.0f;
+    self.viewPrincipal.layer.borderWidth = 1.0f;
+    self.viewPrincipal.layer.borderColor = [UIColor blackColor].CGColor;
+    
     self.listaAudios = [[NSMutableArray alloc]init];
-    self.listaVideos = [[NSMutableArray alloc]init];
+    self.listaImagens = [[NSMutableArray alloc]init];
     self.indiceLista = 0;
     
     [self criaItens1];
@@ -74,12 +76,8 @@
     [self.player seekToTime:kCMTimeZero];
     [self.player play];
     
-    self.moviePlayer=[[MPMoviePlayerController alloc] initWithContentURL:[self.listaVideos objectAtIndex:self.indiceLista]];
-    self.moviePlayer.repeatMode = YES;
-    self.moviePlayer.controlStyle = MPMovieControlStyleNone;
-    self.moviePlayer.view.frame = CGRectMake(0, 0, self.viewVideo.frame.size.width, self.viewVideo.frame.size.height);
-    [self.viewVideo addSubview:self.moviePlayer.view];
-    [[self moviePlayer] play];
+    self.imgTutorial.image = [self.listaImagens objectAtIndex:self.indiceLista];
+   
     
 }
 
@@ -99,11 +97,9 @@
         [self.player seekToTime:kCMTimeZero];
         [self.player play];
         
-        [self.moviePlayer stop];
-        NSURL *url= [self.listaVideos objectAtIndex:self.indiceLista];
-        self.moviePlayer.contentURL = url;
-        [self.moviePlayer play];
+        self.imgTutorial.image = [self.listaImagens objectAtIndex:self.indiceLista];
 
+        
     }
 
 }

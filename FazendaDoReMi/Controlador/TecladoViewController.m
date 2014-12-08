@@ -91,12 +91,14 @@
 
 
 -(void)desapareceTelaCarregamento{
+    [self.imgCarregamento stopAnimating];
     [[Sinfonia sharedManager]trocaInstrumentoESoundBank];
     self.viewCarregamento.hidden = YES;
 }
 
 -(void)chamaTelaCarregamento{
     self.viewCarregamento.hidden = NO;
+    [self addAnimacaoSpriteCarremento];
     [self performSelector:@selector(desapareceTelaCarregamento) withObject:nil afterDelay:5.0];
 }
 
@@ -303,15 +305,39 @@
 ////////////////////////////////////////////////////////////
 
 
+-(void)addAnimacaoSpriteCarremento{
+    
+    UIImage *image1 = [UIImage imageNamed:@"imgcarregamento1.png"];
+    UIImage *image2 = [UIImage imageNamed:@"imgcarregamento2.png"];
+    UIImage *image3 = [UIImage imageNamed:@"imgcarregamento3.png"];
+    UIImage *image4 = [UIImage imageNamed:@"imgcarregamento4.png"];
+    UIImage *image5 = [UIImage imageNamed:@"imgcarregamento5.png"];
+    NSArray *imageArray = [NSArray arrayWithObjects:image1, image2, image3, image4, image5,nil];
+    self.imgCarregamento.animationImages = imageArray;
+    
+    
+    CAKeyframeAnimation *animacao = [CAKeyframeAnimation animationWithKeyPath: @"contents"];
+    animacao.calculationMode = kCAAnimationDiscrete;
+    animacao.duration = 1.0;
+    animacao.repeatCount = INFINITY;
+    animacao.autoreverses = NO;
+    animacao.beginTime = CACurrentMediaTime() + 0.2;
+    animacao.fillMode = kCAFillModeForwards;
+    animacao.removedOnCompletion = YES;
+    animacao.additive = NO;
+    animacao.values = [self animationCGImagesArray:self.imgCarregamento];
+    [self.imgCarregamento.layer addAnimation: animacao forKey:@"animacaoSprite"];
+    
+}
 
-
-
-
-//[nomeNotas addObject:@"5Fs"];
-//[nomeNotas addObject:@"5G"];
-//[nomeNotas addObject:@"5Gs"];
-//[nomeNotas addObject:@"5A"];
-//[nomeNotas addObject:@"5As"];
+//Aux que converte para CGImage, unico jeito para dar certo
+-(NSArray*)animationCGImagesArray:(UIImageView*)imgAddAnimacao {
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:[imgAddAnimacao.animationImages count]];
+    for (UIImage *image in imgAddAnimacao.animationImages) {
+        [array addObject:(id)[image CGImage]];
+    }
+    return [NSArray arrayWithArray:array];
+}
 
 
 - (IBAction)teclas1:(id)sender {
@@ -473,11 +499,6 @@
 ///////////////////////////////// BOTOES INSTRUMENTOS /////////////////////////////////
 
 
-- (IBAction)btnTelefone:(id)sender {
-    [self chamaTelaCarregamento];
-
-    self.nomeInstrumento = @"Telefone";
-}
 
 - (IBAction)btnPiano:(id)sender {
     [self chamaTelaCarregamento];
@@ -507,13 +528,6 @@
     [self chamaTelaCarregamento];
 
     self.nomeInstrumento = @"Guitarra";
-}
-
-
-- (IBAction)btnAgogo:(id)sender {
-    [self chamaTelaCarregamento];
-    
-    self.nomeInstrumento = @"Agogo";
 }
 
 
@@ -571,12 +585,6 @@
     self.nomeInstrumento = @"Harpa";
 }
 
-- (IBAction)btnHit:(id)sender {
-    [self chamaTelaCarregamento];
-   
-    self.nomeInstrumento = @"Hit";
-}
-
 
 
 - (IBAction)btnOcarina:(id)sender {
@@ -586,17 +594,7 @@
 }
 
 
-- (IBAction)btnPassaro:(id)sender {
-    [self chamaTelaCarregamento];
-    
-    self.nomeInstrumento = @"Passaro";
-}
 
-- (IBAction)btnPianoIgreja:(id)sender {
-    [self chamaTelaCarregamento];
-   
-    self.nomeInstrumento = @"PianoIgreja";
-}
 
 - (IBAction)btnTecnologico:(id)sender {
     [self chamaTelaCarregamento];
@@ -604,11 +602,7 @@
     self.nomeInstrumento = @"Tecnologico";
 }
 
-- (IBAction)btnShamisen:(id)sender {
-    [self chamaTelaCarregamento];
-   
-    self.nomeInstrumento = @"Shamisen";
-}
+
 
 - (IBAction)btnPanela:(id)sender {
     [self chamaTelaCarregamento];
@@ -616,11 +610,7 @@
     self.nomeInstrumento = @"Panela";
 }
 
-- (IBAction)bntSino:(id)sender {
-    [self chamaTelaCarregamento];
 
-    self.nomeInstrumento = @"Sino";
-}
 
 - (IBAction)btnVioloncelo:(id)sender {
     [self chamaTelaCarregamento];

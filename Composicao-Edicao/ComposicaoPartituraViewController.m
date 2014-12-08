@@ -39,6 +39,7 @@
     return [self sharedManager];
 }
 
+
 //Singleton
 +(ComposicaoPartituraViewController*)sharedManager{
     static ComposicaoPartituraViewController *gerenciadorDeItem = nil;
@@ -48,6 +49,13 @@
     }
     return gerenciadorDeItem;
 }
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 
 /////////////////// VIEWCONTROLLER ///////////////////
 
@@ -95,14 +103,10 @@
     //Desenha a partitura com 10 linhas de pentagrama
     [[DesenhaPartituraEdicao sharedManager]desenhaContornoPartituraParaEdicao:6:YES];
     
- 
+    
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 
 

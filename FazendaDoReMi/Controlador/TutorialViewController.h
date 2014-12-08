@@ -13,8 +13,9 @@
 
 @interface TutorialViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *imgTutorial;
 
-@property NSMutableArray *listaVideos;
+@property NSMutableArray *listaImagens;
 @property NSMutableArray *listaAudios;
 @property int indiceLista;
 

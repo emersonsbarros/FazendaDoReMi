@@ -102,6 +102,7 @@
 
 //vIRE CARREGAMENTO
 @property (weak, nonatomic) IBOutlet UIView *viewCarregamento;
+@property (weak, nonatomic) IBOutlet UIImageView *imgCarregamento;
 
 
 

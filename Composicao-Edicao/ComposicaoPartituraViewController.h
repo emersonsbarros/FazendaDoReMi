@@ -16,6 +16,7 @@
     
 
 }
+@property (weak, nonatomic) IBOutlet UIImageView *imgCarremento;
 
 //Scroll que recebe a partituras
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollEdicao;
