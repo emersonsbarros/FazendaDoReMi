@@ -476,6 +476,7 @@
 		0BF00EBE1A27A6A80006A627 /* BotaoInstrumento.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF00EBD1A27A6A80006A627 /* BotaoInstrumento.m */; };
 		0BF00EC41A27B7110006A627 /* InfiniteScrollPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF00EC11A27B7110006A627 /* InfiniteScrollPicker.m */; };
 		0BF00EC51A27B7110006A627 /* UIView+viewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF00EC31A27B7110006A627 /* UIView+viewController.m */; };
+		3F03EDE61A33E2CD00F75F97 /* m.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3F03EDE51A33E0D500F75F97 /* m.mp4 */; };
 		3F0E879719DBA6F8003FF4EB /* JornadaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E879619DBA6F8003FF4EB /* JornadaViewController.m */; };
 		3F1246081A1DA7240064ADF0 /* TeclaXilo12.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1246061A1DA7240064ADF0 /* TeclaXilo12.png */; };
 		3F1246091A1DA7240064ADF0 /* TeclaXilo13.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1246071A1DA7240064ADF0 /* TeclaXilo13.png */; };
@@ -1198,6 +1199,7 @@
 		0BF00EC11A27B7110006A627 /* InfiniteScrollPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteScrollPicker.m; sourceTree = "<group>"; };
 		0BF00EC21A27B7110006A627 /* UIView+viewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+viewController.h"; sourceTree = "<group>"; };
 		0BF00EC31A27B7110006A627 /* UIView+viewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+viewController.m"; sourceTree = "<group>"; };
+		3F03EDE51A33E0D500F75F97 /* m.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = m.mp4; sourceTree = "<group>"; };
 		3F0E879519DBA6F8003FF4EB /* JornadaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JornadaViewController.h; sourceTree = "<group>"; };
 		3F0E879619DBA6F8003FF4EB /* JornadaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JornadaViewController.m; sourceTree = "<group>"; };
 		3F1246061A1DA7240064ADF0 /* TeclaXilo12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TeclaXilo12.png; sourceTree = "<group>"; };
@@ -2567,6 +2569,7 @@
 				3FAA70861A2B895100EB1BA8 /* TelaCadastrarUsuarioViewController.m */,
 				3F2149881A3276400047D0DB /* TutorialViewController.h */,
 				3F2149891A3276400047D0DB /* TutorialViewController.m */,
+				3F03EDE51A33E0D500F75F97 /* m.mp4 */,
 			);
 			name = Tutorial;
 			sourceTree = "<group>";
@@ -3254,6 +3257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F03EDE61A33E2CD00F75F97 /* m.mp4 in Resources */,
 				0BC8DB061A1BBB2700F74157 /* Passaro.plist in Resources */,
 				0BC4BBF51A16939800D03E1F /* bongo37.caf in Resources */,
 				0B2FFB1419ED9A7600FD752E /* MANUAL DE USO.rtf in Resources */,

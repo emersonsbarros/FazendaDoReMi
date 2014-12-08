@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import <MediaPlayer/MediaPlayer.h>
+
 
 @interface TutorialViewController : UIViewController
 
@@ -17,8 +19,7 @@
 @property int indiceLista;
 
 
-@property AVAsset *link;
-@property AVPlayerItem *item;
+@property MPMoviePlayerController *moviePlayer;
 @property AVPlayer *player;
 @property AVPlayerLayer *layer;
 
@@ -27,5 +28,6 @@
 @property (weak, nonatomic) IBOutlet UIView *viewVideo;
 
 - (IBAction)btnProximo:(id)sender;
+- (IBAction)btnRepetir:(id)sender;
 
 @end
