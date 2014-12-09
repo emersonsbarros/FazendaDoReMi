@@ -31,6 +31,8 @@
 {
      self.tableUsuarios.transform = CGAffineTransformMakeRotation(M_PI/-2);
     [self.tableUsuarios setFrame:CGRectMake(30, 30, 647, 375)];
+    
+     self.tableUsuarios.hidden = NO;
 
 }
 
