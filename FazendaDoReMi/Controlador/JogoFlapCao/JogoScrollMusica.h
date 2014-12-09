@@ -9,7 +9,8 @@
 #import <SpriteKit/SpriteKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "PBParallaxScrolling.h"
-
+#import "GerenciadorComponenteView.h"
+#import "GerenciadorAudio.h"
 
 static const UInt32 mascoteCategory = 0x1 << 0;
 static const UInt32 pisoCategory = 0x1 << 1;

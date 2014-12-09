@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[GerenciadorComponenteView sharedManager]addComponentesBotaoPausaJogo:self];
+    
     [self chamaJogo];
 }
 
@@ -41,6 +44,8 @@
     
     // Present the scene.
     [skView presentScene:scene];
+    
+    [GerenciadorDeAula sharedManager].cenaAtual = scene;
     
 }
 

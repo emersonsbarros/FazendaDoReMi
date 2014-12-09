@@ -102,12 +102,35 @@
     [viewAtual.view addSubview:bar.view];
 }
 
+-(void)addComponentesBotaoPausaJogo:(UIViewController*)viewAtual{
+    BotaoPausaJogoViewController *bar = [[BotaoPausaJogoViewController alloc]init];
+    bar.view.frame = CGRectMake(10,700, bar.view.frame.size.width, bar.view.frame.size.height);
+    
+    [viewAtual addChildViewController:bar];
+    [viewAtual.view addSubview:bar.view];
+}
 
 -(void)addComponentesMascote:(UIViewController*)viewAtual :(float)posX :(float)posY :(NSString*)nomeMascote{
     MascoteViewController *bar = [[MascoteViewController alloc]initMascote:nomeMascote];
     bar.view.frame = CGRectMake(posX,posY, bar.view.frame.size.width,bar.view.frame.size.height);
     [viewAtual addChildViewController:bar];
     [viewAtual.view addSubview:bar.view];
+}
+
+-(void)addComponentesMenuPausaJogo:(UIViewController*)viewAtual :(BOOL)estagoMenu :(int)pontuacao{
+    //estado menu --- > Yes - menu de pause | No - menu de gameOver
+    MenuPausaJogoViewController *pausaMenu = [[MenuPausaJogoViewController alloc]init];
+    pausaMenu.pontuacao = pontuacao;
+    
+    if(estagoMenu){
+        pausaMenu.estadoMenu = YES;
+    }else {
+        pausaMenu.estadoMenu = NO;
+    }
+    
+    pausaMenu.view.frame = CGRectMake(viewAtual.view.frame.origin.x, viewAtual.view.frame.origin.y, pausaMenu.view.frame.size.width, pausaMenu.view.frame.size.height);
+    [viewAtual addChildViewController: pausaMenu];
+    [viewAtual.view addSubview: pausaMenu.view];
 }
 
 -(void)addComponentesMenuPausa:(UIViewController*)viewAtual{
@@ -150,19 +173,8 @@
     for(UIView *img in contr.view.subviews){
         img.alpha = 1;
         [img.layer removeAllAnimations];
-        // [img removeFromSuperview];
     }
-    
-    //    for(UIViewController *img in contr.childViewControllers){
-    //        [img removeFromParentViewController];
-    //    }
-    //
-    //
-    //    [contr.view removeFromSuperview];
-    //    [contr removeFromParentViewController];
-    //    [contr didMoveToParentViewController:nil];
-    //    contr = nil;
-    
+
     
 }
 

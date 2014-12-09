@@ -47,8 +47,64 @@
     [self criaAulaHorta];
     [self criaAulaCatavento];
     [self criaAulaEstabulo];
+    
+    [self criaAulaJogos];
 }
 
+//////////////////////////// JOGOS PARTE /////////////////////////////////
+
+-(NSArray*)retornaExercicio:(NSString*)nomeAula :(NSString*)nomeExercicio{
+    for(Aula *aula in self.listaDeAulas){
+        if([aula.nomeDoLugar isEqualToString:nomeAula]){
+            for(Exercicio *ex in aula.listaDeExercicios){
+                if([ex.nome isEqualToString:nomeExercicio]){
+                    NSArray *lista = [NSArray arrayWithObjects:aula,ex, nil];
+                    return lista;
+                }
+            }
+        }
+    }
+    return NULL;
+}
+
+
+-(void)criaAulaJogos{
+    Aula *aula = [[Aula alloc] init];
+    aula.frame = CGRectMake(0, 0, 0, 0);
+    aula.nomeDoLugar = @"Jogos";
+    [aula setBackgroundImage:[UIImage imageNamed:@"btoCasa.png"] forState:UIControlStateNormal];
+    
+    //Exercicios
+    [self criaJogo1: aula];
+   
+    
+    //Add aula no banco
+    [self.listaDeAulas addObject: aula];
+
+}
+
+-(void)criaJogo1:(Aula*)aula{
+    //Exercícios
+    Exercicio *exercicio = [[Exercicio alloc]init:0 nome:@"FlapCao" :@"JogoFlapCaoViewController": NO];
+    
+    //Fala
+    Fala *fala = [[Fala alloc] init];
+    fala.caminhoDoAudio = [NSURL URLWithString: @""];
+    
+    Fala *fala2 = [[Fala alloc] init];
+    fala2.caminhoDoAudio = [NSURL URLWithString: @""];
+    
+    
+    //Conversa
+    Conversa *conversa = [[Conversa alloc] init];
+    [[conversa listaDeFalas] addObject: fala];
+    [[conversa listaDeFalas] addObject: fala2];
+    [[[exercicio mascote] listaDeConversas] addObject:conversa];
+    
+    //Add o exercício a aula
+    [[aula listaDeExercicios]addObject: exercicio];
+
+}
 
 ////////////////////////////// AULA CASA ////////////////////////////////
 

@@ -77,7 +77,7 @@
 
 -(void)criaMorte {
     
-    SKTexture *texturaPiso = [SKTexture textureWithImageNamed:@"ZECAO01.png"];
+    SKTexture *texturaPiso = [SKTexture textureWithImageNamed:@"ventoJogoFlap.png"];
     self.morte = [SKSpriteNode spriteNodeWithTexture:texturaPiso size:CGSizeMake(150,150)];
     self.morte.name = @"Morte";
     self.morte.position = CGPointMake(800,100);
@@ -103,7 +103,7 @@
 
 -(void)criaDragao {
     
-    SKTexture *texturaPiso = [SKTexture textureWithImageNamed:@"ZECAO01.png"];
+    SKTexture *texturaPiso = [SKTexture textureWithImageNamed:@"ventoJogoFlap.png"];
     self.dragao = [SKSpriteNode spriteNodeWithTexture:texturaPiso size:CGSizeMake(150,150)];
     self.dragao.name = @"Dragao";
     self.dragao.position = CGPointMake(800,300);
@@ -129,7 +129,7 @@
 
 -(void)criaMaicon {
     
-    SKTexture *texturaPiso = [SKTexture textureWithImageNamed:@"ZECAO01.png"];
+    SKTexture *texturaPiso = [SKTexture textureWithImageNamed:@"ventoJogoFlap.png"];
     self.maicon = [SKSpriteNode spriteNodeWithTexture:texturaPiso size:CGSizeMake(150,150)];
     self.maicon.name = @"Maicon";
     self.maicon.position = CGPointMake(800,500);
@@ -155,7 +155,7 @@
 
 -(void)criaGargula {
     
-    SKTexture *texturaPiso = [SKTexture textureWithImageNamed:@"ZECAO01.png"];
+    SKTexture *texturaPiso = [SKTexture textureWithImageNamed:@"ventoJogoFlap.png"];
     self.gargula = [SKSpriteNode spriteNodeWithTexture:texturaPiso size:CGSizeMake(150,150)];
     self.gargula.name = @"Gargula";
     self.gargula.position = CGPointMake(800,700);
@@ -342,7 +342,15 @@
 }
 
 -(void)gameOver{
-    NSLog(@"gameover");
+    self.scene.view.paused = YES;
+    self.maicon.paused =YES;
+    self.gargula.paused =YES;
+    self.morte.paused =YES;
+    self.casa.paused =YES;
+    self.dragao.paused =YES;
+    self.man.paused =YES;
+    [[GerenciadorAudio sharedManager] ajustaVolume: 0];
+    [[GerenciadorComponenteView sharedManager]addComponentesMenuPausaJogo:[GerenciadorNavigationController sharedManager].controladorApp.visibleViewController:NO:self.contadorPontos];
 }
 
 -(void)didBeginContact:(SKPhysicsContact *)contact {

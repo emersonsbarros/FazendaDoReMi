@@ -37,12 +37,24 @@
 
 
 - (IBAction)btnJogoFlap:(id)sender {
-    JogoFlapCaoViewController *jogo = [[JogoFlapCaoViewController alloc]init];
-    [self.navigationController pushViewController:jogo animated:NO];
+    
+    Exercicio *jogo = [[[GerenciadorDeAula sharedManager]retornaExercicio:@"Jogos":@"FlapCao"]objectAtIndex:1];
+    Aula *aula = [[[GerenciadorDeAula sharedManager]retornaExercicio:@"Jogos":@"FlapCao"]objectAtIndex:0];
+    
+    id object = [[NSClassFromString([jogo nomeView]) alloc]initWithNibName:[jogo nomeView] bundle:nil];
+    
+    //Guardar a aula e exercício atual
+    [GerenciadorDeAula sharedManager].aulaAtual = aula;
+    [GerenciadorDeAula sharedManager].indexDoExercicioAtual = 0;
+    
+    //Push no navigation com a view do exercício
+    [self.navigationController pushViewController: object animated: YES];
+    
 }
 
 
 - (IBAction)btnJogoTimbre:(id)sender {
+
     
 }
 

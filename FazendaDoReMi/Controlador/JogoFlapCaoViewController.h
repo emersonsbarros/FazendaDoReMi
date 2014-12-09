@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "JogoScrollMusica.h"
 #import <SpriteKit/SpriteKit.h>
-
+#import "GerenciadorComponenteView.h"
 
 @interface JogoFlapCaoViewController : UIViewController
 

@@ -23,8 +23,9 @@
 #import "XilofoneVirtualViewController.h"
 
 #import "BotaoVoltarViewController.h"
-
+#import "BotaoPausaJogoViewController.h"
 #import "GerenciadorBotaoInstrumento.h"
+#import "MenuPausaJogoViewController.h"
 
 @interface GerenciadorComponenteView : NSObject
 
@@ -38,11 +39,13 @@
 -(void)addComponentesEscolhaInstrumentoPartitura:(UIViewController*)viewAtual :(UIImageView*)imgFundo :(UIImageView*)imgFundoSecundario;
 -(void)addComponentesBarraMenuNotasPausa:(UIViewController*)viewAtual :(BOOL)estado;
 -(void)addComponentesBotaoVoltar:(UIViewController*)viewAtual :(float)posX :(float)posY;
+-(void)addComponentesMenuPausaJogo:(UIViewController*)viewAtual :(BOOL)estagoMenu :(int)pontuacao;
 
 //Componetes Exericicios
 -(void)addComponentesPlayerEdicao:(UIViewController*)viewAtual :(float)posX :(float)posY;
 -(void)addComponentesMenuPausa:(UIViewController*)viewAtual;
 -(void)addComponentesBotaoPausaAula:(UIViewController*)viewAtual;
+-(void)addComponentesBotaoPausaJogo:(UIViewController*)viewAtual;
 -(void)addComponentesMascote:(UIViewController*)viewAtual :(float)posX :(float)posY :(NSString*)nomeMascote;
 
 
