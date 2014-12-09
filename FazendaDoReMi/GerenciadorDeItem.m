@@ -114,7 +114,6 @@
     somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"piano" ofType:@"mp3"]];
     [item.listaSonsURL addObject:somitem];
     
-    
     //Cria sprite(somente imagens)
     SpriteItem *itemsprite = [[SpriteItem alloc]init];
     itemsprite.nomeAnimacao = @"pianoTocando";
@@ -127,7 +126,6 @@
     
     //Add Item ao banco
     [self.listaDeItens addObject:item];
-    
 }
 
 

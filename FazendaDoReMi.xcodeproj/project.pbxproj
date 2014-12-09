@@ -460,7 +460,7 @@
 		0BCDF4681A37962700F0A94E /* btoAvancar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BCDF4051A37962700F0A94E /* btoAvancar.png */; };
 		0BCDF4691A37962700F0A94E /* btoContinuar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BCDF4061A37962700F0A94E /* btoContinuar.png */; };
 		0BCDF46A1A37962700F0A94E /* btoMapa.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BCDF4071A37962700F0A94E /* btoMapa.png */; };
-		0BCDF46B1A37962700F0A94E /* btoRetornar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BCDF4081A37962700F0A94E /* btoRetornar.png */; };
+		0BCDF46B1A37962700F0A94E /* btoRefazer.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BCDF4081A37962700F0A94E /* btoRefazer.png */; };
 		0BCDF46C1A37962700F0A94E /* btoTutorial.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BCDF4091A37962700F0A94E /* btoTutorial.png */; };
 		0BCDF4911A37968E00F0A94E /* AudioBemVindo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0BCDF46E1A37968E00F0A94E /* AudioBemVindo.m4a */; };
 		0BCDF4921A37968E00F0A94E /* batedeira.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0BCDF46F1A37968E00F0A94E /* batedeira.mp3 */; };
@@ -1246,7 +1246,7 @@
 		0BCDF4051A37962700F0A94E /* btoAvancar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btoAvancar.png; sourceTree = "<group>"; };
 		0BCDF4061A37962700F0A94E /* btoContinuar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btoContinuar.png; sourceTree = "<group>"; };
 		0BCDF4071A37962700F0A94E /* btoMapa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btoMapa.png; sourceTree = "<group>"; };
-		0BCDF4081A37962700F0A94E /* btoRetornar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btoRetornar.png; sourceTree = "<group>"; };
+		0BCDF4081A37962700F0A94E /* btoRefazer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btoRefazer.png; sourceTree = "<group>"; };
 		0BCDF4091A37962700F0A94E /* btoTutorial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btoTutorial.png; sourceTree = "<group>"; };
 		0BCDF46E1A37968E00F0A94E /* AudioBemVindo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = AudioBemVindo.m4a; sourceTree = "<group>"; };
 		0BCDF46F1A37968E00F0A94E /* batedeira.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = batedeira.mp3; sourceTree = "<group>"; };
@@ -2600,7 +2600,7 @@
 				0BCDF4051A37962700F0A94E /* btoAvancar.png */,
 				0BCDF4061A37962700F0A94E /* btoContinuar.png */,
 				0BCDF4071A37962700F0A94E /* btoMapa.png */,
-				0BCDF4081A37962700F0A94E /* btoRetornar.png */,
+				0BCDF4081A37962700F0A94E /* btoRefazer.png */,
 				0BCDF4091A37962700F0A94E /* btoTutorial.png */,
 			);
 			path = MenuPausaAula;
@@ -3599,9 +3599,10 @@
 				ORGANIZATIONNAME = "EMERSON BARROS | VINICIUS RESENDE";
 				TargetAttributes = {
 					A824717419D0AB0E00168026 = {
-						DevelopmentTeam = U6NZ972TGR;
+						DevelopmentTeam = SEUF597V3Z;
 					};
 					A824719419D0AB0E00168026 = {
+						DevelopmentTeam = SEUF597V3Z;
 						TestTargetID = A824717419D0AB0E00168026;
 					};
 				};
@@ -4002,7 +4003,7 @@
 				0BC4BBE51A16939800D03E1F /* bongo21.caf in Resources */,
 				0BC8DACE1A1BBB2700F74157 /* Clarinet E6.caf in Resources */,
 				0BCDF3361A378D7100F0A94E /* ZECAO59.png in Resources */,
-				0BCDF46B1A37962700F0A94E /* btoRetornar.png in Resources */,
+				0BCDF46B1A37962700F0A94E /* btoRefazer.png in Resources */,
 				3FB6F51319DA659C0080057B /* SiMeiotempo.png in Resources */,
 				0BC8DB221A1BBB2700F74157 /* Steel Drum C7.caf in Resources */,
 				0BC8DB131A1BBB2700F74157 /* Saw Lead C6.caf in Resources */,
