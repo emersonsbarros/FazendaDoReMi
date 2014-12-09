@@ -349,8 +349,6 @@
 		0BCDF3621A378EF500F0A94E /* porteira-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BCDF3551A378EF500F0A94E /* porteira-3.png */; };
 		0BCDF3631A378EF500F0A94E /* porteira-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BCDF3561A378EF500F0A94E /* porteira-4.png */; };
 		0BCDF3641A378EF500F0A94E /* porteira-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BCDF3571A378EF500F0A94E /* porteira-5.png */; };
-		0BCDF3791A37910500F0A94E /* AulaSomEx1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCDF3771A37910500F0A94E /* AulaSomEx1ViewController.m */; };
-		0BCDF37A1A37910500F0A94E /* AulaSomEx1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BCDF3781A37910500F0A94E /* AulaSomEx1ViewController.xib */; };
 		0BCDF37E1A37911200F0A94E /* AulaSomEx2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCDF37C1A37911200F0A94E /* AulaSomEx2ViewController.m */; };
 		0BCDF37F1A37911200F0A94E /* AulaSomEx2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BCDF37D1A37911200F0A94E /* AulaSomEx2ViewController.xib */; };
 		0BCDF3831A37912900F0A94E /* AulaSomEx3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCDF3811A37912900F0A94E /* AulaSomEx3ViewController.m */; };
@@ -538,6 +536,8 @@
 		0BF00EBE1A27A6A80006A627 /* BotaoInstrumento.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF00EBD1A27A6A80006A627 /* BotaoInstrumento.m */; };
 		0BF00EC41A27B7110006A627 /* InfiniteScrollPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF00EC11A27B7110006A627 /* InfiniteScrollPicker.m */; };
 		0BF00EC51A27B7110006A627 /* UIView+viewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF00EC31A27B7110006A627 /* UIView+viewController.m */; };
+		2BC52F161A37BB4500D969FD /* AulaSomEx1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC52F141A37BB4500D969FD /* AulaSomEx1ViewController.m */; };
+		2BC52F171A37BB4500D969FD /* AulaSomEx1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BC52F151A37BB4500D969FD /* AulaSomEx1ViewController.xib */; };
 		3F0882EC1A367B01000D9A72 /* JogoFlapCaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0882EA1A367B01000D9A72 /* JogoFlapCaoViewController.m */; };
 		3F0882ED1A367B01000D9A72 /* JogoFlapCaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F0882EB1A367B01000D9A72 /* JogoFlapCaoViewController.xib */; };
 		3F0883001A367D3E000D9A72 /* JogoScrollMusica.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0882FD1A367D3E000D9A72 /* JogoScrollMusica.m */; };
@@ -1129,9 +1129,6 @@
 		0BCDF3551A378EF500F0A94E /* porteira-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "porteira-3.png"; sourceTree = "<group>"; };
 		0BCDF3561A378EF500F0A94E /* porteira-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "porteira-4.png"; sourceTree = "<group>"; };
 		0BCDF3571A378EF500F0A94E /* porteira-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "porteira-5.png"; sourceTree = "<group>"; };
-		0BCDF3761A37910500F0A94E /* AulaSomEx1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AulaSomEx1ViewController.h; sourceTree = "<group>"; };
-		0BCDF3771A37910500F0A94E /* AulaSomEx1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AulaSomEx1ViewController.m; sourceTree = "<group>"; };
-		0BCDF3781A37910500F0A94E /* AulaSomEx1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AulaSomEx1ViewController.xib; sourceTree = "<group>"; };
 		0BCDF37B1A37911200F0A94E /* AulaSomEx2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AulaSomEx2ViewController.h; sourceTree = "<group>"; };
 		0BCDF37C1A37911200F0A94E /* AulaSomEx2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AulaSomEx2ViewController.m; sourceTree = "<group>"; };
 		0BCDF37D1A37911200F0A94E /* AulaSomEx2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AulaSomEx2ViewController.xib; sourceTree = "<group>"; };
@@ -1337,6 +1334,9 @@
 		0BF00EC11A27B7110006A627 /* InfiniteScrollPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteScrollPicker.m; sourceTree = "<group>"; };
 		0BF00EC21A27B7110006A627 /* UIView+viewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+viewController.h"; sourceTree = "<group>"; };
 		0BF00EC31A27B7110006A627 /* UIView+viewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+viewController.m"; sourceTree = "<group>"; };
+		2BC52F131A37BB4500D969FD /* AulaSomEx1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AulaSomEx1ViewController.h; sourceTree = "<group>"; };
+		2BC52F141A37BB4500D969FD /* AulaSomEx1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AulaSomEx1ViewController.m; sourceTree = "<group>"; };
+		2BC52F151A37BB4500D969FD /* AulaSomEx1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AulaSomEx1ViewController.xib; sourceTree = "<group>"; };
 		3F0882E91A367B01000D9A72 /* JogoFlapCaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JogoFlapCaoViewController.h; sourceTree = "<group>"; };
 		3F0882EA1A367B01000D9A72 /* JogoFlapCaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JogoFlapCaoViewController.m; sourceTree = "<group>"; };
 		3F0882EB1A367B01000D9A72 /* JogoFlapCaoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JogoFlapCaoViewController.xib; sourceTree = "<group>"; };
@@ -1869,9 +1869,9 @@
 		0BB81EAE19F5A145001F868D /* Ex1 */ = {
 			isa = PBXGroup;
 			children = (
-				0BCDF3761A37910500F0A94E /* AulaSomEx1ViewController.h */,
-				0BCDF3771A37910500F0A94E /* AulaSomEx1ViewController.m */,
-				0BCDF3781A37910500F0A94E /* AulaSomEx1ViewController.xib */,
+				2BC52F131A37BB4500D969FD /* AulaSomEx1ViewController.h */,
+				2BC52F141A37BB4500D969FD /* AulaSomEx1ViewController.m */,
+				2BC52F151A37BB4500D969FD /* AulaSomEx1ViewController.xib */,
 			);
 			name = Ex1;
 			sourceTree = "<group>";
@@ -3690,7 +3690,6 @@
 				0BC4BC051A16939800D03E1F /* bongo53.caf in Resources */,
 				0BC8DAF71A1BBB2700F74157 /* Hit.plist in Resources */,
 				0BCDF31A1A378D7100F0A94E /* ZECAO33.png in Resources */,
-				0BCDF37A1A37910500F0A94E /* AulaSomEx1ViewController.xib in Resources */,
 				0BAFB0FE19F1ABBB00DCF54F /* Vanilla.otf in Resources */,
 				3FB6F55419DA67E60080057B /* fad1.caf in Resources */,
 				0BCDF3281A378D7100F0A94E /* ZECAO46.png in Resources */,
@@ -4067,6 +4066,7 @@
 				0BC8DB211A1BBB2700F74157 /* Steel Drum C6.caf in Resources */,
 				3FC5D34C19DA61FD00348F51 /* ListaInstrumentoViewController.xib in Resources */,
 				0BCDF32D1A378D7100F0A94E /* ZECAO50.png in Resources */,
+				2BC52F171A37BB4500D969FD /* AulaSomEx1ViewController.xib in Resources */,
 				0BCDF4AB1A37968E00F0A94E /* tabuaLegumes.mp3 in Resources */,
 				3FE14F491A16CE83001BE8D7 /* TrumpA#5.caf in Resources */,
 				0BBF81F41A1D1DA00033149B /* TeclaXilo6.png in Resources */,
@@ -4350,10 +4350,10 @@
 				A8F1C4B519D20502001850E4 /* Exercicio.m in Sources */,
 				3FBB040E1A36766200CD8E21 /* TelaJogosViewController.m in Sources */,
 				3FCCA3E61A28067C00BB1CBB /* TapBotaoInstrumento.m in Sources */,
+				2BC52F161A37BB4500D969FD /* AulaSomEx1ViewController.m in Sources */,
 				A824718B19D0AB0E00168026 /* AppDelegate.m in Sources */,
 				0BD109EB19F57C7D00D5FA52 /* GesturePinchItem.m in Sources */,
 				3F0883011A367D3E000D9A72 /* PBParallaxScrolling.m in Sources */,
-				0BCDF3791A37910500F0A94E /* AulaSomEx1ViewController.m in Sources */,
 				0BE839441A29044C008FA90F /* BotaoPausaAulaViewController.m in Sources */,
 				0B1D2A8919E46CD1003CA4C4 /* GerenciadorNavigationController.m in Sources */,
 				A824718719D0AB0E00168026 /* main.m in Sources */,

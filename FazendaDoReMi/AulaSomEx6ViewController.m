@@ -282,7 +282,7 @@
 //DISCO BLOQUEADO
 -(void)bloqueiaDiscoParaJogada{
     
-    self.disco1.frame = CGRectMake(160, 600, self.disco1.frame.size.width, self.disco1.frame.size.height);
+    self.disco1.frame = CGRectMake(200, 600, self.disco1.frame.size.width, self.disco1.frame.size.height);
     self.disco1.userInteractionEnabled = false;
     self.estaAguardandoArrastarODisco = false;
 }
@@ -291,7 +291,7 @@
 -(void)liberaDiscoParaJogada{
     
     self.disco1.hidden = false;
-    self.disco1.frame = CGRectMake(160, 600, self.disco1.frame.size.width, self.disco1.frame.size.height);
+    self.disco1.frame = CGRectMake(200, 600, self.disco1.frame.size.width, self.disco1.frame.size.height);
     self.disco1.userInteractionEnabled = true;
     self.disco1.estadoPressionado = false;
     self.gramofone.estadoPressionado = false;
