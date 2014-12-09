@@ -56,7 +56,7 @@
                 break;
             }
             CASE (@"2") {
-                [[GerenciadoresAcoes sharedManager]tocarSomItem:itemEspecifico:[listMetParametros objectAtIndex:1]];
+                [[GerenciadoresAcoes sharedManager]tocarSomItem:itemEspecifico:[listMetParametros objectAtIndex:1] :[listMetParametros objectAtIndex:2]];
                 break;
             }
             CASE (@"3"){

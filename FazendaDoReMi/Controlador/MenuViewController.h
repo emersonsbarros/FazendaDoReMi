@@ -27,13 +27,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *nuvemEsquerda;
 @property (weak, nonatomic) IBOutlet UIImageView *porteira;
 
-
-@property (weak, nonatomic) IBOutlet UIImageView *imgMascote;
-
-
-
 @property NSMutableArray *listaImagensMascote;
-
-
 
 @end

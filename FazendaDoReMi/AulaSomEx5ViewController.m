@@ -11,6 +11,8 @@
 @interface AulaSomEx5ViewController ()
 @end
 
+//Cada um faz um som diferente - Deve descobrir o mais grave ou mais agudo.
+
 @implementation AulaSomEx5ViewController
 
 - (void)viewDidLoad{
@@ -19,12 +21,12 @@
     //Botão voltar
     [[GerenciadorComponenteView sharedManager]addComponentesBotaoPausaAula: self];
 
-    [[ControladorDeItem sharedManager]retornaItem:@"passaroAzul": self.passaroAzul:@"gestureTap:1:1 + 1 + 3:5.0:5.0:1.0:1.5"];
-    [[ControladorDeItem sharedManager]retornaItem:@"passaroLaranja": self.passaroLaranja:@"gestureTap:1:1 + 1 + 3:5.0:5.0:1.0:1.5"];
-    [[ControladorDeItem sharedManager]retornaItem:@"passaroRosa": self.passaroRosa:@"gestureTap:1:1 + 1 + 3:5.0:5.0:1.0:1.5"];
-    [[ControladorDeItem sharedManager]retornaItem:@"passaroVerde": self.passaroVerde:@"gestureTap:1:1 + 1 + 3:5.0:5.0:1.0:1.5"];
-    [[ControladorDeItem sharedManager]retornaItem:@"passaroAmarelo": self.passaroAmarelo:@"gestureTap:1:1 + 1 + 3:5.0:5.0:1.0:1.5"];
-    [[ControladorDeItem sharedManager]retornaItem:@"passaroRoxo": self.passaroRoxo:@"gestureTap:1:1 + 1 + 3:5.0:5.0:1.0:1.5"];
+    [[ControladorDeItem sharedManager]retornaItem:@"passaroAzul": self.passaroAzul:@"gestureTap:1:1 + 1 + 2:0:1 + 3:5.0:5.0:1.0:1.5"];
+    [[ControladorDeItem sharedManager]retornaItem:@"passaroLaranja": self.passaroLaranja:@"gestureTap:1:1 + 1 + 2:0:1 + 3:5.0:5.0:1.0:1.5"];
+    [[ControladorDeItem sharedManager]retornaItem:@"passaroRosa": self.passaroRosa:@"gestureTap:1:1 + 1 + 2:0:1 + 3:5.0:5.0:1.0:1.5"];
+    [[ControladorDeItem sharedManager]retornaItem:@"passaroVerde": self.passaroVerde:@"gestureTap:1:1 + 1 + 2:0:1 + 3:5.0:5.0:1.0:1.5"];
+    [[ControladorDeItem sharedManager]retornaItem:@"passaroAmarelo": self.passaroAmarelo:@"gestureTap:1:1 + 1 + 2:0:1 + 3:5.0:5.0:1.0:1.5"];
+    [[ControladorDeItem sharedManager]retornaItem:@"passaroRoxo": self.passaroRoxo:@"gestureTap:1:1 + 1 + 2:0:1 + 3:5.0:5.0:1.0:1.5"];
     
 }
 

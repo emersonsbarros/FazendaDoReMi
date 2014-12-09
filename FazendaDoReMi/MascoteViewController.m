@@ -64,7 +64,7 @@
     self.nomeMascote = @"zecao";
     
     self.imgMascote = [[GerenciadorDeMascote sharedManager]retornaMascote:self.nomeMascote];
-    self.imgMascote.frame = CGRectMake(-270, -100, 787, 682);
+    self.imgMascote.frame = CGRectMake(0, 0, 320, 490);
     [self.view addSubview:self.imgMascote];
 
 }

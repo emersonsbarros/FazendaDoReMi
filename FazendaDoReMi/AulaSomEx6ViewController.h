@@ -14,29 +14,31 @@
 
 @interface AulaSomEx6ViewController : UIViewController
 
+//ITENS
+//Gramofone e disco
 @property (weak, nonatomic) IBOutlet Item *gramofone;
 @property (weak, nonatomic) IBOutlet Item *disco1;
-@property (weak, nonatomic) IBOutlet Item *disco2;
-@property (weak, nonatomic) IBOutlet Item *disco3;
 
 //Opcoes de imagem
 @property (weak, nonatomic) IBOutlet Item *imagemOpcao1;
 @property (weak, nonatomic) IBOutlet Item *imagemOpcao2;
 @property (weak, nonatomic) IBOutlet Item *imagemOpcao3;
 
+
+//Auxiliares
+//Itens
 @property NSMutableArray *listaDeItens;
 @property NSString *itemCorreto;
-@property int indiceDoItemCorreto;
-
 @property int posicaoCorretaDoItem;
-@property int posicaoSecundaria1;
-@property int posicaoSecundaria2;
+@property int indiceDoItemCorreto;
+@property int indiceDoItemSecundario1;
+@property int indiceDoItemSecundario2;
 
+//Controladores de jogo
+@property BOOL estaAguardandoArrastarODisco;
+@property BOOL estaAguardandoEscolherOItem;
 @property int tentativasPorJogada;
 @property int totalDeJogadas;
 @property int totalDeAcertos;
-
-@property BOOL estaAguardandoArrastarODisco;
-@property BOOL estaAguardandoEscolherOItem;
 
 @end

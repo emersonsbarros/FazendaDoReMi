@@ -36,11 +36,13 @@
 ///////////////////////// METODOS DE ACAO ////////////////////////////////////
 
 //Toca um som do item especifico
--(void)tocarSomItem:(Item*)item :(NSString*)indiceAudio{
+-(void)tocarSomItem:(Item*)item :(NSString*)indiceAudio :(NSString*)volumeAudio{
+    
     SomItem *somItem = [item.listaSonsURL objectAtIndex:[indiceAudio integerValue]];
-    [[GerenciadorAudio sharedManager]playAudio:somItem.caminhoAudio];
+    [[GerenciadorAudio sharedManager] mudaVolume: [volumeAudio floatValue]];
+    
+    [[GerenciadorAudio sharedManager] playAudio: somItem.caminhoAudio];
 }
-
 
 //Altera o estado do item como pressionado para poder passar de exercicio
 -(void)alteraEstadoPressionado:(Item*)item{

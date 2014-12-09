@@ -74,12 +74,9 @@
     UIImage *image;
     NSString *nomeImagem;
     NSMutableArray *listaImagens = [[NSMutableArray alloc]init];
-    for(int i=1;i<=73;i++){
-        if(i<=9){
-            nomeImagem = [NSString stringWithFormat:@"%@%d%@",@"ZECAO0",i,@".png"];
-        }else{
-            nomeImagem = [NSString stringWithFormat:@"%@%d%@",@"ZECAO",i,@".png"];
-        }
+    for(int i=1;i<=72;i++){
+        
+        nomeImagem = [NSString stringWithFormat:@"%@%d%@",@"ZECAO",i,@".png"];
         
         image = [UIImage imageNamed:nomeImagem];
         [listaImagens addObject:image];

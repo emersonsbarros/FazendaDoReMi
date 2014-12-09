@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -7,8 +7,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AulaSomEx6ViewController">
             <connections>
                 <outlet property="disco1" destination="s7n-hP-JDj" id="FAX-c8-HKZ"/>
-                <outlet property="disco2" destination="5fX-Dc-9c5" id="GUQ-Fs-vpy"/>
-                <outlet property="disco3" destination="8xG-zj-sp4" id="JFa-zJ-PLL"/>
                 <outlet property="gramofone" destination="yfY-1O-ejG" id="MDT-GC-gW9"/>
                 <outlet property="imagemOpcao1" destination="KR9-bY-GDu" id="sae-AO-ysE"/>
                 <outlet property="imagemOpcao2" destination="liU-Vp-C0i" id="C4d-OP-nB1"/>
@@ -33,17 +31,11 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KR9-bY-GDu" customClass="Item">
                     <rect key="frame" x="64" y="87" width="100" height="100"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8xG-zj-sp4" customClass="Item">
-                    <rect key="frame" x="387" y="621" width="100" height="100"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5fX-Dc-9c5" customClass="Item">
-                    <rect key="frame" x="247" y="621" width="100" height="100"/>
-                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yfY-1O-ejG" customClass="Item">
-                    <rect key="frame" x="139" y="280" width="257" height="323"/>
+                    <rect key="frame" x="368" y="293" width="257" height="323"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s7n-hP-JDj" customClass="Item">
-                    <rect key="frame" x="112" y="621" width="100" height="100"/>
+                    <rect key="frame" x="150" y="609" width="100" height="100"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

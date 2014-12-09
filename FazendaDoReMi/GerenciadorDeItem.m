@@ -38,57 +38,59 @@
 -(void)instanciaItens{
     
     //SALA
+    [self addItemChocalho];
+    [self addItemFlauta];
     [self addItemPiano];
-    [self addItemXilofone];
+    [self addItemSaxfone];
     [self addItemTambor];
     [self addItemViolao];
-    [self addItemSaxfone];
     [self addItemViolino];
-    [self addItemChocalho];
+    [self addItemXilofone];
     
     [self addItemFlorRocha];
     [self addItemFlorRosa];
-    
     [self addItemQuadroZecao];
     
     //COZINHA
-    [self addItemLiquidificador];
-    [self addItemTalheres];
-    [self addItemFrigideira];
-    [self addItemMicroondas];
-    [self addItemTorradeira];
     [self addItemBatedeira];
-    [self addItemTabuaDeLegumes];
+    [self addItemFrigideira];
     [self addItemLataDeRefrigerante];
+    [self addItemLiquidificador];
+    [self addItemMicroondas];
+    [self addItemTabuaDeLegumes];
+    [self addItemTalheres];
+    [self addItemTorradeira];
     
     //BRINQUEDOTECA
     [self addItemTocaTreco];
-    [self addItemUrsoPelucia];
-    [self addItemCarro];
-    [self addItemSkate];
-    [self addItemRelogio];
-    [self addItemRobo];
-    [self addItemHelicoptero];
-    [self addItemGuitarra];
-    [self addItemTrem];
+    [self addItemTocaTrecoAnimado];
+    
     [self addItemBola];
     [self addItemCaixaDeMusica];
+    [self addItemCarro];
+    [self addItemGuitarra];
+    [self addItemHelicoptero];
+    [self addItemRelogio];
+    [self addItemRobo];
+    [self addItemSkate];
+    [self addItemTrem];
+    [self addItemUrsoPelucia];
     
     //GALINHEIRO
-    [self addItemGaloVerde];
-    [self addItemGalinhaLaranja];
-    [self addItemGalinhaRoxa];
-    [self addItemGaloAzul];
-    [self addItemGalinhaRosa];
     [self addItemGalinhaAmarela];
+    [self addItemGaloAzul];
+    [self addItemGalinhaLaranja];
+    [self addItemGalinhaRosa];
+    [self addItemGalinhaRoxa];
+    [self addItemGaloVerde];
     
     //VIVEIRO
+    [self addItemPassaroAmarelo];
     [self addItemPassaroAzul];
     [self addItemPassaroLaranja];
     [self addItemPassaroRosa];
-    [self addItemPassaroVerde];
-    [self addItemPassaroAmarelo];
     [self addItemPassaroRoxo];
+    [self addItemPassaroVerde];
     
     //QUARTO
     [self addItemGramofone];
@@ -143,6 +145,21 @@
     somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"xilofone" ofType:@"mp3"]];
     [item.listaSonsURL addObject:somitem];
     
+    //Cria sprite(somente imagens)
+    SpriteItem *itemsprite = [[SpriteItem alloc]init];
+    itemsprite.nomeAnimacao = @"xilofoneTocando";
+    UIImage *img1 = [UIImage imageNamed:@"xilofone1.png"];
+    UIImage *img2 = [UIImage imageNamed:@"xilofone2.png"];
+    UIImage *img3 = [UIImage imageNamed:@"xilofone3.png"];
+    UIImage *img4 = [UIImage imageNamed:@"xilofone4.png"];
+    UIImage *img5 = [UIImage imageNamed:@"xilofone5.png"];
+    [itemsprite.listaImagens addObject: img1];
+    [itemsprite.listaImagens addObject: img2];
+    [itemsprite.listaImagens addObject: img3];
+    [itemsprite.listaImagens addObject: img4];
+    [itemsprite.listaImagens addObject: img5];
+    [item.listaSprites addObject: itemsprite];
+    
     //Add Item ao banco
     [self.listaDeItens addObject:item];
     
@@ -156,6 +173,12 @@
     Item *item = [[Item alloc]init];
     item.nome = @"flauta";
     item.image = [UIImage imageNamed:@"flauta.png"];
+    
+    //Add SOM
+    SomItem *somitem = [[SomItem alloc]init];
+    somitem.nomeSom = @"flauta";
+    somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"flauta" ofType:@"mp3"]];
+    [item.listaSonsURL addObject:somitem];
     
     //Add Item ao banco
     [self.listaDeItens addObject:item];
@@ -202,7 +225,7 @@
     SpriteItem *itemsprite = [[SpriteItem alloc]init];
     itemsprite.nomeAnimacao = @"tamborTocando";
     UIImage *img1 = [UIImage imageNamed:@"tambor1.png"];
-    UIImage *img2 = [UIImage imageNamed:@"tambor1.png"];
+    UIImage *img2 = [UIImage imageNamed:@"tambor2.png"];
     [itemsprite.listaImagens addObject: img1];
     [itemsprite.listaImagens addObject: img2];
     [item.listaSprites addObject: itemsprite];
@@ -221,6 +244,13 @@
     Item *item = [[Item alloc]init];
     item.nome = @"chocalho";
     item.image = [UIImage imageNamed:@"chocalho.png"];
+    
+    //Add SOM
+    SomItem *somitem = [[SomItem alloc]init];
+    somitem.nomeSom = @"chocalho";
+    somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"chocalho" ofType:@"mp3"]];
+    [item.listaSonsURL addObject: somitem];
+    
     
     //Add Item ao banco
     [self.listaDeItens addObject:item];
@@ -241,6 +271,23 @@
     somitem.nomeSom = @"saxofone";
     somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"saxofone" ofType:@"mp3"]];
     [item.listaSonsURL addObject:somitem];
+    
+    //Cria sprite(somente imagens)
+    SpriteItem *itemsprite = [[SpriteItem alloc]init];
+    itemsprite.nomeAnimacao = @"saxofoneTocando";
+    UIImage *img1 = [UIImage imageNamed:@"saxofone1.png"];
+    UIImage *img2 = [UIImage imageNamed:@"saxofone2.png"];
+    UIImage *img3 = [UIImage imageNamed:@"saxofone3.png"];
+    UIImage *img4 = [UIImage imageNamed:@"saxofone4.png"];
+    UIImage *img5 = [UIImage imageNamed:@"saxofone5.png"];
+    UIImage *img6 = [UIImage imageNamed:@"saxofone6.png"];
+    [itemsprite.listaImagens addObject: img1];
+    [itemsprite.listaImagens addObject: img2];
+    [itemsprite.listaImagens addObject: img3];
+    [itemsprite.listaImagens addObject: img4];
+    [itemsprite.listaImagens addObject: img5];
+    [itemsprite.listaImagens addObject: img6];
+    [item.listaSprites addObject: itemsprite];
     
     //Add Item ao banco
     [self.listaDeItens addObject:item];
@@ -378,6 +425,20 @@
     somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"microondas" ofType:@"mp3"]];
     [item.listaSonsURL addObject:somitem];
     
+    //Cria sprite(somente imagens)
+    SpriteItem *itemsprite = [[SpriteItem alloc]init];
+    itemsprite.nomeAnimacao = @"microondasLigado";
+    UIImage *img1 = [UIImage imageNamed:@"microondas1.png"];
+    UIImage *img2 = [UIImage imageNamed:@"microondas2.png"];
+    UIImage *img3 = [UIImage imageNamed:@"microondas3.png"];
+    UIImage *img4 = [UIImage imageNamed:@"microondas4.png"];
+    [itemsprite.listaImagens addObject: img1];
+    [itemsprite.listaImagens addObject: img2];
+    [itemsprite.listaImagens addObject: img3];
+    [itemsprite.listaImagens addObject: img4];
+    
+    [item.listaSprites addObject: itemsprite];
+    
     
     //Add Item ao banco
     [self.listaDeItens addObject:item];
@@ -464,6 +525,20 @@
     item.nome = @"gramofone";
     item.image = [UIImage imageNamed:@"gramofone.png"];
     
+    //Cria sprite(somente imagens)
+    SpriteItem *itemsprite = [[SpriteItem alloc]init];
+    itemsprite.nomeAnimacao = @"gramofoneTocando";
+    UIImage *img1 = [UIImage imageNamed:@"gramofone1.png"];
+    UIImage *img2 = [UIImage imageNamed:@"gramofone2.png"];
+    UIImage *img3 = [UIImage imageNamed:@"gramofone3.png"];
+    UIImage *img4 = [UIImage imageNamed:@"gramofone4.png"];
+    [itemsprite.listaImagens addObject: img1];
+    [itemsprite.listaImagens addObject: img2];
+    [itemsprite.listaImagens addObject: img3];
+    [itemsprite.listaImagens addObject: img4];
+    
+    [item.listaSprites addObject: itemsprite];
+    
     //Add Item ao banco
     [self.listaDeItens addObject:item];
 }
@@ -476,145 +551,163 @@
     item.nome = @"discoAzul";
     item.image = [UIImage imageNamed:@"discoAzul.png"];
     
-    //Add SOM
+    
+    //SALA
+    //chocalho
+    SomItem *somChocalho = [[SomItem alloc]init];
+    somChocalho.nomeSom = @"chocalho";
+    somChocalho.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"chocalho" ofType:@"mp3"]];
+    [item.listaSonsURL addObject: somChocalho];
+    
+    //flauta
+    SomItem *somFlauta = [[SomItem alloc]init];
+    somFlauta.nomeSom = @"flauta";
+    somFlauta.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"flauta" ofType:@"mp3"]];
+    [item.listaSonsURL addObject: somFlauta];
+    
+    //piano
     SomItem *somPiano = [[SomItem alloc]init];
     somPiano.nomeSom = @"piano";
     somPiano.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"piano" ofType:@"mp3"]];
     [item.listaSonsURL addObject: somPiano];
     
-    //Add SOM
-    SomItem *somXilofone = [[SomItem alloc]init];
-    somXilofone.nomeSom = @"xilofone";
-    somXilofone.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"xilofone" ofType:@"mp3"]];
-    [item.listaSonsURL addObject: somXilofone];
-    
-    //Add SOM
-    SomItem *somViolino = [[SomItem alloc]init];
-    somViolino.nomeSom = @"violino";
-    somViolino.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"violino" ofType:@"mp3"]];
-    [item.listaSonsURL addObject: somViolino];
-    
-    //Add SOM
-    SomItem *somViolao = [[SomItem alloc]init];
-    somViolao.nomeSom = @"violao";
-    somViolao.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"violao" ofType:@"mp3"]];
-    [item.listaSonsURL addObject: somViolao];
-    
-    //Add SOM
+    //saxofone
     SomItem *somSaxofone = [[SomItem alloc]init];
     somSaxofone.nomeSom = @"saxofone";
     somSaxofone.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"saxofone" ofType:@"mp3"]];
     [item.listaSonsURL addObject: somSaxofone];
     
-    //Add SOM
+    //tambor
     SomItem *somTambor = [[SomItem alloc]init];
     somTambor.nomeSom = @"tambor";
     somTambor.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"tambor" ofType:@"mp3"]];
     [item.listaSonsURL addObject: somTambor];
     
-    //Add SOM
+    //violao
+    SomItem *somViolao = [[SomItem alloc]init];
+    somViolao.nomeSom = @"violao";
+    somViolao.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"violao" ofType:@"mp3"]];
+    [item.listaSonsURL addObject: somViolao];
+    
+    //violino
+    SomItem *somViolino = [[SomItem alloc]init];
+    somViolino.nomeSom = @"violino";
+    somViolino.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"violino" ofType:@"mp3"]];
+    [item.listaSonsURL addObject: somViolino];
+    
+    //xilofone
+    SomItem *somXilofone = [[SomItem alloc]init];
+    somXilofone.nomeSom = @"xilofone";
+    somXilofone.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"xilofone" ofType:@"mp3"]];
+    [item.listaSonsURL addObject: somXilofone];
+    
+    
+    //COZINHA
+    //batedeira
     SomItem *somBatedeira = [[SomItem alloc]init];
     somBatedeira.nomeSom = @"batedeira";
     somBatedeira.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"batedeira" ofType:@"mp3"]];
     [item.listaSonsURL addObject: somBatedeira];
     
-    //Add SOM
-    SomItem *somTabuaLegumes = [[SomItem alloc]init];
-    somTabuaLegumes.nomeSom = @"tabuaLegumes";
-    somTabuaLegumes.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"tabuaLegumes" ofType:@"mp3"]];
-    [item.listaSonsURL addObject: somTabuaLegumes];
-    
-    //Add SOM
+    //frigideira
     SomItem *somFrigideira = [[SomItem alloc]init];
     somFrigideira.nomeSom = @"frigideira";
     somFrigideira.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"frigideira" ofType:@"mp3"]];
     [item.listaSonsURL addObject: somFrigideira];
     
-    //Add SOM
+    //latinhaRefri
     SomItem *somLatinhaRefri = [[SomItem alloc]init];
     somLatinhaRefri.nomeSom = @"latinhaRefri";
     somLatinhaRefri.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"latinhaRefri" ofType:@"mp3"]];
     [item.listaSonsURL addObject: somLatinhaRefri];
     
-    //Add SOM
+    //liquidificador
     SomItem *somLiquidificador = [[SomItem alloc]init];
     somLiquidificador.nomeSom = @"liquidificador";
     somLiquidificador.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"liquidificador" ofType:@"mp3"]];
     [item.listaSonsURL addObject: somLiquidificador];
     
-    //Add SOM
+    //microondas
     SomItem *somMicroondas = [[SomItem alloc]init];
     somMicroondas.nomeSom = @"microondas";
     somMicroondas.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"microondas" ofType:@"mp3"]];
     [item.listaSonsURL addObject: somMicroondas];
     
-    //Add SOM
+    //tabuaLegumes
+    SomItem *somTabuaLegumes = [[SomItem alloc]init];
+    somTabuaLegumes.nomeSom = @"tabuaLegumes";
+    somTabuaLegumes.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"tabuaLegumes" ofType:@"mp3"]];
+    [item.listaSonsURL addObject: somTabuaLegumes];
+    
+    //talheres
     SomItem *somTalheres = [[SomItem alloc]init];
     somTalheres.nomeSom = @"talheres";
     somTalheres.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"talheres" ofType:@"mp3"]];
     [item.listaSonsURL addObject: somTalheres];
     
-    //Add SOM
+    //torradeira
     SomItem *somTorradeira = [[SomItem alloc]init];
     somTorradeira.nomeSom = @"torradeira";
     somTorradeira.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"torradeira" ofType:@"mp3"]];
     [item.listaSonsURL addObject: somTorradeira];
     
-    //Add SOM
+    
+    //BRINQUEDOTECA
+    //bola
     SomItem *somBola = [[SomItem alloc]init];
     somBola.nomeSom = @"bola";
     somBola.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"bola" ofType:@"mp3"]];
     [item.listaSonsURL addObject: somBola];
     
-    //Add SOM
+    //caixaDeMusica
     SomItem *somCaixaDeMusica = [[SomItem alloc]init];
     somCaixaDeMusica.nomeSom = @"caixaDeMusica";
     somCaixaDeMusica.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"caixaDeMusica" ofType:@"mp3"]];
     [item.listaSonsURL addObject: somCaixaDeMusica];
     
-    //Add SOM
+    //carro
     SomItem *somCarro = [[SomItem alloc]init];
     somCarro.nomeSom = @"carro";
     somCarro.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"carro" ofType:@"mp3"]];
     [item.listaSonsURL addObject: somCarro];
     
-    //Add SOM
+    //guitarra
     SomItem *somGuitarra = [[SomItem alloc]init];
     somGuitarra.nomeSom = @"guitarra";
     somGuitarra.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"guitarra" ofType:@"mp3"]];
     [item.listaSonsURL addObject: somGuitarra];
     
-    //Add SOM
+    //helicoptero
     SomItem *somHelicoptero = [[SomItem alloc]init];
     somHelicoptero.nomeSom = @"helicoptero";
     somHelicoptero.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"helicoptero" ofType:@"mp3"]];
     [item.listaSonsURL addObject: somHelicoptero];
     
-    //Add SOM
+    //relogio
     SomItem *somRelogio = [[SomItem alloc]init];
     somRelogio.nomeSom = @"relogio";
     somRelogio.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"relogio" ofType:@"mp3"]];
     [item.listaSonsURL addObject: somRelogio];
     
-    //Add SOM
+    //robo
     SomItem *somRobo = [[SomItem alloc]init];
     somRobo.nomeSom = @"robo";
     somRobo.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"robo" ofType:@"mp3"]];
     [item.listaSonsURL addObject: somRobo];
     
-    //Add SOM
+    //skate
     SomItem *somSkate = [[SomItem alloc]init];
     somSkate.nomeSom = @"skate";
     somSkate.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"skate" ofType:@"mp3"]];
     [item.listaSonsURL addObject: somSkate];
     
-    //Add SOM
+    //trem
     SomItem *somTrem = [[SomItem alloc]init];
     somTrem.nomeSom = @"trem";
     somTrem.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"trem" ofType:@"mp3"]];
     [item.listaSonsURL addObject: somTrem];
     
-    //Add SOM
+    //ursoPelucia
     SomItem *somUrsoPelucia = [[SomItem alloc]init];
     somUrsoPelucia.nomeSom = @"ursoPelucia";
     somUrsoPelucia.caminhoAudio = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"ursoPelucia" ofType:@"mp3"]];
@@ -622,7 +715,7 @@
     
     
     //Add Item ao banco
-    [self.listaDeItens addObject:item];
+    [self.listaDeItens addObject: item];
 }
 
 //Cria Disco Marron
@@ -707,12 +800,23 @@
 }
 
 
-//Cria TocaTreco
+//Cria TocaTreco (PARA COLISÃO)
 -(void)addItemTocaTreco{
     
     //Cria item
     Item *item = [[Item alloc]init];
     item.nome = @"tocaTreco";
+    
+    //Add Item ao banco
+    [self.listaDeItens addObject:item];
+}
+
+//Cria TocaTreco (PARA ANIMAÇÃO)
+-(void)addItemTocaTrecoAnimado{
+    
+    //Cria item
+    Item *item = [[Item alloc]init];
+    item.nome = @"tocaTrecoAnimado";
     item.image = [UIImage imageNamed:@"tocaTreco.png"];
     
     //Cria sprite(somente imagens)
@@ -745,10 +849,10 @@
     [spriteSeta.listaImagens addObject: img9];
     [item.listaSprites addObject: spriteSeta];
     
-    
     //Add Item ao banco
     [self.listaDeItens addObject:item];
 }
+
 
 //Cria Relogio
 -(void)addItemRelogio{
@@ -877,7 +981,6 @@
     somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"caixaDeMusica" ofType:@"mp3"]];
     [item.listaSonsURL addObject:somitem];
     
-    
     //Add Item ao banco
     [self.listaDeItens addObject:item];
 }
@@ -889,6 +992,12 @@
     Item *item = [[Item alloc]init];
     item.nome = @"galoVerde";
     item.image = [UIImage imageNamed:@"galoVerde.png"];
+    
+    //Add SOM
+    SomItem *somitem = [[SomItem alloc]init];
+    somitem.nomeSom = @"galoVerde";
+    somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"galo" ofType:@"mp3"]];
+    [item.listaSonsURL addObject:somitem];
     
     //Add Item ao banco
     [self.listaDeItens addObject:item];
@@ -902,6 +1011,12 @@
     item.nome = @"galinhaLaranja";
     item.image = [UIImage imageNamed:@"galinhaLaranja.png"];
     
+    //Add SOM
+    SomItem *somitem = [[SomItem alloc]init];
+    somitem.nomeSom = @"galinhaLaranja";
+    somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"galo" ofType:@"mp3"]];
+    [item.listaSonsURL addObject:somitem];
+    
     //Add Item ao banco
     [self.listaDeItens addObject:item];
 }
@@ -913,6 +1028,12 @@
     Item *item = [[Item alloc]init];
     item.nome = @"galinhaRoxa";
     item.image = [UIImage imageNamed:@"galinhaRoxa.png"];
+    
+    //Add SOM
+    SomItem *somitem = [[SomItem alloc]init];
+    somitem.nomeSom = @"galinhaRoxa";
+    somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"galo" ofType:@"mp3"]];
+    [item.listaSonsURL addObject:somitem];
     
     //Add Item ao banco
     [self.listaDeItens addObject:item];
@@ -926,6 +1047,12 @@
     item.nome = @"galoAzul";
     item.image = [UIImage imageNamed:@"galoAzul.png"];
     
+    //Add SOM
+    SomItem *somitem = [[SomItem alloc]init];
+    somitem.nomeSom = @"galoAzul";
+    somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"galo" ofType:@"mp3"]];
+    [item.listaSonsURL addObject:somitem];
+    
     //Add Item ao banco
     [self.listaDeItens addObject:item];
 }
@@ -937,6 +1064,12 @@
     Item *item = [[Item alloc]init];
     item.nome = @"galinhaRosa";
     item.image = [UIImage imageNamed:@"galinhaRosa.png"];
+    
+    //Add SOM
+    SomItem *somitem = [[SomItem alloc]init];
+    somitem.nomeSom = @"galinhaRosa";
+    somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"galo" ofType:@"mp3"]];
+    [item.listaSonsURL addObject:somitem];
     
     //Add Item ao banco
     [self.listaDeItens addObject:item];
@@ -950,10 +1083,15 @@
     item.nome = @"galinhaAmarela";
     item.image = [UIImage imageNamed:@"galinhaAmarela.png"];
     
+    //Add SOM
+    SomItem *somitem = [[SomItem alloc]init];
+    somitem.nomeSom = @"galinhaAmarela";
+    somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"galo" ofType:@"mp3"]];
+    [item.listaSonsURL addObject:somitem];
+    
     //Add Item ao banco
     [self.listaDeItens addObject:item];
 }
-
 
 //Cria Passaro Azul
 -(void)addItemPassaroAzul{
@@ -962,6 +1100,12 @@
     Item *item = [[Item alloc]init];
     item.nome = @"passaroAzul";
     item.image = [UIImage imageNamed:@"passaroAzul.png"];
+    
+    //Add SOM
+    SomItem *somitem = [[SomItem alloc]init];
+    somitem.nomeSom = @"passaroAzul";
+    somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"passaroAzul" ofType:@"mp3"]];
+    [item.listaSonsURL addObject:somitem];
     
     //Add Item ao banco
     [self.listaDeItens addObject:item];
@@ -975,6 +1119,12 @@
     item.nome = @"passaroLaranja";
     item.image = [UIImage imageNamed:@"passaroLaranja.png"];
     
+    //Add SOM
+    SomItem *somitem = [[SomItem alloc]init];
+    somitem.nomeSom = @"passaroLaranja";
+    somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"passaroLaranja" ofType:@"mp3"]];
+    [item.listaSonsURL addObject:somitem];
+    
     //Add Item ao banco
     [self.listaDeItens addObject:item];
 }
@@ -987,6 +1137,12 @@
     item.nome = @"passaroRosa";
     item.image = [UIImage imageNamed:@"passaroRosa.png"];
     
+    //Add SOM
+    SomItem *somitem = [[SomItem alloc]init];
+    somitem.nomeSom = @"passaroRosa";
+    somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"passaroRosa" ofType:@"mp3"]];
+    [item.listaSonsURL addObject:somitem];
+    
     //Add Item ao banco
     [self.listaDeItens addObject:item];
 }
@@ -998,6 +1154,12 @@
     Item *item = [[Item alloc]init];
     item.nome = @"passaroVerde";
     item.image = [UIImage imageNamed:@"passaroVerde.png"];
+    
+    //Add SOM
+    SomItem *somitem = [[SomItem alloc]init];
+    somitem.nomeSom = @"passaroVerde";
+    somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"passaroVerde" ofType:@"mp3"]];
+    [item.listaSonsURL addObject:somitem];
     
     //Add Item ao banco
     [self.listaDeItens addObject:item];
@@ -1012,6 +1174,12 @@
     item.nome = @"passaroAmarelo";
     item.image = [UIImage imageNamed:@"passaroAmarelo.png"];
     
+    //Add SOM
+    SomItem *somitem = [[SomItem alloc]init];
+    somitem.nomeSom = @"passaroAmarelo";
+    somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"passaroAmarelo" ofType:@"mp3"]];
+    [item.listaSonsURL addObject:somitem];
+    
     //Add Item ao banco
     [self.listaDeItens addObject:item];
 }
@@ -1023,6 +1191,12 @@
     Item *item = [[Item alloc]init];
     item.nome = @"passaroRoxo";
     item.image = [UIImage imageNamed:@"passaroRoxo.png"];
+    
+    //Add SOM
+    SomItem *somitem = [[SomItem alloc]init];
+    somitem.nomeSom = @"passaroRoxo";
+    somitem.caminhoAudio=[NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"passaroRoxo" ofType:@"mp3"]];
+    [item.listaSonsURL addObject:somitem];
     
     //Add Item ao banco
     [self.listaDeItens addObject:item];

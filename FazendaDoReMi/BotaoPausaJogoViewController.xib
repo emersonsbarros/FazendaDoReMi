@@ -15,8 +15,8 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rsp-Oz-jsS">
-                    <rect key="frame" x="11" y="-8" width="58" height="80"/>
-                    <state key="normal" image="btnvoltar2.png">
+                    <rect key="frame" x="11" y="-12" width="58" height="80"/>
+                    <state key="normal" image="btoPausaAula.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -24,13 +24,12 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
     <resources>
-        <image name="btnvoltar2.png" width="58" height="80"/>
+        <image name="btoPausaAula.png" width="58" height="80"/>
     </resources>
 </document>

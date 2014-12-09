@@ -24,6 +24,15 @@
     //Carregamento inicial
     [self carregarComponentesIniciais];
     
+    
+    //Verificador de termino do jogo
+    [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(verificaLimiteJogo) userInfo:nil repeats: YES];
+
+
+}
+
+-(void)verificaLimiteJogo{
+    [[ControladorDeItem sharedManager] chamaVerificadorDeJogo: 3 :self.totalDeJogadas];
 }
 
 -(void)carregarComponentesIniciais{
@@ -32,32 +41,64 @@
     self.totalDeAcertos = 0;
     self.totalDeJogadas = 0;
     self.tentativasPorJogada = 1;
-    self.estaAguardandoArrastarODisco = YES;
-    self.estaAguardandoEscolherOItem = YES;
+    self.estaAguardandoArrastarODisco = true;
+    self.estaAguardandoEscolherOItem = true;
     
     //LISTA DE ITENS
-    self.listaDeItens = [[NSMutableArray alloc] initWithObjects: @"piano", @"xilofone", @"violino", @"violao", @"saxofone", @"tambor", @"batedeira", @"tabuaLegumes", @"frigideira", @"latinhaRefri", @"liquidificador", @"microondas", @"talheres", @"torradeira", @"bola", @"caixaDeMusica", @"carro", @"guitarra", @"helicoptero", @"relogio", @"robo", @"skate", @"trem", @"ursoPelucia", nil];
+    self.listaDeItens = [[NSMutableArray alloc] initWithObjects:
+                         @"chocalho",
+                         @"flauta",
+                         @"piano",
+                         @"saxofone",
+                         @"tambor",
+                         @"violao",
+                         @"violino",
+                         @"xilofone",
+                         
+                         @"batedeira",
+                         @"frigideira",
+                         @"latinhaRefri",
+                         @"liquidificador",
+                         @"microondas",
+                         @"tabuaLegumes",
+                         @"talheres",
+                         @"torradeira",
+                         
+                         @"bola",
+                         @"caixaDeMusica",
+                         @"carro",
+                         @"guitarra",
+                         @"helicoptero",
+                         @"relogio",
+                         @"robo",
+                         @"skate",
+                         @"trem",
+                         @"ursoPelucia",
+                         nil];
     
     //Botão voltar e gramofone
     [[GerenciadorComponenteView sharedManager]addComponentesBotaoPausaAula: self];
-    [[ControladorDeItem sharedManager]retornaItem:@"gramofone": self.gramofone:@"gestureTap:1:1"];
     
     [self criaNovaJogada];
+
 }
+
+
+/////////////////////////////////////////////////////////////////////////////////////     UPDATE     /////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 -(void)update{
     
-    
-    //LIMITE DE JOGADAS
-    if (self.totalDeJogadas <= 9) {
+
         
-        //ARRASTAR DISCO
+//AGUARDANDO DISCO SER ARRASTADO
         if (_estaAguardandoArrastarODisco) {
             
             if(self.disco1.estadoPressionado){
                 
-                NSLog(@"\n\nJOGADA ATUAL: %i", self.totalDeJogadas);
+                NSLog(@"JOGADA ATUAL: %i", self.totalDeJogadas);
                 NSLog(@"TENTATIVA ATUAL: %i", self.tentativasPorJogada);
+                NSLog(@"Item correto: %@", self.itemCorreto);
                 
                 [self bloqueiaDiscoParaJogada];
                 [self mostrarImagensDosItensParaEscolha];
@@ -65,88 +106,80 @@
         }
         
         
-        //ESCOLHER ITEM
+//AGUARDANDO ESCOLHER ITEM
         if (_estaAguardandoEscolherOItem) {
             
-            //Cadeia de ifs para checar a opcao escolhida
+    //ESCOLHEU OPCAO 1
             if (self.imagemOpcao1.estadoPressionado){
+                self.estaAguardandoEscolherOItem = false;
                 
-                //Reconhece uma jogada feita
-                self.imagemOpcao1.estadoPressionado = NO;
-                
+        //ACERTOU
                 if ([self.imagemOpcao1.nome isEqualToString: self.itemCorreto]){
-                    NSLog(@"\n\nOPC1 - Acertou");
-                    
                     [self criaNovaJogada];
                     
+        //ERROU
                 }else{
                     
+            //NOVA TENTATIVA
                     if (self.tentativasPorJogada <= 2){
-                        NSLog(@"\n\nERRADO - NOVA TENTATIVA");
-                        [self voltarParaMaisUmaTentativa];
-                    }else{
-                        NSLog(@"\n\nERRADO - NOVA JOGADA");
-                        [self criaNovaJogada];
-                    }
-                    
-                }
-                
-                return;
-                
-            }else if (self.imagemOpcao2.estadoPressionado){
-                
-                //Reconhece uma jogada feita
-                self.imagemOpcao2.estadoPressionado = NO;
-                
-                if ([self.imagemOpcao2.nome isEqualToString: self.itemCorreto]){
-                    NSLog(@"\n\nOPC2 - Acertou");
-                    [self criaNovaJogada];
-                    
-                }else{
-                    
-                    if (self.tentativasPorJogada <= 2){
-                        NSLog(@"\n\nERRADO - NOVA TENTATIVA");
-                        [self voltarParaMaisUmaTentativa];
-                    }else{
-                        NSLog(@"\n\nERRADO - NOVA JOGADA");
-                        [self criaNovaJogada];
-                    }
-                    
-                }
-                
-                return;
-                
-            }else if (self.imagemOpcao3.estadoPressionado){
-                
-                //Reconhece uma jogada feita
-                self.imagemOpcao3.estadoPressionado = NO;
-                
-                if ([self.imagemOpcao3.nome isEqualToString: self.itemCorreto]){
-                    NSLog(@"\n\nOPC3 - Acertou");
-                    
-                    [self criaNovaJogada];
-                    
-                }else{
-                    
-                    if (self.tentativasPorJogada <= 2){
-                        NSLog(@"\n\nERRADO - NOVA TENTATIVA");
                         [self voltarParaMaisUmaTentativa];
                         
+            //NOVA JOGADA
                     }else{
-                        NSLog(@"\n\nERRADO - NOVA JOGADA");
+                        [self criaNovaJogada];
+                    }
+                }
+                
+              return;
+                
+    //ESCOLHEU OPCAO 2
+            }else if (self.imagemOpcao2.estadoPressionado){
+                self.estaAguardandoEscolherOItem = false;
+                
+        //ACERTOU
+                if ([self.imagemOpcao2.nome isEqualToString: self.itemCorreto]){
+                    [self criaNovaJogada];
+                    
+        //ERROU
+                }else{
+                    
+            //NOVA TENTATIVA
+                    if (self.tentativasPorJogada <= 2){
+                        [self voltarParaMaisUmaTentativa];
+                        
+            //NOVA JOGADA
+                    }else{
+                        [self criaNovaJogada];
+                    }
+                    
+                }
+                
+                return;
+                
+    //ESCOLHEU OPCAO 3
+            }else if (self.imagemOpcao3.estadoPressionado){
+                self.estaAguardandoEscolherOItem = false;
+                
+        //ACERTOU
+                if ([self.imagemOpcao3.nome isEqualToString: self.itemCorreto]){
+                    [self criaNovaJogada];
+                    
+        //ERROU
+                }else{
+                    
+            //NOVA TENTATIVA
+                    if (self.tentativasPorJogada <= 2){
+                        [self voltarParaMaisUmaTentativa];
+                       
+            //NOVA JOGADA
+                    }else{
                         [self criaNovaJogada];
                     }
                     
                 }
             }
-            
-            
         }
         
-        
-    }else{
-        NSLog(@"\n\nJOGO FINALIZADO!");
-    }
     
     
 }
@@ -158,6 +191,9 @@
 //MUSICA DO DISCO
 -(void)sortearMusicaDoDisco{
     
+    //Limpa
+    self.itemCorreto = @"";
+    
     //Sorteia o indice da musica (sempre diferente do ultimo)
     int auxiliarDoSorteio;
     do {
@@ -166,136 +202,140 @@
     
     self.indiceDoItemCorreto = auxiliarDoSorteio;
     self.itemCorreto = (NSString*)[self.listaDeItens objectAtIndex: self.indiceDoItemCorreto];
-    
-    
 }
 
 //POSICAO DA ALTERNATIVA CORRETA
--(void)sorteiaPosicaoCorreta{
+-(void)sorteiaPosicaoDoItemCorreto{
     
     int auxiliarPosicaoCorreta;
     do {
         auxiliarPosicaoCorreta = arc4random() % 3;
     } while (auxiliarPosicaoCorreta == self.posicaoCorretaDoItem);
+    
+    //Guarda a posicao
     self.posicaoCorretaDoItem = auxiliarPosicaoCorreta;
     
 }
 
-//POSICAO DAS OUTRASALTERNATIVAS
--(void)sorteiaDemaisPosicoes{
+//OUTRAS ALTERNATIVAS
+-(void)sorteiaItens{
+    
+    //SORTEIA ATÉ O INDICE SER DIFERENTE DO CORRETO
+    do{
+        self.indiceDoItemSecundario1 = arc4random() % self.listaDeItens.count;
+    }while(self.indiceDoItemSecundario1 == self.indiceDoItemCorreto);
     
     do{
-        self.posicaoSecundaria1 = arc4random() % self.listaDeItens.count;
-        
-    }while(self.posicaoSecundaria1 == self.posicaoCorretaDoItem);
-    
-    do{
-        self.posicaoSecundaria2 = arc4random() % self.listaDeItens.count;
-        
-    }while((self.posicaoSecundaria2 == self.posicaoCorretaDoItem) || (self.posicaoSecundaria2 == self.posicaoSecundaria1));
+        self.indiceDoItemSecundario2 = arc4random() % self.listaDeItens.count;
+    }while((self.indiceDoItemSecundario2 == self.indiceDoItemCorreto) || (self.indiceDoItemSecundario2 == self.indiceDoItemSecundario1));
     
 }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 -(void)mostrarImagensDosItensParaEscolha{
     
-    if (self.tentativasPorJogada != 2) {
+//SORTEIA APENAS A 1a TENTATIVA
+    if(self.tentativasPorJogada == 1) {
         
         //Sorteia o indice da posicao correta do item (sempre diferente do ultimo)
-        [self sorteiaPosicaoCorreta];
-        [self sorteiaDemaisPosicoes];
+        [self sorteiaPosicaoDoItemCorreto];
+        [self sorteiaItens];
         
-        
-        //A partir da posicao correta do item é sorteado as demais
+        //A partir da posicao correta do item é setado as demais
         switch (self.posicaoCorretaDoItem) {
                 
-                //POSICAO 1
+        //POSICAO 1
             case 0:
-                [[ControladorDeItem sharedManager]retornaItem:self.itemCorreto: self.imagemOpcao1:@"gestureTap:1:1 + 1 + 2:0 + 3:5.0:5.0:1.0:1.5"];
-                [[ControladorDeItem sharedManager]retornaItem:[NSString stringWithFormat: @"%@", [self.listaDeItens objectAtIndex: self.posicaoSecundaria1]]: self.imagemOpcao2:@"gestureTap:1:1 + 1 + 2:0 + 3:5.0:5.0:1.0:1.5"];
-                [[ControladorDeItem sharedManager]retornaItem:[NSString stringWithFormat: @"%@", [self.listaDeItens objectAtIndex: self.posicaoSecundaria2]]: self.imagemOpcao3:@"gestureTap:1:1 + 1 + 2:0 + 3:5.0:5.0:1.0:1.5"];
+                [[ControladorDeItem sharedManager]retornaItem:self.itemCorreto: self.imagemOpcao1:@"gestureTap:1:1 + 1"];
+                [[ControladorDeItem sharedManager]retornaItem:[NSString stringWithFormat: @"%@", [self.listaDeItens objectAtIndex: self.indiceDoItemSecundario1]]: self.imagemOpcao2:@"gestureTap:1:1 + 1"];
+                [[ControladorDeItem sharedManager]retornaItem:[NSString stringWithFormat: @"%@", [self.listaDeItens objectAtIndex: self.indiceDoItemSecundario2]]: self.imagemOpcao3:@"gestureTap:1:1 + 1"];
                 
                 break;
                 
-                //POSICAO 2
+        //POSICAO 2
             case 1:
-                [[ControladorDeItem sharedManager]retornaItem:self.itemCorreto: self.imagemOpcao2:@"gestureTap:1:1 + 1 + 2:0 + 3:5.0:5.0:1.0:1.5"];
-                [[ControladorDeItem sharedManager]retornaItem:[NSString stringWithFormat: @"%@", [self.listaDeItens objectAtIndex: self.posicaoSecundaria1]]: self.imagemOpcao1:@"gestureTap:1:1 + 1 + 2:0 + 3:5.0:5.0:1.0:1.5"];
-                [[ControladorDeItem sharedManager]retornaItem:[NSString stringWithFormat: @"%@", [self.listaDeItens objectAtIndex: self.posicaoSecundaria2]]: self.imagemOpcao3:@"gestureTap:1:1 + 1 + 2:0 + 3:5.0:5.0:1.0:1.5"];
+                [[ControladorDeItem sharedManager]retornaItem:self.itemCorreto: self.imagemOpcao2:@"gestureTap:1:1 + 1"];
+                [[ControladorDeItem sharedManager]retornaItem:[NSString stringWithFormat: @"%@", [self.listaDeItens objectAtIndex: self.indiceDoItemSecundario1]]: self.imagemOpcao1:@"gestureTap:1:1 + 1"];
+                [[ControladorDeItem sharedManager]retornaItem:[NSString stringWithFormat: @"%@", [self.listaDeItens objectAtIndex: self.indiceDoItemSecundario2]]: self.imagemOpcao3:@"gestureTap:1:1 + 1"];
                 
                 break;
                 
-                //POSICAO 3
+        //POSICAO 3
             case 2:
-                [[ControladorDeItem sharedManager]retornaItem:self.itemCorreto: self.imagemOpcao3:@"gestureTap:1:1 + 1 + 2:0 + 3:5.0:5.0:1.0:1.5"];
-                [[ControladorDeItem sharedManager]retornaItem:[NSString stringWithFormat: @"%@", [self.listaDeItens objectAtIndex: self.posicaoSecundaria1]]: self.imagemOpcao1:@"gestureTap:1:1 + 1 + 2:0 + 3:5.0:5.0:1.0:1.5"];
-                [[ControladorDeItem sharedManager]retornaItem:[NSString stringWithFormat: @"%@", [self.listaDeItens objectAtIndex: self.posicaoSecundaria2]]: self.imagemOpcao2:@"gestureTap:1:1 + 1 + 2:0 + 3:5.0:5.0:1.0:1.5"];
+                [[ControladorDeItem sharedManager]retornaItem:self.itemCorreto: self.imagemOpcao3:@"gestureTap:1:1 + 1"];
+                [[ControladorDeItem sharedManager]retornaItem:[NSString stringWithFormat: @"%@", [self.listaDeItens objectAtIndex: self.indiceDoItemSecundario1]]: self.imagemOpcao1:@"gestureTap:1:1 + 1"];
+                [[ControladorDeItem sharedManager]retornaItem:[NSString stringWithFormat: @"%@", [self.listaDeItens objectAtIndex: self.indiceDoItemSecundario2]]: self.imagemOpcao2:@"gestureTap:1:1 + 1"];
                 
                 break;
         }
-        
-        self.imagemOpcao1.hidden = NO;
-        self.imagemOpcao2.hidden = NO;
-        self.imagemOpcao3.hidden = NO;
-        
     }
     
+    //Mostra opcoes
+    self.imagemOpcao1.hidden = NO;
+    self.imagemOpcao2.hidden = NO;
+    self.imagemOpcao3.hidden = NO;
     
 }
 
+/////////////////////////////////////////////////////////////////////////////////////     JOGADAS     /////////////////////////////////////////////////////////////////////////////////////////////////
+
+//DISCO BLOQUEADO
 -(void)bloqueiaDiscoParaJogada{
     
     self.disco1.frame = CGRectMake(160, 600, self.disco1.frame.size.width, self.disco1.frame.size.height);
-    self.disco1.userInteractionEnabled = NO;
-    
-    self.estaAguardandoArrastarODisco = NO;
+    self.disco1.userInteractionEnabled = false;
+    self.estaAguardandoArrastarODisco = false;
 }
 
+//DISCO LIBERADO
 -(void)liberaDiscoParaJogada{
     
-    self.disco1.hidden = NO;
+    self.disco1.hidden = false;
     self.disco1.frame = CGRectMake(160, 600, self.disco1.frame.size.width, self.disco1.frame.size.height);
-    self.disco1.userInteractionEnabled = YES;
-    self.disco1.estadoPressionado = NO;
+    self.disco1.userInteractionEnabled = true;
+    self.disco1.estadoPressionado = false;
+    self.gramofone.estadoPressionado = false;
     
-    self.estaAguardandoArrastarODisco = YES;
+    //Variaveis de controle para update
+    self.estaAguardandoArrastarODisco = true;
+    self.estaAguardandoEscolherOItem
+    += true;
     
-    //Gesture de arrastar p/ o gramofone + Tocar áudio + Esconder disco (opacidade)
-    [[ControladorDeItem sharedManager] retornaItemGesture:@"discoAzul" :self.disco1 :self.gramofone :[NSString stringWithFormat: @"gesturePan + 1 + 2:%d + 6:5:0:0:0", self.indiceDoItemCorreto]];
-    
-    if (self.disco1.estadoPressionado) {
-        NSLog(@"DISCO PRESSIONADO");
-    }else{
-        NSLog(@"DISCO NAO PRESSIONADO");
-    }
-    
-}
-
--(void)voltarParaMaisUmaTentativa{
-    self.tentativasPorJogada += 1;
-    
+    //Mostra discos
     self.imagemOpcao1.hidden = YES;
     self.imagemOpcao2.hidden = YES;
     self.imagemOpcao3.hidden = YES;
     
+    //Bloqueia
+    self.imagemOpcao1.estadoPressionado = false;
+    self.imagemOpcao2.estadoPressionado = false;
+    self.imagemOpcao3.estadoPressionado = false;
+    
+    //Gesture de arrastar p/ o gramofone + Tocar áudio + Esconder disco (opacidade)
+    [[ControladorDeItem sharedManager] retornaItemGesture:@"discoAzul" :self.disco1 :self.gramofone :[NSString stringWithFormat: @"gesturePan + 1 + 2:%d:1 + 6:5:0:0:0", self.indiceDoItemCorreto]];
+    [[ControladorDeItem sharedManager]retornaItemGesture:@"gramofone" :self.gramofone :self.disco1 :@"gesturePan:1:1 + 7:gramofoneTocando:5:NO:YES:0"];
+
+}
+
+//NOVA TENTATIVA
+-(void)voltarParaMaisUmaTentativa{
+    self.tentativasPorJogada += 1;
+
     [self liberaDiscoParaJogada];
 }
 
+//NOVA JOGADA
 -(void)criaNovaJogada{
     
+    //Incrementa as jogadas e restaura as tentaticas
     self.totalDeJogadas += 1;
     self.tentativasPorJogada = 1;
     
-    self.imagemOpcao1.hidden = YES;
-    self.imagemOpcao2.hidden = YES;
-    self.imagemOpcao3.hidden = YES;
-    
     [self sortearMusicaDoDisco];
     [self liberaDiscoParaJogada];
-    
 }
 
 -(void)pausarJogo{
-    
 }
 
 @end

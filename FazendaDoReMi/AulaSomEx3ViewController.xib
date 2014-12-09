@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5053" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -14,7 +14,8 @@
                 <outlet property="relogio" destination="q8z-59-rYe" id="7Wa-uJ-DY9"/>
                 <outlet property="robo" destination="O7i-zZ-Dim" id="7mF-Hs-chd"/>
                 <outlet property="skate" destination="IVf-dm-WGk" id="HRS-Lc-ohH"/>
-                <outlet property="tocaTreco" destination="zHW-ji-lRd" id="kUv-4C-gGR"/>
+                <outlet property="tocaTreco" destination="ZSr-qw-wo0" id="AF6-6U-9Ib"/>
+                <outlet property="tocaTrecoAnimado" destination="zHW-ji-lRd" id="BVC-sP-cuJ"/>
                 <outlet property="trem" destination="Da4-Ir-Phz" id="xBo-TP-Dvq"/>
                 <outlet property="ursoPelucia" destination="atl-bG-29r" id="VKO-0n-uA5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -28,14 +29,14 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundBrinquedoteca.png" translatesAutoresizingMaskIntoConstraints="NO" id="DEZ-6Z-tGX">
                     <rect key="frame" x="0.0" y="-1" width="1025" height="769"/>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZSr-qw-wo0" customClass="Item">
+                    <rect key="frame" x="102" y="372" width="284" height="332"/>
+                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="atl-bG-29r" customClass="Item">
                     <rect key="frame" x="213" y="70" width="126" height="148"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zHW-ji-lRd" customClass="Item">
-                    <rect key="frame" x="66" y="375" width="502" height="347"/>
-                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IVf-dm-WGk" customClass="Item">
-                    <rect key="frame" x="459" y="388" width="95" height="199"/>
+                    <rect key="frame" x="571" y="349" width="95" height="199"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O7i-zZ-Dim" customClass="Item">
                     <rect key="frame" x="737" y="160" width="76" height="106"/>
@@ -44,7 +45,7 @@
                     <rect key="frame" x="607" y="183" width="85" height="82"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eDd-bh-dp0" customClass="Item">
-                    <rect key="frame" x="606" y="316" width="208" height="98"/>
+                    <rect key="frame" x="616" y="316" width="208" height="98"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vy4-tN-bhN" customClass="Item">
                     <rect key="frame" x="719" y="321" width="161" height="227"/>
@@ -61,6 +62,9 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="23s-9J-R92" customClass="Item">
                     <rect key="frame" x="616" y="582" width="143" height="143"/>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tocaTreco.png" translatesAutoresizingMaskIntoConstraints="NO" id="zHW-ji-lRd" customClass="Item">
+                    <rect key="frame" x="25" y="364" width="502" height="347"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -68,5 +72,6 @@
     </objects>
     <resources>
         <image name="backgroundBrinquedoteca.png" width="1024" height="768"/>
+        <image name="tocaTreco.png" width="502" height="347"/>
     </resources>
 </document>

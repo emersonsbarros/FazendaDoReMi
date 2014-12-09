@@ -14,11 +14,28 @@
 
 @interface AulaSomEx4ViewController : UIViewController
 
+//ITENS
 @property (weak, nonatomic) IBOutlet Item *galinhaAmarela;
 @property (weak, nonatomic) IBOutlet Item *galoAzul;
 @property (weak, nonatomic) IBOutlet Item *galinhaLaranja;
 @property (weak, nonatomic) IBOutlet Item *galinhaRosa;
 @property (weak, nonatomic) IBOutlet Item *galinhaRoxa;
 @property (weak, nonatomic) IBOutlet Item *galoVerde;
+
+//AUXILIARES
+@property NSMutableArray *listaDeGalos;
+@property NSMutableArray *listaDeVolumes;
+@property NSString *nomeDoGaloCorreto;
+@property int indiceDoVolumeCorreto;
+@property float volumeCorreto;
+
+//CONTROLES DE JOGO
+@property BOOL estaAguardandoOuvirTodosOsGalos;
+@property BOOL estaAguardandoEscolherOGaloCorreto;
+@property BOOL ehPraDescobrirOSomMaior;
+
+@property int totalDeJogadas;
+@property int totalDeAcertos;
+
 
 @end

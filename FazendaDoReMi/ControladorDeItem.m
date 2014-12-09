@@ -5,7 +5,7 @@
 //  Created by VINICIUS RESENDE FIALHO on 13/10/14.
 //  Copyright (c) 2014 EMERSON BARROS | VINICIUS RESENDE. All rights reserved.
 //
- //[[GerenciadorAnimacoes sharedManager]animacaoSpriteEspecifica:self.imgTeste:@"pianoTocando":4:YES:NO:2.0];
+//[[GerenciadorAnimacoes sharedManager]animacaoSpriteEspecifica:self.imgTeste:@"pianoTocando":4:YES:NO:2.0];
 
 
 
@@ -20,6 +20,8 @@
     if(self){
         self.listaObjetosPressionados = [[NSMutableArray alloc]init];
         self.contadorItensPressionados = 0;
+        self.numeroDeJogadasAtual = 0;
+        self.numeroLimiteDeJogadas = 0;
     }
     return self;
 }
@@ -41,18 +43,41 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+-(void)chamaVerificadorDeJogo :(int)numeroLimiteDeJogadas :(int)numeroDeJogadasAtual{
+    
+    self.aulaFinalizada = false;
+    self.numeroLimiteDeJogadas = numeroLimiteDeJogadas;
+    self.numeroDeJogadasAtual = numeroDeJogadasAtual;
+    
+    
+    if(self.numeroLimiteDeJogadas == self.numeroDeJogadasAtual){
+        self.aulaFinalizada = true;
+        
+        [[GerenciadorAudio sharedManager] ajustaVolume: 0];
+        [[GerenciadorComponenteView sharedManager]addComponentesMenuPausa: [GerenciadorNavigationController sharedManager].controladorApp.visibleViewController];
+        
+        self.numeroDeJogadasAtual = 0;
+        self.numeroLimiteDeJogadas = 0;
+        [self.timerVerificadorJogoFinalizado invalidate];
+    }
+}
+
+
+///////////////////////////////////////////////////////////////////////////// ITENS PRESSIONADOS
 -(void)chamaVerificador:(NSArray*)listaItens{
     
-   self.timerVerificadorItemPressionado =  [NSTimer scheduledTimerWithTimeInterval: 0.5
-                                     target: self
-                                   selector: @selector(verificadorEstadoItemPressionado)
-                                   userInfo: nil
-                                    repeats: YES];
+    self.aulaFinalizada = false;
+    
+    self.timerVerificadorItemPressionado =  [NSTimer scheduledTimerWithTimeInterval: 0.5
+                                                                             target: self
+                                                                           selector: @selector(verificadorEstadoItemPressionado)
+                                                                           userInfo: nil
+                                                                            repeats: YES];
     
     for(Item *itemPressionado in listaItens){
-        [self.listaObjetosPressionados addObject:itemPressionado];
+        [self.listaObjetosPressionados addObject: itemPressionado];
     }
-
+    
 }
 
 -(void)verificadorEstadoItemPressionado{
@@ -60,19 +85,24 @@
     
     for(Item *itemPressionado in self.listaObjetosPressionados){
         if(itemPressionado.estadoPressionado == true){
-            self.contadorItensPressionados +=1;
+            self.contadorItensPressionados += 1;
         }
     }
     
     
     if(self.contadorItensPressionados == self.listaObjetosPressionados.count){
+        
+        self.aulaFinalizada = true;
+        
+        [[GerenciadorAudio sharedManager] ajustaVolume: 0];
+        [[GerenciadorComponenteView sharedManager]addComponentesMenuPausa: [GerenciadorNavigationController sharedManager].controladorApp.visibleViewController];
+        
         NSLog(@"Todos Pressionados");
         [self.listaObjetosPressionados removeAllObjects];
         self.contadorItensPressionados = 0;
         [self.timerVerificadorItemPressionado invalidate];
-        
     }
-   
+    
 }
 
 

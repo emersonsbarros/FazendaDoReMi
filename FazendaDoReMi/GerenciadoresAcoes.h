@@ -17,7 +17,7 @@
 
 
 //Metodos
--(void)tocarSomItem:(Item*)item :(NSString*)indiceAudio;
+-(void)tocarSomItem:(Item*)item :(NSString*)indiceAudio :(NSString*)volumeAudio;
 -(void)alteraEstadoPressionado:(Item*)item;
 -(void)escondeImagem:(Item*)item;
 

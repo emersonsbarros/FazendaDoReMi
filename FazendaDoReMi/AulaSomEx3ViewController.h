@@ -15,6 +15,7 @@
 @interface AulaSomEx3ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet Item *tocaTreco;
+@property (weak, nonatomic) IBOutlet Item *tocaTrecoAnimado;
 
 @property (weak, nonatomic) IBOutlet Item *bola;
 @property (weak, nonatomic) IBOutlet Item *caixaDeMusica;
