@@ -1564,7 +1564,7 @@
 		3FE950661A2BBC22008EEF1E /* iconeTwitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconeTwitter.png; sourceTree = "<group>"; };
 		3FE950691A2BBE6F008EEF1E /* iconeFavoritar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconeFavoritar.png; sourceTree = "<group>"; };
 		3FE9506B1A2BC65B008EEF1E /* iconeFanPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconeFanPage.png; sourceTree = "<group>"; };
-		3FEF298E19E8BCDC00C01AB5 /* somPiano.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = somPiano.wav; sourceTree = "<group>"; };
+		3FEF298E19E8BCDC00C01AB5 /* somPiano.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = somPiano.wav; path = ../somPiano.wav; sourceTree = "<group>"; };
 		3FF8CBF719F9EC5A001A40F8 /* PartituraSinfonia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartituraSinfonia.h; sourceTree = "<group>"; };
 		3FF8CBF819F9EC5A001A40F8 /* PartituraSinfonia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartituraSinfonia.m; sourceTree = "<group>"; };
 		A811633919D229CB00506D94 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
@@ -1721,6 +1721,7 @@
 		0BAFB08C19F1ABBB00DCF54F /* Midia */ = {
 			isa = PBXGroup;
 			children = (
+				3FEF298E19E8BCDC00C01AB5 /* somPiano.wav */,
 				0B7368E319FAC5C10066720F /* Teclas */,
 				0BAFB08F19F1ABBB00DCF54F /* Fontes */,
 				0BCDF46D1A37968E00F0A94E /* Audios */,
@@ -3408,7 +3409,6 @@
 			children = (
 				0B2FFB1319ED9A7600FD752E /* MANUAL DE USO.rtf */,
 				0BAFB08C19F1ABBB00DCF54F /* Midia */,
-				3FEF298E19E8BCDC00C01AB5 /* somPiano.wav */,
 				A824718019D0AB0E00168026 /* FazendaDoReMi */,
 				A824718119D0AB0E00168026 /* Supporting Files */,
 				A824719D19D0AB0E00168026 /* FazendaDoReMiTests */,
