@@ -482,11 +482,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mapaBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="dV6-XG-cva">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="-6" y="0.0" width="1030" height="773"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlE-yG-rwq">
-                                <rect key="frame" x="0.0" y="0.0" width="157" height="109"/>
-                                <state key="normal" backgroundImage="nuvem-voltar.png">
+                                <rect key="frame" x="16" y="20" width="82" height="82"/>
+                                <state key="normal" backgroundImage="btoVoltar.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -740,6 +740,7 @@
         <image name="btnpianoEstudio.png" width="78" height="78"/>
         <image name="btntecladoEstudio.png" width="78" height="78"/>
         <image name="btnxilofoneEstudio.png" width="78" height="78"/>
+        <image name="btoVoltar.png" width="124" height="124"/>
         <image name="cataventos.png" width="243" height="247"/>
         <image name="cercado.png" width="1024" height="225"/>
         <image name="fundoazul.png" width="1024" height="768"/>
@@ -757,7 +758,6 @@
         <image name="notaJogo2.png" width="84" height="190"/>
         <image name="notaJogo3.png" width="84" height="190"/>
         <image name="notaJogo4.png" width="176" height="228"/>
-        <image name="nuvem-voltar.png" width="137" height="109"/>
         <image name="nuvem1.png" width="281" height="83"/>
         <image name="nuvem2.png" width="438" height="128"/>
         <image name="nuvemEstudio1.png" width="338" height="117"/>

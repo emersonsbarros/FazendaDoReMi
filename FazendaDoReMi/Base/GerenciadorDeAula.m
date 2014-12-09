@@ -40,7 +40,7 @@
 -(void)instanciaAulas{
     
     [self criaAulaCasa];
-    [self criaAulaGalinheiro];
+//    [self criaAulaGalinheiro];
     [self criaAulaLago];
     [self criaAulaCurral];
     [self criaAulaCeleiro];
@@ -72,7 +72,7 @@
     Aula *aula = [[Aula alloc] init];
     aula.frame = CGRectMake(0, 0, 0, 0);
     aula.nomeDoLugar = @"Jogos";
-    [aula setBackgroundImage:[UIImage imageNamed:@"btoCasa.png"] forState:UIControlStateNormal];
+    [aula setBackgroundImage:[UIImage imageNamed:@"btoCasa.png"] forState: UIControlStateNormal];
     
     //Exercicios
     [self criaJogo1: aula];
@@ -112,7 +112,7 @@
 -(void)criaAulaCasa{
     
     Aula *aula = [[Aula alloc] init];
-    aula.frame = CGRectMake(435, 20, 156, 152);
+    aula.frame = CGRectMake(435, 20, 209, 152);
     aula.nomeDoLugar = @"Casa";
     [aula setBackgroundImage:[UIImage imageNamed:@"btoCasa.png"] forState:UIControlStateNormal];
     
@@ -317,7 +317,7 @@
 -(void)criaAulaCurral{
     
     Aula *aula = [[Aula alloc]init];
-    aula.frame = CGRectMake(210, 320, 156, 134);
+    aula.frame = CGRectMake(230, 360, 156, 134);
     aula.nomeDoLugar = @"Curral";
     [aula setBackgroundImage:[UIImage imageNamed:@"btoCurral.png"] forState:UIControlStateNormal];
     
