@@ -54,9 +54,14 @@
     
     for(Aula *aula in [GerenciadorDeAula sharedManager].listaDeAulas){
         
+        //Bloqueia aulas e add o cadeado
+        if (![aula.nomeDoLugar isEqualToString:@"Casa"]) {
+            [aula setAlpha: 0.5];
+            [aula setImage:[UIImage imageNamed:@"cadeado.png"] forState:UIControlStateNormal];
+        }
+        
         aula.layer.zPosition = 0;
         [aula addTarget:self action:@selector(chamaExercicios:) forControlEvents:UIControlEventTouchUpInside];
-        
         [[self view] addSubview:aula];
         
     }

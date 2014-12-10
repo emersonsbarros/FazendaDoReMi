@@ -536,6 +536,7 @@
 		0BF00EC41A27B7110006A627 /* InfiniteScrollPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF00EC11A27B7110006A627 /* InfiniteScrollPicker.m */; };
 		0BF00EC51A27B7110006A627 /* UIView+viewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF00EC31A27B7110006A627 /* UIView+viewController.m */; };
 		2B1BF9DD1A37E2260005E104 /* AulaSomEx2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B1BF9DC1A37E2260005E104 /* AulaSomEx2ViewController.xib */; };
+		2B1BF9DF1A37EA3D0005E104 /* cadeado.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B1BF9DE1A37EA3D0005E104 /* cadeado.png */; };
 		2BC52F161A37BB4500D969FD /* AulaSomEx1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC52F141A37BB4500D969FD /* AulaSomEx1ViewController.m */; };
 		2BC52F171A37BB4500D969FD /* AulaSomEx1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BC52F151A37BB4500D969FD /* AulaSomEx1ViewController.xib */; };
 		2BC52F191A37C25000D969FD /* ROTEIRO DE FALAS.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2BC52F181A37C25000D969FD /* ROTEIRO DE FALAS.rtf */; };
@@ -1384,6 +1385,7 @@
 		0BF00EC21A27B7110006A627 /* UIView+viewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+viewController.h"; sourceTree = "<group>"; };
 		0BF00EC31A27B7110006A627 /* UIView+viewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+viewController.m"; sourceTree = "<group>"; };
 		2B1BF9DC1A37E2260005E104 /* AulaSomEx2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AulaSomEx2ViewController.xib; sourceTree = "<group>"; };
+		2B1BF9DE1A37EA3D0005E104 /* cadeado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cadeado.png; sourceTree = "<group>"; };
 		2BC52F131A37BB4500D969FD /* AulaSomEx1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AulaSomEx1ViewController.h; sourceTree = "<group>"; };
 		2BC52F141A37BB4500D969FD /* AulaSomEx1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AulaSomEx1ViewController.m; sourceTree = "<group>"; };
 		2BC52F151A37BB4500D969FD /* AulaSomEx1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AulaSomEx1ViewController.xib; sourceTree = "<group>"; };
@@ -1841,6 +1843,7 @@
 		0BAFB09219F1ABBB00DCF54F /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				2B1BF9DE1A37EA3D0005E104 /* cadeado.png */,
 				0BCDF3941A37920800F0A94E /* btnControleParental.png */,
 				3F2149861A324C2F0047D0DB /* fotoAvatar.jpg */,
 				0BD878C41A36318300348B2E /* ZecaoTelaTeclado.png */,
@@ -4491,6 +4494,7 @@
 				0BCDF49A1A37968E00F0A94E /* galo.mp3 in Resources */,
 				0BC8DAC61A1BBB2700F74157 /* c4-e42.caf in Resources */,
 				3FEF299119E8BCDC00C01AB5 /* somPiano.wav in Resources */,
+				2B1BF9DF1A37EA3D0005E104 /* cadeado.png in Resources */,
 				0BC8DB291A1BBB2700F74157 /* Cello C4.caf in Resources */,
 				0BC4BBF11A16939800D03E1F /* bongo33.caf in Resources */,
 				0B7368EB19FAC5C10066720F /* teclaPretaUp.png in Resources */,
