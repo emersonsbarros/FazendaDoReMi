@@ -350,7 +350,6 @@
 		0BCDF3631A378EF500F0A94E /* porteira-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BCDF3561A378EF500F0A94E /* porteira-4.png */; };
 		0BCDF3641A378EF500F0A94E /* porteira-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BCDF3571A378EF500F0A94E /* porteira-5.png */; };
 		0BCDF37E1A37911200F0A94E /* AulaSomEx2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCDF37C1A37911200F0A94E /* AulaSomEx2ViewController.m */; };
-		0BCDF37F1A37911200F0A94E /* AulaSomEx2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BCDF37D1A37911200F0A94E /* AulaSomEx2ViewController.xib */; };
 		0BCDF3831A37912900F0A94E /* AulaSomEx3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCDF3811A37912900F0A94E /* AulaSomEx3ViewController.m */; };
 		0BCDF3841A37912900F0A94E /* AulaSomEx3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BCDF3821A37912900F0A94E /* AulaSomEx3ViewController.xib */; };
 		0BCDF3881A37913300F0A94E /* AulaSomEx4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCDF3861A37913300F0A94E /* AulaSomEx4ViewController.m */; };
@@ -536,6 +535,7 @@
 		0BF00EBE1A27A6A80006A627 /* BotaoInstrumento.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF00EBD1A27A6A80006A627 /* BotaoInstrumento.m */; };
 		0BF00EC41A27B7110006A627 /* InfiniteScrollPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF00EC11A27B7110006A627 /* InfiniteScrollPicker.m */; };
 		0BF00EC51A27B7110006A627 /* UIView+viewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BF00EC31A27B7110006A627 /* UIView+viewController.m */; };
+		2B1BF9DD1A37E2260005E104 /* AulaSomEx2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B1BF9DC1A37E2260005E104 /* AulaSomEx2ViewController.xib */; };
 		2BC52F161A37BB4500D969FD /* AulaSomEx1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC52F141A37BB4500D969FD /* AulaSomEx1ViewController.m */; };
 		2BC52F171A37BB4500D969FD /* AulaSomEx1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BC52F151A37BB4500D969FD /* AulaSomEx1ViewController.xib */; };
 		2BC52F191A37C25000D969FD /* ROTEIRO DE FALAS.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2BC52F181A37C25000D969FD /* ROTEIRO DE FALAS.rtf */; };
@@ -1181,7 +1181,6 @@
 		0BCDF3571A378EF500F0A94E /* porteira-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "porteira-5.png"; sourceTree = "<group>"; };
 		0BCDF37B1A37911200F0A94E /* AulaSomEx2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AulaSomEx2ViewController.h; sourceTree = "<group>"; };
 		0BCDF37C1A37911200F0A94E /* AulaSomEx2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AulaSomEx2ViewController.m; sourceTree = "<group>"; };
-		0BCDF37D1A37911200F0A94E /* AulaSomEx2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AulaSomEx2ViewController.xib; sourceTree = "<group>"; };
 		0BCDF3801A37912900F0A94E /* AulaSomEx3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AulaSomEx3ViewController.h; sourceTree = "<group>"; };
 		0BCDF3811A37912900F0A94E /* AulaSomEx3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AulaSomEx3ViewController.m; sourceTree = "<group>"; };
 		0BCDF3821A37912900F0A94E /* AulaSomEx3ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AulaSomEx3ViewController.xib; sourceTree = "<group>"; };
@@ -1384,6 +1383,7 @@
 		0BF00EC11A27B7110006A627 /* InfiniteScrollPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteScrollPicker.m; sourceTree = "<group>"; };
 		0BF00EC21A27B7110006A627 /* UIView+viewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+viewController.h"; sourceTree = "<group>"; };
 		0BF00EC31A27B7110006A627 /* UIView+viewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+viewController.m"; sourceTree = "<group>"; };
+		2B1BF9DC1A37E2260005E104 /* AulaSomEx2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AulaSomEx2ViewController.xib; sourceTree = "<group>"; };
 		2BC52F131A37BB4500D969FD /* AulaSomEx1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AulaSomEx1ViewController.h; sourceTree = "<group>"; };
 		2BC52F141A37BB4500D969FD /* AulaSomEx1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AulaSomEx1ViewController.m; sourceTree = "<group>"; };
 		2BC52F151A37BB4500D969FD /* AulaSomEx1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AulaSomEx1ViewController.xib; sourceTree = "<group>"; };
@@ -1980,7 +1980,7 @@
 			children = (
 				0BCDF37B1A37911200F0A94E /* AulaSomEx2ViewController.h */,
 				0BCDF37C1A37911200F0A94E /* AulaSomEx2ViewController.m */,
-				0BCDF37D1A37911200F0A94E /* AulaSomEx2ViewController.xib */,
+				2B1BF9DC1A37E2260005E104 /* AulaSomEx2ViewController.xib */,
 			);
 			name = Ex2;
 			sourceTree = "<group>";
@@ -3902,7 +3902,6 @@
 				0BCDF2AE1A377A7400F0A94E /* btnPauseJogocompartilhar.png in Resources */,
 				3FB6F55D19DA67E60080057B /* mib3.caf in Resources */,
 				0BCDF41C1A37962700F0A94E /* tocaTrecoSeta3.png in Resources */,
-				0BCDF37F1A37911200F0A94E /* AulaSomEx2ViewController.xib in Resources */,
 				0BC8DAFE1A1BBB2700F74157 /* Banjo-H5-M-44.caf in Resources */,
 				0BCDF40E1A37962700F0A94E /* guitarra.png in Resources */,
 				0BC4BBFD1A16939800D03E1F /* bongo45.caf in Resources */,
@@ -3928,6 +3927,7 @@
 				0BC8DAF31A1BBB2700F74157 /* Harp F7.caf in Resources */,
 				0BCDF30A1A378D7100F0A94E /* ZECAO19.png in Resources */,
 				0BCDF32C1A378D7100F0A94E /* ZECAO5.png in Resources */,
+				2B1BF9DD1A37E2260005E104 /* AulaSomEx2ViewController.xib in Resources */,
 				3FE14F4E1A16CE83001BE8D7 /* TrumpG5.caf in Resources */,
 				3FCCA4041A280E8000BB1CBB /* btnTrompete.png in Resources */,
 				0BC4BC051A16939800D03E1F /* bongo53.caf in Resources */,

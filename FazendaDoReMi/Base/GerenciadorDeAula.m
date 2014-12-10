@@ -117,9 +117,9 @@
     [aula setBackgroundImage:[UIImage imageNamed:@"btoCasa.png"] forState:UIControlStateNormal];
     
     //Exercicios
-    [self criaCasaExercicio1: aula];
-    [self criaCasaExercicio2: aula];
-    [self criaCasaExercicio3: aula];
+//    [self criaCasaExercicio1: aula];
+//    [self criaCasaExercicio2: aula];
+//    [self criaCasaExercicio3: aula];
 //    [self criaCasaExercicio4: aula];
 //    [self criaCasaExercicio5: aula];
     [self criaCasaExercicio6: aula];

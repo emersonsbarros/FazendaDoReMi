@@ -16,31 +16,33 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
-    //Chama o update a cada milesegundo
-    [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(update) userInfo:nil repeats: YES];
-    
-    //Carregamento inicial
-    [self carregarComponentesIniciais];
-    
-    
-    //Verificador de termino do jogo
-    [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(verificaLimiteJogo) userInfo:nil repeats: YES];
-
-
-}
-
--(void)verificaLimiteJogo{
-    [[ControladorDeItem sharedManager] chamaVerificadorDeJogo: 3 :self.totalDeJogadas];
-}
-
--(void)carregarComponentesIniciais{
-    
     //Inicia variaveis de controle do jogo
     self.totalDeAcertos = 0;
     self.totalDeJogadas = 0;
     self.tentativasPorJogada = 1;
     self.estaAguardandoArrastarODisco = true;
     self.estaAguardandoEscolherOItem = true;
+    
+    
+    //Chama o update a cada milesegundo
+    [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(update) userInfo:nil repeats: YES];
+    
+    //Carregamento inicial
+    [self carregarComponentesIniciais];
+    
+    //Verificador de termino do jogo
+    if ([ControladorDeItem sharedManager].aulaFinalizada == false) {
+        [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(verificaLimiteJogo) userInfo:nil repeats: YES];
+
+    }
+
+}
+
+-(void)verificaLimiteJogo{
+    [[ControladorDeItem sharedManager] chamaVerificadorDeJogo :10 :self.totalDeJogadas];
+}
+
+-(void)carregarComponentesIniciais{
     
     //LISTA DE ITENS
     self.listaDeItens = [[NSMutableArray alloc] initWithObjects:
@@ -119,7 +121,7 @@
                 }else{
                     
             //NOVA TENTATIVA
-                    if (self.tentativasPorJogada <= 2){
+                    if (self.tentativasPorJogada < 2){
                         [self voltarParaMaisUmaTentativa];
                         
             //NOVA JOGADA
@@ -142,7 +144,7 @@
                 }else{
                     
             //NOVA TENTATIVA
-                    if (self.tentativasPorJogada <= 2){
+                    if (self.tentativasPorJogada < 2){
                         [self voltarParaMaisUmaTentativa];
                         
             //NOVA JOGADA
@@ -166,7 +168,7 @@
                 }else{
                     
             //NOVA TENTATIVA
-                    if (self.tentativasPorJogada <= 2){
+                    if (self.tentativasPorJogada < 2){
                         [self voltarParaMaisUmaTentativa];
                        
             //NOVA JOGADA
