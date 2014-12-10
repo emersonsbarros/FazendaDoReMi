@@ -7,6 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GerenciadorNavigationController.h"
+#import "GerenciadorComponenteView.h"
+#import "GerenciadorAnimacoes.h"
+#import "GerenciadorDeMascote.h"
+#import "GerenciadorDeItem.h"
+#import "ControladorDeItem.h"
+#import "GerenciadorUsuario.h"
+#import "GerenciadorAudio.h"
 
 @interface MenuViewController : UIViewController
 
@@ -19,17 +27,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *nuvemDireita;
 @property (weak, nonatomic) IBOutlet UIImageView *nuvemEsquerda;
 @property (weak, nonatomic) IBOutlet UIImageView *porteira;
-
-
-@property (weak, nonatomic) IBOutlet UIButton *lblBtnJornda;
-@property (weak, nonatomic) IBOutlet UIButton *lblBtnEstudio;
-
-@property (weak, nonatomic) IBOutlet UIButton *lblBtnJogos;
-
-
-@property (weak, nonatomic) IBOutlet UIImageView *imgMascote;
-
-
 
 @property NSMutableArray *listaImagensMascote;
 

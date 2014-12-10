@@ -13,10 +13,11 @@
 
 
 @property NSString *nomeInstrumentoPartitura;
-@property NSString *nomeXmlPartitura;
 
 
 @property Nota *notaEscolhaUsuarioEdicao;
+@property BOOL estadoBotaoSustenido;
+
 
 +(EscolhaUsuarioPartitura*)sharedManager;
 

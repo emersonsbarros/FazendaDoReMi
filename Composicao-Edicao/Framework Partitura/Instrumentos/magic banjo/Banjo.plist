@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>70000</string>
+	<string>Banjo-F4-M-44.caf</string>
+	<string>53</string>
+	<string>53</string>
+	<string>Banjo-A4-M-44.caf</string>
+	<string>58</string>
+	<string>58</string>
+	<string>Banjo-C5-M-44.caf</string>
+	<string>63</string>
+	<string>63</string>
+	<string>Banjo-E5-M-44.caf</string>
+	<string>69</string>
+	<string>69</string>
+	<string>Banjo-H5-M-44.caf</string>
+	<string>73</string>
+	<string>73</string>
+	<string>Banjo-D6-M-44.caf</string>
+	<string>98</string>
+	<string>98</string>
+</array>
+</plist>

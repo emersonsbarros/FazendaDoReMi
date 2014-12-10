@@ -14,9 +14,6 @@
 -(id)init{
     self = [super init];
     if(self){
-        
-        self.nome = @"ZéCão";
-        self.listaDeImagens = [[NSMutableArray alloc]init];
         self.listaDeConversas = [[NSMutableArray alloc]init];
         self.listaDeSprites = [[NSMutableArray alloc]init];
     }

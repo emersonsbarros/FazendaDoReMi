@@ -10,32 +10,40 @@
 #import "Sinfonia.h"
 #import "NotaEdicaoGesture.h"
 #import "DesenhaPartituraEdicao.h"
-
+#import "ListaInstrumentoViewController.h"
 
 
 @interface ComponenteScrollEdicao : NSObject <UIScrollViewDelegate> {
     int posicaoX ;
      int espacamentoEntreNotas;
-     int limiteDeNotas;
+    
     NSMutableArray *listaSons;
 }
 
+@property int limiteDeNotas;
+@property BOOL tocandoBloqueioInserirNota;
 
-+(ComponenteScrollEdicao*)sharedManager;
+@property float tempoUltimaNota;
 
-
+//Atributos
 @property UIScrollView *scrollPartitura;
-
--(void)recebeScroll:(UIScrollView*)scroll;
--(void)desenhaLinhasPengrama;
-
-
 @property float posNotaTocando;
 @property int contadorIndiceNota;
 @property CGPoint posOriginalScroll;
--(void)addGesturePrintarNotasTela;
 
+
+//Metodos
++(ComponenteScrollEdicao*)sharedManager;
+-(void)recebeScroll:(UIScrollView*)scroll;
+-(void)desenhaLinhasPengrama;
+-(void)addGesturePrintarNotasTela;
 -(void)tocaPartituraEdicao;
-    -(void)limparPartituraEdicao;
+-(void)limparPartituraEdicao;
+-(void)addNotaNaTelaInstrumento:(NSValue*)touchPoint;
+
+
+//Vassoura
+@property UIImageView *imgVassoura;
+
 
 @end

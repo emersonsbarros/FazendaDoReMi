@@ -23,8 +23,8 @@
 -(id)init{
     self = [super init];
     if(self){
-        self.nomeXmlPartitura = @"asa";
         self.nomeInstrumentoPartitura = @"Piano";
+        self.estadoBotaoSustenido = false;
     }
     return self;
 }

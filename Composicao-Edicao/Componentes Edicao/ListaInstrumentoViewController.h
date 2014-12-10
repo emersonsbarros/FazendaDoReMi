@@ -7,21 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EscolhaUsuarioPartitura.h"
-
+#import "GerenciadorBotaoInstrumento.h"
+#import "Sinfonia.h"
+#import "ComposicaoPartituraViewController.h"
 
 @interface ListaInstrumentoViewController : UIViewController
 
 
-
-@property NSMutableArray *listaOutletBotoes;
-@property int ajusteTamanhoBotaoInstrumento;
-
-//Outlet botoes
-@property (weak, nonatomic) IBOutlet UIButton *outBotaoViolao;
-@property (weak, nonatomic) IBOutlet UIButton *outBotaoPiano;
-@property (weak, nonatomic) IBOutlet UIButton *outBotaoFlauta;
-
++(ListaInstrumentoViewController*)sharedManager;
+-(void)chamaTelaCarregamento;
 
 
 

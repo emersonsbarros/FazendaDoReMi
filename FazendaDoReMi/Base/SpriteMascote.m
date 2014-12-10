@@ -14,7 +14,7 @@
 -(id)init{
     self = [super init];
     if(self){
-        self.listaDeSprites = [[NSMutableArray alloc]init];
+        //self.listaDeSprites = [[NSMutableArray alloc]init];
     }
     return self;
 }

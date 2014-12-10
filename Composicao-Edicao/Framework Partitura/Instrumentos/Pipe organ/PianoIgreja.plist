@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>70000</string>
+	<string>Pipe Organ C1.caf</string>
+	<string>40</string>
+	<string>40</string>
+	<string>Pipe Organ G1.caf</string>
+	<string>46</string>
+	<string>46</string>
+	<string>Pipe Organ D1.caf</string>
+	<string>53</string>
+	<string>53</string>
+	<string>Pipe Organ A2.caf</string>
+	<string>59</string>
+	<string>59</string>
+	<string>Pipe Organ E2.caf</string>
+	<string>66</string>
+	<string>66</string>
+	<string>Pipe Organ B3.caf</string>
+	<string>73</string>
+	<string>73</string>
+	<string>Pipe Organ Gb4.caf</string>
+	<string>80</string>
+	<string>80</string>
+	<string>Pipe Organ Db5.caf</string>
+	<string>108</string>
+	<string>108</string>
+</array>
+</plist>

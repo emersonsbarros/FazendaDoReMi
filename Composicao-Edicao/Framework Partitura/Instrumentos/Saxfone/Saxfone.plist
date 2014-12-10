@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>20000</string>
+	<string>Eb-low.caf</string>
+	<string>54</string>
+	<string>54</string>
+	<string>G-low.caf</string>
+	<string>57</string>
+	<string>57</string>
+	<string>Bb-low.caf</string>
+	<string>61</string>
+	<string>61</string>
+	<string>F-mid.caf</string>
+	<string>68</string>
+	<string>68</string>
+	<string>A-mid.caf</string>
+	<string>71</string>
+	<string>71</string>
+	<string>C-midhigh.caf</string>
+	<string>76</string>
+	<string>76</string>
+	<string>F-high.caf</string>
+	<string>96</string>
+	<string>96</string>
+</array>
+</plist>

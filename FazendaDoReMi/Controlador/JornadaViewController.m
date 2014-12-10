@@ -7,9 +7,11 @@
 //
 
 #import "JornadaViewController.h"
+#import "AulaSomEx1ViewController.h"
+#import "GerenciadorComponenteView.h"
+#import "GerenciadorDeAula.h"
 
 @interface JornadaViewController ()
-
 @end
 
 @implementation JornadaViewController
@@ -18,30 +20,50 @@
     return YES;
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self mostraAulas];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)chamaExercicios:(id)sender{
+    
+    //Aula, Exercicio, ViewController
+    Aula *button = sender;
+    Exercicio *primeiroExercicio = [button.listaDeExercicios firstObject];
+    
+    
+    id object = [[NSClassFromString([primeiroExercicio nomeView]) alloc]initWithNibName:[primeiroExercicio nomeView] bundle:nil];
+    
+    //Guardar a aula e exercício atual
+    [GerenciadorDeAula sharedManager].aulaAtual = button;
+    [GerenciadorDeAula sharedManager].indexDoExercicioAtual = 0;
+    
+    //Push no navigation com a view do exercício
+    [self.navigationController pushViewController: object animated: YES];
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)btnVoltaMenu:(id)sender {
-    [self.navigationController popViewControllerAnimated: YES];
+    [[GerenciadorNavigationController sharedManager].controladorApp popViewControllerAnimated:YES];
 }
 
+
+-(void)mostraAulas{
+    
+    for(Aula *aula in [GerenciadorDeAula sharedManager].listaDeAulas){
+        
+        //Bloqueia aulas e add o cadeado
+        if (![aula.nomeDoLugar isEqualToString:@"Casa"]) {
+            [aula setAlpha: 0.5];
+            [aula setImage:[UIImage imageNamed:@"cadeado.png"] forState:UIControlStateNormal];
+        }
+        
+        aula.layer.zPosition = 0;
+        [aula addTarget:self action:@selector(chamaExercicios:) forControlEvents:UIControlEventTouchUpInside];
+        [[self view] addSubview:aula];
+        
+    }
+}
 
 @end

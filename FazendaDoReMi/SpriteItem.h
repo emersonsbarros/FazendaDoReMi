@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SpriteItem : NSObject
+@interface SpriteItem : CAAnimationGroup
 
 //Atributos
 @property NSString *nomeAnimacao;
-@property NSMutableArray *listaDeImagens;
-@property float duracao;
+@property NSMutableArray *listaImagens;
+
+
 
 @end

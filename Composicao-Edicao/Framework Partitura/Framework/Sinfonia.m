@@ -46,24 +46,42 @@
 -(id)init{
     self = [super init];
     if(self){
+        
         self.listaPartiturasSinfonia = [[NSMutableArray alloc]init];
-        self.controleVelocidaTranNota = 0.5;
+        self.controleVelocidaTranNota = 0.0;
         [[DataBaseInstrumento sharedManager] addInstrumentosPadroesDoApplicativo];
-        _soundBankPlayer = [[SoundBankPlayer alloc] init];
         
         self.estadoBotaoLimpar = true;
         self.estadoBotaoPlay = true;
-       
+        
+        [self criaSoundBank];
+        
+        self.auxPlayPartituraProblema = NO;
+        
     }
+    
     return self;
 }
+
 
 +(id)allocWithZone:(struct _NSZone *)zone{
     return [self sharedManager];
 }
 
-////////////////////////////////// Efeitos para Notas //////////////////////////////////
 
+-(void)criaSoundBank{
+    
+    auxListaSoundBank = 1;
+    self.listaSoundBank = [[NSMutableArray alloc]init];
+    
+    for(int i=0;i<8;i++){
+        PartituraSinfonia *bank = [[PartituraSinfonia alloc]init];
+        [self.listaSoundBank addObject:bank];
+    }
+    
+}
+
+////////////////////////////////// Efeitos para Notas //////////////////////////////////
 
 -(void)mostraEfeito:(Nota*)notes{
     
@@ -71,6 +89,7 @@
     notaBrilha.imagemNota.alpha = 0.5;
     
 }
+
 
 -(void)desapareceEfeito:(Nota*)notes{
     
@@ -82,108 +101,105 @@
 
 /////////////////////////////// Metodos Tocar Notas ///////////////////////////////////////////
 
+-(void)trocaInstrumentoESoundBank{
+    
+    [self.listaSoundBank removeAllObjects];
+    
+    auxListaSoundBank = 1;
+    //self.listaSoundBank = [[NSMutableArray alloc]init];
+    
+    for(int i=0;i<8;i++){
+        PartituraSinfonia *bank = [[PartituraSinfonia alloc]init];
+        [self.listaSoundBank addObject:bank];
+    }
+    
+}
+
 //Toca uma nota
 -(void)tocarUmaNota:(NSMutableArray*)listaSons :(NSString*)nomeInstrumentoPlist{
     
-    self.instrumento = [[DataBaseInstrumento sharedManager]retornaInstrumento:nomeInstrumentoPlist];
+    PartituraSinfonia *partituraPararNota = [self.listaSoundBank objectAtIndex:auxListaSoundBank-1];
+    [partituraPararNota.soundBank allNotesOff];
     
-    [_soundBankPlayer setSoundBank:self.instrumento.nomeInstrumento];
+    if(auxListaSoundBank == 8) {
+        auxListaSoundBank = 1;
+    }else {
+        auxListaSoundBank += 1;
+    }
     
-    auxIndiceNotas = 0;
+    PartituraSinfonia *partitura = [self.listaSoundBank objectAtIndex:auxListaSoundBank-1];
     
-    recebeOrdemNotasDoInstrumento = self.instrumento.ordemNotasInstrumento;
+    partitura.instrumento = [[DataBaseInstrumento sharedManager]retornaInstrumento:nomeInstrumentoPlist];
+    [partitura.soundBank setSoundBank:partitura.instrumento.nomeInstrumento];
     
-    self.listaPartiturasSinfonia = [[NSMutableArray alloc]init];
+    partitura.auxIndiceNotas = 0;
+
+    partitura.listaOrdemInstrumento = partitura.instrumento.ordemNotasInstrumento;
+    
+    partitura.listaPartituraSinfonia = [[NSMutableArray alloc]init];
     
     Partitura *part = [[Partitura alloc]init];
-    [[self listaPartiturasSinfonia]addObject:part];
-    [[[self listaPartiturasSinfonia]objectAtIndex:0]setListaNotasPartitura:listaSons];
-    
-    [_soundBankPlayer allNotesOff];
-    
+    [partitura.listaPartituraSinfonia addObject:part];
+    [[partitura.listaPartituraSinfonia objectAtIndex:0]setListaNotasPartitura:listaSons];
+
     [self tocarPlayerPartitura];
-    
 }
+
+
 
 //Toca uma lista de notas
 -(void)tocarTodasNotasEdicao:(NSMutableArray*)listaSons :(NSString*)nomeInstrumentoPlist{
    
-    self.instrumento = [[DataBaseInstrumento sharedManager]retornaInstrumento:nomeInstrumentoPlist];
+    PartituraSinfonia *partituraPararNota = [self.listaSoundBank objectAtIndex:auxListaSoundBank-1];
+    [partituraPararNota.soundBank allNotesOff];
     
-    [_soundBankPlayer setSoundBank:self.instrumento.nomeInstrumento];
+    if(auxListaSoundBank == 8) {
+        auxListaSoundBank = 1;
+    }else {
+        auxListaSoundBank += 1;
+    }
     
-    auxIndiceNotas = 0;
-    auxIndiceNotasPausa = 0;
-    self.compassoAtual = 0;
-    self.controleVelocidaTranNota = 0;
+    PartituraSinfonia *partitura = [self.listaSoundBank objectAtIndex:auxListaSoundBank-1];
+
     
-    recebeOrdemNotasDoInstrumento = self.instrumento.ordemNotasInstrumento;
+    partitura.instrumento = [[DataBaseInstrumento sharedManager]retornaInstrumento:nomeInstrumentoPlist];
     
-    self.listaPartiturasSinfonia = [[NSMutableArray alloc]init];
+    [partitura.soundBank setSoundBank:partitura.instrumento.nomeInstrumento];
+    
+    partitura.auxIndiceNotas = 0;
+    
+    partitura.listaOrdemInstrumento = partitura.instrumento.ordemNotasInstrumento;
+    
+    partitura.listaPartituraSinfonia = [[NSMutableArray alloc]init];
+    
     Partitura *part = [[Partitura alloc]init];
-    [[self listaPartiturasSinfonia]addObject:part];
-    [[[self listaPartiturasSinfonia]objectAtIndex:0]setListaNotasPartitura:listaSons];
+    [partitura.listaPartituraSinfonia addObject:part];
+    [[partitura.listaPartituraSinfonia objectAtIndex:0]setListaNotasPartitura:listaSons];
     
-    [_soundBankPlayer allNotesOff];
-    
-    [self tocarPlayerPartitura];
-    
-}
-
-//Comeca a sinfonia
--(void)metodoIniciaSinfonia:(NSString*)nomePartituras :(NSString*)nomeInstrumentoPlist {
-    
-
-   //////////////////////////////// SoundBankPlayer ////////////////////////////////////////
-    
-    self.instrumento = [[DataBaseInstrumento sharedManager]retornaInstrumento:nomeInstrumentoPlist];
-    
-    
-    [_soundBankPlayer setSoundBank:self.instrumento.nomeInstrumento];
-//    _soundBankPlayer2 = [[SoundBankPlayer alloc] init];
-//    [_soundBankPlayer2 setSoundBank:self.instrumento.nomeInstrumento];
-    
-    
-    //////////////////////////////// XML ////////////////////////////////////////;
-
-    self.listaPartiturasSinfonia = [[NSMutableArray alloc]init];
-    [[LeitorPartituraXML sharedManager]iniciaLeiuturaXML:nomePartituras];
-    
-    
-    ////////////////////////////// Tocar Musica  /////////////////////////////
-    
-    auxIndiceNotas = 0;
-    auxIndiceNotas2 = 0;
-    self.compassoAtual = 0;
-    
-    recebeOrdemNotasDoInstrumento = self.instrumento.ordemNotasInstrumento;
-
-    auxIndiceNotasPausa = 0;
-    
+    self.auxPlayPartituraProblema = YES;
     
     [self tocarPlayerPartitura];
+    
+
+    [PlayerPartituraEdicaoViewController sharedManager].lblStopPartitura.hidden = NO;
+
 }
+
 
 ////////////////////////////// Metodos Player ////////////////////////////////////
 
 -(void)tocarPlayerPartitura{
+        
+    PartituraSinfonia *partitura = [self.listaSoundBank objectAtIndex:auxListaSoundBank-1];
     
-    auxIndiceNotas = auxIndiceNotasPausa;
+    partitura.auxIndiceNotas = auxIndiceNotasPausa;
     
-    self.estadoBotaoPlay = false;
-    self.estadoBotaoLimpar = false;
-    
-    NSString *nomePrimeiroMetodo = self.instrumento.metodoPrimeiroTocar;
-    // NSString *nomeSegundoMetodo = self.instrumento.metodoSegundoTocar;
+    NSString *nomePrimeiroMetodo = partitura.instrumento.metodoPrimeiroTocar;
     
     SEL selectors1 = NSSelectorFromString(nomePrimeiroMetodo);
-    //SEL selectors2 = NSSelectorFromString(nomeSegundoMetodo);
     
     [self performSelector:selectors1 withObject:NULL afterDelay:0.0];
     
-    //    if([codeValue isEqualToString:@"P2"] || (estadoStaff)){
-    //        [self performSelector:selectors2];
-    //    }
 
 }
 
@@ -204,118 +220,92 @@
 
 -(void)pararPlayerPartitura{
     
-    if([self listaPartiturasSinfonia].count > 0){
+     PartituraSinfonia *partitura = [self.listaSoundBank objectAtIndex:auxListaSoundBank-1];
+     Partitura *listaNotas = [partitura.listaPartituraSinfonia firstObject];
+    
+     if(listaNotas.listaNotasPartitura.count > 0){
         
-        Nota *nota = [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]objectAtIndex:auxIndiceNotas-1];
+         for(Nota *not in listaNotas.listaNotasPartitura){
+             not.imagemNota.alpha = 1.0;
+         }
+         
+         partitura.auxIndiceNotas = listaNotas.listaNotasPartitura.count;
         
-        self.contadorScrollDesloca = 500;
-        self.compassoAtual = 0;
+         CGPoint bottomOffset = CGPointMake(0,0);
+         [[ComponenteScrollEdicao sharedManager].scrollPartitura setContentOffset:bottomOffset animated:YES];
+         [ComponenteScrollEdicao sharedManager].contadorIndiceNota = [DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count-1;
         
-        nota.imagemNota.alpha = 1.0;
-        auxIndiceNotas = [[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura].count;
-        
-        
-    }
+     }
     
 }
 
 ///////////////////////////////  Piano  ///////////////////////////////////////////////
 
--(void)tocarpentagrama2{
-    
-    Nota *nota = [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]objectAtIndex:auxIndiceNotas2];
-    NSString *nomeNota = [nota nomeNota];
-    NSString *nivelNota = [nota oitava];
-    NSString *tomEncurtado = [nota tom];
-    NSString *notaFinal = [NSString stringWithFormat:@"%@%@",nivelNota,nomeNota];
-    NSString *tempoNota = [nota tipoNota];
+-(float)pegaTempoNota:(Nota*)nota{
     
     float tempo = 0.0;
-    float volume = 0.4;
-  
-    if([tempoNota isEqualToString:@"64th"]){
+    
+    if([nota.tipoNota isEqualToString:@"64th"]){
         tempo = n64th;
-    }else if([tempoNota isEqualToString:@"32th"]){
+    }else if([nota.tipoNota isEqualToString:@"32th"]){
         tempo = n32th;
-    }else if([tempoNota isEqualToString:@"16th"]){
+    }else if([nota.tipoNota isEqualToString:@"16th"]){
         tempo = n16th;
-    }else if([tempoNota isEqualToString:@"eighth"]){
+    }else if([nota.tipoNota isEqualToString:@"eighth"]){
         tempo = eighth;
-    }else if([tempoNota isEqualToString:@"quarter"]){
+    }else if([nota.tipoNota isEqualToString:@"quarter"]){
         tempo = quarter;
-    }else if([tempoNota isEqualToString:@"half"]){
+    }else if([nota.tipoNota isEqualToString:@"half"]){
         tempo = half;
-    }else if([tempoNota isEqualToString:@"whole"]){
+    }else if([nota.tipoNota isEqualToString:@"whole"]){
         tempo = whole;
-        volume = 10.0;
     }else{
-       // NSLog(@"deu errado temopo");
+        NSLog(@"deu errado temopo");
     }
     
+    return tempo;
+}
+
+
+-(void)teste{
+    self.estadoBotaoLimpar = true;
+    self.estadoBotaoPlay = true;
+    NSLog(@"oiii");
+}
+
+
+-(void)liberaInserirNota:(PartituraSinfonia*)part{
     
-    if ([tomEncurtado rangeOfString:@"-1"].location != NSNotFound){
-        int indiceDescerEscala = -1;
-        
-        //NSLog(@"antes %@",notaFinal);
-        notaFinal  = [self.instrumento retornaIndiceListaMusicas:notaFinal:indiceDescerEscala];
-        //NSLog(@"depois- %@",notaFinal);
-        
-    }else if ([tomEncurtado rangeOfString:@"1"].location != NSNotFound){
-        int indiceSubirEscala = 1;
-        
-        //NSLog(@"antes %@",notaFinal);
-        notaFinal  = [self.instrumento retornaIndiceListaMusicas:notaFinal:indiceSubirEscala];
-        //NSLog(@"depois+ %@",notaFinal);
-        
-    }else if ([tomEncurtado rangeOfString:@"-2"].location != NSNotFound){
-        int indiceSubirEscala = -2;
-        
-        //NSLog(@"antes %@",notaFinal);
-        notaFinal  = [self.instrumento retornaIndiceListaMusicas:notaFinal:indiceSubirEscala];
-        //NSLog(@"depois-- %@",notaFinal);
-        
-    }else if ([tomEncurtado rangeOfString:@"2"].location != NSNotFound){
-        int indiceSubirEscala = 2;
-        
-        NSLog(@"antes %@",notaFinal);
-        notaFinal  = [self.instrumento retornaIndiceListaMusicas:notaFinal:indiceSubirEscala];
-        NSLog(@"depois++ %@",notaFinal);
-        
-    }else if([notaFinal isEqualToString:@""]){
-        
-        volume = 0.0;
-        
-    }else{
-        
-        
-    }
+    part.auxIndiceNotas = 0;
     
-    int retornaNotadoXML = [[self instrumento]retornarNumeroNotaInstrumento:recebeOrdemNotasDoInstrumento:notaFinal];
-    [_soundBankPlayer2 queueNote:retornaNotadoXML gain:volume];
-	[_soundBankPlayer2 playQueuedNotes];
+    [PlayerPartituraEdicaoViewController sharedManager].lblLimparPartitura.hidden = NO;
+    [PlayerPartituraEdicaoViewController sharedManager].lblPlayPartitura.hidden = NO;
+    [ListaInstrumentoViewController sharedManager].view.hidden = NO;
+    [ComponenteScrollEdicao sharedManager].tocandoBloqueioInserirNota = YES;
+    [PlayerPartituraEdicaoViewController sharedManager].lblStopPartitura.hidden = YES;
     
-    NSLog(@"notaP2 %d %@ %d",auxIndiceNotas,notaFinal,retornaNotadoXML);
+    self.auxPlayPartituraProblema = NO;
     
-    auxIndiceNotas2++;
-    
-    
-    if(auxIndiceNotas2 < [[[[self listaPartiturasSinfonia]objectAtIndex:1]listaNotasPartitura]count]){
-        if([tempoNota isEqualToString:@"quarter"]) tempo = tempo-self.controleVelocidaTranNota;
-        [NSTimer scheduledTimerWithTimeInterval:tempo target:self selector:@selector(tocarpentagrama2) userInfo:nil repeats:NO];
-    }
+    self.estadoBotaoLimpar = true;
+    self.estadoBotaoPlay = true;
+    NSLog(@"play");
     
     
 }
 
 -(void)tocarpentagrama1{
     
-    if(auxIndiceNotas >= [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]count]){
-        self.estadoBotaoLimpar = true;
-        self.estadoBotaoPlay = true;
+    PartituraSinfonia *partitura = [self.listaSoundBank objectAtIndex:auxListaSoundBank-1];
+    
+    if(partitura.auxIndiceNotas >= [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]count]){
+        int v = [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]count] - 1;
+        Nota *ultimaNota = [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]objectAtIndex:v];
+        if(self.auxPlayPartituraProblema)[self performSelector:@selector(liberaInserirNota:) withObject:partitura afterDelay:[self pegaTempoNota:ultimaNota]+0.0];
+        else [self performSelector:@selector(teste) withObject:nil afterDelay:[self pegaTempoNota:ultimaNota]+0.0];
         
     }else{
         
-        Nota *nota = [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]objectAtIndex:auxIndiceNotas];
+        Nota *nota = [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]objectAtIndex:partitura.auxIndiceNotas];
 
         NSString *nomeNota = [nota nomeNota];
         NSString *nomeNotaTransformada;
@@ -379,28 +369,28 @@
             int indiceDescerEscala = -1;
             
             NSLog(@"antes %@",notaFinal);
-            notaFinal  = [self.instrumento retornaIndiceListaMusicas:notaFinal:indiceDescerEscala];
+            notaFinal  = [partitura.instrumento retornaIndiceListaMusicas:notaFinal:indiceDescerEscala];
             NSLog(@"depois- %@",notaFinal);
             
         }else if ([tomEncurtado rangeOfString:@"1"].location != NSNotFound){
             int indiceSubirEscala = 1;
             
             NSLog(@"antes %@",notaFinal);
-            notaFinal  = [self.instrumento retornaIndiceListaMusicas:notaFinal:indiceSubirEscala];
+            notaFinal  = [partitura.instrumento retornaIndiceListaMusicas:notaFinal:indiceSubirEscala];
             NSLog(@"depois+ %@",notaFinal);
             
         }else if ([tomEncurtado rangeOfString:@"-2"].location != NSNotFound){
             int indiceDescerEscala = -2;
             
             NSLog(@"antes %@",notaFinal);
-            notaFinal  = [self.instrumento retornaIndiceListaMusicas:notaFinal:indiceDescerEscala];
+            notaFinal  = [partitura.instrumento retornaIndiceListaMusicas:notaFinal:indiceDescerEscala];
             NSLog(@"depois-- %@",notaFinal);
             
         }else if ([tomEncurtado rangeOfString:@"2"].location != NSNotFound){
             int indiceSubirEscala = 2;
             
             NSLog(@"antes %@",notaFinal);
-            [self.instrumento retornaIndiceListaMusicas:notaFinal:indiceSubirEscala];
+            [partitura.instrumento retornaIndiceListaMusicas:notaFinal:indiceSubirEscala];
             NSLog(@"depois++ %@",notaFinal);
             
         }else if([notaFinal isEqualToString:@""]){
@@ -411,24 +401,27 @@
             
         }
 
-        if(auxIndiceNotas >0){
-            Nota *nota = [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]objectAtIndex:auxIndiceNotas-1];
+        if(partitura.auxIndiceNotas >0){
+            Nota *nota = [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]objectAtIndex:partitura.auxIndiceNotas-1];
            [self desapareceEfeito:nota];
         }
 
         [self mostraEfeito:nota];
 
-        int retornaNotadoXML = [[self instrumento]retornarNumeroNotaInstrumento:recebeOrdemNotasDoInstrumento:notaFinal];
-        [_soundBankPlayer queueNote:retornaNotadoXML gain:volume];
-        [_soundBankPlayer playQueuedNotes];
+        
+        int retornaNotadoXML = [partitura.instrumento retornarNumeroNotaInstrumento:partitura.listaOrdemInstrumento:notaFinal];
+        
+    
+        [partitura.soundBank queueNote:retornaNotadoXML gain:volume];
+        [partitura.soundBank  playQueuedNotes];
 
         
-        auxIndiceNotas++;
-        NSLog(@"notas %d %f %@-%@",auxIndiceNotas,tempo,nota.oitava,nota.nomeNota);
+        partitura.auxIndiceNotas++;
+        NSLog(@"notas %d %f %@-%@",partitura.auxIndiceNotas,tempo,nota.oitava,nota.nomeNota);
 
         
-            if([tempoNota isEqualToString:@"quarter"]) tempo = tempo-self.controleVelocidaTranNota;
-            [NSTimer scheduledTimerWithTimeInterval:tempo target:self selector:@selector(tocarpentagrama1) userInfo:nil repeats:NO];
+        if([tempoNota isEqualToString:@"quarter"]) tempo = tempo-self.controleVelocidaTranNota;
+        [NSTimer scheduledTimerWithTimeInterval:tempo target:self selector:@selector(tocarpentagrama1) userInfo:nil repeats:NO];
             
 
     
@@ -441,13 +434,18 @@
 
 -(void)tocarPrimeiroPentagramaViolao{
     
-    
-    if(auxIndiceNotas >= [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]count]){
-        self.estadoBotaoLimpar = true;
-        self.estadoBotaoPlay = true;
+    PartituraSinfonia *partitura = [self.listaSoundBank objectAtIndex:auxListaSoundBank-1];
+
+    if(partitura.auxIndiceNotas >= [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]count]){
+        int v = [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]count] - 1;
+        Nota *ultimaNota = [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]objectAtIndex:v];
+        if(self.auxPlayPartituraProblema)[self performSelector:@selector(liberaInserirNota:) withObject:partitura afterDelay:[self pegaTempoNota:ultimaNota]+0.0];
+        else [self performSelector:@selector(teste) withObject:nil afterDelay:[self pegaTempoNota:ultimaNota]+0.0];
+        
     }else{
-    Nota *nota = [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]objectAtIndex:auxIndiceNotas];
-    
+        
+    Nota *nota = [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]objectAtIndex:partitura.auxIndiceNotas];
+        
     NSString *nomeNota = [nota nomeNota];
     NSString *nomeNotaTransformada;
     
@@ -511,28 +509,28 @@
         int indiceDescerEscala = -1;
         
         NSLog(@"antes %@",notaFinal);
-        notaFinal  = [self.instrumento retornaIndiceListaMusicas:notaFinal:indiceDescerEscala];
+        notaFinal  = [partitura.instrumento retornaIndiceListaMusicas:notaFinal:indiceDescerEscala];
         NSLog(@"depois- %@",notaFinal);
         
     }else if ([tomEncurtado rangeOfString:@"1"].location != NSNotFound){
         int indiceSubirEscala = 1;
         
         NSLog(@"antes %@",notaFinal);
-        notaFinal  = [self.instrumento retornaIndiceListaMusicas:notaFinal:indiceSubirEscala];
+        notaFinal  = [partitura.instrumento retornaIndiceListaMusicas:notaFinal:indiceSubirEscala];
         NSLog(@"depois+ %@",notaFinal);
         
     }else if ([tomEncurtado rangeOfString:@"-2"].location != NSNotFound){
-        int indiceSubirEscala = -2;
+        int indiceDescerEscala = -2;
         
         NSLog(@"antes %@",notaFinal);
-        notaFinal  = [self.instrumento retornaIndiceListaMusicas:notaFinal:indiceSubirEscala];
+        notaFinal  = [partitura.instrumento retornaIndiceListaMusicas:notaFinal:indiceDescerEscala];
         NSLog(@"depois-- %@",notaFinal);
         
     }else if ([tomEncurtado rangeOfString:@"2"].location != NSNotFound){
         int indiceSubirEscala = 2;
         
         NSLog(@"antes %@",notaFinal);
-        notaFinal  = [self.instrumento retornaIndiceListaMusicas:notaFinal:indiceSubirEscala];
+        [partitura.instrumento retornaIndiceListaMusicas:notaFinal:indiceSubirEscala];
         NSLog(@"depois++ %@",notaFinal);
         
     }else if([notaFinal isEqualToString:@""]){
@@ -543,21 +541,23 @@
         
     }
   
-    if(auxIndiceNotas >0){
-        Nota *nota = [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]objectAtIndex:auxIndiceNotas-1];
+    if(partitura.auxIndiceNotas >0){
+        Nota *nota = [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]objectAtIndex:partitura.auxIndiceNotas-1];
         [self desapareceEfeito:nota];
     }
     
     [self mostraEfeito:nota];
     
     
-    int retornaNotadoXML = [[self instrumento]retornarNumeroNotaInstrumento:recebeOrdemNotasDoInstrumento:notaFinal];
-    [_soundBankPlayer queueNote:retornaNotadoXML gain:volume];
-	[_soundBankPlayer playQueuedNotes];
+    int retornaNotadoXML = [partitura.instrumento retornarNumeroNotaInstrumento:partitura.listaOrdemInstrumento:notaFinal];
     
     
-    NSLog(@"nota %d %@ %d",auxIndiceNotas,notaFinal,retornaNotadoXML);
+    [partitura.soundBank queueNote:retornaNotadoXML gain:volume];
+    [partitura.soundBank  playQueuedNotes];
     
+    
+    partitura.auxIndiceNotas++;
+    NSLog(@"notas %d %f %@-%@",partitura.auxIndiceNotas,tempo,nota.oitava,nota.nomeNota);
     auxIndiceNotas++;
     
             if([tempoNota isEqualToString:@"quarter"]) tempo = tempo-self.controleVelocidaTranNota;
@@ -572,12 +572,20 @@
 
 -(void)tocarPrimeiroPentagramaFlauta{
     
+    PartituraSinfonia *partitura = [self.listaSoundBank objectAtIndex:auxListaSoundBank-1];
+    [partitura.soundBank allNotesOff];
     
-    if(auxIndiceNotas >= [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]count]){
-        self.estadoBotaoLimpar = true;
-        self.estadoBotaoPlay = true;
+    
+    if(partitura.auxIndiceNotas >= [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]count]){
+        int v = [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]count] - 1;
+        Nota *ultimaNota = [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]objectAtIndex:v];
+        if(self.auxPlayPartituraProblema)[self performSelector:@selector(liberaInserirNota:) withObject:partitura afterDelay:[self pegaTempoNota:ultimaNota]+0.0];
+        else [self performSelector:@selector(teste) withObject:nil afterDelay:[self pegaTempoNota:ultimaNota]+0.0];
+        
     }else{
-    Nota *nota = [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]objectAtIndex:auxIndiceNotas];
+
+        
+    Nota *nota = [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]objectAtIndex:partitura.auxIndiceNotas];
 
     NSString *nomeNota = [nota nomeNota];
     NSString *nomeNotaTransformada;
@@ -640,28 +648,28 @@
         int indiceDescerEscala = -1;
         
         NSLog(@"antes %@",notaFinal);
-        notaFinal  = [self.instrumento retornaIndiceListaMusicas:notaFinal:indiceDescerEscala];
+        notaFinal  = [partitura.instrumento retornaIndiceListaMusicas:notaFinal:indiceDescerEscala];
         NSLog(@"depois- %@",notaFinal);
         
     }else if ([tomEncurtado rangeOfString:@"1"].location != NSNotFound){
         int indiceSubirEscala = 1;
         
         NSLog(@"antes %@",notaFinal);
-        notaFinal  = [self.instrumento retornaIndiceListaMusicas:notaFinal:indiceSubirEscala];
+        notaFinal  = [partitura.instrumento retornaIndiceListaMusicas:notaFinal:indiceSubirEscala];
         NSLog(@"depois+ %@",notaFinal);
         
     }else if ([tomEncurtado rangeOfString:@"-2"].location != NSNotFound){
-        int indiceSubirEscala = -2;
+        int indiceDescerEscala = -2;
         
         NSLog(@"antes %@",notaFinal);
-        notaFinal  = [self.instrumento retornaIndiceListaMusicas:notaFinal:indiceSubirEscala];
+        notaFinal  = [partitura.instrumento retornaIndiceListaMusicas:notaFinal:indiceDescerEscala];
         NSLog(@"depois-- %@",notaFinal);
         
     }else if ([tomEncurtado rangeOfString:@"2"].location != NSNotFound){
         int indiceSubirEscala = 2;
         
         NSLog(@"antes %@",notaFinal);
-        notaFinal  = [self.instrumento retornaIndiceListaMusicas:notaFinal:indiceSubirEscala];
+        [partitura.instrumento retornaIndiceListaMusicas:notaFinal:indiceSubirEscala];
         NSLog(@"depois++ %@",notaFinal);
         
     }else if([notaFinal isEqualToString:@""]){
@@ -673,26 +681,28 @@
     }
 
     
-    if(auxIndiceNotas >0){
-        Nota *nota = [[[[self listaPartiturasSinfonia]objectAtIndex:0]listaNotasPartitura]objectAtIndex:auxIndiceNotas-1];
+    if(partitura.auxIndiceNotas >0){
+        Nota *nota = [[[partitura.listaPartituraSinfonia objectAtIndex:0]listaNotasPartitura]objectAtIndex:partitura.auxIndiceNotas-1];
         [self desapareceEfeito:nota];
     }
     
     [self mostraEfeito:nota];
     
-    [_soundBankPlayer allNotesOff];
-    int retornaNotadoXML = [[self instrumento]retornarNumeroNotaInstrumento:recebeOrdemNotasDoInstrumento:notaFinal];
-    [_soundBankPlayer queueNote:retornaNotadoXML gain:volume];
-    [_soundBankPlayer playQueuedNotes];
     
-    NSLog(@"nota %d %@ %d",auxIndiceNotas,notaFinal,retornaNotadoXML);
+    int retornaNotadoXML = [partitura.instrumento retornarNumeroNotaInstrumento:partitura.listaOrdemInstrumento:notaFinal];
+    [partitura.soundBank queueNote:retornaNotadoXML gain:volume];
+    [partitura.soundBank  playQueuedNotes];
     
-    auxIndiceNotas++;
     
-        if([tempoNota isEqualToString:@"quarter"]) tempo = tempo-self.controleVelocidaTranNota;
-        [NSTimer scheduledTimerWithTimeInterval:tempo target:self selector:@selector(tocarPrimeiroPentagramaFlauta) userInfo:nil repeats:NO];
+    partitura.auxIndiceNotas++;
+    NSLog(@"notas %d %f %@-%@",partitura.auxIndiceNotas,tempo,nota.oitava,nota.nomeNota);
+    
+    
+    if([tempoNota isEqualToString:@"quarter"]) tempo = tempo-self.controleVelocidaTranNota;
+    [NSTimer scheduledTimerWithTimeInterval:tempo target:self selector:@selector(tocarPrimeiroPentagramaFlauta) userInfo:nil repeats:NO];
+        
+        
     }
-    
 }
     
 @end

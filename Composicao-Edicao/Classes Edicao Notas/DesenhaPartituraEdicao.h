@@ -18,13 +18,16 @@
     int espacamentoEntreNotas;
 }
 
-+(DesenhaPartituraEdicao*)sharedManager;
+//Atributos
 @property NSMutableArray *listaImagensTracoPentagrama;
--(void)desenhaContornoPartituraParaEdicao:(int)qtLinhas;
 @property  Nota *notaParaEdicao;
 @property NSMutableArray *listaNotasEdicao;
 @property int posicaoX;
 
+
+//Metodos
++(DesenhaPartituraEdicao*)sharedManager;
+-(void)desenhaContornoPartituraParaEdicao:(int)qtLinhas :(BOOL)estadoGesture;
 -(void)rearranjaPosicoesNotas:(int)posicaoNotaDeletada;
 -(Nota*)retornaPosicaoNotaEdicao:(float)posx :(float)posy;
 -(void)aumentarLinhasPentagrama;

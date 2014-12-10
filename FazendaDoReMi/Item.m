@@ -15,11 +15,13 @@
     
     if(self){
         self.listaSprites = [[NSMutableArray alloc] init];
+        self.listaSonsURL = [[NSMutableArray alloc]init];
+        self.estadoPressionado = false;
+        
     }
     return self;
 }
 
--(void)retornaAudio: (NSString*)nome{
-}
+
 
 @end

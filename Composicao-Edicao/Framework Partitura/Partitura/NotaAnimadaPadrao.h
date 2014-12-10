@@ -14,6 +14,7 @@
 @property UIImageView *imagemNota;
 @property int carinha;
 @property int chapeu;
+@property int sustenido;
 @property NSString *nomeNota;
 @property NSString *tipoNota;
 @property UIImage *imgCarinha;

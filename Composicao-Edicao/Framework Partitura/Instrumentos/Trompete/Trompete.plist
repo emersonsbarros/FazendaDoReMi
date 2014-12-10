@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>40000</string>
+	<string>TrumpC5.caf</string>
+	<string>56</string>
+	<string>56</string>
+	<string>TrumpD#5.caf</string>
+	<string>63</string>
+	<string>63</string>
+	<string>TrumpG5.caf</string>
+	<string>67</string>
+	<string>67</string>
+	<string>TrumpA#5.caf</string>
+	<string>71</string>
+	<string>71</string>
+	<string>TrumpC#6.caf</string>
+	<string>75</string>
+	<string>75</string>
+	<string>TrumpD#6.caf</string>
+	<string>81</string>
+	<string>81</string>
+	<string>TrumpG6.caf</string>
+	<string>119</string>
+	<string>119</string>
+</array>
+</plist>

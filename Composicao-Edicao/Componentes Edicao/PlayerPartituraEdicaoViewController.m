@@ -24,13 +24,31 @@
 }
 
 
--(void)viewDidDisappear:(BOOL)animated{
-    [super viewDidDisappear: animated];
-    
-    //[self.timerAutualizaQtNotas invalidate];
-    
-    
+////////////////////////////////// SINGTON //////////////////////////////////
+
++(PlayerPartituraEdicaoViewController*)sharedManager{
+    static PlayerPartituraEdicaoViewController *unicoInstrumento = nil;
+    if(!unicoInstrumento){
+        unicoInstrumento = [[super allocWithZone:nil]init];
+    }
+    return unicoInstrumento;
 }
+
++(id)allocWithZone:(struct _NSZone *)zone{
+    return [self sharedManager];
+}
+
+-(id)init{
+    self = [super init];
+    if(self){
+        
+    }
+    return self;
+}
+
+
+////////////////////////////////// VIEWCONTROLLER //////////////////////////////////
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -39,20 +57,26 @@
 }
 
 
+-(void)viewDidDisappear:(BOOL)animated{
+   
+    [super viewDidDisappear: animated];
+    
+    self.lblStopPartitura.hidden = YES;
+    
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    //aciona timer para atualizar a quantidade de notas inseridas
-//    self.timerAutualizaQtNotas = [NSTimer scheduledTimerWithTimeInterval:0.5
-//                                     target: self
-//                                   selector: @selector(atualizaQtdNotas)
-//                                   userInfo: nil
-//                                    repeats: YES];
+    self.lblStopPartitura.hidden = YES;
+
     
 }
 
-////////////////////////////////// METODOS //////////////////////////////////////////
+
+////////////////////////////////// METODOS AUXILIARES //////////////////////////////////////////
 
 
 //metodo que atualiza a qt de notas inseridas
@@ -63,13 +87,15 @@
 }
 
 
-////////////////////////////////// Player //////////////////////////////////////////
+////////////////////////////////////// Player Acoes //////////////////////////////////////////
 
 //Toca todas as notas do usario
 - (IBAction)tocarTodasNoras:(id)sender {
-    
-    [[ComponenteScrollEdicao sharedManager]tocaPartituraEdicao];
+    if(([DesenhaPartituraEdicao sharedManager].listaNotasEdicao.count != 0)){
+        [[ComponenteScrollEdicao sharedManager]tocaPartituraEdicao];
+    }
 }
+
 
 //Limpa as notas da tela
 - (IBAction)limparNotasPartituraEdicao:(id)sender {
@@ -77,6 +103,14 @@
     [[ComponenteScrollEdicao sharedManager]limparPartituraEdicao];
 
 }
+
+//Stop na partitura
+- (IBAction)stopPartitura:(id)sender {
+    self.lblStopPartitura.hidden = YES;
+    [[Sinfonia sharedManager]pararPlayerPartitura];
+}
+
+
 
 
 @end

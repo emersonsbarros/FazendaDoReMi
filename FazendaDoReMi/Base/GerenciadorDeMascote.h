@@ -7,9 +7,10 @@
 //
 
 #import "Mascote.h"
+#import "SpriteMascote.h"
 #import <Foundation/Foundation.h>
 
-@interface GerenciadorDeMascote : NSObject
+@interface GerenciadorDeMascote : NSObject 
 
 //Atributos
 @property NSMutableArray *listaDeMascotes;
@@ -17,6 +18,6 @@
 //Métodos
 +(GerenciadorDeMascote*)sharedManager;
 -(Mascote*)retornaMascote: (NSString*)nomeMascote;
-
+-(SpriteMascote*)retornaAnimacaoMascote:(Mascote*)mascote :(NSString*)nomeAnimacao;
 
 @end

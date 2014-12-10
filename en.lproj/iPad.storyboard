@@ -1,35 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="B0q-uH-okf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="CwD-NK-3Lq">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="ymV-hb-w4z">
-            <objects>
-                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="B0q-uH-okf" sceneMemberID="viewController">
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cW7-cQ-SGQ">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="OKg-Ph-Szy">
-                        <rect key="frame" x="0.0" y="724" width="1024" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="QCV-fp-vov" kind="relationship" relationship="rootViewController" id="jAj-rv-mk0"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1gj-qv-s5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="509" y="-888"/>
-        </scene>
         <!--Menu View Controller-->
         <scene sceneID="iRK-Q5-LqX">
             <objects>
-                <viewController id="QCV-fp-vov" customClass="MenuViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="menu" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QCV-fp-vov" customClass="MenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7cx-P9-xsY"/>
                         <viewControllerLayoutGuide type="bottom" id="BRL-uD-qEC"/>
@@ -56,8 +35,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="porteira-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="v0A-bS-cCZ">
                                 <rect key="frame" x="232" y="56" width="571" height="551"/>
                             </imageView>
-                            <button opaque="NO" alpha="0.050000000000000003" contentMode="TopLeft" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Fry-vF-hsH">
-                                <rect key="frame" x="298" y="615" width="125" height="121"/>
+                            <button opaque="NO" contentMode="TopLeft" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Fry-vF-hsH">
+                                <rect key="frame" x="287" y="591" width="140" height="157"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="18"/>
                                 <inset key="titleEdgeInsets" minX="-160" minY="0.0" maxX="0.0" maxY="-115"/>
                                 <state key="normal" backgroundImage="botao-jornada.png">
@@ -65,11 +44,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="dmu-Ru-iJ5" kind="push" id="oKr-4n-Q5p"/>
+                                    <segue destination="dmu-Ru-iJ5" kind="push" id="7vd-N8-zRo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.050000000000000003" contentMode="TopLeft" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="k5s-RW-py3">
-                                <rect key="frame" x="459" y="617" width="127" height="121"/>
+                            <button opaque="NO" contentMode="TopLeft" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="k5s-RW-py3">
+                                <rect key="frame" x="465" y="593" width="127" height="156"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <inset key="titleEdgeInsets" minX="-140" minY="0.0" maxX="0.0" maxY="-115"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="15"/>
@@ -78,20 +57,29 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fc7-hy-kdh" kind="push" id="GFa-82-t8o"/>
+                                    <segue destination="2UJ-ZY-qto" kind="push" id="7di-ng-fmu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.050000000000000003" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKg-cb-Zzr">
-                                <rect key="frame" x="618" y="616" width="128" height="121"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKg-cb-Zzr">
+                                <rect key="frame" x="618" y="592" width="124" height="156"/>
                                 <inset key="titleEdgeInsets" minX="-140" minY="0.0" maxX="0.0" maxY="-115"/>
                                 <state key="normal" backgroundImage="botao-jogos.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="COV-ns-Ckv" kind="push" id="uCd-ta-4q6"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ZECAO01.png" translatesAutoresizingMaskIntoConstraints="NO" id="no6-YP-gkA">
-                                <rect key="frame" x="-274" y="104" width="787" height="682"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tjp-Xe-nMo">
+                                <rect key="frame" x="958" y="672" width="66" height="88"/>
+                                <state key="normal" image="btnControleParental.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="djr-uP-JnP" kind="push" id="4vo-On-GuR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -99,14 +87,12 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
                     <connections>
                         <outlet property="btoEstudio" destination="k5s-RW-py3" id="AfZ-Ef-fXx"/>
                         <outlet property="btoJogos" destination="MKg-cb-Zzr" id="kQD-AJ-Unc"/>
                         <outlet property="btoJornada" destination="Fry-vF-hsH" id="tN6-m4-z5s"/>
-                        <outlet property="imgMascote" destination="no6-YP-gkA" id="HEs-Pu-DoM"/>
-                        <outlet property="lblBtnEstudio" destination="k5s-RW-py3" id="JuA-wz-RrQ"/>
-                        <outlet property="lblBtnJogos" destination="MKg-cb-Zzr" id="AvT-s3-1m9"/>
-                        <outlet property="lblBtnJornda" destination="Fry-vF-hsH" id="LAY-If-er5"/>
                         <outlet property="nuvemDireita" destination="aIa-Jj-v0o" id="Auu-gn-Mpo"/>
                         <outlet property="nuvemEsquerda" destination="2Bc-mJ-tA7" id="skj-lf-no3"/>
                         <outlet property="porteira" destination="v0A-bS-cCZ" id="xxF-mv-4Rr"/>
@@ -116,10 +102,230 @@
             </objects>
             <point key="canvasLocation" x="1823" y="-888"/>
         </scene>
-        <!--Title-->
+        <!--Tela Cadastrar Usuario View Controller-->
+        <scene sceneID="y5u-Lg-GGf">
+            <objects>
+                <viewController storyboardIdentifier="Tutorial" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1p2-Qv-ipY" customClass="TelaCadastrarUsuarioViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5KT-dR-0PG"/>
+                        <viewControllerLayoutGuide type="bottom" id="K8T-kl-3bJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xFb-OE-rf3">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-ceu.png" translatesAutoresizingMaskIntoConstraints="NO" id="fmh-N9-utP">
+                                <rect key="frame" x="-6" y="0.0" width="1030" height="768"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-arvore.png" translatesAutoresizingMaskIntoConstraints="NO" id="NWl-O1-0lS">
+                                <rect key="frame" x="-7" y="0.0" width="1039" height="768"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ZECAO01.png" translatesAutoresizingMaskIntoConstraints="NO" id="kx3-CD-caL">
+                                <rect key="frame" x="-274" y="106" width="787" height="682"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UkV-UK-BYd">
+                                <rect key="frame" x="255" y="85" width="701" height="549"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coloque seu nome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvZ-v2-ukm">
+                                        <rect key="frame" x="111" y="139" width="479" height="75"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bem vindo a fazenda DóRémi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erm-q5-FF5">
+                                        <rect key="frame" x="102" y="20" width="479" height="75"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mL8-YE-tyu">
+                                        <rect key="frame" x="29" y="211" width="643" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eig-xm-9Go">
+                                        <rect key="frame" x="193" y="279" width="133" height="54"/>
+                                        <state key="normal" title="Ok">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnCadastrarUsuario:" destination="1p2-Qv-ipY" eventType="touchUpInside" id="lLE-9n-IzX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9h-Q5-rys">
+                                        <rect key="frame" x="350" y="283" width="110" height="50"/>
+                                        <state key="normal" title="deletar">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnDeletar:" destination="1p2-Qv-ipY" eventType="touchUpInside" id="wtb-5C-J66"/>
+                                            <action selector="btnPesquisar:" destination="1p2-Qv-ipY" eventType="touchUpInside" id="Blw-t5-Gg7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZ9-Ya-Ac8">
+                                        <rect key="frame" x="193" y="389" width="110" height="50"/>
+                                        <state key="normal" title="Atualizst">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnAtualizar:" destination="1p2-Qv-ipY" eventType="touchUpInside" id="vSS-HH-8Sb"/>
+                                            <action selector="btnPesquisar:" destination="1p2-Qv-ipY" eventType="touchUpInside" id="bLC-Y6-59d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8m-9a-cDA">
+                                        <rect key="frame" x="501" y="311" width="80" height="78"/>
+                                        <state key="normal" title="Todos">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnTodos:" destination="1p2-Qv-ipY" eventType="touchUpInside" id="Njp-3l-Xya"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hv4-vW-flC">
+                                        <rect key="frame" x="350" y="389" width="110" height="50"/>
+                                        <state key="normal" title="Pesquisar">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnPesquisar:" destination="1p2-Qv-ipY" eventType="touchUpInside" id="rBZ-Mr-Mbk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="txtCampoNome" destination="mL8-YE-tyu" id="vV9-Hi-T4a"/>
+                        <outlet property="viewPrincipal" destination="UkV-UK-BYd" id="QaX-Cs-s6d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gkR-Pi-8mK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-617" y="-893"/>
+        </scene>
+        <!--Estudio View Controller-->
+        <scene sceneID="SY0-u1-njL">
+            <objects>
+                <viewController storyboardIdentifier="estudio" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2UJ-ZY-qto" customClass="EstudioViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g8h-gH-MRB"/>
+                        <viewControllerLayoutGuide type="bottom" id="XaF-Ib-NFZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iaj-Fk-ZI5">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MenuCatavento.png" translatesAutoresizingMaskIntoConstraints="NO" id="GAW-0A-HSQ">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nuvemEstudio1.png" translatesAutoresizingMaskIntoConstraints="NO" id="r5d-bg-g2b">
+                                <rect key="frame" x="-270" y="12" width="267" height="67"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nuvemEstudio1.png" translatesAutoresizingMaskIntoConstraints="NO" id="7sQ-hP-rcH">
+                                <rect key="frame" x="1025" y="91" width="338" height="117"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cataventos.png" translatesAutoresizingMaskIntoConstraints="NO" id="n9k-SQ-zTU">
+                                <rect key="frame" x="16" y="268" width="206" height="208"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cataventos.png" translatesAutoresizingMaskIntoConstraints="NO" id="KfI-i6-Ba6">
+                                <rect key="frame" x="820" y="266" width="206" height="208"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cataventos.png" translatesAutoresizingMaskIntoConstraints="NO" id="HHZ-Mr-pdl">
+                                <rect key="frame" x="561" y="265" width="206" height="208"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cataventos.png" translatesAutoresizingMaskIntoConstraints="NO" id="3ZZ-jp-Wxq">
+                                <rect key="frame" x="298" y="265" width="206" height="208"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPf-az-RkT">
+                                <rect key="frame" x="883" y="333" width="78" height="78"/>
+                                <state key="normal" image="btntecladoEstudio.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hJd-UK-P8D" kind="push" id="Px0-Hv-o6F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gW-Ig-slk">
+                                <rect key="frame" x="80" y="333" width="78" height="78"/>
+                                <state key="normal" image="btnpianoEstudio.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="T8i-dr-9jl" kind="push" id="30K-zy-Ma7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKw-cg-Tct">
+                                <rect key="frame" x="630" y="331" width="78" height="78"/>
+                                <state key="normal" image="btnpartitura.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fc7-hy-kdh" kind="push" id="jKa-Ed-e85"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBK-Ph-Irg">
+                                <rect key="frame" x="333" y="331" width="133" height="78"/>
+                                <state key="normal" image="btnxilofoneEstudio.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mrY-4P-jEF" kind="push" id="eO0-Jh-k5n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nfe-b3-KTL"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <connections>
+                        <outlet property="btnCatavento2" destination="n9k-SQ-zTU" id="ZIS-gl-ZJv"/>
+                        <outlet property="btnCatavento3" destination="HHZ-Mr-pdl" id="3SQ-E7-4t7"/>
+                        <outlet property="btnCatavento4" destination="3ZZ-jp-Wxq" id="Rh8-UP-X5E"/>
+                        <outlet property="imgCatavento1" destination="KfI-i6-Ba6" id="b3I-qk-qxe"/>
+                        <outlet property="imgNuvem1" destination="r5d-bg-g2b" id="8EY-k5-GrN"/>
+                        <outlet property="imgNuvem2" destination="7sQ-hP-rcH" id="Lna-3t-8jo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WFs-5V-l0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3233" y="48"/>
+        </scene>
+        <!--Teclado Livre View Controller-->
+        <scene sceneID="OC7-or-6HY">
+            <objects>
+                <viewController storyboardIdentifier="teclado" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hJd-UK-P8D" customClass="TecladoLivreViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HH7-dT-9lj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ri3-91-Xgz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QF6-Pj-Aim">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dTK-HF-Avu"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QMR-TH-Yqk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4733" y="-1195"/>
+        </scene>
+        <!--ComposicaoPartituraViewController-->
         <scene sceneID="dzv-Lj-Aoa">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="fc7-hy-kdh" customClass="ComposicaoPartituraViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="composicao" title="ComposicaoPartituraViewController" modalTransitionStyle="crossDissolve" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fc7-hy-kdh" customClass="ComposicaoPartituraViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1KN-3s-erL"/>
                         <viewControllerLayoutGuide type="bottom" id="LxI-iL-VEO"/>
@@ -129,7 +335,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fundoazul.png" highlightedImage=" " translatesAutoresizingMaskIntoConstraints="NO" id="M5U-Fd-0Cd">
-                                <rect key="frame" x="0.0" y="0.0" width="1060" height="660"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1060" height="768"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RBe-1J-b9s">
                                 <rect key="frame" x="0.0" y="51" width="1024" height="602"/>
@@ -140,31 +346,143 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fundocasa.png" translatesAutoresizingMaskIntoConstraints="NO" id="AJm-os-dwJ">
                                 <rect key="frame" x="0.0" y="362" width="1024" height="434"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mmv-FK-oG1">
-                                <rect key="frame" x="0.0" y="0.0" width="133" height="93"/>
-                                <state key="normal" backgroundImage="nuvem-voltar.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="testa:" destination="fc7-hy-kdh" eventType="touchUpInside" id="We9-l2-Pjw"/>
-                                </connections>
-                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJA-qs-MU4">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.79999999999999982" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GOB-Sb-T6e">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgcarregamento1.png" translatesAutoresizingMaskIntoConstraints="NO" id="B2j-Y4-X5V">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="RQq-Bf-iyP"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
                     <connections>
+                        <outlet property="imgCarremento" destination="B2j-Y4-X5V" id="9UZ-Nu-CWT"/>
+                        <outlet property="imgFundo" destination="M5U-Fd-0Cd" id="U4G-5o-x4C"/>
+                        <outlet property="imgFundoSecundario" destination="AJm-os-dwJ" id="gZF-02-R5m"/>
                         <outlet property="scrollEdicao" destination="RBe-1J-b9s" id="lG6-nM-jtC"/>
+                        <outlet property="viewTelaCarregamento" destination="LJA-qs-MU4" id="AAD-B7-uyW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCE-VF-72q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3124" y="-882"/>
+            <point key="canvasLocation" x="4998" y="-291"/>
+        </scene>
+        <!--Instrumento Piano View Controller-->
+        <scene sceneID="Vie-iQ-grd">
+            <objects>
+                <viewController storyboardIdentifier="instrumento" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="T8i-dr-9jl" customClass="InstrumentoPianoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m73-Bq-LbI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hkf-Mx-ejP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mHx-1k-QQJ">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fundoazul.png" highlightedImage=" " translatesAutoresizingMaskIntoConstraints="NO" id="coB-Lw-9cX">
+                                <rect key="frame" x="-18" y="-2" width="1060" height="660"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2gh-UI-Vkf">
+                                <rect key="frame" x="-3" y="-38" width="1030" height="537"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Ry-6l-IAh"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="scrollPartitura" destination="2gh-UI-Vkf" id="YJY-5f-Nqc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8aY-CJ-OZT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5022" y="596"/>
+        </scene>
+        <!--Tela Jogos View Controller-->
+        <scene sceneID="mdE-wB-d3i">
+            <objects>
+                <viewController storyboardIdentifier="jogos" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="COV-ns-Ckv" customClass="TelaJogosViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1jI-Sj-GtN"/>
+                        <viewControllerLayoutGuide type="bottom" id="qSJ-82-2de"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SJS-fR-rhA">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="menuJogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="uhO-qw-s35">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pentagramaJogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="m1g-jK-XcY">
+                                <rect key="frame" x="-11" y="116" width="1024" height="605"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notaJogo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="DnH-EE-uP0">
+                                <rect key="frame" x="497" y="403" width="143" height="217"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notaJogo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="hJj-UL-Tqo">
+                                <rect key="frame" x="813" y="417" width="143" height="217"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notaJogo4.png" translatesAutoresizingMaskIntoConstraints="NO" id="1YI-50-opa">
+                                <rect key="frame" x="116" y="249" width="175" height="217"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notaJogo3.png" translatesAutoresizingMaskIntoConstraints="NO" id="42F-ai-45o">
+                                <rect key="frame" x="664" y="509" width="78" height="165"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notaJogo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="kYP-XY-vSp">
+                                <rect key="frame" x="370" y="365" width="82" height="165"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mA3-lM-DsP">
+                                <rect key="frame" x="371" y="348" width="90" height="90"/>
+                                <state key="normal" image="iconeJogoFlap.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnJogoFlap:" destination="COV-ns-Ckv" eventType="touchUpInside" id="MiE-X0-GOE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzi-hw-30n">
+                                <rect key="frame" x="658" y="603" width="90" height="90"/>
+                                <state key="normal" image="iconeJogoQuarto.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnJogoTimbre:" destination="COV-ns-Ckv" eventType="touchUpInside" id="7Ab-Ny-LnZ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nuvemEstudio1.png" translatesAutoresizingMaskIntoConstraints="NO" id="3a2-bH-d7i">
+                                <rect key="frame" x="-257" y="199" width="267" height="67"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nuvemEstudio1.png" translatesAutoresizingMaskIntoConstraints="NO" id="e5J-TT-Uhz">
+                                <rect key="frame" x="1010" y="0.0" width="338" height="117"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OgD-i5-Xaf"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="imgNuvem1" destination="3a2-bH-d7i" id="3Kd-er-eCC"/>
+                        <outlet property="imgNuvem2" destination="e5J-TT-Uhz" id="mYf-Tr-Zfw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sRe-80-Nz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3233" y="-1846"/>
         </scene>
         <!--Jornada View Controller-->
         <scene sceneID="fyS-av-cnp">
             <objects>
-                <viewController id="dmu-Ru-iJ5" customClass="JornadaViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapa" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dmu-Ru-iJ5" customClass="JornadaViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JzQ-J1-TWo"/>
                         <viewControllerLayoutGuide type="bottom" id="lQ0-xR-GCd"/>
@@ -173,12 +491,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mapaAventura.png" translatesAutoresizingMaskIntoConstraints="NO" id="dV6-XG-cva">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mapaBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="dV6-XG-cva">
+                                <rect key="frame" x="-6" y="0.0" width="1030" height="773"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlE-yG-rwq">
-                                <rect key="frame" x="0.0" y="0.0" width="157" height="109"/>
-                                <state key="normal" backgroundImage="nuvem-voltar.png">
+                                <rect key="frame" x="16" y="20" width="82" height="82"/>
+                                <state key="normal" backgroundImage="btoVoltar.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -193,24 +511,287 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmT-Fm-05H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3124" y="-2022"/>
+            <point key="canvasLocation" x="3240" y="-888"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JF2-xo-wmo">
+            <objects>
+                <navigationController storyboardIdentifier="navegador" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="CwD-NK-3Lq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fai-Kj-8gP"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="f9F-TL-Khq">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="AG6-fy-O8J">
+                        <rect key="frame" x="0.0" y="724" width="1024" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="ysP-Ec-pzc" kind="relationship" relationship="rootViewController" id="Mff-69-VOQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gPT-sa-jr0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="569" y="-888"/>
+        </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="LSp-sf-6ci">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="ysP-Ec-pzc" customClass="TutorialViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Eu-ut-iZb"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ekw-Bk-Jtm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ewa-oL-TMb">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-ceu.png" translatesAutoresizingMaskIntoConstraints="NO" id="0P5-Sg-DQX">
+                                <rect key="frame" x="0.0" y="0.0" width="1030" height="768"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-arvore.png" translatesAutoresizingMaskIntoConstraints="NO" id="afk-Wi-o2d">
+                                <rect key="frame" x="0.0" y="0.0" width="1039" height="768"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rdr-Q0-NTm">
+                                <rect key="frame" x="266" y="115" width="701" height="549"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YMd-fc-nmM">
+                                        <rect key="frame" x="35" y="34" width="628" height="392"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R9m-Xz-8SU">
+                                                <rect key="frame" x="0.0" y="8" width="628" height="376"/>
+                                            </imageView>
+                                        </subviews>
+                                    </view>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWo-g2-iSZ">
+                                        <rect key="frame" x="599" y="442" width="64" height="64"/>
+                                        <state key="normal" image="btnTutorialProximo.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnProximo:" destination="ysP-Ec-pzc" eventType="touchUpInside" id="lOe-Zj-Sau"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndO-fs-rX5">
+                                        <rect key="frame" x="318" y="442" width="64" height="64"/>
+                                        <state key="normal" image="btnTutorialRetornar.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnRepetir:" destination="ysP-Ec-pzc" eventType="touchUpInside" id="FcI-AP-gje"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiw-D0-Ket">
+                                        <rect key="frame" x="558" y="425" width="135" height="97"/>
+                                        <state key="normal" image="btnTutorialFazenda.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnFazenda:" destination="ysP-Ec-pzc" eventType="touchUpInside" id="dmt-5a-f5I"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSJ-0s-pKo">
+                                <rect key="frame" x="912" y="672" width="135" height="97"/>
+                                <state key="normal" image="btnTutorialFazenda.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnFazenda:" destination="ysP-Ec-pzc" eventType="touchUpInside" id="t7e-oB-4r8"/>
+                                    <segue destination="QCV-fp-vov" kind="push" id="aZl-3t-XV4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GcJ-dp-VTV"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="imgTutorial" destination="R9m-Xz-8SU" id="izZ-C8-dj9"/>
+                        <outlet property="lblBtnFazenda" destination="oiw-D0-Ket" id="Sny-We-r5o"/>
+                        <outlet property="lblProximo" destination="rWo-g2-iSZ" id="P9u-xG-VHM"/>
+                        <outlet property="viewPrincipal" destination="rdr-Q0-NTm" id="qVX-Fw-neb"/>
+                        <outlet property="viewVideo" destination="YMd-fc-nmM" id="zNg-wa-cd5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qJ5-CP-JQO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="569" y="-24"/>
+        </scene>
+        <!--Instrumento Xilofone View Controller-->
+        <scene sceneID="0BT-Al-r3K">
+            <objects>
+                <viewController storyboardIdentifier="xilofone" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mrY-4P-jEF" customClass="InstrumentoXilofoneViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rwi-qh-oQm"/>
+                        <viewControllerLayoutGuide type="bottom" id="otw-fP-Tmu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0er-yY-qrD">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backxilofone-2.png" highlightedImage=" " translatesAutoresizingMaskIntoConstraints="NO" id="U7I-KL-1Cu">
+                                <rect key="frame" x="-18" y="-2" width="1060" height="770"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fzC-zC-hG4">
+                                <rect key="frame" x="-3" y="-39" width="1030" height="537"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UmY-xt-HnB"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="scrollPartitura" destination="fzC-zC-hG4" id="Y3Y-Yx-IKu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LjZ-vW-Ekx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4877" y="1653"/>
+        </scene>
+        <!--Tela Usuario View Controller-->
+        <scene sceneID="RmC-TV-eeJ">
+            <objects>
+                <viewController storyboardIdentifier="TelaUsuario" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="djr-uP-JnP" customClass="TelaUsuarioViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5F2-WF-QF8"/>
+                        <viewControllerLayoutGuide type="bottom" id="LaU-B7-MV1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sXc-th-FEJ">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-ceu.png" translatesAutoresizingMaskIntoConstraints="NO" id="PbV-G6-qV4">
+                                <rect key="frame" x="-6" y="0.0" width="1030" height="768"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-arvore.png" translatesAutoresizingMaskIntoConstraints="NO" id="kuv-c1-omB">
+                                <rect key="frame" x="-7" y="0.0" width="1039" height="768"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9tT-Nz-3EU">
+                                <rect key="frame" x="255" y="85" width="701" height="549"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bef-O4-vwK">
+                                        <rect key="frame" x="237" y="419" width="98" height="103"/>
+                                        <state key="normal" backgroundImage="iconeFacebook.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5l1-fN-NuM">
+                                        <rect key="frame" x="366" y="419" width="107" height="103"/>
+                                        <state key="normal" backgroundImage="iconeTwitter.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKA-Kc-i7H">
+                                        <rect key="frame" x="500" y="419" width="104" height="108"/>
+                                        <state key="normal" backgroundImage="iconeFavoritar.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2r-pD-EpO">
+                                        <rect key="frame" x="111" y="424" width="102" height="98"/>
+                                        <state key="normal" image="iconeFanPage.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="250" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="L8v-dC-CRM">
+                                        <rect key="frame" x="27" y="28" width="647" height="375"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="250" id="dYw-5x-1Jt">
+                                                <rect key="frame" x="0.0" y="1" width="647" height="250"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dYw-5x-1Jt" id="Iq7-zz-3xE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="614" height="249"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8z-Nq-qqc">
+                                                            <rect key="frame" x="73" y="21" width="229" height="211"/>
+                                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ou-dN-Huo">
+                                                            <rect key="frame" x="-15" y="66" width="142" height="118"/>
+                                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                            <state key="normal" title="Logar">
+                                                                <color key="titleColor" red="0.20000001789999999" green="0.20000001789999999" blue="0.20000001789999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                        </button>
+                                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconeFacebook.png" translatesAutoresizingMaskIntoConstraints="NO" id="uV7-bw-pr8">
+                                                            <rect key="frame" x="270" y="62" width="112" height="126"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="9tT-Nz-3EU" id="cK8-w5-4xz"/>
+                                            <outlet property="delegate" destination="9tT-Nz-3EU" id="7lc-Gf-UwR"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="efg-sQ-Cc9"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="tableUsuarios" destination="L8v-dC-CRM" id="a5o-uM-BTH"/>
+                        <outlet property="viewPrincipal" destination="9tT-Nz-3EU" id="Wwj-XD-g0v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2oW-1c-yaq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1829" y="70"/>
         </scene>
     </scenes>
     <resources>
         <image name=" " width="1100" height="821"/>
+        <image name="MenuCatavento.png" width="1024" height="768"/>
         <image name="ZECAO01.png" width="800" height="600"/>
         <image name="background-arvore.png" width="1024" height="768"/>
         <image name="background-ceu.png" width="1024" height="768"/>
-        <image name="botao-estudio.png" width="130" height="142"/>
-        <image name="botao-jogos.png" width="124" height="141"/>
-        <image name="botao-jornada.png" width="134" height="142"/>
+        <image name="backxilofone-2.png" width="1024" height="768"/>
+        <image name="botao-estudio.png" width="127" height="156"/>
+        <image name="botao-jogos.png" width="124" height="156"/>
+        <image name="botao-jornada.png" width="140" height="157"/>
+        <image name="btnControleParental.png" width="66" height="88"/>
+        <image name="btnTutorialFazenda.png" width="80" height="78"/>
+        <image name="btnTutorialProximo.png" width="64" height="64"/>
+        <image name="btnTutorialRetornar.png" width="64" height="64"/>
+        <image name="btnpartitura.png" width="78" height="78"/>
+        <image name="btnpianoEstudio.png" width="78" height="78"/>
+        <image name="btntecladoEstudio.png" width="78" height="78"/>
+        <image name="btnxilofoneEstudio.png" width="78" height="78"/>
+        <image name="btoVoltar.png" width="124" height="124"/>
+        <image name="cataventos.png" width="243" height="247"/>
         <image name="cercado.png" width="1024" height="225"/>
         <image name="fundoazul.png" width="1024" height="768"/>
         <image name="fundocasa.png" width="1024" height="768"/>
-        <image name="mapaAventura.png" width="1024" height="768"/>
-        <image name="nuvem-voltar.png" width="137" height="109"/>
+        <image name="iconeFacebook.png" width="83" height="85"/>
+        <image name="iconeFanPage.png" width="147" height="103"/>
+        <image name="iconeFavoritar.png" width="83" height="83"/>
+        <image name="iconeJogoFlap.png" width="110" height="109"/>
+        <image name="iconeJogoQuarto.png" width="110" height="109"/>
+        <image name="iconeTwitter.png" width="83" height="83"/>
+        <image name="imgcarregamento1.png" width="1024" height="768"/>
+        <image name="mapaBackground.png" width="1034" height="778"/>
+        <image name="menuJogo.png" width="1024" height="768"/>
+        <image name="notaJogo1.png" width="176" height="228"/>
+        <image name="notaJogo2.png" width="84" height="190"/>
+        <image name="notaJogo3.png" width="84" height="190"/>
+        <image name="notaJogo4.png" width="176" height="228"/>
         <image name="nuvem1.png" width="281" height="83"/>
         <image name="nuvem2.png" width="438" height="128"/>
+        <image name="nuvemEstudio1.png" width="338" height="117"/>
+        <image name="pentagramaJogo.png" width="1024" height="768"/>
         <image name="porteira-1.png" width="573" height="557"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

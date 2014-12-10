@@ -34,6 +34,8 @@
 
 
 /////////////////////////// Partitura Edicao /////////////////////////////////
+
+//Add gesture a uma nota para deletar
 -(void)addGestureSegurarNotasTela:(Nota*)notaSegura :(int)direcao{
     
     NotaEdicaoGesture *swipeGesture2 = [[NotaEdicaoGesture alloc] initWithTarget:self action:@selector(deletarNota:)];
@@ -48,6 +50,8 @@
     
 }
 
+
+//Deleta a nota da scroll view
 -(void)deletarNota:(id)sender{
     
     NotaEdicaoGesture *touch = (NotaEdicaoGesture*)sender;
@@ -72,7 +76,7 @@
 }
 
 
-
+//Faz o rearranjo das notas quando deleta uma do scroll view
 -(void)rearranjaPosicoesNotas:(int)posicaoNotaDeletada{
     Nota *pegaPosicaoDaUltimaNota = [self.listaNotasEdicao lastObject];
     self.posicaoX = pegaPosicaoDaUltimaNota.posicaoNotaEdicao;
@@ -116,7 +120,18 @@
 }
 
 
+-(void)alteraNotaSustenido:(Nota*)nota{
+    
+    if([EscolhaUsuarioPartitura sharedManager].estadoBotaoSustenido){
+        NotaAnimadaPadrao *mudaTom = [[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:nota.nomeNota];
+        if(mudaTom.sustenido == 1){
+            nota.nomeNota = [NSString stringWithFormat:@"%@%@",nota.nomeNota,@"s"];
+        }
+    }
+    
+}
 
+//Metodo que controla a posicao tocada pelo usuario transformando em um nota especifica
 -(Nota*)retornaNotaCriadaPeloUsuario:(float)j :(UIImageView*)t :(UIImageView*)t2 :(UIImageView*)ultimoTraco{
     
     Nota *aux;
@@ -124,234 +139,6 @@
     int tamanhoHor = 100;
     int tamanhoVert = 150;
     
-//    ///////////////// 7C ////////////////
-//    if(j==-0.5){
-//        aux = [[Nota alloc]init];
-//        aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
-//        [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,(t.frame.origin.y-aux.imagemNota.frame.size.height-13)-15,80,130)];
-//        aux.imagemAcidente = NULL;
-//        aux.imagePontoNota = NULL;
-//        aux.nomeNota = @"C";
-//        aux.oitava = @"7";
-//        aux.duracao = @"0";
-//        aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-//        aux.tom = @"";
-//        aux.pertencePartitura = @"";
-//        aux.numeroCompasso = @"0";
-//        aux.posicaoRadiano = @"";
-//        aux.concatenaNota = @"";
-//        aux.pontoNota = @"";
-//        aux.posNota = 0.0;
-//        aux.posicaoNotaEdicao = self.posicaoX;
-//        self.posicaoX += espacamentoEntreNotas;
-//        [self addGestureSegurarNotasTela:aux];
-//        return aux;
-//        
-//    }
-//    ///////////////// 6B ////////////////
-//    else if(j==0){
-//        aux = [[Nota alloc]init];
-//        aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
-//        [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,t.frame.origin.y-aux.imagemNota.frame.size.height-13,80,130)];
-//        aux.imagemAcidente = NULL;
-//        aux.imagePontoNota = NULL;
-//        aux.nomeNota = @"B";
-//        aux.oitava = @"6";
-//        aux.duracao = @"0";
-//        aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-//        aux.tom = @"";
-//        aux.pertencePartitura = @"";
-//        aux.numeroCompasso = @"0";
-//        aux.posicaoRadiano = @"";
-//        aux.concatenaNota = @"";
-//        aux.pontoNota = @"";
-//        aux.posNota = 0.0;
-//        aux.posicaoNotaEdicao = self.posicaoX;
-//        self.posicaoX += espacamentoEntreNotas;
-//        [self addGestureSegurarNotasTela:aux];
-//        return aux;
-//        
-//        
-//    }
-//    ///////////////// 6A ////////////////
-//    else if(j==0.5){
-//        aux = [[Nota alloc]init];
-//        aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
-//        float pos = (((t2.frame.origin.y-t.frame.origin.y)/2)+t.frame.origin.y);
-//        [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,(pos)-aux.imagemNota.frame.size.height-13,80,130)];
-//        aux.imagemAcidente = NULL;
-//        aux.imagePontoNota = NULL;
-//        aux.nomeNota = @"A";
-//        aux.oitava = @"6";
-//        aux.duracao = @"0";
-//        aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-//        aux.tom = @"";
-//        aux.pertencePartitura = @"";
-//        aux.numeroCompasso = @"0";
-//        aux.posicaoRadiano = @"";
-//        aux.concatenaNota = @"";
-//        aux.pontoNota = @"";
-//        aux.posNota = 0.0;
-//        aux.posicaoNotaEdicao = self.posicaoX;
-//        self.posicaoX += espacamentoEntreNotas;
-//        [self addGestureSegurarNotasTela:aux];
-//        return aux;
-//        
-//        
-//    }
-//    ///////////////// 6G ////////////////
-//    else if(j==1){
-//        aux = [[Nota alloc]init];
-//        aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
-//        [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,t.frame.origin.y-aux.imagemNota.frame.size.height-13,80,130)];
-//        aux.imagemAcidente = NULL;
-//        aux.imagePontoNota = NULL;
-//        aux.nomeNota = @"G";
-//        aux.oitava = @"6";
-//        aux.duracao = @"0";
-//        aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-//        aux.tom = @"";
-//        aux.pertencePartitura = @"";
-//        aux.numeroCompasso = @"0";
-//        aux.posicaoRadiano = @"";
-//        aux.concatenaNota = @"";
-//        aux.pontoNota = @"";
-//        aux.posNota = 0.0;
-//        aux.posicaoNotaEdicao = self.posicaoX;
-//        self.posicaoX += espacamentoEntreNotas;
-//        [self addGestureSegurarNotasTela:aux];
-//        return aux;
-//        
-//        
-//    }
-//    ///////////////// 6F ////////////////
-//    else if(j==1.5){
-//        aux = [[Nota alloc]init];
-//        aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
-//        float pos = (((t2.frame.origin.y-t.frame.origin.y)/2)+t.frame.origin.y);
-//        [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,(pos)-aux.imagemNota.frame.size.height-13,80,130)];
-//        aux.imagemAcidente = NULL;
-//        aux.imagePontoNota = NULL;
-//        aux.nomeNota = @"F";
-//        aux.oitava = @"6";
-//        aux.duracao = @"0";
-//        aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-//        aux.tom = @"";
-//        aux.pertencePartitura = @"";
-//        aux.numeroCompasso = @"0";
-//        aux.posicaoRadiano = @"";
-//        aux.concatenaNota = @"";
-//        aux.pontoNota = @"";
-//        aux.posNota = 0.0;
-//        aux.posicaoNotaEdicao = self.posicaoX;
-//        self.posicaoX += espacamentoEntreNotas;
-//        [self addGestureSegurarNotasTela:aux];
-//        return aux;
-//        
-//        
-//    }
-//    ///////////////// 6E ////////////////
-//    else if(j==2){
-//        aux = [[Nota alloc]init];
-//        aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
-//        [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,t.frame.origin.y-aux.imagemNota.frame.size.height-13,80,130)];
-//        aux.imagemAcidente = NULL;
-//        aux.imagePontoNota = NULL;
-//        aux.nomeNota = @"E";
-//        aux.oitava = @"6";
-//        aux.duracao = @"0";
-//        aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-//        aux.tom = @"";
-//        aux.pertencePartitura = @"";
-//        aux.numeroCompasso = @"0";
-//        aux.posicaoRadiano = @"";
-//        aux.concatenaNota = @"";
-//        aux.pontoNota = @"";
-//        aux.posNota = 0.0;
-//        aux.posicaoNotaEdicao = self.posicaoX;
-//        self.posicaoX += espacamentoEntreNotas;
-//        [self addGestureSegurarNotasTela:aux];
-//        return aux;
-//        
-//        
-//    }
-//    ///////////////// 6D ////////////////
-//    else if(j==2.5){
-//        aux = [[Nota alloc]init];
-//        aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
-//        float pos = (((t2.frame.origin.y-t.frame.origin.y)/2)+t.frame.origin.y);
-//        [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,(pos)-aux.imagemNota.frame.size.height-13,80,130)];
-//        aux.imagemAcidente = NULL;
-//        aux.imagePontoNota = NULL;
-//        aux.nomeNota = @"D";
-//        aux.oitava = @"6";
-//        aux.duracao = @"0";
-//        aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-//        aux.tom = @"";
-//        aux.pertencePartitura = @"";
-//        aux.numeroCompasso = @"0";
-//        aux.posicaoRadiano = @"";
-//        aux.concatenaNota = @"";
-//        aux.pontoNota = @"";
-//        aux.posNota = 0.0;
-//        aux.posicaoNotaEdicao = self.posicaoX;
-//        self.posicaoX += espacamentoEntreNotas;
-//        [self addGestureSegurarNotasTela:aux];
-//        return aux;
-//        
-//        
-//    }
-//    ///////////////// 6C ////////////////
-//    else if(j==3){
-//        aux = [[Nota alloc]init];
-//        aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
-//        [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,t.frame.origin.y-aux.imagemNota.frame.size.height-13,80,130)];
-//        aux.imagemAcidente = NULL;
-//        aux.imagePontoNota = NULL;
-//        aux.nomeNota = @"C";
-//        aux.oitava = @"6";
-//        aux.duracao = @"0";
-//        aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-//        aux.tom = @"";
-//        aux.pertencePartitura = @"";
-//        aux.numeroCompasso = @"0";
-//        aux.posicaoRadiano = @"";
-//        aux.concatenaNota = @"";
-//        aux.pontoNota = @"";
-//        aux.posNota = 0.0;
-//        aux.posicaoNotaEdicao = self.posicaoX;
-//        self.posicaoX += espacamentoEntreNotas;
-//        [self addGestureSegurarNotasTela:aux];
-//        return aux;
-//        
-//        
-//    }
-//    ///////////////// 5B ////////////////
-//    else if(j==3.5){
-//        aux = [[Nota alloc]init];
-//        aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
-//        float pos = (((t2.frame.origin.y-t.frame.origin.y)/2)+t.frame.origin.y);
-//        [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,(pos)-aux.imagemNota.frame.size.height-13,80,130)];
-//        aux.imagemAcidente = NULL;
-//        aux.imagePontoNota = NULL;
-//        aux.nomeNota = @"B";
-//        aux.oitava = @"5";
-//        aux.duracao = @"0";
-//        aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-//        aux.tom = @"";
-//        aux.pertencePartitura = @"";
-//        aux.numeroCompasso = @"0";
-//        aux.posicaoRadiano = @"";
-//        aux.concatenaNota = @"";
-//        aux.pontoNota = @"";
-//        aux.posNota = 0.0;
-//        aux.posicaoNotaEdicao = self.posicaoX;
-//        self.posicaoX += espacamentoEntreNotas;
-//        [self addGestureSegurarNotasTela:aux];
-//        return aux;
-//        
-//        
-//    }
     ///////////////// 5A ////////////////
      if(j==0){
         aux = [[Nota alloc]init];
@@ -364,11 +151,14 @@
         aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
         
         aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
+        
          
         float degrees = 180; //the value in degrees
          aux.imagemNota.transform = CGAffineTransformMakeRotation(degrees * M_PI/180);
          
         [self addComponentesImangesNota:aux:aux.oitava];
+         
+        [self alteraNotaSustenido:aux];
          
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX-60,t.frame.origin.y-aux.imagemNota.frame.size.height-ajusteNota+100,tamanhoHor,tamanhoVert)];
          
@@ -409,6 +199,7 @@
         aux.imagemNota.transform = CGAffineTransformMakeRotation(degrees * M_PI/180);
         
         [self addComponentesImangesNota:aux:aux.oitava];
+         [self alteraNotaSustenido:aux];
         
         float pos = (((t2.frame.origin.y-t.frame.origin.y)/2)+t.frame.origin.y);
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX-60,(pos)-aux.imagemNota.frame.size.height-ajusteNota+100,tamanhoHor,tamanhoVert)];
@@ -443,6 +234,8 @@
         aux.imagemNota.transform = CGAffineTransformMakeRotation(degrees * M_PI/180);
         
         [self addComponentesImangesNota:aux:aux.oitava];
+         [self alteraNotaSustenido:aux];
+        
         
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX-60,t.frame.origin.y-aux.imagemNota.frame.size.height-ajusteNota+100,tamanhoHor,tamanhoVert)];
         aux.tom = @"";
@@ -471,11 +264,14 @@
         aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
         
         aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
+
         
         float degrees = 180; //the value in degrees
         aux.imagemNota.transform = CGAffineTransformMakeRotation(degrees * M_PI/180);
         
         [self addComponentesImangesNota:aux:aux.oitava];
+         [self alteraNotaSustenido:aux];
+        
         
         float pos = (((t2.frame.origin.y-t.frame.origin.y)/2)+t.frame.origin.y);
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX-60,(pos)-aux.imagemNota.frame.size.height-ajusteNota+100,tamanhoHor,tamanhoVert)];
@@ -510,6 +306,7 @@
         aux.imagemNota.transform = CGAffineTransformMakeRotation(degrees * M_PI/180);
         
         [self addComponentesImangesNota:aux:aux.oitava];
+        [self alteraNotaSustenido:aux];
         
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX-60,t.frame.origin.y-aux.imagemNota.frame.size.height-ajusteNota+100,tamanhoHor,tamanhoVert)];
         aux.tom = @"";
@@ -538,10 +335,12 @@
         
         aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
         
+        
         float degrees = 180; //the value in degrees
         aux.imagemNota.transform = CGAffineTransformMakeRotation(degrees * M_PI/180);
         
         [self addComponentesImangesNota:aux:aux.oitava];
+        [self alteraNotaSustenido:aux];
         
         float pos = (((t2.frame.origin.y-t.frame.origin.y)/2)+t.frame.origin.y);
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX-60,(pos)-aux.imagemNota.frame.size.height-ajusteNota+100,tamanhoHor,tamanhoVert)];
@@ -574,6 +373,7 @@
         
         aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
         [self addComponentesImangesNota:aux:aux.oitava];
+        [self alteraNotaSustenido:aux];
         
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,t.frame.origin.y-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
         aux.tom = @"";
@@ -602,6 +402,7 @@
         
         aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
         [self addComponentesImangesNota:aux:aux.oitava];
+        [self alteraNotaSustenido:aux];
         
         float pos = (((t2.frame.origin.y-t.frame.origin.y)/2)+t.frame.origin.y);
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,(pos)-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
@@ -633,6 +434,7 @@
         
         aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
         [self addComponentesImangesNota:aux:aux.oitava];
+        [self alteraNotaSustenido:aux];
         
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,t.frame.origin.y-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
         aux.tom = @"";
@@ -661,6 +463,7 @@
         
         aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
         [self addComponentesImangesNota:aux:aux.oitava];
+        [self alteraNotaSustenido:aux];
         
         float pos = (((t2.frame.origin.y-t.frame.origin.y)/2)+t.frame.origin.y);
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,(pos)-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
@@ -692,6 +495,7 @@
         
         aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
         [self addComponentesImangesNota:aux:aux.oitava];
+        [self alteraNotaSustenido:aux];
         
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,t.frame.origin.y-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
         aux.tom = @"";
@@ -721,6 +525,7 @@
         
         aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
         [self addComponentesImangesNota:aux:aux.oitava];
+        [self alteraNotaSustenido:aux];
         
         float pos = (((t2.frame.origin.y-t.frame.origin.y)/2)+t.frame.origin.y);
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,(pos)-aux.imagemNota.frame.size.height-ajusteNota,tamanhoHor,tamanhoVert)];
@@ -751,6 +556,7 @@
         
         aux.imagemNota = [[UIImageView alloc]initWithImage:[[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota].imagemNota.image];
         [self addComponentesImangesNota:aux:aux.oitava];
+        [self alteraNotaSustenido:aux];
         
         [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,(ultimoTraco.frame.origin.y-aux.imagemNota.frame.size.height-ajusteNota),tamanhoHor,tamanhoVert)];
         
@@ -774,39 +580,41 @@
         
         
     }
-    //////////////// 3B ////////////////
-//    else if(j==6.5){
-//        aux = [[Nota alloc]init];
-//        aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
-//        [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,(ultimoTraco.frame.origin.y-aux.imagemNota.frame.size.height-13)+15,80,130)];
-//        aux.imagemAcidente = NULL;
-//        aux.imagePontoNota = NULL;
-//        aux.nomeNota = @"B";
-//        aux.oitava = @"3";
-//        aux.duracao = @"0";
-//        aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-//        aux.tom = @"";
-//        aux.pertencePartitura = @"";
-//        aux.numeroCompasso = @"0";
-//        aux.posicaoRadiano = @"";
-//        aux.concatenaNota = @"";
-//        aux.pontoNota = @"";
-//        aux.posNota = 0.0;
-//        aux.posicaoNotaEdicao = self.posicaoX;
-//        self.posicaoX += espacamentoEntreNotas;
-//        [self addGestureSegurarNotasTela:aux];
-//        return aux;
-//        
-//    }
+
     
     return NULL;
     
 }
 
+
+-(UIImageView*)vereficaCorSustenido:(Nota*)nota{
+    UIImageView *imgSustenido;
+    
+    if([nota.nomeNota isEqualToString:@"C"]){
+        imgSustenido = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"sustenidoDo.png"]];
+    }else if([nota.nomeNota isEqualToString:@"D"]){
+        imgSustenido = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"sustenidoRe.png"]];
+    }else if([nota.nomeNota isEqualToString:@"E"]){
+        imgSustenido = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"sustenidoMi.png"]];
+    }else if([nota.nomeNota isEqualToString:@"F"]){
+        imgSustenido = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"sustenidoFa.png"]];
+    }else if([nota.nomeNota isEqualToString:@"G"]){
+        imgSustenido = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"sustenidoSol.png"]];
+    }else if([nota.nomeNota isEqualToString:@"A"]){
+        imgSustenido = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"sustenidoLa.png"]];
+    }else if([nota.nomeNota isEqualToString:@"B"]){
+        imgSustenido = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"sustenidoSi.png"]];
+    }else{
+        NSLog(@"nao encontrou imagem");
+    }
+    
+    return imgSustenido;
+}
+
+//Add os componetens a mais em uma nota (chapeu,rosto animal) dependendo da sua posicao(cima,baixo)
 -(void)addComponentesImangesNota:(Nota*)aux :(NSString*)oitava{
     
     NotaAnimadaPadrao *padrao = [[DataBaseNotaPadrao sharedManager]retornaNotaPadraoCrianca:aux.nomeNota];
-    
     UIImage *imgCarinha = [[DataBaseNotaPadrao sharedManager]retornaCarinhaNota:aux.nomeNota];
     
     if([oitava isEqualToString:@"4"]){
@@ -821,6 +629,14 @@
             [chapeu setFrame:CGRectMake(-33,50,80,50)];
             [aux.imagemNota addSubview:chapeu];
         }
+        if([EscolhaUsuarioPartitura sharedManager].estadoBotaoSustenido){
+            if(padrao.sustenido == 1){
+                UIImageView *chapeu = [self vereficaCorSustenido:aux];
+                [chapeu setFrame:CGRectMake(-55,100,20,30)];
+                [aux.imagemNota addSubview:chapeu];
+            }
+        }
+        
     }else{
         if(padrao.carinha == 1){
             UIImageView *carinha = [[UIImageView alloc]initWithImage:imgCarinha];
@@ -837,11 +653,118 @@
             [chapeu setFrame:CGRectMake(-30,145,80,50)];
             [aux.imagemNota addSubview:chapeu];
         }
+        if([EscolhaUsuarioPartitura sharedManager].estadoBotaoSustenido){
+            if(padrao.sustenido == 1){
+                UIImageView *chapeu = [self vereficaCorSustenido:aux];
+                float degrees = 180; //the value in degrees
+                chapeu.transform = CGAffineTransformMakeRotation(degrees * M_PI/180);
+                [chapeu setFrame:CGRectMake(60,115,20,30)];
+                [aux.imagemNota addSubview:chapeu];
+            }
+        }
     }
     
     
 }
 
+-(Nota*)retornaTipoPausa:(Nota*)aux :(UIImageView*)linhaPausa{
+    
+    if([[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao nomeNota] isEqualToString:@"semibrevePausa"]){
+        aux = [[Nota alloc]init];
+        aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
+        aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
+        [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,linhaPausa.frame.origin.y+3,60,20)];
+        aux.nomeNota = @"";
+        aux.oitava = @"";
+        aux.tom = @"";
+        aux.posicaoNotaEdicao = self.posicaoX;
+        self.posicaoX += espacamentoEntreNotas;
+        [self addGestureSegurarNotasTela:aux:0];
+        return aux;
+        
+    }else if([[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao nomeNota] isEqualToString:@"minimaPausa"]){
+        aux = [[Nota alloc]init];
+        aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
+        aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
+        [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,linhaPausa.frame.origin.y+41,60,18)];
+        aux.nomeNota = @"";
+        aux.oitava = @"";
+        aux.tom = @"";
+        aux.posicaoNotaEdicao = self.posicaoX;
+        self.posicaoX += espacamentoEntreNotas;
+        [self addGestureSegurarNotasTela:aux:0];
+        return aux;
+        
+    }else if([[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao nomeNota] isEqualToString:@"seminimaPausa"]){
+        aux = [[Nota alloc]init];
+        aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
+        aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
+        [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,linhaPausa.frame.origin.y-10,60,80)];
+        aux.nomeNota = @"";
+        aux.oitava = @"";
+        aux.tom = @"";
+        aux.posicaoNotaEdicao = self.posicaoX;
+        self.posicaoX += espacamentoEntreNotas;
+        [self addGestureSegurarNotasTela:aux:0];
+        return aux;
+        
+    }else if([[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao nomeNota] isEqualToString:@"colcheiaPausa"]){
+        aux = [[Nota alloc]init];
+        aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
+        aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
+        [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,linhaPausa.frame.origin.y-10,60,80)];
+        aux.nomeNota = @"";
+        aux.oitava = @"";
+        aux.tom = @"";
+        aux.posicaoNotaEdicao = self.posicaoX;
+        self.posicaoX += espacamentoEntreNotas;
+        [self addGestureSegurarNotasTela:aux:0];
+        return aux;
+        
+    }else if([[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao tipoNota] isEqualToString:@"semicolcheiaPausa"]){
+        aux = [[Nota alloc]init];
+        aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
+        aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
+        [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,linhaPausa.frame.origin.y+30,60,80)];
+        aux.nomeNota = @"";
+        aux.oitava = @"";
+        aux.tom = @"";
+        aux.posicaoNotaEdicao = self.posicaoX;
+        self.posicaoX += espacamentoEntreNotas;
+        [self addGestureSegurarNotasTela:aux:0];
+        return aux;
+        
+    }else if([[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao tipoNota] isEqualToString:@"fusaPausa"]){
+        aux = [[Nota alloc]init];
+        aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
+        aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
+        [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,linhaPausa.frame.origin.y+30,60,80)];
+        aux.nomeNota = @"";
+        aux.oitava = @"";
+        aux.tom = @"";
+        aux.posicaoNotaEdicao = self.posicaoX;
+        self.posicaoX += espacamentoEntreNotas;
+        [self addGestureSegurarNotasTela:aux:0];
+        return aux;
+        
+    }else if([[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao tipoNota] isEqualToString:@"semifusaPausa"]){
+        aux = [[Nota alloc]init];
+        aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
+        aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
+        [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,linhaPausa.frame.origin.y+30,60,80)];
+        aux.nomeNota = @"";
+        aux.oitava = @"";
+        aux.tom = @"";
+        aux.posicaoNotaEdicao = self.posicaoX;
+        self.posicaoX += espacamentoEntreNotas;
+        [self addGestureSegurarNotasTela:aux:0];
+        return aux;
+        
+    }
+    return NULL;
+}
+
+//Pega a nota escolhida pelo usuario atraves do metodo retornaNotaCriadaPeloUsuario e coloca dentro da ScrollView
 -(Nota*)retornaPosicaoNotaEdicao:(float)posx :(float)posy{
     
     Nota *aux;
@@ -851,100 +774,8 @@
     
     if([[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao nomeNota] rangeOfString:@"Pausa"].location != NSNotFound){
       
-        if([[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao nomeNota] isEqualToString:@"semibrevePausa"]){
-            aux = [[Nota alloc]init];
-            aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-            aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
-            [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,linhaPausa.frame.origin.y+3,60,20)];
-            aux.nomeNota = @"";
-            aux.oitava = @"";
-            aux.tom = @"";
-            aux.posicaoNotaEdicao = self.posicaoX;
-            self.posicaoX += espacamentoEntreNotas;
-            [self addGestureSegurarNotasTela:aux:0];
-            return aux;
-            
-        }else if([[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao nomeNota] isEqualToString:@"minimaPausa"]){
-            aux = [[Nota alloc]init];
-            aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-            aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
-            [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,linhaPausa.frame.origin.y+41,60,18)];
-            aux.nomeNota = @"";
-            aux.oitava = @"";
-            aux.tom = @"";
-            aux.posicaoNotaEdicao = self.posicaoX;
-            self.posicaoX += espacamentoEntreNotas;
-            [self addGestureSegurarNotasTela:aux:0];
-            return aux;
-            
-        }else if([[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao nomeNota] isEqualToString:@"seminimaPausa"]){
-            aux = [[Nota alloc]init];
-            aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-            aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
-            [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,linhaPausa.frame.origin.y-10,60,80)];
-            aux.nomeNota = @"";
-            aux.oitava = @"";
-            aux.tom = @"";
-            aux.posicaoNotaEdicao = self.posicaoX;
-            self.posicaoX += espacamentoEntreNotas;
-            [self addGestureSegurarNotasTela:aux:0];
-            return aux;
-            
-        }else if([[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao nomeNota] isEqualToString:@"colcheiaPausa"]){
-            aux = [[Nota alloc]init];
-            aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-            aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
-            [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,linhaPausa.frame.origin.y-10,60,80)];
-            aux.nomeNota = @"";
-            aux.oitava = @"";
-            aux.tom = @"";
-            aux.posicaoNotaEdicao = self.posicaoX;
-            self.posicaoX += espacamentoEntreNotas;
-            [self addGestureSegurarNotasTela:aux:0];
-            return aux;
-            
-        }else if([[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao tipoNota] isEqualToString:@"semicolcheiaPausa"]){
-            aux = [[Nota alloc]init];
-            aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-            aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
-            [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,linhaPausa.frame.origin.y+30,60,80)];
-            aux.nomeNota = @"";
-            aux.oitava = @"";
-            aux.tom = @"";
-            aux.posicaoNotaEdicao = self.posicaoX;
-            self.posicaoX += espacamentoEntreNotas;
-            [self addGestureSegurarNotasTela:aux:0];
-            return aux;
-            
-        }else if([[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao tipoNota] isEqualToString:@"fusaPausa"]){
-            aux = [[Nota alloc]init];
-            aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-            aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
-            [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,linhaPausa.frame.origin.y+30,60,80)];
-            aux.nomeNota = @"";
-            aux.oitava = @"";
-            aux.tom = @"";
-            aux.posicaoNotaEdicao = self.posicaoX;
-            self.posicaoX += espacamentoEntreNotas;
-            [self addGestureSegurarNotasTela:aux:0];
-            return aux;
-            
-        }else if([[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao tipoNota] isEqualToString:@"semifusaPausa"]){
-            aux = [[Nota alloc]init];
-            aux.tipoNota = [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao.tipoNota;
-            aux.imagemNota = [[UIImageView alloc]initWithImage:[[[EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao imagemNota]image]];
-            [[aux imagemNota]setFrame:CGRectMake(self.posicaoX,linhaPausa.frame.origin.y+30,60,80)];
-            aux.nomeNota = @"";
-            aux.oitava = @"";
-            aux.tom = @"";
-            aux.posicaoNotaEdicao = self.posicaoX;
-            self.posicaoX += espacamentoEntreNotas;
-            [self addGestureSegurarNotasTela:aux:0];
-            return aux;
-            
-        }
-        
-        
+       aux =  [self retornaTipoPausa:aux:linhaPausa];
+        return aux;
         
     }else{
         
@@ -953,17 +784,11 @@
        
         for (int j=iniciaLinha;j<qtTotalLinhasPentagrama;j++) {
             
-            
-            
+
             UIImageView *t = [[[DesenhaPartituraEdicao sharedManager]listaImagensTracoPentagrama]objectAtIndex:j];
             UIImageView *t2 = [[[DesenhaPartituraEdicao sharedManager]listaImagensTracoPentagrama]objectAtIndex:j+1];
             UIImageView *ultimoTraco = [[[DesenhaPartituraEdicao sharedManager]listaImagensTracoPentagrama]lastObject];
             
-            //Antes da linha
-//            if(posy <= t.frame.origin.y-precisaoTouchLinha){
-//                aux =  [self retornaNotaCriadaPeloUsuario:j-0.5:t:t2:ultimoTraco];
-//                NSLog(@"aqui");
-//                return aux;
             
             //na linha
             if((posy <= t.frame.origin.y+precisaoTouchLinha)&&(posy >= t.frame.origin.y-precisaoTouchLinha)){
@@ -980,9 +805,6 @@
                 aux =  [self retornaNotaCriadaPeloUsuario:6.0:t:t2:ultimoTraco];
                 return aux;
                 
-//            }else if(posy > ultimoTraco.frame.origin.y+precisaoTouchLinha){
-//                aux =  [self retornaNotaCriadaPeloUsuario:10+0.5:t:t2:ultimoTraco];
-//                return aux;
             }
             
         }
@@ -991,16 +813,18 @@
     return NULL;
 }
 
+
+//Aumenta o tamanho da scroll de acordo com inserir de notas
 -(void)aumentarLinhasPentagrama{
     for (UIImageView *t in [DesenhaPartituraEdicao sharedManager].listaImagensTracoPentagrama) {
         [t setFrame:CGRectMake(t.frame.origin.x, t.frame.origin.y, self.posicaoX + 500.0f, 2.0f)];
-        
+
     }
 }
 
-//
 
--(void)desenhaContornoPartituraParaEdicao:(int)qtLinhas{
+//Carrega e monta as Linhas do Pentagrama
+-(void)desenhaContornoPartituraParaEdicao:(int)qtLinhas :(BOOL)estadoGesture{
     
     self.posicaoX = 250;
     espacamentoEntreNotas = 180;
@@ -1029,17 +853,26 @@
         [ self.listaImagensTracoPentagrama addObject:linha];
     }
     
-    [self desenhaContornoPartituraScroll];
+    [self desenhaContornoPartituraScroll:estadoGesture];
     
 }
 
--(void)desenhaContornoPartituraScroll{
-    
+
+//Chama o metodo de desenhar pentagra e add o gesture ao scroll para poder inserir notas
+-(void)desenhaContornoPartituraScroll:(BOOL)estadoGesture{
     [[ComponenteScrollEdicao sharedManager]desenhaLinhasPengrama];
-    [[ComponenteScrollEdicao sharedManager]addGesturePrintarNotasTela];
+    [ComponenteScrollEdicao sharedManager].limiteDeNotas = 50;
+    
+    if(estadoGesture){
+        [[ComponenteScrollEdicao sharedManager]addGesturePrintarNotasTela];
+    }
+    
 }
 
-////////////////////////////////////////////////////////////////////////////////
+
+////////////////////// SUSTENIDO //////////////////////////
+
+
 
 
 

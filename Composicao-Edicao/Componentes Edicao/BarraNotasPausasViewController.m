@@ -18,7 +18,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
+        self.estadoAtivarBotao = NO;
     }
     return self;
 }
@@ -50,6 +50,11 @@
     [self.listaOutletNotas addObject:self.outBotao2TemposPausa];
     [self.listaOutletNotas addObject:self.outBotao1TemposPausa];
     [self.listaOutletNotas addObject:self.outBotao12TemposPausa];
+    
+    if(self.aux){
+        [self removeBtnSustenido];
+    }
+    
     
     //Seta como padrao a escolha do usario como seminima
     [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao = [[DataBaseNotaPadrao sharedManager]retornaNotaPadrao:@"quarter"];
@@ -98,6 +103,10 @@
 
 ///////////////////////// PAUSA /////////////////////////
 
+-(void)removeBtnSustenido{
+    self.outBtnSustenido.hidden = YES;
+}
+
 
 - (IBAction)pausaSemibreveBotao:(id)sender {
     [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao = [[DataBaseNotaPadrao sharedManager]retornaNotaPausaPadrao:@"semibrevePausa"];
@@ -118,10 +127,33 @@
 }
 
 - (IBAction)pausaColcheiaBotao:(id)sender {
-    [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao = [[DataBaseNotaPadrao sharedManager]retornaNotaPausaPadrao:@"quarter"];
+    [EscolhaUsuarioPartitura sharedManager].notaEscolhaUsuarioEdicao = [[DataBaseNotaPadrao sharedManager]retornaNotaPausaPadrao:@"colcheiaPausa"];
     [self ocultaAlphaBotoesNotas];
     self.outBotao12TemposPausa.alpha = 1.0;
 }
+
+
+- (IBAction)sustenido:(id)sender {
+    if(self.estadoAtivarBotao){
+        [EscolhaUsuarioPartitura sharedManager].estadoBotaoSustenido = NO;
+        self.estadoAtivarBotao = NO;
+        self.outBtnSustenido.alpha = 0.5;
+    }else {
+        [EscolhaUsuarioPartitura sharedManager].estadoBotaoSustenido = YES;
+        self.estadoAtivarBotao = YES;
+        self.outBtnSustenido.alpha = 1.0;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
 
 
 

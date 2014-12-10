@@ -23,7 +23,6 @@
 +(DataBaseNotaPadrao*)sharedManager;
 -(Nota*)retornaNotaPadrao:(NSString*)nomeNota;
 -(Nota*)retornaNotaPausaPadrao:(NSString*)nomeNota;
-
 -(NotaAnimadaPadrao*)retornaNotaPadraoCrianca:(NSString*)tipoNomeNota;
 -(UIImage*)retornaCarinhaNota:(NSString*)tipoNomeNota;
 

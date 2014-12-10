@@ -19,23 +19,27 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <QuartzCore/QuartzCore.h>
 
+#import "PartituraSinfonia.h"
+#import "ComponenteScrollEdicao.h"
+#import "DesenhaPartituraEdicao.h"
+
+#import "PlayerPartituraEdicaoViewController.h"
+
 @interface Sinfonia : NSObject < NSXMLParserDelegate > {
     
     NSMutableArray *recebeOrdemNotasDoInstrumento;
     
     int auxIndiceNotasPausa;
     int auxIndiceNotas;
-    int auxIndiceNotas2;
     
-    SoundBankPlayer *_soundBankPlayer;
-    SoundBankPlayer *_soundBankPlayer2;
-  
+    int auxListaSoundBank;
 }
-
-
+@property NSMutableArray *listaSoundBank;
+@property BOOL auxPlayPartituraProblema;
 +(Sinfonia*)sharedManager;
 
 
+-(void)trocaInstrumentoESoundBank;
 @property NSString *nomeSinfonia;
 @property NSString *dataSinfonia;
 @property NSString *nomeInstrumentoSinfonia;
@@ -44,8 +48,9 @@
 @property Instrumento *instrumento;
 
 
+-(float)pegaTempoNota:(Nota*)nota;
 
--(void)metodoIniciaSinfonia:(NSString*)nomePartitura :(NSString*)nomeInstrumento;
+
 -(void)tocarPlayerPartitura;
 -(void)pausePlayerPartitura;
 -(void)pararPlayerPartitura;
@@ -68,9 +73,6 @@
 
 @property BOOL estadoBotaoLimpar;
 @property BOOL estadoBotaoPlay;
-
-
-
 
 
 @end

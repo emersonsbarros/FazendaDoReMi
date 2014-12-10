@@ -7,6 +7,11 @@
 //
 
 #import "Item.h"
+#import "SpriteItem.h"
+#import "SomItem.h"
+#import "GerenciadorAudio.h"
+#import "GestureTapItem.h"
+#import "GerenciadorAnimacoes.h"
 #import <Foundation/Foundation.h>
 
 @interface GerenciadorDeItem : NSObject
@@ -14,7 +19,10 @@
 //Atributos
 @property NSMutableArray *listaDeItens;
 
+
+
 //Metodos
--(Item*)retornaItem: (NSString*)nome;
++(GerenciadorDeItem*)sharedManager;
+
 
 @end

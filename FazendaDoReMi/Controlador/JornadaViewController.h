@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "GerenciadorNavigationController.h"
 @interface JornadaViewController : UIViewController
 
 
 - (IBAction)btnVoltaMenu:(id)sender;
-
 
 @end
