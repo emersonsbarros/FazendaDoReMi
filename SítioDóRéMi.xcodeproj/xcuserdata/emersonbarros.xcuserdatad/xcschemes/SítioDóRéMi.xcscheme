@@ -15,23 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A824717419D0AB0E00168026"
-               BuildableName = "FazendaDoReMi.app"
-               BlueprintName = "FazendaDoReMi"
-               ReferencedContainer = "container:FazendaDoReMi.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A824719419D0AB0E00168026"
-               BuildableName = "FazendaDoReMiTests.xctest"
-               BlueprintName = "FazendaDoReMiTests"
-               ReferencedContainer = "container:FazendaDoReMi.xcodeproj">
+               BuildableName = "Si&#x301;tioDo&#x301;Re&#x301;Mi.app"
+               BlueprintName = "Si&#x301;tioDo&#x301;Re&#x301;Mi"
+               ReferencedContainer = "container:Si&#x301;tioDo&#x301;Re&#x301;Mi.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,24 +28,14 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A824719419D0AB0E00168026"
-               BuildableName = "FazendaDoReMiTests.xctest"
-               BlueprintName = "FazendaDoReMiTests"
-               ReferencedContainer = "container:FazendaDoReMi.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A824717419D0AB0E00168026"
-            BuildableName = "FazendaDoReMi.app"
-            BlueprintName = "FazendaDoReMi"
-            ReferencedContainer = "container:FazendaDoReMi.xcodeproj">
+            BuildableName = "Si&#x301;tioDo&#x301;Re&#x301;Mi.app"
+            BlueprintName = "Si&#x301;tioDo&#x301;Re&#x301;Mi"
+            ReferencedContainer = "container:Si&#x301;tioDo&#x301;Re&#x301;Mi.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A824717419D0AB0E00168026"
-            BuildableName = "FazendaDoReMi.app"
-            BlueprintName = "FazendaDoReMi"
-            ReferencedContainer = "container:FazendaDoReMi.xcodeproj">
+            BuildableName = "Si&#x301;tioDo&#x301;Re&#x301;Mi.app"
+            BlueprintName = "Si&#x301;tioDo&#x301;Re&#x301;Mi"
+            ReferencedContainer = "container:Si&#x301;tioDo&#x301;Re&#x301;Mi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A824717419D0AB0E00168026"
-            BuildableName = "FazendaDoReMi.app"
-            BlueprintName = "FazendaDoReMi"
-            ReferencedContainer = "container:FazendaDoReMi.xcodeproj">
+            BuildableName = "Si&#x301;tioDo&#x301;Re&#x301;Mi.app"
+            BlueprintName = "Si&#x301;tioDo&#x301;Re&#x301;Mi"
+            ReferencedContainer = "container:Si&#x301;tioDo&#x301;Re&#x301;Mi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

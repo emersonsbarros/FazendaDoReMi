@@ -1674,22 +1674,22 @@
 		A811633F19D22A9300506D94 /* SpriteItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteItem.m; sourceTree = "<group>"; };
 		A811634119D22B0000506D94 /* GerenciadorDeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GerenciadorDeItem.h; sourceTree = "<group>"; };
 		A811634219D22B0000506D94 /* GerenciadorDeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GerenciadorDeItem.m; sourceTree = "<group>"; };
-		A824717519D0AB0E00168026 /* FazendaDoReMi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FazendaDoReMi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A824717519D0AB0E00168026 /* SítioDóRéMi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SítioDóRéMi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A824717819D0AB0E00168026 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A824717A19D0AB0E00168026 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A824717C19D0AB0E00168026 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A824717E19D0AB0E00168026 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		A824718219D0AB0E00168026 /* FazendaDoReMi-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FazendaDoReMi-Info.plist"; sourceTree = "<group>"; };
+		A824718219D0AB0E00168026 /* SítioDóRéMi-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SítioDóRéMi-Info.plist"; sourceTree = "<group>"; };
 		A824718419D0AB0E00168026 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A824718619D0AB0E00168026 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A824718819D0AB0E00168026 /* FazendaDoReMi-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FazendaDoReMi-Prefix.pch"; sourceTree = "<group>"; };
+		A824718819D0AB0E00168026 /* SítioDóRéMi-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SítioDóRéMi-Prefix.pch"; sourceTree = "<group>"; };
 		A824718919D0AB0E00168026 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A824718A19D0AB0E00168026 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A824718D19D0AB0E00168026 /* FazendaDoReMi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FazendaDoReMi.xcdatamodel; sourceTree = "<group>"; };
 		A824718F19D0AB0E00168026 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A824719519D0AB0E00168026 /* FazendaDoReMiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FazendaDoReMiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A824719519D0AB0E00168026 /* SítioDóRéMiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SítioDóRéMiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A824719619D0AB0E00168026 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		A824719F19D0AB0E00168026 /* FazendaDoReMiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FazendaDoReMiTests-Info.plist"; sourceTree = "<group>"; };
+		A824719F19D0AB0E00168026 /* SítioDóRéMiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SítioDóRéMiTests-Info.plist"; sourceTree = "<group>"; };
 		A82471A119D0AB0E00168026 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A82471A319D0AB0E00168026 /* FazendaDoReMiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FazendaDoReMiTests.m; sourceTree = "<group>"; };
 		A82471B319D0AE2600168026 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/iPad.storyboard; sourceTree = "<group>"; };
@@ -3658,8 +3658,8 @@
 		A824717619D0AB0E00168026 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A824717519D0AB0E00168026 /* FazendaDoReMi.app */,
-				A824719519D0AB0E00168026 /* FazendaDoReMiTests.xctest */,
+				A824717519D0AB0E00168026 /* SítioDóRéMi.app */,
+				A824719519D0AB0E00168026 /* SítioDóRéMiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3701,10 +3701,10 @@
 				A824718F19D0AB0E00168026 /* Images.xcassets */,
 				A824718A19D0AB0E00168026 /* AppDelegate.m */,
 				A824718919D0AB0E00168026 /* AppDelegate.h */,
-				A824718219D0AB0E00168026 /* FazendaDoReMi-Info.plist */,
+				A824718219D0AB0E00168026 /* SítioDóRéMi-Info.plist */,
 				A824718319D0AB0E00168026 /* InfoPlist.strings */,
 				A824718619D0AB0E00168026 /* main.m */,
-				A824718819D0AB0E00168026 /* FazendaDoReMi-Prefix.pch */,
+				A824718819D0AB0E00168026 /* SítioDóRéMi-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			path = FazendaDoReMi;
@@ -3722,7 +3722,7 @@
 		A824719E19D0AB0E00168026 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A824719F19D0AB0E00168026 /* FazendaDoReMiTests-Info.plist */,
+				A824719F19D0AB0E00168026 /* SítioDóRéMiTests-Info.plist */,
 				A82471A019D0AB0E00168026 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -3792,9 +3792,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A824717419D0AB0E00168026 /* FazendaDoReMi */ = {
+		A824717419D0AB0E00168026 /* SítioDóRéMi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A82471A719D0AB0E00168026 /* Build configuration list for PBXNativeTarget "FazendaDoReMi" */;
+			buildConfigurationList = A82471A719D0AB0E00168026 /* Build configuration list for PBXNativeTarget "SítioDóRéMi" */;
 			buildPhases = (
 				A824717119D0AB0E00168026 /* Sources */,
 				A824717219D0AB0E00168026 /* Frameworks */,
@@ -3804,14 +3804,14 @@
 			);
 			dependencies = (
 			);
-			name = FazendaDoReMi;
+			name = "SítioDóRéMi";
 			productName = FazendaDoReMi;
-			productReference = A824717519D0AB0E00168026 /* FazendaDoReMi.app */;
+			productReference = A824717519D0AB0E00168026 /* SítioDóRéMi.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A824719419D0AB0E00168026 /* FazendaDoReMiTests */ = {
+		A824719419D0AB0E00168026 /* SítioDóRéMiTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A82471AA19D0AB0E00168026 /* Build configuration list for PBXNativeTarget "FazendaDoReMiTests" */;
+			buildConfigurationList = A82471AA19D0AB0E00168026 /* Build configuration list for PBXNativeTarget "SítioDóRéMiTests" */;
 			buildPhases = (
 				A824719119D0AB0E00168026 /* Sources */,
 				A824719219D0AB0E00168026 /* Frameworks */,
@@ -3822,9 +3822,9 @@
 			dependencies = (
 				A824719C19D0AB0E00168026 /* PBXTargetDependency */,
 			);
-			name = FazendaDoReMiTests;
+			name = "SítioDóRéMiTests";
 			productName = FazendaDoReMiTests;
-			productReference = A824719519D0AB0E00168026 /* FazendaDoReMiTests.xctest */;
+			productReference = A824719519D0AB0E00168026 /* SítioDóRéMiTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -3845,7 +3845,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A824717019D0AB0E00168026 /* Build configuration list for PBXProject "FazendaDoReMi" */;
+			buildConfigurationList = A824717019D0AB0E00168026 /* Build configuration list for PBXProject "SítioDóRéMi" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -3857,8 +3857,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A824717419D0AB0E00168026 /* FazendaDoReMi */,
-				A824719419D0AB0E00168026 /* FazendaDoReMiTests */,
+				A824717419D0AB0E00168026 /* SítioDóRéMi */,
+				A824719419D0AB0E00168026 /* SítioDóRéMiTests */,
 			);
 		};
 /* End PBXProject section */
@@ -4689,7 +4689,7 @@
 /* Begin PBXTargetDependency section */
 		A824719C19D0AB0E00168026 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A824717419D0AB0E00168026 /* FazendaDoReMi */;
+			target = A824717419D0AB0E00168026 /* SítioDóRéMi */;
 			targetProxy = A824719B19D0AB0E00168026 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -4810,10 +4810,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FazendaDoReMi/FazendaDoReMi-Prefix.pch";
-				INFOPLIST_FILE = "FazendaDoReMi/FazendaDoReMi-Info.plist";
+				GCC_PREFIX_HEADER = "FazendaDoReMi/SítioDóRéMi-Prefix.pch";
+				INFOPLIST_FILE = "FazendaDoReMi/SítioDóRéMi-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "SítioDóRéMi";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -4825,10 +4825,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FazendaDoReMi/FazendaDoReMi-Prefix.pch";
-				INFOPLIST_FILE = "FazendaDoReMi/FazendaDoReMi-Info.plist";
+				GCC_PREFIX_HEADER = "FazendaDoReMi/SítioDóRéMi-Prefix.pch";
+				INFOPLIST_FILE = "FazendaDoReMi/SítioDóRéMi-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "SítioDóRéMi";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -4848,8 +4848,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "FazendaDoReMiTests/FazendaDoReMiTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "FazendaDoReMiTests/SítioDóRéMiTests-Info.plist";
+				PRODUCT_NAME = "SítioDóRéMiTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -4866,8 +4866,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FazendaDoReMi/FazendaDoReMi-Prefix.pch";
-				INFOPLIST_FILE = "FazendaDoReMiTests/FazendaDoReMiTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "FazendaDoReMiTests/SítioDóRéMiTests-Info.plist";
+				PRODUCT_NAME = "SítioDóRéMiTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -4876,7 +4876,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A824717019D0AB0E00168026 /* Build configuration list for PBXProject "FazendaDoReMi" */ = {
+		A824717019D0AB0E00168026 /* Build configuration list for PBXProject "SítioDóRéMi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A82471A519D0AB0E00168026 /* Debug */,
@@ -4885,7 +4885,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A82471A719D0AB0E00168026 /* Build configuration list for PBXNativeTarget "FazendaDoReMi" */ = {
+		A82471A719D0AB0E00168026 /* Build configuration list for PBXNativeTarget "SítioDóRéMi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A82471A819D0AB0E00168026 /* Debug */,
@@ -4894,7 +4894,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A82471AA19D0AB0E00168026 /* Build configuration list for PBXNativeTarget "FazendaDoReMiTests" */ = {
+		A82471AA19D0AB0E00168026 /* Build configuration list for PBXNativeTarget "SítioDóRéMiTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A82471AB19D0AB0E00168026 /* Debug */,
