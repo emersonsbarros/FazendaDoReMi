@@ -44,22 +44,22 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 -(void)chamaVerificadorDeJogo :(int)numeroLimiteDeJogadas :(int)numeroDeJogadasAtual{
-    
-    self.aulaFinalizada = false;
-    self.numeroLimiteDeJogadas = numeroLimiteDeJogadas;
-    self.numeroDeJogadasAtual = numeroDeJogadasAtual;
-    
-    
-    if(self.numeroLimiteDeJogadas == self.numeroDeJogadasAtual){
-        self.aulaFinalizada = true;
-        
-        [[GerenciadorAudio sharedManager] ajustaVolume: 0];
-        [[GerenciadorComponenteView sharedManager]addComponentesMenuPausa: [GerenciadorNavigationController sharedManager].controladorApp.visibleViewController];
-        
-        self.numeroDeJogadasAtual = 0;
-        self.numeroLimiteDeJogadas = 0;
-        [self.timerVerificadorJogoFinalizado invalidate];
-    }
+//    
+//    self.aulaFinalizada = false;
+//    self.numeroLimiteDeJogadas = numeroLimiteDeJogadas;
+//    self.numeroDeJogadasAtual = numeroDeJogadasAtual;
+//    
+//    
+//    if(self.numeroLimiteDeJogadas == self.numeroDeJogadasAtual){
+//        self.aulaFinalizada = true;
+//        self.numeroDeJogadasAtual = 0;
+//        self.numeroLimiteDeJogadas = 0;
+//        [self.timerVerificadorJogoFinalizado invalidate];
+//        
+//        [[GerenciadorAudio sharedManager] ajustaVolume: 0];
+//        [[GerenciadorComponenteView sharedManager]addComponentesMenuPausa: [GerenciadorNavigationController sharedManager].controladorApp.visibleViewController];
+//
+//    }
 }
 
 

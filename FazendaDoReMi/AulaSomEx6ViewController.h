@@ -37,6 +37,7 @@
 //Controladores de jogo
 @property BOOL estaAguardandoArrastarODisco;
 @property BOOL estaAguardandoEscolherOItem;
+@property BOOL jogoFinalizado;
 @property int tentativasPorJogada;
 @property int totalDeJogadas;
 @property int totalDeAcertos;

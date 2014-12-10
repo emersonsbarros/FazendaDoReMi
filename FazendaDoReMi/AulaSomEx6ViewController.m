@@ -16,33 +16,27 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
+    //Chama o update a cada milesegundo
+    [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(update) userInfo:nil repeats: YES];
+    
+    //Carregamento inicial
+    [self carregarComponentesIniciais];
+
+}
+
+-(void)verificaLimiteJogo{
+    [[ControladorDeItem sharedManager] chamaVerificadorDeJogo :3 :self.totalDeJogadas];
+}
+
+-(void)carregarComponentesIniciais{
+    
     //Inicia variaveis de controle do jogo
     self.totalDeAcertos = 0;
     self.totalDeJogadas = 0;
     self.tentativasPorJogada = 1;
     self.estaAguardandoArrastarODisco = true;
     self.estaAguardandoEscolherOItem = true;
-    
-    
-    //Chama o update a cada milesegundo
-    [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(update) userInfo:nil repeats: YES];
-    
-    //Carregamento inicial
-    [self carregarComponentesIniciais];
-    
-    //Verificador de termino do jogo
-    if ([ControladorDeItem sharedManager].aulaFinalizada == false) {
-        [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(verificaLimiteJogo) userInfo:nil repeats: YES];
-
-    }
-
-}
-
--(void)verificaLimiteJogo{
-    [[ControladorDeItem sharedManager] chamaVerificadorDeJogo :10 :self.totalDeJogadas];
-}
-
--(void)carregarComponentesIniciais{
+    self.jogoFinalizado = false;
     
     //LISTA DE ITENS
     self.listaDeItens = [[NSMutableArray alloc] initWithObjects:
@@ -89,97 +83,108 @@
 
 -(void)update{
     
+    if (!self.jogoFinalizado) {
+        if (self.totalDeJogadas <= 9) {
+            
+            
+            //AGUARDANDO DISCO SER ARRASTADO
+            if (_estaAguardandoArrastarODisco) {
+                
+                if(self.disco1.estadoPressionado){
+                    
+                    NSLog(@"JOGADA ATUAL: %i", self.totalDeJogadas);
+                    NSLog(@"TENTATIVA ATUAL: %i", self.tentativasPorJogada);
+                    NSLog(@"Item correto: %@", self.itemCorreto);
+                    
+                    [self bloqueiaDiscoParaJogada];
+                    [self mostrarImagensDosItensParaEscolha];
+                }
+            }
+            
+            
+            //AGUARDANDO ESCOLHER ITEM
+            if (_estaAguardandoEscolherOItem) {
+                
+                //ESCOLHEU OPCAO 1
+                if (self.imagemOpcao1.estadoPressionado){
+                    self.estaAguardandoEscolherOItem = false;
+                    
+                    //ACERTOU
+                    if ([self.imagemOpcao1.nome isEqualToString: self.itemCorreto]){
+                        [self criaNovaJogada];
+                        
+                        //ERROU
+                    }else{
+                        
+                        //NOVA TENTATIVA
+                        if (self.tentativasPorJogada < 2){
+                            [self voltarParaMaisUmaTentativa];
+                            
+                            //NOVA JOGADA
+                        }else{
+                            [self criaNovaJogada];
+                        }
+                    }
+                    
+                    return;
+                    
+                    //ESCOLHEU OPCAO 2
+                }else if (self.imagemOpcao2.estadoPressionado){
+                    self.estaAguardandoEscolherOItem = false;
+                    
+                    //ACERTOU
+                    if ([self.imagemOpcao2.nome isEqualToString: self.itemCorreto]){
+                        [self criaNovaJogada];
+                        
+                        //ERROU
+                    }else{
+                        
+                        //NOVA TENTATIVA
+                        if (self.tentativasPorJogada < 2){
+                            [self voltarParaMaisUmaTentativa];
+                            
+                            //NOVA JOGADA
+                        }else{
+                            [self criaNovaJogada];
+                        }
+                        
+                    }
+                    
+                    return;
+                    
+                    //ESCOLHEU OPCAO 3
+                }else if (self.imagemOpcao3.estadoPressionado){
+                    self.estaAguardandoEscolherOItem = false;
+                    
+                    //ACERTOU
+                    if ([self.imagemOpcao3.nome isEqualToString: self.itemCorreto]){
+                        [self criaNovaJogada];
+                        
+                        //ERROU
+                    }else{
+                        
+                        //NOVA TENTATIVA
+                        if (self.tentativasPorJogada < 2){
+                            [self voltarParaMaisUmaTentativa];
+                            
+                            //NOVA JOGADA
+                        }else{
+                            [self criaNovaJogada];
+                        }
+                        
+                    }
+                }
+            }
+            
+            
+        }else{
+            self.jogoFinalizado = true;
+            [[GerenciadorAudio sharedManager] stopAudio];
+            [[GerenciadorNavigationController sharedManager].controladorApp popToViewController:[[GerenciadorNavigationController sharedManager]retornaViewControllerStoryBoard:@"mapa"] animated:YES];
+        }
+        
 
-        
-//AGUARDANDO DISCO SER ARRASTADO
-        if (_estaAguardandoArrastarODisco) {
-            
-            if(self.disco1.estadoPressionado){
-                
-                NSLog(@"JOGADA ATUAL: %i", self.totalDeJogadas);
-                NSLog(@"TENTATIVA ATUAL: %i", self.tentativasPorJogada);
-                NSLog(@"Item correto: %@", self.itemCorreto);
-                
-                [self bloqueiaDiscoParaJogada];
-                [self mostrarImagensDosItensParaEscolha];
-            }
-        }
-        
-        
-//AGUARDANDO ESCOLHER ITEM
-        if (_estaAguardandoEscolherOItem) {
-            
-    //ESCOLHEU OPCAO 1
-            if (self.imagemOpcao1.estadoPressionado){
-                self.estaAguardandoEscolherOItem = false;
-                
-        //ACERTOU
-                if ([self.imagemOpcao1.nome isEqualToString: self.itemCorreto]){
-                    [self criaNovaJogada];
-                    
-        //ERROU
-                }else{
-                    
-            //NOVA TENTATIVA
-                    if (self.tentativasPorJogada < 2){
-                        [self voltarParaMaisUmaTentativa];
-                        
-            //NOVA JOGADA
-                    }else{
-                        [self criaNovaJogada];
-                    }
-                }
-                
-              return;
-                
-    //ESCOLHEU OPCAO 2
-            }else if (self.imagemOpcao2.estadoPressionado){
-                self.estaAguardandoEscolherOItem = false;
-                
-        //ACERTOU
-                if ([self.imagemOpcao2.nome isEqualToString: self.itemCorreto]){
-                    [self criaNovaJogada];
-                    
-        //ERROU
-                }else{
-                    
-            //NOVA TENTATIVA
-                    if (self.tentativasPorJogada < 2){
-                        [self voltarParaMaisUmaTentativa];
-                        
-            //NOVA JOGADA
-                    }else{
-                        [self criaNovaJogada];
-                    }
-                    
-                }
-                
-                return;
-                
-    //ESCOLHEU OPCAO 3
-            }else if (self.imagemOpcao3.estadoPressionado){
-                self.estaAguardandoEscolherOItem = false;
-                
-        //ACERTOU
-                if ([self.imagemOpcao3.nome isEqualToString: self.itemCorreto]){
-                    [self criaNovaJogada];
-                    
-        //ERROU
-                }else{
-                    
-            //NOVA TENTATIVA
-                    if (self.tentativasPorJogada < 2){
-                        [self voltarParaMaisUmaTentativa];
-                       
-            //NOVA JOGADA
-                    }else{
-                        [self criaNovaJogada];
-                    }
-                    
-                }
-            }
-        }
-        
+    }
     
     
 }

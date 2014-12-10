@@ -17,14 +17,21 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
-    //Se estiver no último exercício bloqueia o botão de avançar
-    if (([GerenciadorDeAula sharedManager].indexDoExercicioAtual == [GerenciadorDeAula sharedManager].aulaAtual.listaDeExercicios.count - 1) || ([ControladorDeItem sharedManager].aulaFinalizada == false)) {
+    //Enquanto a aula nao estiver finalizada o botao avanca é bloqueado e se estiver no último exercício volta para o mapa
+    if (([ControladorDeItem sharedManager].aulaFinalizada == false)) {
         self.outBtoAvancar.enabled = NO;
     }else{
         self.outBtoAvancar.enabled = YES;
+        
+        if([GerenciadorDeAula sharedManager].indexDoExercicioAtual == [GerenciadorDeAula sharedManager].aulaAtual.listaDeExercicios.count - 1){
+            self.outBtoAvancar.enabled = NO;
+            [self voltarParaOMapa];
+        }
     }
     
 }
+    
+
 
 //TUTORIAL
 - (IBAction)btoTutorial:(id)sender {
@@ -64,9 +71,12 @@
 
 //VOLTA PARA O MENU DO MAPA
 - (IBAction)btoMapa:(id)sender{
-    [[GerenciadorNavigationController sharedManager].controladorApp popToViewController:[[GerenciadorNavigationController sharedManager]retornaViewControllerStoryBoard:@"mapa"] animated:YES];
+    [self voltarParaOMapa];
 }
 
+-(void)voltarParaOMapa{
+        [[GerenciadorNavigationController sharedManager].controladorApp popToViewController:[[GerenciadorNavigationController sharedManager]retornaViewControllerStoryBoard:@"mapa"] animated:YES];
+}
 
 //CONTINUAR
 - (IBAction)btoContinuar:(id)sender {
