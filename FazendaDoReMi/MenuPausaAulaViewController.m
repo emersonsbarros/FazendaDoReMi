@@ -18,15 +18,11 @@
     [super viewDidLoad];
     
     //Enquanto a aula nao estiver finalizada o botao avanca é bloqueado e se estiver no último exercício volta para o mapa
-    if (([ControladorDeItem sharedManager].aulaFinalizada == false)) {
+    if (([ControladorDeItem sharedManager].aulaFinalizada == false) || ([GerenciadorDeAula sharedManager].indexDoExercicioAtual == [GerenciadorDeAula sharedManager].aulaAtual.listaDeExercicios.count - 1)) {
         self.outBtoAvancar.enabled = NO;
     }else{
         self.outBtoAvancar.enabled = YES;
         
-        if([GerenciadorDeAula sharedManager].indexDoExercicioAtual == [GerenciadorDeAula sharedManager].aulaAtual.listaDeExercicios.count - 1){
-            self.outBtoAvancar.enabled = NO;
-            [self voltarParaOMapa];
-        }
     }
     
 }
