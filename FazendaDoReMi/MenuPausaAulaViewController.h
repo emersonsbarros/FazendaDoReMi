@@ -10,6 +10,7 @@
 #import "GerenciadorNavigationController.h"
 #import "GerenciadorDeAula.h"
 #import "GerenciadorAudio.h"
+#import "ControladorDeItem.h"
 
 @interface MenuPausaAulaViewController : UIViewController
 

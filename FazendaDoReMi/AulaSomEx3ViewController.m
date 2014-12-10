@@ -16,7 +16,7 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     
-    //Botão pausa
+//Botão pausar
     [[GerenciadorComponenteView sharedManager]addComponentesBotaoPausaAula:self];
     
 //TocaTreco
@@ -43,8 +43,19 @@
     [[ControladorDeItem sharedManager]retornaItemGesture:@"bola" :self.bola :self.tocaTreco :@"gesturePan + 1 + 2:0:1 + 6:1:0:NO:NO"];
     [[ControladorDeItem sharedManager]retornaItemGesture:@"caixaDeMusica" :self.caixaDeMusica :self.tocaTreco :@"gesturePan + 1 + 2:0:1 + 6:1:0:NO:NO"];
 
-//Add os itens que é desejado pressionar para decorrer com o proximo exercicio
-    [[ControladorDeItem sharedManager]chamaVerificador:[NSArray arrayWithObjects:self.ursoPelucia, self.carro, self.skate, self.relogio, self.robo, self.helicoptero, self.guitarra, self.trem, self.bola, self.caixaDeMusica, nil]];
+//Itens requeridos para a próxima aula
+    [[ControladorDeItem sharedManager]chamaVerificador:[NSArray arrayWithObjects:
+                                                        self.ursoPelucia,
+                                                        self.carro,
+                                                        self.skate,
+                                                        self.relogio,
+                                                        self.robo,
+                                                        self.helicoptero,
+                                                        self.guitarra,
+                                                        self.trem,
+                                                        self.bola,
+                                                        self.caixaDeMusica,
+                                                        nil]];
 }
 
 @end

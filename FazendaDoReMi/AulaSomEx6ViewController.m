@@ -13,8 +13,6 @@
 
 @implementation AulaSomEx6ViewController
 
-//================================================================= LOGICA DO JOGO; 9 chances, mínimo de 5 acertos e a cada 2x jogadas troca o disco. 3 itens para advinha no quadro.
-
 - (void)viewDidLoad{
     [super viewDidLoad];
     

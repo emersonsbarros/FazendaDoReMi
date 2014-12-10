@@ -16,7 +16,7 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
-//Botão voltar
+//Botão pausar
     [[GerenciadorComponenteView sharedManager]addComponentesBotaoPausaAula: self];
     
 //Adiciona os Itens na tela
@@ -37,7 +37,7 @@
     [[ControladorDeItem sharedManager]retornaItem:@"quadroZecao":self.imgQuadro         :@"gestureTap:1:1 + 5:1:1:NO:0:400"];
     
 //Itens requeridos para a próxima aula
-    [[ControladorDeItem sharedManager]chamaVerificador:[NSArray arrayWithObjects:
+    [[ControladorDeItem sharedManager] chamaVerificador:[NSArray arrayWithObjects:
                                                         self.imgXilofone,
                                                         self.imgViolao,
                                                         self.imgFlauta,

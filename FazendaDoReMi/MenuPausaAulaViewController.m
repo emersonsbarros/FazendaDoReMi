@@ -18,7 +18,7 @@
     [super viewDidLoad];
     
     //Se estiver no último exercício bloqueia o botão de avançar
-    if ([GerenciadorDeAula sharedManager].indexDoExercicioAtual == [GerenciadorDeAula sharedManager].aulaAtual.listaDeExercicios.count - 1) {
+    if (([GerenciadorDeAula sharedManager].indexDoExercicioAtual == [GerenciadorDeAula sharedManager].aulaAtual.listaDeExercicios.count - 1) || ([ControladorDeItem sharedManager].aulaFinalizada == false)) {
         self.outBtoAvancar.enabled = NO;
     }else{
         self.outBtoAvancar.enabled = YES;

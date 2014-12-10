@@ -1760,7 +1760,7 @@
 				3FC5D2BC19DA59BA00348F51 /* Componentes Edicao */,
 				0BB1F17A19E5D3F500E9F8E4 /* Mascote */,
 				0BCDF2A01A376DCE00F0A94E /* BotaoPausaJogo */,
-				0BB1F17919E5D3B000E9F8E4 /* BotaoPausaAula */,
+				0BB1F17919E5D3B000E9F8E4 /* PausaAula */,
 			);
 			name = Componentes;
 			sourceTree = "<group>";
@@ -1944,7 +1944,7 @@
 			name = Gerenciadores;
 			sourceTree = "<group>";
 		};
-		0BB1F17919E5D3B000E9F8E4 /* BotaoPausaAula */ = {
+		0BB1F17919E5D3B000E9F8E4 /* PausaAula */ = {
 			isa = PBXGroup;
 			children = (
 				0BE839461A290479008FA90F /* MenuPausaAula */,
@@ -1952,7 +1952,7 @@
 				0BE839421A29044C008FA90F /* BotaoPausaAulaViewController.m */,
 				0BE839431A29044C008FA90F /* BotaoPausaAulaViewController.xib */,
 			);
-			name = BotaoPausaAula;
+			name = PausaAula;
 			sourceTree = "<group>";
 		};
 		0BB1F17A19E5D3F500E9F8E4 /* Mascote */ = {
